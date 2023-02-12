@@ -130,3 +130,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SOCIAL-AUTH PACKAGE SETTINGS
+
+SOCIAL_AUTH_FACEBOOK_KEY = '3271128683103928'
+SOCIAL_AUTH_FACEBOOK_SECRET = '5b808eca80b438c7b6f4a524d3139fc3'
