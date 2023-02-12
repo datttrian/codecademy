@@ -145,3 +145,5 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
     ('name', 'name'),
     ('picture', 'picture'),
 ]
+LOGIN_REDIRECT_URL = "memories:home"
+LOGOUT_REDIRECT_URL = "memories:home"
