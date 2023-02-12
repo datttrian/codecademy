@@ -1,4 +1,13 @@
 {% extends "memories/base.html" %}
+{% block add_memory %}
+    <li class="nav-item">
+        <a class="btn btn-primary"
+        type="button"
+        href="{% url 'memories:memory_creation' %}">
+            <strong>ADD A MEMORY</strong>
+        </a>
+    </li>
+{% endblock %}
 {% block body %}
     {% if not user.is_authenticated %}
         <div class="text-center" style="height: 90vh">

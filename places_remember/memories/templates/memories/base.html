@@ -32,6 +32,9 @@
                             <a class="nav-link text-light font-weight-bold"
                                href="{% url 'memories:home' %}">Home</a>
                         </li>
+                        {% if user.is_authenticated %}
+                            {% block add_memory %}{% endblock %}
+                        {% endif %}
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
