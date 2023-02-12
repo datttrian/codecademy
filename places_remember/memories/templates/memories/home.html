@@ -1,0 +1,17 @@
+{% extends "memories/base.html" %}
+{% block body %}
+    {% if not user.is_authenticated %}
+        <div class="text-center" style="height: 90vh">
+            <div class="d-flex h-100 align-items-center justify-content-center">
+                <div class="text-dark">
+                    <h1 class="mb-3">Welcome to Places Remember!</h1>
+                    <h4 class="mb-3">A web-app that will allow users to store their memories about certain places they have visited.</h4>
+                    <a class="btn btn-outline-light btn-lg"
+                       href="{% url 'social:begin' 'facebook' %}"
+                       role="button"
+                       style="background-color: rgba(59, 89, 152, 1.0)">Login with Facebook Account</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
