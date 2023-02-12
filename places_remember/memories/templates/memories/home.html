@@ -13,5 +13,20 @@
                 </div>
             </div>
         </div>
+    {% else %}
+        <section id="memory-list-section">
+            {% comment %} List of user memories {% endcomment %}
+            <div class="d-block justify-content-center align-items-start"
+                 style="height: 90vh">
+                <div class="list-group w-100" style="height: 85vh">
+                    <div class="d-flex justify-content-center align-items-center min-vh-100">
+                        <h3 class="text-secondary text-center">
+                            <strong>YOU HAVE NO MEMORIES</strong>
+                        </h3>
+                    </div>
+                </div>
+                {% comment %} Pagination {% endcomment %}
+            </div>
+        </section>
     {% endif %}
 {% endblock %}
