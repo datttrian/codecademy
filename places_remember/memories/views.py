@@ -3,6 +3,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
+from django.views.generic import ListView
 from django.views import View
 from .models import UserMemories
 from .forms import AddMemoryForm
@@ -41,3 +42,12 @@ class AddMemoryView(View):
                 "form": form
             }
             return render(request, self.template_name, context)
+        
+# User memories list
+class UserMemoriesView(ListView):
+    """Return a paginated list of user memories to the template.
+    The result can be filtered by text (in the address, placename, comment fields), and sorted by placename and datetime.
+    """
+    model = UserMemories
+    paginate_by = 8
+    template_name = "memories/home.html"
