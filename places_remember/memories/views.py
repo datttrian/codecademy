@@ -30,3 +30,14 @@ class AddMemoryView(View):
             "form": form
         }
         return render(request, self.template_name, context)
+    
+    def post(self, request: HttpRequest, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            return redirect("memories:home")
+        else:
+            context = {
+                "form": form
+            }
+            return render(request, self.template_name, context)
