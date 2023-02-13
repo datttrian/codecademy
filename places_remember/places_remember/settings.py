@@ -147,3 +147,6 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
 ]
 LOGIN_REDIRECT_URL = "memories:home"
 LOGOUT_REDIRECT_URL = "memories:home"
+
+# Google Embedded Map API Key
+GOOGLE_API_KEY = 'AIzaSyCoPAXMcPU2q7g64ROpWCm6rO5LOzZCajs'
