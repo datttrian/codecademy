@@ -28,11 +28,22 @@
             <div class="d-block justify-content-center align-items-start"
                  style="height: 90vh">
                 <div class="list-group w-100" style="height: 85vh">
-                    <div class="d-flex justify-content-center align-items-center min-vh-100">
-                        <h3 class="text-secondary text-center">
-                            <strong>YOU HAVE NO MEMORIES</strong>
-                        </h3>
-                    </div>
+                    {% for memory in page_obj %}
+                        <div class="list-group-item align-items-start px-4">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{ memory.placename }}</h5>
+                                <small>{{ memory.datetime|date:'Y-m-d H:i' }}</small>
+                            </div>
+                            <small class="font-italic">Address: {{ memory.address }}</small>
+                            <p class="mb-1">{{ memory.comment }}</p>
+                        </div>
+                    {% empty %}
+                        <div class="d-flex justify-content-center align-items-center min-vh-100">
+                            <h3 class="text-secondary text-center">
+                                <strong>YOU HAVE NO MEMORY</strong>
+                            </h3>
+                        </div>
+                    {% endfor %}
                 </div>
                 {% comment %} Pagination {% endcomment %}
             </div>
