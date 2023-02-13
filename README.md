@@ -33,6 +33,6 @@ Run the development server:
 - [ ] The app covers core functionality with unit tests (Memory creation and Memory list fetch).
 - [ ] Tests execution on pushing new commits using Github actions.
 - [ ] It is possible to start the project locally using docker/docker-compose.
-- [ ] In the README you have a badge with current test coverage (https://coveralls.io/).
-- [ ] You have a configuration for linters. Linters should run on commit/push using GitHub action.
+- [ ] README has a badge with current test coverage (https://coveralls.io/).
+- [ ] The app is configured for linters.
 - [ ] The app is deployed to any cloud service like https://www.heroku.com/.
