@@ -17,6 +17,7 @@
         {% comment %} Google Map API {% endcomment %}
         <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&libraries=places&callback=initMap&v=weekly"
                 defer></script>
+        <script src="{% static 'memories/js/user_memories.js' %}" defer></script>
     </head>
     <body>
         <!-- Navbar -->
