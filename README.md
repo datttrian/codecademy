@@ -22,7 +22,7 @@ https://www.codecademy.com/learn/paths/build-python-web-apps-with-django
 
 ## Syllabus
 
-1. Introduction to the Web
+1. [Introduction to the Web](1-django-introduction-to-the-web)
 1. Introduction to Django
 1. Templates in Django
 1. Data in Django
