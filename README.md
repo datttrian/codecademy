@@ -24,6 +24,10 @@ Using your knowledge of Python, explore the world of web development!
 
 - [Fortune Teller](2-introduction-to-django/fortuneteller)
 
+## [Templates](3-django-templates)
+
+Learn how Django’s templates and template language (DTL) make it a breeze to incorporate logic into HTML and render dynamic pages to users.
+
 ## SQL and SQLite
 
 Django can be configured with a relational database which you could use SQL to interact with — but you don’t need to!
