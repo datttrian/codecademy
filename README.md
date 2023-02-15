@@ -4,7 +4,7 @@
 
 <!-- [![](https://img.shields.io/badge/language-English-blue.svg)](./README.md) -->
 
-[![Python](https://img.shields.io/badge/Python-3.10.0-blue)](https://www.python.org/)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Django](https://img.shields.io/badge/Django-3.2.9-green)](https://www.djangoproject.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Selenium](https://img.shields.io/badge/Selenium-3.141.0-green)](https://www.selenium.dev/)
