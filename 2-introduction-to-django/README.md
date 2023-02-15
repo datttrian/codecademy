@@ -1708,7 +1708,7 @@ template to send back to the client.
 We’ll start with an empty workspace and build out our **fortuneteller**
 project step by step.
 
-# Instructions
+## Instructions
 
 Mark the tasks as complete by checking them off
 
@@ -1988,7 +1988,7 @@ yourself.
   type of message.
 - Perhaps incorporate horoscopes!
 
-# Solution
+## Solution
 
 ```bash
 django-admin startproject fortuneteller
@@ -2153,7 +2153,7 @@ touch randomfortune/templates/randomfortune/fortune.html
 ```
 
 ```python
-# fortuneteller/views.py
+# randomfortune/views.py
 from django.shortcuts import render
 # Create your views here.
 
@@ -2166,7 +2166,7 @@ touch randomfortune/urls.py
 ```
 
 ```python
-# fortuneteller/urls.py
+# randomfortune/urls.py
 from django.urls import path
 from . import views
 
@@ -2207,7 +2207,7 @@ echo "Server running. Press Ctrl+C to stop it."
 ```
 
 ```python
-# fortuneteller/views.py
+# randomfortune/views.py
 from django.shortcuts import render
 import random
 # Create your views here.
