@@ -9,7 +9,6 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Selenium](https://img.shields.io/badge/Selenium-3.141.0-green)](https://www.selenium.dev/)
 [![Pandoc](https://img.shields.io/badge/Pandoc-2.14.0.1-blue)](https://pandoc.org/)
-[![bash](https://img.shields.io/badge/Language-Bash-4EAA25.svg)](https://www.gnu.org/software/bash/)
 
 Welcome to the world of Django (pronounced like JANG-go with a silent D)!
 
