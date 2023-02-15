@@ -1,4 +1,3 @@
 asgiref==3.6.0
-certifi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5d968ni_yn/croot/certifi_1671487774636/work/certifi
 Django==4.1.7
 sqlparse==0.4.3

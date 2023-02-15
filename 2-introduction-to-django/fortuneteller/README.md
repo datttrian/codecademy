@@ -1,127 +1,4 @@
-# Getting Started
-
-First clone the repository from Github and switch to the new directory:
-
-    $ git clone git@github.com/dattranvnu/build-python-web-apps-with-django.git
-    $ cd build-python-web-apps-with-django/2-introduction-to-django/1-introduction-to-django/fortuneteller
-    
-Activate the virtualenv for your project.
-    
-Install project dependencies:
-
-    $ pip install -r requirements.txt
-    
-Then simply apply the migrations:
-
-    $ python manage.py migrate
-    
-You can now run the development server:
-
-    $ python manage.py runserver
-
-Or execute the script `fortuneteller.sh`:
-
-```bash
-#!/bin/bash
-
-# Start the Fortune Teller Project
-
-## create a new virtual environment
-python3 -m venv env
-## activate the virtual environment
-source env/bin/activate
-## install Django
-pip install django
-## create a new Django project and navigate to the project directory
-django-admin startproject fortuneteller && cd fortuneteller
-
-# Start the Random Fortune App
-## create a new Django app
-python manage.py startapp randomfortune
-## add RandomfortuneConfig to INSTALLED_APPS
-sed -i '' 's/'"'"'django.contrib.staticfiles'"'"'/&,\n    '"'"'randomfortune.apps.RandomfortuneConfig'"'"'/' fortuneteller/settings.py
-
-# Create a Template
-## create the templates directory and the randomfortune directory within it
-mkdir -p randomfortune/templates/randomfortune
-
-# Wire Up View
-## create a list of patterns for Django to match URLs
-echo "from django.urls import path
-from . import views
-
-urlpatterns = [
-    path(\"\", views.fortune)
-]" > randomfortune/urls.py
-echo "from django.contrib import admin
-from django.urls import include, path
-
-urlpatterns = [path('admin/', admin.site.urls),    
-               path('', include('randomfortune.urls')),
-]" > fortuneteller/urls.py
-
-# Sending a Context to the Template
-echo "from django.shortcuts import render
-import random
-# Create your views here.
-
-fortuneList = [
-   'All will go well with your new project.',
-   'If you continually give, you will continually have.',
-   'Self-knowledge is a life long process.',
-   'You are busy, but you are happy.',
-   'Your abilities are unparalleled.',
-   'Those who care will make the effort.',
-   'Now is the time to try something new.',
-   'Miles are covered one step at a time.',
-   'Don’t just think, act!'
-]
-
-def fortune(request):
-    fortune = random.choice(fortuneList)
-    context = {'fortune': fortune}
-    return render(request, 'randomfortune/fortune.html', context)" > randomfortune/views.py
-
-# Render Context Inside Template
-HTML='<!-- This HTML code is from the fortune.html file -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
-    <title>Django Fortune Teller</title>
-  </head>
-  <body>
-    <h1>Here is your fortune</h1>
-    <div class="flex-container">
-      <div>{{ fortune }}</div>
-    </div>
-
-    <!--
-
-    Try adding additional CSS styles to the fortune.html page to make it stylish.
-    Creating a new view function to populate the template with a different type of message.
-    Perhaps incorporate horoscopes!
-
-    -->
-  </body>
-</html>'
-echo "$HTML" > randomfortune/templates/randomfortune/fortune.html
-
-# Apply the migrations
-python manage.py migrate
-
-# Run the development server
-python manage.py runserver
-```
-
-# Instructions
+# Fortune Teller
 
 Let’s build a Fortune Telling web app!
 
@@ -136,6 +13,53 @@ We’ll start with an empty workspace and build out our **fortuneteller**
 project step by step.
 
 Mark the tasks as complete by checking them off
+
+## Getting Started
+
+- Remove the repository if exists
+- Clone the repository from Github
+- Switch to the `fortuneteller` directory
+- Create & activate a new virtual environment for the project
+- Install project dependencies
+- Apply the migrations
+- Run the development server
+
+```bash
+rm -rf build-python-web-apps-with-django
+git clone https://github.com/dattranvnu/build-python-web-apps-with-django
+cd build-python-web-apps-with-django/2-introduction-to-django/fortuneteller
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+## Getting Started with Bash Script
+
+- Remove the repository if exists
+- Clone the repository from Github
+- Switch to the `2-introduction-to-django` directory
+- Create & activate a new virtual environment for the project
+- Add executable permission & execute `fortuneteller.sh`
+- Switch to `fortuneteller` project
+- Apply the migrations
+- Run the development server
+
+```bash
+rm -rf build-python-web-apps-with-django
+git clone https://github.com/dattranvnu/build-python-web-apps-with-django
+cd build-python-web-apps-with-django/2-introduction-to-django
+python3 -m venv env
+source env/bin/activate
+chmod +x fortuneteller.sh
+./fortuneteller.sh
+cd fortuneteller
+python manage.py migrate
+python manage.py runserver
+```
+
+# Instructions
 
 ## Start the Fortune Teller Project
 
@@ -413,7 +337,7 @@ yourself.
   type of message.
 - Perhaps incorporate horoscopes!
 
-# Solution
+## Solution
 
 ```bash
 django-admin startproject fortuneteller
