@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# # Ignore certifi package as it is not required for the project
+certifi
