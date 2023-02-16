@@ -17,7 +17,7 @@ django-admin startproject $project_name && cd $project_name
 ## create a new Django app
 app_name='tourist_attractions'
 python manage.py startapp $app_name
-## add RandomfortuneConfig to INSTALLED_APPS
+## add configuration to INSTALLED_APPS
 sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
 
 # Wire Up View

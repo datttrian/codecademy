@@ -13,7 +13,7 @@ django-admin startproject fortuneteller && cd fortuneteller
 # Start the Random Fortune App
 ## create a new Django app
 python manage.py startapp randomfortune
-## add RandomfortuneConfig to INSTALLED_APPS
+## add configuration to INSTALLED_APPS
 sed -i '' 's/'"'"'django.contrib.staticfiles'"'"'/&,\n    '"'"'randomfortune.apps.RandomfortuneConfig'"'"'/' fortuneteller/settings.py
 
 # Create a Template
