@@ -16,7 +16,7 @@ adding filters to variables being used within the template!
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `3-django-templates` directory
+- Switch to the `3-templates-in-django` directory
 - Create & activate a new virtual environment for the project
 - Switch to the `touristAttractions` directory
 - Install project dependencies
@@ -25,7 +25,7 @@ adding filters to variables being used within the template!
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/3-django-templates
+cd build-python-web-apps-with-django/3-templates-in-django
 python3 -m venv env && source env/bin/activate
 cd touristAttractions
 pip install -r requirements.txt
@@ -36,7 +36,7 @@ python manage.py migrate
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `3-django-templates` directory
+- Switch to the `3-templates-in-django` directory
 - Add executable permission & execute `touristAttractions.sh`
 - Activate the virtual environment for the project
 - Switch to `touristAttractions` project
@@ -45,7 +45,7 @@ python manage.py migrate
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/3-django-templates
+cd build-python-web-apps-with-django/3-templates-in-django
 chmod +x touristAttractions.sh && ./touristAttractions.sh
 source env/bin/activate
 cd touristAttractions

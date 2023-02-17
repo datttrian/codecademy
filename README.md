@@ -5,10 +5,10 @@
 <!-- [![](https://img.shields.io/badge/language-English-blue.svg)](./README.md) -->
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Bash version](https://img.shields.io/badge/Bash-4.4+-blue.svg)
+![Python version](https://img.shields.io/badge/Python-3.9-blue.svg)
 [![Django](https://img.shields.io/badge/Django-3.2.9-green)](https://www.djangoproject.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Selenium](https://img.shields.io/badge/Selenium-3.141.0-green)](https://www.selenium.dev/)
-[![Pandoc](https://img.shields.io/badge/Pandoc-2.14.0.1-blue)](https://pandoc.org/)
 
 Welcome to the world of Django (pronounced like JANG-go with a silent D)!
 
@@ -22,13 +22,13 @@ Get an overview of the technology needed to create a Django web application.
 
 Using your knowledge of Python, explore the world of web development!
 
-- [Fortune Teller](2-introduction-to-django/fortuneteller)
+**Project**: [Fortune Teller](2-introduction-to-django/fortuneteller)
 
-## [Templates](3-django-templates)
+## [Templates in Django](3-templates-in-django)
 
 Learn how Django’s templates and template language (DTL) make it a breeze to incorporate logic into HTML and render dynamic pages to users.
 
-- [Tourist Attractions with Templates](3-django-templates/touristAttractions)
+**Project**: [Tourist Attractions with Templates](3-templates-in-django/touristAttractions)
 
 ## [Data in Django](4-data-in-django)
 
@@ -36,17 +36,17 @@ Django can be configured with a relational database which you could use SQL to i
 
 Learn how models determine the schema for the database and how to perform all CRUD functionality in Django.
 
-- [Djaunty Rent-a-Bike](4-data-in-django/BikeRental)
+**Project**: [Djaunty Rent-a-Bike](4-data-in-django/BikeRental)
 
-## Writing More Views
+## Views in Django
 
 Let’s write some more views and see how Django can incorporate generics to make views even easier for developers.
 
-## Forms
+## Forms in Django
 
 Incorporate forms in your Django app to get info from your users.
 
-## Accounts and Authentication
+## Accounts and Authentication in Django
 
 CRUD functionality is now easier with an admin account! Also, learn to safeguard the rest of your app by having your users create accounts.
 
