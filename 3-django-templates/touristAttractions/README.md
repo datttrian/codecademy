@@ -12,6 +12,8 @@ adding filters to variables being used within the template!
 
 ## Getting Started
 
+### Clone the project in this repo
+
 - Remove the repository if exists
 - Clone the repository from Github
 - Switch to the `3-django-templates` directory
@@ -19,7 +21,6 @@ adding filters to variables being used within the template!
 - Switch to the `touristAttractions` directory
 - Install project dependencies
 - Apply the migrations
-- Run the development server
 
 ```bash
 rm -rf build-python-web-apps-with-django
@@ -29,10 +30,9 @@ python3 -m venv env && source env/bin/activate
 cd touristAttractions
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py runserver
 ```
 
-## Getting Started with Bash Script
+### Build the project with Bash Script
 
 - Remove the repository if exists
 - Clone the repository from Github
@@ -41,7 +41,6 @@ python manage.py runserver
 - Activate the virtual environment for the project
 - Switch to `touristAttractions` project
 - Apply the migrations
-- Run the development server
 
 ```bash
 rm -rf build-python-web-apps-with-django
@@ -51,12 +50,19 @@ chmod +x touristAttractions.sh && ./touristAttractions.sh
 source env/bin/activate
 cd touristAttractions
 python manage.py migrate
+```
+
+### Run Development Server
+
+- Run the development server
+
+```bash
 python manage.py runserver
 ```
 
-Mark the tasks as complete by checking them off
+## Instructions
 
-## Creating a Base Template
+### Creating a Base Template
 
 1\.
 
@@ -109,7 +115,7 @@ page-specific content, you’ll need to add some blocks!
   called `content`. This block will be used to display page-specific
   content.
 
-## Creating the Home Page
+### Creating the Home Page
 
 6\.
 
@@ -213,7 +219,7 @@ target="_blank" rel="noopener"><code
 class="code__2rdF32qjRVp7mMVBHuPwDS">slugify</code></a> filter to remove
 any spacing and capitalization.
 
-## Creating the details page
+### Creating the details page
 
 14\.
 
@@ -273,6 +279,8 @@ And that’s it! We now have a website that displays attractions for any
 state! Go ahead and modify **views.py** to add more states and see how
 our templates react! If you want, go ahead and try to add an image on
 the homepage!
+
+## Solution
 
 ```bash
 #!/bin/bash

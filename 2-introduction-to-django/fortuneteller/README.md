@@ -14,6 +14,8 @@ project step by step.
 
 ## Getting Started
 
+### Clone the project in this repo
+
 - Remove the repository if exists
 - Clone the repository from Github
 - Switch to the `2-introduction-to-django` directory
@@ -21,7 +23,7 @@ project step by step.
 - Switch to the `fortuneteller` directory
 - Install project dependencies
 - Apply the migrations
-- Run the development server
+
 
 ```bash
 rm -rf build-python-web-apps-with-django
@@ -31,10 +33,9 @@ python3 -m venv env && source env/bin/activate
 cd fortuneteller
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py runserver
 ```
 
-## Getting Started with Bash Script
+### Build the project with Bash Script
 
 - Remove the repository if exists
 - Clone the repository from Github
@@ -43,7 +44,6 @@ python manage.py runserver
 - Activate the virtual environment for the project
 - Switch to `fortuneteller` project
 - Apply the migrations
-- Run the development server
 
 ```bash
 rm -rf build-python-web-apps-with-django
@@ -53,10 +53,19 @@ chmod +x fortuneteller.sh && ./fortuneteller.sh
 source env/bin/activate
 cd fortuneteller
 python manage.py migrate
+```
+
+### Run Development Server
+
+- Run the development server
+
+```bash
 python manage.py runserver
 ```
 
-## Start the Fortune Teller Project
+## Instructions
+
+### Start the Fortune Teller Project
 
 1\.
 
@@ -108,7 +117,7 @@ you should see a default splash page from Django. Then stop the
 development server using
 <span class="kbd">ctrl</span>+<span class="kbd">c</span>.
 
-## Start the Random Fortune App
+### Start the Random Fortune App
 
 5\.
 
@@ -131,7 +140,7 @@ and add the config file for **randomfortune** by including
 
 After you add the app to the list, click “Save”.
 
-## Create a Template
+### Create a Template
 
 7\.
 
@@ -188,7 +197,7 @@ After you have pasted the HTML and have taken a look at it press “Save”.
 We’ll have to write the view functions and the URLconfig before we can
 see it.
 
-## Create a View Function
+### Create a View Function
 
 9\.
 
@@ -201,7 +210,7 @@ function named `fortune()` that takes a single parameter, `request`. In
 `request` and the path to **fortune.html** as a string,
 `"randomfortune/fortune.html"`.
 
-## Wire Up View
+### Wire Up View
 
 10\.
 
@@ -261,7 +270,7 @@ Click on “Save”, and `cd` into the root directory to start the
 development server again with `python3 manage.py runserver 0.0.0.0:4001`
 and when you refresh the browser page, you should see **fortune.html**.
 
-## Sending a Context to the Template
+### Sending a Context to the Template
 
 16\.
 
@@ -305,7 +314,7 @@ value.
 Now add our newly created `context` as the third argument to the
 `render()` function that `fortune()` returns.
 
-## Render Context Inside Template
+### Render Context Inside Template
 
 20\.
 
@@ -331,6 +340,8 @@ yourself.
 - Creating a new view function to populate the template with a different
   type of message.
 - Perhaps incorporate horoscopes!
+
+## Solution
 
 ```bash
 #!/bin/bash

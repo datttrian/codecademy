@@ -30,6 +30,8 @@ not worry about the templates or views.
 
 ## Getting Started
 
+### Clone the project in this repo
+
 - Remove the repository if exists
 - Clone the repository from Github
 - Switch to the `4-data-in-django` directory
@@ -37,7 +39,7 @@ not worry about the templates or views.
 - Switch to the `BikeRental` directory
 - Install project dependencies
 - Apply the migrations
-- Launch the Python shell 
+
 
 ```bash
 rm -rf build-python-web-apps-with-django
@@ -47,47 +49,9 @@ python3 -m venv env && source env/bin/activate
 cd BikeRental
 pip install -r requirements.txt
 python manage.py makemigrations && python manage.py migrate
-python3 manage.py shell
 ```
 
-- Populate Data into the Database & exit the Python shell
-
-```sh
->>> from BikeRentalApp.models import Bike, Renter, Rental
->>> bike1 = Bike(bike_type="ST", color="black")
->>> bike1.save()
->>> bike2 = Bike(bike_type="TA", color="green")
->>> bike2.save()
->>> bike3 = Bike(bike_type="EL", color="white")
->>> bike3.save()
->>> bike4 = Bike(bike_type="EL", color="red")
->>> bike4.save()
->>> bike5 = Bike(bike_type="TA", color="blue")
->>> bike5.save()
->>> renter1 = Renter(first_name="John", last_name="Boo", phone="0236985471", vip_num=2)
->>> renter1.save()
->>> renter2 = Renter(first_name="Beck", last_name="Sam", phone="0243110022", vip_num=4)
->>> renter2.save()
->>> renter3 = Renter(first_name="Lee", last_name="Shim", phone="050698521")
->>> renter3.save()
->>> first_bike = Bike.objects.first()
->>> last_bike = Bike.objects.last()
->>> first_renter = Renter.objects.first()
->>> last_renter = Renter.objects.last()
->>> rental1 = Rental(bike=last_bike, renter=first_renter)
->>> rental1.save()
->>> rental2 = Rental(bike=first_bike, renter=last_renter)
->>> rental2.save()
->>> exit()
-```
-
-- Run the development server
-
-```bash
-python manage.py runserver
-```
-
-## Getting Started with Bash Script
+### Build the project with Bash Script
 
 - Remove the repository if exists
 - Clone the repository from Github
@@ -96,9 +60,6 @@ python manage.py runserver
 - Activate the virtual environment for the project
 - Switch to `BikeRental` project
 - Apply the migrations
-- Launch the Python shell 
-
-- Run the development server
 
 ```bash
 rm -rf build-python-web-apps-with-django
@@ -108,10 +69,17 @@ chmod +x BikeRental.sh && ./BikeRental.sh
 source env/bin/activate
 cd BikeRental
 python manage.py makemigrations && python manage.py migrate
+```
+
+### Populate Data
+
+- Launch the Python shell 
+
+```bash
 python3 manage.py shell
 ```
 
-- Populate Data into the Database & exit the Python shell
+- Populate data into the database & exit the Python shell
 
 ```sh
 >>> from BikeRentalApp.models import Bike, Renter, Rental
@@ -142,13 +110,17 @@ python3 manage.py shell
 >>> exit()
 ```
 
+### Run Development Server
+
 - Run the development server
 
 ```bash
 python manage.py runserver
 ```
 
-## Planning
+## Instructions
+
+### Planning
 
 
 
@@ -163,7 +135,7 @@ provided.
 
 
 
-## Creating the Bike Model
+### Creating the Bike Model
 
 
 
@@ -248,7 +220,7 @@ and color, like:
 
 
 
-## Creating the Renter Model
+### Creating the Renter Model
 
 
 
@@ -280,7 +252,7 @@ Padma Lak - #123-456-7890
 
 
 
-## Creating the Rental Model
+### Creating the Rental Model
 
 
 
@@ -338,7 +310,7 @@ Still within the `.calc_price()` method, finalize the cost of the
 
 
 
-## Database Setup
+### Database Setup
 
 
 
@@ -371,7 +343,7 @@ python3 manage.py migrate
 
 
 
-## Populating Database and Running Queries
+### Populating Database and Running Queries
 
 
 
@@ -436,7 +408,7 @@ to practice.
 
 
 
-## Finishing up
+### Finishing up
 
 
 
@@ -456,6 +428,8 @@ However, if you want to challenge yourself, consider:
 -   Find out how many rentals one specific person has.
 -   Adding in metadata for the models.
 
+## Solution
+
 ```bash
 #!/bin/bash
 
@@ -467,17 +441,17 @@ rm -rf $project_name
 
 # Start the project
 
-## create & activate a new virtual environment
+### create & activate a new virtual environment
 python3 -m venv env && source env/bin/activate
-## install Django
+### install Django
 pip install django
-## create a new Django project and navigate to the project directory
+### create a new Django project and navigate to the project directory
 django-admin startproject $project_name && cd $project_name
 
 # Start an App
-## create a new Django app
+### create a new Django app
 python manage.py startapp $app_name
-## add RandomfortuneConfig to INSTALLED_APPS
+### add RandomfortuneConfig to INSTALLED_APPS
 sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
 
 # Define models
@@ -535,7 +509,7 @@ END
 ) && echo "$app_urls"  > $app_name/models.py
 
 # Wire Up View
-## Match URLs in the app
+### Match URLs in the app
 app_urls=$(cat <<-END
 from django.urls import path
 
@@ -549,7 +523,7 @@ urlpatterns = [
 ]
 END
 ) && echo "$app_urls"  > $app_name/urls.py
-## Match URLs in the project
+### Match URLs in the project
 sed -i ''  "s,from django.urls import,from django.urls import include\,,g; s,urlpatterns = \[,urlpatterns = \[\n    path\(\'\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
 
 # Sending a Context to the Template
