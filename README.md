@@ -30,13 +30,13 @@ Learn how Django’s templates and template language (DTL) make it a breeze to i
 
 - [Tourist Attractions with Templates](3-django-templates/touristAttractions)
 
-## SQL and SQLite
+## [Data in Django](4-data-in-django)
 
 Django can be configured with a relational database which you could use SQL to interact with — but you don’t need to!
 
-## Models and Databases
-
 Learn how models determine the schema for the database and how to perform all CRUD functionality in Django.
+
+- [Djaunty Rent-a-Bike](4-data-in-django/BikeRental)
 
 ## Writing More Views
 
