@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+{% block content %}
+    <h2>RENTAL LIST</h2>
+    <table id="patients">
+        <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>PHONE</th>
+            <th>VIP NUMBER</th>
+        </tr>
+        {% for renter in renter_list %}
+            <tr>
+                <td>{{ renter.first_name }}</td>
+                <td>{{ renter.last_name }}</td>
+                <td>{{ renter.phone }}</td>
+                <td>{{ renter.vip_num }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
