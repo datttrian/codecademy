@@ -50,7 +50,7 @@ python manage.py makemigrations && python manage.py migrate
 python3 manage.py shell
 ```
 
-- Inserting Data into the Database & exit the Python shell
+- Populate Data into the Database & exit the Python shell
 
 ```sh
 >>> from BikeRentalApp.models import Bike, Renter, Rental
@@ -111,7 +111,7 @@ python manage.py makemigrations && python manage.py migrate
 python3 manage.py shell
 ```
 
-- Inserting Data into the Database & exit the Python shell
+- Populate Data into the Database & exit the Python shell
 
 ```sh
 >>> from BikeRentalApp.models import Bike, Renter, Rental
