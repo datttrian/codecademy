@@ -17,11 +17,9 @@ and render more relevant info to our users giving them a customized
 experience. You’ve already seen how a basic view works, now let’s learn
 more advanced ways of Django!
 
-# Learn
+# Views
 
-Views
-
-What are Views?
+## What are Views?
 
 *Views* play an important role in the MTV (Model-Template-View)
 architectural pattern and essentially act as a link between the Model
@@ -44,11 +42,9 @@ displayed.
 
 ### Solution
 
-# Learn
+<img alt="GIF showcasing how information from the template gets passed into the views (class or function) and then gets puts into the template for users to see. " src="https://static-assets.codecademy.com/skillpaths/django/view/views_nobg_v2.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
-Views
-
-Refresher
+## Refresher
 
 At this stage, we’ve learned a lot about the ins and outs of Django.
 When working with frameworks like Django, there are a lot of moving
@@ -76,7 +72,7 @@ also make sure to import said functions in the apps’ **url.py** file!
 Within the **url.py** file, the most important thing is the
 `urlpatterns` list which looks like the following:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # urls.py
  
 from myapp.views import home_view
@@ -93,7 +89,7 @@ is found in the application’s **views.py** file. The logic in
 
 Consider the `home_view()` containing the following logic:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # views.py
  
 def home_view(request):
@@ -113,25 +109,38 @@ Navigate through the updated code in **url.py** and **views.py** in
 order to see how information is being passed around through the `home()`
 function in **vetoffice/views**.
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```python
+from django.urls import path
 
-Views
+from . import views
 
-Class Based Views
+urlpatterns = [
+   path("", views.home, name="home")
+]
+```
+
+```python
+from django.shortcuts import render
+
+pets = [
+   { "petname": "Fido", "animal_type": "dog"},
+   { "petname": "Clementine", "animal_type": "cat"},
+   { "petname": "Cleo", "animal_type": "cat"},
+   { "petname": "Oreo", "animal_type": "dog"},
+]
+
+def home(request):
+   context = {"name": "Djangoer", "pets": pets}
+   return render(request, "vetoffice/home.html", context)
+```
+
+## Class Based Views
 
 We’ve explored how to write view functions in order to render templates
 and return them to the browser. In this exercise, we’ll look into how to
@@ -152,7 +161,7 @@ generics with our own written code!
 Consider an application that keeps track of students in a classroom.
 We’ll make use of a model, `Student`, which holds the following fields:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # models.py
  
 class Student(models.Model):
@@ -176,7 +185,7 @@ If we want to use some of these generic views we must first import them
 from `django.views.generic` at the top of our file, along with our
 `Student` model:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # views.py
  
 from .models import Student
@@ -186,7 +195,7 @@ from django.views.generic import ListView
 Once imported we can specify what model we’ll be using the `ListView`
 for:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # views.py
  
 class StudentList(ListView):
@@ -219,17 +228,9 @@ Before you can use `ListView`, you have to import it from
 `django.views.generic`. So let’s import that near the top of our
 **views.py** file.
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -241,42 +242,43 @@ Create a class named `OwnerList`:
 -   Set the `model` as `Owner`
 -   Set the `template_name` as `"vetoffice/owner_list.html"`
 
-Checkpoint 3 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
 Practice makes perfect, use what you learned for `OwnerList` and
 implement a `ListView` for `Patient`!
 
-Checkpoint 4 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```python
+from django.shortcuts import render
+from .models import Owner, Patient
+# Import ListView below:
+from django.views.generic import ListView
 
-Views
 
-CRUD through Class Based Views
+def home(request):
+  context = {"name": "Djangoer"}
+  return render(request, "vetoffice/home.html", context)
+
+# Create your ListView classes below:
+class OwnerList(ListView):
+  model = Owner
+  template_name = "vetoffice/owner_list.html"
+
+class PatientList(ListView):
+  model = Patient
+  template_name = "vetoffice/patient_list.html"
+```
+
+## CRUD through Class Based Views
 
 Class-based views set up a lot of functionality automatically for us. In
 the previous exercise, we were able to list out (i.e. **R**ead)
@@ -291,7 +293,7 @@ there are some slight differences. For example, if we go back to
 thinking about a `Student` model, here’s how we could add a view to
 create a `Student` instance:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # views.py
  
 from .models import Student
@@ -343,17 +345,9 @@ of our file.
 From `django.views.generic.edit`, import the three generic views:
 `CreateView`, `UpdateView`, and `DeleteView`.
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -367,17 +361,9 @@ its properties, set:
 -   `template_name` as `"vetoffice/owner_create_form.html"`
 -   `fields` as `["first_name", "last_name", "phone"]`
 
-Checkpoint 3 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -394,17 +380,9 @@ Remember:
     -   The `fields` containing: `"animal_type"`, `"breed"`,
         `"pet_name"`, `"age"`, `"owner"`
 
-Checkpoint 4 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **4.**
 
@@ -421,17 +399,9 @@ First, start with the `UpdateView` for `Owner`:
 
 Then, repeat the same general steps but for `Patient`.
 
-Checkpoint 5 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **5.**
 
@@ -444,25 +414,62 @@ With `DeleteView`, there’s no need to add in `fields` since if we’re
 deleting an instance, we’ll delete everything associated with that
 instance.
 
-Checkpoint 6 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```python
+from django.shortcuts import render
+from .models import Owner, Patient
+from django.views.generic import ListView
+# Import the generic views below:
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-Views
+def home(request):
+  context = {"name": "Djangoer"}
+  return render(request, "vetoffice/home.html", context)
 
-Adding Views to urls.py
+class OwnerList(ListView):
+  model = Owner
+  template_name = "vetoffice/owner_list.html"
+
+class PatientList(ListView):
+  model = Patient
+  template_name = "vetoffice/patient_list.html"
+
+# Create your other generic views below:
+class OwnerCreate(CreateView):
+  model = Owner
+  template_name = "vetoffice/owner_create_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientCreate(CreateView):
+  model = Patient
+  template_name = "vetoffice/patient_create_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerUpdate(UpdateView):
+  model = Owner
+  template_name = "vetoffice/owner_update_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientUpdate(UpdateView):
+  model = Patient
+  template_name = "vetoffice/patient_update_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerDelete(DeleteView):
+  model = Owner
+  template_name = "vetoffice/owner_delete_form.html"
+
+class PatientDelete(DeleteView):
+  model = Patient
+  template_name = "vetoffice/patient_delete_form.html"
+```
+
+## Adding Views to urls.py
 
 Now that we have completed the logic to work with class-based views, we
 can implement them into our <a
@@ -480,7 +487,7 @@ target="_blank" rel="noopener"><code
 class="code__2rdF32qjRVp7mMVBHuPwDS">.as_view()</code> method</a>, which
 works its magic in order to render the appropriate logic:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # urls.py
  
 urlpatterns = [
@@ -519,17 +526,9 @@ Let’s start first with the `Owner` list:
     -   Make the view callable by using the `.as_view()` method.
 -   Assign `"ownerlist"` as the `name` attribute.
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -539,17 +538,9 @@ Let’s create a new `path()` for `"patient/list"` in `urlpatterns`. For
 the second argument, use `views.PatientList` and make it a callable view
 as well. Lastly, give it a `name` of `"patientlist"`.
 
-Checkpoint 3 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -560,17 +551,9 @@ make one for `Owner`.
 -   This path should use the `OwnerCreate` view
 -   Provide a `name` of `"ownercreate"`.
 
-Checkpoint 4 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **4.**
 
@@ -585,25 +568,71 @@ Great job! The creation path for `Owner` is set up, now it’s time for
 set up the update view and delete view before we can see the actual
 page. This will happen in the next exercise!
 
-Checkpoint 5 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```python
+from django.urls import path
 
-Views
+from . import views
 
-Using Primary Keys in URLs
+# Add your path()s inside of urlpatterns:
+urlpatterns = [
+  path("", views.home, name="home"),
+  path('owner/list', views.OwnerList.as_view(), name="ownerlist"),
+  path('patient/list', views.PatientList.as_view(), name="patientlist"),
+  path('owner/create', views.OwnerCreate.as_view(), name="ownercreate"),
+  path('patient/create', views.PatientCreate.as_view(), name="patientcreate"),
+]
+```
+
+```python
+from django.shortcuts import render
+from .models import Owner, Patient
+from django.views.generic import ListView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+
+def home(request):
+  context = {"name": "Djangoer"}
+  return render(request, "vetoffice/home.html", context)
+
+class OwnerList(ListView):
+  model = Owner
+
+class PatientList(ListView):
+  model = Patient
+
+class OwnerCreate(CreateView):
+  model = Owner
+  template_name = "vetoffice/owner_create_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientCreate(CreateView):
+  model = Patient
+  template_name = "vetoffice/patient_create_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerUpdate(UpdateView):
+   model = Owner
+   template_name = "vetoffice/owner_update_form.html"
+
+class PatientUpdate(UpdateView):
+   model = Patient
+   template_name = "vetoffice/patient_update_form.html"
+
+class OwnerDelete(DeleteView):
+  model = Owner
+  template_name = "vetoffice/owner_delete_form.html"
+
+class PatientDelete(DeleteView):
+  model = Patient
+  template_name = "vetoffice/patient_delete_form.html"
+```
+
+## Using Primary Keys in URLs
 
 We just saw how we can view an entire list of models and create new
 models. But what if we want to access existing individual instances by
@@ -616,7 +645,7 @@ page and we’ve displayed a table of students. We click on the 10th
 student on the list and we’re directed to the path: `student/10`. In our
 URLconf, we can capture this primary key by using angle brackets:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 # urls.py
  
 urlpatterns = [
@@ -652,17 +681,9 @@ In **urls.py** add a path for `"owner/update/<pk>"`:
 -   Use the `OwnerUpdate` view
 -   Set `name` as `"ownerupdate"`
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -671,17 +692,9 @@ Now, you’ll need an update path for `Patient`!
 Create a path for `"patient/update/<pk>"` using what you know about
 paths.
 
-Checkpoint 3 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -692,17 +705,9 @@ Create two paths, one for `"owner/delete/<pk>"` and another for
 `PatientDelete` views give them the names `"ownerdelete"` and
 `"patientdelete"`, respectively.
 
-Checkpoint 4 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **4.**
 
@@ -716,25 +721,32 @@ See what happens when you comment out, or remove, a `path()` in
 `urlpatterns`! Once you’re done exploring the code, click “Run” to move
 on to the next exercise.
 
-Checkpoint 5 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```python
+from django.urls import path
 
-Views
+from . import views
 
-Rendering a 404
+# Add your path()s inside of urlpatterns:
+urlpatterns = [
+  path("", views.home, name="home"),
+  path("owner/list", views.OwnerList.as_view(), name="ownerlist"),
+  path("patient/list", views.PatientList.as_view(), name="patientlist"),
+  path("owner/create", views.OwnerCreate.as_view(), name="ownercreate"),
+  path("patient/create", views.PatientCreate.as_view(), name="patientcreate"),
+  path("owner/update/<pk>", views.OwnerUpdate.as_view(), name="ownerupdate"),
+  path("patient/update/<pk>", views.PatientUpdate.as_view(), name="patientupdate"),
+  path("owner/delete/<pk>", views.OwnerDelete.as_view(), name="ownerdelete"),
+  path("patient/delete/<pk>", views.PatientDelete.as_view(), name="patientdelete"),
+]
+```
+
+## Rendering a 404
 
 We’ve seen how to make use of views and templates by delegating data and
 rendering different content. However, what if a user tries to navigate
@@ -759,7 +771,7 @@ this by adding a `try` /`except` statement. The `try` block lets us test
 a block of code for errors and if an error is found, the `except` block
 will be executed. For example:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 from django.http import Http404
  
 def product_detail_view(request, id):
@@ -792,11 +804,7 @@ know how to implement logic when the need arises!
 Let’s first by importing the `Http404` class from `django.http` near the
 top of **views.py**.
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -805,7 +813,7 @@ For practice, let’s force a `404` page in our `home()` view function!
 Notice that we’re trying to retrieve a specific pet from our database in
 the line:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 found_pet = Patient.objects.get(pk=1)
 ```
 
@@ -816,17 +824,9 @@ Create a `try`/`except` block that has:
 -   The `except` condition being `Patient.DoesNotExist`
 -   Inside the `except` block, raise the `Http404()` exception
 
-Checkpoint 3 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -834,17 +834,9 @@ You can now force the error by changing the `Patient.objects.get()`
 argument from `pk=1` to `pk=4` (or higher), since there are only 3
 `Patient` instances currently in the database.
 
-Checkpoint 4 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **4.**
 
@@ -861,31 +853,197 @@ However, to see how your page will look like to a user, open up
 **settings.py** and set `DEBUG` to `False`. Refresh the page to see the
 default 404 page for Django.
 
-Checkpoint 5 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```python
+from django.shortcuts import render
+from .models import Owner, Patient
+from django.views.generic import ListView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+# Import Http404 below:
+from django.http import Http404
 
-Views
+def home(request):
+  # Add your code below:
+  try:
+    found_pet = Patient.objects.get(pk=6)
+  except Patient.DoesNotExist:
+    raise Http404()
+  context = {"name": "Djangoer", "pet": found_pet}
+  return render(request, "vetoffice/home.html", context)
 
-Updating URLs in Templates
+class OwnerList(ListView):
+  model = Owner
+  template_name = "vetoffice/owner_list.html"
+
+class PatientList(ListView):
+  model = Patient
+  template_name = "vetoffice/patient_list.html"
+
+class OwnerCreate(CreateView):
+  model = Owner
+  template_name = "vetoffice/owner_create_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientCreate(CreateView):
+  model = Patient
+  template_name = "vetoffice/patient_create_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerUpdate(UpdateView):
+  model = Owner
+  template_name = "vetoffice/owner_update_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientUpdate(UpdateView):
+  model = Patient
+  template_name = "vetoffice/patient_update_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerDelete(DeleteView):
+  model = Owner
+  template_name = "vetoffice/owner_delete_form.html"
+
+class PatientDelete(DeleteView):
+  model = Patient
+  template_name = "vetoffice/patient_delete_form.html"
+```
+
+```python
+"""
+Django settings for djangovet project.
+
+Generated by 'django-admin startproject' using Django 3.1.6.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/3.1/topics/settings/
+
+For the full list of settings and their values, see
+https://docs.djangoproject.com/en/3.1/ref/settings/
+"""
+
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '6iackfmy5^i(j55meq%(#d#^3baoew4h!_ow%faqc!v&4g51%_'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['.cc-propeller.cloud']
+
+
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'vetoffice'
+]
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+ROOT_URLCONF = 'djangovet.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = 'djangovet.wsgi.application'
+
+
+# Database
+# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
+# Password validation
+# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+
+
+# Internationalization
+# https://docs.djangoproject.com/en/3.1/topics/i18n/
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+STATIC_URL = '/static/'
+```
+
+## Updating URLs in Templates
 
 When writing out paths in our URLConf, we looked into how to add a
 class-based view to be used in our paths. Consider the following piece
 of code:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 urlpatterns = [
   path("books/", views.BookList.as_view(), name="booklist"),
   path("books/update/<pk>", views.BookUpdate.as_view(), name="bookupdate")
@@ -902,7 +1060,7 @@ information from the view, but how do we access this information?
 Within our template, we’ll be able to retrieve all of the records in our
 database through the `BookList` class:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```html
 <!-- /templates/book_list.html -->
  
 {% for book in book_list %}
@@ -922,7 +1080,7 @@ key in dynamic URLs. Let’s assume we want to have a link attached to
 each book in order to delete it from the list and our database. In this
 case, we can make use of the `name` attribute from our book update path.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```html
 <!-- /templates/book_list.html -->
  
 {% for book in book_list %}
@@ -958,17 +1116,9 @@ Inside the `<tr>` that displays information, you now have to:
     -   Use `owner.id` as the argument
 -   The `<a>`‘s text should say `Edit`
 
-Checkpoint 2 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -978,32 +1128,50 @@ text in this new link should display `Delete`.
 Once you’re done, try clicking on the links to see how you’ve used
 dynamic links in your URLs!
 
-Checkpoint 3 Passed
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
-Stuck? Get a hint
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 ### Solution
 
-# Learn
+```html
+{% extends "./base.html" %}
 
-Views
+{% block content %}
+<h2>Owner List</h2>
+<table id="owners">
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Phone</th>
+      <th> </th>
+      <th> </th>
+  </tr>
+	<tr>
+  {% for owner in owner_list %}
+  </tr>
+  <tr>
+    <td>{{ owner.first_name }}</td>
+    <td>{{ owner.last_name }}</td>
+    <td>{{ owner.phone }}</td>
+    <!-- Add your code below -->
+    <td><a href="{% url 'ownerupdate' owner.id %}">Edit</a></td>
+    <td><a href="{% url 'ownerdelete' owner.id %}">Delete</a></td>
+    
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+```
 
-Review
+## Review
 
 Way to go! We’ve explored tools and built-in functionalities that Django
 provides when working with views. So far we’ve learned how to:
 
 -   Create view functions within the appropriate `views.py` file:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 def home_view(request):
   name = "Tom"
   text = f"<h1>My name is {name}</h1>"
@@ -1012,14 +1180,14 @@ def home_view(request):
 
 -   Explored how to use class-based views:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 class OwnerList(Listview):
   model = Owner
 ```
 
 -   Attach the view function to a route **urls.py** file:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```python
 urlpatterns = [
   path("catalogue/", views.Catalogue.as_view(), name="catalogue"),
 ]
@@ -1027,7 +1195,7 @@ urlpatterns = [
 
 -   How to access data rendered into a template:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+```html
 <!-- /templates/book_list.html -->
  
 {% for book in book_list %}
@@ -1056,13 +1224,7 @@ target="_blank" rel="noopener">generic views</a> you can use, and
 challenge yourself further by adding other templates that you might find
 useful!
 
-### Solution
-
-# Learn
-
-Build Python Web Apps with Django
-
-The Django Djitney
+# The Django Djitney
 
 The Codes-ville Official Department of Transportation needs your help!
 They recently finished building the routes for their new commuter train,
@@ -1082,6 +1244,487 @@ lines, stops, and stations. They’ve outsourced the creation of the
 templates, and they’ve supplied the models on their own. All you’ll need
 to do is create the views and link them up to the templates.
 
-Start
+## Instructions
 
-### Solution
+## Understand the Context
+
+1.
+
+The project has been pre-populated with everything required to run the
+application except the views and the URLs.
+
+Take a look at the models for the **routes** app. There should be three:
+`Line`, `Station`, and `Stop`.
+
+Examine their fields, and take a look at the comments to understand what
+each field represents and how the models are connected to one another.
+
+
+
+
+
+2.
+
+Take a look at the templates that have been provided. All of the
+templates already exist for all of the views that you will need to
+create. The templates also help to indicate what paths you will need to
+make in **routes/urls.py**, and what objects will need to be available
+for each page.
+
+
+
+
+
+3.
+
+The forms for the **routes** app will come in handy when you need to
+implement your “Create” and “Update” views. Look over **forms.py** to
+see how this file will be used in the overall project.
+
+
+
+
+
+4.
+
+Now navigate to **views.py** to see what’s imported for you and the
+provided class. After you’ve taken a look at the setup that’s been
+provided, let’s try to run the provided code and see what happens in the
+browser! As you add your own code, run it so that you can see the
+application update while you work on it.
+
+
+
+
+
+## Implement the views for Lines
+
+5.
+
+The town has named each of their jitney **lines** after different
+species of python! The town currently has three lines in its database.
+We’ll create a `ListView` that can display the different lines using the
+**routes/lines.html** template. Then we’ll add a `CreateView`,
+`UpdateView`, and `DeleteView` to allow the town to edit the lines as
+they please.
+
+Let’s start by importing all of the generics we’ll require. You should
+have opened **routes/views.py**, import the `ListView`, `CreateView`,
+`UpdateView`, and `DeleteView`.
+
+
+
+
+
+6.
+
+The `Line` model is already imported in **routes/views.py**, from
+`.models`.
+
+Create a new `LinesView` class that inherits from the `ListView` you
+imported. Populate the `template_name` and `model` attributes of your
+class to bind the **routes/lines.html** template and `Line` model to
+your class.
+
+
+
+
+
+7.
+
+Notice that your code didn’t do anything just yet – that’s because you
+need a `path`.
+
+In **routes/urls.py**, add a `path` that calls the `LinesView` we made
+as a function. Your path should ensure that your page is visible at
+`lines/`. Use the **routes/base.html** template (with the `<nav>` inside
+linking to each of the pages) to infer what the `name` attribute for
+that `path` should be.
+
+
+
+
+
+8.
+
+Now that you’ve got your `ListView`, you need to add the functionality
+to be able to **create** a new jitney line. You’ll need to:
+
+-   Add a `CreateLineView` class that uses the `CreateView` generic.
+    -   Make sure it uses the `Line` model!
+-   Add fields to `CreateLineView` that specify:
+    -   `form_class` as `LineForm` (this is already imported for you and
+        you can see the forms in **routes/forms.py**).
+    -   `template_name` as `"routes/add_line.html"`.
+-   Add a new `path` for this view in **routes/urls.py**.
+    -   For the `name` argument, look over **routes/lines.html** to find
+        the `name` that the template expects for the `CreateLineView`.
+    -   Ensure that the page is available at `"lines/new/"`.
+
+
+
+
+
+9.
+
+Create an `UpdateLineView` to help Codes-ville change the name of their
+jitney lines at their leisure. You’ll need to:
+
+-   Add an `UpdateLineView` class to **routes/views.py** that inherits
+    from the `UpdateView` generic to update the `Line` model
+    -   Add a field that tells the view to use the
+        **routes/update_line.html** template.
+    -   Add another field tells the view to use the `LineForm` that you
+        imported in the previous step.
+-   Add a new `path` for this view in **routes/urls.py**.
+    -   For the `name` argument, look over **routes/lines.html** to find
+        the `name` that the template expects for the `UpdateLineView`.
+    -   Ensure that the page is available at `"lines/<pk>/update/"`.
+
+
+
+
+
+10.
+
+The town should also be able to delete any lines that have to be
+decommissioned.
+
+Create a `DeleteLineView` that they can use for this. Follow the general
+pattern for adding a new View, and specifically for `DeleteLineView`,
+add a `success_url` property with a value of `"/lines"`.
+
+Then, add a `path` so that the view is accessible at
+`"lines/<pk>/delete/"` with `name="delete_line"`.
+
+
+
+
+
+11.
+
+Before you can test the functionality you’ve built for viewing,
+creating, updating, and deleting lines, you’ll have to edit the **base**
+template to uncomment the link corresponding to `lines` in the navbar.
+
+Navigate to **routes/base.html** and find the `<nav>` element. You’ll
+notice that the links for the `lines`, `stations`, and `stops` pages are
+commented out. Uncomment only the `lines` link in the `<nav>`, and then
+refresh the application in the browser pane on the right.
+
+You can check if your `LinesView` worked by navigating to
+`localhost:8000/lines` in the web browser, or clicking that link in the
+navbar. You should see the three jitney lines that have been installed
+by the town and you have a `+` button to add new `Line`s!
+
+
+
+
+
+12.
+
+Test your `CreateLineView` by adding some new lines. Hit the add button
+below the lines table, and add a new line called
+<a href="https://en.wikipedia.org/wiki/Morelia_spilota"
+class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
+target="_blank" rel="noopener">“Carpet”</a>, and another called
+<a href="https://en.wikipedia.org/wiki/Green_tree_python"
+class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
+target="_blank" rel="noopener">“Green Tree”</a>. These should show up in
+the lines table now, thanks to the `LinesView` we created earlier.
+
+Now, the town wishes to be more specific with the name of the “Carpet”
+line, and rename it to the
+**<a href="https://en.wikipedia.org/wiki/Morelia_spilota_cheynei"
+class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
+target="_blank" rel="noopener">“Jungle Carpet”</a>** line to indicate
+the correct subspecies. Click on the **Carpet** line in your lines table
+to be taken to your update page and validate that you can rename it to
+**Jungle Carpet**.
+
+Lastly, validate your `DeleteLineView` by clicking the ❌ next to the
+“Green Tree” route. Codes-ville has agreed that four lines is more than
+enough to service their commuters for now. After you’ve confirmed the
+delete, “Green Tree” should no longer appear in the lines table.
+
+
+
+
+
+## Implement the views for Stations
+
+13.
+
+Now that your lines are all set up, you’ll need to be able to view,
+create, update, and delete the **stations** that these lines will visit.
+You should already have seen these stations populated on the **home**
+page and **lines** page, but now you’ll give them their own table on
+their own page. Similar to what we did for **lines**:
+
+-   Start by creating a `ListView`. Create a new view called
+    `StationsView`.
+-   Bind it to the `Station` model, and use the **routes/stations.html**
+    template.
+-   Add a `path` to **routes/urls.py** so that we can access our
+    `StationsView` at `"stations/"`
+
+
+
+
+
+14.
+
+Implement the `CreateStationView`, so that the town will be able to add
+new stations as they come into operation.
+
+The `CreateStationView` should:
+
+-   inherit from the `CreateView` generic
+-   use the `Station` model
+-   use the **routes/add_station.html** template
+-   use the `StationForm` (imported from `.forms` like you did with
+    `LineForm`)
+-   have a `path` so that you can use it at `"stations/new/"`, with the
+    `name` as specified by the **routes/stations.html** template on the
+    “add” button
+
+
+
+
+
+15.
+
+The `Station` model has an additional field: `accessible`. The town uses
+this to indicate whether or not the station has accessibility features
+for their commuters, such as elevators or wheelchair-accessible
+entryways to the jitney platforms.
+
+Implement an `UpdateStationView`, so that as the town of Codes-ville
+adds accessible accommodations to their older stations, they’re able to
+update the database to reflect the improvements.
+
+The `UpdateStationView` should:
+
+-   inherit from the `UpdateView` generic
+-   use the `Station` model
+-   use the **routes/update_station.html** template
+-   use the `StationForm` like you did for the `CreateStationView`
+-   have a `path` at `"stations/<pk>/update/"`, with the `name` as
+    specified in **routes/stations.html** on each entry of the station
+    table.
+
+
+
+
+
+16.
+
+Implement a `DeleteStationView`, so that the town can delete the
+stations that are just too out-of-date to be renovated and must be
+demolished.
+
+The `DeleteStationView` should:
+
+-   inherit from the `DeleteView` generic
+-   use the `Station` model
+-   use the **routes/delete_station.html** template
+-   have a `success_url` of `"/stations/"`
+-   have a `path` at `"stations/<pk>/delete/"` with the `name` that’s
+    used on the ❌ button in the **routes/stations.html** template
+
+
+
+
+
+17.
+
+The functionality for viewing, creating, updating, and deleting stations
+for the Django Djitney rail system should be complete! Time to test out
+your functionality.
+
+Like we did for **lines**, update the **routes/base.html** template to
+uncomment the link in the `<nav>` for `stations`. Then, when you
+refresh, you should be able to see the new link in your app’s navbar to
+test out the functionality you’ve implemented for stations!
+
+If your views were correct, you should see a new entry in the app’s
+navbar now, **Stations** that you can click to view all the stations
+that the town currently has in place. This is your `StationsView` at
+work!
+
+
+
+
+
+18.
+
+Let’s try adding a new station. Use the “add” button under the table to
+test out your `CreateStationView`, by adding a new *accessible* station,
+<a href="https://en.wikipedia.org/wiki/Basuto_pony"
+class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
+target="_blank" rel="noopener"><strong>Basuto</strong></a> station.
+
+
+
+
+
+19.
+
+The town of Codes-ville has done some renovations! The
+<a href="https://en.wikipedia.org/wiki/Exmoor_pony"
+class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
+target="_blank" rel="noopener"><strong>Exmoor</strong></a> station is
+now accessible.
+
+Use your `UpdateStationView` to update the **Exmoor** station so that it
+is marked in the stations table as accessible.
+
+
+
+
+
+20.
+
+The **Exmoor** station is remarkably close to the worn-down
+<a href="https://en.wikipedia.org/wiki/Kerry_Bog_Pony"
+class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
+target="_blank" rel="noopener"><strong>Kerry Bog</strong></a> station.
+Since the town’s new **Exmoor** station is newer and accessible, they’ve
+decided to demolish the **Kerry Bog** station.
+
+Use your `DeleteStationView` to delete the **Kerry Bog** station.
+
+After this, you’ll have tested all the functionality you’ve implemented
+for stations!
+
+
+
+
+
+## Implement the views for Stops
+
+21.
+
+**Stops** are used to create a route for a jitney **line** through the
+different **stations**. As you did for lines and stations, you’ll need
+to create the views and add URLs so that the town can manage the stops
+for the jitney line. Like before, start with the `ListView`. You should:
+
+-   Create a `StopsView` that inherits from the `ListView` generic
+-   Set the `model` as `Stop`
+-   Use the template at **routes/stops.html** for your `StopsView`
+-   Make the page available at `"stops/"` using a `path` with
+    `name="stops"`
+
+
+
+
+
+22.
+
+Implement a `CreateStopView`, so that the town can add stations to
+different jitney routes.
+
+Your view should:
+
+-   inherit from the `CreateView` generic
+-   use the `Stop` model
+-   use the `StopForm`, imported from `.forms`
+-   use the template at **routes/add_stop.html**
+-   be used in a `path` available at `"stops/new/"`, with
+    `name="create_stop"`
+
+
+
+
+
+23.
+
+Now, add an `UpdateStopView`, so that the town can change stop numbers
+around to make routes more convenient for commuters during rush hour.
+
+The `UpdateStopView` should:
+
+-   inherit from the `UpdateView` generic
+-   use the `Stop` model
+-   use the `StopForm`, imported from `.forms`
+-   use the template at **routes/update_stop.html**
+-   be available in a `path` at `"stops/<pk>/update/"`, with
+    `name="update_stop"`
+
+
+
+
+
+24.
+
+Lastly, you’ll need to add a `DeleteStopView`. Using what you’ve
+learned, set the:
+
+-   generic this class will inherit from
+-   the model
+-   the template
+-   a `success_url`
+-   the correct `path()`
+
+
+
+
+
+
+25.
+
+Time to test out your functionality! Like you did before, you’ll have to
+uncomment the link in the `<nav>` for **stops**.
+
+Once you do that and refresh the browser, you’ll see a new link,
+**Stops**, in the navbar. Click it to see what your stops page looks
+like!
+
+Check for any errors, and try to view your stops. After that, try to
+insert a stop at **Basuto** station on the **Monty** line, between
+**Cob** and **Anadolu** station.
+
+To do this:
+
+-   Update stop number **6** on the Monty line at Anadolu station to
+    have stop number **7** instead.
+-   Add a new stop, with:
+    -   the line set to **Monty**
+    -   the station set to **Basuto**
+    -   the stop number set to **6**
+
+
+
+
+
+## Djazz It Up!
+
+26.
+
+Congratulations! You’ve completed your app for The Django Djitney. The
+town of Codes-ville owes you a sincere thanks!
+
+Now that you’ve implemented the base functionality for the app, here are
+some things you can try to enhance the app:
+
+-   Add a `color` field to lines, like you may have seen on your local
+    public transportation lines. Update the templates so that the text
+    of each line in the **Lines** table is colored according to the
+    line’s color.
+-   Add more fields to a station, such as **age** or
+    **last_cleaned_date**, to help the town manage the maintenance for
+    the stations. Update the templates so that these fields are shown on
+    the **Stations** table
+-   Update the models and views to add a **schedule** to the jitney
+    lines. Show the times that each train will stop at a given station.
+
+
+
+
+
+## Solution
+
+```python
+
+```
