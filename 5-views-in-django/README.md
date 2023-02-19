@@ -140,6 +140,13 @@ def home(request):
    return render(request, "vetoffice/home.html", context)
 ```
 
+```html
+{% extends "./base.html" %}
+{% block content %}
+    {% for pet in pets %}<p>{{ pet.petname }}, {{ pet.animal_type }}</p>{% endfor %}
+{% endblock %}
+```
+
 ## Class Based Views
 
 We’ve explored how to write view functions in order to render templates
@@ -258,6 +265,35 @@ implement a `ListView` for `Patient`!
 ### Solution
 
 ```python
+from django.db import models
+
+# Create your models here.
+class Owner(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    phone = models.CharField(max_length=30)
+
+class Patient(models.Model):
+    DOG = 'DO'
+    CAT = 'CA'
+    BIRD = 'BI'
+    REPTILE = 'RE'
+    OTHER = 'OT'
+    ANIMAL_TYPE_CHOICES = [
+        (DOG, 'Dog'),
+        (CAT, 'Cat'),
+        (BIRD, 'Bird'),
+        (REPTILE, 'Reptile'),
+        (OTHER, 'Other'),
+    ]
+    animal_type = models.CharField(max_length=2, choices=ANIMAL_TYPE_CHOICES, default=OTHER)
+    breed = models.CharField(max_length=200)
+    pet_name = models.CharField(max_length=30)
+    age = models.IntegerField(default=0)
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+```
+
+```python
 from django.shortcuts import render
 from .models import Owner, Patient
 # Import ListView below:
@@ -276,6 +312,84 @@ class OwnerList(ListView):
 class PatientList(ListView):
   model = Patient
   template_name = "vetoffice/patient_list.html"
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+    <h2>Owner List</h2>
+    <a href="{% url 'ownercreate' %}">
+        <button class="btn">Add Owner</button>
+    </a>
+    <table id="owners">
+        <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Phone</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            {% for owner in owner_list %}
+            </tr>
+            <tr>
+                <td>{{ owner.first_name }}</td>
+                <td>{{ owner.last_name }}</td>
+                <td>{{ owner.phone }}</td>
+                <td>
+                    <a href="{% url 'ownerupdate' owner.id %}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="{% url 'ownerdelete' owner.id %}">
+                        <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+            Woul
+        </table>
+    {% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+    <h2>Patient List</h2>
+    <a href="{% url 'patientcreate' %}">
+        <button class="btn">Add Patient</button>
+    </a>
+    <table id="patients">
+        <tr>
+            <th>Pet Name</th>
+            <th>Animal Type</th>
+            <th>Breed</th>
+            <th>Age</th>
+            <th>Owner</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for patient in patient_list %}
+            <tr>
+                <td>{{ patient.pet_name }}</td>
+                <td>{{ patient.animal_type }}</td>
+                <td>{{ patient.breed }}</td>
+                <td>{{ patient.age }}</td>
+                <td>{{ patient.owner.first_name }} {{ patient.owner.last_name }}</td>
+                <td>
+                    <a href="{% url 'patientupdate' patient.id %}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="{% url 'patientdelete' patient.id %}">
+                        <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
 ```
 
 ## CRUD through Class Based Views
@@ -728,6 +842,51 @@ on to the next exercise.
 ### Solution
 
 ```python
+from django.shortcuts import render
+from .models import Owner, Patient
+from django.views.generic import ListView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+
+def home(request):
+  context = {"name": "Djangoer"}
+  return render(request, "vetoffice/home.html", context)
+
+class OwnerList(ListView):
+  model = Owner
+
+class PatientList(ListView):
+  model = Patient
+
+class OwnerCreate(CreateView):
+  model = Owner
+  template_name = "vetoffice/owner_create_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientCreate(CreateView):
+  model = Patient
+  template_name = "vetoffice/patient_create_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerUpdate(UpdateView):
+  model = Owner
+  template_name = "vetoffice/owner_update_form.html"
+  fields = ["first_name", "last_name", "phone"]
+
+class PatientUpdate(UpdateView):
+  model = Patient
+  template_name = "vetoffice/patient_update_form.html"
+  fields = ["animal_type", "breed", "pet_name", "age", "owner"]
+
+class OwnerDelete(DeleteView):
+  model = Owner
+  template_name = "vetoffice/owner_delete_form.html"
+
+class PatientDelete(DeleteView):
+  model = Patient
+  template_name = "vetoffice/patient_delete_form.html"
+```
+
+```python
 from django.urls import path
 
 from . import views
@@ -744,6 +903,155 @@ urlpatterns = [
   path("owner/delete/<pk>", views.OwnerDelete.as_view(), name="ownerdelete"),
   path("patient/delete/<pk>", views.PatientDelete.as_view(), name="patientdelete"),
 ]
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+
+{% for pet in pets %}
+<p>{{ pet.petname }}, {{ pet.animal_type}}</p>
+{% endfor %}
+
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Owner List</h2>
+<a href="{% url 'ownercreate' %}"><button class="btn">Add Owner</button></a>
+<table id="owners">
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Phone</th>
+      <th> </th>
+      <th> </th>
+  </tr> 
+	<tr>
+  {% for owner in owner_list %}
+  </tr>
+  <tr>
+      <td>{{ owner.first_name }}</td>
+      <td>{{ owner.last_name }}</td>
+      <td>{{ owner.phone }}</td>
+      <td><a href="{% url 'ownerupdate' owner.id %}"><button>Edit</button></a></td>
+      <td><a href="{% url 'ownerdelete' owner.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Patient List</h2>
+<a href="{% url 'patientcreate' %}"><button class="btn">Add Patient</button></a>
+<table id="patients">
+  <tr>
+    <th>Pet Name</th>
+    <th>Animal Type</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Owner</th>
+      <th> </th>
+      <th> </th>
+  </tr>
+  {% for patient in patient_list %}
+  <tr>
+      <td>{{ patient.pet_name }}</td>
+      <td>{{ patient.animal_type }}</td>
+      <td>{{ patient.breed }}</td>
+      <td>{{ patient.age }}</td>
+      <td>{{ patient.owner.first_name }} {{ patient.owner.last_name}}</td>
+      <td><a href="{% url 'patientupdate' patient.id %}"><button>Edit</button></a></td>
+      <td><a href="{% url 'patientdelete' patient.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Create Owner</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Create Patient</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Update Owner</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Update Patient</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Delete Owner</h2>
+<form method="post">
+<div>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ object.first_name }} {{ object.last_name }}"?</p>
+  <input type="submit" value="Confirm" />
+</div>
+</form>
+{% endblock %}
+```
+
+```html
+{% extends './base.html' %}
+{% block content %}
+<h2>Delete Patient</h2>
+<form method="post">
+<div>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ object.pet_name }}"?</p>
+  <input type="submit" value="Confirm" />
+</div>
+</form>
+{% endblock %}
 ```
 
 ## Rendering a 404
@@ -911,130 +1219,6 @@ class OwnerDelete(DeleteView):
 class PatientDelete(DeleteView):
   model = Patient
   template_name = "vetoffice/patient_delete_form.html"
-```
-
-```python
-"""
-Django settings for djangovet project.
-
-Generated by 'django-admin startproject' using Django 3.1.6.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/3.1/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/3.1/ref/settings/
-"""
-
-from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6iackfmy5^i(j55meq%(#d#^3baoew4h!_ow%faqc!v&4g51%_'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['.cc-propeller.cloud']
-
-
-# Application definition
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'vetoffice'
-]
-
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
-
-ROOT_URLCONF = 'djangovet.urls'
-
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
-
-WSGI_APPLICATION = 'djangovet.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
-
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_L10N = True
-
-USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
 ```
 
 ## Updating URLs in Templates
