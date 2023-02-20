@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}Django Djitney{% endblock %}
+{% block content %}
+  <div>
+    <h2>Stops</h2>
+    <table class="line-table">
+      <thead>
+        <tr>
+          <th>Line</th>
+          <th>Stop Number</th>
+          <th>Station</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for stop in object_list %}
+        <tr>
+          <td>{{ stop.line.name }}</td>
+          <td><a href="{% url "update_stop" stop.id %}">{{ stop.stop_number }}</a></td>
+          <td>{{ stop.station.name }}</td>
+          <td><a href="{% url "delete_stop" stop.id %}" style="text-decoration: none; color: inherit;">❌</a></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url "create_stop" %}" style="display: inherit; text-align: center; border-radius: 15px; text-decoration: none; color: inherit; padding: 4px; background-color: lightgreen;">➕</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}Django Djitney{% endblock %}
+{% block content %}
+<div>
+  <h2>Stations</h2>
+  <table class="line-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>On Lines</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for station in object_list %}
+        <tr>
+          <td>
+            <a href="{% url "update_station" station.id %}">{{ station.name }}</a>
+            {% if station.accessible %}<span>  ♿️ </span>{% endif %}
+          </td>
+          <td>
+            {% for stop in station.stop_set.all %}{{stop.line.name}}, {% endfor %}
+          </td>
+          <td><a href="{% url "delete_station" station.id %}" style="text-decoration: none; color: inherit;">❌</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url "create_station" %}" style="display: inherit; text-align: center; border-radius: 15px; text-decoration: none; color: inherit; padding: 4px; background-color: lightgreen;">➕</a>
+</div>
+{% endblock %}
