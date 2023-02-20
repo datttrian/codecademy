@@ -71,7 +71,8 @@ python manage.py runserver
 
 ## Instructions
 
-[Django Project Djaunty Rent-a-Bike](https://www.youtube.com/watch?v=k6xBxeb_V6o)
+[Django Project The Django Djitney](https://www.youtube.com/watch?v=YVeCwpAb2ic&t=119s)
+
 ### Understand the Context
 
 1.
