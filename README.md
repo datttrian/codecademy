@@ -38,9 +38,11 @@ Learn how models determine the schema for the database and how to perform all CR
 
 **Project**: [Djaunty Rent-a-Bike](4-data-in-django/BikeRental)
 
-## Views in Django
+## [Views in Django](5-views-in-django)
 
 Let’s write some more views and see how Django can incorporate generics to make views even easier for developers.
+
+**Project**: [The Django Djitney](5-views-in-django/djangodjitney)
 
 ## Forms in Django
 
