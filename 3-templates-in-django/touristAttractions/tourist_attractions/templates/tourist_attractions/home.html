@@ -1,0 +1,31 @@
+{% extends 'tourist_attractions/base.html' %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>This is a list of attractions in America!</h1>
+<table>
+    <tr>
+        <th>Attraction State</th>
+        <th>State</th>
+        <th>State details</th>
+    </tr>
+    {% for item in attractions|dictsort:"state" %}
+    <tr>
+        <td>{{ item.attraction_name }}</td>
+        <td>{{ item.state }}</td>
+        <td><a href="{% url 'details' item.state|slugify %}">State Details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+<!--
+Go ahead and modify views.py to add more states and see how our templates react! 
+If you want, go ahead and try to add an image on the homepage!
+
+-->
