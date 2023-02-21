@@ -44,15 +44,17 @@ Let’s write some more views and see how Django can incorporate generics to mak
 
 **Project**: [The Django Djitney](5-views-in-django/djangodjitney)
 
-## Forms in Django
+## [Forms in Django](6-forms-in-django)
 
 Incorporate forms in your Django app to get info from your users.
+
+**Project**: [Tourist Attractions with Forms](6-forms-in-django/touristAttractions)
 
 ## Accounts and Authentication in Django
 
 CRUD functionality is now easier with an admin account! Also, learn to safeguard the rest of your app by having your users create accounts.
 
-## Deploying a Django Project
+## Deploying a Django Project`
 
 Go beyond Codecademy and work on your own computer. Then, deploy your Django project to the web!
 
