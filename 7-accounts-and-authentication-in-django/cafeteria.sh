@@ -23,11 +23,13 @@ django-admin startproject $project_name && cd $project_name
 echo "${green}>>> Creating the app '$app_name' ${reset}"
 python manage.py startapp $app_name
 echo "${red}>>> Creating the main skeleton of the $app_name application ...${reset}"
-echo "${green}>>> Editing settings.py${reset}"
+echo "${green}>>> Adding app to settings.py${reset}"
 sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
+echo "${green}>>> Applying the locale-dictated format to settings.py${reset}"
 sed -i '' "s,USE_I18N = True,USE_I18N = True\n\nUSE_L10N = True,g"  $project_name/settings.py
+echo "${green}>>> Disabling auto-incrementing primary key in settings.py${reset}"
 sed -i '' '123,$d' $project_name/settings.py
-echo "${green}>>> Editing models.py${reset}"
+echo "${green}>>> Adding Week and Choice models in models.py${reset}"
 cat << 'EOF' > $app_name/models.py
 import datetime
 from django.utils import timezone
@@ -66,7 +68,7 @@ from django.contrib import admin
 
 
 EOF
-echo "${green}>>> Editing views.py${reset}"
+echo "${green}>>> Creating index, details, results and vote in views.py${reset}"
 cat << 'EOF' > $app_name/views.py
 from django.shortcuts import render, redirect
 from django.http import Http404
@@ -115,7 +117,7 @@ def vote(request, week_id):
     selected_choice.save()
     return redirect("results", week_id)
 EOF
-echo "${green}>>> Editing app urls.py${reset}"
+echo "${green}>>> Adding path to home, details, results and vote links in app urls.py${reset}"
 cat << 'EOF' > $app_name/urls.py
 from django.urls import path, include
 
@@ -134,8 +136,9 @@ urlpatterns = [
 	path("polls/<int:week_id>/vote/", views.vote, name="vote"),
 ]
 EOF
-echo "${green}>>> Editing project urls.py${reset}"
+echo "${green}>>> Adding app paths to project urls.py${reset}"
 sed -i ''  "s,from django.urls import,from django.urls import include\,,g; s,urlpatterns = \[,urlpatterns = \[\n    path\(\'\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
+echo "${red}>>> Creating templates${reset}"
 echo "${green}>>> Creating templates directory${reset}"
 mkdir -p $templates_path
 echo "${green}>>> Creating templates/registration directory${reset}"
@@ -264,9 +267,10 @@ cat << 'EOF' > $templates_path/results.html
 <a href="{% url 'index' %}">Home</a>
 {% endblock %}
 EOF
+echo "${red}>>> Creating static${reset}"
 echo "${green}>>> Creating static directory${reset}"
 mkdir -p $app_name/static/$app_name
-echo "${green}>>> Downloading djitney.png${reset}"
+echo "${green}>>> Downloading Dessert.png${reset}"
 IMAGE_URL="https://raw.githubusercontent.com/catiemo/Weekly-Dessert/main/cafeteria/weeklydessert/static/weeklydessert/Dessert.png"
 curl -o "$app_name/static/$app_name/Dessert.png" "$IMAGE_URL"
 echo "${green}>>> Creating header.css${reset}"
@@ -419,7 +423,7 @@ input[type=password]{
 	border-radius: 4px;
 }
 EOF
-echo "${green}>>> Creating details.css${reset}"
+echo "${green}>>> Creating detail.css${reset}"
 cat << 'EOF' > $app_name/static/$app_name/detail.css
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -454,9 +458,12 @@ EOF
 # admin123
 # y
 echo "${red}>>> Adding a layer of authentication ...${reset}"
-echo "${green}>>> Editing admin.py${reset}"
+echo "${red}>>> Login${reset}"
+echo "${green}>>> Importing the models Week and Choice in admin.py${reset}"
 sed -i '' '3s/^/from .models import Week\, Choice/' $app_name/admin.py
+echo "${green}>>> Registering the Week model in admin.py${reset}"
 sed -i '' '5s/^/admin.site.register(Week)/' $app_name/admin.py
+echo "${green}>>> Registering the Choice model in admin.py${reset}"
 sed -i '' '6s/^/admin.site.register(Choice)/' $app_name/admin.py
 # source env/bin/activate
 # cd cafeteria
@@ -476,7 +483,7 @@ sed -i '' '6s/^/admin.site.register(Choice)/' $app_name/admin.py
 # user.save()
 # exit()
 # python manage.py runserver
-echo "${green}>>> Editing app urls.py${reset}"
+echo "${green}>>> Adding Django’s built-in authentication views in app urls.py${reset}"
 sed -i '' "8s/^/	path(\'account\/\'\, include(\'django.contrib.auth.urls\'))\,/" $app_name/urls.py
 echo "${green}>>> Configuring authentication in settings.py${reset}"
 echo "$(cat <<-END
@@ -490,32 +497,40 @@ SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
 END
 )"  >> $project_name/settings.py
-echo "${green}>>> Editting login.html${reset}"
+echo "${green}>>> Adding form rendering tags to display a username and password field in login.html${reset}"
 sed -i '' '13s/^/          {{ form.as_p }}/' $templates_path/registration/login.html
-echo "${green}>>> Editting views.py${reset}"
+echo "${red}>>> Registration${reset}"
+echo "${green}>>> Creating a SignUp class in views.py${reset}"
 sed -i '' 's/# Create your class-based Signup view below:/# Create your class-based Signup view below:\
 class SignUp(CreateView):\
   form_class = UserCreationForm\
   success_url = reverse_lazy(\"login\")\
   template_name = \"registration\/signup.html\"/g' $app_name/views.py
-echo "${green}>>> Editing app urls.py${reset}"
+echo "${green}>>> Adding signup views in app urls.py${reset}"
 sed -i '' "10s/^/	path(\'signup\/\'\, views.SignUp.as_view()\, name='signup')\,/" $app_name/urls.py
-echo "${green}>>> Editting views.py${reset}"
+echo "${red}>>> Logging Out${reset}"
+echo "${green}>>> Importing the logout function in views.py${reset}"
 sed -i '' '9s/^/from django.contrib.auth import logout/' $app_name/views.py
+echo "${green}>>> Creating a logout view function in views.py${reset}"
 sed -i '' 's/# Create your logout function, logout_request, below:/# Create your logout function, logout_request, below:\
 def logout_request(request):\
   logout(request)\
   return redirect(\"index\")/g' $app_name/views.py
-echo "${green}>>> Editing app urls.py${reset}"
+echo "${green}>>> Adding the logout path in app urls.py${reset}"
 sed -i '' "12s/^/	path(\'logout\/\'\, views.logout_request\, name='logout')\,/" $app_name/urls.py
-echo "${green}>>> Editting header.html${reset}"
+echo "${green}>>> Adding a logout button in header.html${reset}"
 sed -i '' '9s/^/	  <a class=\"logout-button\" href=\"{% url '\''logout'\'' %}\">Log Out<\/a>/' $templates_path/header.html
-echo "${green}>>> Editting views.py${reset}"
+echo "${red}>>> Securing Paths${reset}"
+echo "${green}>>> Importing the login_required decorator in views.py${reset}"
 sed -i '' '6s/^/from django.contrib.auth.decorators import login_required/' $app_name/views.py
+echo "${green}>>> Adding decorators to the index and the vote views in views.py${reset}"
 sed -i '' 's/# Add login_required decorator:/# Add login_required decorator:\
 @login_required/g' $app_name/views.py
+echo "${green}>>> Importing the LoginRequiredMixin in views.py${reset}"
 sed -i '' '7s/^/from django.contrib.auth.mixins import LoginRequiredMixin/' $app_name/views.py
+echo "${green}>>> Adding the LoginRequiredMixin to DetailsView in views.py${reset}"
 sed -i '' 's/class DetailsView(/class DetailsView(LoginRequiredMixin, /g' $app_name/views.py
+echo "${green}>>> Adding the LoginRequiredMixin to ResultsView in views.py${reset}"
 sed -i '' 's/class ResultsView(/class ResultsView(LoginRequiredMixin, /g' $app_name/views.py
 echo "${red}>>> Great job! Now the student will be able to sign up and vote for their favorite dessert!${reset}"
 # List installed Python packages
