@@ -1,0 +1,30 @@
+body {
+	font-family: Arial;
+}
+
+.signup-form {
+	display: flex;
+	width: 420px;
+	flex-direction: column;
+	margin: auto;
+}
+
+input[type=submit]{
+	background-color: #3A10E5;
+	color: white;
+	padding: 10px 14px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
+input[type=text],
+input[type=password]{
+	margin: 10px 0;
+	padding: 5px;
+	width: 100%;
+	border-radius: 4px;
+}
