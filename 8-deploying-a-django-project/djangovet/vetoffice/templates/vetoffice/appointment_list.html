@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Appointments</h2>
+<a href="{% url 'apptcreate' %}"><button class="btn">Add Appointment</button></a>
+<table id="owners">
+ <tr>
+   <th>Patient</th>
+   <th>Day</th>
+   <th>Time</th>
+   <th>Entered by</th>
+   <th> </th>
+   <th> </th>
+ </tr>
+ {% for appt in appointment_list %}
+ <tr>
+ <tr>
+     <td>{{ appt.patient }}</td>
+     <td>{{ appt.day }}</td>
+     <td>{{ appt.time }}</td>
+     <td>{{ appt.user }}</td>
+     <td><a href="{% url 'apptupdate' appt.id%}"><button>Edit</button></a></td>
+     <td><a href="{% url 'apptdelete' appt.id%}"><button>Delete</button></a></td>
+ </tr>
+ {% endfor %}
+</table>
+{% endblock %}
