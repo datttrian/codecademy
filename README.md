@@ -60,7 +60,7 @@ CRUD functionality is now easier with an admin account! Also, learn to safeguard
 
 Go beyond Codecademy and work on your own computer. Then, deploy your Django project to the web!
 
-**Project**: Vetoffice
+**Project**: [Vetoffice](8-deploying-a-django-project/djangovet)
 
 ## [Build Python Web Apps with Django Capstone Project](9-django-capstone-project)
 
