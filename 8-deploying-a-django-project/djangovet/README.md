@@ -1,439 +1,590 @@
-# Setting Up Your Project
+# Vetoffice
 
-This article will use the app found at
-<a href="https://github.com/Codecademy/djangovet"
-class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
-target="_blank" rel="noopener">Codecademy’s Django Example
-repository</a>, this is the Vetoffice app that you’ve built during the
-span of this Skill Path. Feel free to fork this repository to your own
-GitHub account and follow along this article. You are also welcome to
-use your own project if you like but you may have to modify some of
-these steps.
+Hello! This project is intended to be used with the article in [the parent folder](../).
 
-**Note**: if using your own app, make sure to run the following command
-before doing your last push:
+Make sure to follow the steps as outlined in the article to see how to use GitHub and PythonAnywhere for your deployment needs!
 
 ```bash
-$ pip freeze > requirements.txt
-```
+#!/bin/bash
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+echo "${green}>>> Removing project directory if exists${reset}"
+rm -rf env
+echo "${green}>>> Creating virtualenv${reset}"
+python3 -m venv env
+echo "${green}>>> Activating the venv${reset}"
+source env/bin/activate
+echo "${green}>>> Upgrading pip version${reset}"
+pip install -U  --upgrade pip
+echo "${green}>>> Installing Django${reset}"
+pip install django
+echo "${red}>>> Starting the Project${reset}"
+project_name='djangovet'
+rm -rf $project_name
+django-admin startproject $project_name && cd $project_name
+echo "${red}>>> Starting the App ${reset}"
+app_name="vetoffice"
+python manage.py startapp $app_name
+echo "${green}>>> Adding app to settings.py${reset}"
+sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
+echo "${green}>>> Adding models${reset}"
+sed -i '' "s,from django.db import models,from django.db import models\nfrom django.contrib.auth.models import User,g" $app_name/models.py
+cat << 'EOF' >> $app_name/models.py
+class Owner(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    phone = models.CharField(max_length=30)
 
-This command creates a **requirements.txt** file that can be used to
-install the necessary project components on the hosting site. Make sure
-you commit and push this file to your repo.
+    def multipleOwner(self):
+        return self.patient_set.count() > 1
 
-# Setting Up PythonAnywhere Dashboard
+    def get_absolute_url(self):
+        return '/owner/list'
 
-1\) Once logged in, navigate to your dashboard.
+    def __str__(self):
+        return self.first_name + " " + self.last_name
 
-2\) Find the Console section on the left side of the dashboard and
-launch a new bash console.
+class Patient(models.Model):
+    DOG = 'DO'
+    CAT = 'CA'
+    BIRD = 'BI'
+    REPTILE = 'RE'
+    OTHER = 'OT'
+    ANIMAL_TYPE_CHOICES = [
+        (DOG, 'Dog'),
+        (CAT, 'Cat'),
+        (BIRD, 'Bird'),
+        (REPTILE, 'Reptile'),
+        (OTHER, 'Other'),
+    ]
+    animal_type = models.CharField(max_length=2, choices=ANIMAL_TYPE_CHOICES, default=OTHER)
+    breed = models.CharField(max_length=200)
+    pet_name = models.CharField(max_length=30)
+    age = models.IntegerField(default=0)
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_console.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s dashboard to show how to create a new console by clicking the $Bash button" />
+    def get_absolute_url(self):
+        return '/patient/list'
 
-3\) A console will launch in the same window. A `pwd` command at the
-prompt will show you are in your home directory
-`/home/<your account name>`
+    def __str__(self):
+        return self.pet_name + ", " + self.animal_type
 
-At the prompt clone the Github repo for the app.
+class Appointment(models.Model):
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    day = models.DateField(auto_now=False, auto_now_add=False)
+    time = models.TimeField(auto_now=False, auto_now_add=False)
+    user = models.ForeignKey(
+        User,
+        models.SET_NULL,
+        blank=True,
+        null=True,
+    )
 
-```bash
-$ git clone https://github.com/<github username>/<repo name>.git
-```
+    def get_absolute_url(self):
+        return '/appointment/list'
 
-A `tree <repo name>` at the command prompt will show your success.
+    def __str__(self):
+        return self.patient.__str__() + "\t" + str(self.day.month) + " " + str(self.day.day) + " " + str(self.day.year) + " " + str(self.time.hour) + " " + str(self.time.min)
+EOF
+echo "${green}>>> Registering models for admin${reset}"
+sed -i '' "s,from django.contrib import admin,from django.contrib import admin\n\nfrom .models import Owner\, Patient,g" $app_name/admin.py
+cat << 'EOF' >> $app_name/admin.py
+admin.site.register(Owner)
+admin.site.register(Patient)
+EOF
+echo "${green}>>> Adding forms${reset}"
+cat << 'EOF' > $app_name/forms.py
+from django import forms
+from .models import Owner, Patient, Appointment
 
-4\) Navigate to your repo’s home directory:
+# CRUD - Create
+class OwnerCreateForm(forms.ModelForm):
+    class Meta:
+        model = Owner
+        fields = ('first_name', 'last_name', 'phone',)
 
-```bash
-$ cd <repo name>
-```
+class PatientCreateForm(forms.ModelForm):
+    class Meta:
+        model = Patient
+        fields = ('pet_name', 'animal_type', 'breed', 'age', 'owner')
 
-5\) You will now have to create a virtual environment for your code to
-run. PythonAnywhere prefers you use the script `mkvirtualenv` to create
-and activate your virtual environment. At the time of this writing
-PythonAnywhere’s latest version of Python is 3.8.
+class AppointmentCreateForm(forms.ModelForm):
+    class Meta:
+        model = Appointment
+        fields = ('patient', 'day', 'time')
 
-```bash
-$ mkvirtualenv --python=python3.8 <some env name>
-```
+#CRUD - Update
+class OwnerUpdateForm(forms.ModelForm):
+    #form for updating owners
+    class Meta:
+        model = Owner
+        fields = ('first_name', 'last_name', 'phone',)
 
-Make a note of the environment name you chose. You’ll need to enter the
-name in the web app settings later.
+class PatientUpdateForm(forms.ModelForm):
+    #form for updating patients
+    class Meta:
+        model = Patient
+        fields = ('pet_name', 'animal_type', 'breed', 'age', 'owner')
 
-6\) Confirm your **requirements.txt** is present in the directory using
-`ls`. If it is you may run the next command.
+class AppointmentUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Appointment
+        fields = ('patient', 'day', 'time')
+EOF
+echo "${green}>>> Adding views${reset}"
+sed -i '' "s,from django.shortcuts import render,from django.shortcuts import render\nfrom django.views.generic import ListView\nfrom django.views.generic.edit import CreateView\, DeleteView\, UpdateView\nfrom django.contrib.auth.decorators import login_required\nfrom django.contrib.auth.mixins import LoginRequiredMixin\nfrom django.urls import reverse_lazy\nfrom django.contrib.auth.forms import UserCreationForm\n\nfrom .models import Owner\, Patient\, Appointment\nfrom .forms import OwnerCreateForm\, OwnerUpdateForm\, PatientCreateForm\, PatientUpdateForm\, AppointmentCreateForm\, AppointmentUpdateForm,g" $app_name/views.py
+cat << 'EOF' >> $app_name/views.py
+@login_required
+def home(request):
+   context = {"name": request.user}
+   return render(request, 'vetoffice/home.html', context)
 
-```bash
-$ pip install -r requirements.txt
-```
+# CRUD - (R)ead
+class OwnerList(LoginRequiredMixin, ListView):
+   model = Owner
 
-**Note**: If you didn’t create a **requirements.txt** you can also
-install the latest Django version manually by running
+class PatientList(LoginRequiredMixin, ListView):
+    model = Patient
 
-```bash
-$ pip install django
-```
+class AppointmentList(LoginRequiredMixin, ListView):
+    model = Appointment
 
-7\) PythonAnywhere requires a few configuration items in its web
-application console. You will need to have the following handy for the
-next steps:
+# CRUD - (C)reate
+class SignUp(CreateView):
+   form_class = UserCreationForm
+   success_url = reverse_lazy('login')
+   template_name = 'registration/signup.html'
 
-• Your application’s root folder (where **manage.py** is) • The project
-root folder (where **settings.py** is) • Your virtual environment name
+class OwnerCreate(LoginRequiredMixin, CreateView):
+   model = Owner
+   template_name = 'vetoffice/owner_create_form.html'
+   form_class = OwnerCreateForm
 
-8\) In the web page where you’re using the PythonAnywhere console you’ll
-notice a main menu toggle in the upper right corner. Click that and
-choose **Web**.
+class PatientCreate(LoginRequiredMixin, CreateView):
+    model=Patient
+    template_name = 'vetoffice/patient_create_form.html'
+    form_class = PatientCreateForm
 
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_console_menu.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s console&#39;s main menu toggle which expands to many options, select the &quot;Web&quot; option" />
+class AppointmentCreate(LoginRequiredMixin, CreateView):
+    model=Appointment
+    template_name = 'vetoffice/appointment_create_form.html'
+    form_class = AppointmentCreateForm
 
-You will now set up the Web application.
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
-9\) Click the blue buttons saying **Add a New Web App**
+# CRUD - (U)pdate
+class OwnerUpdate(LoginRequiredMixin, UpdateView):
+   model = Owner
+   template_name = 'vetoffice/owner_update_form.html'
+   form_class = OwnerUpdateForm
 
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_add_new_web_app.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s button that says &quot;Add a new web app&quot;" />
+class PatientUpdate(LoginRequiredMixin, UpdateView):
+   model = Patient
+   template_name = 'vetoffice/patient_update_form.html'
+   form_class = PatientUpdateForm
 
-10\) The next screen will give you a choice for a hosting web address.
-Choose the domain name, `<your-user-name>.pythonanywhere.com`.
+class AppointmentUpdate(LoginRequiredMixin, UpdateView):
+    model = Appointment
+    template_name = 'vetoffice/appointment_update_form.html'
+    form_class = AppointmentUpdateForm
 
-11\) Once you have chosen your web address, click **Next**. The next
-screen will show you various frameworks to configure. It may be tempting
-to choose Django but this menu option is only for new projects. Your app
-should be already created, so choose **Manual Configuration**:
+# CRUD - (D)elete
+class OwnerDelete(LoginRequiredMixin, DeleteView):
+    model = Owner
+    template_name = 'vetoffice/owner_delete_form.html'
+    success_url = '/owner/list'
 
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_select_framework.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s prompt to select a Python Web framework, select &quot;Manual Configuration&quot;" />
+class PatientDelete(LoginRequiredMixin, DeleteView):
+    model = Patient
+    template_name = 'vetoffice/patient_delete_form.html'
+    success_url = '/patient/list'
 
-12\) Once you choose **Manual Configuration**, you’ll be presented with
-various versions of Python. Choose the newest version of Python
-available in the list (At the time of this article it would be **Python
-3.8**)
+class AppointmentDelete(LoginRequiredMixin, DeleteView):
+    model = Appointment
+    template_name = 'vetoffice/appointment_delete_form.html'
+    success_url = '/appointment/list'
+EOF
+echo "${green}>>> Wiring views${reset}"
+cat << 'EOF' > $app_name/urls.py
+from django.urls import path, include
 
-Once you choose your Python version you’ll see a blurb about WSGI files.
-Read this; it will make sense later. Click **Next** when finished.
+from . import views
 
-13\) The next screen is where you have to enter details about your
-project. The areas on this page you need to modify appear in:
-
-```html
-<span style="color:red">_`red italic`_</span>
-```
-
-For now, skip down to the `virtualenv` path.
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_virtualenv.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s virtualenv section which allows you to add in the path to a virtualenv" />
-
-Configure it to be
-`/home/<your username>/.virtualenvs/<your virtualenv name>`. **Tip**: if
-you just type the name of your virtual environment, PythonAnywhere will
-automatically add the rest of the path.
-
-14\) Next, scroll down to the **Static Files** area. If you are using
-static files in the provided
-<a href="https://github.com/Codecademy/djangovet"
-class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
-target="_blank" rel="noopener">GitHub repo</a>, you will create an entry
-and set the “URL” to be `/static/` and the “Directory” to be the full
-path to your static directory on PythonAnywhere:
-`/home/yourname/djangovet/vetoffice/static`.
-
-Notice there is a **Security** section. You will return to this later
-when you secure your site.
-
-Now scroll up above to the **Code** section.
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_source_code.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s code section which allows you to add the path to your web app" />
-
-Set the working directory for your code to be
-`/home/<your username>/<your repo name>`. **Tip**: If you just type the
-name of your repo PythonAnywhere will automatically fill in your home
-path.
-
-15\) The last entry in the **Code** area is a link to the WSGI file
-PythonAnywhere created for you. This is different from the one in your
-project root. Go ahead and click it so it opens in an editor.
-
-Delete all sections except the one starting with:
-
-```
-# +++++++++++ DJANGO +++++++++++
-```
-
-and then uncomment the lines of Python code in this block starting with
-`import os`. Tip: To toggle the comments off in one step, select from
-`import os` through `application = get_wsgi_application()` and press
-<span class="kbd">Cmd</span>+<span class="kbd">/</span> on your keyboard
-(Mac) or <span class="kbd">Ctrl</span>+<span class="kbd">/</span> on
-Windows.
-
-Here’s how your file should look like afterward, but, make sure to
-change `yourname` to your PythonAnywhere account name and rename
-`mysite` in the code to be the name of your project!
-
-```python
-import os
-import sys
-#
-## assuming your django settings file is at '/home/yourname/mysite/mysite/settings.py'
-## and your manage.py is is at '/home/yourname/mysite/manage.py'
-path = '/home/yourname/mysite'
-if path not in sys.path:
-    sys.path.append(path)
-#
-os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
-#
-## then:
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
-```
-
-16\) Click Save.
-
-17\) Return to the PythonAnywhere’s web app console, by clicking the
-right-corner menu. Your PythonAnywhere configuration’s now set up! Let’s
-now touch up your project to make it safe and deployable.
-
-# Security Configuration
-
-At this point, your web app could launch but it wouldn’t work correctly
-and it wouldn’t be secure. You have some items to clean up in
-**settings.py**. From this point forward, **settings.py** will be
-different in production (what users interact with) from what it is in
-development.
-
-1\) Because of this, if you are using your own repo, in your local
-development environment, add **/projectname/settings.py** to your
-**.gitignore** file. After you complete this step, open **settings.py**
-in your local development environment. You will need to copy information
-from this file for the next step. If you are using
-<a href="https://github.com/Codecademy/django-example/tree/main"
-class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
-target="_blank" rel="noopener">Codecademy’s repo</a> just refer to the
-**settings.py** in your PythonAnywhere directory.
-
-2\) Now, back in your PythonAnywhere web console, you’ll find the “Go to
-Directory” link next to your “Working directory” setting. Click that and
-you will open a file browser with context at the root of your home
-folder.
-
-On the left side of the screen navigate to your project folder (where
-manage.py resides). You will create a new file here named **keys.json**.
-
-3\) In the Files area on the right half of the screen, enter
-**keys.json** into the file name entry box. Then click **New empty
-file**.
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_new_empty_file.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="Creating a new file in the Files area" />
-
-Before you enter the code in this file, you will need to copy your
-`SECRET_KEY` value out of your local **settings.py** or take this
-opportunity to generate another random string to use.
-
-Open the **keys.json** file you just created and enter the following:
-
-```
-{
-   "SECRETKEY": "<paste in the long cryptic key you took from the settings.py file or make up a random string>"
+urlpatterns = [
+   path('', views.home, name="home"),
+   path('account/', include('django.contrib.auth.urls'), name="login"),
+   path('signup/', views.SignUp.as_view(), name='signup'),
+   path('owner/list', views.OwnerList.as_view(), name="ownerlist"),
+   path('owner/create', views.OwnerCreate.as_view(), name="ownercreate"),
+   path('owner/update/<pk>', views.OwnerUpdate.as_view(), name="ownerupdate"),
+   path('owner/delete/<pk>', views.OwnerDelete.as_view(), name="ownerdelete"),
+   path('patient/list', views.PatientList.as_view(), name="patientlist"),
+   path('patient/create', views.PatientCreate.as_view(), name="patientcreate"),
+   path('patient/update/<pk>', views.PatientUpdate.as_view(), name="patientupdate"),
+   path('patient/delete/<pk>', views.PatientDelete.as_view(), name="patientdelete"),
+   path('appointment/list', views.AppointmentList.as_view(), name="apptlist"),
+   path('appointment/create', views.AppointmentCreate.as_view(), name="apptcreate"),
+   path('appointment/update/<pk>', views.AppointmentUpdate.as_view(), name="apptupdate"),
+   path('appointment/delete/<pk>', views.AppointmentDelete.as_view(), name="apptdelete"),
+]
+EOF
+sed -i '' "s,from django.urls import path,from django.urls import include\, path,g" $project_name/urls.py
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n    path\(\'\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
+echo "${green}>>> Applying the locale-dictated format to settings.py${reset}"
+sed -i '' "s,USE_I18N = True,USE_I18N = True\n\nUSE_L10N = True,g"  $project_name/settings.py
+echo "${green}>>> Disabling auto-incrementing primary key in settings.py${reset}"
+sed -i '' '123,$d' $project_name/settings.py
+echo "${green}>>> Configuring authentication in settings.py${reset}"
+echo "$(cat <<-END
+LOGIN_URL = '/account/login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+END
+)"  >> $project_name/settings.py
+echo "${red}>>> Creating templates${reset}"
+echo "${green}>>> Creating templates directory${reset}"
+templates_path="$app_name"\/templates\/"$app_name"
+mkdir -p $templates_path
+echo "${green}>>> Creating templates/registration directory${reset}"
+mkdir -p $app_name/templates/registration
+echo "${green}>>> Creating header.html${reset}"
+cat << 'EOF' > $templates_path/base.html
+<head>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+input[type=text], input[type=password], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button, input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+{% load static %}
+<a href="{% url 'home' %}"><img src="{% static 'vetoffice/vetoffice.png' %}" alt="VO Logo"></a>
+<h3>Welcome to Vet Office {{ name }}!</h3>
+    {% block content %}
+    {% endblock %}
+</body>
+EOF
+echo "${green}>>> Creating home.html${reset}"
+cat << 'EOF' > $templates_path/home.html
+{% extends './base.html' %}
+{% block content %}
+
+<div>
+    <a href="{% url 'ownerlist' %}">Owners</a>
+    <a href="{% url 'patientlist' %}">Patients</a>
+    <a href="{% url 'apptlist' %}">Appointments</a>
+</div>
+
+{% endblock %}
+EOF
+cat << 'EOF' > $app_name/templates/registration/login.html
+<head>
+<style>
+body {
+    font-family: Arial;
+}
+input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+    <h2>Please login</h2>
+<form class="login" method="post">
+    <div>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Login"/>
+    </div>
+</form>
+EOF
+cat << 'EOF' > $app_name/templates/registration/signup.html
+<h2>Sign up</h2>
+<form class="signup" method="post">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <input type="submit" value="Signup"/>
+</form>
+EOF
+echo "${green}>>> Creating patient_list.html${reset}"
+cat << 'EOF' > $templates_path/patient_list.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Patient List</h2>
+<a href="{% url 'patientcreate' %}"><button class="btn">Add Patient</button></a>
+<table id="patients">
+  <tr>
+    <th>Pet Name</th>
+    <th>Animal Type</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Owner</th>
+      <th> </th>
+      <th> </th>
+  </tr>
+  {% for patient in patient_list %}
+  <tr>
+  <tr>
+      <td>{{ patient.pet_name }}</td>
+      <td>{{ patient.animal_type }}</td>
+      <td>{{ patient.breed }}</td>
+      <td>{{ patient.age }}</td>
+      <td>{{ patient.owner }}</td>
+      <td><a href="{% url 'patientupdate' patient.id %}"><button>Edit</button></a></td>
+      <td><a href="{% url 'patientdelete' patient.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+EOF
+echo "${green}>>> Creating patient_create_form.html${reset}"
+cat << 'EOF' > $templates_path/patient_create_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Create Patient</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating patient_update_form.html${reset}"
+cat << 'EOF' > $templates_path/patient_update_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Update Patient</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating patient_delete_form.html${reset}"
+cat << 'EOF' > $templates_path/patient_delete_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Delete Patient</h2>
+<form method="post">
+<div>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating owner_list.html${reset}"
+cat << 'EOF' > $templates_path/owner_list.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Owner List</h2>
+<a href="{% url 'ownercreate' %}"><button class="btn">Add Owner</button></a>
+<table id="owners">
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Multiple Pets</th>
+    <th>Phone</th>
+      <th> </th>
+      <th> </th>
+  </tr>
+  {% for owner in owner_list %}
+  <tr>
+  <tr>
+      <td>{{ owner.first_name }}</td>
+      <td>{{ owner.last_name }}</td>
+      <td>{% if owner.multipleOwner %}YES{% else %}NO{% endif %}</td>
+      <td>{{ owner.phone }}</td>
+      <td><a href="{% url 'ownerupdate' owner.id %}"><button>Edit</button></a></td>
+      <td><a href="{% url 'ownerdelete' owner.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+EOF
+echo "${green}>>> Creating owner_create_form.html${reset}"
+cat << 'EOF' > $templates_path/owner_create_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Create Owner</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating owner_update_form.html${reset}"
+cat << 'EOF' > $templates_path/owner_update_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Update Owner</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating owner_delete_form.html${reset}"
+cat << 'EOF' > $templates_path/owner_delete_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Delete Owner</h2>
+<form method="post">
+<div>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating appointment_list.html${reset}"
+cat << 'EOF' > $templates_path/appointment_list.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Appointments</h2>
+<a href="{% url 'apptcreate' %}"><button class="btn">Add Appointment</button></a>
+<table id="owners">
+ <tr>
+   <th>Patient</th>
+   <th>Day</th>
+   <th>Time</th>
+   <th>Entered by</th>
+   <th> </th>
+   <th> </th>
+ </tr>
+ {% for appt in appointment_list %}
+ <tr>
+ <tr>
+     <td>{{ appt.patient }}</td>
+     <td>{{ appt.day }}</td>
+     <td>{{ appt.time }}</td>
+     <td>{{ appt.user }}</td>
+     <td><a href="{% url 'apptupdate' appt.id%}"><button>Edit</button></a></td>
+     <td><a href="{% url 'apptdelete' appt.id%}"><button>Delete</button></a></td>
+ </tr>
+ {% endfor %}
+</table>
+{% endblock %}
+EOF
+echo "${green}>>> Creating appointment_create_form.html${reset}"
+cat << 'EOF' > $templates_path/appointment_create_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Create Appointment</h2>
+<form method="post">
+<div>
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating appointment_update_form.html${reset}"
+cat << 'EOF' > $templates_path/appointment_update_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Update Appointment</h2>
+<form method="post">
+<div>
+    {% csrf_token %} {{ form.as_p }}
+    <input class="btn" type="submit" value="Save" />
+    <a href=""><button class="btn">Cancel</button></a>
+</div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating appointment_delete_form.html${reset}"
+cat << 'EOF' > $templates_path/appointment_delete_form.html
+{% extends './base.html' %}
+{% block content %}
+<h2>Delete Appointment</h2>
+<form method="post">
+<div>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</div>
+</form>
+EOF
+echo "${red}>>> Creating static${reset}"
+echo "${green}>>> Creating static directory${reset}"
+mkdir -p $app_name/static/$app_name
+echo "${green}>>> Downloading djitney.png${reset}"
+IMAGE_URL="https://raw.githubusercontent.com/Codecademy/djangovet/main/vetoffice/static/vetoffice/vetoffice.png"
+curl -o "$app_name/static/$app_name/vetoffice.png" "$IMAGE_URL"
+# List installed Python packages
+pip freeze -l > requirements.txt
 ```
-
-Now, it’s important to remove the secret key in the *production* version
-of **settings.py**. This will be fixed soon.
-
-With **keys.json** you now have a file for any other keys and
-credentials your app might need later.
-
-Click **Save** to save your changes.
-
-Use the path breadcrumbs in the upper left to return to the directory in
-the file browser.
-
-4\) In the PythonAnywhere file browser, you will now navigate to the
-**settings.py** file in your app folder and open it so it’s available in
-the editor.
-
-Add these two lines at the top of **settings.py**:
-
-```python
-import json
-from django.core.exceptions import ImproperlyConfigured
-```
-
-You will soon need this code to help hide some settings info in the file
-system rather than exposing it in **settings.py**.
-
-5\) Add the following code which will pull secure information from
-**keys.json** which you created earlier. This key file will be loaded as
-a Python dictionary with key:value pairs courtesy of the `json.loads()`
-method. Then, we’ll define the function `getKey()` to retrieve a
-particular key.
-
-```python
-KEYSDIR = str(BASE_DIR)+"/keys.json"
- 
-with open(KEYSDIR) as k:
-    project_keys = json.loads(k.read())
- 
-def getKey(setting,project_keys=project_keys):
-    try:
-        return project_keys[setting]
-    except KeyError:
-        errorMessage = "Set the {} env var".format(setting)
-        raise ImproperlyConfigured(errorMessage)
-```
-
-6\) Find the `SECRET_KEY` setting. This is the first thing you need to
-hide. Change this line to read:
-
-```python
-SECRET_KEY = getKey("SECRETKEY")
-```
-
-You are invoking the `getKey()` function to return the value associated
-with the “SECRETKEY” in the JSON file.
-
-7\) Let’s continue fixing **settings.py**.
-
-Find the `ALLOWED_HOSTS` global variable and inside the list, add the
-string, making sure to change `accountname` to your PythonAnywhere
-account name:
-
-```python
-'accountname.pythonanywhere.com'
-```
-
-This line tells Django to trust the PythonAnywhere site to run your
-project.
-
-8\) Next, find `DEBUG = True` and change it to
-
-```python
-DEBUG = False
-```
-
-In production, you don’t want Django’s helpful `DEBUG` mode to expose
-the inner workings of your app!
-
-**NOTE**: We are using SQLite as our database which is an insecure
-database platform. Therefore we don’t have any database credentials to
-secure. However, if you were using another database, such as
-PostgreSQL/PostGIS, you would also want to use `get_key()` to retrieve
-those values as well, for example:
-
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': myprojdb,
-        'USER': get_key("DBUSER"),
-        'PASSWORD': get_key("DBPASSWORD"),
-        'HOST': get_key("DBHOST"),
-        'PORT': '5432',
-    }
-```
-
-Click **Save** to save your changes.
-
-9\) Finally, return to the web console and scroll down to the
-**Security** section. Note that PythonAnywhere provides you with an
-HTTPS certificate automatically. HTTPS gives you an extra layer of
-protection and you get this for free!
-
-You will also want to **Force HTTPS** by clicking the slider to
-**Enabled**:
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_source_code.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s console which allows you to turn on HTTPS by sliding the toggle" />
-
-10\) You might also want to consider password-protecting your site until
-your development work is complete. If so you can do so here:
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/pythonanywhere_password_protect.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="PythonAnywhere&#39;s option to enable/disable password protection" />
-
-# Launch!
-
-Scroll to the top of the web console and click the green **Reload**
-button. You should find your app at `<your username>.pythonanywhere.com`
-in your browser. Great job! You’ve worked through the deployment steps
-and can now share the results of your hard work on the internet!
-
-# (Optional) Admin Site Adjustments
-
-Right now your app should be running and look similar to how it did in
-development. However, if you try to load the admin site at
-`yourname.pythonanywhere.com/admin` you may notice it looks a little…
-off. When you log in with your admin account, it might look something
-like this:
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/unstylized_admin.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="display of the admin page without CSS" /> Note: If you are working
-with the repo, the admin credentials are
-
-Username: vetadmin Password: il0vepets (where the ‘o’ in love is a zero)
-
-You may recognize this page as missing its CSS styling. The built-in CSS
-is provided by the Django framework and loads easily while you’re in
-development, but now that you have published your site to production,
-you will need to gather up this CSS and make it part of your web app. To
-do this follow these steps.
-
-The first thing you will need to do is create and assign a new variable
-in **settings.py**. It’s best to put this variable immediately below
-`STATIC_URL` to stay organized. This setting needs to be the absolute
-path for the static files on PythonAnywhere’s server. The example is
-what you’d use if you are using Codecademy’s repo:
-
-```python
-STATIC_ROOT = '/home/accountname/djangovet/vetoffice/static'
-```
-
-Next, in PythonAnywhere you’ll want to navigate to your bash shell, or
-start a new one. Change your directory to be in the
-`home/username/djangovet` folder (or wherever your project’s manage.py
-file resides) and type:
-
-```bash
-$ python3.8 manage.py collectstatic
-```
-
-This will be followed by a confirmation question. Type `yes` and
-proceed.
-
-You’ll see warnings when the command finished and may ignore them. There
-is no need to reload your site in the web console. Simply refresh your
-admin page and it should look like the pretty page you remember.
-
-<img
-src="https://static-assets.codecademy.com/skillpaths/django/deploying/stylized_admin.png"
-class="img__1JGFO2nlisObc3KeOSGPRp"
-alt="display of the admin page with CSS" />
-
-Congratulations! You are now fully deployed with a working and stylized
-admin panel!
