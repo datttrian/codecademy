@@ -343,6 +343,8 @@ yourself.
 
 ## Solution
 
+[Django Project Fortune Teller](https://www.youtube.com/watch?v=YocABMoieNg)
+
 ```bash
 #!/bin/bash
 red=`tput setaf 1`
