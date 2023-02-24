@@ -1,45 +1,29 @@
 #!/bin/bash
-
-# Remove project directory if exists
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+echo "${green}>>> Removing project directory if exists${reset}"
+rm -rf env
+echo "${green}>>> Creating virtualenv${reset}"
+python3 -m venv env
+echo "${green}>>> Activating the venv${reset}"
+source env/bin/activate
+echo "${green}>>> Upgrading pip version${reset}"
+pip install -U  --upgrade pip
+echo "${green}>>> Installing Django${reset}"
+pip install django
+echo "${red}>>> Starting the Fortune Teller Project${reset}"
 project_name='touristAttractions'
 rm -rf $project_name
-
-# Start the project
-
-## create & activate a new virtual environment
-python3 -m venv env && source env/bin/activate
-## install Django
-pip install django
-## create a new Django project and navigate to the project directory
 django-admin startproject $project_name && cd $project_name
-
-# Start an App
-## create a new Django app
-app_name='tourist_attractions'
+echo "${red}>>> Starting the Random Fortune App ${reset}"
+app_name="tourist_attractions"
 python manage.py startapp $app_name
-## add configuration to INSTALLED_APPS
+echo "${green}>>> Adding app to settings.py${reset}"
 sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
-
-# Wire Up View
-## Match URLs in the app
-app_urls=$(cat <<-END
-from django.urls import path
-
-from . import views
-
-urlpatterns = [
-    path('', views.home, name='home'),
-    path('details/<statename>', views.details, name='details')
-]
-END
-) && echo "$app_urls"  > $app_name/urls.py
-## Match URLs in the project
-sed -i ''  "s,from django.urls import,from django.urls import include\,,g; s,urlpatterns = \[,urlpatterns = \[\n    path\(\'$app_name\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
-
-# Sending a Context to the Template
-app_views=$(cat <<-END
-from django.shortcuts import render
-
+echo "${red}>>> Creating overall structure of the application${reset}"
+sed -i '' '3,$d' $app_name/views.py
+echo "$(cat <<-END
 # This is the dictionary for all the attractions
 attractions = [
   { 'attraction_name' : 'Niagra Falls', 'state' : 'New York'},
@@ -60,21 +44,55 @@ def details(request, statename):
   context = {"attractions" : attractions, "statename" : statename.replace("-", " ")}
   return render(request, 'tourist_attractions/details.html', context)
 END
-) && echo "$app_views"> $app_name/views.py
+)"  >> $app_name/views.py
+cat << 'EOF' > $app_name/urls.py
+from django.urls import path
 
-# Create a Template
+from . import views
+
+urlpatterns = [
+    path('', views.home, name="home"),
+    path('details/<statename>', views.details, name='details')
+]
+EOF
+echo "${green}>>> Importing app’s URLconfig setup in the project’s URLconfig${reset}"
+sed -i '' 's/from django.urls import/from django.urls import include,/g' $project_name/urls.py
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n    path\(\'$app_name\/\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
+echo "${red}>>> Creating static directory${reset}"
+mkdir -p $app_name/static/$app_name
+echo "${green}>>> Creating style.css${reset}"
+cat << 'EOF' > $app_name/static/$app_name/style.css
+table, th, td {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+body {
+  background-color: #e8f4f8;
+  margin: 40px 20px 10px;
+}
+EOF
+echo "${red}>>> Creating templates directory${reset}"
 templates_path="$app_name"\/templates\/"$app_name"
 mkdir -p $templates_path
-
-# Render Context Inside Templates
-templates_base=$(cat <<-END
+echo "${green}>>> Creating a base template${reset}"
+cat << 'EOF' > $templates_path/base.html
 {% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
     {% block head %}
-    <link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
     {% endblock %}
 </head>
 
@@ -85,50 +103,56 @@ templates_base=$(cat <<-END
 </body>
 
 </html>
-END
-) && echo "$templates_base" > $templates_path/base.html
-templates_home=$(cat <<-END
+EOF
+echo "${green}>>> Creating a home template${reset}"
+cat << 'EOF' > $templates_path/home.html
 {% extends 'tourist_attractions/base.html' %}
 
-{% load static %}
-
 {% block head %}
-<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
 {% endblock %}
 
 {% block content %}
-<h1>This is a list of attractions in America!</h1>
-<table>
-    <tr>
-        <th>Attraction State</th>
-        <th>State</th>
-        <th>State details</th>
-    </tr>
-    {% for item in attractions|dictsort:"state" %}
-    <tr>
-        <td>{{ item.attraction_name }}</td>
-        <td>{{ item.state }}</td>
-        <td><a href="{% url 'details' item.state|slugify %}">State Details</a></td>
-    </tr>
-    {% endfor %}
-</table>
 {% endblock %}
-
-<!--
-Go ahead and modify views.py to add more states and see how our templates react! 
-If you want, go ahead and try to add an image on the homepage!
-
--->
-END
-) && echo "$templates_home" > $templates_path/home.html
-templates_details=$(cat <<-END
+EOF
+echo "${green}>>> Loading in the static files in home.html${reset}"
+sed -i '' 's/{% extends '\''tourist_attractions\/base.html'\'' %}/{% extends '\''tourist_attractions\/base.html'\'' %}\
+\
+{% load static %}/g' $templates_path/home.html
+echo "${green}>>> Loading in 'tourist_attractions/style.css' in home.html${reset}"
+sed -i '' 's/{% block head %}/{% block head %}\
+<link rel=\"stylesheet\" href=\"{% static '\''tourist_attractions\/style.css'\'' %}\">/g' $templates_path/home.html
+echo "${green}>>> Adding a <h1> saying 'This is a list of attractions in America!' in home.html${reset}"
+sed -i '' 's/{% block content %}/{% block content %}\
+<h1>This is a list of attractions in America!<\/h1>/g' $templates_path/home.html
+echo "${green}>>> Showing the users each attraction and what state that attraction is in; Going through and displaying all attractions in home.html${reset}"
+sed -i '' 's/<h1>This is a list of attractions in America!<\/h1>/<h1>This is a list of attractions in America!<\/h1>\
+<table>\
+    <tr>\
+        <th>Attraction State<\/th>\
+        <th>State<\/th>\
+        <th>State details<\/th>\
+    <\/tr>\
+    {% for item in attractions|dictsort:\"state\" %}\
+    <tr>\
+        <td>{{ item.attraction_name }}<\/td>\
+        <td>{{ item.state }}<\/td>\
+        <td><a href=\"{% url '\''details'\'' item.state|slugify %}\">State Details<\/a><\/td>\
+    <\/tr>\
+    {% endfor %}\
+<\/table>/g' $templates_path/home.html
+echo "${red}>>> Creating the details page${reset}"
+echo "${green}>>> Create a template called details.html extending from base.html and load in the CSS${reset}"
+cat << 'EOF' > $templates_path/details.html
 {% extends 'tourist_attractions/base.html' %}
+
 {% load static %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
 {% endblock %}
-
+EOF
+echo "${green}>>> Going into details for each state in details.html${reset}"
+echo "$(cat <<-END
 {% block content %}
 <h1>This is a list of toursit attractions for {{statename}}</h1>
 <table>
@@ -145,10 +169,9 @@ templates_details=$(cat <<-END
     {% endfor %}
     </tr>
 </table>
-
 {% endblock %}
 END
-) && echo "$templates_details" > $templates_path/details.html
-
+)"  >> $templates_path/details.html
+echo "${red}>>> We now have a website that displays attractions for any state!${reset}"
 # List installed Python packages
 pip freeze -l > requirements.txt

@@ -1,10 +1,10 @@
 {% extends 'tourist_attractions/base.html' %}
+
 {% load static %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
 {% endblock %}
-
 {% block content %}
 <h1>This is a list of toursit attractions for {{statename}}</h1>
 <table>
@@ -21,5 +21,4 @@
     {% endfor %}
     </tr>
 </table>
-
 {% endblock %}
