@@ -360,11 +360,11 @@ echo "${green}>>> Upgrading pip version${reset}"
 pip install -U  --upgrade pip
 echo "${green}>>> Installing Django${reset}"
 pip install django
-echo "${red}>>> Starting the Fortune Teller Project${reset}"
+echo "${red}>>> Starting the Project${reset}"
 project_name='fortuneteller'
 rm -rf $project_name
 django-admin startproject $project_name && cd $project_name
-echo "${red}>>> Starting the Random Fortune App ${reset}"
+echo "${red}>>> Starting the App ${reset}"
 app_name="randomfortune"
 python manage.py startapp $app_name
 echo "${green}>>> Adding app to settings.py${reset}"
