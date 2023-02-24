@@ -345,110 +345,93 @@ yourself.
 
 ```bash
 #!/bin/bash
-
-# Remove project directory if exists
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+echo "${green}>>> Removing project directory if exists${reset}"
+rm -rf env
+echo "${green}>>> Creating virtualenv${reset}"
+python3 -m venv env
+echo "${green}>>> Activating the venv${reset}"
+source env/bin/activate
+echo "${green}>>> Upgrading pip version${reset}"
+pip install -U  --upgrade pip
+echo "${green}>>> Installing Django${reset}"
+pip install django
+echo "${red}>>> Starting the Fortune Teller Project${reset}"
 project_name='fortuneteller'
 rm -rf $project_name
-
-# Start the project
-
-## create & activate a new virtual environment
-python3 -m venv env && source env/bin/activate
-## install Django
-pip install django
-## create a new Django project and navigate to the project directory
 django-admin startproject $project_name && cd $project_name
-
-# Start the Fortune Teller Project
-
-## install Django
-pip install django
-## create a new Django project and navigate to the project directory
-django-admin startproject fortuneteller && cd fortuneteller
-
-# Start an App
-## create a new Django app
-app_name='randomfortune'
+echo "${red}>>> Starting the Random Fortune App ${reset}"
+app_name="randomfortune"
 python manage.py startapp $app_name
-## add RandomfortuneConfig to INSTALLED_APPS
+echo "${green}>>> Adding app to settings.py${reset}"
 sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
-
-# Wire Up View
-## Match URLs in the app
-app_urls=$(cat <<-END
+echo "${red}>>> Creating a Template${reset}"
+echo "${green}>>> Creating templates directory${reset}"
+templates_path="$app_name"\/templates\/"$app_name"
+mkdir -p $templates_path
+echo "${green}>>> Creating fortune.html${reset}"
+cat << 'EOF' > $templates_path/fortune.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Django Fortune Teller</title>
+ <style>
+   body {
+     text-align: center;
+   }
+ </style>
+</head>
+<body>
+ 
+ <h1>Here is your fortune:</h1>
+ 
+ <p>Place holder for fortune</p>
+ 
+</body>
+</html>
+EOF
+echo "${red}>>> Creating a View Function${reset}"
+sed -i '' 's/# Create your views here./# Create your views here.\
+def fortune(request):\
+  return render(request, \"randomfortune\/fortune.html\")/g' $app_name/views.py
+echo "${red}>>> Wiring Up View${reset}"
+cat << 'EOF' > $app_name/urls.py
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.fortune)
+  path('', views.fortune)
 ]
-END
-) && echo "$app_urls"  > $app_name/urls.py
-## Match URLs in the project
-sed -i ''  "s,from django.urls import,from django.urls import include\,,g; s,urlpatterns = \[,urlpatterns = \[\n    path\(\'$app_name\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
-
-# Sending a Context to the Template
-app_views=$(cat <<-END
-from django.shortcuts import render
-import random
-# Create your views here.
-
-fortuneList = [
-   'All will go well with your new project.',
-   'If you continually give, you will continually have.',
-   'Self-knowledge is a life long process.',
-   'You are busy, but you are happy.',
-   'Your abilities are unparalleled.',
-   'Those who care will make the effort.',
-   'Now is the time to try something new.',
-   'Miles are covered one step at a time.',
-   'Don’t just think, act!'
-]
-
-def fortune(request):
-    fortune = random.choice(fortuneList)
-    context = {'fortune': fortune}
-    return render(request, 'randomfortune/fortune.html', context)
-END
-) && echo "$app_views"> $app_name/views.py
-
-# Create a Template
-templates_path="$app_name"\/templates\/"$app_name"
-mkdir -p $templates_path
-
-# Render Context Inside Templates
-templates_base=$(cat <<-END
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
-    <title>Django Fortune Teller</title>
-  </head>
-  <body>
-    <h1>Here is your fortune</h1>
-    <div class="flex-container">
-      <div>{{ fortune }}</div>
-    </div>
-
-    <!--
-
-    Try adding additional CSS styles to the fortune.html page to make it stylish.
-    Creating a new view function to populate the template with a different type of message.
-    Perhaps incorporate horoscopes!
-
-    -->
-  </body>
-</html>
-END
-) && echo "$templates_base" > $templates_path/base.html
-
+EOF
+echo "${green}>>> Importing app’s URLconfig setup in the project’s URLconfig${reset}"
+sed -i '' 's/from django.urls import/from django.urls import include,/g' $project_name/urls.py
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n    path\(\'\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
+echo "${red}>>> Sending a Context to the Template in views.py${reset}"
+echo "${green}>>> Adding some strings containing fortune-telling sayings in the fortuneList${reset}"
+sed -i '' 's/# Create your views here./# Create your views here.\
+fortuneList = [\
+  \"Here is a good luck charm\",\
+  \"Do not give up, keep pushing\",\
+  \"Tough times do not last, tough people do\",\
+  \"Forward ever, backwards never\",\
+  \"We are gonna make it\",\
+  \"To infinity and beyond\",\
+  \"We are mooning\",\
+]\
+/g' $app_name/views.py
+echo "${green}>>> Importing the random module at the top of views.py${reset}"
+sed -i '' 's/from django.shortcuts import render/from django.shortcuts import render\
+import random/g' $app_name/views.py
+echo "${green}>>> Creating a context variable to send with the template in views.py${reset}"
+sed -i '' 's/def fortune(request):/def fortune(request):\
+  fortune = random.choice(fortuneList)\
+  context = {\
+    \"fortune\": fortune\
+  }/g; s/return render(request, \"randomfortune\/fortune.html\")/return render(request, \"randomfortune\/fortune.html\", context)/g' $app_name/views.py
+echo "${red}>>> Rendering Context Inside Template fortune.html${reset}"
+sed -i '' 's/<p>Place holder for fortune<\/p>/<p>{{ fortune }}<\/p>/g' $templates_path/fortune.html
 # List installed Python packages
 pip freeze -l > requirements.txt
 ```
