@@ -56,10 +56,14 @@ CRUD functionality is now easier with an admin account! Also, learn to safeguard
 
 **Project**: [Weekly Dessert](7-accounts-and-authentication-in-django/cafeteria)
 
-## Deploying a Django Project
+## [Deploying a Django Project](8-deploying-a-django-project)
 
 Go beyond Codecademy and work on your own computer. Then, deploy your Django project to the web!
 
-## Build Python Web Apps with Django Capstone Project
+**Project**: Vetoffice
+
+## [Build Python Web Apps with Django Capstone Project](9-django-capstone-project)
 
 Use your Django knowledge to build out a full-stack Django application!
+
+**Project**: Places Remember
