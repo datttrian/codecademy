@@ -2,10 +2,9 @@ from django.shortcuts import render
 from .models import Line, Station, Stop
 from .forms import  StopForm, LineForm, StationForm
 # Add your imports below:
-from django.views.generic import TemplateView
-from django.views.generic import ListView
+from django.views.generic import TemplateView, ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-  
+
 class HomeView(TemplateView):
   template_name = "routes/home.html"
 
@@ -18,24 +17,24 @@ class HomeView(TemplateView):
 
 # Create your views here.
 class LinesView(ListView):
-  model = Line
   template_name = 'routes/lines.html'
+  model = Line
 
 class CreateLineView(CreateView):
-  model = Line
   template_name = 'routes/add_line.html'
+  model = Line
   form_class = LineForm
 
 class UpdateLineView(UpdateView):
-  model = Line
   template_name = 'routes/update_line.html'
+  model = Line
   form_class = LineForm
-
+  
 class DeleteLineView(DeleteView):
   model = Line
   template_name = 'routes/delete_line.html'
   success_url = '/lines'
-
+  
 class StationsView(ListView):
   model = Station
   template_name = 'routes/stations.html'
@@ -74,4 +73,4 @@ class DeleteStopView(DeleteView):
   model = Stop
   template_name = 'routes/delete_stop.html'
   success_url = '/stops/'
-  
+

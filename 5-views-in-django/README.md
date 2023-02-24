@@ -1905,70 +1905,683 @@ some things you can try to enhance the app:
 
 
 
-
-
 ## Solution
-
-```python
-
-```
 
 [Django Project The Django Djitney](https://www.youtube.com/watch?v=YVeCwpAb2ic&list=LL&index=1)
 
-hey everyone this is rob with codecademy i'm a software developer based out of seattle washington in this video we're going to walk through the django project the django jitney we're going to take what we have learned about views in django 
+```bash
+#!/bin/bash
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+echo "${green}>>> Removing project directory if exists${reset}"
+rm -rf env
+echo "${green}>>> Creating virtualenv${reset}"
+python3 -m venv env
+echo "${green}>>> Activating the venv${reset}"
+source env/bin/activate
+echo "${green}>>> Upgrading pip version${reset}"
+pip install -U  --upgrade pip
+echo "${green}>>> Installing Django${reset}"
+pip install django
+echo "${red}>>> Starting the Project${reset}"
+project_name='djangodjitney'
+rm -rf $project_name
+django-admin startproject $project_name && cd $project_name
+echo "${red}>>> Starting the App ${reset}"
+app_name="routes"
+python manage.py startapp $app_name
+echo "${green}>>> Adding app to settings.py${reset}"
+sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
+echo "${red}>>> Pre-populating the project ${reset}"
+echo "${green}>>> Adding Line, Station, and Stop models in models.py${reset}"
+cat << 'EOF' >> $app_name/models.py
+class Line(models.Model):
+  name = models.CharField(unique=True, max_length=200)
 
-to complete this project to complete this project you'll need to be familiar with how to use class-based views how to attach the view function to a route how to access data rendered into a template and finally how to use dynamic urls and templates and make use of specific views alright let's get started okay  
+  def get_absolute_url(self):
+    return "/lines"
 
-you've been hired by the codesville official department of transportation they need someone to create an easy to use site for commuters to be able to see the train routes and are asking you to help create a site that they can show the different routes across all the stations as well as update them when there are changes to the routes the models have all been provided for you which we'll take a look at in a moment but the basic breakdown is that a stop consists of a line a station and a stop number what they need from you is the ability to view edit update and delete line stops and stations now the good news is that the models and the templates have already been outsourced and taken care of all we need to do is focus on creating the views to link up those models and templates so let's get started 
+  def __str__(self):
+    return f"{self.name}"
 
-okay in this first section we're going to take a few moments to understand the context as we shared in the intro the models and the templates have all been created for you so we'll go ahead and start by taking a look at the models.pi file it should already be open for you but if it isn't you can go to the file explorer the name of our app routes and then you can find the models.pi file you'll see that three models have already been created line station and stop it'll be important for you to take a moment look at the fields that have already been created such as name methods such as get absolute url that will take you back to the lines page and we can see where we have overridden the string method next we have the station model we see a name field and an accessible field which we'll talk about in a later step a get absolute url function which will take a user back to stations and where we override the string method and then finally our stop model we can see that this snippet of code ensures that no line can have two stops with the same stop number we've also provided a get absolute url as well taken user back to stops and then finally every stop will consist of a line that it belongs to and a station that it belongs to and we can see what will happen upon the deletion of our line or a station to our stop as well as a field for stop number and like the previous two models we override the string method okay let's mark step one as complete we have an idea of what the model's context is 
 
-now let's go ahead and take a look at the templates have been provided in your file explorer we'll go to templates and routes if we take a look at lines for instance we can see that we have addline delete line lines and update line taking a deeper look at the templates will indicate what paths you're going to need to make in our routes urls.pi file as well as what objects need to be available for each page 
+class Station(models.Model):
+  name = models.CharField(unique=True, max_length=200)
+  accessible = models.BooleanField(default=False)
 
-and while we're here let's go ahead and take a look at formstop pi for step three the forms will come in handy whenever we need to implement a create or update views so we can see that we have imported forms in and from models we've imported in our stop line and station model and we have classes for stop form line form and station form which we'll take advantage of in our views when we create and update views 
+  def get_absolute_url(self):
+    return "/stations"
 
-alright the next step in taking a look at the context of our project will be to go to our views.pi file it should already be open for you if it's not again just go to the file explorer and we should see it at the root of our project views.pi we can take a look from forms we've imported stock form line form and station form that we just looked at as well as importing in template view from our django views generic module and as we add code through this project we'll go ahead and run it from time to time to see our application update while we work on it okay step four is complete as we've gained a good context of our project 
+  def __str__(self):
+    return f"{self.name}{' (♿)' if self.accessible else ''}"
 
-let's get started with implementing the views for lines each of the lines is named after a different species of python and there are currently three in the database now our first step in views.pi is to create a list view that can display the different lines using our routes lines.html template after that we'll go ahead and add the create view update view and delete view which will allow the town to edit these lines as they desire so let's begin by importing in list view from django views generic so to import in create view update view and delete view we'll need to get this from django.views.generic.edit that module we will import in create view update view and then finally delete view all right let's go ahead and save our code and mark step 5 is complete and again at any point if you do get stuck you can always click on get a hint for instance if you didn't know how to import in the create view update or delete view from the hint we can see that we import those other generic views from django views generic edit awesome 
 
-okay let's get started with step six our line model has already been imported in you can see that up above on line two so let's go ahead and create a lines view class class lines view and this is going to take in the argument of list view which we imported in on line five and now we're going to populate the template name and the model for the template name we can see that we're supposed to use routes lines.html and then for the model we'll set it to line and i'll continue to save my code along the way and sometimes when you save it if you do encounter a blank screen like i just did i'll hit the refresh in the browser and we should see that everything's returned to how we would expect so mark step 6 is complete 
+class Stop(models.Model):
+  # The snippet of code below ensures that no line can have two stops with the same stop number
+  class Meta:
+    unique_together = (('line', 'stop_number'))
 
-now in step 7 we want to go to our urls.pi file and add a path that calls the lines view so path lines now our view is going to be views dot lines view this is our class so now we need to call the as view method and then we're going to set the name value equal to what we find in our base.html file we can find this in the file explorer and when we scroll down to our nav we'll see some text that says lines and the name we want to use is the name lines as well so i'll close that up and in urls.pi for our name we'll go ahead and use the string lines perfect now let's save our code everything looks like how we would expect in the browser lessmark step 7 is complete 
+  def get_absolute_url(self):
+    return "/stops"
 
-and we'll move on to step 8. with our list view created now we're going to add some functionality to be able to create a new jitney line so we'll go ahead and add a class create line view and this is going to take in a create view argument our template name is going to be routes add line.html our model is going to be set equal to line and our form class is going to be set to line form that we imported in at the top of our file with our fields complete let's go ahead and add a new path for this view and routes urls.pi our page is going to be available at lines new our view is create line view and on our class we're going to call that as view method and then for our name argument we'll go ahead and take a look at the routes lines.html file so routes line.html and we can scroll down to see where something is being created we can see that within this anchor tag we have create underscore line as our name argument let's go ahead and save our code and mark step 8 as complete 
+  line = models.ForeignKey(Line, on_delete=models.CASCADE)
+  station = models.ForeignKey(Station, on_delete=models.CASCADE)
+  stop_number = models.PositiveIntegerField()
 
-now on to step 9. we'll return to our views.pi file and work on our update line view so class update line view is going to take an argument of update view again that we imported in at the top of our file the template name that we see we should use is going to be set equal to routes the name of our app update line.html our model is going to be line and our form class will be line form and now we need to add a path for this view in our urls.pi file so path and we want to make sure that this is available at lines and then the primary key value update so this will be our update line view class where we call the as view method on it and the name argument will come from our lines.html file we can see our href with the name update line so that's the value we're going to use in our urls.pi file update line and we can save our code and everything's still appearing as we would expect all right let's go ahead and mark step nine is complete 
+  def __str__(self):
+    return f"{self.line.name} -- {self.station.name} [{self.stop_number}]"
+EOF
+echo "${green}>>> Adding Line, Station, and Stop forms in forms.py${reset}"
+cat << 'EOF' >> $app_name/forms.py
+from django import forms
+from .models import Stop, Line, Station
 
-now for our crud functionality we've accomplished create read and update now all we have to do is work on delete so in step 10 we want to be able to delete any lines that have been decommissioned so we're going to create a delete line view so let's go to our views.pi file and we're going to go ahead and follow the general pattern of adding a new view specifically the delete line view so let's do that class delete line view and we'll go ahead and pass in the generic delete view we'll set our model equal to line and our template name we'll go ahead and set equal to routes delete underscore line.html and in this case we don't need a form class but we will use a success url and we'll go ahead and set that equal to slash lines perfect now the final part for step 10 will be to go to our urls.pi file and we want to add a path so that our view is accessible at lines pk delete then we'll use our views dot delete line view and we'll call it the as of view method and then finally our name is provided for us name is delete line okay let's mark step 10 as complete 
 
-and we'll move on to step 11. we're going to start to test the functionality of what we built for viewing creating updating and deleting lines now to do that we're going to need to uncomment out the link corresponding to lines and then have bar so we can go to our routes slash base.html file and we're going to go to the nav element and we can see where lines is commented out so i'm going to delete the comment surrounding our lines anchor tag and save our code and you may need to refresh your browser and we should see our lines link now on our index page okay so we should be able to go to localhost 8000 lines or click on our lines link and that's going to take us to where we want to be and we should see at the bottom of our page a plus button for adding lines so let's make sure we mark step 11 as complete 
+class StopForm(forms.ModelForm):
+  class Meta:
+    model = Stop
+    fields = "__all__"
 
-and we'll move on to step 12. we'll go ahead and test our create line view by adding some new lines we'll add the carpet line and we can see that it has appeared and we'll go ahead and add green tree and there are both of our lines now these lines both show up thanks to our lines view that we created earlier now we can see the town wants to be more specific with the name of our carpet line and rename it jungle carpet so let's go ahead and click on carpet and we'll change the name we'll update the name actually to jungle carpet and we hit update we see that is no longer carpet but jungle carpet perfect we know our update view is working correctly now lastly we want to validate our delete line view so next to our green tree route so you can scroll over to the side of your page or you can expand the browser here next to green tree i'm going to hit the red x and we're going to confirm that we want to delete our green tree line and we have successfully removed green tree from our lines table awesome let's go ahead and mark step 12 as complete 
 
-and move on to step 13. we're going to implement views for stations in our browser i'll go ahead and just return to our home page now we'll dive into creating cred functionality for stations we'll begin with our list view so class stations view and this will take an argument of list view our template name that we're going to use will be set equal to routes stations.html and our model will be station that we imported in at the top of our file now let's go to urls.pi and we want to access our station views at stations we'll name our views dot stations view and we'll call that as view method on this class and we could go to the base.html file to see that the name argument should be all right when mark step 13 is complete 
+class LineForm(forms.ModelForm):
+  class Meta:
+    model = Line
+    fields = "__all__"
 
-and move on to step 14 we want to implement the create station view now all right so under the class create line view we'll add a class create station view this will accept the create view argument our template name is going to be routes add station.html our model is going to be station and our form class is going to be set equal to station form okay we want to account for this path in our urls.pi file so under lines new we want to be able to use this at stations new views dot create station view we'll call the as view function for the name argument we can find this in routes stations.html so let's go there routes stations.html and in this anchor tag we can see that the name argument we want to use is create station create underscore station now we'll save our code make sure step 14 is marked as complete 
 
-and move on to step 15. now our station model as we looked at earlier has a field accessible and this is going to be used by the town to indicate whether station has accessibility features for commuters things like elevators and wheelchair accessible entryways for the platforms so we'll go to our views and we want to class update station view class update station view and we'll pass in update view our template name is going to be routes updatestation.html our model will be station of course and then our form class will be station form just like our create station view class up above now let's go to our urls.pi file and we want to add a path that accounts for this view so underneath our path to lines primary key update we'll have a path for stations our primary key update views update station view class where we call the as view method and our name is specified in our routes stations.html file you can go ahead and revisit that if you want but the name argument will be update station we'll save our code and mark step 15 is complete 
+class StationForm(forms.ModelForm):
+  class Meta:
+    model = Station
+    fields = "__all__"
+EOF
+echo "${green}>>> Importing models and forms and creating Homeview in views.py${reset}"
+sed -i '' "s,from django.shortcuts import render,from django.shortcuts import render\nfrom .models import Line\, Station\, Stop\nfrom .forms import  StopForm\, LineForm\, StationForm\n\# Add your imports below:\nfrom django.views.generic import TemplateView\n\nclass HomeView\(TemplateView\):\n  template_name = \"routes/home.html\"\n\n  def get_context_data\(self\):\n    context = super\(\).get_context_data\(\)\n    context\[\"lines\"\] = Line.objects.all\(\)\n    context\[\"stations\"\] = Station.objects.all\(\)\n    context\[\"stops\"\] = Stop.objects.all\(\)\n    return context,g" $app_name/views.py
+echo "${green}>>> Wiring Up View${reset}"
+cat << 'EOF' > $app_name/urls.py
+from django.urls import path
 
-and on to step 16. so far for our crud functionality we have create read update completed now we're going to work on our delete station view so we'll return to our views and under delete line view we're going to create a class delete station view so take an argument of delete view and a template name set equal to routes delete station dot html a model of station and we'll add a success url of stations this is where we'll go when we successfully delete a station now let's account for this in our urls underneath where we delete our line we'll create a path at stations then pk primary key delete views dot delete station view as view method and if we go to our stations.html we'll find that the name argument on the x button is going to be delete station let's save our code and mark step 16 as complete 
+from . import views
 
-and before we test our cred functionality let's go to our base.html file and in our nav we'll go ahead and find the text that says stations within the anchor tag and we'll remove this comment now upon doing that if we save our code we can see that stations now appears so let's click on stations and we can see all of our stations which means that our station's view view is working as we would expect so let's make sure step 17 is marked as complete 
+urlpatterns = [
+  path('', views.HomeView.as_view(), name='home'),
+]
+EOF
+echo "${green}>>> Importing app’s URLconfig setup in the project’s URLconfig${reset}"
+sed -i '' "s,from django.urls import path,from django.urls import include\, path,g" $project_name/urls.py
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n    path\(\'\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
+echo "${red}>>> Creating templates${reset}"
+echo "${green}>>> Creating templates directory${reset}"
+templates_path="$app_name"\/templates\/"$app_name"
+mkdir -p $templates_path
+echo "${green}>>> Editing templates${reset}"
+echo "${green}>>> Creating base.html${reset}"
+cat << 'EOF' > "$app_name"\/templates\/base.html
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.codecademy.com/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'routes/style.css' %}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% block title %}Django Djitney{% endblock %}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="header-first-row">
+          <img
+            src="{% static 'routes/djitney.png' %}"
+            alt="Django Djitney Logo"
+            width="80px"
+          />
+          <h1 class="title">Django Djitney</h1>
+        </div>
+        <nav class="navbar">
+          <a class="nav-item" href="{% url 'home' %}">Home</a>
+{% comment block %} <a class="nav-item" href="{% url 'lines' %}">Lines</a> {% endcomment %}
+{% comment %} <a class="nav-item" href="{% url 'stations' %}">Stations</a> {% endcomment %}
+{% comment %} <a class="nav-item" href="{% url 'stops' %}">Stops</a> {% endcomment %}
+        </nav>
+      </header>
+      <main>{% block content %}{% endblock %}</main>
+    </div>
+  </body>
+</html>
+EOF
+echo "${green}>>> Creating home.html${reset}"
+cat << 'EOF' > $templates_path/home.html
+{% extends 'base.html' %} {% load static %} {% block title %}Django Djitney{% endblock %} {% block content %}
+<div class="home">
+  <div>
+    <h2>Lines</h2>
+    <table class="line-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Stops</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for line in lines %}
+        <tr>
+          <td>{{ line.name }}</td>
+          <td>
+            <ul>
+              {% for stop in line.stop_set.all %}
+              <li>{{ stop.stop_number }}</li>
+              <div>
+                {{ stop.station.name }}{% if stop.station.accessible %} ♿ {% endif %}
+              </div>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+EOF
+echo "${green}>>> Creating lines.html${reset}"
+cat << 'EOF' > $templates_path/lines.html
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}Django Djitney{% endblock %}
+{% block content %}
+  <div>
+    <h2>Lines</h2>
+    <table class="line-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Stops</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for line in object_list %}
+        <tr>
+          <td>
+            <a href="{% url "update_line" line.id %}">{{ line.name }}</a>
+          </td>
+          <td>
+            <ul>
+                {% for stop in line.stop_set.all %}
+                  <li>{{ stop.stop_number }}</li>
+                  <div >{{ stop.station.name }}{% if stop.station.accessible %}  ♿  {% endif %} </div>
+                {% endfor %}
+            </ul>
+          </td>
+          <td><a href="{% url "delete_line" line.id %}" style="text-decoration: none; color: inherit;">❌</a></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url "create_line" %}" style="display: inherit; text-align: center; border-radius: 15px; text-decoration: none; color: inherit; padding: 4px; background-color: lightgreen;">➕</a>
+  </div>
+{% endblock %}
+EOF
+echo "${green}>>> Creating add_line.html${reset}"
+cat << 'EOF' > $templates_path/add_line.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Add a New Djitney Line</h2>
+<form method="post">
+  <div>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+  </div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating update_line.html${reset}"
+cat << 'EOF' > $templates_path/update_line.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Update Line</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update" />
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating delete_line.html${reset}"
+cat << 'EOF' > $templates_path/delete_line.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Delete Line</h2>
+<form method="post">
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating stations.html${reset}"
+cat << 'EOF' > $templates_path/stations.html
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}Django Djitney{% endblock %}
+{% block content %}
+<div>
+  <h2>Stations</h2>
+  <table class="line-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>On Lines</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for station in object_list %}
+        <tr>
+          <td>
+            <a href="{% url "update_station" station.id %}">{{ station.name }}</a>
+            {% if station.accessible %}<span>  ♿️ </span>{% endif %}
+          </td>
+          <td>
+            {% for stop in station.stop_set.all %}{{stop.line.name}}, {% endfor %}
+          </td>
+          <td><a href="{% url "delete_station" station.id %}" style="text-decoration: none; color: inherit;">❌</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url "create_station" %}" style="display: inherit; text-align: center; border-radius: 15px; text-decoration: none; color: inherit; padding: 4px; background-color: lightgreen;">➕</a>
+</div>
+{% endblock %}
+EOF
+echo "${green}>>> Creating add_station.html${reset}"
+cat << 'EOF' > $templates_path/add_station.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Add a New Djitney Station</h2>
+<form method="post">
+  <div>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+  </div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating update_station.html${reset}"
+cat << 'EOF' > $templates_path/update_station.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Update Station</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update" />
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating delete_station.html${reset}"
+cat << 'EOF' > $templates_path/delete_station.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Delete Line</h2>
+<form method="post">
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating stops.html${reset}"
+cat << 'EOF' > $templates_path/stops.html
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}Django Djitney{% endblock %}
+{% block content %}
+  <div>
+    <h2>Stops</h2>
+    <table class="line-table">
+      <thead>
+        <tr>
+          <th>Line</th>
+          <th>Stop Number</th>
+          <th>Station</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for stop in object_list %}
+        <tr>
+          <td>{{ stop.line.name }}</td>
+          <td><a href="{% url "update_stop" stop.id %}">{{ stop.stop_number }}</a></td>
+          <td>{{ stop.station.name }}</td>
+          <td><a href="{% url "delete_stop" stop.id %}" style="text-decoration: none; color: inherit;">❌</a></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url "create_stop" %}" style="display: inherit; text-align: center; border-radius: 15px; text-decoration: none; color: inherit; padding: 4px; background-color: lightgreen;">➕</a>
+  </div>
+{% endblock %}
+EOF
+echo "${green}>>> Creating add_stop.html${reset}"
+cat << 'EOF' > $templates_path/add_stop.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Add a New Djitney Stop</h2>
+<form method="post">
+  <div>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+  </div>
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating update_stop.html${reset}"
+cat << 'EOF' > $templates_path/update_stop.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Update Stop</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update" />
+</form>
+{% endblock %}
+EOF
+echo "${green}>>> Creating delete_stop.html${reset}"
+cat << 'EOF' > $templates_path/delete_stop.html
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Delete Stop</h2>
+<form method="post">
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <input type="submit" value="Confirm" />
+</form>
+{% endblock %}
+EOF
+echo "${red}>>> Creating static${reset}"
+echo "${green}>>> Creating static directory${reset}"
+mkdir -p $app_name/static/$app_name
+echo "${green}>>> Downloading djitney.png${reset}"
+IMAGE_URL="https://raw.githubusercontent.com/glen-anum/The-django-djitney/main/routes/static/routes/djitney.PNG"
+curl -o "$app_name/static/$app_name/djitney.png" "$IMAGE_URL"
+echo "${green}>>> Creating style.css${reset}"
+cat << 'EOF' > $app_name/static/$app_name/style.css
+body {
+  font-family: "Oxygen", sans-serif;
+  margin: 0;
+}
 
-and move on to step 18. let's test out our create functionality so we'll use the add button at the bottom of the screen and we'll add a new accessible station vasuto and make sure that you've clicked accessible and we'll press submit and there it is and we see the accessibility sign next to it perfect we'll mark step 18 is complete 
+input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 3px;
+}
 
-and move on to step 19. now we're going to test out our crud update functionality we'll find our exmor station which is now accessible so let's go ahead and click on it and then we'll click on the accessible checkbox and press update and there it is we see the accessible symbol next to it perfect 
+hr {
+  margin: 30px 0;
+}
 
-now we're in our situation where our carry bog station is actually close to our exmor station and because our exmor station is already enhanced with accessibility we decide that we're going to get rid of our carry bog station so we'll click on the x in actions and we'll confirm we want to delete our station and it's no longer there and we were redirected to our stations page perfect all right well mark step 20 is complete 
+header {
+  background-color: #fff5ff;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
+  padding-top: 40px;
+}
 
-and we're going to work on implementing our stops in the browser i'm going to return to our home i'll close the base.html file and in our views.pi underneath our lines view and stations view will work on our stop cue so class stops view we'll check the argument list view template name of routes stops.html and a model of stop that we imported in at the top of our file now let's account for this in our urls.pi file and under lines we'll have a path for stops views our stops view class that we call the as view method on and the name argument is going to be stops now we'll save our code 
+.header-first-row {
+  width: 100%;
+  display: flex;
+}
 
-and move on to step 22. we're going to implement the create functionality of crud so in our views we'll go under where we have the create line view and create station view and we'll add a class create stop view which will take an argument create view and a template name which will be routes add stop.html our model will be stop and our form class will be stop form that we imported at the top of our file now let's account for this in our urls.pi and underneath the path where we create new stations i'm going to add a path for stops new and our view is create stop view and our name argument is going to be create stop all right let's save this code 
+.navbar {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+}
 
-and move on to step 23. let's work on our update functionality so in reviews.pi under our update line view class and updatestationview class we'll add a class update stop view this will take update view as an argument template name will be set to routes update stop dot html our model will be stop of course and our form class will be stop form now let's account for this in our urls.pi file we'll add our path at stops primary key update views update stop view dot as view and our name argument is going to be update stop now we'll save our code and create read and update functionality has been established we've completed our create read and update functionality 
+.navbar a {
+  text-decoration: none;
+  padding: 8px 0;
+  color: #1557ff;
+  margin-right: 15px;
+}
 
-now let's finally work on our delete functionality in our views we'll go to the bottom of our file and we'll create a class delete stop view our argument will be delete view our template name will be set equal to routes delete stop dot html our model is going to be stop and we're going to need a success url for when a stop is deleted so success url is going to be stops so let's account for this view in our urls.pi file and underneath our path for lines pk delete and stations pk delete we want to account for the path stops the primary key of our stop and delete views will be delete stop view and the name argument is going to be delete stop so let's make sure that we've saved our code 
+.navbar a:hover,
+.navbar .current-page {
+  border-bottom: solid 4px #1557ff;
+  border-spacing: 0 15px;
+  font-weight: bold;
+}
 
-and let's test our crud functionality for our stop views to do that we'll go to our base.html file so let's go ahead and uncomment out our stops line we'll save our code and we see that it now appears let's go ahead and click it and see what happens all right we now have our stops page now we'll go ahead and check for any errors by trying to view our stops so i can click on our line articulated and i could even update it if i would like okay now that we've done that let's go ahead and insert a stop at basuto station on the monty line between cobb and on a doulo so to do this we're going to go ahead and update stop number six we'll go ahead and find that monty this is our monty line at the anode station and we want to list this stop as seven instead of six so we'll change that to seven and we'll hit update and we can now see that it is stop number seven okay now let's go ahead and add a new stop so we'll click the add button the line is going to be monty the station will be basuto and the stop will be set to six and there it is we can now see it listed within our stops perfect let's mark the step as complete and move on to our next step 
+.title {
+  font-size: 3em;
+  padding: 0px 50px 0 20px;
+  margin: auto 0;
+  color: #3a10e5;
+}
 
-all right congratulations in step 26 we've given you some ideas for how you can further enhance your app and we've given you a few suggestions below on how you might do that in this project we got a lot of practice with using class-based views and how to attach those to a route allowing our app to access specific data to be rendered in the template we also got plenty of practice using dynamic urls and making use of specific views great job this is rob with codecademy happy coding 
+main {
+  padding: 40px;
+}
+
+main h2 {
+  font-size: 2em;
+}
+
+.app {
+  min-width: 800px;
+  max-width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+main table {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  width: 100%;
+}
+
+main table th {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+.line-table li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: dodgerblue;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+.line-table li::before {
+  content: "";
+  position: absolute;
+  top: 0.9em;
+  left: -4em;
+  width: 4em;
+  height: 0.2em;
+  background: dodgerblue;
+  z-index: -1;
+}
+
+li + div {
+  display: none;
+}
+
+li:hover {
+  background-color: lightblue;
+}
+
+li:hover + div {
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  margin-left: 0px;
+  font-size: 0.8em;
+  color: dodgerblue;
+  border: 2px dashed lightblue;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.line-table li:first-child::before {
+  display: none;
+}
+
+.line-table ul {
+  padding: 0;
+}
+
+main form input[type="submit"] {
+  width: max-content;
+}
+
+main form * {
+  display: block;
+}
+
+main form label {
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #1557ff;
+}
+a:hover {
+  font-weight: bold;
+}
+EOF
+echo "${red}>>> Implementing the views for Lines${reset}"
+echo "${green}>>> Importing the ListView, CreateView, UpdateView generics in views.py, ${reset}"
+sed -i '' "s,from django.views.generic import TemplateView,from django.views.generic import TemplateView\, ListView\nfrom django.views.generic.edit import CreateView\, UpdateView\, DeleteView,g" $app_name/views.py
+echo "${green}>>> Creating the LinesView class in views.py${reset}"
+cat << 'EOF' >> $app_name/views.py
+class LinesView(ListView):
+  template_name = 'routes/lines.html'
+  model = Line
+
+EOF
+echo "${green}>>> Adding a path calling the LinesView in urls.py${reset}"
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n  path\(\'lines/\'\, views.LinesView.as_view\(\)\, name=\'lines\'\)\,,g" $app_name/urls.py
+echo "${green}>>> Creating the CreateLineView class in views.py${reset}"
+cat << 'EOF' >> $app_name/views.py
+class CreateLineView(CreateView):
+  template_name = 'routes/add_line.html'
+  model = Line
+  form_class = LineForm
+
+EOF
+echo "${green}>>> Adding a path calling the CreateLineView in urls.py${reset}"
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n  path\(\'lines/new/\'\, views.CreateLineView.as_view\(\)\, name=\'create_line\'\)\,,g" $app_name/urls.py
+echo "${green}>>> Creating the UpdateLineView class in views.py${reset}"
+cat << 'EOF' >> $app_name/views.py
+class UpdateLineView(UpdateView):
+  template_name = 'routes/update_line.html'
+  model = Line
+  form_class = LineForm
+  
+EOF
+echo "${green}>>> Adding a path calling the UpdateLineView in urls.py${reset}"
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n  path\(\'lines/\<pk\>/update\'\, views.UpdateLineView.as_view\(\)\, name=\'update_line\'\)\,,g" $app_name/urls.py
+echo "${green}>>> Creating the DeleteLineView class in views.py${reset}"
+cat << 'EOF' >> $app_name/views.py
+class DeleteLineView(DeleteView):
+  model = Line
+  template_name = 'routes/delete_line.html'
+  success_url = '/lines'
+  
+EOF
+echo "${green}>>> Adding a path calling the DeleteLineView in urls.py${reset}"
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n  path\(\'lines/\<pk\>/delete\'\, views.DeleteLineView.as_view\(\)\, name=\'delete_line\'\)\,,g" $app_name/urls.py
+echo "${green}>>> Editing the base template to uncomment the link corresponding to lines in the navbar${reset}"
+sed -i '' "s,{% comment block %} \<a class=\"nav-item\" href=\"{% url \'lines\' %}\"\>Lines\</a\> {% endcomment %},          \<a class=\"nav-item\" href=\"{% url \'lines\' %}\"\>Lines\</a\>,g" "$app_name"\/templates\/base.html
+echo "${red}>>> Implementing the views for Stations${reset}"
+echo "${green}>>> Creating the StationsView, CreateStationView, UpdateStationView, DeleteStationView class in views.py${reset}"
+cat << 'EOF' >> $app_name/views.py
+class StationsView(ListView):
+  model = Station
+  template_name = 'routes/stations.html'
+
+class CreateStationView(CreateView):
+  model = Station
+  template_name = 'routes/add_station.html'
+  form_class = StationForm
+
+class UpdateStationView(UpdateView):
+  model = Station
+  template_name = 'routes/update_station.html'
+  form_class = StationForm
+
+class DeleteStationView(DeleteView):
+  model = Station
+  template_name = 'routes/delete_station.html'
+  success_url = '/stations/'
+
+EOF
+echo "${green}>>> Adding a path calling the StationsView, CreateStationView, CreateStationView, DeleteStationView in urls.py${reset}"
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n  path\(\'stations/\'\, views.StationsView.as_view\(\)\, name=\'stations\'\)\,\n  path\(\'stations/new/\'\, views.CreateStationView.as_view\(\)\, name=\'create_station\'\)\,\n  path\(\'stations/\<pk\>/update/\'\, views.UpdateStationView.as_view\(\)\, name=\'update_station\'\)\,\n  path\(\'stations/\<pk\>/delete/\'\, views.DeleteStationView.as_view\(\)\, name=\'delete_station\'\)\,,g" $app_name/urls.py
+echo "${green}>>> Editing the base template to uncomment the link corresponding to lines in the navbar${reset}"
+sed -i '' "s,{% comment %} \<a class=\"nav-item\" href=\"{% url \'stations\' %}\"\>Stations\</a\> {% endcomment %},          \<a class=\"nav-item\" href=\"{% url \'stations\' %}\"\>Stations\</a\>,g" "$app_name"\/templates\/base.html
+echo "${red}>>> Implementing the views for Stops${reset}"
+echo "${green}>>> Creating the StopsView, CreateStopView, UpdateStopView, DeleteStopView class in views.py${reset}"
+cat << 'EOF' >> $app_name/views.py
+class StopsView(ListView):
+  model = Stop
+  template_name = 'routes/stops.html'
+  form_class = StopForm
+
+class CreateStopView(CreateView):
+  model = Stop
+  template_name = 'routes/add_stop.html'
+  form_class = StopForm
+
+class UpdateStopView(UpdateView):
+  model = Stop
+  template_name = 'routes/update_stop.html'
+  form_class = StopForm
+
+class DeleteStopView(DeleteView):
+  model = Stop
+  template_name = 'routes/delete_stop.html'
+  success_url = '/stops/'
+
+EOF
+echo "${green}>>> Adding a path calling the StationsView, CreateStationView, CreateStationView, DeleteStationView in urls.py${reset}"
+sed -i '' "s,urlpatterns = \[,urlpatterns = \[\n  path\(\'stops/\'\, views.StopsView.as_view\(\)\, name=\'stops\'\)\,\n  path\(\'stops/new/\'\, views.CreateStopView.as_view\(\)\, name=\'create_stop\'\)\,\n  path\(\'stops/\<pk\>/update/\'\, views.UpdateStopView.as_view\(\)\, name=\'update_stop\'\)\,\n  path\(\'stops/\<pk\>/delete/\'\, views.DeleteStopView.as_view\(\)\, name=\'delete_stop\'\)\,,g" $app_name/urls.py
+echo "${green}>>> Editing the base template to uncomment the link corresponding to lines in the navbar${reset}"
+sed -i '' "s,{% comment %} \<a class=\"nav-item\" href=\"{% url \'stops\' %}\"\>Stops\</a\> {% endcomment %},          \<a class=\"nav-item\" href=\"{% url \'stops\' %}\"\>Stops\</a\>,g" "$app_name"\/templates\/base.html
+# List installed Python packages
+pip freeze -l > requirements.txt
+```
