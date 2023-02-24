@@ -71,51 +71,45 @@ cd BikeRental
 python manage.py makemigrations && python manage.py migrate
 ```
 
-### Populate Data
+### Database Setup
 
 - Launch the Python shell 
+- Populate data into the database
+- Exit the Python shell
 
 ```bash
 python3 manage.py shell
 ```
 
-- Populate data into the database & exit the Python shell
-
 ```sh
 >>> from BikeRentalApp.models import Bike, Renter, Rental
->>> bike1 = Bike(bike_type="ST", color="black")
->>> bike1.save()
->>> bike2 = Bike(bike_type="TA", color="green")
->>> bike2.save()
->>> bike3 = Bike(bike_type="EL", color="white")
->>> bike3.save()
->>> bike4 = Bike(bike_type="EL", color="red")
->>> bike4.save()
->>> bike5 = Bike(bike_type="TA", color="blue")
->>> bike5.save()
->>> renter1 = Renter(first_name="John", last_name="Boo", phone="0236985471", vip_num=2)
->>> renter1.save()
->>> renter2 = Renter(first_name="Beck", last_name="Sam", phone="0243110022", vip_num=4)
->>> renter2.save()
->>> renter3 = Renter(first_name="Lee", last_name="Shim", phone="050698521")
->>> renter3.save()
->>> first_bike = Bike.objects.first()
->>> last_bike = Bike.objects.last()
->>> first_renter = Renter.objects.first()
->>> last_renter = Renter.objects.last()
->>> rental1 = Rental(bike=last_bike, renter=first_renter)
->>> rental1.save()
->>> rental2 = Rental(bike=first_bike, renter=last_renter)
->>> rental2.save()
->>> exit()
-```
-
-### Run Development Server
-
-- Run the development server
-
-```bash
-python manage.py runserver
+>>> bike_one=Bike(bike_type="EL", color="blue")
+>>> bike_one.save()
+>>> bike_two=Bike(bike_type="ST", color="pink")
+>>> bike_two.save()
+>>> bike_three=Bike(bike_type="EL", color="orange")
+>>> bike_three.save()
+>>> bike_four=Bike(bike_type="EL", color="blue")
+>>> bike_four.save()
+>>> bike_five=Bike(bike_type="TA", color="yellow")
+>>> bike_five.save()
+>>> renter_one=Renter(first_name="Jill", last_name="Simpson", phone="555-555-5555", vip_num=1)
+>>> renter_one.save()
+>>> renter_two=Renter(first_name="Vincent", last_name="Lewis", phone="555-555-2345", vip_num=1)
+>>> renter_two.save()
+>>> renter_three=Renter(first_name="Anthony", last_name="Willis", phone="555-555-3456", vip_num=0)
+>>> renter_three.save()
+>>> first_bike=Bike.objects.first()
+>>> first_renter=Renter.objects.first()
+>>> rental_one=Rental(bike=first_bike, renter=first_renter)
+>>> rental_one.save()
+>>> second_bike=Bike.objects.get(pk=2) 
+>>> second_renter=Renter.objects.get(pk=2)
+>>> rental_two=Rental(bike=second_bike, renter=second_renter)
+>>> rental_two.save()
+>>> blue_bikes=Bike.objects.filter(color="blue")
+>>> non_blue_bikes=Bike.objects.exclude(color="blue")
+>>> exit
 ```
 
 ## Instructions
@@ -432,42 +426,44 @@ However, if you want to challenge yourself, consider:
 
 ## Solution
 
+[Django Project Djaunty Rent-a-Bike](https://www.youtube.com/watch?v=k6xBxeb_V6o&t=2s)
 
 ```bash
 #!/bin/bash
-
-# Remove project directory if exists
-project_name='BikeRental'
-app_name='BikeRentalApp'
-templates_path="$app_name"\/templates\/"$app_name"
-rm -rf $project_name
-
-# Start the project
-
-### create & activate a new virtual environment
-python3 -m venv env && source env/bin/activate
-### install Django
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+echo "${green}>>> Removing project directory if exists${reset}"
+rm -rf env
+echo "${green}>>> Creating virtualenv${reset}"
+python3 -m venv env
+echo "${green}>>> Activating the venv${reset}"
+source env/bin/activate
+echo "${green}>>> Upgrading pip version${reset}"
+pip install -U  --upgrade pip
+echo "${green}>>> Installing Django${reset}"
 pip install django
-### create a new Django project and navigate to the project directory
+echo "${red}>>> Starting the Project${reset}"
+project_name='BikeRental'
+rm -rf $project_name
 django-admin startproject $project_name && cd $project_name
-
-# Start an App
-### create a new Django app
+echo "${red}>>> Starting the App ${reset}"
+app_name="BikeRentalApp"
 python manage.py startapp $app_name
-### add RandomfortuneConfig to INSTALLED_APPS
+echo "${green}>>> Adding app to settings.py${reset}"
 sed -i '' "s,INSTALLED_APPS = \[,INSTALLED_APPS = \[\n    \'$app_name\'\,,g"  $project_name/settings.py
-
-# Define models
-app_urls=$(cat <<-END
-from django.db import models
-import datetime
-
-
-BASE_PRICE = 25.00
-TANDEM_SURCHARGE = 15.00
-ELECTRIC_SURCHARGE = 25.00
-
-# Create your models here.
+echo "${red}>>> Creating schema${reset}"
+echo "${green}>>> Providing data for models.py${reset}"
+sed -i '' 's/from django.db import models/from django.db import models\
+import datetime\
+\
+BASE_PRICE = 25.00\
+TANDEM_SURCHARGE = 15.00\
+ELECTRIC_SURCHARGE = 25.00/g' $app_name/models.py
+echo "${green}>>> Importing app’s URLconfig setup in the project’s URLconfig${reset}"
+sed -i '' 's/from django.urls import/from django.urls import include,/g' $project_name/urls.py
+echo "${red}>>> Creating the Bike, Renter and Rental Model${reset}"
+echo "$(cat <<-END
 class Bike(models.Model):
   STANDARD="ST"
   TANDEM="TA"
@@ -509,163 +505,7 @@ class Rental(models.Model):
       curr_price*=0.8
     self.price=curr_price
 END
-) && echo "$app_urls"  > $app_name/models.py
-
-# Wire Up View
-### Match URLs in the app
-app_urls=$(cat <<-END
-from django.urls import path
-
-from . import views
-
-urlpatterns = [
-   path("", views.home, name="home"),
-   path("bike/list", views.BikeList.as_view(), name="bikelist"),
-   path("renter/list", views.RenterList.as_view(), name="renterlist"),
-   path("rental/list", views.RentalList.as_view(), name="rentallist"),
-]
-END
-) && echo "$app_urls"  > $app_name/urls.py
-### Match URLs in the project
-sed -i ''  "s,from django.urls import,from django.urls import include\,,g; s,urlpatterns = \[,urlpatterns = \[\n    path\(\'\'\, include\(\'$app_name\.urls\'\)\)\,,g" $project_name/urls.py
-
-# Sending a Context to the Template
-app_views=$(cat <<-END
-from django.shortcuts import render
-from .models import Bike,Renter,Rental
-from django.views.generic import ListView
-
-# Create your views here.
-class BikeList(ListView):
-    model=Bike
-    template_name="BikeRentalApp/bikelist.html"
-
-class RenterList(ListView):
-    model=Renter
-    template_name="BikeRentalApp/renterlist.html"
-
-class RentalList(ListView):
-    model=Rental
-    template_name="BikeRentalApp/rentallist.html"
-
-
-def home(request):
-    return render(request, 'BikeRentalApp/home.html')
-END
-) && echo "$app_views"> $app_name/views.py
-
-# Create a Template
-mkdir -p $templates_path
-
-# Render Context Inside Templates
-templates_base=$(cat <<-END
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rent-a-Bike</title>
-        {% block head %}{% endblock %}
-    </head>
-    <body>
-        <h1>Welcome to Rent-a-Bike!</h1>
-        {% block content %}{% endblock %}
-        <a href="{% url 'home' %}">Return Home</a>
-    </body>
-</html>
-END
-) && echo "$templates_base" > $templates_path/base.html
-templates_home=$(cat <<-END
-{%  extends "./base.html" %}
-{% load static %}
-{% block head %}
-    <link rel="stylesheet" href="{% static 'BikeRentalApp/styles.css' %}">
-{% endblock %}
-{%  block content %}
-    <h2>Bike Rental Options:</h2>
-    <div id="list-container">
-        <ul>
-            <li>
-                <a href="{% url 'bikelist' %}">Available Bikes</a>
-            </li>
-            <li>
-                <a href="{% url 'renterlist' %}">Renters</a>
-            </li>
-            <li>
-                <a href="{% url 'rentallist' %}">Rentals</a>
-            </li>
-        </ul>
-    </div>
-{% endblock %}
-END
-) && echo "$templates_home" > $templates_path/home.html
-templates_bikelist=$(cat <<-END
-{% extends './base.html' %}
-{% block content %}
-    <h2>BIKE LIST</h2>
-    <table id="patients">
-        <tr>
-            <th>BIKE TYPE</th>
-            <th>COLOR</th>
-        </tr>
-        {% for bike in bike_list %}
-            <tr>
-                <td>{{ bike.bike_type }}</td>
-                <td>{{ bike.color }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-{% endblock %}
-END
-) && echo "$templates_details" > $templates_path/bikelist.html
-
-templates_rentallist=$(cat <<-END
-{% extends './base.html' %}
-{% block content %}
-    <h2>RENTAL LIST</h2>
-    <table id="patients">
-        <tr>
-            <th>BIKE</th>
-            <th>RENTER</th>
-            <th>DATE</th>
-            <th>PRICE</th>
-        </tr>
-        {% for rental in rental_list %}
-            <tr>
-                <td>{{ rental.bike }}</td>
-                <td>{{ rental.renter }}</td>
-                <td>{{ rental.date }}</td>
-                <td>{{ rental.price }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-{% endblock %}
-END
-) && echo "$templates_details" > $templates_path/rentallist.html
-
-templates_renterlist=$(cat <<-END
-{% extends './base.html' %}
-{% block content %}
-    <h2>RENTAL LIST</h2>
-    <table id="patients">
-        <tr>
-            <th>FIRST NAME</th>
-            <th>LAST NAME</th>
-            <th>PHONE</th>
-            <th>VIP NUMBER</th>
-        </tr>
-        {% for renter in renter_list %}
-            <tr>
-                <td>{{ renter.first_name }}</td>
-                <td>{{ renter.last_name }}</td>
-                <td>{{ renter.phone }}</td>
-                <td>{{ renter.vip_num }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-{% endblock %}
-END
-) && echo "$templates_details" > $templates_path/renterlist.html
-
+)"  >> $app_name/models.py
 # List installed Python packages
 pip freeze -l > requirements.txt
 ```
