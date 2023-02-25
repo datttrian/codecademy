@@ -24,7 +24,7 @@ to do is create the views and link them up to the templates.
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `5-views-in-django` directory
+- Switch to the `views-in-django` directory
 - Create & activate a new virtual environment for the project
 - Switch to the `djangodjitney` directory
 - Install project dependencies
@@ -34,7 +34,7 @@ to do is create the views and link them up to the templates.
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/5-views-in-django
+cd build-python-web-apps-with-django/views-in-django
 python3 -m venv env && source env/bin/activate
 cd djangodjitney
 pip install -r requirements.txt
@@ -45,7 +45,7 @@ python manage.py makemigrations && python manage.py migrate
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `5-views-in-django` directory
+- Switch to the `views-in-django` directory
 - Add executable permission & execute `djangodjitney.sh`
 - Activate the virtual environment for the project
 - Switch to `djangodjitney` project
@@ -54,7 +54,7 @@ python manage.py makemigrations && python manage.py migrate
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/5-views-in-django
+cd build-python-web-apps-with-django/views-in-django
 chmod +x djangodjitney.sh && ./djangodjitney.sh
 source env/bin/activate
 cd djangodjitney

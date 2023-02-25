@@ -34,7 +34,7 @@ not worry about the templates or views.
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `4-data-in-django` directory
+- Switch to the `data-in-django` directory
 - Create & activate a new virtual environment for the project
 - Switch to the `BikeRental` directory
 - Install project dependencies
@@ -44,7 +44,7 @@ not worry about the templates or views.
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/4-data-in-django
+cd build-python-web-apps-with-django/data-in-django
 python3 -m venv env && source env/bin/activate
 cd BikeRental
 pip install -r requirements.txt
@@ -55,7 +55,7 @@ python manage.py makemigrations && python manage.py migrate
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `4-data-in-django` directory
+- Switch to the `data-in-django` directory
 - Add executable permission & execute `BikeRental.sh`
 - Activate the virtual environment for the project
 - Switch to `BikeRental` project
@@ -64,7 +64,7 @@ python manage.py makemigrations && python manage.py migrate
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/4-data-in-django
+cd build-python-web-apps-with-django/data-in-django
 chmod +x BikeRental.sh && ./BikeRental.sh
 source env/bin/activate
 cd BikeRental

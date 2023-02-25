@@ -20,7 +20,7 @@ Let’s get started!
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `6-forms-in-django` directory
+- Switch to the `forms-in-django` directory
 - Create & activate a new virtual environment for the project
 - Switch to the `touristAttractions` directory
 - Install project dependencies
@@ -30,7 +30,7 @@ Let’s get started!
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/6-forms-in-django
+cd build-python-web-apps-with-django/forms-in-django
 python3 -m venv env && source env/bin/activate
 cd touristAttractions
 pip install -r requirements.txt
@@ -41,7 +41,7 @@ python manage.py makemigrations && python manage.py migrate
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `6-forms-in-django` directory
+- Switch to the `forms-in-django` directory
 - Add executable permission & execute `touristAttractions.sh`
 - Activate the virtual environment for the project
 - Switch to `touristAttractions` project
@@ -50,7 +50,7 @@ python manage.py makemigrations && python manage.py migrate
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/6-forms-in-django
+cd build-python-web-apps-with-django/forms-in-django
 chmod +x touristAttractions.sh && ./touristAttractions.sh
 source env/bin/activate
 cd touristAttractions

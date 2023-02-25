@@ -20,7 +20,7 @@ the whole authentication flow and adding a security layer to our paths.
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `7-accounts-and-authentication-in-django` directory
+- Switch to the `accounts-and-authentication-in-django` directory
 - Create & activate a new virtual environment for the project
 - Switch to the `cafeteria` directory
 - Install project dependencies
@@ -30,7 +30,7 @@ the whole authentication flow and adding a security layer to our paths.
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/7-accounts-and-authentication-in-django
+cd build-python-web-apps-with-django/accounts-and-authentication-in-django
 python3 -m venv env && source env/bin/activate
 cd cafeteria
 pip install -r requirements.txt
@@ -41,7 +41,7 @@ python manage.py makemigrations && python manage.py migrate
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `7-accounts-and-authentication-in-django` directory
+- Switch to the `accounts-and-authentication-in-django` directory
 - Add executable permission & execute `cafeteria.sh`
 - Activate the virtual environment for the project
 - Switch to `cafeteria` project
@@ -50,7 +50,7 @@ python manage.py makemigrations && python manage.py migrate
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/7-accounts-and-authentication-in-django
+cd build-python-web-apps-with-django/accounts-and-authentication-in-django
 chmod +x cafeteria.sh && ./cafeteria.sh
 source env/bin/activate
 cd cafeteria

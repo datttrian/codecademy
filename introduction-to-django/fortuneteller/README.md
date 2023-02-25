@@ -18,7 +18,7 @@ project step by step.
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `2-introduction-to-django` directory
+- Switch to the `introduction-to-django` directory
 - Create & activate a new virtual environment for the project
 - Switch to the `fortuneteller` directory
 - Install project dependencies
@@ -28,7 +28,7 @@ project step by step.
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/2-introduction-to-django
+cd build-python-web-apps-with-django/introduction-to-django
 python3 -m venv env && source env/bin/activate
 cd fortuneteller
 pip install -r requirements.txt
@@ -39,7 +39,7 @@ python manage.py migrate
 
 - Remove the repository if exists
 - Clone the repository from Github
-- Switch to the `2-introduction-to-django` directory
+- Switch to the `introduction-to-django` directory
 - Add executable permission & execute `fortuneteller.sh`
 - Activate the virtual environment for the project
 - Switch to `fortuneteller` project
@@ -48,7 +48,7 @@ python manage.py migrate
 ```bash
 rm -rf build-python-web-apps-with-django
 git clone https://github.com/dattranvnu/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/2-introduction-to-django
+cd build-python-web-apps-with-django/introduction-to-django
 chmod +x fortuneteller.sh && ./fortuneteller.sh
 source env/bin/activate
 cd fortuneteller
