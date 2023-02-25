@@ -3,10 +3,32 @@
 <!-- [![](https://img.shields.io/badge/language-English-blue.svg)](./README.md) -->
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Bash version](https://img.shields.io/badge/Bash-4.4+-blue.svg)
-![Python version](https://img.shields.io/badge/Python-3.9-blue.svg)
-[![Django](https://img.shields.io/badge/Django-3.2.9-green)](https://www.djangoproject.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+![Bash Version](https://img.shields.io/badge/Bash-4.4+-blue.svg)
+![Python Version](https://img.shields.io/badge/Python-3.9-blue.svg)
+![Django Version](https://img.shields.io/badge/Django-3.2.x-green)
+![Flask Version](https://img.shields.io/badge/Flask-2.1.x-green)
+
+
+**Table of Contents**
+- [Build Python Web Apps with Flask](#build-python-web-apps-with-flask)
+  - [Introduction to Python](#introduction-to-python)
+  - [Introduction to Python Data Structures and Loops](#introduction-to-python-data-structures-and-loops)
+  - [Introduction to the Web](#introduction-to-the-web)
+  - [Introduction to Flask](#introduction-to-flask)
+  - [Introduction to SQL and Databases for Back-End Web Apps](#introduction-to-sql-and-databases-for-back-end-web-apps)
+  - [Advanced Flask Functionality](#advanced-flask-functionality)
+  - [Deploying an Application](#deploying-an-application)
+  - [Build Python Web Apps with Flask Capstone Project](#build-python-web-apps-with-flask-capstone-project)
+- [Build Python Web Apps with Django](#build-python-web-apps-with-django)
+  - [Introduction to the Web](#introduction-to-the-web)
+  - [Introduction to Django](#introduction-to-django)
+  - [Templates in Django](#templates-in-django)
+  - [Data in Django](#data-in-django)
+  - [Views in Django](#views-in-django)
+  - [Forms in Django](#forms-in-django)
+  - [Accounts and Authentication in Django](#accounts-and-authentication-in-django)
+  - [Deploying a Django Project](#deploying-a-django-project)
+  - [Build Python Web Apps with Django Capstone Project](#build-python-web-apps-with-django-capstone-project)
 
 # Build Python Web Apps with Flask
 
@@ -97,7 +119,7 @@ Learn how to deploy your own Flask application so you can share your app with th
 
 Put all of your Python and Flask knowledge to the test to create and deploy a fully-featured Flask application.
 
-# Build Python Web Apps with Django Skill Path
+# Build Python Web Apps with Django
 
 Welcome to the world of Django (pronounced like JANG-go with a silent D)! Get introduced to an open-source web development framework supported by the Django Software Foundation. Django is written in Python and provides an opinionated approach to web development meaning you'll know how projects are structured and have a general set of guidelines for how to bring your apps to life. Django comes with a lot of tools already provided, so you can pick and choose what you need to get the job done.
 
