@@ -457,11 +457,7 @@ won’t have to worry about deploying to Heroku anymore!
 
 # Flask Deployment Setup
 
-# Đã xảy ra lỗi.
-
-<a href="https://www.youtube.com/watch?v=snN7KkJTz70"
-target="_blank">Thử xem video này trên www.youtube.com</a> hoặc bật
-JavaScript nếu JavaScript bị tắt trong trình duyệt của bạn.
+[Deploying your Flask app with Heroku](https://www.youtube.com/watch?v=snN7KkJTz70)
 
 \> Note: This video is currently teaching deployment using
 \[Heroku\](https://www.heroku.com/). \[Heroku has

@@ -13,11 +13,9 @@ your users’ data is kept safe from hackers.
 
 Let’s get started!
 
-# Learn
+# Introduction to Accounts
 
-Introduction to Accounts
-
-Intro to Accounts with Flask
+## Intro to Accounts with Flask
 
 Accounts are the end result of gathering data necessary to create a user
 for a website. They also allow you to keep logging in to use the
@@ -41,11 +39,17 @@ enjoying dessert!
 
 ### Solution
 
-# Learn
+``` python
+from flask import Flask
 
-Introduction to Accounts
+app = Flask(__name__)
 
-Introduction to Hashing
+@app.route('/')
+def hello_world():
+    return 'Hello, DinnerParty!'
+```
+
+## Introduction to Hashing
 
 An important rule of application development is to never store sensitive
 user data as plain text. Plain text data is a security risk, as a data
@@ -66,8 +70,8 @@ security module of the Werkzeug package.
 
 To hash a password:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-hashed_password = generate_password_hash("noONEwillEVERguessTHIS")
+``` python
+hashed_password = generate_password_hash("noONEwillEVERguessTHIS")
 ```
 
 -   `generate_password_hash()` takes a string as an argument and returns
@@ -76,10 +80,10 @@ hashed_password = generate_password_hash("noONEwillEVERguessTHIS")
 We can also check a user-entered password against our hashed password to
 check for a match:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-hash_match = check_password_hash(hashed_password, "IloveTHEcolorPURPLE123")
+``` python
+hash_match = check_password_hash(hashed_password, "IloveTHEcolorPURPLE123")
 print(hash_match) # will print False 
-hash_match = check_password_hash(hashed_password, "noONEwillEVERguessTHIS")
+hash_match = check_password_hash(hashed_password, "noONEwillEVERguessTHIS")
 print(hash_match) # will print True 
 ```
 
@@ -97,18 +101,6 @@ see how to collect this information using a Form.
 Import `generate_password_hash` and `check_password_hash` from
 `werkzeug.security`.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 A (not so great) password `hardcoded_password_string`, representing a
@@ -119,18 +111,6 @@ Hash `hardcoded_password_string` with the `generate_password_hash()`
 function, and save the result to a variable `hashed_password`. Print
 `hashed_password` to the terminal.
 
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **3.**
 
 The same user returns to your application and enters a password
@@ -140,18 +120,6 @@ The same user returns to your application and enters a password
 
 Save the result to a variable `hash_match_one`, and print it to the
 terminal.
-
-Checkpoint 4 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **4.**
 
@@ -165,25 +133,42 @@ Check the hash `hashed_password` against `password_attempt_two` with the
 Save the result to a variable `hash_match_two`, and print it to the
 terminal. Did the user get the password right this time?
 
-Checkpoint 5 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+# import generate_password_hash and check_password_hash here:
+from werkzeug.security import generate_password_hash, check_password_hash
 
-Introduction to Accounts
+hardcoded_password_string = "123456789_bad_password"
 
-Modeling Accounts w/ SQLAlchemy
+# generate a hash of hardcoded_password_string here:
+hashed_password = generate_password_hash(hardcoded_password_string)
+print(hashed_password)
+```
+
+    ## pbkdf2:sha256:260000$RCpzKb4AyJ1p0Bfw$fdc13ea3c1af5593112d99379a5deff3d5a6974305151ab970671ddcdf128cc9
+
+``` python
+password_attempt_one = "abcdefghij_123456789"
+
+# check password_attempt_one against hashed_password here:
+hash_match_one = check_password_hash(hashed_password, password_attempt_one)
+print(hash_match_one)
+```
+
+    ## False
+
+``` python
+password_attempt_two = "123456789_bad_password"
+
+# check password_attempt_two against hashed_password here:
+hash_match_two = check_password_hash(hashed_password, password_attempt_two)
+print(hash_match_two)
+```
+
+    ## True
+
+## Modeling Accounts w/ SQLAlchemy
 
 When creating a user account in an application, there are a variety of
 data that needs to be stored for each user, as well as associated
@@ -196,13 +181,13 @@ fields can include: `id`, `username`, `email`, `password_hash`, and
 `joined_at_date`. A good way to store this data is in a `User` model
 within your database. For example, given some database `db`:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 class User (db.Model):
-  id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String(64), index=True, unique=True)
-  email = db.Column(db.String(120), index=True, unique=True)
-  password_hash = db.Column(db.String(128))
-  joined_at_date = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
+ id = db.Column(db.Integer, primary_key=True)
+ username = db.Column(db.String(64), index=True, unique=True)
+ email = db.Column(db.String(120), index=True, unique=True)
+ password_hash = db.Column(db.String(128))
+ joined_at_date = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
 ```
 
 -   here we instantiate a model `User`
@@ -217,9 +202,9 @@ help us inject some standard code into a class to make life easier. In
 this case, we will inherit the methods and properties of the `UserMixin`
 class.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 from flask_login import UserMixin
- 
+
 class User(UserMixin, db.Model)
 ```
 
@@ -244,37 +229,13 @@ Add the following additional attributes to the `User` class:
 -   `email`, stored as a type `String` with a maximum length of 120. The
     column is indexable and unique.
 -   `password_hash`, stored as a type `String` with a maximum length of
-    128.
-
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
+    1.  
 
 **2.**
 
 Add one last column to the `User` model `joined_at` representing the
 date the user joined the site. The attribute should be of type
 `DateTime`, indexable, and have a default value of `datetime.utcnow`
-
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -283,25 +244,33 @@ providing it the methods of the `UserMixin` class.
 
 Update `User` to inherit from `UserMixin`.
 
-Checkpoint 4 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+from datetime import datetime
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
 
-Introduction to Accounts
+# instantiate application and datbase
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'you-will-never-guess'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-Signing up with WTForms
+# update User to inherit from UserMixin here:
+class User(UserMixin, db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String(64), index=True, unique=True)
+  # add the email and password_hash attributes here:
+  email = db.Column(db.String(120), unique=True, index=True)
+  password_hash = db.Column(db.String(128))
+  # add the joined_at attribute here
+  joined_at = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
+```
+
+## Signing up with WTForms
 
 Now that we’ve got a database setup, our dinner application is starting
 to take shape. We’re going to need to get some data from our friends in
@@ -317,13 +286,13 @@ way to gather this data!
 We will use WTForms to create forms that make it easy for us to grab the
 data we need.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 class RegistrationForm(FlaskForm):
-  username = StringField('Username', validators=[DataRequired()])
-  email = StringField('Email', validators=[DataRequired(), Email()])
-  password = PasswordField('Password', validators=[DataRequired()])
-  password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
-  submit = SubmitField('Register')
+ username = StringField('Username', validators=[DataRequired()])
+ email = StringField('Email', validators=[DataRequired(), Email()])
+ password = PasswordField('Password', validators=[DataRequired()])
+ password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
+ submit = SubmitField('Register')
 ```
 
 -   a class `RegistrationForm` is defined and inherits from `FlaskForm`
@@ -335,22 +304,22 @@ class RegistrationForm(FlaskForm):
 
 And we will have a route that allows the users to create an account.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-  form = RegistrationForm()
-  if form.validate_on_submit():
-    user = User(username=form.username.data, email=form.email.data)
-    user.set_password(form.password.data)
-    db.session.add(user)
-    db.session.commit()
-  return render_template('register.html', form=form)
+ form = RegistrationForm()
+ if form.validate_on_submit():
+   user = User(username=form.username.data, email=form.email.data)
+   user.set_password(form.password.data)
+   db.session.add(user)
+   db.session.commit()
+ return render_template('register.html', form=form)
 ```
 
 -   a `RegistrationForm` named `form` is created
 -   if the form is validated upon submission, a `User` named `user` is
     created with a `username` and `email` from the form data
--   the `user`‘s password is set and hashed using the `set_password`
+-   the `user`’s password is set and hashed using the `set_password`
     method
 -   the `user` is added to the database session and the session is
     committed
@@ -367,18 +336,6 @@ started as the class `RegistrationForm` in **app.py**. Add a class
 attribute named `email` and assign it as a `StringField` with label
 “Email”. Include the `DataRequired()` and `Email()` validators as well.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 Add two more class attributes to `RegistrationForm` for recording
@@ -390,34 +347,10 @@ password information as described below:
     label “Repeat Password”. Include the `DataRequired()` and
     `EqualTo('password')` validators.
 
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **3.**
 
 In the registration route, define a new `User` named `user` with a
 username and email pulled from the registration form named `form`.
-
-Checkpoint 4 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **4.**
 
@@ -426,32 +359,79 @@ Set the password of `user` with its `set_password()` method.
 Once completed, try using the registration form and visiting the index
 route to see the users currently registered for the dinner party!
 
-Checkpoint 5 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+from datetime import datetime
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Email, EqualTo
 
-Introduction to Accounts
+# instantiate application and database
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'you-will-never-guess'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-Login in with Flask
+# User model
+class User(UserMixin, db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String(64), index=True, unique=True)
+  email = db.Column(db.String(120), unique = True, index = True)
+  password_hash = db.Column(db.String(128))
+  joined_at = db.Column(db.DateTime(), default = datetime.utcnow, index = True)
+
+  def __repr__(self):
+    return '<User {}>'.format(self.username)
+
+  def set_password(self, password):
+    self.password_hash = generate_password_hash(password)
+
+# registration form
+class RegistrationForm(FlaskForm):
+  username = StringField('Username', validators=[DataRequired()])
+  # add email field here:
+  email = StringField('Email', validators=[DataRequired(), Email()])
+  # add password fields here:
+  password = PasswordField('Password', validators=[DataRequired()])
+  password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
+  
+  submit = SubmitField('Register')
+
+# registration route
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+  form = RegistrationForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    # define user with data from form here:
+    user = User(username=form.username.data, email=form.email.data)
+    # set user's password here:
+    user.set_password(form.password.data)
+    db.session.add(user)
+    db.session.commit()
+  return render_template('register.html', title='Register', form=form)
+
+# landing page route
+@app.route('/')
+def index():
+  # grab all guests and display them
+  current_users = User.query.all()
+  return render_template('landing_page.html', current_users = current_users)
+```
+
+## Login in with Flask
 
 We currently have a working form grabbing user data and signing them up
 to our application. Good work! Next, let’s allow users to login by using
 a Flask-Login object called `LoginManager()`.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-login_manager = LoginManager()
+``` python
+login_manager = LoginManager()
 login_manager.init_app(app)
 ```
 
@@ -463,12 +443,12 @@ endpoints we want to be protected. Remember, decorators allow us to run
 bits of code before ultimately running a function or in this case our
 flask endpoint.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @app.route('/user/<username>')
 @login_required
 def user(username):
-  user = User.query.filter_by(username=username).first_or_404()
-  return render_template('user.html', user=user)
+ user = User.query.filter_by(username=username).first_or_404()
+ return render_template('user.html', user=user)
 ```
 
 -   the `@login_required` decorator is used to protect the `user` route
@@ -485,10 +465,10 @@ to access the information on that page.
 We also need an additional helper function to load our individual user
 when trying to access protected routes.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+   return User.query.get(int(user_id))
 ```
 
 -   the `load_user()` function loads a user with a given `user_id`
@@ -496,19 +476,19 @@ def load_user(user_id):
 We can then login a user with a login route, paired with a login form,
 as shown below:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @app.route('/login', methods=['GET','POST'])
 def login():
-  form = LoginForm(csrf_enabled=False)
-  if form.validate_on_submit():
-    user = User.query.filter_by(email=form.email.data).first()
-    if user and user.check_password(form.password.data):
-      login_user(user, remember=form.remember.data)
-      next_page = request.args.get('next')
-      return redirect(next_page) if next_page else redirect(url_for('index', _external=True, _scheme='https'))
-    else:
-      return redirect(url_for('login', _external=True, _scheme='https'))
-  return render_template('login.html', form=form)
+ form = LoginForm(csrf_enabled=False)
+ if form.validate_on_submit():
+   user = User.query.filter_by(email=form.email.data).first()
+   if user and user.check_password(form.password.data):
+     login_user(user, remember=form.remember.data)
+     next_page = request.args.get('next')
+     return redirect(next_page) if next_page else redirect(url_for('index', _external=True, _scheme='https'))
+   else:
+     return redirect(url_for('login', _external=True, _scheme='https'))
+ return render_template('login.html', form=form)
 ```
 
 -   initialize a `LoginForm` `form`
@@ -532,18 +512,6 @@ which is partly defined.
 Query the `User` table for the user with an email that matches the login
 form’s email field. Save the user to a variable named `user`.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 Within the login route there is an `if` statement that we want to use to
@@ -555,18 +523,6 @@ check two conditions:
 Replace the `True` in the `if` statement to check for both of the above
 conditions.
 
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **3.**
 
 Now that you have found a matching user and confirmed they entered the
@@ -574,25 +530,113 @@ correct password, log them in!
 
 Use the `login_user` function to log `user` into the site.
 
-Checkpoint 4 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+from datetime import datetime
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin, LoginManager, login_required, login_user, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Email, EqualTo
 
-Introduction to Accounts
+# instantiate application and database
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'you-will-never-guess'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-Associating User Actions
+# create login manager
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+# User model
+class User(UserMixin, db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String(64), index=True, unique=True)
+  email = db.Column(db.String(120), unique = True, index = True)
+  password_hash = db.Column(db.String(128))
+  joined_at = db.Column(db.DateTime(), default = datetime.utcnow, index = True)
+
+  def __repr__(self):
+    return '<User {}>'.format(self.username)
+
+  def set_password(self, password):
+    self.password_hash = generate_password_hash(password)
+
+  def check_password(self, password):
+    return check_password_hash(self.password_hash, password)
+
+# registration form
+class RegistrationForm(FlaskForm):
+  username = StringField('Username', validators=[DataRequired()])
+  email = StringField('Email', validators=[DataRequired(), Email()])
+  password = PasswordField('Password', validators=[DataRequired()])
+  password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
+  submit = SubmitField('Register')
+
+# login form
+class LoginForm(FlaskForm):
+  email = StringField('Email',
+                      validators=[DataRequired(), Email()])
+  password = PasswordField('Password', validators=[DataRequired()])
+  remember = BooleanField('Remember Me')
+  submit = SubmitField('Login')
+
+# registration route
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+  form = RegistrationForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    # define user with data from form here:
+    user = User(username=form.username.data, email=form.email.data)
+    # set user's password here:
+    user.set_password(form.password.data)
+    db.session.add(user)
+    db.session.commit()
+  return render_template('register.html', title='Register', form=form)
+
+# user loader
+@login_manager.user_loader
+def load_user(user_id):
+  return User.query.get(int(user_id))
+
+# login route
+@app.route('/login', methods=['GET','POST'])
+def login():
+  form = LoginForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    # query User here:
+    user = User.query.filter_by(email=form.email.data).first()
+    # check if a user was found and the form password matches here:
+    if user and user.check_password(form.password.data):
+      # login user here:
+      login_user(user, remember=form.remember.data)
+      next_page = request.args.get('next')
+      return redirect(next_page) if next_page else redirect(url_for('index', _external=True, _scheme='https'))
+    else:
+      return redirect(url_for('login', _external=True, _scheme='https'))
+  return render_template('login.html', form=form)
+
+# user route
+@app.route('/user/<username>')
+@login_required
+def user(username):
+  user = User.query.filter_by(username=username).first_or_404()
+  return render_template('user.html', user=user)
+
+# landing page route
+@app.route('/')
+def index():
+  # grab all guests and display them
+  current_users = User.query.all()
+  return render_template('landing_page.html', current_users = current_users)
+```
+
+## Associating User Actions
 
 Our users are now able to create accounts and log in. You may be
 curious, and ask yourself, “How can I make sure that they manipulate
@@ -608,13 +652,13 @@ specific dinner party.
 We can update our user endpoint with functionality to check for existing
 dinner parties and create a new dinner party using a form:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 def user(username):
-  user = User.query.filter_by(username=username).first_or_404()
-  dinner_parties = DinnerParty.query.filter_by(party_host_id=user.id)
-  if dinner_parties is None:
-    dinner_parties = []
-  form = DinnerPartyForm(csrf_enabled=False)
+ user = User.query.filter_by(username=username).first_or_404()
+ dinner_parties = DinnerParty.query.filter_by(party_host_id=user.id)
+ if dinner_parties is None:
+   dinner_parties = []
+ form = DinnerPartyForm(csrf_enabled=False)
 ```
 
 -   query the `DinnerParty` model for all dinner parties where the party
@@ -627,19 +671,19 @@ def user(username):
 Once the user submits the form for a new dinner party, we can use the
 form data to create a new `DinnerParty` instance:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-  # user route continued
-  if form.validate_on_submit():
-    new_dinner_party = DinnerParty(
-      date=form.date.data,
-      venue=form.venue.data,
-      main_dish=form.main_dish.data,
-      number_seats=int(form.number_seats.data), 
-      party_host_id=user.id,
-      attendees=username)
-    db.session.add(new_dinner_party)
-    db.session.commit()
-  return render_template('user.html', user=user, dinner_parties=dinner_parties, form=form)
+``` python
+ # user route continued
+ if form.validate_on_submit():
+   new_dinner_party = DinnerParty(
+     date=form.date.data,
+     venue=form.venue.data,
+     main_dish=form.main_dish.data,
+     number_seats=int(form.number_seats.data), 
+     party_host_id=user.id,
+     attendees=username)
+   db.session.add(new_dinner_party)
+   db.session.commit()
+ return render_template('user.html', user=user, dinner_parties=dinner_parties, form=form)
 ```
 
 -   if `form` validates, create a new `DinnerParty` object
@@ -654,18 +698,18 @@ We can create a new route that will allow users to see all the dinner
 parties that are happening and provide a form for RSVPing to a specific
 party:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 def rsvp(username):
-  user = User.query.filter_by(username=username).first_or_404()
-  dinner_parties = DinnerParty.query.all()
-  if dinner_parties is None:
-    dinner_parties = []
-  form = RsvpForm(csrf_enabled=False)
-  if form.validate_on_submit():
-    dinner_party = DinnerParty.query.filter_by(id=int(form.party_id.data)).first()
-    dinner_party.attendees += f", {username}"
-    db.session.commit()
-  return render_template('rsvp.html', user=user, dinner_parties=dinner_parties, form=form)
+ user = User.query.filter_by(username=username).first_or_404()
+ dinner_parties = DinnerParty.query.all()
+ if dinner_parties is None:
+   dinner_parties = []
+ form = RsvpForm(csrf_enabled=False)
+ if form.validate_on_submit():
+   dinner_party = DinnerParty.query.filter_by(id=int(form.party_id.data)).first()
+   dinner_party.attendees += f", {username}"
+   db.session.commit()
+ return render_template('rsvp.html', user=user, dinner_parties=dinner_parties, form=form)
 ```
 
 -   set `user` to the logged-in user
@@ -698,18 +742,6 @@ When you have reviewed the class and the form, run the code to proceed
 to the next checkpoint. View the hint for more detailed information
 about the class and form!
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 Navigate back to **routes.py**. The user route has been updated to
@@ -725,20 +757,8 @@ Set the values as follows:
 -   `venue` as the venue set in `form`
 -   `main_dish` as the main dish set in `form`
 -   `number_seats` as an integer of the number of seats set in the form
--   `party_host_id` as `user`‘s `id` attribute
+-   `party_host_id` as `user`’s `id` attribute
 -   `attendees` as the `username` of the current user
-
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -752,47 +772,193 @@ party the user wants to RSVP for. Query `DinnerParty` and `filter_by()`
 the `party_id` as entered on the form. Select the `first()` value from
 the query, and save the result to a variable `dinner_party`.
 
-Checkpoint 4 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **4.**
 
 Now that you have the dinner party the user wants to RSVP for, you can
-add them to the attendee list! Update `dinner_party`‘s `attendees`
+add them to the attendee list! Update `dinner_party`’s `attendees`
 attribute as follows:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 dinner_party.attendees += f", {username}"
 ```
 
-Checkpoint 5 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
-Introduction to Accounts
+# instantiate application and database
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'you-will-never-guess'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///my_database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-Success and Error Handling
+# create login manager
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+import routes, models
+```
+
+``` python
+from app import db, login_manager
+from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import UserMixin
+
+# User model
+class User(UserMixin, db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String(64), index=True, unique=True)
+  email = db.Column(db.String(120), unique = True, index = True)
+  password_hash = db.Column(db.String(128))
+  joined_at = db.Column(db.DateTime(), default = datetime.utcnow, index = True)
+
+  def __repr__(self):
+    return '<User {}>'.format(self.username)
+
+  def set_password(self, password):
+    self.password_hash = generate_password_hash(password)
+
+  def check_password(self, password):
+    return check_password_hash(self.password_hash, password)
+
+# DinnerParty model
+class DinnerParty(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  date = db.Column(db.String(140))
+  venue = db.Column(db.String(140))
+  main_dish = db.Column(db.String(140))
+  number_seats = db.Column(db.Integer)
+  party_host_id = db.Column(db.Integer)
+  attendees = db.Column(db.String(256))
+```
+
+``` python
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+from models import User, DinnerParty
+
+# registration form
+class RegistrationForm(FlaskForm):
+  username = StringField('Username', validators=[DataRequired()])
+  email = StringField('Email', validators=[DataRequired(), Email()])
+  password = PasswordField('Password', validators=[DataRequired()])
+  password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
+  submit = SubmitField('Register')
+
+# login form
+class LoginForm(FlaskForm):
+  email = StringField('Email',
+                      validators=[DataRequired(), Email()])
+  password = PasswordField('Password', validators=[DataRequired()])
+  remember = BooleanField('Remember Me')
+  submit = SubmitField('Login')
+
+# dinner party form
+class DinnerPartyForm(FlaskForm):
+  date = StringField('Date', validators=[DataRequired()])
+  venue = StringField('Venue', validators=[DataRequired()])
+  main_dish = StringField('Dish', validators=[DataRequired()])
+  number_seats = StringField('Number of Seats')
+  submit = SubmitField('Create')
+
+# rsvp form
+class RsvpForm(FlaskForm):
+  party_id = StringField('Party ID', validators=[DataRequired()])
+  submit = SubmitField('RSVP')
+```
+
+``` python
+from app import app, db, login_manager
+from flask import request, render_template, flash, redirect,url_for
+from models import User, DinnerParty
+from flask_login import current_user, login_user, logout_user, login_required
+from forms import RegistrationForm,LoginForm, DinnerPartyForm, RsvpForm
+from werkzeug.urls import url_parse
+
+# registration route
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+  form = RegistrationForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    user = User(username=form.username.data, email=form.email.data)
+    user.set_password(form.password.data)
+    db.session.add(user)
+    db.session.commit()
+  return render_template('register.html', title='Register', form=form)
+
+# user loader
+@login_manager.user_loader
+def load_user(user_id):
+  return User.query.get(int(user_id))
+
+# login route
+@app.route('/login', methods=['GET','POST'])
+def login():
+  form = LoginForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    user = User.query.filter_by(email=form.email.data).first()
+    if user and user.check_password(form.password.data):
+      login_user(user, remember=form.remember.data)
+      next_page = request.args.get('next')
+      return redirect(next_page) if next_page else redirect(url_for('index', _external=True, _scheme='https'))
+    else:
+      return redirect(url_for('login', _external=True, _scheme='https'))
+  return render_template('login.html', form=form)
+
+# user route
+@app.route('/user/<username>', methods=['GET', 'POST'])
+@login_required
+def user(username):
+  user = User.query.filter_by(username=username).first_or_404()
+  dinner_parties = DinnerParty.query.filter_by(party_host_id=user.id)
+  if dinner_parties is None:
+    dinner_parties = []
+  form = DinnerPartyForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    # update the values of each attribute to the corresponding form data here:
+    new_dinner_party = DinnerParty(
+      date = form.date.data,
+      venue = form.venue.data,
+      main_dish = form.main_dish.data,
+      number_seats = int(form.number_seats.data), 
+      party_host_id = user.id,
+      attendees = username)
+    db.session.add(new_dinner_party)
+    db.session.commit()
+  return render_template('user.html', user=user, dinner_parties=dinner_parties, form=form)
+
+# rsvp route
+@app.route('/user/<username>/rsvp/', methods=['GET', 'POST'])
+@login_required
+def rsvp(username):
+  user = User.query.filter_by(username=username).first_or_404()
+  dinner_parties = DinnerParty.query.all()
+  if dinner_parties is None:
+    dinner_parties = []
+  form = RsvpForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    # query the DinnerParty model here:
+    dinner_party = DinnerParty.query.filter_by(id=int(form.party_id.data)).first()
+    # update the attendees here:
+    dinner_party.attendees += f", {username}"
+    db.session.commit()
+  return render_template('rsvp.html', user=user, dinner_parties=dinner_parties, form=form)
+
+# landing page route
+@app.route('/')
+def index():
+  # grab all guests and display them
+  current_users = User.query.all()
+  return render_template('landing_page.html', current_users = current_users)
+```
+
+## Success and Error Handling
 
 As we round things up, it’s a good idea to make sure the user experience
 is thoughtful by implementing a way to notify the user when an RSVP
@@ -806,21 +972,21 @@ flash to notify users whether their important actions succeed or fail.
 Consider the second half of the RSVP route from the previous exercise.
 We can update our code to better notify users of what occurs as follows:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 # second half of rsvp route
-  if form.validate_on_submit():
-    dinner_party = DinnerParty.query.filter_by(id=int(form.party_id.data)).first()
-    # new try block
-    try:
-      dinner_party.attendees += f", {username}"
-      db.session.commit()
-      # find the host of dinner_party
-      host = User.query.filter_by(id=int(dinner_party.party_host_id)).first()
-      flash(f"You successfully RSVP'd to {host.username}'s dinner party on {dinner_party.date}!")
-    # new except block
-    except:
-      flash("Please enter a valid Party ID to RSVP!")
-  return render_template('rsvp.html', user=user, dinner_parties=dinner_parties, form=form)
+ if form.validate_on_submit():
+   dinner_party = DinnerParty.query.filter_by(id=int(form.party_id.data)).first()
+   # new try block
+   try:
+     dinner_party.attendees += f", {username}"
+     db.session.commit()
+     # find the host of dinner_party
+     host = User.query.filter_by(id=int(dinner_party.party_host_id)).first()
+     flash(f"You successfully RSVP'd to {host.username}'s dinner party on {dinner_party.date}!")
+   # new except block
+   except:
+     flash("Please enter a valid Party ID to RSVP!")
+ return render_template('rsvp.html', user=user, dinner_parties=dinner_parties, form=form)
 ```
 
 -   the update to `dinner_party.attendees` and the commit now occur
@@ -837,13 +1003,13 @@ We can update our code to better notify users of what occurs as follows:
 With the route updated, we can access our flashed messages in a template
 file and display them on our page as follows:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    {% for message in messages %}
-      {{ message }}
-    {% endfor %}
-  {% endif %}
+``` python
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+   {% for message in messages %}
+     {{ message }}
+   {% endfor %}
+ {% endif %}
 {% endwith %}
 ```
 
@@ -869,15 +1035,9 @@ messages.
 Add a `flash()` message inside the `try` block of the `rsvp()` route
 with the following f-string as an argument:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 f"You successfully RSVP'd to {host.username}'s dinner party on {dinner_party.date}!"
 ```
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **2.**
 
@@ -885,15 +1045,9 @@ Staying inside **routes.py**, replace the `pass` inside the `except`
 block of the `rsvp()` route with a `flash()` message containing the
 following string:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-"Please enter a valid Party ID to RSVP!"
+``` python
+"Please enter a valid Party ID to RSVP!"
 ```
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
@@ -903,19 +1057,139 @@ the file to display all flashed messages near the top of the page.
 Replace the empty list with the Flask function that returns all flashed
 messages from the last session.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+from app import app, db, login_manager
+from flask import request, render_template, flash, redirect, url_for
+from models import User, DinnerParty
+from flask_login import current_user, login_user, logout_user, login_required
+from forms import RegistrationForm,LoginForm, DinnerPartyForm, RsvpForm
+from werkzeug.urls import url_parse
 
-Introduction to Authentication with Flask
+# registration route
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+  form = RegistrationForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    user = User(username=form.username.data, email=form.email.data)
+    user.set_password(form.password.data)
+    db.session.add(user)
+    db.session.commit()
+  return render_template('register.html', title='Register', form=form)
 
-Intro to Authentication
+# user loader
+@login_manager.user_loader
+def load_user(user_id):
+  return User.query.get(int(user_id))
+
+# login route
+@app.route('/login', methods=['GET','POST'])
+def login():
+  form = LoginForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    user = User.query.filter_by(email=form.email.data).first()
+    if user and user.check_password(form.password.data):
+      login_user(user, remember=form.remember.data)
+      next_page = request.args.get('next')
+      return redirect(next_page) if next_page else redirect(url_for('index', _external=True, _scheme='https'))
+    else:
+      return redirect(url_for('login', _external=True, _scheme='https'))
+  return render_template('login.html', form=form)
+
+# user route
+@app.route('/user/<username>', methods=['GET', 'POST'])
+@login_required
+def user(username):
+  user = User.query.filter_by(username=username).first_or_404()
+  dinner_parties = DinnerParty.query.filter_by(party_host_id=user.id)
+  if dinner_parties is None:
+    dinner_parties = []
+  form = DinnerPartyForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    new_dinner_party = DinnerParty(
+      date = form.date.data,
+      venue = form.venue.data,
+      main_dish = form.main_dish.data,
+      number_seats = int(form.number_seats.data), 
+      party_host_id = user.id,
+      attendees = username)
+    db.session.add(new_dinner_party)
+    db.session.commit()
+  return render_template('user.html', user=user, dinner_parties=dinner_parties, form=form)
+
+# rsvp route
+@app.route('/user/<username>/rsvp/', methods=['GET', 'POST'])
+@login_required
+def rsvp(username):
+  user = User.query.filter_by(username=username).first_or_404()
+  dinner_parties = DinnerParty.query.all()
+  if dinner_parties is None:
+    dinner_parties = []
+  form = RsvpForm(csrf_enabled=False)
+  if form.validate_on_submit():
+    dinner_party = DinnerParty.query.filter_by(id=int(form.party_id.data)).first()
+    # try block
+    try:
+      dinner_party.attendees += f", {username}"
+      db.session.commit()
+      # query to find the host of dinner_party
+      host = User.query.filter_by(id=int(dinner_party.party_host_id)).first()
+      # add RSVP success message here:
+      flash(f"You successfully RSVP'd to {host.username}'s dinner party on {dinner_party.date}!")
+    # except block
+    except:
+      # add the RSVP failure message here
+      flash("Please enter a valid Party ID to RSVP!")
+  return render_template('rsvp.html', user=user, dinner_parties=dinner_parties, form=form)
+
+# landing page route
+@app.route('/')
+def index():
+  current_users = User.query.all()
+  return render_template('landing_page.html', current_users = current_users)
+```
+
+``` html
+<head>
+  <h1>Dinner Parties</h1>
+</head>
+<!-- replace the empty list with the function to get all flashed messages -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    {% if dinner_parties|length == 0 %}
+    <p style="color:blue;"> Ooops. There are no dinner parties currently planned. Add one! </p>
+    {% endif %}
+    <ul>
+    {% for party in dinner_parties %}
+      <li>{{ party.date }} - {{ party.venue }} - {{ party.main_dish }} - ID: {{ party.id }} - {{ party.attendees }}</li>
+    </ul>
+    {% endfor %}
+<h1 class="blue">RSVP to a Party:</h1>
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.party_id.label }}<br>
+            {{ form.party_id(size=32) }}<br>
+            {% for error in form.party_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+```
+
+# Introduction to Authentication with Flask
+
+## Intro to Authentication
 
 Authentication is the process of verifying that an individual has
 permission to perform an action. Without authentication, there would be
@@ -935,22 +1209,27 @@ Click Next to get started!
 
 ### Solution
 
-# Learn
+``` python
+from flask import Flask
+app = Flask(__name__)
 
-Introduction to Authentication with Flask
+@app.route('/')
+def hello_world():
+    return 'Hello, Authentication World!'
+```
 
-Meet Flask-Login
+## Meet Flask-Login
 
 When building a web application we might first start with the base of
 our application serving an endpoint saying “Hello World”.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 from flask import Flask
-app = Flask(__name__)
- 
+app = Flask(__name__)
+
 @app.route('/')
 def hello_world():
-    return 'Hello Authentication World!'
+   return 'Hello Authentication World!'
 ```
 
 The application we will be building will show how to use tools in Flask
@@ -967,10 +1246,10 @@ application.
 We can manage user logins with the `LoginManager` object from within
 Flask-Login, as shown below:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 from flask_login import LoginManager
- 
-login_manager = LoginManager()
+
+login_manager = LoginManager()
 ```
 
 -   `LoginManager` is imported from the `flask_login` package
@@ -980,8 +1259,8 @@ Once a `LoginManager` object is defined, we need to initialize the
 manager with our application. This can be done with the `init_app()`
 method of a `LoginManager`:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-login_manager.init_app(app)  
+``` python
+login_manager.init_app(app)  
 ```
 
 -   our instance of `LoginManager`, `login_manager`, calls its
@@ -994,57 +1273,34 @@ login_manager.init_app(app)  
 
 Import `LoginManager` from `flask_login` in **app.py**
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 Create an instance of `LoginManager` named `app_login_manager`.
-
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
 
 **3.**
 
 Initialize your `login_manager` with the app provided in **app.py**.
 
-Checkpoint 4 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+from flask import Flask
+# import LoginManager here:
+from flask_login import LoginManager
 
-Introduction to Authentication with Flask
+app = Flask(__name__)
 
-Protecting Pages
+# create login_manager here:
+login_manager = LoginManager()
+# initialize login_manager here:
+login_manager.init_app(app)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, Authentication World!'
+```
+
+## Protecting Pages
 
 Protecting pages is the primary objective of authentication. We can
 leverage some very useful functions from Flask-Login to ensure our
@@ -1055,10 +1311,10 @@ One of the key pieces of code that we previously added is the
 application. `LoginManagers` have a method `user_loader` that needs to
 be defined in order to load and verify a user from our database.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @login_manager.user_loader
 def load_user(id):
-    return User.query.get(int(id))
+   return User.query.get(int(id))
 ```
 
 -   this method retrieves our `User` with an id value `id` from our
@@ -1069,18 +1325,18 @@ def load_user(id):
 Next we need to import the `login_required` function from `flask_login`
 at the top of our file:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 from flask_login import login_required
 ```
 
 We can now add the `@login_required` function as a decorator to
 different routes to make logging in necessary.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @app.route('/home')
 @login_required
 def home():
-    return render_template('logged_in.html')
+   return render_template('logged_in.html')
 ```
 
 The `@login_required` decorator will force the user to login before
@@ -1092,42 +1348,59 @@ being able to view the page
 
 Import the `login_required` function from `flask_login`.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 Add the `@login_required` decorator to the home endpoint so that it is
 only accessible when logged in.
 
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+import flask
+from flask_sqlalchemy import SQLAlchemy
+# import login_required here:
+from flask_login import LoginManager, UserMixin, login_required
+from flask import request, render_template, flash, redirect,url_for
+from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
-Introduction to Authentication with Flask
+app = flask.Flask(__name__)
+login_manager = LoginManager()
+login_manager.init_app(app)
+db = SQLAlchemy(app)
 
-Error Handling
+class User(UserMixin,db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String(64), index=True, unique=True)
+  email = db.Column(db.String(120), index=True, unique=True)
+  password_hash = db.Column(db.String(128))
+  posts = db.relationship('Post', backref='author', lazy='dynamic')
+
+  def __repr__(self):
+    return '<User {}>'.format(self.username)
+
+  def set_password(self, password):
+    self.password_hash = generate_password_hash(password)
+
+  def check_password(self, password):
+    return check_password_hash(self.password_hash, password) 
+
+@login_manager.user_loader
+def load_user(id):
+  return User.query.get(int(id))
+    
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/home')
+# add login_required decorator here:
+@login_required
+def home():
+    return render_template('logged_in.html')
+```
+
+## Error Handling
 
 We’ve all experienced a time when we thought we were logged into a site
 and tried to access a protected page. Some sites handle this better than
@@ -1141,11 +1414,11 @@ the user.
 We can catch authorization issues by adding a new route or endpoint with
 the `@login_manager.unauthorized_handler` decorator:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @login_manager.unauthorized_handler
 def unauthorized():
-  # do stuff
-  return "Sorry you must be logged in to view this page"
+ # do stuff
+ return "Sorry you must be logged in to view this page"
 ```
 
 -   the `@login_manager.unauthorized_handler` decorator ensures that any
@@ -1162,25 +1435,60 @@ def unauthorized():
 Use the `@login_manager.unauthorized_handler` decorator to handle access
 errors.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+import flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_required
+from flask import request, render_template, flash, redirect,url_for
+from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
-Introduction to Authentication with Flask
 
-Logging in a User
+app = flask.Flask(__name__)
+app.secret_key = 'secretkeyhardcoded'
+login_manager = LoginManager()
+login_manager.init_app(app)
+db = SQLAlchemy(app)
+
+class User(UserMixin,db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String(64), index=True, unique=True)
+  email = db.Column(db.String(120), index=True, unique=True)
+  password_hash = db.Column(db.String(128))
+  posts = db.relationship('Post', backref='author', lazy='dynamic')
+
+  def __repr__(self):
+    return '<User {}>'.format(self.username)
+
+  def set_password(self, password):
+    self.password_hash = generate_password_hash(password)
+
+  def check_password(self, password):
+    return check_password_hash(self.password_hash, password) 
+
+@login_manager.user_loader
+def load_user(id):
+  return User.query.get(int(id))
+    
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/home')
+@login_required
+def home():
+    return render_template('logged_in.html')
+
+# add a decorator here to handle unauthorized users:
+@login_manager.unauthorized_handler
+def unauthorized():
+  # do stuff
+  return "Sorry you must be logged in to view this page"
+```
+
+## Logging in a User
 
 Best practices for user authentication using Flask is to make it hard
 for someone to use a stolen credential.
@@ -1202,32 +1510,32 @@ all ourselves from scratch.
 The code below is the logic we use to log a user in if their password is
 correct.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @app.route('/', methods=['GET', 'POST'])
 def index():
-  if flask.request.method == 'GET':
-    return '''
-    <p>Your credentials:
-    username: TheCodeLearner
-    password: !aehashf0qr324*&#W)*E!
-    </p>
-               <form action='/' method='POST'>
-                <input type='text' name='email' id='email' placeholder='email'/>
-                <input type='password' name='password' id='password' placeholder='password'/>
-                <input type='submit' name='submit'/>
-               </form>
-               '''
-  email = "TheCodeLearner"
-  if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
-    user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
-    login_user(user)
-    return render_template("logged_in.html", current_user=user )
-  return login_manager.unauthorized()
+ if flask.request.method == 'GET':
+   return '''
+   <p>Your credentials:
+   username: TheCodeLearner
+   password: !aehashf0qr324*&#W)*E!
+   </p>
+              <form action='/' method='POST'>
+               <input type='text' name='email' id='email' placeholder='email'/>
+               <input type='password' name='password' id='password' placeholder='password'/>
+               <input type='submit' name='submit'/>
+              </form>
+              '''
+ email = "TheCodeLearner"
+ if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
+   user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
+   login_user(user)
+   return render_template("logged_in.html", current_user=user )
+ return login_manager.unauthorized()
 ```
 
 Take a look at the second conditional:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
 ```
 
@@ -1254,25 +1562,69 @@ Inside the conditional that checks if the password matches
 2.  Return the result of calling `render_template()` with the page
     `"logged_in.html"`, and setting `current_user` as `user`.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+import flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_required, login_user
+from flask import request, render_template, flash, redirect,url_for
+from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
-Introduction to Authentication with Flask
 
-Show Logged in user
+app = flask.Flask(__name__)
+app.secret_key = 'secretkeyhardcoded'
+login_manager = LoginManager()
+login_manager.init_app(app)
+db = SQLAlchemy(app)
+
+class User(UserMixin,db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), index=True, unique=True)
+    email = db.Column(db.String(120), index=True, unique=True)
+    password = db.Column(db.String(128))
+
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
+
+@login_manager.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+    
+@app.route('/', methods=['GET', 'POST'])
+def index():
+  if flask.request.method == 'GET':
+    return '''
+    <p>Your credentials:
+    username: TheCodeLearner
+    password: !aehashf0qr324*&#W)*E!
+    </p>
+               <form action='/' method='POST'>
+                <input type='text' name='email' id='email' placeholder='email'/>
+                <input type='password' name='password' id='password' placeholder='password'/>
+                <input type='submit' name='submit'/>
+               </form>
+               '''
+  email = "TheCodeLearner"
+  if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
+    user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
+    login_user(user)
+    return render_template("logged_in.html", current_user=user )
+  return login_manager.unauthorized()
+
+@app.route('/home')
+@login_required
+def home():
+    return render_template('logged_in.html')
+
+@login_manager.unauthorized_handler
+def unauthorized():
+    # do stuff
+    return "You are not logged in. Click here to get <a href="+ str("/")+">back to Landing Page</a>"
+```
+
+## Show Logged in user
 
 In the previous exercise, we were able to write the login code. Now in
 this section, we will show the information related to the logged-in
@@ -1282,11 +1634,11 @@ Let’s zoom into this code: Notice how we pass in user into the
 current_user object. We will be using that current_user object in our
 HTML.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-  user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
-    login_user(user)
-    return render_template("logged_in.html", current_user=user )
-  return 'Bad login'
+``` python
+ user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
+   login_user(user)
+   return render_template("logged_in.html", current_user=user )
+ return 'Bad login'
 ```
 
 Now when a user logs in successfully they are sent to a page showing our
@@ -1295,11 +1647,11 @@ dynamic pages of HTML. We can use Jinja templates to render the data
 from the backend. To display the user, pass it in from the endpoint and
 access that variable in our HTML.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` html
 <h1>Welcome to Our Home Page</h1>
- 
+
 <p>Welcome back {{current_user.username}}</p>
- 
+
 <a class="blue pull-left" href="{{ url_for('index') }}">back</a>
 ```
 
@@ -1315,36 +1667,94 @@ endpoint.
 In **logged_in.html**, add a `<p>` element with a Jinja template to
 display the logged-in user’s username.
 
-Checkpoint 2 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 Nice work, now log in with the provided credentials to view the
 displayed username.
 
-Checkpoint 3 Passed
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+import flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_required, login_user
+from flask import request, render_template, flash, redirect,url_for
+from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
-Introduction to Authentication with Flask
 
-Logout
+app = flask.Flask(__name__)
+app.secret_key = 'secretkeyhardcoded'
+login_manager = LoginManager()
+login_manager.init_app(app)
+db = SQLAlchemy(app)
+
+class User(UserMixin,db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), index=True, unique=True)
+    email = db.Column(db.String(120), index=True, unique=True)
+    password = db.Column(db.String(128))
+
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
+
+@login_manager.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+    
+@app.route('/', methods=['GET', 'POST'])
+def index():
+  if flask.request.method == 'GET':
+    return '''
+    <p>Your credentials:
+    username: TheCodeLearner
+    password: !aehashf0qr324*&#W)*E!
+    </p>
+               <form action='/' method='POST'>
+                <input type='text' name='email' id='email' placeholder='email'/>
+                <input type='password' name='password' id='password' placeholder='password'/>
+                <input type='submit' name='submit'/>
+               </form>
+               '''
+  email = "TheCodeLearner"
+  if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
+    user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
+    login_user(user)
+    return render_template("logged_in.html", current_user=user )
+  return login_manager.unauthorized()
+
+@app.route('/home')
+@login_required
+def home():
+    return render_template('logged_in.html')
+
+@login_manager.unauthorized_handler
+def unauthorized():
+    # do stuff
+    return "You are not logged in. Click here to get <a href="+ str("/")+">back to Landing Page</a>"
+```
+
+``` html
+<center><h1>The Ultimate Pancake</h1>
+<a class="blue pull-left" href="{{ url_for('index') }}">Home</a></center>
+<!-- Add your code below -->
+<p>👋 {{current_user.username}}, thanks for checking this page out!</p>
+
+<p>3 avacados - peeled, pitted, and mashed
+  1 lime, juiced
+  1 teaspoon salt 
+  1/2  cup diced onion
+  3 tablespoons chopped fresh cilantro
+  2 roma (plum) tomatoes, diced
+  1 teaspoon minced garlic
+  1 pinch ground cayenne pepper
+</p>
+
+<li>In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.</li>
+<li>Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</li>
+```
+
+## Logout
 
 You’ve successfully authenticated, Nice. Now only logged in users can
 see our zesty recipe! But now that you’re done you don’t want to remain
@@ -1352,22 +1762,22 @@ logged in. Let’s enable the logout feature to protect the recipe.
 
 Flask-login provides us with a `logout_user` method to facilitate this.
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 @app.route("/logout")
 @login_required
 def logout():
-    logout_user()
-    return redirect(url_for('index'))
+   logout_user()
+   return redirect(url_for('index'))
 ```
 
-Awesome! We have our `logout()` function set up to call `flask-login`‘s
+Awesome! We have our `logout()` function set up to call `flask-login`’s
 `logout_user()` function to log out the user. Then we redirect the user
 to go back to the index page. Let’s implement a logout link in our HTML
 to trigger the logout code to run.
 
 in **logged_in.html** update the code with the logout link:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 <!DOCTYPE>
 <head>
 </head>
@@ -1388,12 +1798,6 @@ Congrats on learning authentication with Flask!
 Currently, we’re importing many functions from `flask_login`. We need to
 import one more, `logout_user`.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 **2.**
 
 The logic for logging out a user is already provided, so it’s time to
@@ -1403,19 +1807,103 @@ Inside the HTML page, add an `<a>` element that contains the text
 `Logout` and an `href` attribute with the value
 `{{ url_for('logout') }}`.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ### Solution
 
-# Learn
+``` python
+import flask
+from flask_sqlalchemy import SQLAlchemy
+# Import logout_user below:
+from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
+from flask import request, render_template, flash, redirect,url_for
+from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
-Build Python Web Apps with Flask
 
-Travel Sites
+app = flask.Flask(__name__)
+app.secret_key = 'secretkeyhardcoded'
+login_manager = LoginManager()
+login_manager.init_app(app)
+db = SQLAlchemy(app)
+
+class User(UserMixin,db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), index=True, unique=True)
+    email = db.Column(db.String(120), index=True, unique=True)
+    password = db.Column(db.String(128))
+
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
+
+@login_manager.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+    
+@app.route('/', methods=['GET', 'POST'])
+def index():
+  if flask.request.method == 'GET':
+    return '''
+    <p>Your credentials:
+    username: TheCodeLearner
+    password: !aehashf0qr324*&#W)*E!
+    </p>
+               <form action='/' method='POST'>
+                <input type='text' name='email' id='email' placeholder='email'/>
+                <input type='password' name='password' id='password' placeholder='password'/>
+                <input type='submit' name='submit'/>
+               </form>
+               '''
+  email = "TheCodeLearner"
+  if flask.request.form['password'] == "!aehashf0qr324*&#W)*E!":
+    user = User(email="TheCodeLearner@gmail.com", username="TheCodeLearner",password="!aehashf0qr324*&#W)*E!")
+    login_user(user)
+    return render_template("logged_in.html", current_user=user )
+  return login_manager.unauthorized()
+
+@app.route('/home')
+@login_required
+def home():
+    return render_template('logged_in.html')
+
+@login_manager.unauthorized_handler
+def unauthorized():
+    # do stuff
+    return "You are not logged in. Click here to get <a href="+ str("/")+">back to Landing Page</a>"
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+```
+
+``` html
+<center><h1>The Ultimate Pancake</h1>
+<a class="blue pull-left" href="{{ url_for('index') }}">Home</a></center>
+<!DOCTYPE>
+<head>
+</head>
+<body>
+<!-- Add your log out link below -->
+<a href="{{ url_for('logout') }}">Logout</a>
+
+
+<p>3 avacados - peeled, pitted, and mashed
+  1 lime, juiced
+  1 teaspoon salt 
+  1/2  cup diced onion
+  3 tablespoons chopped fresh cilantro
+  2 roma (plum) tomatoes, diced
+  1 teaspoon minced garlic
+  1 pinch ground cayenne pepper
+</p>
+
+<li>In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.</li>
+<li>Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</li>
+
+</body>
+```
+
+# Travel Sites
 
 Travel is one of the great pleasures of life.
 
@@ -1441,10 +1929,6 @@ Mark the tasks as complete by checking them off
 
 ## Setup the database
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 1\.
 
 Our application starts with a few `import`s in **app.py**. A site that
@@ -1453,82 +1937,35 @@ allows users to create and access accounts - needs a database.
 The first step is adding `SQLAlchemy` from the `flask_sqlalchemy` module
 to our list of imports at the top of **app.py**.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 2\.
 
 Assign a `'SQLALCHEMY_DATABASE_URI'` to the app configuration key
 database URI (or path). SQLite uses this as our connection to the Flask
 application. A good name for the database file is **my_database.db**
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 3\.
 
 Create an SQLAlchemy object and assign it to a variable called `db` that
-binds your database to the application instance `app` in ****app.py****.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
+binds your database to the application instance `app` in
+\*\*\*\*app.py\*\*\*\*.
 
 ## Create the User Model
 
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 4\.
 
-To create your database models use the ****models.py**** file in your
-application folder. In this project, you need to create a Users and
+To create your database models use the \*\*\*\*models.py\*\*\*\* file in
+your application folder. In this project, you need to create a Users and
 Posts model. We already wrote the `Post` model for you in the
-****models.py**** file, and you will create the rest of the models.
+\*\*\*\*models.py\*\*\*\* file, and you will create the rest of the
+models.
 
-Import `db` from ****app.py**** into our ****models.py**** file and
-uncomment the code from the `Posts` model in ****models.py****.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
+Import `db` from \*\*\*\*app.py\*\*\*\* into our
+\*\*\*\*models.py\*\*\*\* file and uncomment the code from the `Posts`
+model in \*\*\*\*models.py\*\*\*\*.
 
 5\.
 
 Create a User Class with `db.Model` passed in as a subclass.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 6\.
 
@@ -1543,21 +1980,11 @@ add in the properties along with their appropriate arguments:
 
 And to our `User` with our posts, add the `posts` property as follows:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
-posts = db.relationship('Post', backref='author', lazy='dynamic')
+``` python
+posts = db.relationship('Post', backref='author', lazy='dynamic')
 ```
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ## Creating Accounts and Authentication
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 7\.
 
@@ -1571,16 +1998,6 @@ They are:
 
 Locate these imports at the top of **models.py**.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 8\.
 
 Create a `set_password()` method in your `User` class that takes two
@@ -1593,16 +2010,6 @@ The second parameter we’ll name `password`, as it will represent the
 password string passed into the method to use the
 `generate_password_hash()` method in order to create a unique hash for
 the user.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 9\.
 
@@ -1621,17 +2028,7 @@ hash string in the database with the value passed into the method. If
 there is a match, we return the Python value `True`, if the inputs do
 not match `False` is returned.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ## Managing logged in state
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 10\.
 
@@ -1640,17 +2037,7 @@ We will use `flask_login` to manage access to certain pages on our site,
 based on whether or not a user is logged in.
 
 To start we will import `LoginManager` from `flask_login` in our
-****app.py**** file.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
+\*\*\*\*app.py\*\*\*\* file.
 
 11\.
 
@@ -1661,16 +2048,6 @@ Instantiate `LoginManager` by creating an instance of it and passing
 > an exception. Keep following the steps and you will fix this
 > exception!
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 12\.
 
 Assign an endpoint to `LoginManager` by using the newly created `login`
@@ -1678,50 +2055,20 @@ object (an instance of `LoginManager`) by passing in a redirect
 destination via Flask an endpoint in string format. This will redirect
 not logged in users to this page.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 13\.
 
 To round out our `User` model we will want it to inherit `UserMixin`
 from `flask_login`, in order to take advantage of those common user
 functions.
 
-Import `flask_login`‘s `UserMixin` object in ****models.py**** and pass
-`UserMixin` into the `User` class.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
+Import `flask_login`’s `UserMixin` object in \*\*\*\*models.py\*\*\*\*
+and pass `UserMixin` into the `User` class.
 
 14\.
 
-We need to import our `login` object from ****app.py**** into our
-****models.py**** file. We will use the `login` object to create a
-method that loads our user into memory on every page we visit.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
+We need to import our `login` object from \*\*\*\*app.py\*\*\*\* into
+our \*\*\*\*models.py\*\*\*\* file. We will use the `login` object to
+create a method that loads our user into memory on every page we visit.
 
 15\.
 
@@ -1738,17 +2085,7 @@ database, or the user is not logged in.
 
 Save your code and your app should work again!
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ## Protecting our pages
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 16\.
 
@@ -1757,22 +2094,12 @@ provide essential features to our site. Let’s start by importing
 `current_user`, `login_user`, `logout_user`, and `login_required` from
 `flask_login` into **routes.py**.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 17\.
 
 Now that we have `login_required` imported, we can uncomment the login
 portion of our provided code. Locate:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 #@app.route('/user/<username>',methods=['GET', 'POST'])
 #@login_required
 #def user(username):
@@ -1781,23 +2108,13 @@ portion of our provided code. Locate:
 And uncomment that entire section. Remember to uncomment all of the
 `user` method!
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ## Registering, Logging In, and Logging Out
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 18\.
 
 Our application started with Flask-WTForms which is a third party
 library we use to gather user information via python generated forms.
-You will see the flask form classes we use in ****forms.py****
+You will see the flask form classes we use in \*\*\*\*forms.py\*\*\*\*
 
 We are going to add the rest of the code needed to register and login
 new users:
@@ -1811,16 +2128,6 @@ statement, check if the user is authenticated. If the user is logged in
 redirect them to the appropriate logged in landing page. In next task we
 will complete our registration code.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 19\.
 
 To complete our `def register()` endpoint:
@@ -1829,16 +2136,6 @@ instantiate an instance of `RegistrationForm` after checking if the user
 is authenticated.
 
 `RegistrationForm` is a Flask-WTF form from our **forms.py** file
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 20\.
 
@@ -1850,16 +2147,6 @@ To round out this endpoint, add a redirect after the user has been saved
 in the database and make sure the **register.html** template renders
 when the user lands at the `def register()` endpoint.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 21\.
 
 Now that we have a working registration on our website, we can create
@@ -1869,39 +2156,19 @@ our pages.
 We start at the `def login()` endpoint and implement a redirect to our
 `index` endpoint if the `current_user` is authenticated.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 22\.
 
 The next step in getting a working login endpoint is instantiating an
-instance of the `LoginForm` object from ****forms.py**** and first
-writing code that leverages the forms method to see if the values passed
-in are valid. If they are valid, the endpoint continues to the next
-phase of logic:
+instance of the `LoginForm` object from \*\*\*\*forms.py\*\*\*\* and
+first writing code that leverages the forms method to see if the values
+passed in are valid. If they are valid, the endpoint continues to the
+next phase of logic:
 
 Write code that queries our database for the user, based on the
 credentials passed in. If the user is not valid: redirect them the login
 endpoint for another attempt.
 
 The next task will complete our login code.
-
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 23\.
 
@@ -1913,16 +2180,6 @@ data.
 Finally we redirect the user to the landing page as logged in and make
 sure the template is accessible at the endpoint.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
-
 24\.
 
 Our application now allows users to sign up and login to the
@@ -1933,17 +2190,7 @@ our logout endpoint to clear the user from memory.
 
 Finally, redirect the user to an appropriate page after logout.
 
-Stuck? Get a hint
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZXhwYW5zaW9uSWNvbl9fM0VBbHViUFI2VDMtTVBhZVZFd3lqbCBnYW11dC1zZDZrdTUtU3ZnIGVvbDJ6dm0wIj48dGl0bGU+QXJyb3cgQ2hldnJvbiBEb3duIEljb248L3RpdGxlPjxwYXRoIGQ9Ik0yMy4yNSA3LjMxMUwxMi41MyAxOC4wM2EuNzQ5Ljc0OSAwIDAxLTEuMDYgMEwuNzUgNy4zMTEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij48L3BhdGg+PC9zdmc+"
-class="expansionIcon__3EAlubPR6T3-MPaeVEwyjl gamut-sd6ku5-Svg eol2zvm0" />
-
 ## Navigating the page
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGZpbGw9ImN1cnJlbnRDb2xvciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtc2Q2a3U1LVN2ZyBlb2wyenZtMCI+PHRpdGxlPkNoZWNrIEljb248L3RpdGxlPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMuNTUyIDMuOTNhMS41IDEuNSAwIDAxLjAxNyAyLjEyMmwtMTMuNzc4IDE0YTEuNSAxLjUgMCAwMS0yLjA1Ni4wNzdMLjUxMyAxMy44MTNhMS41IDEuNSAwIDAxMS45NzQtMi4yNThsNi4xNTggNS4zODVMMjEuNDMxIDMuOTQ4YTEuNSAxLjUgMCAwMTIuMTIxLS4wMTd6IiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4="
-class="gamut-sd6ku5-Svg eol2zvm0" />
 
 25\.
 
@@ -1953,71 +2200,71 @@ to page.
 
 Update the **base.html** file with the following code:
 
-``` pre__3_SOs7YT7NaHjnNunEArSM
+``` python
 <html>
-    <head>
- 
+   <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  background-color: #E8DCD9;
-  font-family: cursive;
+ background-color: #E8DCD9;
+ font-family: cursive;
 }
- 
+
 .blue{
-    color:#187bcd
+   color:#187bcd
 }
- 
+
 .glow {
-  font-size: 30px;
-  color: blue;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+ font-size: 30px;
+ color: blue;
+ text-align: center;
+ -webkit-animation: glow 1s ease-in-out infinite alternate;
+ -moz-animation: glow 1s ease-in-out infinite alternate;
+ animation: glow 1s ease-in-out infinite alternate;
 }
- 
+
 @-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
- 
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
+ from {
+   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+ }
+
+ to {
+   text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+ }
 }
 </style>
- 
-        {% if title %}
-        <title>{{ title }} - TriPlanned</title>
-        {% else %}
-        <title>Welcome to TriPlanned</title>
-        {% endif %}
-    </head>
-    <body>
-           <div>
-      <center><h3 class="blue">TriPlanned</h3></center>
-      <center class="glow">&#127796;</center>
-      <a class="blue pull-left" href="{{ url_for('index') }}">Home</a>
-      {% if current_user.is_anonymous %}
-      <a class="blue pull-right" href="{{ url_for('login') }}">Login</a>
-      {% else %}
-      <a class="blue pull-right" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-      <a class="blue pull-left" href="{{ url_for('logout') }}">Logout</a>
-      {% endif %}
-    </div>
-        <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
- 
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
-        {% block content %}{% endblock %}
-    </body>
+
+       {% if title %}
+       <title>{{ title }} - TriPlanned</title>
+       {% else %}
+       <title>Welcome to TriPlanned</title>
+       {% endif %}
+   </head>
+   <body>
+          <div>
+     <center><h3 class="blue">TriPlanned</h3></center>
+     <center class="glow">&#127796;</center>
+     <a class="blue pull-left" href="{{ url_for('index') }}">Home</a>
+     {% if current_user.is_anonymous %}
+     <a class="blue pull-right" href="{{ url_for('login') }}">Login</a>
+     {% else %}
+     <a class="blue pull-right" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+     <a class="blue pull-left" href="{{ url_for('logout') }}">Logout</a>
+     {% endif %}
+   </div>
+       <hr>
+       {% with messages = get_flashed_messages() %}
+       {% if messages %}
+       <ul>
+           {% for message in messages %}
+
+           {% endfor %}
+       </ul>
+       {% endif %}
+       {% endwith %}
+       {% block content %}{% endblock %}
+   </body>
 </html>
 ```
 
