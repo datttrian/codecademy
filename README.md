@@ -1,14 +1,5 @@
 [<img src="https://github.com/Codecademy/learn-cpp/blob/master/logo.png" align="right" width=170;>](https://www.codecademy.com)
 
-<!-- [![](https://img.shields.io/badge/language-English-blue.svg)](./README.md) -->
-
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Bash Version](https://img.shields.io/badge/Bash-4.4+-blue.svg)
-![Python Version](https://img.shields.io/badge/Python-3.9-blue.svg)
-![Django Version](https://img.shields.io/badge/Django-3.2.x-green)
-![Flask Version](https://img.shields.io/badge/Flask-2.1.x-green)
-
-
 **Table of Contents**
 - [Build Python Web Apps with Flask](#build-python-web-apps-with-flask)
   - [Introduction to Python](#introduction-to-python)
@@ -34,88 +25,120 @@
 
 Welcome to Build Python Web Apps with Flask! Python is a powerful, general-purpose programming language used by novices, scientific researchers, software engineers, and data scientists. In this path, you will learn the foundations of Python so you can use it to create fully-featured, interactive web applications. Along your journey you will learn how to code in Python, design and access databases, create interactive web applications, and share your apps with the world.
 
-## Introduction to Python
+## [Introduction to Python](flask-introduction-to-python)
+
+### Introduction to Build Web Apps with Flask
 
 Get started on your journey into back-end web development with Python.
 
-**Project**: Receipts for Lovely Loveseats
+**Project**: [Receipts for Lovely Loveseats](flask-introduction-to-python/furniture-store.py)
+
+### Functions
 
 Learn about code reuse with Python functions. Apply that knowledge to create functions for famous physics formulas.
 
-**Project**: Getting Ready for Physics Class
+**Project**: [Getting Ready for Physics Class](flask-introduction-to-python/physics-class.py)
+
+### Control Flow
 
 Learn how to build control flow into your python code by including if, else, and elif statements. Expect to learn all you need to know about boolean variables and logical operators.
 
-**Project**: Magic 8-Ball
+**Project**: [Magic 8-Ball](flask-introduction-to-python/magic8.py)
 
-**Project**: Sal's Shipping
+**Project**: [Sal's Shipping](flask-introduction-to-python/shipping.py)
 
-## Introduction to Python Data Structures and Loops
+## [Introduction to Python Data Structures and Loops](flask-python-data-structures-loops)
+
+### Welcome To Python Data Structures and Loops
 
 Let’s get a preview for what we’re going to learn in the Python Data Structures and Loops section of this skill path.
 
+### Lists
+
 Learn about lists, a data structure in Python used to store ordered groups of data.
 
-**Project**: Gradebook
+**Project**: [Gradebook](flask-python-data-structures-loops/gradebook.py)
 
-**Project**: Len's Slice
+**Project**: [Len's Slice](flask-python-data-structures-loops/lens-slice.py)
+
+### Loops
 
 Loops are structures that let you repeat Python code over and over. Learn how to read loops and write them to solve your own problems.
 
-**Project**: Carly's Clippers
+**Project**: [Carly's Clippers](flask-python-data-structures-loops/carlys-clippers.py)
+
+### Dictionaries
 
 Learn all about the Python dictionary structure and how to create and use key-value pairs in your code.
 
-**Project**: Scrabble
+**Project**: [Scrabble](flask-python-data-structures-loops/scrabble.py)
+
+### Classes
 
 Learn about the differences between data types in Python and how to create your own classes, objects, and interfaces.
 
-**Project**: Basta Fazoolin'
+**Project**: [Basta Fazoolin'](flask-python-data-structures-loops/basta-fazoolin.py)
+
+### Decorators
 
 Learn about Decorators, a powerful pattern in Python that uses functions to their full potential.
 
-## Introduction to the Web
+## [Introduction to the Web](flask-introduction-to-the-web)
 
 Learn the foundations of web development!
 
-## Introduction to Flask
+**Reference**: [Full-Stack Engineer](https://github.com/datttrian/full-stack-engineer)
+
+## [Introduction to Flask](introduction-to-flask)
+
+### Introduction to Flask
 
 Learn the basics of the Flask framework and create your own web application!
 
 **Project**: Adopt a Pet
 
+### Jinja2 Templates and Forms
+
 Learn how to inject Python into HTML with templates and how to collect user data with forms.
 
 **Project**: Tourist Attractions
 
-## Introduction to SQL and Databases for Back-End Web Apps
+## [Introduction to SQL and Databases for Back-End Web Apps](flask-sql-databases)
+
+### Manipulation
 
 Learn how to use SQL to access, create, and update data stored in a database.
 
 **Project**: Create a Table
 
+### Queries
+
 Perform more complex queries by learning essential query keywords and functionality
 
 **Project**: New York Restaurants
 
+### Setting up SQLite
+
 Install SQLite in order to work with database files on your own computer.
+
+### Databases in Flask
 
 Learn how to add more functionality to your Flask apps with databases!
 
 **Project**: FlaskFM
 
-## Advanced Flask Functionality
+## [Advanced Flask Functionality](flask-advanced-functionality)
 
 Add personalization and security to Flask apps with accounts and authentication.
 
 **Project**: Travel Sites
 
-## Deploying an Application
+## [Deploying an Application](flask-deploying)
 
 Learn how to deploy your own Flask application so you can share your app with the world!
 
 
-## Build Python Web Apps with Flask Capstone Project
+## [Build Python Web Apps with Flask Capstone Project](flask-capstone-project)
 
 Put all of your Python and Flask knowledge to the test to create and deploy a fully-featured Flask application.
 
@@ -126,6 +149,8 @@ Welcome to the world of Django (pronounced like JANG-go with a silent D)! Get in
 ## [Introduction to the Web](django-introduction-to-the-web)
 
 Get an overview of the technology needed to create a Django web application.
+
+**Reference**: [Full-Stack Engineer](https://github.com/datttrian/full-stack-engineer)
 
 ## [Introduction to Django](introduction-to-django)
 
@@ -141,7 +166,11 @@ Learn how Django’s templates and template language (DTL) make it a breeze to i
 
 ## [Data in Django](data-in-django)
 
+### SQL and SQLite
+
 Django can be configured with a relational database which you could use SQL to interact with — but you don’t need to!
+
+### Models and Databases
 
 Learn how models determine the schema for the database and how to perform all CRUD functionality in Django.
 
@@ -176,3 +205,8 @@ Go beyond Codecademy and work on your own computer. Then, deploy your Django pro
 Use your Django knowledge to build out a full-stack Django application!
 
 **Project**: Places Remember
+
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python Version](https://img.shields.io/badge/Python-3.9-blue.svg)
+![Django Version](https://img.shields.io/badge/Django-3.2.x-green)
+![Flask Version](https://img.shields.io/badge/Flask-2.1.x-green)
