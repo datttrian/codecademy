@@ -9,7 +9,7 @@ echo "${green}>>> Activating the venv${reset}"
 source env/bin/activate
 echo "${green}>>> Upgrading pip version${reset}"
 pip install -U  --upgrade pip
-echo "${green}>>> Installing Django${reset}"
+echo "${green}>>> Installing Flask${reset}"
 pip install flask
 echo "${red}>>> Starting the Project${reset}"
 project_name='adopt-a-pet'

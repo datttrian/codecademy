@@ -91,11 +91,11 @@ Learn the foundations of web development!
 
 ## [Introduction to Flask](introduction-to-flask)
 
-### Introduction to Flask
+### [Introduction to Flask](introduction-to-flask)
 
 Learn the basics of the Flask framework and create your own web application!
 
-**Project**: Adopt a Pet
+**Project**: [Adopt a Pet](introduction-to-flask/adopt-a-pet)
 
 ### Jinja2 Templates and Forms
 
