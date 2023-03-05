@@ -6,7 +6,7 @@ A web-app that will allow users to store their memories about certain places the
 
 First clone the repository from Github and switch to the new directory:
 
-    $ git clone https://github.com/dattranvnu/places-remember
+    $ git clone https://github.com/datttrian/places-remember
     $ cd places-remember/places_remember
     
 Activate the virtualenv for your project.

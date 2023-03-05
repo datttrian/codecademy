@@ -33,7 +33,7 @@ to do is create the views and link them up to the templates.
 
 ```bash
 rm -rf build-python-web-apps-with-django
-git clone https://github.com/dattranvnu/build-python-web-apps-with-django
+git clone https://github.com/datttrian/build-python-web-apps-with-django
 cd build-python-web-apps-with-django/views-in-django
 python3 -m venv env && source env/bin/activate
 cd djangodjitney
@@ -53,7 +53,7 @@ python manage.py makemigrations && python manage.py migrate
 
 ```bash
 rm -rf build-python-web-apps-with-django
-git clone https://github.com/dattranvnu/build-python-web-apps-with-django
+git clone https://github.com/datttrian/build-python-web-apps-with-django
 cd build-python-web-apps-with-django/views-in-django
 chmod +x djangodjitney.sh && ./djangodjitney.sh
 source env/bin/activate

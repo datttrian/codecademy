@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# # Ignore certifi package as it is not required for the project
-certifi
+# Ignore .DS_Store files created by macOS
+.DS_Store

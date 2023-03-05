@@ -29,7 +29,7 @@ Let’s get started!
 
 ```bash
 rm -rf build-python-web-apps-with-django
-git clone https://github.com/dattranvnu/build-python-web-apps-with-django
+git clone https://github.com/datttrian/build-python-web-apps-with-django
 cd build-python-web-apps-with-django/forms-in-django
 python3 -m venv env && source env/bin/activate
 cd touristAttractions
@@ -49,7 +49,7 @@ python manage.py makemigrations && python manage.py migrate
 
 ```bash
 rm -rf build-python-web-apps-with-django
-git clone https://github.com/dattranvnu/build-python-web-apps-with-django
+git clone https://github.com/datttrian/build-python-web-apps-with-django
 cd build-python-web-apps-with-django/forms-in-django
 chmod +x touristAttractions.sh && ./touristAttractions.sh
 source env/bin/activate
