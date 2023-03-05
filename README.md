@@ -1,5 +1,9 @@
 [<img src="https://github.com/Codecademy/learn-cpp/blob/master/logo.png" align="right" width=170;>](https://www.codecademy.com)
 
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+
 **Table of Contents**
 - [Build Python Web Apps with Flask](#build-python-web-apps-with-flask)
   - [Introduction to Python](#introduction-to-python)
@@ -205,8 +209,3 @@ Go beyond Codecademy and work on your own computer. Then, deploy your Django pro
 Use your Django knowledge to build out a full-stack Django application!
 
 **Project**: Places Remember
-
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Python Version](https://img.shields.io/badge/Python-3.9-blue.svg)
-![Django Version](https://img.shields.io/badge/Django-3.2.x-green)
-![Flask Version](https://img.shields.io/badge/Flask-2.1.x-green)
