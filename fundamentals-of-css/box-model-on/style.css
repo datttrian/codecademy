@@ -1,0 +1,158 @@
+/* Universal Styles */
+
+body {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+/* 
+    Set the width of the img to 180         pixels.
+    Center the img horizontally using the   margin property.
+  */
+nav {
+    text-align: center;
+}
+
+nav img {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+}
+
+/* 
+  Set margin of span elements inside the nav to 10 pixels on the top and bottom, and 0 pixels on the left and right. */
+
+nav span {
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+nav a {
+    color: #666666;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #05A8AA;
+    padding: 5px;
+}
+
+/* Content Container */
+/*
+  Set the height to 500 pixels.
+  Create 10-pixel vertical margins and automatic horizontal margins.
+  Set .body elements inside .content to have no vertical margin and automatic horizontal margins so that it is centered.
+  Make .content scrollable with the overflow property.
+  Resize the browser window so it is very skinny and notice that this section is now scrollable. */
+
+.content {
+    height: 500px;
+    margin: 10px auto;
+    width: 100%;
+    overflow: scroll;
+}
+
+/* Content Header */
+/* Set the height of the .header class to 320 pixels.
+  Create a 20-pixel padding for the h1 element inside the .header.
+  Set vertical margins to 0 pixels and the horizontal margins to be determined automatically for the same h1 element. */
+
+.header {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+}
+
+.header h1 {
+    background-color: #05A8AA;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 68%;
+}
+
+/* Content Body */
+
+.content .body {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.body p {
+    color: #333333;
+    font-weight: 100;
+    line-height: 34px;
+    width: 90%;
+    margin-top: 18px;
+}
+
+/* Content Button */
+/* Set the width to 200 pixels.
+  Set the padding to 20 pixels.
+  Set the vertical margins to 40 pixels and the horizontal margins to automatic.
+  Give the button a 1-pixel, solid, blue border. */
+
+.button {
+    border: 1px solid #05A8AA;
+    border-radius: 4px;
+    color: #05A8AA;
+    display: block;
+    font-weight: 700;
+    margin: 40px auto;
+    padding: 20px;
+    width: 200px;
+}
+
+.button:hover {
+    background-color: #05A8AA;
+    border: 1px solid #05A8AA;
+    color: #FFF;
+}
+
+/* Content Nutrition */
+/* Set the padding of the ul.nutrition element to 20 pixels.
+  Set the width of li elements within the ul.nutrition to 200 pixels.
+  Set a 10-pixel vertical padding and 20-pixel horizontal padding to the same elements.
+  Add a 3-pixel bottom margin to the same elements. */
+
+ul.nutrition {
+    padding: 20px;
+}
+
+ul.nutrition li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+    margin-bottom: 3px;
+    padding: 10px 20px;
+    width: 200px;
+}
+
+.nutrition .category {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.nutrition .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
