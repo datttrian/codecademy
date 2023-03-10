@@ -29,11 +29,11 @@ Add some flair to your sites with Cascading Style Sheets (CSS). You'll learn the
 
 **Projects:** [Healthy Recipes](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html), [Olivia Woodruff Portfolio](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-visual-rules-project/index.html), [The Box Model: Davie's Burgers](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html), [Broadway](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
 
-## Developing Websites Locally
+## [Developing Websites Locally](developing-websites-locally)
 
 Part of becoming a developer means you'll need the skills to create websites on your own computer. Use tools like text editors and Chrome Devtools to work out how to build websites locally.
 
-**Projects:** Off-Platform Project: Dasmoto's Arts & Crafts
+**Projects:** [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
 
 ## Deploying Websites 
 
