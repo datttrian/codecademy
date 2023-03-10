@@ -13,7 +13,7 @@
 
 Get started with the foundations. By the end of this section, you'll be able to build a stylized and responsive website with HTML and CSS.
 
-## Welcome to the Full-Stack Engineer Path
+## [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
 
 Welcome to the Full-Stack Engineer Career Path! Get an overview of the journey ahead of you, save some helpful resources, and join our community. Then dive into the field of web development and the exciting opportunities ahead.
 
