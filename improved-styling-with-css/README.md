@@ -3810,7 +3810,7 @@ Now that you have a `@font-face` rule, set the `font-family` property of
 the footer to `"Croissant One"` with `"Merriweather"` and `serif` as the
 fallback fonts.
 
-### [Solution](typography-ii/)
+### [Solution](typography-ii)
 
 # Challenge Project: Build Your Own Cheat Sheet
 
