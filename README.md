@@ -47,11 +47,11 @@ Learn how to incorporate colors, typography, links, buttons, and more to take yo
 
 **Projects:** [Paint Store](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html), [Typography](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html), [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html), [The Summit](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html), [FreshDeals: Blueberries](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html), [Challenge Project: Build a Website Design System](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
 
-## Making a Website Responsive
+## [Making a Website Responsive](making-a-website-responsive)
 
 Sites show up on all different types of devices, like: desktops, cellphones, laptops, etc. Incorporate responsive design to create a site that adapts to your users' different screen sizes.
 
-**Projects:** Flexbox: To-Do App, Off-Platform Project: Tea Cozy, PupSpa, CSS Grid: Task Board, Tsunami Coffee, Challenge Project: Company Home Page with Flexbox, Challenge Project: Responsive Club Website
+**Projects:** [Flexbox: To-Do App](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/flexbox-to---do-app/index.html), [Off-Platform Project: Tea Cozy](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tea-cozy/index.html), [PupSpa](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/pupspa/index.html), [CSS Grid: Task Board](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/css-grid-task-board/index.html), [Tsunami Coffee](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tsunami-coffee/index.html), [Off-Platform Project: Fotomatic](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html), [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/company-page-with-flexbox/index.html), [Challenge Project: Responsive Club Website](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/responsive-club-website/index.html) 
 
 # Building Interactive Websites
 
