@@ -57,11 +57,11 @@ Sites show up on all different types of devices, like: desktops, cellphones, lap
 
 Build interactive sites using JavaScript and host it on a remote GitHub repository.
 
-## JavaScript Syntax, Part I
+## [JavaScript Syntax, Part I](javascript-syntax-part-i)
 
 JavaScript enpowers you to add logic to your website and create a truely interactive site. Start with the basics of variables, data types, conditionals, functions, and scope.
 
-**Projects:** Kelvin Weather, Dog Years, Magic Eight Ball, Race Day, Rock, Paper, or Scissors, Sleep Debt Calculator, Training Days, Challenge Project: Number Guesser
+**Projects:** [Kelvin Weather](javascript-syntax-part-i/kelvin-weather-javascript/kelvin-weather-javascript.js); [Dog Years](javascript-syntax-part-i/dog-years-javascript/dog-years-javascript.js); [Magic Eight Ball](javascript-syntax-part-i/magic-eight-ball-1/magic-eight-ball-1.js); [Race Day](javascript-syntax-part-i/race-day/race-day.js); [Rock, Paper, or Scissors](javascript-syntax-part-i/rock-paper-scissors-javascript/rock-paper-scissors-javascript.js); [Sleep Debt Calculator](javascript-syntax-part-i/sleep-debt-calculator/sleep-debt-calculator.js); [Training Days](javascript-syntax-part-i/training-days/training-days.js); [Challenge Project: Number Guesser](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
 
 ## JavaScript Syntax, Part II
 
