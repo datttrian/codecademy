@@ -87,9 +87,9 @@ The Document Object Model (DOM) represents the different parts of a website. Use
 
 **Projects:** [Piano Keys](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/piano-keys/index.html), [Form a Story](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/form-a-story/index.html)
 
-## Making A Website Accessible
+## [Making A Website Accessible](making-a-website-accessible)
 
-
+The web has become a tool to connect people from all over the globe. Learn how to make the web an even more accessible tool for all in this unit.
 
 ## Portfolio Project: Personal Portfolio Website
 
