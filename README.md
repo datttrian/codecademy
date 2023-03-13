@@ -85,7 +85,7 @@ Bring together your knowledge of JavaScript, Git, and GitHub to create a project
 
 The Document Object Model (DOM) represents the different parts of a website. Use JavaScript to manipulate the DOM and create a interctive site.
 
-**Projects:** Piano Keys, Form a Story
+**Projects:** [Piano Keys](portfolio-project-javascript-syntax/piano-keys), [Form a Story](portfolio-project-javascript-syntax/form-a-story)
 
 ## Making A Website Accessible
 
