@@ -81,11 +81,11 @@ Bring together your knowledge of JavaScript, Git, and GitHub to create a project
 
 **Projects:** [Mixed Messages](portfolio-project-javascript-syntax)
 
-## Building Interactive Websites
+## [Building Interactive Websites](building-interactive-websites)
 
 The Document Object Model (DOM) represents the different parts of a website. Use JavaScript to manipulate the DOM and create a interctive site.
 
-**Projects:** Piano Keys, Form a Story
+**Projects:** [Piano Keys](building-interactive-websites/piano-keys), [Form a Story](building-interactive-websites/form-a-story)
 
 ## Making A Website Accessible
 
