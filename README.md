@@ -91,8 +91,11 @@ The Document Object Model (DOM) represents the different parts of a website. Use
 
 The web has become a tool to connect people from all over the globe. Learn how to make the web an even more accessible tool for all in this unit.
 
-## Portfolio Project: Personal Portfolio Website
+## [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
 
+One important tool for displaying your skills will be your own personal portfolio site. Use your knowledge of web development and establish your own web presence.
+
+**Projects:** [Portfolio Project](https://datttrian.github.io/full-stack-engineer/portfolio-project-personal-portfolio-website/portfolio-website/index.html)
 
 # Front-End Development
 
