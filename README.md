@@ -69,11 +69,11 @@ Build off your knowledge of JavaScript to implement even more functionality. Lea
 
 **Projects:** [Secret Message](javascript-syntax-part-ii/secret-message), [Whale Talk](javascript-syntax-part-ii/whale-talk), [Meal Maker](javascript-syntax-part-ii/meal-maker), [Team Stats](javascript-syntax-part-ii/team-stats), [Grammar Checker](javascript-syntax-part-ii/mini-linter), [Challenge Project: Credit Card Checker](javascript-syntax-part-ii/credit-card-checker), [Challenge Project: Mysterious Organism](javascript-syntax-part-ii/mysterious-organism)
 
-## Git and GitHub, Part I 
+## [Git and GitHub, Part I](git-and-github-part-i)
 
 Git is a quintessential tool for version control. Use it along with GitHub to share your code and enable a collaborative workflow with other developers.
 
-**Projects:** Manhattan Zoo, SnapFit Robots, Inc., Poem Fiasco, ASCII Portfolio
+**Projects:** [Manhattan Zoo](git-and-github-part-i/manhattan-zoo); [SnapFit Robots, Inc.](git-and-github-part-i/snapfit-robots); [Poem Fiasco](git-and-github-part-i/poem-fiasco); [ASCII Portfolio](git-and-github-part-i/ascii-portfolio)
 
 ## Portfolio Project: JavaScript Syntax 
 
