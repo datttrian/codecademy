@@ -13,45 +13,45 @@
 
 Get started with the foundations. By the end of this section, you'll be able to build a stylized and responsive website with HTML and CSS.
 
-## Welcome to the Full-Stack Engineer Path
+## [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
 
 Welcome to the Full-Stack Engineer Career Path! Get an overview of the journey ahead of you, save some helpful resources, and join our community. Then dive into the field of web development and the exciting opportunities ahead.
 
-## Fundamentals of HTML
+## [Fundamentals of HTML](fundamentals-of-html)
 
 HTML provides the structure for all web pages you visit. Learn the elements that you'll use to piece together this structure and best semantic practices associated with building out a web page.
 
-**Projects:** Fashion Blog, Wine Festival Schedule, New York City Blog
+**Projects:** [Fashion Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-fashion-blog/index.html), [Wine Festival Schedule](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-wine-festival-schedule/index.html), [New York City Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/semantic-html-nyc-blog/index.html)
 
-## Fundamentals of CSS
+## [Fundamentals of CSS](fundamentals-of-css)
 
 Add some flair to your sites with Cascading Style Sheets (CSS). You'll learn the fundamentals, which include: how to create rulesets, styling, position, layouts, and more to make your sites stand out.
 
-**Projects:** Healthy Recipes, Olivia Woodruff Portfolio, The Box Model: Davie's Burgers, Broadway
+**Projects:** [Healthy Recipes](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html), [Olivia Woodruff Portfolio](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-visual-rules-project/index.html), [The Box Model: Davie's Burgers](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html), [Broadway](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
 
-## Developing Websites Locally
+## [Developing Websites Locally](developing-websites-locally)
 
 Part of becoming a developer means you'll need the skills to create websites on your own computer. Use tools like text editors and Chrome Devtools to work out how to build websites locally.
 
-**Projects:** Off-Platform Project: Dasmoto's Arts & Crafts
+**Projects:** [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
 
-## Deploying Websites 
+## [Deploying Websites](deploying-websites)
 
 Once you have your site, you'll want to share it — which means you'll need to host and deploy it. Use the command line and GitHub pages to make this deployment process seamless.
 
-**Projects:** Bicycle World, Daily Buzz
+**Projects:** [Bicycle World](deploying-websites/bicycle-world), [Daily Buzz](deploying-websites/daily-buzz)
 
-## Improved Styling with CSS
+## [Improved Styling with CSS](improved-styling-with-css)
 
 Learn how to incorporate colors, typography, links, buttons, and more to take your CSS to the next level. Then take your skills and incorporate wireframing to provide a vision for your site.
 
-**Projects:** Paint Store, Typography, Challenge Project: Build Your Own Cheat Sheet, The Summit, FreshDeals: Blueberries, Challenge Project: Build a Website Design System
+**Projects:** [Paint Store](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html), [Typography](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html), [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html), [The Summit](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html), [FreshDeals: Blueberries](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html), [Challenge Project: Build a Website Design System](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
 
-## Making a Website Responsive
+## [Making a Website Responsive](making-a-website-responsive)
 
 Sites show up on all different types of devices, like: desktops, cellphones, laptops, etc. Incorporate responsive design to create a site that adapts to your users' different screen sizes.
 
-**Projects:** Flexbox: To-Do App, Off-Platform Project: Tea Cozy, PupSpa, CSS Grid: Task Board, Tsunami Coffee, Challenge Project: Company Home Page with Flexbox, Challenge Project: Responsive Club Website
+**Projects:** [Flexbox: To-Do App](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/flexbox-to---do-app/index.html), [Off-Platform Project: Tea Cozy](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tea-cozy/index.html), [PupSpa](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/pupspa/index.html), [CSS Grid: Task Board](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/css-grid-task-board/index.html), [Tsunami Coffee](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tsunami-coffee/index.html), [Off-Platform Project: Fotomatic](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html), [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/company-page-with-flexbox/index.html), [Challenge Project: Responsive Club Website](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/responsive-club-website/index.html) 
 
 # Building Interactive Websites
 
@@ -75,9 +75,11 @@ Git is a quintessential tool for version control. Use it along with GitHub to sh
 
 **Projects:** [Manhattan Zoo](git-and-github-part-i/manhattan-zoo); [SnapFit Robots, Inc.](git-and-github-part-i/snapfit-robots); [Poem Fiasco](git-and-github-part-i/poem-fiasco); [ASCII Portfolio](git-and-github-part-i/ascii-portfolio)
 
-## Portfolio Project: JavaScript Syntax 
+## [Portfolio Project: JavaScript Syntax](portfolio-project-javascript-syntax)
 
 Bring together your knowledge of JavaScript, Git, and GitHub to create a project that can showcase your skills and be worthy of adding to your personal portfolio site.
+
+**Projects:** [Mixed Messages](portfolio-project-javascript-syntax/mixed-messages)
 
 ## Building Interactive Websites
 
