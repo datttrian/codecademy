@@ -75,9 +75,11 @@ Git is a quintessential tool for version control. Use it along with GitHub to sh
 
 **Projects:** [Manhattan Zoo](git-and-github-part-i/manhattan-zoo); [SnapFit Robots, Inc.](git-and-github-part-i/snapfit-robots); [Poem Fiasco](git-and-github-part-i/poem-fiasco); [ASCII Portfolio](git-and-github-part-i/ascii-portfolio)
 
-## Portfolio Project: JavaScript Syntax 
+## [Portfolio Project: JavaScript Syntax](portfolio-project-javascript-syntax)
 
 Bring together your knowledge of JavaScript, Git, and GitHub to create a project that can showcase your skills and be worthy of adding to your personal portfolio site.
+
+**Projects:** [Mixed Messages](portfolio-project-javascript-syntax/mixed-messages)
 
 ## Building Interactive Websites
 
@@ -90,7 +92,6 @@ The Document Object Model (DOM) represents the different parts of a website. Use
 
 
 ## Portfolio Project: Personal Portfolio Website
-
 
 # Front-End Development
 
