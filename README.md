@@ -35,11 +35,11 @@ Part of becoming a developer means you'll need the skills to create websites on 
 
 **Projects:** [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
 
-## Deploying Websites 
+## [Deploying Websites](deploying-websites)
 
 Once you have your site, you'll want to share it — which means you'll need to host and deploy it. Use the command line and GitHub pages to make this deployment process seamless.
 
-**Projects:** Bicycle World, Daily Buzz
+**Projects:** [Bicycle World](deploying-websites/bicycle-world), [Daily Buzz](deploying-websites/daily-buzz)
 
 ## Improved Styling with CSS
 
