@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FreshDeals</title>
+  <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/base.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/sell.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+
+    <header>
+      <div class="image-container">
+        <a href="index.html"><img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/ui-conventions/img/logo.svg"></a>
+      </div>
+      <div class="search-bar">
+        <input type="text" name="search" placeholder="Search for items">
+        <a href="" class="button"><img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/ui-conventions/img/search.svg"></a>
+      </div>
+      <a href="" class="button cart">Cart <img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/ui-conventions/img/cart.svg"></a>
+    </header>
+    <nav>
+      <a href="deals.html">Today's Deals</a>
+      <a href="bestsellers.html">Bestsellers</a>
+      <a href="about.html">About Us</a>
+      <a href="sell.html">Sell</a>
+      <a href="#">Help</a>
+    </nav>
+
+    <!-- Sell Product Form -->
+
+    <div id="main" class="sell">
+      <h3>Sell</h3>
+      <form>
+        <div id="name" class="field">
+          <label for="name">Product Name</label>
+          <input type="text" name="name" placeholder="Name of product">
+        </div>
+        <div id="price" class="field">
+          <label for="price">Price</label>
+          <input type="number" name="price">
+        </div>
+        <div id="quantity" class="field">
+          <label for="quantity">Quantity</label>
+          <select name="quantity">
+            <option value="100"><100</option>
+            <option value="200">100-200</option>
+            <option value="300">200-300</option>
+            <option value="400">300-400</option>
+            <option value="500">>500</option>
+          </select>
+        </div>
+        <div id="description" class="field">
+          <label for="description">Description</label>
+          <textarea type="text" name="description" placeholder="Description of product"></textarea>
+        </div>
+        <a href="#" class="button" id="submit">Submit</a>
+      </form>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <img src="https://s3.amazonaws.com/codecademy-content/programs/ui-design/ui-conventions/img/logo.svg">
+      <div class="links">
+        <h4>Get to know us</h4>
+        <a href="#">About us</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="#">Investor relations</a>
+        <a href="#">Link</a>
+      </div>
+      <div class="links">
+        <h4>Make money with us</h4>
+        <a href="sell.html">Sell on FreshDeals</a>
+        <a href="#">Become a vendor</a>
+        <a href="#">Fundraiser events</a>
+        <a href="#">Community outreach</a>
+      </div>
+      <div class="links">
+        <h4>Help</h4>
+        <a href="#">Contact us</a>
+        <a href="#">Conditions of use</a>
+        <a href="#">Report a problem</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
