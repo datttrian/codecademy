@@ -1,0 +1,75 @@
+.hero {
+  width: 100%;
+  height: 21.75rem;
+  background-image: url('https://s3.amazonaws.com/codecademy-content/programs/ui-design/ui-conventions/img/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  color: hsla(0, 0%, 100%, 1);;
+}
+
+.hero h2 {
+  padding-top: 10rem;
+  font-family: 'PT Serif', serif;
+  font-size: 2.25rem;
+  padding-left: 5rem;
+}
+
+.hero p {
+  width: 24.125rem;
+  line-height: 1.5;
+  padding-left: 5rem;
+}
+
+.products {
+  padding: 0 5rem 6rem 5rem;
+}
+
+.products h2 {
+  margin-top: 2rem;
+  font-size: 1.625rem;
+}
+
+.landing .product-list {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.categories h3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1020px) {
+  .landing .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media only screen and (max-width: 760px) {
+  .landing .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .hero {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero h2 {
+    padding-top: 7rem;
+  }
+
+  .hero p {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .landing .product-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.breadcrumb {
+  position: relative;
+  padding: 0.575rem 5rem;
+  grid-area: breadcrumb;
+  font-size: 0.875rem;
+  border-top: 1px solid hsla(0, 0%, 85%, 1);
+}
+.breadcrumb li {
+  display: inline;
+}
+.breadcrumb li.location a {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 5px;
+}
+.breadcrumb li.location+li.location::before {
+  content: "/ ";
+  color: darkgray;
+}
+
+.attribute a {
+  color: gray;
+  background-color: hsla(89, 50%, 59%, .5);
+  border: 1px solid hsla(89, 50%, 59%, .5);
+  padding: 2px 5px;
+  margin-left: 15px;
+  position: relative;
+}
+.attribute a::after {
+  content: "   X";
+  position: absolute;
+  bottom: 12px;
+  color: red;
+  font-weight: 300;
+  font-size: 12px;
+  border: 1px solid #dcdcdc;
+  border-top-color: transaparent;
+  background-color: #dcdcdc;
+  vertical-align: super;
+  margin-left: 1px;
+  padding: .5px 1.5px;
+}
+
+.blueberry-hero {
+  width: 100%;
+  height: 21.75rem;
+  background-image: url('https://s3.amazonaws.com/codecademy-content/courses/ui-breadcrumbs/blueberry-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  color: hsla(0, 0%, 100%, 1);;
+}
+
+.blueberry-hero h2 {
+  padding-top: 10rem;
+  font-family: 'PT Serif', serif;
+  font-size: 2.25rem;
+  padding-left: 5rem;
+}
+
+.blueberry-hero p {
+  width: 24.125rem;
+  line-height: 1.5;
+  padding-left: 5rem;
+}
