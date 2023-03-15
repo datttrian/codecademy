@@ -1,0 +1,268 @@
+/* all site */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+html {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  color: #262626;
+  font-family: verdana;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1, h3 {
+  color: white;
+}
+
+h1{
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px #262626;
+  margin: 0;
+  /**/
+}
+
+h1, h2, footer {padding: 0.4rem 2rem 0.1rem 2rem;} 
+
+h2 {
+  color: #262626;
+  font-style: italic;  
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+
+h3 {
+  display:inline;
+  margin: auto 0.5rem;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+/* Mobile first styling */
+
+img {
+  max-width: 30%;
+  height: auto;
+}
+
+@media screen and (min-width: 800px) {
+  /* Desktop styles */
+  img {
+  max-width: 40%;
+  height: auto;
+  }
+  h1, h2 {padding: 0.2rem 2rem;} 
+  h1 {font-size: 3.5rem;}
+}
+
+header {
+  position: relative;
+}
+
+header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(img/tilebgc.jpg);
+  background-size: contain;
+  opacity: .4;
+  content: "";
+  z-index: -1;
+}
+
+/* flexbox */
+/*   nav   */
+
+nav {
+  background-color: #ff8a5f;
+  border-top: 2px solid #ff8a5f;
+  border-bottom: 2px solid #ff8a5f;
+  height: 44px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  /* Desktop styles  */
+  nav {
+    padding: 0 9%;
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  /* Desktop styles  */
+  nav {
+    padding: 0 20%;
+    line-height: 1.6rem;
+  }
+}
+
+nav a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: auto 1rem;
+  padding: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 100%;
+  flex-basis: 25%;
+  flex-shrink: 2;
+}
+
+a:hover {
+  background-color: #ff9d79;
+}
+
+section {
+  background-color: white;
+  max-width: 1000px;
+/*  max-height: 70%;*/
+  margin: auto;
+}
+
+.intro {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 1.25rem 1rem; 
+  text-align: left;
+}
+
+/* products */
+.prodrow {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  /* Desktop styles */
+  .prodrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.stylecol {
+  background-color: #ff8a5f;
+  margin: 0.5rem 1rem;
+  padding: 0.25rem 0;
+  /*min-height: 40px;*/
+  display: inline-flex;
+    /*justify-content: space-between;*/
+  align-items: center;
+  /*flex-direction: column;*/
+  justify-content: space-between;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+
+.style-i {
+  flex: 1 2 40%;
+  font-size: 1rem;
+}
+
+
+/*  team  */
+.teamrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: 1rem;
+  background-image: url(img/team-600.jpg);
+  background-size: cover;
+}
+
+.teamrow > div {
+  margin: 0.5rem;
+  padding: 4px;
+  background-color: rgba(240, 248, 255, 0.8);
+}
+
+
+@media screen and (min-width: 800px) {
+  /* Desktop styles  */
+  .teamrow {
+    justify-content: space-around;
+    align-content: center;
+    min-height: 450px;
+  }
+  .teamrow > div {
+  margin: 0.1rem;
+  padding: 4px;
+  background-color: rgba(240, 248, 255, 0.8);
+ }
+}
+
+.teamrow > div h3, .teamrow > div p {
+  color: #ff8a5f;
+  font-weight: bold;
+  text-align: center;
+}
+
+.attribrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.attribrow > h4 {
+  margin: 0 auto;
+  padding: 15px 5px;
+  flex-basis: 100%
+}
+
+.attribrow > div {
+  background-color: white;
+  padding-left: 0.5rem;
+  display: inline-flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.attribrow > div p {
+  display: inline;
+  font-size: 0.7rem;
+}
+
+.attribrow > div a, footer a {
+  color: #ff9d79;
+  text-decoration: none;
+}
+.attribrow > div a:hover, footer a:hover {background-color: white;}
+
+footer {
+  border-top: 3px solid gainsboro;
+  padding-top: 2%;
+  text-align: center;
+}
+
+footer > p {
+  display: inline-block;
+  padding-right: 2%;
+}
