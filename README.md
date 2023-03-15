@@ -63,11 +63,11 @@ JavaScript enpowers you to add logic to your website and create a truely interac
 
 **Projects:** [Kelvin Weather](javascript-syntax-part-i/kelvin-weather-javascript); [Dog Years](javascript-syntax-part-i/dog-years-javascript); [Magic Eight Ball](javascript-syntax-part-i/magic-eight-ball-1); [Race Day](javascript-syntax-part-i/race-day); [Rock, Paper, or Scissors](javascript-syntax-part-i/rock-paper-scissors-javascript); [Sleep Debt Calculator](javascript-syntax-part-i/sleep-debt-calculator); [Training Days](javascript-syntax-part-i/training-days); [Challenge Project: Number Guesser](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
 
-## JavaScript Syntax, Part II
+## [JavaScript Syntax, Part II](javascript-syntax-part-ii)
 
 Build off your knowledge of JavaScript to implement even more functionality. Learn to utilize arrays, loops, objects, interators, errors, and debugging.
 
-**Projects:** Secret Message, Whale Talk, Meal Maker, Team Stats, Grammar Checker, Challenge Project: Credit Card Checker, Challenge Project: Mysterious Organism
+**Projects:** [Secret Message](javascript-syntax-part-ii/secret-message), [Whale Talk](javascript-syntax-part-ii/whale-talk), [Meal Maker](javascript-syntax-part-ii/meal-maker), [Team Stats](javascript-syntax-part-ii/team-stats), [Grammar Checker](javascript-syntax-part-ii/mini-linter), [Challenge Project: Credit Card Checker](javascript-syntax-part-ii/credit-card-checker), [Challenge Project: Mysterious Organism](javascript-syntax-part-ii/mysterious-organism)
 
 ## Git and GitHub, Part I 
 
