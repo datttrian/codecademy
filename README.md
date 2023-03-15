@@ -17,7 +17,7 @@ Get started with the foundations. By the end of this section, you'll be able to 
 
 Welcome to the Full-Stack Engineer Career Path! Get an overview of the journey ahead of you, save some helpful resources, and join our community. Then dive into the field of web development and the exciting opportunities ahead.
 
-## Fundamentals of HTML
+## [Fundamentals of HTML](fundamentals-of-html)
 
 HTML provides the structure for all web pages you visit. Learn the elements that you'll use to piece together this structure and best semantic practices associated with building out a web page.
 
