@@ -41,9 +41,11 @@ Once you have your site, you'll want to share it — which means you'll need to 
 
 **Projects:** [Bicycle World](deploying-websites/bicycle-world), [Daily Buzz](deploying-websites/daily-buzz)
 
-## Improved Styling with CSS
+## [Improved Styling with CSS](improved-styling-with-css)
 
 Learn how to incorporate colors, typography, links, buttons, and more to take your CSS to the next level. Then take your skills and incorporate wireframing to provide a vision for your site.
+
+**Projects:** [Paint Store](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html), [Typography](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html), [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html), [The Summit](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html), [FreshDeals: Blueberries](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html), [Challenge Project: Build a Website Design System](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
 
 **Projects:** Paint Store, Typography, Challenge Project: Build Your Own Cheat Sheet, The Summit, FreshDeals: Blueberries, Challenge Project: Build a Website Design System
 
