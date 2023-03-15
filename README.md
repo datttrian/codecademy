@@ -23,11 +23,11 @@ HTML provides the structure for all web pages you visit. Learn the elements that
 
 **Projects:** [Fashion Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-fashion-blog/index.html), [Wine Festival Schedule](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-wine-festival-schedule/index.html), [New York City Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/semantic-html-nyc-blog/index.html)
 
-## Fundamentals of CSS
+## [Fundamentals of CSS](fundamentals-of-css)
 
 Add some flair to your sites with Cascading Style Sheets (CSS). You'll learn the fundamentals, which include: how to create rulesets, styling, position, layouts, and more to make your sites stand out.
 
-**Projects:** Healthy Recipes, Olivia Woodruff Portfolio, The Box Model: Davie's Burgers, Broadway
+**Projects:** [Healthy Recipes](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html), [Olivia Woodruff Portfolio](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-visual-rules-project/index.html), [The Box Model: Davie's Burgers](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html), [Broadway](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
 
 ## Developing Websites Locally
 
