@@ -101,11 +101,11 @@ One important tool for displaying your skills will be your own personal portfoli
 
 The front-end skills you'll need to create and deploy interactive applications, like a single-page web app that handles user actions.
 
-## JavaScript Syntax, Part III
+## [JavaScript Syntax, Part III](javascript-syntax-part-iii)
 
 Further your knowledge of JavaScript and implement classes, modules, and error handling. Once you're done, test yourself with the provided code challenges.
 
-**Projects:** Build a Library, School Catalogue, WorkAround Explorer
+**Projects:** [Build a Library](javascript-syntax-part-iii/build-a-library), [School Catalogue](javascript-syntax-part-iii/school-catalog), [WorkAround Explorer](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-iii/es6-modules-workaround/index.html)
 
 
 ## JavaScript Testing
