@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'Arial-MT' ;
+  src: url('../fonts/ari.ttf') format('truetype');
+}
+
+/* Site-Wide Styles */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Arial-MT', sans-serif;
+  color: hsla(0, 0%, 13%, 1);
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+    color: hsla(0, 0%, 13%, .6);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  border: solid 1px hsla(0, 0%, 59%, 1);
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+/* Reusable Component - Button */
+
+.button {
+  border-radius: 4px;
+  background-color: hsla(88, 100%, 25%, 1);
+  text-align: center;
+  font-weight: bold;
+  color: hsla(0, 0%, 100%, 1);
+  transition: .25s;
+}
+
+.button:hover {
+    background-color: hsla(88, 100%, 25%, .8);
+    color: hsla (0, 0%, 100%, 1);
+}
+
+/* Reusable Component - Image Container */
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reusable Component - Product List */
+
+.product-list-section {
+  padding: 2rem 5rem 3.75rem 5rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem 1.75rem;
+  margin-bottom: 3.75rem;
+}
+
+.product-item {
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 100%, 1);;
+  border: solid 1px hsla(0, 0%, 91%, 1);
+}
+
+.product-item .description {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.product-item h3 {
+  margin-bottom: .75rem;
+  color: hsla(0, 0%, 29%, 1);
+}
+
+.product-item .price {
+  color: hsla(88, 100%, 25%, 1);
+}
+
+@media only screen and (max-width: 1100px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reusable Component - Form Field With Label */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  padding-bottom: .75rem;
+}
+
+/* Site-Wide Grid */
+
+.container {
+  display: grid;
+  grid-template-areas: 'header'
+                       'nav'
+                       'breadcrumb'
+                       'main'
+                       'footer';
+}
+
+/* Header */
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 22rem 1fr 22rem;
+  align-items: center;
+  padding: .75rem 5rem;
+  font-size: .875rem;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-bar .button {
+  border-radius: 0 3px 3px 0;
+  padding: 1rem;
+}
+
+.search-bar .button img {
+  vertical-align: middle;
+}
+
+.cart {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  padding: .875rem 1rem;
+}
+
+.cart img {
+  padding-left: .625rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  grid-area: nav;
+  border-top: 1px solid hsla(0, 0%, 85%, 1);
+  padding: 1.3125rem 0;
+}
+
+nav a:visted {
+  color: hsla(0, 0%, 13%, 1);
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .cart {
+    justify-self: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  nav {
+    grid-template-columns: 1fr;
+    grid-gap: .75rem;
+  }
+}
+
+/* Main Section */
+
+#main {
+  grid-area: main;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  background-color: hsla(0, 0%, 98%, 1);
+}
+
+#main h2 {
+  margin-bottom: 2rem;
+  font-size: 1.625rem;
+}
+
+#main .button {
+  box-sizing: border-box;
+  width: 14.375rem;
+  padding: .875rem 0;
+}
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem 0;
+  padding: 1.5rem;
+}
+
+footer img {
+  align-self: center;
+  justify-self: center;
+}
+
+footer .links {
+  display: grid;
+  grid-gap: .75rem
+}
+
+footer a {
+  color: hsla(88, 100%, 25%, 1);
+}
+
+@media only screen and (max-width: 810px) {
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer img {
+    grid-column: 1 / span 3;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  footer img {
+    grid-column: auto;
+  }
+}
