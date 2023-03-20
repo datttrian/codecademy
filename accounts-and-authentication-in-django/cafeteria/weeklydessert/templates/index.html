@@ -1,0 +1,16 @@
+{% extends "header.html"%}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'weeklydessert/styles.css' %}">
+
+<div class="vote-block">
+  {% if week_poll %}
+    <h2>Vote below for the next desert of the week!<h1>
+    <a class="poll-link" href="/polls/{{ week_poll.id }}/">Week of: {{ week_poll.start_of_week }}</a>
+  {% else %}
+    <p>No polls are available.</p>
+  {% endif %}
+<div>
+
+{% endblock %}

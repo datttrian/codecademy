@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h2>Update Station</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update" />
+</form>
+{% endblock %}

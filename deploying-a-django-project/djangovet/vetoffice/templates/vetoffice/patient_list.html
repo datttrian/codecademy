@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Patient List</h2>
+<a href="{% url 'patientcreate' %}"><button class="btn">Add Patient</button></a>
+<table id="patients">
+  <tr>
+    <th>Pet Name</th>
+    <th>Animal Type</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Owner</th>
+      <th> </th>
+      <th> </th>
+  </tr>
+  {% for patient in patient_list %}
+  <tr>
+  <tr>
+      <td>{{ patient.pet_name }}</td>
+      <td>{{ patient.animal_type }}</td>
+      <td>{{ patient.breed }}</td>
+      <td>{{ patient.age }}</td>
+      <td>{{ patient.owner }}</td>
+      <td><a href="{% url 'patientupdate' patient.id %}"><button>Edit</button></a></td>
+      <td><a href="{% url 'patientdelete' patient.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

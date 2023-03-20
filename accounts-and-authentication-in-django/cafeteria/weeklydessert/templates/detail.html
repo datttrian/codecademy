@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'weeklydessert/detail.css' %}">
+
+<h1>Week of: {{ week.start_of_week }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'vote' week.id %}" method="post">
+{% csrf_token %}
+{% for choice in week.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+    <label for="choice{{ forloop.counter }}">{{ choice.dessert_choice }}</label><br>
+		<p>{{ choice.dessert_details }}</p>
+{% endfor %}
+<input type="submit" value="Vote">
+</form>
+
+{% endblock %}

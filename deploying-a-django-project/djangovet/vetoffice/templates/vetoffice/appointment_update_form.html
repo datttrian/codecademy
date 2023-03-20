@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Update Appointment</h2>
+<form method="post">
+<div>
+    {% csrf_token %} {{ form.as_p }}
+    <input class="btn" type="submit" value="Save" />
+    <a href=""><button class="btn">Cancel</button></a>
+</div>
+</form>
+{% endblock %}

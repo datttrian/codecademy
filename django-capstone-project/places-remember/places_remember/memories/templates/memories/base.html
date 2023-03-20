@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Places Remember</title>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+        {% load static %}
+        <script src="{% static 'memories/js/google_map_functions.js' %}"></script>
+        {% comment %} Google Map API {% endcomment %}
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_API_KEY }}&libraries=places&callback=initMap&v=weekly"
+                defer></script>
+        <script src="{% static 'memories/js/user_memories.js' %}" defer></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <button class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">``
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light font-weight-bold"
+                               href="{% url 'memories:home' %}">Home</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                            {% block add_memory %}{% endblock %}
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center hidden-arrow text-light"
+                           href="#"
+                           id="navbarDropdownMenuAvatar"
+                           role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            {% if not user.is_authenticated %}
+                            <i class="fa-solid fa-user"></i>
+                            {% else %}
+                                {% for auth_backend in backends.associated %}
+                                    {% if auth_backend.provider == 'facebook' %}
+                                        <p class="mx-2 my-auto">{{ auth_backend.extra_data.name }}</p>
+                                        <img src="{{ auth_backend.extra_data.picture.data.url }}"
+                                             class="rounded-circle"
+                                             height="25"
+                                             loading="lazy"/>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right"
+                            aria-labelledby="navbarDropdownMenuAvatar">
+                            {% if not user.is_authenticated %}
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'social:begin' 'facebook' %}">Log In</a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+        {% block body %}{% endblock %}
+        <footer class="mt-auto mb-4">
+            <div class="text-center">
+                <span>
+                    Copyright &copy; <script>document.write(new Date().getFullYear())</script> Django Project.
+                </span>
+            </div>
+        </footer>
+    </body>
+</html>
