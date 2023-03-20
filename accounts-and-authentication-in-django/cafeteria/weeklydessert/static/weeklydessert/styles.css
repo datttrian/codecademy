@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFF5FF;
+  margin-left: 10px;
+}
+
+.header-title {
+  margin-bottom: 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-greet {
+  width: 100%;
+}
+
+.poll-link {
+  text-decoration: none;
+}
+
+.vote-block {
+  margin-left: 20px;
+  width: 100%;
+}

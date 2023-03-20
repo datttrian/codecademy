@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Django Djitney{% endblock %} {% block content %}
+<div class="home">
+  <div>
+    <h2>Lines</h2>
+    <table class="line-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Stops</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for line in lines %}
+        <tr>
+          <td>{{ line.name }}</td>
+          <td>
+            <ul>
+              {% for stop in line.stop_set.all %}
+              <li>{{ stop.stop_number }}</li>
+              <div>
+                {{ stop.station.name }}{% if stop.station.accessible %} ♿ {% endif %}
+              </div>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
