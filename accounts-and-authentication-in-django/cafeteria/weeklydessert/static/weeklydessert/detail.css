@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=radio] {
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+	transform: scale(1.5);
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type=submit]{
+	background-color: #3A10E5;
+	color: white;
+	padding: 10px 14px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 25%;
+	font-size: 18px;
+}

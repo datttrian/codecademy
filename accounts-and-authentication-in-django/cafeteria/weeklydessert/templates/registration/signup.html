@@ -1,0 +1,16 @@
+{% extends "header.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'weeklydessert/signup.css' %}">
+<div class="signup-form">
+<h2>Sign Up</h2>
+	<form class="signup" method="POST">
+			<div>
+				{% csrf_token %}
+				{{ form.as_p }}
+				<input type="submit" value="Signup"/>
+			</div>
+	</form>
+</div>
+{% endblock %}

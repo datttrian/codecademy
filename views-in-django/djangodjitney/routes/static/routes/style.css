@@ -1,0 +1,168 @@
+body {
+  font-family: "Oxygen", sans-serif;
+  margin: 0;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+hr {
+  margin: 30px 0;
+}
+
+header {
+  background-color: #fff5ff;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.header-first-row {
+  width: 100%;
+  display: flex;
+}
+
+.navbar {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 8px 0;
+  color: #1557ff;
+  margin-right: 15px;
+}
+
+.navbar a:hover,
+.navbar .current-page {
+  border-bottom: solid 4px #1557ff;
+  border-spacing: 0 15px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 3em;
+  padding: 0px 50px 0 20px;
+  margin: auto 0;
+  color: #3a10e5;
+}
+
+main {
+  padding: 40px;
+}
+
+main h2 {
+  font-size: 2em;
+}
+
+.app {
+  min-width: 800px;
+  max-width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+main table {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  width: 100%;
+}
+
+main table th {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+.line-table li {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: dodgerblue;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+.line-table li::before {
+  content: "";
+  position: absolute;
+  top: 0.9em;
+  left: -4em;
+  width: 4em;
+  height: 0.2em;
+  background: dodgerblue;
+  z-index: -1;
+}
+
+li + div {
+  display: none;
+}
+
+li:hover {
+  background-color: lightblue;
+}
+
+li:hover + div {
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  margin-left: 0px;
+  font-size: 0.8em;
+  color: dodgerblue;
+  border: 2px dashed lightblue;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.line-table li:first-child::before {
+  display: none;
+}
+
+.line-table ul {
+  padding: 0;
+}
+
+main form input[type="submit"] {
+  width: max-content;
+}
+
+main form * {
+  display: block;
+}
+
+main form label {
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #1557ff;
+}
+a:hover {
+  font-weight: bold;
+}

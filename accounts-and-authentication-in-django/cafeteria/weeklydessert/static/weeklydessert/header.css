@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFF5FF;
+  margin-left: 10px;
+}
+
+.header-title {
+  margin-bottom: 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-greet {
+  width: 100%;
+}
+
+.logout-button {
+  position: absolute;
+  top: 100px;
+  right: 15px;
+  display: block;
+  width: 80px;
+  height: 15px;
+  background: #3A10E5;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 15px;
+  text-decoration: none;
+}

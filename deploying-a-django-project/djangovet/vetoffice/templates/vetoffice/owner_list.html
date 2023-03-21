@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% block content %}
+<h2>Owner List</h2>
+<a href="{% url 'ownercreate' %}"><button class="btn">Add Owner</button></a>
+<table id="owners">
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Multiple Pets</th>
+    <th>Phone</th>
+      <th> </th>
+      <th> </th>
+  </tr>
+  {% for owner in owner_list %}
+  <tr>
+  <tr>
+      <td>{{ owner.first_name }}</td>
+      <td>{{ owner.last_name }}</td>
+      <td>{% if owner.multipleOwner %}YES{% else %}NO{% endif %}</td>
+      <td>{{ owner.phone }}</td>
+      <td><a href="{% url 'ownerupdate' owner.id %}"><button>Edit</button></a></td>
+      <td><a href="{% url 'ownerdelete' owner.id %}"><button>Delete</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

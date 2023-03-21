@@ -1,297 +1,207 @@
 [<img src="https://github.com/Codecademy/learn-cpp/blob/master/logo.png" align="right" width=170;>](https://www.codecademy.com)
 
-[![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white)](https://www.w3schools.com/html/)
-[![CSS](https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=css3&logoColor=white)](https://www.w3schools.com/css/)
-[![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://www.javascript.com/)
-[![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)
-[![Redux](https://img.shields.io/badge/-Redux-764ABC?style=flat-square&logo=redux&logoColor=white)](https://redux.js.org/)
-[![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
-[![SQL](https://img.shields.io/badge/-SQL-CC2927?style=flat-square&logo=sql&logoColor=white)](https://www.w3schools.com/sql/)
-[![DevOps](https://img.shields.io/badge/-DevOps-326CE5?style=flat-square&logo=devops&logoColor=white)](https://en.wikipedia.org/wiki/DevOps)
-
-# Web Development Foundations
-
-Get started with the foundations. By the end of this section, you'll be able to build a stylized and responsive website with HTML and CSS.
-
-## [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
-
-Welcome to the Full-Stack Engineer Career Path! Get an overview of the journey ahead of you, save some helpful resources, and join our community. Then dive into the field of web development and the exciting opportunities ahead.
-
-## [Fundamentals of HTML](fundamentals-of-html)
-
-HTML provides the structure for all web pages you visit. Learn the elements that you'll use to piece together this structure and best semantic practices associated with building out a web page.
-
-**Projects:** [Fashion Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-fashion-blog/index.html), [Wine Festival Schedule](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-wine-festival-schedule/index.html), [New York City Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/semantic-html-nyc-blog/index.html)
-
-## [Fundamentals of CSS](fundamentals-of-css)
-
-Add some flair to your sites with Cascading Style Sheets (CSS). You'll learn the fundamentals, which include: how to create rulesets, styling, position, layouts, and more to make your sites stand out.
-
-**Projects:** [Healthy Recipes](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html), [Olivia Woodruff Portfolio](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-visual-rules-project/index.html), [The Box Model: Davie's Burgers](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html), [Broadway](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
-
-## [Developing Websites Locally](developing-websites-locally)
-
-Part of becoming a developer means you'll need the skills to create websites on your own computer. Use tools like text editors and Chrome Devtools to work out how to build websites locally.
-
-**Projects:** [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
-
-## [Deploying Websites](deploying-websites)
-
-Once you have your site, you'll want to share it — which means you'll need to host and deploy it. Use the command line and GitHub pages to make this deployment process seamless.
-
-**Projects:** [Bicycle World](deploying-websites/bicycle-world), [Daily Buzz](deploying-websites/daily-buzz)
-
-## [Improved Styling with CSS](improved-styling-with-css)
-
-Learn how to incorporate colors, typography, links, buttons, and more to take your CSS to the next level. Then take your skills and incorporate wireframing to provide a vision for your site.
-
-**Projects:** [Paint Store](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html), [Typography](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html), [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html), [The Summit](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html), [FreshDeals: Blueberries](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html), [Challenge Project: Build a Website Design System](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
-
-## [Making a Website Responsive](making-a-website-responsive)
-
-Sites show up on all different types of devices, like: desktops, cellphones, laptops, etc. Incorporate responsive design to create a site that adapts to your users' different screen sizes.
-
-**Projects:** [Flexbox: To-Do App](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/flexbox-to---do-app/index.html), [Off-Platform Project: Tea Cozy](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tea-cozy/index.html), [PupSpa](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/pupspa/index.html), [CSS Grid: Task Board](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/css-grid-task-board/index.html), [Tsunami Coffee](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tsunami-coffee/index.html), [Off-Platform Project: Fotomatic](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html), [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/company-page-with-flexbox/index.html), [Challenge Project: Responsive Club Website](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/responsive-club-website/index.html)
-
-# Building Interactive Websites
-
-Build interactive sites using JavaScript and host it on a remote GitHub repository.
-
-## [JavaScript Syntax, Part I](javascript-syntax-part-i)
-
-JavaScript enpowers you to add logic to your website and create a truely interactive site. Start with the basics of variables, data types, conditionals, functions, and scope.
-
-**Projects:** [Kelvin Weather](javascript-syntax-part-i/kelvin-weather-javascript); [Dog Years](javascript-syntax-part-i/dog-years-javascript); [Magic Eight Ball](javascript-syntax-part-i/magic-eight-ball-1); [Race Day](javascript-syntax-part-i/race-day); [Rock, Paper, or Scissors](javascript-syntax-part-i/rock-paper-scissors-javascript); [Sleep Debt Calculator](javascript-syntax-part-i/sleep-debt-calculator); [Training Days](javascript-syntax-part-i/training-days); [Challenge Project: Number Guesser](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
-
-## [JavaScript Syntax, Part II](javascript-syntax-part-ii)
-
-Build off your knowledge of JavaScript to implement even more functionality. Learn to utilize arrays, loops, objects, interators, errors, and debugging.
-
-**Projects:** [Secret Message](javascript-syntax-part-ii/secret-message), [Whale Talk](javascript-syntax-part-ii/whale-talk), [Meal Maker](javascript-syntax-part-ii/meal-maker), [Team Stats](javascript-syntax-part-ii/team-stats), [Grammar Checker](javascript-syntax-part-ii/mini-linter), [Challenge Project: Credit Card Checker](javascript-syntax-part-ii/credit-card-checker), [Challenge Project: Mysterious Organism](javascript-syntax-part-ii/mysterious-organism)
-
-## [Git and GitHub, Part I](git-and-github-part-i)
-
-Git is a quintessential tool for version control. Use it along with GitHub to share your code and enable a collaborative workflow with other developers.
-
-**Projects:** [Manhattan Zoo](git-and-github-part-i/manhattan-zoo); [SnapFit Robots, Inc.](git-and-github-part-i/snapfit-robots); [Poem Fiasco](git-and-github-part-i/poem-fiasco); [ASCII Portfolio](git-and-github-part-i/ascii-portfolio)
-
-## [Portfolio Project: JavaScript Syntax](portfolio-project-javascript-syntax)
-
-Bring together your knowledge of JavaScript, Git, and GitHub to create a project that can showcase your skills and be worthy of adding to your personal portfolio site.
-
-**Projects:** [Mixed Messages](portfolio-project-javascript-syntax/mixed-messages)
-
-## [Building Interactive Websites](building-interactive-websites)
-
-The Document Object Model (DOM) represents the different parts of a website. Use JavaScript to manipulate the DOM and create a interctive site.
-
-**Projects:** [Piano Keys](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/piano-keys/index.html), [Form a Story](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/form-a-story/index.html)
-
-## [Making A Website Accessible](making-a-website-accessible)
-
-The web has become a tool to connect people from all over the globe. Learn how to make the web an even more accessible tool for all in this unit.
-
-## [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
-
-One important tool for displaying your skills will be your own personal portfolio site. Use your knowledge of web development and establish your own web presence.
-
-**Projects:** [Portfolio Project](https://datttrian.github.io/full-stack-engineer/portfolio-project-personal-portfolio-website/portfolio-website/index.html)
-
-# Front-End Development
-
-The front-end skills you'll need to create and deploy interactive applications, like a single-page web app that handles user actions.
-
-## [JavaScript Syntax, Part III](javascript-syntax-part-iii)
-
-Further your knowledge of JavaScript and implement classes, modules, and error handling. Once you're done, test yourself with the provided code challenges.
-
-**Projects:** [Build a Library](javascript-syntax-part-iii/build-a-library), [School Catalogue](javascript-syntax-part-iii/school-catalog), [WorkAround Explorer](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-iii/es6-modules-workaround/index.html)
-
-
-## JavaScript Testing
-
-Testing ensures that your app performs as intended. Learn how to create Mocha tests and the Test Driven Development (TDD) methodology that demonstrates how testing can be applied.
-
-**Projects:** Rooster Regulation, Factorial Feature
-
-## Async JavaScript and HTTP Requests
-
-Learn what asynchronous code is and how it allows you to use JavaScript to smoothly handle actions that might otherwise block your app and make your users wait.
-
-**Projects:** Film Finder
-
-## Web Apps
-
-Confused about web pages, websites, and web apps? Take this unit to differentiate between these different terminologies and what a Single Page Application (SPA) is.
-
-## React, Part I
-
-Be introduced to React, a popular JavaScript library, to build out the front-end of your apps. This library will build upon your JavaScript knowledge and teach you core React syntax.
-
-**Projects:** Animal Fun Facts, Authorization Form
-
-## React, Part II
-
-Continue with React to learn how different components interact with each other using props, state, hooks, and use React Router, as well as testing with Jest and Enzyme.
-
-**Projects:** Random Color Picker, Video Player, Social Network for Pets, Create a Playlist App With the Spotify API (Part One), Create a Playlist App With the Spotify API (Part Two), Passing Thoughts, Copycat, Adopt a Pet!, Challenge Project: Appointment Planner
-
-## Redux
-
-Redux is a popular state management library that pairs well with React to create scalable front-end apps that enable you to use a centralized store to pass on data to your components.
-
-**Projects:** Redux Road, Codecademy Store, Matching Memory, Expense Tracker, Redux News Reader, Challenge Project: Flashcards
-
-## Git and GitHub, Part II
-
-Further your knowledge of Git and GitHub to streamline your processes for working collaboratively with others through forking, branching, merging conflicts, and making pull requests.
-
-**Projects:** Birthday Party, Ruby Time Calculator, JavaScript Homework, Recipe Book
-
-## Portfolio Project: Reddit Client
-
-Combine your knowledge of React and Redux to create the front-end of an application like Reddit. Use this chance to also work collaboratively with others and add it to your portfolio.
-
-# Back-End Development
-
-Fundamentals of back-end development: creating a RESTful API that serves data and designing relational databases,
-
-## Introduction to Back-End
-
-Dive into the world of back-end development using your knowledge of Javascript to work in Node.js. You'll implement modules and utilize the Node Package Manager (npm).
-
-**Projects:** Message Mixer, Challenge Project: Find Your Hat
-
-## Build a Back-end with Express.js
-
-Express.js is a popular Node application framework that enables you to quickly build out core back-end functionality straight out of the box.
-
-**Projects:** Quote API
-
-## User Authentication &amp; Authorization
-
-Authentication means verifying that your users are who they say they are and authorization determines what permissions they have. Learn how to Implement these key features.
-
-**Projects:** Dognation: Password Authentication
-
-## Back-End and Feature Testing
-
-Testing on the back-end is also very important. See how test-driven development (TDD) is used to test features as well as the server in this unit.
-
-**Projects:** Quote Keeper, Quote Keeper: Server Layer
-
-## Database Basics
-
-Databases store the information that your app uses to function. Learn about different types of databases, how to work with a relational database, and how to locally set up PostgreSQL.
-
-**Projects:** Create a Table
-
-## Working with Databases
-
-In this unit, you'll learn how to work more in-depth with databases, creating more sophisticated SQL queries and calculations to build data-intensive applications.
-
-**Projects:** New York Restaurants, Trends in Startups, Analyze Hacker News Trends, Lyft Trip Data
-
-## Designing Relational Databases
-
-The design of a well-organized database can better facilitate the interactions of your application. Learn best practices to set up your PostgreSQL database.
-
-**Projects:** Build A Menu For Bytes Of China, Database Triggers
-
-
-## Advanced PostgreSQL
-
-Optimizing a database can make storage and retrieval of information faster — learn how to implement techniques that will let your database work efficiently.
-
-**Projects:** Building an Inventory Database with PostgreSQL, Data Exchange Service, Book Store Indexes, Intermediate Book Store Indexes, Database Normalization at Fred's Furniture, Traffic Analytics
-
-## Adding a PostgreSQL Database
-
-Learn how to pair your database with your Node and Express back-end. This functionality will enable your app to serve up custom experiences for your users.
-
-## API Development with Swagger and OpenAPI
-
-Your API is only as good as its documentation — learn how to document your API using OpenAPI and Swagger so that others can benefit from your work.
-
-## Portfolio Project: E-Commerce App (REST API)
-
-Pull together your Node, Express, PostgreSQL, OpenAPI, and Swagger skills to build out an e-commerce RESTful API worthy of your portfolio. Remember to work with others along the way.
-
-# Full-Stack Development
-
-Bridge your front-end and back-end knowledge. Learn how to build secure full-stack applications and underlying operating system fundamentals
-
-## Connecting Front-End to Back-End
-
-You've learned front-end and back-end development, now learn how to combine the two to build out a full-stack app. You'll also learn how to structure your apps using MVC architecture.
-
-## Deploying Web Applications
-
-Use Heroku to deploy your full-stack PERN app and share it with the world. You'll learn the convenience of Heroku, how to a back-end, and also a full-stack app.
-
-## Web Security Fundamentals
-
-Web security is becoming increasingly important. Learn the fundamentals of what web security is and prevention techniques for common threats.
-
-## Data Security
-
-Data should only be shared with its intended recipients. Learn to secure your data using Transport Layer Security (TLS), Role-Based Access Control (RBAC), and more!
-
-**Projects:** Securing School Data: Data Security
-
-## Common Attacks on Web Applications
-
-There are common patterns that are used to attack web apps. Learn how to prevent the most common attacks like cross-site scripting (XSS), SQL injections, and more.
-
-**Projects:** Restreview: Preventing Cross Site Scripting (XSS) Attacks, Codey's Confectionery: Preventing Cross-Site Request Forgery (CSRF) Attacks, Codey's Confectionery: Preventing SQL Injection Attacks, Trey Coding: Defensive Coding in JavaScript
-
-## Fundamentals of Operating Systems
-
-Operating systems play a key role in how browsers, apps, and user interactions play out. Learn about core operating system functionality to get an under-the-hood look at the OS.
-
-## DevOps Fundamentals
-
-Development Operations (DevOps) is a culture supported by practices and tools. Get acquainted with the basics of how to support and maintain the development of apps.
-
-## Portfolio Project: E-Commerce App (Client)
-
-Use your full-stack skills to create the front-end of the E-commerce App and tie both the aspects of development together. Work collaboratively to expand your understanding.
-
-# Interview Prep
-
-It's important to learn technical interview skills to help you land your target role.
-
-## What To Expect in a Technical Interview
-
-Technical interviews are a staple used to gauge your programming skills. Learn what these interviews entail and how to best represent yourself.
-
-## Linear Data Structures
-
-Begin interview preparation by learning the fundamentals of linear data structures such as singly-linked lists, doubly-linked lists, queues, and stacks.
-
-**Projects:** Web Navigator
-
-## Complex Data Structures
-
-Continue your interview preparation by learning advanced applications that include data structures such as hash maps, trees, heaps, and graphs.
-
-## Algorithms
-
-Another part of what's tested during the technical interview is algorithms. Learn what algorithms are, asymptotic notation, and different types of sorting algorithms.
-
-## Search &amp; Graph Search Algorithms
-
-Continue to build off your understanding of algorithms by diving into search algorithms that involve: binary search, search trees, and graph traversals.
-
-## Interview Skills
-
-Review some key technical interview topics such as whiteboarding and code challenges as well as soft skills which employers are looking for in potential candidates.
-
-## Portfolio Project: Open-Ended PERN App
-
-Highlight your skills and showcase your creativity by creating a full-stack PERN app of your choosing. Feature this project in your portfolio project and don't be shy about collaboration.
-
-## Next Steps in Your Full-Stack Engineer Journey
-
-A big congratulations to you for finishing the Full-Stack Engineer Career Path! While you've reached the end of this Path, it is not the end of your development journey.
-
+![Python](https://img.shields.io/badge/-Python-blue?style=flat-square&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/-Django-green?style=flat-square&logo=django&logoColor=white)
+![Flask](https://img.shields.io/badge/-Flask-lightgrey?style=flat-square&logo=flask&logoColor=white)
+![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/-CSS-blueviolet?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=javascript&logoColor=white)
+![React](https://img.shields.io/badge/-React-blue?style=flat-square&logo=react&logoColor=white)
+![Redux](https://img.shields.io/badge/-Redux-purple?style=flat-square&logo=redux&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-orange?style=flat-square&logo=git&logoColor=white)
+![SQL](https://img.shields.io/badge/-SQL-lightgrey?style=flat-square&logo=sql&logoColor=white)
+
+# Build Python Web Apps with Flask Skill Path
+
+1. [Introduction to Python](flask-introduction-to-python)
+    * [Receipts for Lovely Loveseats](flask-introduction-to-python/furniture-store.py)
+    * [Getting Ready for Physics Class](flask-introduction-to-python/physics-class.py)
+    * [Sal's Shipping](flask-introduction-to-python/shipping.py)
+1. [Introduction to Python Data Structures and Loops](flask-python-data-structures-loops)
+    * [Len's Slice](flask-python-data-structures-loops/lens-slice.py)
+    * [Carly's Clippers](flask-python-data-structures-loops/carlys-clippers.py)
+    * [Scrabble](flask-python-data-structures-loops/scrabble.py)
+    * [Basta Fazoolin'](flask-python-data-structures-loops/basta-fazoolin.py)
+1. [Introduction to the Web](flask-introduction-to-the-web)
+1. [Introduction to Flask](introduction-to-flask)
+    * [Adopt a Pet](introduction-to-flask/adopt-a-pet)
+    * Tourist Attractions
+1. [Introduction to SQL and Databases for Back-End Web Apps](flask-sql-databases)
+    * Create a Table
+    * New York Restaurants
+    * FlaskFM
+1. [Advanced Flask Functionality](flask-advanced-functionality)
+    * Travel Sites
+1. [Deploying an Application](flask-deploying)
+1. [Build Python Web Apps with Flask Capstone Project](flask-capstone-project)
+
+# Build Python Web Apps with Django Skill Path
+
+1. [Introduction to the Web](django-introduction-to-the-web)
+1. [Introduction to Django](introduction-to-django)
+    * [Fortune Teller](introduction-to-django/fortuneteller)
+1. [Templates in Django](templates-in-django)
+    * [Tourist Attractions with Templates](templates-in-django/touristAttractions)
+1. [Data in Django](data-in-django)
+    * [Djaunty Rent-a-Bike](data-in-django/BikeRental)
+1. [Views in Django](views-in-django)
+    * [The Django Djitney](views-in-django/djangodjitney)
+1. [Forms in Django](forms-in-django)
+    * [Tourist Attractions with Forms](forms-in-django/touristAttractions)
+1. [Accounts and Authentication in Django](accounts-and-authentication-in-django)
+    * [Weekly Dessert](accounts-and-authentication-in-django/cafeteria)
+1. [Deploying a Django Project](deploying-a-django-project)
+    * [Vetoffice](deploying-a-django-project/djangovet)
+1. [Build Python Web Apps with Django Capstone Project](django-capstone-project)
+    * Places Remember
+
+# Full-Stack Engineer Career Path
+
+## Web Development Foundations
+
+1. [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
+1. [Fundamentals of HTML](fundamentals-of-html)
+    * [Fashion Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-fashion-blog/index.html), 
+    * [Wine Festival Schedule](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-wine-festival-schedule/index.html), 
+    * [New York City Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/semantic-html-nyc-blog/index.html)
+1. [Fundamentals of CSS](fundamentals-of-css)
+    * [Healthy Recipes](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html), 
+    * [Olivia Woodruff Portfolio](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-visual-rules-project/index.html), 
+    * [The Box Model: Davie's Burgers](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html), 
+    * [Broadway](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
+1. [Developing Websites Locally](developing-websites-locally)
+    * [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
+1. [Deploying Websites](deploying-websites)
+    * [Bicycle World](deploying-websites/bicycle-world)
+    * [Daily Buzz](deploying-websites/daily-buzz)
+1. [Improved Styling with CSS](improved-styling-with-css)
+    * [Paint Store](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html)
+    * [Typography](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html)
+    * [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html)
+    * [The Summit](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html)
+    * [FreshDeals: Blueberries](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html)
+    * [Challenge Project: Build a Website Design System](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
+1. [Making a Website Responsive](making-a-website-responsive)
+    * [Flexbox: To-Do App](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/flexbox-to---do-app/index.html)
+    * [Off-Platform Project: Tea Cozy](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tea-cozy/index.html)
+    * [PupSpa](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/pupspa/index.html)
+    * [CSS Grid: Task Board](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/css-grid-task-board/index.html)
+    * [Tsunami Coffee](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tsunami-coffee/index.html)
+    * [Off-Platform Project: Fotomatic](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html)
+    * [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/company-page-with-flexbox/index.html)
+    * [Challenge Project: Responsive Club Website](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/responsive-club-website/index.html) 
+
+## Building Interactive Websites
+
+1. [JavaScript Syntax, Part I](javascript-syntax-part-i)
+    * [Kelvin Weather](javascript-syntax-part-i/kelvin-weather-javascript)
+    * [Dog Years](javascript-syntax-part-i/dog-years-javascript)
+    * [Magic Eight Ball](javascript-syntax-part-i/magic-eight-ball-1)
+    * [Race Day](javascript-syntax-part-i/race-day)
+    * [Rock, Paper, or Scissors](javascript-syntax-part-i/rock-paper-scissors-javascript)
+    * [Sleep Debt Calculator](javascript-syntax-part-i/sleep-debt-calculator)
+    * [Training Days](javascript-syntax-part-i/training-days)
+    * [Challenge Project: Number Guesser](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
+1. [JavaScript Syntax, Part II](javascript-syntax-part-ii)
+    * [Secret Message](javascript-syntax-part-ii/secret-message)
+    * [Whale Talk](javascript-syntax-part-ii/whale-talk)
+    * [Meal Maker](javascript-syntax-part-ii/meal-maker)
+    * [Team Stats](javascript-syntax-part-ii/team-stats)
+    * [Grammar Checker](javascript-syntax-part-ii/mini-linter)
+    * [Challenge Project: Credit Card Checker](javascript-syntax-part-ii/credit-card-checker)
+    * [Challenge Project: Mysterious Organism](javascript-syntax-part-ii/mysterious-organism)
+1. [Git and GitHub, Part I](git-and-github-part-i)
+    * [Manhattan Zoo](git-and-github-part-i/manhattan-zoo)
+    * [SnapFit Robots, Inc.](git-and-github-part-i/snapfit-robots)
+    * [Poem Fiasco](git-and-github-part-i/poem-fiasco)
+    * [ASCII Portfolio](git-and-github-part-i/ascii-portfolio)
+1. [Portfolio Project: JavaScript Syntax](portfolio-project-javascript-syntax)
+    * [Mixed Messages](portfolio-project-javascript-syntax/mixed-messages)
+1. [Building Interactive Websites](building-interactive-websites)
+    * [Piano Keys](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/piano-keys/index.html)
+    * [Form a Story](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/form-a-story/index.html)
+1. [Making A Website Accessible](making-a-website-accessible)
+1. [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
+    * [Portfolio Project](https://datttrian.github.io/full-stack-engineer/portfolio-project-personal-portfolio-website/portfolio-website/index.html)
+
+## Front-End Development
+
+1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
+    * [Build a Library](javascript-syntax-part-iii/build-a-library)
+    * [School Catalogue](javascript-syntax-part-iii/school-catalog)
+    * [WorkAround Explorer](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)
+1. [JavaScript Testing](javascript-testing)
+    * [Rooster Regulation](javascript-testing/rooster-regulation)
+    * Factorial Feature
+1. Async JavaScript and HTTP Requests
+    * Film Finder
+1. Web Apps
+1. React, Part I
+    * Animal Fun Facts
+    * Authorization Form
+1. React, Part II
+    * Random Color Picker
+    * Video Player
+    * Social Network for Pets
+    * Create a Playlist App With the Spotify API (Part One)
+    * Create a Playlist App With the Spotify API (Part Two)
+    * Passing Thoughts
+    * Copycat
+    * Adopt a Pet!
+    * Challenge Project
+    * Appointment Planner
+1. Redux
+    * Redux Road
+    * Codecademy Store
+    * Matching Memory
+    * Expense Tracker
+    * Redux News Reader
+    * Challenge Project
+    * Flashcards
+1. Git and GitHub, Part II
+    * Birthday Party
+    * Ruby Time Calculator
+    * JavaScript Homework
+    * Recipe Book
+1. Portfolio Project
+    * Reddit Client
+
+## Back-End Development
+
+1. Introduction to Back-End
+1. Build a Back-end with Express.js
+1. User Authentication &amp; Authorization
+1. Back-End and Feature Testing
+1. Database Basics
+1. Working with Databases
+1. Designing Relational Databases
+    * Build A Menu For Bytes Of China
+    * Database Triggers1. Advanced PostgreSQL
+1. Adding a PostgreSQL Database
+1. API Development with Swagger and OpenAPI
+1. Portfolio Project
+    * E-Commerce App (REST API)
+
+## Full-Stack Development
+
+1. Connecting Front-End to Back-End
+1. Deploying Web Applications
+1. Web Security Fundamentals
+1. Data Security
+1. Common Attacks on Web Applications
+1. Fundamentals of Operating Systems
+1. DevOps Fundamentals
+1. Portfolio Project
+    * E-Commerce App (Client)
+
+## Interview Prep
+
+1. What To Expect in a Technical Interview
+1. Linear Data Structures
+1. Complex Data Structures
+1. Algorithms
+1. Search &amp; Graph Search Algorithms
+1. Interview Skills
+1. Portfolio Project
+    * Open-Ended PERN App
+1. Next Steps in Your Full-Stack Engineer Journey
