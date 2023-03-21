@@ -132,7 +132,7 @@
     * [WorkAround Explorer](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)
 1. [JavaScript Testing](javascript-testing)
     * [Rooster Regulation](javascript-testing/rooster-regulation)
-    * Factorial Feature
+    * [Factorial Feature](javascript-testing/factorial)
 1. Async JavaScript and HTTP Requests
     * Film Finder
 1. Web Apps

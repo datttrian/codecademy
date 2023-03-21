@@ -2288,40 +2288,6 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-## Getting Started
-
-### Clone the project in this repo
-
-- Remove the repository if exists
-- Clone the repository from Github
-- Switch to the `rooster-regulation` directory
-- Run the test
-
-``` bash
-rm -rf codecademy
-git clone https://github.com/datttrian/codecademy
-cd codecademy/javascript-testing/rooster-regulation
-npm test
-```
-
-    ## Cloning into 'codecademy'...
-    ## 
-    ## > learn@1.0.0 test
-    ## > mocha test/**/*_test.js
-    ## 
-    ## 
-    ## 
-    ##   Rooster
-    ##     .announceDawn
-    ##       ✔ returns a rooster call
-    ##     .timeAtDawn
-    ##       ✔ returns its argument as a string
-    ##       ✔ throws an error if passed a number less than 0
-    ##       ✔ throws an error if passed a number greater than 23
-    ## 
-    ## 
-    ##   4 passing (3ms)
-
 ### Instructions
 
 Mark the tasks as complete by checking them off
@@ -2414,134 +2380,6 @@ Your test suite is *fast*, *complete*, *isolated*, *maintainable*, and
 
 [Good Tests with Mocha Project: Rooster
 Regulation](https://www.youtube.com/watch?v=GYLz0QJe9VI)
-
-``` bash
-#!/bin/bash
-project_name='rooster-regulation'
-rm -rf $project_name 
-mkdir $project_name  && cd $project_name
-npm init -y
-npm install mocha -D
-cat << 'EOF' > package.json
-{
-  "name": "rooster-regulation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha test/**/*_test.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "mocha": "^10.2.0"
-  }
-}
-EOF
-cat << 'EOF' > index.js
-// Define a rooster
-Rooster = {};
-
-// Return a morning rooster call
-Rooster.announceDawn = () => {
-  return 'moo!';
-}
-
-// Return hour as string
-// Throws Error if hour is not between 0 and 23 inclusive
-Rooster.timeAtDawn = (hour) => {
-  if (hour < 0 || hour > 23) {
-    throw new RangeError;
-  } else {
-    return hour.toString();
-  };
-}
-
-module.exports = Rooster;
-EOF
-mkdir test
-cat << 'EOF' > test/index_test.js
-const assert = require('assert');
-const Rooster = require('../index');
-
-describe('Rooster', () => {
-    describe('.announceDawn', () => {
-        it('returns a rooster call', () => {
-            const expected = 'moo!';
-            const result = Rooster.announceDawn();
-            assert.equal(expected, result)
-        })
-    })
-    describe('.timeAtDawn', () => {
-        it('returns its argument as a string', () => {
-            const expected = '8'
-            const result = Rooster.timeAtDawn(8);
-
-            assert.strictEqual(expected, result)
-        })
-        it('throws an error if passed a number less than 0', () => {
-            assert.throws(
-                () => {
-                    Rooster.timeAtDawn(-1);
-                },
-                RangeError
-            );
-
-        })
-
-        it('throws an error if passed a number greater than 23', () => {
-            assert.throws(
-                () => {
-                    Rooster.timeAtDawn(25);
-                },
-                RangeError
-            );
-        });
-    });
-});
-EOF
-npm test
-```
-
-    ## Wrote to /Users/mclix85/Documents/rooster-regulation/package.json:
-    ## 
-    ## {
-    ##   "name": "rooster-regulation",
-    ##   "version": "1.0.0",
-    ##   "description": "",
-    ##   "main": "index.js",
-    ##   "scripts": {
-    ##     "test": "echo \"Error: no test specified\" && exit 1"
-    ##   },
-    ##   "keywords": [],
-    ##   "author": "",
-    ##   "license": "ISC"
-    ## }
-    ## 
-    ## 
-    ## 
-    ## added 78 packages, and audited 79 packages in 31s
-    ## 
-    ## 20 packages are looking for funding
-    ##   run `npm fund` for details
-    ## 
-    ## found 0 vulnerabilities
-    ## 
-    ## > rooster-regulation@1.0.0 test
-    ## > mocha test/**/*_test.js
-    ## 
-    ## 
-    ## 
-    ##   Rooster
-    ##     .announceDawn
-    ##       ✔ returns a rooster call
-    ##     .timeAtDawn
-    ##       ✔ returns its argument as a string
-    ##       ✔ throws an error if passed a number less than 0
-    ##       ✔ throws an error if passed a number greater than 23
-    ## 
-    ## 
-    ##   4 passing (3ms)
 
 # Learn TDD With Mocha
 
@@ -3474,32 +3312,7 @@ your work!
 [TDD With Mocha Project: Factorial
 Feature](https://www.youtube.com/watch?v=NwSyopaJsUY)
 
-### Solution
-
-``` bash
-rm -rf codecademy
-git clone https://github.com/datttrian/codecademy
-cd develop/javascript-testing/rooster-regulation
-npm test
-```
-
-    ## Cloning into 'codecademy'...
-    ## 
-    ## > learn@1.0.0 test
-    ## > mocha test/**/*_test.js
-    ## 
-    ## 
-    ## 
-    ##   Rooster
-    ##     .announceDawn
-    ##       ✔ returns a rooster call
-    ##     .timeAtDawn
-    ##       ✔ returns its argument as a string
-    ##       ✔ throws an error if passed a number less than 0
-    ##       ✔ throws an error if passed a number greater than 23
-    ## 
-    ## 
-    ##   4 passing (3ms)
+### [Solution](factorial)
 
 # Code Coverage
 
