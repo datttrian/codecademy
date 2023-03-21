@@ -26,9 +26,9 @@ project step by step.
 
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/introduction-to-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/introduction-to-django
 python3 -m venv env && source env/bin/activate
 cd fortuneteller
 pip install -r requirements.txt
@@ -46,9 +46,9 @@ python manage.py migrate
 - Apply the migrations
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/introduction-to-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/introduction-to-django
 chmod +x fortuneteller.sh && ./fortuneteller.sh
 source env/bin/activate
 cd fortuneteller

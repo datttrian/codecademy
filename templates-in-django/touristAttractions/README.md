@@ -23,9 +23,9 @@ adding filters to variables being used within the template!
 - Apply the migrations
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/templates-in-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/templates-in-django
 python3 -m venv env && source env/bin/activate
 cd touristAttractions
 pip install -r requirements.txt
@@ -43,9 +43,9 @@ python manage.py migrate
 - Apply the migrations
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/templates-in-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/templates-in-django
 chmod +x touristAttractions.sh && ./touristAttractions.sh
 source env/bin/activate
 cd touristAttractions

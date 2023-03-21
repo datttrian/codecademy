@@ -28,9 +28,9 @@ the whole authentication flow and adding a security layer to our paths.
 
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/accounts-and-authentication-in-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/accounts-and-authentication-in-django
 python3 -m venv env && source env/bin/activate
 cd cafeteria
 pip install -r requirements.txt
@@ -48,9 +48,9 @@ python manage.py makemigrations && python manage.py migrate
 - Apply the migrations
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/accounts-and-authentication-in-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/accounts-and-authentication-in-django
 chmod +x cafeteria.sh && ./cafeteria.sh
 source env/bin/activate
 cd cafeteria

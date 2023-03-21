@@ -42,9 +42,9 @@ not worry about the templates or views.
 
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/data-in-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/data-in-django
 python3 -m venv env && source env/bin/activate
 cd BikeRental
 pip install -r requirements.txt
@@ -62,9 +62,9 @@ python manage.py makemigrations && python manage.py migrate
 - Apply the migrations
 
 ```bash
-rm -rf build-python-web-apps-with-django
-git clone https://github.com/datttrian/build-python-web-apps-with-django
-cd build-python-web-apps-with-django/data-in-django
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/data-in-django
 chmod +x BikeRental.sh && ./BikeRental.sh
 source env/bin/activate
 cd BikeRental
