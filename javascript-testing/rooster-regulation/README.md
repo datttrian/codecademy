@@ -23,40 +23,6 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-## Getting Started
-
-### Clone the project in this repo
-
-- Remove the repository if exists
-- Clone the repository from Github
-- Switch to the `rooster-regulation` directory
-- Run the test
-
-``` bash
-rm -rf develop
-git clone https://github.com/datttrian/develop
-cd develop/javascript-testing/rooster-regulation
-npm test
-```
-
-    ## Cloning into 'develop'...
-    ## 
-    ## > learn@1.0.0 test
-    ## > mocha test/**/*_test.js
-    ## 
-    ## 
-    ## 
-    ##   Rooster
-    ##     .announceDawn
-    ##       ✔ returns a rooster call
-    ##     .timeAtDawn
-    ##       ✔ returns its argument as a string
-    ##       ✔ throws an error if passed a number less than 0
-    ##       ✔ throws an error if passed a number greater than 23
-    ## 
-    ## 
-    ##   4 passing (3ms)
-
 ### Instructions
 
 Mark the tasks as complete by checking them off
@@ -150,7 +116,7 @@ Your test suite is *fast*, *complete*, *isolated*, *maintainable*, and
 [Good Tests with Mocha Project: Rooster
 Regulation](https://www.youtube.com/watch?v=GYLz0QJe9VI)
 
-``` bash
+```bash
 #!/bin/bash
 project_name='rooster-regulation'
 rm -rf $project_name 
@@ -237,43 +203,3 @@ describe('Rooster', () => {
 EOF
 npm test
 ```
-
-    ## Wrote to /Users/mclix85/Documents/rooster-regulation/package.json:
-    ## 
-    ## {
-    ##   "name": "rooster-regulation",
-    ##   "version": "1.0.0",
-    ##   "description": "",
-    ##   "main": "index.js",
-    ##   "scripts": {
-    ##     "test": "echo \"Error: no test specified\" && exit 1"
-    ##   },
-    ##   "keywords": [],
-    ##   "author": "",
-    ##   "license": "ISC"
-    ## }
-    ## 
-    ## 
-    ## 
-    ## added 78 packages, and audited 79 packages in 31s
-    ## 
-    ## 20 packages are looking for funding
-    ##   run `npm fund` for details
-    ## 
-    ## found 0 vulnerabilities
-    ## 
-    ## > rooster-regulation@1.0.0 test
-    ## > mocha test/**/*_test.js
-    ## 
-    ## 
-    ## 
-    ##   Rooster
-    ##     .announceDawn
-    ##       ✔ returns a rooster call
-    ##     .timeAtDawn
-    ##       ✔ returns its argument as a string
-    ##       ✔ throws an error if passed a number less than 0
-    ##       ✔ throws an error if passed a number greater than 23
-    ## 
-    ## 
-    ##   4 passing (3ms)
