@@ -25,21 +25,20 @@ walkthrough video**.
 
 ## Getting Started
 
-### Clone the project in this repo
-
+- Clone the project in this repo
 - Remove the repository if exists
 - Clone the repository from Github
 - Switch to the `rooster-regulation` directory
 - Run the test
 
 ``` bash
-rm -rf develop
-git clone https://github.com/datttrian/develop
-cd develop/javascript-testing/rooster-regulation
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/javascript-testing/rooster-regulation
 npm test
 ```
 
-    ## Cloning into 'develop'...
+    ## Cloning into 'codecademy'...
     ## 
     ## > learn@1.0.0 test
     ## > mocha test/**/*_test.js

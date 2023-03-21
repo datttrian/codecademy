@@ -129,7 +129,7 @@
 1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
     * [Build a Library](javascript-syntax-part-iii/build-a-library)
     * [School Catalogue](javascript-syntax-part-iii/school-catalog)
-    * [WorkAround Explorer](https://datttrian.github.io/javascript-syntax-part-iii/es6-modules-workaround/html-fashion-blog/index.html)
+    * [WorkAround Explorer](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)
 1. [JavaScript Testing](javascript-testing)
     * [Rooster Regulation](javascript-testing/rooster-regulation)
     * Factorial Feature

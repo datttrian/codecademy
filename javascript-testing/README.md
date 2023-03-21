@@ -2298,13 +2298,13 @@ walkthrough video**.
 - Run the test
 
 ``` bash
-rm -rf develop
-git clone https://github.com/datttrian/develop
-cd develop/javascript-testing/rooster-regulation
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
+cd codecademy/javascript-testing/rooster-regulation
 npm test
 ```
 
-    ## Cloning into 'develop'...
+    ## Cloning into 'codecademy'...
     ## 
     ## > learn@1.0.0 test
     ## > mocha test/**/*_test.js
@@ -2410,7 +2410,7 @@ In another `it` block, test that `.timeAtDawn`
 Your test suite is *fast*, *complete*, *isolated*, *maintainable*, and
 *expressive*! Run it and review the output in the terminal.
 
-### [Solution](rooster-regulation.sh)
+### [Solution](rooster-regulation)
 
 [Good Tests with Mocha Project: Rooster
 Regulation](https://www.youtube.com/watch?v=GYLz0QJe9VI)
@@ -3477,13 +3477,13 @@ Feature](https://www.youtube.com/watch?v=NwSyopaJsUY)
 ### Solution
 
 ``` bash
-rm -rf develop
-git clone https://github.com/datttrian/develop
+rm -rf codecademy
+git clone https://github.com/datttrian/codecademy
 cd develop/javascript-testing/rooster-regulation
 npm test
 ```
 
-    ## Cloning into 'develop'...
+    ## Cloning into 'codecademy'...
     ## 
     ## > learn@1.0.0 test
     ## > mocha test/**/*_test.js
