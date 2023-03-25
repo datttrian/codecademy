@@ -91,5 +91,5 @@ design approach.
 Now, create hover and active states. As before, make sure you are
 demonstrating good visual feedback to show the different states.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html)
+### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/links-buttons-prj/index.html)
 

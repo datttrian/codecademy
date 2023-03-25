@@ -234,4 +234,4 @@ changes the `display` property of `lastLyric` back to `'none'`.
 Congrats, you’ve completed the Piano Player! Play around with the piano
 and the song box to fire all the events.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/piano-keys/index.html)
+### [Solution](https://datttrian.github.io/codecademy/building-interactive-websites/piano-keys/index.html)

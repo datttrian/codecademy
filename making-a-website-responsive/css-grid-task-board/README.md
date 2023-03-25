@@ -114,4 +114,4 @@ Good job! Now, feel free to play around with the layout of this site,
 using the other CSS properties you’ve learned. Once you’re satisfied
 with your work, press the Next Button to move on.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/css-grid-task-board/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/css-grid-task-board/index.html)

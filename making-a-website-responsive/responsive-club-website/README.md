@@ -94,4 +94,4 @@ to use responsive units and media queries to affect page layout. There
 are multiple ways to solve these projects, and you’ll learn more by
 seeing others’ code.-
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/responsive-club-website/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/responsive-club-website/index.html)

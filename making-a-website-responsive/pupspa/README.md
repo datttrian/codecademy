@@ -140,4 +140,4 @@ properties in the below rulesets to turn them into grids:
 - `.testimonial`
 - `footer`
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/pupspa/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/pupspa/index.html)

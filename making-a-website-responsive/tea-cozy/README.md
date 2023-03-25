@@ -68,4 +68,4 @@ resources above will help you get to the final outcome. There’s no
 single, correct way to complete this project, so experiment and have
 fun!
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tea-cozy/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/tea-cozy/index.html)

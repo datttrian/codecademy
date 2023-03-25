@@ -61,35 +61,35 @@
 
 1. [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
 1. [Fundamentals of HTML](fundamentals-of-html)
-    * [Fashion Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-fashion-blog/index.html), 
-    * [Wine Festival Schedule](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-wine-festival-schedule/index.html), 
-    * [New York City Blog](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/semantic-html-nyc-blog/index.html)
+    * [Fashion Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/html-fashion-blog/index.html), 
+    * [Wine Festival Schedule](https://datttrian.github.io/codecademy/fundamentals-of-html/html-wine-festival-schedule/index.html), 
+    * [New York City Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/semantic-html-nyc-blog/index.html)
 1. [Fundamentals of CSS](fundamentals-of-css)
-    * [Healthy Recipes](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html), 
-    * [Olivia Woodruff Portfolio](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-visual-rules-project/index.html), 
-    * [The Box Model: Davie's Burgers](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html), 
-    * [Broadway](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
+    * [Healthy Recipes](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html), 
+    * [Olivia Woodruff Portfolio](https://datttrian.github.io/codecademy/fundamentals-of-css/css-visual-rules-project/index.html), 
+    * [The Box Model: Davie's Burgers](https://datttrian.github.io/codecademy/fundamentals-of-css/box-model-on/index.html), 
+    * [Broadway](https://datttrian.github.io/codecademy/fundamentals-of-css/broadway-design/index.html)
 1. [Developing Websites Locally](developing-websites-locally)
-    * [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
+    * [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/codecademy/developing-websites-locally/dasmoto/index.html)
 1. [Deploying Websites](deploying-websites)
     * [Bicycle World](deploying-websites/bicycle-world)
     * [Daily Buzz](deploying-websites/daily-buzz)
 1. [Improved Styling with CSS](improved-styling-with-css)
-    * [Paint Store](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html)
-    * [Typography](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html)
-    * [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html)
-    * [The Summit](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/links-buttons-prj/index.html)
-    * [FreshDeals: Blueberries](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html)
-    * [Challenge Project: Build a Website Design System](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
+    * [Paint Store](https://datttrian.github.io/codecademy/improved-styling-with-css/color-paint-store/index.html)
+    * [Typography](https://datttrian.github.io/codecademy/improved-styling-with-css/typography-ii/index.html)
+    * [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-html-documentation/index.html)
+    * [The Summit](https://datttrian.github.io/codecademy/improved-styling-with-css/links-buttons-prj/index.html)
+    * [FreshDeals: Blueberries](https://datttrian.github.io/codecademy/improved-styling-with-css/ui-breadcrumb-proj/index.html)
+    * [Challenge Project: Build a Website Design System](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-web-design-system/index.html)
 1. [Making a Website Responsive](making-a-website-responsive)
-    * [Flexbox: To-Do App](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/flexbox-to---do-app/index.html)
-    * [Off-Platform Project: Tea Cozy](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tea-cozy/index.html)
-    * [PupSpa](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/pupspa/index.html)
-    * [CSS Grid: Task Board](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/css-grid-task-board/index.html)
-    * [Tsunami Coffee](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/tsunami-coffee/index.html)
-    * [Off-Platform Project: Fotomatic](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html)
-    * [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/company-page-with-flexbox/index.html)
-    * [Challenge Project: Responsive Club Website](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/responsive-club-website/index.html) 
+    * [Flexbox: To-Do App](https://datttrian.github.io/codecademy/making-a-website-responsive/flexbox-to---do-app/index.html)
+    * [Off-Platform Project: Tea Cozy](https://datttrian.github.io/codecademy/making-a-website-responsive/tea-cozy/index.html)
+    * [PupSpa](https://datttrian.github.io/codecademy/making-a-website-responsive/pupspa/index.html)
+    * [CSS Grid: Task Board](https://datttrian.github.io/codecademy/making-a-website-responsive/css-grid-task-board/index.html)
+    * [Tsunami Coffee](https://datttrian.github.io/codecademy/making-a-website-responsive/tsunami-coffee/index.html)
+    * [Off-Platform Project: Fotomatic](https://datttrian.github.io/codecademy/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html)
+    * [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/codecademy/making-a-website-responsive/company-page-with-flexbox/index.html)
+    * [Challenge Project: Responsive Club Website](https://datttrian.github.io/codecademy/making-a-website-responsive/responsive-club-website/index.html) 
 
 ## Building Interactive Websites
 
@@ -101,7 +101,7 @@
     * [Rock, Paper, or Scissors](javascript-syntax-part-i/rock-paper-scissors-javascript)
     * [Sleep Debt Calculator](javascript-syntax-part-i/sleep-debt-calculator)
     * [Training Days](javascript-syntax-part-i/training-days)
-    * [Challenge Project: Number Guesser](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
+    * [Challenge Project: Number Guesser](https://datttrian.github.io/codecademy/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
 1. [JavaScript Syntax, Part II](javascript-syntax-part-ii)
     * [Secret Message](javascript-syntax-part-ii/secret-message)
     * [Whale Talk](javascript-syntax-part-ii/whale-talk)
@@ -118,11 +118,11 @@
 1. [Portfolio Project: JavaScript Syntax](portfolio-project-javascript-syntax)
     * [Mixed Messages](portfolio-project-javascript-syntax/mixed-messages)
 1. [Building Interactive Websites](building-interactive-websites)
-    * [Piano Keys](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/piano-keys/index.html)
-    * [Form a Story](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/form-a-story/index.html)
+    * [Piano Keys](https://datttrian.github.io/codecademy/building-interactive-websites/piano-keys/index.html)
+    * [Form a Story](https://datttrian.github.io/codecademy/building-interactive-websites/form-a-story/index.html)
 1. [Making A Website Accessible](making-a-website-accessible)
 1. [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
-    * [Portfolio Project](https://datttrian.github.io/full-stack-engineer/portfolio-project-personal-portfolio-website/portfolio-website/index.html)
+    * [Portfolio Project](https://datttrian.github.io/codecademy/portfolio-project-personal-portfolio-website/portfolio-website/index.html)
 
 ## Front-End Development
 

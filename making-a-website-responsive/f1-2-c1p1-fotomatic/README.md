@@ -19,4 +19,4 @@ the Chrome DevTools article to help you decipher and update the site’s
 CSS. Chrome DevTools are essential for debugging – they allow you to
 view current style values, toggle rules, and test different rule values.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html)

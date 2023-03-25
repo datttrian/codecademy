@@ -303,4 +303,4 @@ If you want to challenge yourself:
 - Add some extra validations like `min`, `minlength`, or `pattern` to
   the elements that accept user input.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/building-interactive-websites/form-a-story/index.html)
+### [Solution](https://datttrian.github.io/codecademy/building-interactive-websites/form-a-story/index.html)

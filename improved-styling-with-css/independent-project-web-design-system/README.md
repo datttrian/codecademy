@@ -173,4 +173,4 @@ If you’d like to extend your site, consider:
 - Adding navigation and splitting up your site so that each section has
   its own HTML page.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-web-design-system/index.html)
+### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-web-design-system/index.html)

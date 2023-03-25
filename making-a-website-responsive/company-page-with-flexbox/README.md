@@ -127,4 +127,4 @@ different! We’re providing our solution for you get a sense of one way
 to flexbox to help with page layout. There are multiple ways to solve
 these projects, and you’ll learn more by seeing others’ code.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/company-page-with-flexbox/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/company-page-with-flexbox/index.html)

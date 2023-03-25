@@ -103,4 +103,4 @@ To change their font, include this line of code inside the curly braces:
 font-family: Helvetica;
 ```
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html)

@@ -80,4 +80,4 @@ https://content.codecademy.com/courses/learn-css-selectors-visual-rules/hypnotiz
 Great work! Feel free to keep coding and edit the visual rules to
 personalize the site’s appearance!
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/css-selectors-1/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html)
