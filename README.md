@@ -11,49 +11,18 @@
 ![Git](https://img.shields.io/badge/-Git-orange?style=flat-square&logo=git&logoColor=white)
 ![SQL](https://img.shields.io/badge/-SQL-lightgrey?style=flat-square&logo=sql&logoColor=white)
 
-# Build Python Web Apps with Flask Skill Path
+**Table of Contents**
 
-1. [Introduction to Python](flask-introduction-to-python)
-    * [Receipts for Lovely Loveseats](flask-introduction-to-python/furniture-store.py)
-    * [Getting Ready for Physics Class](flask-introduction-to-python/physics-class.py)
-    * [Sal's Shipping](flask-introduction-to-python/shipping.py)
-1. [Introduction to Python Data Structures and Loops](flask-python-data-structures-loops)
-    * [Len's Slice](flask-python-data-structures-loops/lens-slice.py)
-    * [Carly's Clippers](flask-python-data-structures-loops/carlys-clippers.py)
-    * [Scrabble](flask-python-data-structures-loops/scrabble.py)
-    * [Basta Fazoolin'](flask-python-data-structures-loops/basta-fazoolin.py)
-1. [Introduction to the Web](flask-introduction-to-the-web)
-1. [Introduction to Flask](introduction-to-flask)
-    * [Adopt a Pet](introduction-to-flask/adopt-a-pet)
-    * Tourist Attractions
-1. [Introduction to SQL and Databases for Back-End Web Apps](flask-sql-databases)
-    * Create a Table
-    * New York Restaurants
-    * FlaskFM
-1. [Advanced Flask Functionality](flask-advanced-functionality)
-    * Travel Sites
-1. [Deploying an Application](flask-deploying)
-1. [Build Python Web Apps with Flask Capstone Project](flask-capstone-project)
-
-# Build Python Web Apps with Django Skill Path
-
-1. [Introduction to the Web](django-introduction-to-the-web)
-1. [Introduction to Django](introduction-to-django)
-    * [Fortune Teller](introduction-to-django/fortuneteller)
-1. [Templates in Django](templates-in-django)
-    * [Tourist Attractions with Templates](templates-in-django/touristAttractions)
-1. [Data in Django](data-in-django)
-    * [Djaunty Rent-a-Bike](data-in-django/BikeRental)
-1. [Views in Django](views-in-django)
-    * [The Django Djitney](views-in-django/djangodjitney)
-1. [Forms in Django](forms-in-django)
-    * [Tourist Attractions with Forms](forms-in-django/touristAttractions)
-1. [Accounts and Authentication in Django](accounts-and-authentication-in-django)
-    * [Weekly Dessert](accounts-and-authentication-in-django/cafeteria)
-1. [Deploying a Django Project](deploying-a-django-project)
-    * [Vetoffice](deploying-a-django-project/djangovet)
-1. [Build Python Web Apps with Django Capstone Project](django-capstone-project)
-    * Places Remember
+- [Full-Stack Engineer Career Path](#full-stack-engineer-career-path)
+    * [Web Development Foundations](#web-development-foundations)
+    * [Building Interactive Websites](#building-interactive-websites)
+    * [Front-End Development](#front-end-development)
+    * [Back-End Development](#back-end-development)
+    * [Full-Stack Development](#full-stack-development)
+    * [Interview Prep](#interview-prep)
+- [Skill Paths](#skill-path)
+    * [Build Python Web Apps with Flask Skill Path](#build-python-web-apps-with-flask-skill-path)
+    * [Build Python Web Apps with Django Skill Path](#build-python-web-apps-with-django-skill-path)
 
 # Full-Stack Engineer Career Path
 
@@ -136,9 +105,9 @@
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
     * [Film Finder](https://datttrian-js-film-finder.netlify.app/)
 1. [Web Apps](web-apps)
-1. React, Part I
-    * Animal Fun Facts
-    * Authorization Form
+1. [React, Part I](react-part-i)
+    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/)
+    * [Authorization Form](https://datttrian-authorization-form.netlify.app/)
 1. React, Part II
     * Random Color Picker
     * Video Player
@@ -205,3 +174,50 @@
 1. Portfolio Project
     * Open-Ended PERN App
 1. Next Steps in Your Full-Stack Engineer Journey
+
+# Skill Paths
+
+## Build Python Web Apps with Flask Skill Path
+
+1. [Introduction to Python](flask-introduction-to-python)
+    * [Receipts for Lovely Loveseats](flask-introduction-to-python/furniture-store.py)
+    * [Getting Ready for Physics Class](flask-introduction-to-python/physics-class.py)
+    * [Sal's Shipping](flask-introduction-to-python/shipping.py)
+1. [Introduction to Python Data Structures and Loops](flask-python-data-structures-loops)
+    * [Len's Slice](flask-python-data-structures-loops/lens-slice.py)
+    * [Carly's Clippers](flask-python-data-structures-loops/carlys-clippers.py)
+    * [Scrabble](flask-python-data-structures-loops/scrabble.py)
+    * [Basta Fazoolin'](flask-python-data-structures-loops/basta-fazoolin.py)
+1. [Introduction to the Web](flask-introduction-to-the-web)
+1. [Introduction to Flask](introduction-to-flask)
+    * [Adopt a Pet](introduction-to-flask/adopt-a-pet)
+    * Tourist Attractions
+1. [Introduction to SQL and Databases for Back-End Web Apps](flask-sql-databases)
+    * Create a Table
+    * New York Restaurants
+    * FlaskFM
+1. [Advanced Flask Functionality](flask-advanced-functionality)
+    * Travel Sites
+1. [Deploying an Application](flask-deploying)
+1. [Build Python Web Apps with Flask Capstone Project](flask-capstone-project)
+
+## Build Python Web Apps with Django Skill Path
+
+1. [Introduction to the Web](django-introduction-to-the-web)
+1. [Introduction to Django](introduction-to-django)
+    * [Fortune Teller](introduction-to-django/fortuneteller)
+1. [Templates in Django](templates-in-django)
+    * [Tourist Attractions with Templates](templates-in-django/touristAttractions)
+1. [Data in Django](data-in-django)
+    * [Djaunty Rent-a-Bike](data-in-django/BikeRental)
+1. [Views in Django](views-in-django)
+    * [The Django Djitney](views-in-django/djangodjitney)
+1. [Forms in Django](forms-in-django)
+    * [Tourist Attractions with Forms](forms-in-django/touristAttractions)
+1. [Accounts and Authentication in Django](accounts-and-authentication-in-django)
+    * [Weekly Dessert](accounts-and-authentication-in-django/cafeteria)
+1. [Deploying a Django Project](deploying-a-django-project)
+    * [Vetoffice](deploying-a-django-project/djangovet)
+1. [Build Python Web Apps with Django Capstone Project](django-capstone-project)
+    * Places Remember
+    
