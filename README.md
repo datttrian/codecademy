@@ -136,8 +136,8 @@
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
     * [Film Finder](https://datttrian-js-film-finder.netlify.app/)
 1. [Web Apps](web-apps)
-1. React, Part I
-    * Animal Fun Facts
+1. [React, Part I](react-part-i)
+    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/)
     * Authorization Form
 1. React, Part II
     * Random Color Picker
