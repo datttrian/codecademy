@@ -2183,10 +2183,10 @@ value of the first one whose boolean evaluates to `true`.
 Considering the boolean of an empty string is `false` can you think of a
 way to use `||` to replace the ternary operator in the heading?
 
-### Solution
+### [Solution](js-react-animal-fun-facts)
 
-``` jsx
-```
+[Learn React JSX Animal Fun
+Facts](https://www.youtube.com/watch?v=81mybnZPHDg)
 
 # Your First React Component
 
