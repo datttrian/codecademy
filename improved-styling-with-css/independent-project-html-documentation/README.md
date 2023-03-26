@@ -115,4 +115,4 @@ as you continue to learn more HTML, CSS, and more. As you become more
 advanced with CSS, you’ll also be able to improve the styling and layout
 of the cheat sheet itself.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/independent-project-html-documentation/index.html)
+### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-html-documentation/index.html)

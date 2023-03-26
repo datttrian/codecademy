@@ -81,4 +81,4 @@ property with the value that centers the items inside the container.
 You did it! Great work. Now resize the browser to see your flex
 properties in action!
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/making-a-website-responsive/flexbox-to---do-app/index.html)
+### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/flexbox-to---do-app/index.html)

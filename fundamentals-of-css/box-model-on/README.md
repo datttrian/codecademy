@@ -93,4 +93,4 @@ Good job—this menu item is looking great, and the layout and spacing is
 much more readable. If you’d like, you can continue refining the design
 or add your own spin!
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/box-model-on/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/box-model-on/index.html)

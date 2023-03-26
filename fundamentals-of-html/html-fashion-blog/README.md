@@ -175,4 +175,4 @@ closing `<a>` tags. In the `<a>` tag, set `href="#contact"`.
 Congrats! You’ve got the beginnings of a solid fashion blog. Feel free
 to make modifications and practice your HTML by adding more content.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-fashion-blog/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-html/html-fashion-blog/index.html)

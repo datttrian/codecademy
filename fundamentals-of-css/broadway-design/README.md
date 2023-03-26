@@ -84,4 +84,4 @@ If you want to continue coding, challenge yourself to make the
 `<footer>` element also fixed to the bottom of the page regardless of
 scrolling.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-css/broadway-design/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/broadway-design/index.html)

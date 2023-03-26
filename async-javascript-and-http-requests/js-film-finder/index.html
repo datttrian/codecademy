@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&family=Fredoka+One&family=Questrial&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>"
+    />
+    <script
+      defer
+      src="https://kit.fontawesome.com/e918d10e90.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="public/helpers.js"></script>
+    <script defer src="public/script.js"></script>
+    <script type="text/javascript" src="public/config.js"></script>
+    <!-- On mobile, keep elements in place when keyboard is open -->
+    <script>
+      const viewport = document.querySelector('meta[name=viewport]');
+      viewport.setAttribute(
+        'content',
+        viewport.content + ', height=' + window.innerHeight
+      );
+    </script>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <button type="button" id="starBtn">
+      <i class="fa-solid fa-star"></i>
+    </button>
+    <header>
+      <h1 id="appTitle">🍿Film Finder🍿</h1>
+      <form id="form">
+        <div class="form-group">
+          <label>Choose a genre:</label>
+          <select name="genres" id="genres" autofocus="true"></select>
+        </div>
+        <div class="form-group">
+          <label>Enter an actor's name <small>(optional):</small></label>
+          <input id="actors" type="text" placeholder="Enter an actor's name" />
+        </div>
+      </form>
+      <button type="submit" id="playBtn">Let's Play!</button>
+    </header>
+
+    <div class="container">
+      <div id="results">
+        <div id="movieInfo">
+          <div id="moviePoster"></div>
+          <div id="movieText"></div>
+        </div>
+        <div id="likeOrDislikeBtns" hidden>
+          <button id="likeBtn"><i class="fa-solid fa-thumbs-up"></i></button>
+          <button id="dislikeBtn">
+            <i class="fa-solid fa-thumbs-down"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="sideBar" id="sideBar">
+      <button id="closeBtn">
+        <i class="fas fa-times"></i>
+      </button>
+      <button id="clear">Clear all</button>
+      <p><small>Click the title to view the movie on IMDB</small></p>
+      <div id="likedMovies">
+        <h4>Liked <i class="fa-solid fa-thumbs-up"></i></h4>
+        <ul id="likedMoviesList"></ul>
+      </div>
+      <div id="dislikedMovies">
+        <h4>Disliked <i class="fa-solid fa-thumbs-down"></i></h4>
+        <ul id="dislikedMoviesList"></ul>
+      </div>
+    </div>
+  </body>
+</html>

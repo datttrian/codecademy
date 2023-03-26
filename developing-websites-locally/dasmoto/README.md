@@ -92,4 +92,4 @@ section.
 The hint provided in this step is the transcription of the fourth and
 final section.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/developing-websites-locally/dasmoto/index.html)
+### [Solution](https://datttrian.github.io/codecademy/developing-websites-locally/dasmoto/index.html)

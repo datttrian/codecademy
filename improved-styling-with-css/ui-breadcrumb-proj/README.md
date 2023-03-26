@@ -100,5 +100,5 @@ Consult some of your favorite sites to get inspiration.
 
 When you are ready, move on to the end of the project.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/ui-breadcrumb-proj/index.html)
+### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/ui-breadcrumb-proj/index.html)
 

@@ -101,4 +101,4 @@ cell for each row.
 In **style.css**, there is a comment above each empty cell’s rule that
 describes the pattern.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/color-paint-store/index.html)
+### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/color-paint-store/index.html)

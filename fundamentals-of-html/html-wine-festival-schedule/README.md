@@ -101,4 +101,4 @@ name of events:
 
 You have created the events table. Cheers!
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/html-wine-festival-schedule/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-html/html-wine-festival-schedule/index.html)

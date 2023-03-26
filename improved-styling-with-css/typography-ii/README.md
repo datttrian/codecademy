@@ -119,4 +119,4 @@ Now that you have a `@font-face` rule, set the `font-family` property of
 the footer to `"Croissant One"` with `"Merriweather"` and `serif` as the
 fallback fonts.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/improved-styling-with-css/typography-ii/index.html)
+### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/typography-ii/index.html)

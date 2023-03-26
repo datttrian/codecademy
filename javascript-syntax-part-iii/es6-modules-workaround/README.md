@@ -201,4 +201,4 @@ As an extra challenge:
 - Import this function into **main.js** and use it to format the four
   data values rendered to the screen.
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/javascript-syntax-part-iii/es6-modules-workaround/index.html)
+### [Solution](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)

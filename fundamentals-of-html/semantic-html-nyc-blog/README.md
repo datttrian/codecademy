@@ -247,4 +247,4 @@ Think about ways you could improve this project or create your very own
 project using semantic elements. Need some suggestions? Check the hint
 for some ideas to get you started!
 
-### [Solution](https://datttrian.github.io/full-stack-engineer/fundamentals-of-html/semantic-html-nyc-blog/index.html)
+### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-html/semantic-html-nyc-blog/index.html)
