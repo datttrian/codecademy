@@ -133,8 +133,8 @@
 1. [JavaScript Testing](javascript-testing)
     * [Rooster Regulation](javascript-testing/rooster-regulation)
     * [Factorial Feature](javascript-testing/factorial)
-1. Async JavaScript and HTTP Requests
-    * Film Finder
+1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
+    * [Film Finder](https://datttrian.github.io/codecademy/async-javascript-and-http-requests/js-film-finder/index.html)
 1. Web Apps
 1. React, Part I
     * Animal Fun Facts
