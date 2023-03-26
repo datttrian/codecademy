@@ -1,0 +1,455 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #201e1e;
+}
+
+header {
+  background-color: #7f0920;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  height: 43vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#appTitle {
+  margin: 0;
+  padding-top: 15px;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 4em;
+}
+
+#form,
+#playBtn {
+  margin: 0 auto;
+  display: block;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 0.6em;
+}
+
+#form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+
+#playBtn {
+  margin-top: 20px;
+  font-size: 25px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #b97828;
+  color: #fdc238;
+  cursor: pointer;
+}
+
+#playBtn:active {
+  transform: scale(0.98);
+}
+
+#playBtn:focus {
+  outline: 0;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+label small {
+  font-size: 20px;
+}
+
+select,
+input {
+  width: 200px;
+  height: auto;
+  padding: 5px 5px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  text-align: center;
+  outline: 0;
+  border: none;
+}
+
+select:focus,
+input:focus {
+  outline: 0;
+  border: #b97828 3px solid;
+}
+
+.container {
+  background-color: #201e1e;
+  position: absolute;
+  margin-top: 41vh;
+  z-index: 0;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+#results {
+  display: block;
+}
+
+#movieInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: 32px auto;
+}
+
+img#moviePoster {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 715px) {
+  img#moviePoster {
+    width: 100%;
+  }
+}
+
+#moviePoster {
+  flex: 1 0 300px;
+}
+
+#movieText {
+  font-family: 'Questrial';
+  color: #fefbea;
+  line-height: 1.25;
+  flex: 1 0 400px;
+  padding: 0 25px;
+  text-align: justify;
+}
+
+#movieTitle,
+#movieOverview,
+#movieCast {
+  padding: 14px 18px;
+}
+
+#movieTitle {
+  text-align: left;
+  display: inline-block;
+  width: 80%;
+}
+
+#movieRating {
+  display: inline-block;
+  text-align: right;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: #201e1e;
+}
+
+#movieRating.green {
+  background-color: #249e57;
+}
+
+#movieRating.orange {
+  background: darkorange;
+}
+
+#movieRating.red {
+  background: #c74a4a;
+}
+
+#movieCast {
+  display: inline-block;
+  font-style: italic;
+  font-size: 14px;
+}
+
+#likeOrDislikeBtns {
+  text-align: center;
+  margin: 0px auto;
+}
+
+#likeBtn,
+#dislikeBtn {
+  padding: 15px 25px;
+  font-size: 25px;
+  border-radius: 12px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#likeBtn {
+  background-color: #249e57;
+  color: darkgreen;
+}
+
+#dislikeBtn {
+  background-color: #c74a4a;
+  color: #910000;
+}
+
+#starBtn {
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  z-index: 2;
+  padding: 5px 15px;
+  font-size: 25px;
+  border-radius: 0 5px 5px 0;
+  border-style: none;
+  cursor: pointer;
+  color: #fdc238;
+  background-color: #201e1e;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.325);
+}
+
+.overlay.enabled {
+  display: initial;
+}
+
+.sideBar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 30%;
+  min-width: 220px;
+  height: 100vh;
+  border: none;
+  background-color: #201e1e;
+  color: #f5eeee;
+  padding: 20px;
+  line-height: 1.7;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sideBar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #544e4e;
+}
+
+.sideBar::-webkit-scrollbar {
+  width: 8px;
+  background-color: #201e1e;
+}
+
+.sideBar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+#closeBtn {
+  position: absolute;
+  opacity: 0.5;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sideBar ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.sideBar ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#clear {
+  background-color: #c74a4a;
+  color: #f5eeee;
+  padding: 8px 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear:hover {
+  background-color: #ec2b2b;
+}
+
+.sideBar p {
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  margin: 10px 0 15px 0;
+}
+
+.fa-circle-minus {
+  opacity: 0.5;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.fa-circle-minus:hover {
+  opacity: 1;
+  color: #c74a4a;
+}
+
+/* Responsive styles: header height is bigger as form will wrap  */
+
+/* iPad Air, Surface Pro 7 */
+@media screen and (min-width: 820px) and (max-width: 912px) and (min-height: 720px) {
+  header {
+    height: 25vh;
+  }
+  .container {
+    margin-top: 28vh;
+  }
+}
+
+/* iPad Mini */
+@media screen and (min-width: 768px) and (max-width: 819px) and (min-height: 720px) {
+  header {
+    height: 28vh;
+  }
+
+  .container {
+    margin-top: 28vh;
+  }
+}
+
+/* Intermediate browser sizes */
+@media screen and (min-width: 668px) and (max-width: 767px) {
+  header {
+    height: 38vh;
+  }
+
+  #appTitle {
+    font-size: 3em;
+  }
+
+  label {
+    font-size: 23px;
+  }
+
+  #playBtn {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+  .container {
+    margin-top: 38vh;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 667px) and (max-height: 950px) {
+  header {
+    height: 50vh;
+  }
+
+  #appTitle {
+    font-size: 3em;
+  }
+
+  label {
+    font-size: 23px;
+  }
+
+  #playBtn {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+  .container {
+    margin-top: 48vh;
+  }
+}
+
+/* Samsung Galaxy S20 Ultra & iPhone 12 Pro &  & Samsung Galaxy A51/71 */
+@media screen and (max-width: 499px) and (max-height: 950px) {
+  header {
+    height: 42vh;
+  }
+
+  #appTitle {
+    font-size: 3em;
+  }
+
+  .form-group {
+    margin: 15px 0;
+  }
+
+  #playBtn {
+    margin-top: 10px;
+  }
+
+  #starBtn {
+    top: 85px;
+  }
+}
+
+/* Samsung Galaxy S8+ */
+@media screen and (max-width: 390px) and (max-height: 950px) {
+  header {
+    height: 42vh;
+  }
+
+  #appTitle {
+    font-size: 2.5em;
+  }
+
+  #form {
+    padding: 0 5px;
+  }
+
+  .form-group {
+    margin: 10px 0;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  #playBtn {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  #starBtn {
+    top: 75px;
+  }
+}

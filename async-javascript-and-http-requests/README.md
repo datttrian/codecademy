@@ -427,33 +427,8 @@ executed. When the function finishes executing e.g. returns, its frame
 is removed from the stack. When we execute `console.log(foo()()())`,
 we’d see the stack build as follows:
 
-<div class="iframe">
-
-<img src="assets/JS-Callstack-1.svg" class="interactive-img"
-alt="global() is in the call stack" />
-<img src="assets/JS-Callstack-2.svg" class="interactive-img"
-alt="console.log(function) and global() are in the call stack" />
-<img src="assets/JS-Callstack-3.svg" class="interactive-img"
-alt="foo(), console.log(function), and global() are in the call stack" />
-<img src="assets/JS-Callstack-4.svg" class="interactive-img"
-alt="bar(), foo(), console.log(function), and global() are in the call stack" />
-<img src="assets/JS-Callstack-5.svg" class="interactive-img"
-alt="baz(), bar(), foo(), console.log(function), and global() are in the call stack" />
-
-<img src="assets/previous.svg" id="previous-img" />
-
-Remove from the stack
-
-<img src="assets/play.svg" id="play-img" style="display:hidden" />
-<img src="assets/pause.svg" id="pause-img" />
-
-Add to the stack <img src="assets/next.svg" id="next-img" />
-
-1/
-
-X
-
-</div>
+<iframe src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/Event-Loop-and-Concurrency/call-stack-applet/call-stack.html" width="100%" height="700px" class="iframe__rk2yNYIwJeUOj5J8cQJ9-">
+</iframe>
 
 You might have noticed that `global()` is at the bottom of the
 stack–when you first initiate a program, the *global execution context*
@@ -817,8 +792,6 @@ const orderPromise = orderSunglasses();
 console.log(orderPromise);                      
 ```
 
-    ## Promise { 'Sunglasses order processed.' }
-
 ## The Node setTimeout() Function
 
 Knowing how to construct a promise is useful, but most of the time,
@@ -927,10 +900,6 @@ setTimeout(usingSTO, 100);
 // Keep the line below as the last line of code:
 console.log("This is the last line of code in app.js.");
 ```
-
-    ## This is the first line of code in app.js.
-    ## This is the last line of code in app.js.
-    ## This line of code will log to the console last.
 
 ## Consuming Promises
 
@@ -1831,9 +1800,6 @@ withAsync(100)
   console.log(` withAsync(100) returned a promise which resolved to: ${resolveValue}.`);
 });
 ```
-
-    ##  withConstructor(0) returned a promise which resolved to: zero.
-    ##  withAsync(100) returned a promise which resolved to: not zero.
 
 ## The await Operator
 
@@ -3586,6 +3552,64 @@ Go to the next exercise to learn more about requests.
 ### Solution
 
 ``` javascript
+// Element selectors
+const jsonButton = document.querySelector('#generate');
+const buttonContainer = document.querySelector('#buttonContainer');
+const display = document.querySelector('#displayContainer');
+
+// Text to populate button text on click
+const collection = ["Another", "More", "Next", "Continue", "Keep going", "Click me", "A new one"];
+
+// Asynchronous function
+const generateJson = async () => {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    if(response.ok){
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+      changeButton();
+    }
+  } catch(error) {
+    console.log(error);
+  }
+};
+    
+// Format returned promise data
+const formatJson = (resJson) => {
+  resJson = JSON.stringify(resJson);
+  let counter = 0;
+  return resJson.split('')
+  .map(char => {
+    switch (char) {
+      case ',':
+        return `,\n${' '.repeat(counter * 2)}`;
+      case '{':
+        counter += 1;
+        return `{\n${' '.repeat(counter * 2)}`;
+      case '}':
+        counter -= 1;
+        return `\n${' '.repeat(counter * 2)}}`;
+      default:
+        return char;
+    }
+  })
+  .join('');
+};
+
+// Display formatted data
+const renderResponse = (jsonResponse) => {
+  const jsonSelection = Math.floor(Math.random() * 10);
+  display.innerHTML = `<pre>${formatJson(jsonResponse[jsonSelection])}</pre>`;
+};
+
+// Change button text
+const changeButton = () => {
+  const newText = Math.floor(Math.random() * 7);
+  jsonButton.innerHTML = `${collection[newText]}!`;
+};
+
+// Listen for click on button
+jsonButton.addEventListener('click', generateJson);
 ```
 
 ## Intro to GET Requests using Fetch
@@ -3644,8 +3668,7 @@ you’re ready!
 
 ### Solution
 
-``` javascript
-```
+<img src="https://content.codecademy.com/courses/intermediate-javascript-requests/diagrams/fetch%20GET%20transparent.svg" alt="Diagram containing boilerplate syntax needed to make a GET request using the `fetch` API. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
 ## Making a GET Request
 
@@ -3742,6 +3765,39 @@ submit button will not return anything yet.
 ### Solution
 
 ``` javascript
+// Information to reach API
+const url = 'https://api.datamuse.com/words?sl=';
+
+// Selects page elements
+const inputField = document.querySelector('#input');
+const submit = document.querySelector('#submit');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous function
+const getSuggestions = () => {
+  const wordQuery = inputField.value;
+  const endpoint = `${url}${wordQuery}`;
+  
+  fetch(endpoint, {cache: 'no-cache'}).then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, networkError => {
+    console.log(networkError.message)
+  })
+}
+
+// Clears previous results and display results to webpage
+const displaySuggestions = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  getSuggestions();
+};
+
+submit.addEventListener('click', displaySuggestions);
 ```
 
 ## Handling a GET Request
@@ -3799,6 +3855,92 @@ Try the webpage again with another word!
 ### Solution
 
 ``` javascript
+// Information to reach API
+const url = 'https://api.datamuse.com/words?sl=';
+
+// Selects page elements
+const inputField = document.querySelector('#input');
+const submit = document.querySelector('#submit');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous function
+const getSuggestions = () => {
+  const wordQuery = inputField.value;
+  const endpoint = `${url}${wordQuery}`;
+  
+  fetch(endpoint, {cache: 'no-cache'}).then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, networkError => {
+    console.log(networkError.message)
+  }).then(jsonResponse => {
+    // renderRawResponse(jsonResponse);
+    renderResponse(jsonResponse);
+  })
+}
+
+// Clears previous results and display results to webpage
+const displaySuggestions = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  getSuggestions();
+};
+
+submit.addEventListener('click', displaySuggestions);
+```
+
+``` javascript
+// Formats response to look presentable on webpage
+const renderResponse = (res) => {
+  // Handles if res is falsey
+  if(!res){
+    console.log(res.status);
+  }
+  // In case res comes back as a blank array
+  if(!res.length){
+    responseField.innerHTML = "<p>Try again!</p><p>There were no suggestions found!</p>";
+    return;
+  }
+
+  // Creates an empty array to contain the HTML strings
+  let wordList = [];
+  // Loops through the response and caps off at 10
+  for(let i = 0; i < Math.min(res.length, 10); i++){
+    // creating a list of words
+    wordList.push(`<li>${res[i].word}</li>`);
+  }
+  // Joins the array of HTML strings into one string
+  wordList = wordList.join("");
+
+  // Manipulates responseField to render the modified response
+  responseField.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
+  return
+}
+
+// Renders response before it is modified
+const renderRawResponse = (res) => {
+  // Takes the first 10 words from res
+  let trimmedResponse = res.slice(0, 10);
+  // Manipulates responseField to render the unformatted response
+  responseField.innerHTML = `<text>${JSON.stringify(trimmedResponse)}</text>`;
+}
+
+// Renders the JSON that was returned when the Promise from fetch resolves.
+const renderJsonResponse = (res) => {
+  // Creates an empty object to store the JSON in key-value pairs
+  let rawJson = {};
+  for(let key in res){
+    rawJson[key] = res[key];
+  }
+  // Converts JSON into a string and adding line breaks to make it easier to read
+  rawJson = JSON.stringify(rawJson).replace(/,/g, ", \n");
+  // Manipulates responseField to show the returned JSON.
+  responseField.innerHTML = `<pre>${rawJson}</pre>`;
+}
 ```
 
 ## Intro to POST Requests using Fetch
@@ -3837,8 +3979,7 @@ Move on to the next exercise when you’re ready!
 
 ### Solution
 
-``` javascript
-```
+<img src="https://content.codecademy.com/courses/intermediate-javascript-requests/diagrams/fetch%20POST%20transparent.svg" alt="Diagram depicting the boilerplate needed to make POST requests using the `fetch` API. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
 ## Making a POST Request
 
@@ -3908,10 +4049,12 @@ created. Add a property with the key `method` and the value `'POST'`.
 In the same object, add another property. The key for this property is
 `headers` and the value will be the following object:
 
-    {
-      'Content-type': 'application/json',
-      'apikey': apiKey
-    }
+``` js
+{
+  'Content-type': 'application/json',
+  'apikey': apiKey
+}
+```
 
 We will use this to connect to the API.
 
@@ -3926,6 +4069,40 @@ our POST request!
 ### Solution
 
 ``` javascript
+// Information to reach API
+const apiKey = '<Your API Key>';
+const url = 'https://api.rebrandly.com/v1/links';
+
+// Some page elements
+const inputField = document.querySelector('#input');
+const shortenButton = document.querySelector('#shorten');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous functions
+const shortenUrl = () => {
+  const urlToShorten = inputField.value;
+  const data = JSON.stringify({destination: urlToShorten});
+  
+    fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+      'apikey': apiKey
+    },
+    body: data
+  })
+}
+
+// Clear page and call AJAX functions
+const displayShortUrl = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  shortenUrl();
+}
+
+shortenButton.addEventListener('click', displayShortUrl);
 ```
 
 ## Handling a POST Request
@@ -4003,6 +4180,49 @@ the webpage. Make sure you include the entire link, including
 ### Solution
 
 ``` javascript
+// Information to reach API
+const apiKey = '<Your API Key>';
+const url = 'https://api.rebrandly.com/v1/links';
+
+// Some page elements
+const inputField = document.querySelector('#input');
+const shortenButton = document.querySelector('#shorten');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous functions
+const shortenUrl = () => {
+  const urlToShorten = inputField.value;
+  const data = JSON.stringify({destination: urlToShorten});
+  
+    fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+      'apikey': apiKey
+    },
+    body: data
+  }).then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, networkError => {
+    console.log(networkError.message);
+  }).then(jsonResponse => {
+    renderResponse(jsonResponse);
+  })
+}
+
+// Clear page and call Asynchronous functions
+const displayShortUrl = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  shortenUrl();
+}
+
+shortenButton.addEventListener('click', displayShortUrl);
 ```
 
 ## Intro to async GET Requests
@@ -4049,8 +4269,7 @@ Move on to the next exercise when you’re ready!
 
 ### Solution
 
-``` javascript
-```
+<img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/requests/async-get-request.svg" alt="Diagram containing the boilerplate needed to create an `async` function. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
 ## Making an async GET Request
 
@@ -4124,6 +4343,91 @@ The declaration of the `renderResponse()` function can be found at
 ### Solution
 
 ``` javascript
+// Information to reach API
+const url = 'https://api.datamuse.com/words?';
+const queryParams = 'rel_jja=';
+
+// Selecting page elements
+const inputField = document.querySelector('#input');
+const submit = document.querySelector('#submit');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous function
+// Code goes here
+const getSuggestions = async () => {
+  const wordQuery = inputField.value;
+  const endpoint = `${url}${queryParams}${wordQuery}`;
+  try {
+    const response = await fetch(endpoint, {cache: 'no-cache'});
+    if(response.ok){
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Clear previous results and display results to webpage
+const displaySuggestions = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  getSuggestions();
+}
+
+submit.addEventListener('click', displaySuggestions);
+```
+
+``` javascript
+// Formats response to look presentable on webpage
+const renderResponse = (res) => {
+  // Handles if res is falsey
+  if(!res){
+    console.log(res.status);
+  }
+  // In case res comes back as a blank array
+  if(!res.length){
+    responseField.innerHTML = "<p>Try again!</p><p>There were no suggestions found!</p>";
+    return;
+  }
+
+  // Creates an empty array to contain the HTML strings
+  let wordList = [];
+  // Loops through the response and caps off at 10
+  for(let i = 0; i < Math.min(res.length, 10); i++){
+    // creating a list of words
+    wordList.push(`<li>${res[i].word}</li>`);
+  }
+  // Joins the array of HTML strings into one string
+  wordList = wordList.join("");
+
+  // Manipulates responseField to render the modified response
+  responseField.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
+  return
+}
+
+// Renders response before it is modified
+const renderRawResponse = (res) => {
+  // Takes the first 10 words from res
+  let trimmedResponse = res.slice(0, 10);
+  // Manipulates responseField to render the unformatted response
+  responseField.innerHTML = `<text>${JSON.stringify(trimmedResponse)}</text>`;
+}
+
+// Renders the JSON that was returned when the Promise from fetch resolves.
+const renderJsonResponse = (res) => {
+  // Creates an empty object to store the JSON in key-value pairs
+  let rawJson = {};
+  for(let key in res){
+    rawJson[key] = res[key];
+  }
+  // Converts JSON into a string and adding line breaks to make it easier to read
+  rawJson = JSON.stringify(rawJson).replace(/,/g, ", \n");
+  // Manipulates responseField to show the returned JSON.
+  responseField.innerHTML = `<pre>${rawJson}</pre>`;
+}
 ```
 
 ## Intro to async POST Requests
@@ -4149,8 +4453,7 @@ Move on to the next exercise when you’re ready!
 
 ### Solution
 
-``` javascript
-```
+<img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/requests/async-post-request-fixed.svg" alt="Diagram containing the boilerplate needed to make an async function for a POST request. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
 ## Making an async POST Request
 
@@ -4202,6 +4505,48 @@ Great job using Rebrandly to shorten your URL!
 ### Solution
 
 ``` javascript
+// information to reach API
+const apiKey = '<Your API Key>';
+const url = 'https://api.rebrandly.com/v1/links';
+
+// Some page elements
+const inputField = document.querySelector('#input');
+const shortenButton = document.querySelector('#shorten');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous functions
+// Code goes here
+const shortenUrl = async () => {
+    const urlToShorten = inputField.value;
+  const data = JSON.stringify({destination: urlToShorten});
+  try {
+    const response = await fetch(url, {
+            method: 'POST',
+      body: data,
+      headers: {
+        'Content-type': 'application/json',
+                'apikey': apiKey
+      }
+    });
+        if(response.ok){
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Clear page and call Asynchronous functions
+const displayShortUrl = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  shortenUrl();
+}
+
+shortenButton.addEventListener('click', displayShortUrl);
 ```
 
 ## Review
@@ -4246,6 +4591,170 @@ If you want to challenge yourself:
 ### Solution
 
 ``` javascript
+// NOTE: wordSmith functions from lines 4 - 41
+// NOTE: byteSize functions from lines 43 - 85 (remember to add your API key!)
+
+/*
+wordSmith
+*/
+// Information to reach API
+const dataMuseUrl = 'https://api.datamuse.com/words?';
+const queryParams = 'rel_jja=';
+
+// Selecting page elements
+const inputField = document.querySelector('#input');
+const submit = document.querySelector('#submit');
+const responseField = document.querySelector('#responseField');
+
+// Asynchronous function
+// Code goes here
+const getSuggestions = async () => {
+  const wordQuery = inputField.value;
+  const endpoint = `${dataMuseUrl}${queryParams}${wordQuery}`;
+  try {
+    const response = await fetch(endpoint, {cache: 'no-cache'});
+    if(response.ok){
+      const jsonResponse = await response.json();
+      renderWordResponse(jsonResponse);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Clear previous results and display results to webpage
+const displaySuggestions = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  getSuggestions();
+}
+
+submit.addEventListener('click', displaySuggestions);
+
+/*
+byteSize
+*/
+// information to reach API
+const apiKey = '<Your API Key>';
+const rebrandlyEndpoint = 'https://api.rebrandly.com/v1/links';
+
+// Some page elements
+const shortenButton = document.querySelector('#shorten');
+
+// Asynchronous functions
+// Code goes here
+const shortenUrl = async () => {
+    const urlToShorten = inputField.value;
+  const data = JSON.stringify({destination: urlToShorten});
+  try {
+    const response = await fetch(rebrandlyEndpoint, {
+            method: 'POST',
+      body: data,
+      headers: {
+        'Content-type': 'application/json',
+                'apikey': apiKey
+      }
+    });
+        if(response.ok){
+      const jsonResponse = await response.json();
+      renderByteResponse(jsonResponse);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Clear page and call Asynchronous functions
+const displayShortUrl = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  shortenUrl();
+}
+
+shortenButton.addEventListener('click', displayShortUrl);
+```
+
+``` javascript
+// wordSmith helperFunctions are on lines 4 - 50
+// byteSize helperFunctions are on lines 52 - 76
+
+// Formats Response to look presentable on webpage
+const renderWordResponse = (res) => {
+  // Handles if res is falsey
+  if(!res){
+    console.log(res.status);
+  }
+  // In case res comes back as a blank array
+  if(!res.length){
+    responseField.innerHTML = "<p>Try again!</p><p>There were no suggestions found!</p>";
+    return;
+  }
+
+  // Creates an array to contain the HTML strings
+  let wordList = []
+  // Loops through the response and maxxing out at 10
+  for(let i = 0; i < Math.min(res.length, 10); i++){
+    // Creates a list of words
+    wordList.push(`<li>${res[i].word}</li>`);
+  }
+  // Joins the array of HTML strings into one string
+  wordList = wordList.join("");
+
+  // Manipulates responseField to render the modified response
+  responseField.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
+  return;
+}
+
+// Renders response before it is modified
+const renderRawWordResponse = (res) => {
+  // Takes the first 10 words from res
+  let trimmedResponse = res.slice(0, 10);
+  // Manipulates responseField to render the unformatted response
+  responseField.innerHTML = `<text>${JSON.stringify(trimmedResponse)}</text>`;
+}
+
+// Renders the JSON that was returned when the Promise from fetch resolves.
+const renderJsonWordResponse = (res) => {
+  // Creating an empty object to store the JSON in key-value pairs
+  let rawJson = {};
+  for(let key in response){
+    rawJson[key] = response[key];
+  }
+  // Converting JSON into a string and adding line breaks to make it easier to read
+  rawJson = JSON.stringify(rawJson).replace(/,/g, ", \n");
+  // Manipulates responseField to show the returned JSON.
+  responseField.innerHTML = `<pre>${rawJson}</pre>`;
+}
+
+// Manipulates responseField to render a formatted and appropriate message
+const renderByteResponse = (res) => {
+  if(res.errors){
+    // Will change the HTML to show this error message if the response had an error
+    responseField.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
+  } else {
+    // If there was no error, then the HTML will show this message
+    responseField.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`;
+  }
+}
+
+// Manipulates responseField to render an unformatted response
+const renderRawByteResponse = (res) => {
+  if(res.errors){
+    // Changes the HTML to show this error message if the response had an error
+    responseField.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
+  } else {
+    // Changes the HTML to show this raw response if there was no error
+    // Formats the response into a more organized structure
+    let structuredRes = JSON.stringify(res).replace(/,/g, ", \n");
+    structuredRes = `<pre>${structuredRes}</pre>`;
+
+    responseField.innerHTML = `${structuredRes}`;
+  }
+}
 ```
 
 # Film Finder
@@ -4579,10 +5088,10 @@ following:
   `movies` contains results from a random page instead of the first
   page.
 
-### Solution
+### [Solution](js-film-finder)
 
-``` javascript
-```
+[Learn JavaScript Film
+Finder](https://www.youtube.com/watch?v=W6El1fjUaJI)
 
 # Review: Async JavaScript and HTTP Requests
 
