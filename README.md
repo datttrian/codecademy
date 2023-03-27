@@ -103,11 +103,11 @@
     * [Rooster Regulation](javascript-testing/rooster-regulation)
     * [Factorial Feature](javascript-testing/factorial)
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
-    * [Film Finder](https://datttrian-js-film-finder.netlify.app/)
+    * [Film Finder](https://datttrian-js-film-finder.netlify.app/) (Reference: https://datttrian-js-film-finder.netlify.app/)
 1. [Web Apps](web-apps)
 1. [React, Part I](react-part-i)
-    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/)
-    * [Authorization Form](https://datttrian-authorization-form.netlify.app/)
+    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/) (Reference: https://github.com/sarmadgulzar/codecademy-learn-react)
+    * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: https://github.com/dheerajastakar/Authorization-form)
 1. React, Part II
     * Random Color Picker
     * Video Player
@@ -220,4 +220,3 @@
     * [Vetoffice](deploying-a-django-project/djangovet)
 1. [Build Python Web Apps with Django Capstone Project](django-capstone-project)
     * Places Remember
-    
