@@ -3488,10 +3488,10 @@ value equal to the `authorize` function.
 Try entering an incorrect password and hitting *Submit*. Nothing should
 happen. Now try entering `swordfish`. Your screen should change!
 
-### Solution
+### [Solution](authorization-form)
 
-``` jsx
-```
+[REACT Project Authorization
+Form](https://www.youtube.com/watch?v=NQJBKX73jQc)
 
 # Creating a React App
 
@@ -3810,10 +3810,6 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">React Developer Tools article</a>. There, we use the
 initial skeleton created with create-react-app to get you ready to begin
 debugging React Apps.
-
-<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtMWV5NTU3eS1TdmcgZW9sMnp2bTAiPjx0aXRsZT5GaWxlIFNlYXJjaCBJY29uPC90aXRsZT48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTMuNzUgNi43NWgxMC41bS0xMC41IDQuNUg3LjVtLTMuNzUgNC41SDcuNW0wIDQuNUgyLjI1YTEuNSAxLjUgMCAwMS0xLjUtMS41VjIuMjVhMS41IDEuNSAwIDAxMS41LTEuNWgxMC42MjlhMS41IDEuNSAwIDAxMS4wNi40MzlsMi44NzIgMi44NzJhMS41IDEuNSAwIDAxLjQzOSAxLjA2VjcuNSI+PC9wYXRoPjxjaXJjbGUgY3g9IjE1Ljc2NCIgY3k9IjE1Ljc1IiByPSI1LjI1IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSI+PC9jaXJjbGU+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0yMy4yNSAyMy4yNWwtMy43NzMtMy43ODgiPjwvcGF0aD48L3N2Zz4="
-class="gamut-1ey557y-Svg eol2zvm0" />**documentation**
 
 # Documentation: Create React App
 
