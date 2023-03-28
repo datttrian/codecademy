@@ -108,8 +108,8 @@
 1. [React, Part I](react-part-i)
     * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/) (Reference: https://github.com/sarmadgulzar/codecademy-learn-react)
     * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: https://github.com/dheerajastakar/Authorization-form)
-1. React, Part II
-    * Random Color Picker
+1. [React, Part II](react-part-ii)
+    * [Random Color Picker](https://datttrian.github.io/codecademy/react-part-ii/random-color/index.html) (Reference: https://github.com/boriskoy/ReactJS-random-color-picker)
     * Video Player
     * Social Network for Pets
     * Create a Playlist App With the Spotify API (Part One)
