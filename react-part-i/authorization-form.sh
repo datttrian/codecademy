@@ -1,8 +1,68 @@
 rm -rf authorization-form
 app_name='authorization-form'
 yarn create react-app $app_name
+cat << 'EOF' > $app_name/src/App.js
+import React, { Component } from 'react';
 
-cat << 'EOF' > $app_name/src/styles.css
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      password: 'swordfish',
+      authorized: false
+    };
+    this.authorize = this.authorize.bind(this);
+  }
+  authorize(e) {
+    const password = e.target.querySelector(
+      'input[type="password"]').value;
+    const auth = (password === this.state.password);
+    this.setState({
+      authorized: auth
+    });
+  }
+  render() {
+    const login = (
+      <form action="#" onSubmit={this.authorize}>
+        <input type="password" placeholder="Password" />
+        <input type="submit" />
+      </form>
+     );
+    const contactInfo = (
+      <ul>
+        <li>
+           client@example.com
+        </li>
+         <li>
+            555.555.5555
+          </li>
+       </ul>
+    );
+    return (
+      <div id="authorization">
+        <h1>{this.state.authorized ? 'Contact' : 'Enter the Password'}</h1>
+        {this.state.authorized ? contactInfo : login}
+      </div>
+    );
+  }
+}
+
+export default App;
+EOF
+cat << 'EOF' > $app_name/src/index.css
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 html, body {
 	margin: 0;
 	height: 100%;
@@ -122,134 +182,5 @@ button, input[type="submit"] {
 	cursor: pointer;
 	display: inline-block;
 }
-
-EOF
-cat << 'EOF' > $app_name/src/App.js
-import React from 'react';
-import Contact from './Contact';
-
-
-class App extends React.Component {
-    render(){
-        return(
-            <div>
-                <h1>Enter Password "swordfish"</h1>
-                <Contact/>
-                <Contact/>
-                <Contact/>
-                <Contact/>
-                <Contact/>
-                <Contact/>
-
-            </div>
-          
-        )
-    }
-}
-
-export default App;
-
-EOF
-cat << 'EOF' > $app_name/src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-//import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
-EOF
-
-cat << 'EOF' > $app_name/src/Contact.js
-import React from 'react';
-
-import './styles.css';
-
-
-class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      password: 'swordfish',
-      authorized: false
-    };
-    this.authorize = this.authorize.bind(this);
-  }
-
-  authorize(e) {
-    const password = e.target.querySelector(
-      'input[type="password"]').value;
-    const auth = password === this.state.password;
-    this.setState({
-      authorized: auth
-    });
-  }
-
-  render() {
-    const login =(
-      <form action='#'
-      onSubmit={this.authorize}>
-      <input
-      type='password'
-      placeholder='Password' />
-      <input type='submit'/>
-      </form>
-    );
-
-    const contactInfo =(
-       <ul>
-          <li>
-            client@example.com
-          </li>
-          <li>
-            555.555.5555
-          </li>
-        </ul>
-
-    );
-          
-
-
-
-
-
-    return (
-      <div id="authorization">
-        <h1>{this.state.authorized ? 'Contact' : 'Enter the Password' }</h1>
-        {this.state.authorized ? contactInfo : login }
-      </div>
-    );
-  }
-}
-
-export default Contact;
-
-EOF
-
-cat << 'EOF' > $app_name/src/reportWebVitals.js
-const reportWebVitals = onPerfEntry => {
-  if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
-  }
-};
-
-export default reportWebVitals;
 
 EOF
