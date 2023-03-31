@@ -106,8 +106,8 @@
     * [Film Finder](https://datttrian-js-film-finder.netlify.app/) (Reference: https://github.com/aweliego/film-finder)
 1. [Web Apps](web-apps)
 1. [React, Part I](react-part-i)
-    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/) (Reference: https://github.com/sarmadgulzar/codecademy-learn-react)
-    * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: https://github.com/dheerajastakar/Authorization-form)
+    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/)(Reference: https://github.com/sarmadgulzar/codecademy-learn-react)
+    * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: https://github.com/Preia-Starle/Authorization_Form_React)
 1. [React, Part II](react-part-ii)
     * [Random Color Picker](https://datttrian.github.io/codecademy/react-part-ii/random-color/index.html) (Reference: https://github.com/boriskoy/ReactJS-random-color-picker)
     * Video Player
