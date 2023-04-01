@@ -4,11 +4,8 @@ yarn create react-app $app_name
 sed -i '' "s,import App from \'./App\'\;,import App from \'./Components/App/App\'\;,g" $app_name/src/index.js
 mkdir $app_name/src/util
 cat << 'EOF' > $app_name/src/util/Spotify.js
-import SearchBar from "../Components/SearchBar/SearchBar.js";
-
 const clientID = '9a6c7b32f6f3410bb312f1245f31bb10';
 const redirectURI = "https://valentinajammming.surge.sh";
-
 let accessToken ;
 
 let Spotify = {
@@ -94,49 +91,38 @@ cd $app_name/src/Components
 mkdir SearchBar SearchResults Playlist TrackList Track App
 cd ../../..
 cat << 'EOF' > $app_name/src/Components/SearchBar/SearchBar.js
-import React from "react";
-import ReactDOM from "react-dom";
-import "./SearchBar.css";
+import React from 'react';
+import './SearchBar.css';
 
-
-class SearchBar extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: ''
+class SearchBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { term: '' };
+        this.search = this.search.bind(this);
+        this.handleTermChange = this.handleTermChange.bind(this);
     }
 
-    this.search = this.search.bind(this);
-    this.handleTermChange = this.handleTermChange.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
+    search() {
+        this.props.onSearch(this.state.term);
+    }
 
-  handleTermChange(event) {
-    this.setState({searchTerm: event.target.value});
-    let SearchTerm = event.target.value;
-    localStorage.setItem("SearchTerm", SearchTerm);
-  }
+    handleTermChange(event) {
+        this.setState({ term: event.target.value });
+    }
 
-    handleKeyPress(event){
-      console.log(event);
-     if(event.key === 'Enter') {
-      this.props.onSearch(this.state.searchTerm);
-   }
- }
-
-
-  search() {
-    this.props.onSearch(this.state.searchTerm);
-  }
-
-  render() {
-    return (
-      <div className="SearchBar">
-      <input placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} onKeyPress={this.handleKeyPress} id="field" />
-      <a id="btn" onClick={this.search}  >SEARCH</a>
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div className="SearchBar">
+                <input
+                    onChange={this.handleTermChange}
+                    placeholder="Enter A Song, Album, or Artist"
+                />
+                <button className="SearchButton" onClick={this.search}>
+                    SEARCH
+                </button>
+            </div>
+        );
+    }
 }
 
 export default SearchBar;
@@ -198,19 +184,22 @@ cat << 'EOF' > $app_name/src/Components/SearchBar/SearchBar.css
 EOF
 cat << 'EOF' > $app_name/src/Components/SearchResults/SearchResults.js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TrackList from '../TrackList/TrackList.js';
+import TrackList from '../TrackList/TrackList';
 import './SearchResults.css';
 
 class SearchResults extends React.Component {
-  render() {
-    return (
-      <div className="SearchResults">
-      <h2>Results</h2>
-      <TrackList tracks={this.props.searchResults} onAdd={this.props.onAdd} />
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div className="SearchResults">
+                <h2>Results</h2>
+                <TrackList
+                    tracks={this.props.searchResults}
+                    onAdd={this.props.onAdd}
+                    isRemoval={false}
+                />
+            </div>
+        );
+    }
 }
 
 export default SearchResults;
@@ -241,32 +230,38 @@ cat << 'EOF' > $app_name/src/Components/SearchResults/SearchResults.css
 EOF
 cat << 'EOF' > $app_name/src/Components/Playlist/Playlist.js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TrackList from '../TrackList/TrackList.js';
+import TrackList from '../TrackList/TrackList';
 import './Playlist.css';
 
-
 class Playlist extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleNameChange = this.handleNameChange.bind(this);
-  }
+    constructor(props) {
+        super(props);
+        this.handleNameChange = this.handleNameChange.bind(this);
+    }
 
-  handleNameChange(event) {
-    this.props.onNameChange(event.target.value);
-  }
+    handleNameChange(event) {
+        this.props.onNameChange(event.target.value);
+    }
 
-  render() {
-    return (
-      <div className="Playlist">
-      <input defaultValue={'New Playlist'} onChange={this.handleNameChange} />
-      <TrackList tracks={this.props.playlistTracks} onRemove={this.props.onRemove} isRemoval={true} />
-      <a className="Playlist-save" onClick={this.props.onSave} >SAVE TO SPOTIFY</a>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="Playlist">
+                <input
+                    defaultValue={this.props.playlistName}
+                    onChange={this.handleNameChange}
+                />
+                <TrackList
+                    tracks={this.props.playlistTracks}
+                    onRemove={this.props.onRemove}
+                    isRemoval={true}
+                />
+                <button className="Playlist-save" onClick={this.props.onSave}>
+                    SAVE TO SPOTIFY
+                </button>
+            </div>
+        );
+    }
 }
-
 
 export default Playlist;
 
@@ -328,19 +323,24 @@ cat << 'EOF' > $app_name/src/Components/Playlist/Playlist.css
 EOF
 cat << 'EOF' > $app_name/src/Components/TrackList/TrackList.js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Track from '../Track/Track.js';
 import './TrackList.css';
-
+import Track from '../Track/Track';
 
 class TrackList extends React.Component {
-  render() {
-    return (
-      <div className="TrackList">
-        {this.props.tracks.map(track => {return <Track track={track} key={track.id} onAdd={this.props.onAdd} onRemove={this.props.onRemove} isRemoval={this.props.isRemoval} />  })}
-      </div>
-    );
-  }
+    render() {
+        let listOftracks = this.props.tracks.map((track) => {
+            return (
+                <Track
+                    track={track}
+                    key={track.id}
+                    onAdd={this.props.onAdd}
+                    onRemove={this.props.onRemove}
+                    isRemoval={this.props.isRemoval}
+                />
+            );
+        });
+        return <div className="TrackList">{listOftracks}</div>;
+    }
 }
 
 export default TrackList;
@@ -353,47 +353,52 @@ cat << 'EOF' > $app_name/src/Components/TrackList/TrackList.css
 EOF
 cat << 'EOF' > $app_name/src/Components/Track/Track.js
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './Track.css';
 
-
 class Track extends React.Component {
-  constructor(props) {
-    super(props);
-    this.addTrack = this.addTrack.bind(this);
-    this.removeTrack = this.removeTrack.bind(this);
-  }
-
-  renderAction() {
-    if(this.props.isRemoval) {
-      return <a className="Track-action" onClick={this.removeTrack} >-</a>;
-    } else {
-      return <a className="Track-action" onClick={this.addTrack} >+</a>;
-    }
+    constructor(props) {
+        super(props);
+        this.addTrack = this.addTrack.bind(this);
+        this.removeTrack = this.removeTrack.bind(this);
     }
 
-    addTrack(event) {
-      this.props.onAdd(this.props.track);
+    renderAction() {
+        if (this.props.isRemoval) {
+            return (
+                <button className="Track-action" onClick={this.removeTrack}>
+                    -
+                </button>
+            );
+        } else {
+            return (
+                <button className="Track-action" onClick={this.addTrack}>
+                    +
+                </button>
+            );
+        }
     }
 
-    removeTrack(event) {
-      this.props.onRemove(this.props.track);
+    addTrack() {
+        this.props.onAdd(this.props.track);
     }
 
+    removeTrack() {
+        this.props.onRemove(this.props.track);
+    }
 
-
-
-  render() {
-    return (
-      <div className="Track">
-        <div className="Track-information">
-          <h3>{this.props.track.name}</h3>
-          <p>{this.props.track.artist} | {this.props.track.album}</p>
-        </div>
-        {this.renderAction()}
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="Track">
+                <div className="Track-information">
+                    <h3>{this.props.track.name}</h3>
+                    <p>
+                        {this.props.track.artist} | {this.props.track.album}
+                    </p>
+                </div>
+                {this.renderAction()}
+            </div>
+        );
+    }
 }
 
 export default Track;
@@ -442,84 +447,90 @@ curl -o "$app_name/public/images/ocean.jpg" "$IMAGE_URL"
 IMAGE_URL="https://raw.githubusercontent.com/datttrian/codecademy/develop/react-part-ii/jammming-prj/src/Components/App/background_photo_desktop.jpg"
 curl -o "$app_name/src/Components/App/background_photo_desktop.jpg" "$IMAGE_URL"
 cat << 'EOF' > $app_name/src/Components/App/App.js
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import SearchBar from "../SearchBar/SearchBar.js";
-import SearchResults from "../SearchResults/SearchResults.js";
-import Playlist from "../Playlist/Playlist.js";
-import Spotify from "../../util/Spotify.js";
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import Playlist from '../Playlist/Playlist';
+import Spotify from '../../util/Spotify';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state= {
-      searchResults:[],
-      playlistName: '',
-      playlistTracks: []
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchResults: [],
+            playlistName: 'New Playlist',
+            playlistTracks: [],
+        };
+        this.addTrack = this.addTrack.bind(this);
+        this.removeTrack = this.removeTrack.bind(this);
+        this.updatePlaylistName = this.updatePlaylistName.bind(this);
+        this.savePlaylist = this.savePlaylist.bind(this);
+        this.search = this.search.bind(this);
     }
-    this.addTrack = this.addTrack.bind(this);
-    this.removeTrack = this.removeTrack.bind(this);
-    this.updatePlaylistName = this.updatePlaylistName.bind(this);
-    this.savePlaylist = this.savePlaylist.bind(this);
-    this.search = this.search.bind(this);
-  }
 
-  addTrack(track) {
-    if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
-        return;
-      } else {
-      this.state.playlistTracks.push(track);
-      this.setState({playlistTracks: this.state.playlistTracks});
+    addTrack(track) {
+        let tracks = this.state.playlistTracks;
+        if (
+            this.state.playlistTracks.find(
+                (savedTrack) => savedTrack.id === track.id
+            )
+        ) {
+            return;
+        }
+        tracks.push(track);
+        this.setState({ playlistTracks: tracks });
     }
-  }
 
-  removeTrack(track) {
-    let newPlaylist = this.state.playlistTracks.filter(savedTrack => savedTrack.id !== track.id)
-      this.setState({playlistTracks: newPlaylist});
-  }
+    removeTrack(track) {
+        let tracks = this.state.playlistTracks;
+        tracks = tracks.filter((savedTrack) => savedTrack.id !== track.id);
+        this.setState({ playlistTracks: tracks });
+    }
 
-  updatePlaylistName(name) {
-    this.setState({playlistName: name});
-  }
+    updatePlaylistName(name) {
+        this.setState({ playlistName: name });
+    }
 
-  savePlaylist() {
-    let trackURIs = this.state.playlistTracks.map(track => track.uri)
-    console.log(trackURIs);
-    Spotify.savePlaylist(this.state.playlistName, trackURIs).then(() => {
-      this.setState({
-        playlistName: 'New Playlist',
-        playlistTracks: []
-      });
-    });
+    savePlaylist() {
+        const trackURIs = this.state.playlistTracks.map((track) => track.uri);
+        // return trackURIs;
+        Spotify.savePlaylist(this.state.playlistName, trackURIs).then(() => {
+            this.setState({ playlistName: 'New Playlist', playlistTracks: [] });
+        });
+    }
 
-  }
+    search(searchTerm) {
+        Spotify.search(searchTerm).then((searchResults) => {
+            this.setState({ searchResults: searchResults });
+        });
+    }
 
-  search(searchTerm) {
-    console.log(searchTerm);
-     Spotify.search(searchTerm).then(searchResults => {
-      this.setState({searchResults: searchResults})
-    });
-  }
-
-
-  render() {
-    return (
-      <div>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
-          <div className="App">
-          <SearchBar onSearch={this.search} saveSearchTerm= {this.saveSearchTerm} />
-          <div className="App-playlist">
-          <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
-          <Playlist playlistName={this.state.playlistName}
-          playlistTracks={this.state.playlistTracks}
-           onRemove={this.removeTrack}
-           onNameChange={this.updatePlaylistName}
-           onSave={this.savePlaylist} />
-          </div>
-      </div>
-   </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <h1>
+                    Ja<span className="highlight">mmm</span>ing
+                </h1>
+                <div className="App">
+                    <SearchBar onSearch={this.search} />
+                    <div className="App-playlist">
+                        <SearchResults
+                            searchResults={this.state.searchResults}
+                            onAdd={this.addTrack}
+                        />
+                        <Playlist
+                            playlistName={this.state.playlistName}
+                            playlistTracks={this.state.playlistTracks}
+                            onRemove={this.removeTrack}
+                            onNameChange={this.updatePlaylistName}
+                            onSave={this.savePlaylist}
+                        />
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
@@ -581,6 +592,6 @@ h2 {
 EOF
 
 rm -rf $app_name/src/App.css
-rm -rf $app_name/src/App.css
-rm -rf $app_name/src/App.css
-rm -rf $app_name/src/App.css
+rm -rf $app_name/src/App.js
+rm -rf $app_name/src/App.test.js
+rm -rf $app_name/src/logo.svg

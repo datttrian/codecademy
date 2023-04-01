@@ -1,8 +1,5 @@
-import SearchBar from "../Components/SearchBar/SearchBar.js";
-
 const clientID = '9a6c7b32f6f3410bb312f1245f31bb10';
 const redirectURI = "https://valentinajammming.surge.sh";
-
 let accessToken ;
 
 let Spotify = {
