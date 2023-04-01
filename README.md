@@ -30,13 +30,13 @@
 
 1. [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
 1. [Fundamentals of HTML](fundamentals-of-html)
-    * [Fashion Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/html-fashion-blog/index.html), 
-    * [Wine Festival Schedule](https://datttrian.github.io/codecademy/fundamentals-of-html/html-wine-festival-schedule/index.html), 
+    * [Fashion Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/html-fashion-blog/index.html) 
+    * [Wine Festival Schedule](https://datttrian.github.io/codecademy/fundamentals-of-html/html-wine-festival-schedule/index.html) 
     * [New York City Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/semantic-html-nyc-blog/index.html)
 1. [Fundamentals of CSS](fundamentals-of-css)
-    * [Healthy Recipes](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html), 
-    * [Olivia Woodruff Portfolio](https://datttrian.github.io/codecademy/fundamentals-of-css/css-visual-rules-project/index.html), 
-    * [The Box Model: Davie's Burgers](https://datttrian.github.io/codecademy/fundamentals-of-css/box-model-on/index.html), 
+    * [Healthy Recipes](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html) 
+    * [Olivia Woodruff Portfolio](https://datttrian.github.io/codecademy/fundamentals-of-css/css-visual-rules-project/index.html) 
+    * [The Box Model: Davie's Burgers](https://datttrian.github.io/codecademy/fundamentals-of-css/box-model-on/index.html) 
     * [Broadway](https://datttrian.github.io/codecademy/fundamentals-of-css/broadway-design/index.html)
 1. [Developing Websites Locally](developing-websites-locally)
     * [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/codecademy/developing-websites-locally/dasmoto/index.html)
@@ -109,7 +109,7 @@
     * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/)(Reference: https://github.com/sarmadgulzar/codecademy-learn-react)
     * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: https://github.com/Preia-Starle/Authorization_Form_React)
 1. [React, Part II](react-part-ii)
-    * [Random Color Picker](https://datttrian.github.io/codecademy/react-part-ii/random-color/index.html) (Reference: https://github.com/boriskoy/ReactJS-random-color-picker)
+    * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: https://github.com/trumanKnight/react-random-color-picker)
     * Video Player
     * Social Network for Pets
     * Create a Playlist App With the Spotify API (Part One)
