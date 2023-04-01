@@ -110,8 +110,8 @@
     * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: https://github.com/Preia-Starle/Authorization_Form_React)
 1. [React, Part II](react-part-ii)
     * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: https://github.com/trumanKnight/react-random-color-picker)
-    * Video Player
-    * Social Network for Pets
+    * [Video Player](https://datttrian-video-player.netlify.app)
+    * [Social Network for Pets](https://datttrian-social-network-for-pets.netlify.app/) (Reference: https://github.com/farulivan/social-network-for-pets)
     * Create a Playlist App With the Spotify API (Part One)
     * Create a Playlist App With the Spotify API (Part Two)
     * Passing Thoughts
