@@ -3838,10 +3838,7 @@ display the chosen video.
 You’ve put together a responsive video player, and done it in a way that
 you will often find in the real world!
 
-### Solution
-
-``` jsx
-```
+### [Solution](video-player)
 
 # Component Lifecycle Methods
 
@@ -4612,10 +4609,7 @@ has changed (in other words, if
 Once that’s done, you should be able to navigate through pet profiles
 with ease! Be proud…your pet social network is going to be big.
 
-### Solution
-
-``` jsx
-```
+### [Solution](social-network-for-pets)
 
 # Create a Playlist App With the Spotify API (Part One)
 
