@@ -1,16 +1,5 @@
 [<img src="https://github.com/Codecademy/learn-cpp/blob/master/logo.png" align="right" width=170;>](https://www.codecademy.com)
 
-![Python](https://img.shields.io/badge/-Python-blue?style=flat-square&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/-Django-green?style=flat-square&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/-Flask-lightgrey?style=flat-square&logo=flask&logoColor=white)
-![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/-CSS-blueviolet?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=javascript&logoColor=white)
-![React](https://img.shields.io/badge/-React-blue?style=flat-square&logo=react&logoColor=white)
-![Redux](https://img.shields.io/badge/-Redux-purple?style=flat-square&logo=redux&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-orange?style=flat-square&logo=git&logoColor=white)
-![SQL](https://img.shields.io/badge/-SQL-lightgrey?style=flat-square&logo=sql&logoColor=white)
-
 **Table of Contents**
 
 - [Full-Stack Engineer Career Path](#full-stack-engineer-career-path)
@@ -112,7 +101,7 @@
     * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: https://github.com/trumanKnight/react-random-color-picker)
     * [Video Player](https://datttrian-video-player.netlify.app)
     * [Social Network for Pets](https://datttrian-social-network-for-pets.netlify.app/) (Reference: https://github.com/farulivan/social-network-for-pets)
-    * Create a Playlist App With the Spotify API (Part One)
+    * [Create a Playlist App With the Spotify API (Part One)](https://datttrian-jammming-prj.netlify.app/) (Reference: https://github.com/nyere/jammming)
     * Create a Playlist App With the Spotify API (Part Two)
     * Passing Thoughts
     * Copycat
