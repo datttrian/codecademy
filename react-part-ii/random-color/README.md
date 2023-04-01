@@ -179,4 +179,4 @@ your work!
 [REACT Project Random Color
 Picker](https://www.youtube.com/watch?v=tiH5WiA5I2E)
 
-### [Solution](https://datttrian.github.io/codecademy/react-part-ii/random-color/index.html)
+### [Solution](https://datttrian-random-color.netlify.app)
