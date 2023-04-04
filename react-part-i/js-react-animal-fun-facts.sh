@@ -11,6 +11,29 @@ curl -o "$app_name/public/images/ocean.jpg" "$IMAGE_URL"
 IMAGE_URL="https://raw.githubusercontent.com/datttrian/codecademy/develop/react-part-i/js-react-animal-fun-facts/public/images/starfish.jpg"
 curl -o "$app_name/public/images/starfish.jpg" "$IMAGE_URL"
 sed -i '' "s,\<link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" /\>,\<link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" /\>\n    \<link rel=\"stylesheet\" href=\"./styles.css\" /\>,g" $app_name/public/index.html
+cat << 'EOF' > $app_name/public/index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Animal Fun Facts</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+
+EOF
 cat << 'EOF' > $app_name/public/styles.css
 div {
 	display: flex;
