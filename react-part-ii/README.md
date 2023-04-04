@@ -13850,10 +13850,7 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### Solution
-
-``` jsx
-```
+### [Solution](adopt-a-pet)
 
 # Getting Started with Jest for JavaScript Testing
 
@@ -14416,10 +14413,7 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### Solution
-
-``` jsx
-```
+### [Solution](appointment-planner)
 
 # Review: React, Part II
 
