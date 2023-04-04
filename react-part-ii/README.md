@@ -11570,10 +11570,7 @@ If not, the name that will be displayed will default to “Tom”.
 
 Add a `propType` for `name` to `propTypes`.
 
-### Solution
-
-``` jsx
-```
+### [Solution](copycat)
 
 # React Router
 
