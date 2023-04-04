@@ -92,21 +92,20 @@
     * [Rooster Regulation](javascript-testing/rooster-regulation)
     * [Factorial Feature](javascript-testing/factorial)
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
-    * [Film Finder](https://datttrian-js-film-finder.netlify.app/) (Reference: [aweliego/film-finder](https://github.com/aweliego/film-finder))
+    * [Film Finder](https://datttrian-js-film-finder.netlify.app/) (Reference: [aweliego](https://github.com/aweliego/film-finder))
 1. [Web Apps](web-apps)
 1. [React, Part I](react-part-i)
-    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/)(Reference: [sarmadgulzar/codecademy-learn-react](https://github.com/sarmadgulzar/codecademy-learn-react))
-    * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: [Preia-Starle/Authorization_Form_React](https://github.com/Preia-Starle/Authorization_Form_React))
+    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/) (Reference: [sarmadgulzar](https://github.com/sarmadgulzar/codecademy-learn-react))
+    * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: [Preia-Starle](https://github.com/Preia-Starle/Authorization_Form_React))
 1. [React, Part II](react-part-ii)
-    * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: [trumanKnight/react-random-color-picker](https://github.com/trumanKnight/react-random-color-picker))
-    * [Video Player](https://datttrian-video-player.netlify.app)
-    * [Social Network for Pets](https://datttrian-social-network-for-pets.netlify.app/) (Reference: [farulivan/social-network-for-pets](https://github.com/farulivan/social-network-for-pets))
-    * [Create a Playlist App With the Spotify API](https://datttrian-jammming-prj.netlify.app/) (Reference: [nyere/jammming](https://github.com/nyere/jammming))
-    * [Passing Thoughts](https://datttrian-passing-thoughts.netlify.app/) (Reference: [peterekey/codecademy_20230212_passing_thoughts](https://github.com/peterekey/codecademy_20230212_passing_thoughts))
-    * Copycat
-    * Adopt a Pet!
-    * Challenge Project
-    * Appointment Planner
+    * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: [trumanKnight](https://github.com/trumanKnight/react-random-color-picker))
+    * [Video Player](https://datttrian-video-player.netlify.app) (Reference: [ftanekha](https://github.com/ftanekha/ccReact-videoPlayer))
+    * [Social Network for Pets](https://datttrian-social-network-for-pets.netlify.app/) (Reference: [farulivan](https://github.com/farulivan/social-network-for-pets))
+    * [Create a Playlist App With the Spotify API](https://datttrian-jammming-prj.netlify.app/) (Reference: [nyere](https://github.com/nyere/jammming))
+    * [Passing Thoughts](https://datttrian-passing-thoughts.netlify.app/) (Reference: [peterekey](https://github.com/peterekey/codecademy_20230212_passing_thoughts))
+    * [Copycat](https://datttrian-copycat.netlify.app) (Reference: [norman02](https://github.com/norman02/CopyCat))
+    * [Adopt a Pet!](https://datttrian-adopt-a-pet.netlify.app/) (Reference: [Codecademy](https://static-assets.codecademy.com/Courses/react-router/adopt-a-pet-solution.zip))
+    * [Challenge Project: Appointment Planner](https://datttrian-appointment-planner.netlify.app) (Reference: [Codecademy](https://static-assets.codecademy.com/skillpaths/react-redux/react_challenge_solution.zip))
 1. Redux
     * Redux Road
     * Codecademy Store
