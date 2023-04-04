@@ -4609,7 +4609,7 @@ has changed (in other words, if
 Once that’s done, you should be able to navigate through pet profiles
 with ease! Be proud…your pet social network is going to be big.
 
-### [Solution](social-network-for-pets)
+### [Solution](react-lifecycle-methods-social-network-for-pets)
 
 # Create a Playlist App With the Spotify API (Part One)
 
@@ -5690,10 +5690,7 @@ Follow the steps on the screen. Change the domain value to your new URI.
 
 Congrats! You’ve just deployed a React App that queries the Spotify API!
 
-### Solution
-
-``` jsx
-```
+### [Solution](jammming-prj)
 
 # Create a Playlist App With the Spotify API (Part Two)
 
@@ -5762,10 +5759,7 @@ Mark the tasks as complete by checking them off
 
 Use the information above to complete this project.
 
-### Solution
-
-``` jsx
-```
+### [Solution](jammming-prj)
 
 # Getting Started with Netlify
 
@@ -9263,10 +9257,7 @@ can get with `thought.id`.
 Once that’s done, try adding some thoughts and watch them disappear…it’s
 just like your brain, but you built it with React.
 
-### Solution
-
-``` jsx
-```
+### [Solution](react-hooks-passing-thoughts)
 
 # Style
 
