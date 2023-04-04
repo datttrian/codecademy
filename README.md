@@ -101,9 +101,8 @@
     * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: https://github.com/trumanKnight/react-random-color-picker)
     * [Video Player](https://datttrian-video-player.netlify.app)
     * [Social Network for Pets](https://datttrian-social-network-for-pets.netlify.app/) (Reference: https://github.com/farulivan/social-network-for-pets)
-    * [Create a Playlist App With the Spotify API (Part One)](https://datttrian-jammming-prj.netlify.app/) (Reference: https://github.com/nyere/jammming)
-    * Create a Playlist App With the Spotify API (Part Two)
-    * Passing Thoughts
+    * [Create a Playlist App With the Spotify API](https://datttrian-jammming-prj.netlify.app/) (Reference: https://github.com/nyere/jammming)
+    * [Passing Thoughts](https://datttrian-passing-thoughts.netlify.app/) (Reference: https://github.com/AntonV0/passing-thoughts)
     * Copycat
     * Adopt a Pet!
     * Challenge Project
