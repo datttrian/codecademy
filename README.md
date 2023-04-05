@@ -106,7 +106,7 @@
     * [Copycat](https://datttrian-copycat.netlify.app) (Reference: [norman02](https://github.com/norman02/CopyCat))
     * [Adopt a Pet!](https://datttrian-adopt-a-pet.netlify.app/) (Reference: [Codecademy](https://static-assets.codecademy.com/Courses/react-router/adopt-a-pet-solution.zip))
     * [Challenge Project: Appointment Planner](https://datttrian-appointment-planner.netlify.app) (Reference: [Codecademy](https://static-assets.codecademy.com/skillpaths/react-redux/react_challenge_solution.zip))
-1. Redux
+1. [Redux](redux)
     * Redux Road
     * Codecademy Store
     * Matching Memory
