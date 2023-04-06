@@ -1,0 +1,72 @@
+.project {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0.025em .25em .0625em rgba(0, 0, 0, 0.125);
+  border-radius: .75em;
+  overflow: hidden;
+  margin: 5%;
+  background-color: white;
+}
+
+  @media only screen and (min-width:550px) {
+    .project {
+      flex-direction: row;
+      height: 85%;
+    }
+  }
+
+.project:hover {
+  box-shadow: 0 0 1em .0625em rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+  transition: all 0.25s;
+}
+
+.project:not(:hover) {
+  transition: all 0.25s;
+}
+
+.project-image {
+  display: block;
+  padding-top: 60%;
+  padding-right: 100%;
+  background-size: cover;;
+  background-color: black;
+  background-position: center;
+  overflow: hidden;
+}
+
+  @media only screen and (min-width: 550px) {
+    .project-image {
+      padding-top: 0;
+      height: 100%;
+      padding-right: calc(100%/3);
+    }
+  }
+
+.project-caption {
+  padding: 1em
+}
+
+  @media only screen and (min-width: 550px) {
+    .project-caption {
+      padding: 1.5em;
+    }
+  }
+
+.project-caption h3 {
+  margin: .25em 0 0;
+}
+
+.project-caption p {
+  margin-bottom: 0;
+  font-size: 0.825rem;
+  line-height: 1.5em;
+}
+
+.project-caption p.project-skills {
+  color: #999;
+  font-size: .625em;
+  font-style: italic;
+}

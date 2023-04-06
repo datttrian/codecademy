@@ -1,0 +1,83 @@
+/*----- Fonts -----*/
+
+
+
+/*----- Universal -----*/
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+/*----- Header-----*/
+header {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    flex-direction: row;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../img/bg/earth-view.svg'),linear-gradient(rgb(5, 5, 90), rgb(2, 9, 78));
+    background-size: cover;
+}
+
+#content {
+    align-self: end;
+}
+
+@media only screen and (max-width: 800px) {
+    #content {
+        grid-column: 1 / span 2;
+    }
+}
+
+header div {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+h1, header p {
+    text-align: right;
+    padding: 0 10%;
+    color: white;
+}
+
+header h1 {
+    margin: 0.25em 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: .5em;
+    font-size: 1.5rem;
+    line-height: 2em;
+}
+
+header p:nth-child(3) {
+    padding-bottom: 8%;
+}
+
+header a {
+    text-align: right;
+    padding: 0 1rem 1rem 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.637);
+}
+
+header span {
+    color: white;
+}
+
+
+/*----- Main -----*/
+
+
+
+/*----- Footer-----*/

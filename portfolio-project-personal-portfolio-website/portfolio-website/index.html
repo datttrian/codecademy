@@ -1,140 +1,462 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./all.min.css" />
-  </head>
-  <body>
-    <nav>
-      <h2 id="logo">Ada Lovelace</h2>
-      <ul class="navigation-items">
-        <li class="navigation-item"><a href="#about-me">About Me</a></li>
-        <li class="navigation-item"><a href="#projects">Projects</a></li>
-        <li class="navigation-item"><a href="#skills">Skills</a></li>
-        <li class="navigation-item"><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<html lang="en" xml:lang="en">
+<head>
+    <title>Daniel Labrador | Web Developer</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/index.css">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="hire,web development,web developer,web designer,web design,UI,UX">
+    <meta name="description" content="Daniel here! I'm a software developer who specializes on full-stack development. I enjoy learning new skills and the challenges that come along with them.">
+    <meta name="author" content="Daniel Labrador">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="./src/img/logo/site.webmanifest">
+    <link rel="mask-icon" href="./src/img/logo/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./src/img/logo/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Daniel's Site">
+    <meta name="application-name" content="Daniel's Site">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./src/img/logo/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ba3abb2535.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
 
-    <main>
-      <section id="about-me">
-        <div class="about-me-container">
-          <div class="about-me-text-container">
+<!----------------------------------------------------------------------------->
+    <!--------------  HEADER  ----------------->
+    <header>
+        <div class="nav-bar clear-nav-bar" id="nav-bar">
+            <div class="mobile-menu nav-bar-element" id="mobile-menu-open">
+                <span class="noselect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><style>path {fill: #fff}</style><g fill="var(--color-default)"><path d="M8 14h7a1 1 0 000-2H8a1 1 0 000 2zM1 4h14a1 1 0 000-2H1a1 1 0 000 2zM1 9h14a1 1 0 000-2H1a1 1 0 000 2z"></path></g></svg>
+                </span>
+            </div>
+            <div class="main-navigation-items">
+                <h1 id="main-logo-container" class="main-logo-container nav-bar-element">
+                    <span class="main-logo-text noselect">Daniel Labrador</span>
+                    <a href="http://daniellabrador.com" class = "main-logo-link">
+                        <img id="main-logo" src="./src/img/logo/SVG/logo-light.svg" alt="Brand logo" class="main-logo mobile">
+                    </a>
+                </h1>
+
+                <nav class="desktop-nav" aria-label="Desktop menu">
+                    <ul>
+                        <a href="#about">
+                            <li>About</li>
+                        </a>
+                        <a href="#skills">
+                            <li>Skills</li>
+                        </a>
+                        <a href="#projects">
+                            <li>Projects</li>
+                        </a>
+                        <a href="#services">
+                            <li>Services</li>
+                        </a>
+                        <a href="#contact">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="social nav-bar-element">
+
+                <a href="https://go.daniellabrador.com/instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+
+                <a href="https://go.daniellabrador.com/linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </a>
+
+                <a href="https://github.com/daniellabrador">
+                    <div class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- To prevent reference error, I have to create this class --><div class="clear-nav-bar" style="display:none"></div>
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile menu">
+            <div class="mobile-nav-content-wrapper">
+                <div class="social">
+                    <div class="social-container">
+                        <a href="https://go.daniellabrador.com/instagram">
+                            <div class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </a>
+        
+                        <a href="https://go.daniellabrador.com/linkedin">
+                            <div class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                        </a>
+        
+                        <a href="https://github.com/daniellabrador">
+                            <div class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <a class="mobile-link" href="#about">
+                        <li>About</li>
+                    </a>
+                    <a class="mobile-link" href="#skills">
+                        <li>Skills</li>
+                    </a>
+                    <a class="mobile-link" href="#projects">
+                        <li>Projects</li>
+                    </a>
+                    <a class="mobile-link" href="#services">
+                        <li>Services</li>
+                    </a>
+                    <a class="mobile-link" href="#contact">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+                <div class="mobile-menu-close"><span class="noselect">Close</span><div id='mobile-menu-close'></div></div>
+            </div>
+        </nav>
+
+<!----------------------------------------------------------------------------->
+    <!--------------  HOME  ----------------->        
+        <section id="home">
+            <div class="flex-container">
+                <div class="site-intro">
+                    <h2 id="site-intro-header-compressed">DANIEL<br>LABRADOR</h2>
+                    <h2 id="site-intro-header-stretched">DANIEL LABRADOR</h2>
+                    <p class="medium">Software Developer</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#about" class="fancy-button">Learn More</a>
+                    <a href="#contact" class="fancy-button">Hire</a>
+                </div>
+            </div>
+        </section>
+        <div id="home-hero-divider"> <!-- Uneven Triangle --> </div>
+    </header>
+    
+
+<!----------------------------------------------------------------------------->
+<!--------------  HOME  ----------------->
+    <section id="about" class="col-grid">
+        <!-- Decorative Header -->
+        <div class="hdecor-box center col-span-12" id="home-header-about">
+            <div class="hdecor hdecor-left">
+                <div class="hdecor-long"></div>
+                <div class="hdecor-short"></div>
+            </div>
+            <!-- Remove .uppercase if needed -->
             <h2>About Me</h2>
-            <p>
-              Hi! I'm Ada, Countess of Lovelace and am an English mathematician
-              and writer, chiefly known for my work on Charles Babbage's
-              proposed mechanical general-purpose computer, the Analytical
-              Engine.
-            </p>
-            <p>
-              I am one of the first to recognize that machines have applications
-              beyond pure calculation, and to have published the first algorithm
-              intended to be carried out by such a machine.
-            </p>
-            <p>
-              In my free time I like to read about scientific developments,
-              mathematics, and computational mathematics. I also like to take my
-              chances of winning big.
-            </p>
-            <p>
-              Fun fact! I've been programing for
-              <span id="time-container">0</span> seconds!
-            </p>
-          </div>
-          <img
-            src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg"
-            alt="A photo of Ada Lovelace"
-            class="portrait"
-          />
+            <div class="hdecor hdecor-right">
+                <div class="hdecor-long"></div>
+                <div class="hdecor-short"></div>
+            </div>
         </div>
-      </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <details class="project">
-          <summary class="project-title">
-            <h3>The first computer program</h3>
-          </summary>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg"
-            alt="Lovelace's diagram from note G, the first published computer
-          algorithm"
-            class="project-image"
-          />
-          <p class="project-description">
-            The world's first computer program for computing Bernoulli numbers.
-          </p>
-        </details>
-        <details class="project">
-          <summary class="project-title">
-            <h3>The Analytical Engine</h3>
-          </summary>
-          <img
-            src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb"
-            alt="An original model of part of the Analytical Engine"
-            class="project-image"
-          />
-          <p class="project-description">
-            I helped Charles Babbage on topics ranging from math to computation
-            that helped the development of the Analytical Engine.
-          </p>
-        </details>
-        <details class="project">
-          <summary class="project-title">
-            <h3>The Ada programming language</h3>
-          </summary>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ada_Mascot_with_slogan.svg/220px-Ada_Mascot_with_slogan.svg.png"
-            alt='Ada mascot, a black and cobalt blue hummingbird, flying above the
-          slogan "Time-tested, safe and secure"'
-            class="project-image"
-          />
-          <p class="project-description">
-            My work inspired the United States Department of Defense to name
-            their new programming language after me.
-          </p>
-        </details>
-      </section>
+        <!-- Description -->
+        <p class="col-span-8-center" id="home-header-description">Hey, friends! My name is Thony Danielle Labrador.
+            I'm a software developer who specializes on full-stack development.
+            I constantly arm myself with the latest technologies that helps me
+            develop competitive web and software applications. I believe that
+            knowledge is a never-ending pursuit, always ready to consider individual
+            goals as a beginning and never an end.</p>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <div id="skills-container">
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js"></i>
-          <i class="fab fa-react"></i>
-          <i class="fab fa-aws"></i>
-          <i class="fab fa-sketch"></i>
-          <i class="fab fa-figma"></i>
-          <i class="fab fa-git"></i>
-          <i class="fab fa-chrome"></i>
-          <i class="fas fa-terminal"></i>
-          <i class="fas fa-universal-access"></i>
-          <i class="fab fa-npm"></i>
-          <i class="fab fa-node"></i>
-          <i class="fab fa-github"></i>
+        <!--- Milestones ---->
+        <div class="roadmap col-span-12" id="home-milestones">
+            <div class="milestone-box">
+                <p class="milestone milestone-company">Ateneo de Davao University</p>
+                <h3 class="milestone uppercase">Computer Science</h3>
+                <p class="milestone milestone-type">Education (in progress)</p>
+                <p class="milestone milestone-description">Introduction to Computing • Computer Programming • Discrete Structures • College Trigonometry • Differential Calculus • Linear Algebra • Probability and Statistics</p>
+            </div>
+            
+            <div class="milestone-box">
+                <p class="milestone milestone-company">Codecademy</p>
+                <h3 class="milestone uppercase"><a href="https://www.codecademy.com/learn/paths/full-stack-engineer-career-path" class="no-text-decoration">Full-Stack Engineer</a></h3>
+                <p class="milestone milestone-type">Career Switch / Education (in progress)</p>
+                <p class="milestone milestone-description">HTML • CSS • JavaScript • Git and GitHub • Interactive Design • Responsive Design • Pair Programming • Test-Driven Development • Web Apps • React</p>
+            </div>
+
+            <div class="milestone-box">
+                <p class="milestone milestone-company">Ateneo de Davao University</p>
+                <h3 class="milestone uppercase">Accountancy</h3>
+                <p class="milestone milestone-type">Education</p>
+                <p class="milestone milestone-description">Basic Financial Accounting and Reporting • Conceptual Framework and Accounting Standards • IT Software and Tools for Business • Cost Accounting • Managerial Economics • Financial Markets and Institutions • Statistics with Software Application • Auditing and Assurance Principles • Accounting Information Systems • Law on Obligations and Contracts • Economic Development</p>
+            </div>
+            
+            <div class="milestone-box">
+                <p class="milestone milestone-company">Ateneo de Davao University</p>
+                <h3 class="milestone uppercase">Accountancy, Business<br>and Management</h3>
+                <p class="milestone milestone-type">Education - High School - Top 1 ABM Student</p>
+                <p class="milestone milestone-description">Organization and Management • Fundamentals of Accountancy, Business and Management • Principles of Marketing • Business Math • Business Finance • Business Ethics and Social Responsibility • Business Enterprise Simulation • Applied Economics</p>
+            </div>
+
+            <a id="milestone-button" href="https://go.daniellabrador.com/resume-dev"><button class="uppercase"><i class="fas fa-file-pdf"></i> <span>Resume</span></button></a>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer>Made with <span class="heart">♥</span> in London</footer>
-  </body>
-  <script>
-    const timeContainer = document.getElementById("time-container");
-    const BIRTH_DAY = "12-10-1815";
-    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
-    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+    <!----------------------------------------------------------------------------->
+        <!--------------  SKILLS  ----------------->
+    <section id="skills">
 
-    setInterval(() => {
-      const now = new Date();
-      const difference = Math.floor(
-        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
-      );
+        <!-- Header 2 -->
+        <div class="col-grid">
+            <div class="hdecor-box col-span-12">
+                <div class="hdecor hdecor-left">
+                    <div class="hdecor-long"></div>
+                    <div class="hdecor-short"></div>
+                </div>
+                <!-- Remove .uppercase if needed -->
+                <h2 class="uppercase">Skills</h2>
+                <div class="hdecor hdecor-right">
+                    <div class="hdecor-long"></div>
+                    <div class="hdecor-short"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-container col-grid" id="skill-generator">
+            <!-- Use skills.js -->
+        </div>
+    </section>
 
-      timeContainer.innerText = intlNumberFormatter.format(difference);
-    }, 1000);
-  </script>
+    <!----------------------------------------------------------------------------->
+        <!--------------  CODING PROJECTS  ----------------->
+    <section id="projects">
+
+        <!-- Header 2 -->
+        <div class="col-grid">
+            <div class="hdecor-box col-span-12">
+                <div class="hdecor hdecor-left">
+                    <div class="hdecor-long"></div>
+                    <div class="hdecor-short"></div>
+                </div>
+                <!-- Remove .uppercase if needed -->
+                <h2 class="uppercase">Coding Projects</h2>
+                <div class="hdecor hdecor-right">
+                    <div class="hdecor-long"></div>
+                    <div class="hdecor-short"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-container col-grid">
+
+            <a href="https://daniellabrador-jammming.surge.sh" class="no-text-decoration col-span-6">
+                <figure class="project">
+                    <div class="project-image" style="background-image: url(./src/img/index/projects/jammming.svg);">
+                    </div>
+                    <figcaption class="project-caption">
+                        <h3 class="project-title">Jammming</h3>
+                        <p class="project-description">Jammming allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.</p>
+                        <p class="project-skills">React, Spotify API</p>
+                    </figcaption>
+                </figure>
+            </a>
+            
+            <a href="https://daniellabrador-codecademy-router-tutorial.netlify.app/" class="no-text-decoration col-span-6">
+                <figure class="project">
+                    <div class="project-image" style="background-image: url(./src/img/index/projects/music-previews.jpg)">
+                    </div>
+                    <figcaption class="project-caption">
+                        <h3 class="project-title">Spotify Music Previews</h3>
+                        <p class="project-description">Spotify Music Previews shows a list of featured music from Spotify and display the preview audio clip of each song.</p>
+                        <p class="project-skills">React, Spotify API</p>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="https://daniellabrador.com/codecademy-js-wanderlust/" class="no-text-decoration col-span-6">
+                <figure class="project">
+                    <div class="project-image" style="background-image: url(./src/img/index/projects/wanderlust.jpg);">
+                    </div>
+                    <figcaption class="project-caption">
+                        <h3 class="project-title">Wanderlust</h3>
+                        <p class="project-description">Wanderlust returns the weather and the possible destinations depending on the location the user requested.</p>
+                        <p class="project-skills">JavaScript, Foursquare API, OpenWeather API</p>
+                    </figcaption>
+                </figure>
+            </a>
+            
+            <a href="https://github.com/daniellabrador/codecademy-js-find_your_hat" class="no-text-decoration col-span-6">
+                <figure class="project">
+                    <div class="project-image" style="background-image: url(./src/img/index/projects/cap.jpg)">
+                    </div>
+                    <figcaption class="project-caption">
+                        <h3 class="project-title">Find Your Hat</h3>
+                        <p class="project-description">The Find Your Hat program is an interactive terminal game. The scenario is that the player has lost their hat in a field full of holes, and they must navigate back to it without falling down one of the holes or stepping outside of the field.</p>
+                        <p class="project-skills">Node</p>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="https://github.com/daniellabrador/codecademy-cpp-tic_tac_toe" class="no-text-decoration col-span-6">
+                <figure class="project">
+                    <div class="project-image" style="background-image: url(./src/img/index/projects/tic-tac-toe.jpg);">
+                    </div>
+                    <figcaption class="project-caption">
+                        <h3 class="project-title">Tic-Tac-Toe</h3>
+                        <p class="project-description">The Tic-Tac-Toe program is a two-player terminal game where each player plays against each other, each trying to create a horizontal, vertical or diagonal row of X's or O's to win the game.</p>
+                        <p class="project-skills">C++</p>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="https://daniellabrador.com/codecademy-fs-company_home_page/" class="no-text-decoration col-span-6">
+                <figure class="project">
+                    <div class="project-image" style="background-image: url(./src/img/index/projects/css-flexbox.jpg);">
+                    </div>
+                    <figcaption class="project-caption">
+                        <h3 class="project-title">Motion: Move With Style</h3>
+                        <p class="project-description">Motion is a business startup retailer company that sells trendy socks. This training project, prepared by Codecademy has been an invaluable exercise in enhancing my knowledge on the application of CSS flexbox.</p>
+                        <p class="project-skills">Responsive Web Design</p>
+                    </figcaption>
+                </figure>
+            </a>
+
+        </div>
+
+        <div class="col-grid">
+            <a class="col-span-12" id="home-projects-more" href="https://github.com/daniellabrador?tab=repositories"><i class="fab fa-github"></i> More GitHub repositories <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+    
+    <!----------------------------------------------------------------------------->
+        <!--------------  SERVICES  ----------------->
+    <section id="services">
+
+        <!-- Header 2 -->
+        <div class="col-grid">
+            <div class="hdecor-box col-span-12">
+                <div class="hdecor hdecor-left">
+                    <div class="hdecor-long"></div>
+                    <div class="hdecor-short"></div>
+                </div>
+                <!-- Remove .uppercase if needed -->
+                <h2 class="uppercase">Services</h2>
+                <div class="hdecor hdecor-right">
+                    <div class="hdecor-long"></div>
+                    <div class="hdecor-short"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-container col-grid">
+                
+            <div class="service-box col-span-4">
+                <i class="fab fa-wordpress"></i>
+                <h3 class="service-title">WordPress</h3>
+                <p class="service-description">Content Management Systems (CMS) such as WordPress can be a perfect for varying types of web presence, from a portfolio website where creative individuals can showcase their best work to a member website where one can build communities.</p>
+            </div>
+            
+            <div class="service-box col-span-4">
+                <i class="fas fa-laptop-code"></i>
+                <h3 class="service-title">Creative Web Design</h3>
+                <p class="service-description">I take your abstract ideas and represent them on the web in a way that will be useful for your end users or clients. I design sites using accepted current web standards so they are usable, easy to navigate, simple to maintain and as future-proof as possible.</p>
+            </div>
+            
+            <div class="service-box col-span-4">
+                <i class="fas fa-tablet-alt"></i>
+                <h3 class="service-title">Responsive Web Development</h3>
+                <p class="service-description">Creating websites that are responsive means making web pages look good on all devices, from mobile to large monitors.</p>
+            </div>
+        </div>
+
+
+        <div id="home-services-divider"> <!-- Triangle --> </div>
+    </section>
+
+
+
+    <footer>
+        <section class="contact-container col-grid" id="contact">
+            <div class="form-container col-span-12">
+                <form id="contact-form" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xyylozwk" method="post">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="full-name">Name <span>*</span></label>
+                            <input type="text" name="name" id="full-name" placeholder="First and Last Name" required="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-field" id="form-phone">
+                            <label for="phone">Phone Number</label>
+                            <input type="phone" name="phone" id="phone" placeholder="(555) 555-5555">
+                        </div>
+
+                        <div class="form-field" id="form-email">
+                            <label for="email-address">Email Address <span>*</span></label>
+                            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="email-subject">I would like to <span>*</span></label>
+                            <select id="email-subject" name="email-subject" required="">
+                                <option value="" selected="" disabled="" class="option-default" hidden=""></option>
+                                <option value="[JOB] I would like to invite you to apply for a job vacancy.">Invite you to apply for a job vacancy</option>
+                                <option value="[JOB] I would like to hire you for a project.">Hire you for a project</option>
+                                <option value="[JOB] I would like to find more about your services.">Find more about your services</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="message">Message <span>*</span></label>
+                            <textarea rows="6" resize="none" name="message" id="message" placeholder="Share something neat here." required=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <input id="submit" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        
+        <section id="copyright">
+            <p class="copyright">&copy; <a href="https://daniellabrador.com">Thony Danielle Labrador</a> 2022. All Rights Reserved.</p>
+            <div class="social">
+    
+                <a href="https://go.daniellabrador.com/instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+    
+                <a href="https://go.daniellabrador.com/linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/daniellabrador">
+                    <div class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./src/js/skills.js"></script>
+    <script src="./src/js/templates.js"></script>
+</body>
 </html>

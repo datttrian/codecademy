@@ -1,0 +1,106 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+@import "../helpers/placeholder";
+@import "../helpers/variables";
+
+.hdecor-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  min-width: 200px;
+}
+
+.hdecor-box.center{
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+
+  @media only screen and (min-width: 800px) {
+    .hdecor-box.center{
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-justify-content: center;
+    }
+  }
+
+.hdecor {
+  width: 50px;
+  margin: auto 0;
+}
+
+  @media only screen and (min-width: 550px) {
+    .hdecor {
+      width: 150px;
+    }
+  }
+
+.hdecor-left {
+  display: none;
+}
+
+.hdecor-left .hdecor-long,
+.hdecor-left .hdecor-short {
+  margin-left: auto;
+}
+
+.hdecor-box.center .hdecor-left {
+  display: none;
+}
+
+  @media only screen and (min-width: 800px) {    
+    .hdecor-box.center .hdecor-left {
+      display: block;
+    }
+  }
+
+.hdecor-box h2 {
+  margin: 1.875rem 0.625rem 1.875rem 0;
+}
+
+.hdecor-box.center h2 {
+  margin: 1.875rem 0.625rem 1.875rem 0;
+}
+
+  @media only screen and (min-width: 550px) {
+    .hdecor-box h2 {
+      margin: 3.125rem 2rem 3.125rem 0;
+    }
+    
+    .hdecor-box.center h2 {
+      margin: 3.125rem 2rem 3.125rem 0;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .hdecor-box h2 {
+      margin-right: 2rem;
+      margin-left: 0;
+    }
+    
+    .hdecor-box.center h2 {
+      margin-left: 2rem;
+    }
+  }
+
+.hdecor-long {
+  margin-bottom: 6px;
+  width: 100%;
+  height: 2px;
+  background-color: $black;
+}
+
+  @media only screen and (min-width: 550px) {
+    .hdecor-long {
+      margin-bottom: 12px;
+    }
+  }
+
+.hdecor-short {
+  width: 50%;
+  height: 1.5px;
+  background-color: $black;
+}

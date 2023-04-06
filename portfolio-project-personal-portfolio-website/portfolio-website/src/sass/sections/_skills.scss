@@ -1,0 +1,91 @@
+#skills {
+  overflow: hidden;
+}
+
+.icons {
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  gap: .5em;
+}
+
+.skill {
+  padding: 1.25em;
+  width: 100%;
+}
+
+.skill-icon {
+  height: 3.75rem;
+  font-size: 3.75rem;
+  color: #AAA;
+}
+
+.codecademy-badge img {
+  height: 1em;
+}
+
+.badges {
+  display: flex;
+  display: -webkit-flex;
+  gap: .25em;
+}
+
+.badges img {
+  filter: invert(80%) sepia(8%) saturate(8%) hue-rotate(360deg) brightness(85%) contrast(89%);
+}
+
+.badges img:hover {
+  filter: invert(19%) sepia(11%) saturate(2535%) hue-rotate(160deg) brightness(102%) contrast(89%);
+}
+
+.skill-text {
+  font-weight: 900;
+  margin: .5em 0 .65em;
+}
+
+.progress-bar {
+  position: relative;
+  height: .3125em;
+  width: 100%;
+  background-color: #AAA;
+}
+
+.progress-bar:nth-child(3){
+  content:"";
+  margin-bottom: .75em;
+}
+
+.progress-percent {
+  height: 100%;
+  width: 40%;
+}
+
+.education .progress-percent {
+  background-color: #48ACF0;
+}
+
+.experience .progress-percent {
+  background-color: #FF8B00;
+}
+
+.progress-peg {
+  position: absolute;
+  height: calc(15em/16);
+  width: calc(15em/16);
+  top: calc(-5em/16);
+  left: calc(40% - .75em);
+  border-radius: 50%;
+  color: rgba(1,1,1,0);
+}
+
+.education .progress-peg {
+  background-color: #48ACF0;
+}
+
+.experience .progress-peg {
+  background-color: #FF8B00;
+}
+
+.xp-more-than-year {  
+  bottom: -1000% !important;
+}

@@ -1,0 +1,38 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.desktop-view {
+  display: none !important;
+}
+
+@media only screen and (min-width: 700px) {
+  .desktop-view {
+      display: block !important;
+  }
+
+  .mobile-view {
+      display: none !important;
+  }
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}

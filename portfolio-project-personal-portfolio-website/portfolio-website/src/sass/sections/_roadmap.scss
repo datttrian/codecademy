@@ -1,0 +1,170 @@
+.roadmap {
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1440px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+  @media only screen and (min-width: 850px) {
+    .roadmap {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+  }
+
+.milestone-box:nth-child(1)::before{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 50%;
+  top:-1em;
+  left:-.825em;
+  border: 3px solid #FF8B00;
+  background-color: white;
+}
+
+.milestone-box {
+  position: relative;
+}
+
+  @media only screen and (min-width: 850px) {
+    .milestone-box {
+      max-width: 26.5em;
+    }
+  }
+
+.milestone-box-right {
+  padding: 1.5625em 0 1.5625em 2.5em;
+  border-left: 1px solid #707070;
+  justify-self: left;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+  @media only screen and (min-width: 850px) {
+    .milestone-box-right {
+      padding: 1.5625em 0 1.5625em 3.125em;
+      grid-column-start: 2;
+    }
+  }
+
+.milestone-box-left {
+  position: relative;
+  padding: 1.5625em 0 1.5625em 2.5em;
+  border-left: 1px solid #707070;
+  justify-self: left;
+  text-align: left;
+  right: 0px;
+  grid-column-start: 1;
+}
+
+  @media only screen and (min-width: 850px) {
+    .milestone-box-left {
+      padding: 1.5625em 3.125em 1.5625em 0;
+      border-right: 1px solid #707070;
+      border-left: 0px solid #707070;
+      justify-self: right;
+      text-align: right;
+      right: -1px;
+    }
+  }
+
+.milestone-box-right .milestone-company::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -.75em;
+  top: 3em;
+  height: 1.375em;
+  width: 1.375em;
+  border-radius: 50%;;
+  background-color: #707070;
+}
+
+.milestone-box-left .milestone-company::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -.75em;
+  top: 3em;
+  height: 1.375em;
+  width: 1.375em;
+  border-radius: 50%;
+  background-color: #707070;
+}
+
+  @media only screen and (min-width: 850px) {
+    .milestone-box-left .milestone-company::before {
+      left: auto;
+      right: -.75em;
+    }
+  }
+
+h3.milestone {
+  margin: 0 0 calc(2em/3) 0;
+}
+
+p.milestone {
+  line-height: 1.5em;
+  margin: 0 0 .75em 0;
+}
+
+.milestone-company {
+  color: #666;
+}
+
+.milestone-type {
+  color: #ff7300;
+}
+
+.milestone-description {
+  margin-bottom: 0 !important;
+}
+
+#milestone-button {
+  min-height: 3.125em;
+  position: relative;
+  left: -1em;
+  grid-column: 1 / span 2;
+  justify-self: left;
+}
+
+  @media only screen and (min-width: 850px) {
+    #milestone-button {
+      justify-self: center;
+      left: 0;
+    }    
+  }
+
+#milestone-button button {
+  height: 3.125em;
+  z-index: 1;
+  border: 0px solid;
+  padding: 0 1.5em;
+  background-color: #ff7300;
+  cursor: pointer;
+}
+
+#milestone-button i {
+  color: white;
+}
+
+#milestone-button button span {
+  margin-left: .5em;
+  color: white;
+}
+
+#milestone-button button:hover {
+  font-size: 15px;
+  transition: font-size .5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#milestone-button button:not(:hover) {
+  font-size: 16px;
+  transition: font-size .25s;
+}

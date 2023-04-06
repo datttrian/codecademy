@@ -1,0 +1,104 @@
+#contact {
+  width: 100% !important;
+}
+
+  @media only screen and (min-width: 550px) {
+      #contact {
+          width: 85%;
+      }
+  }
+
+#contact .form-container {
+  max-width: 1200px;
+  border-radius: 0em !important;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(18, 8, 78, 0.25), rgba(71, 21, 2, 0.25)), url('../img/index/contact/contact-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+  @media only screen and (min-width: 1200px) {
+    #contact .form-container {
+      border-radius: 1.5em !important;
+    }
+  }
+
+#contact-form {
+  padding: 1.5em;
+  overflow: hidden;
+}
+
+#contact-form-inputs {
+  margin: 1.5em auto;
+  max-width: 1440px;
+  width: 90%;
+}
+
+#contact label {
+  color: white;
+}
+
+#contact label span {
+  color: #ffb152
+}
+
+#contact .form-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  gap: .75em;
+  margin: 1em;
+}
+
+  @media only screen and (min-width: 550px) {
+    #contact .form-row {
+      flex-direction: row;
+    }
+  }
+
+#contact input, #contact select, #contact textarea,
+#contact .form-field {
+  margin-top: .5em;
+  width: 100%;
+}
+
+#contact input, #contact select, #contact textarea {
+  font-size: .9rem;
+  padding: .5em;
+  border-radius: .25em;
+}
+
+  @media only screen and (min-width: 550px) {
+    #contact input, #contact select, #contact textarea{
+      font-size: 1rem;
+      padding: .5em;
+    }
+  }
+
+#contact #submit {
+  width: 8em;
+  padding: .75em;
+  margin: 0 1em 1em 1em;
+  border: 0px solid white;
+  color: white;
+  background-color: #FF8B00;
+}
+
+#contact .option-default {
+  color: #666;
+}
+
+#contact #submit {
+  cursor: pointer;
+}
+
+/* Specific */
+#contact #form-phone {
+  flex: 2 1;
+}
+
+#contact #form-email {
+  flex: 3 1;
+}

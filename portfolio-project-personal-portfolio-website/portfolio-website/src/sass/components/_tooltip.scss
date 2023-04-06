@@ -1,0 +1,69 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+@import "../helpers/placeholder";
+@import "../helpers/variables";
+
+.tooltip {
+  /* Tooltip container */
+  position: relative;
+  display: inline-block;
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  &:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // Tooltip text
+  .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(85, 85, 85, 0.9);
+    color: $white;
+    text-align: left;
+    padding: 0.3125em 0.3125em;
+    border-radius: 0.375em;
+    font-size: .75rem;
+  
+  /* Default position of the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -650%;
+    left: 48%;
+    margin-left: -3.75em;
+  
+  /* Fade in tooltip */
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  
+    cursor: context-menu;
+
+    /* Tooltip arrow pointing to the top */
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 0.3125em;
+      border-style: solid;
+      border-color: transparent transparent rgba(85, 85, 85, 0.9) transparent;
+    }
+  }
+}
+
+/* Tooltip text positioned to the right */
+.right .tooltiptext {
+  bottom: -50%;
+  left: 450%;
+  margin-left: -3.75em;
+
+  /* Tooltip arrow pointing to the left */
+  &::after {
+    bottom: 35%;
+    left: -3.5%;
+    margin-left: -5px;
+    border-color: transparent rgba(85, 85, 85, 0.9) transparent transparent;
+  }
+}

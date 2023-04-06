@@ -1,0 +1,66 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+@import "../helpers/placeholder";
+@import "../helpers/variables";
+
+.fancy-button {
+  position: relative;
+  @extend %top-left;
+
+  display: inline-block;
+  min-width: 5em;
+  margin: .5em;
+  padding: .5em .75em;
+
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+
+  background-color: $dark-color-2;
+
+  &::after {
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+
+    position: absolute;
+    top: .35em;
+    left: -.35em;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    border: 1.5px solid $white;
+    z-index: -1;
+  }
+
+  &:hover {
+    top: .3em;
+    left: -.4em;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+
+    &::after {
+      top: 1px;
+      left: 1px;
+      -webkit-transition: all .15s;
+      -o-transition: all .15s;
+      transition: all .15s;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .fancy-button {
+      font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .fancy-button {
+      font-size: 4vw;
+  }
+}

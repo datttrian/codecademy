@@ -1,0 +1,39 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+@import "../helpers/placeholder";
+@import "../helpers/variables";
+
+.social {
+  display: none;
+  padding: 1rem 2rem 1rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5em;
+}
+
+@media only screen and (min-width: 700px) {
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+  }
+}
+
+.social i {
+  color: $white;
+}
+
+.social i:hover {
+  opacity: 0.75;
+  -webkit-transition: opacity .25s;
+  -o-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+.social i:not(:hover) {
+  -webkit-transition: opacity .25s;
+  -o-transition: opacity .25s;
+  transition: opacity .25s;
+}
