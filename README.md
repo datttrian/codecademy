@@ -80,7 +80,7 @@
     * [Form a Story](https://datttrian.github.io/codecademy/building-interactive-websites/form-a-story/index.html)
 1. [Making A Website Accessible](making-a-website-accessible)
 1. [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
-    * [Portfolio Project](https://datttrian.github.io/codecademy/portfolio-project-personal-portfolio-website/portfolio-website/index.html)
+    * [Portfolio Project](https://datttrian.github.io/codecademy/portfolio-project-personal-portfolio-website/portfolio-website/index.html) (Reference: [daniellabrador](https://github.com/daniellabrador/daniellabrador.github.io))
 
 ## Front-End Development
 
