@@ -109,7 +109,7 @@
 1. [Redux](redux)
     * [Redux Road](redux/redux-road-core-concepts) (Reference: [ZoyaLatif](https://github.com/ZoyaLatif/Redux-Road))
     * [Codecademy Store](https://datttrian-codecademy-store.netlify.app/) (Reference: [diaz-aaron](https://github.com/diaz-aaron/codecademy-store))
-    * Matching Memory
+    * [Matching Memory](https://datttrian-matching-memory.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/matching-memory))
     * Expense Tracker
     * Redux News Reader
     * Challenge Project
