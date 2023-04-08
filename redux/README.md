@@ -5651,10 +5651,7 @@ a couple of challenges to try on your own.
     matching. The challenge here is to apply the style to the text of
     cards that are flipped over and not matched.
 
-### Solution
-
-``` jsx
-```
+### [Solution](matching-memory-react-redux)
 
 # The Redux Toolkit
 

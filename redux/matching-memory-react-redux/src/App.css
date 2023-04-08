@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap");
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+* {
+  font-family: "Oxygen", sans-serif;
+  font-weight: bold;
+}
+
+.App {
+    overflow-y: auto;
+}
+
+.card {
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 6px;
+  border: solid 1px #141c3a;
+  background-color: #141c3a;
+  color: white;
+  cursor: pointer;
+  height: 75px;
+  font-size: 16px;
+}
+
+.card:hover,
+.card:focus {
+  background-color: #2e4085;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 138px);
+  grid-auto-rows: 1fr;
+  gap: 16px 16px;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 24px 0 33px 0;
+}
+
+.card.selected {
+  background-color: initial;
+  color: #141c3a;
+  border: solid 1px #141c3a;
+}
+
+.card.matched {
+  color: #4fe0b0;
+}
+
+.card.no-match {
+  color: #fd4d3f;
+}
+
+.logo-placeholder {
+  width: 120px;
+}
+
+.score-container {
+  background-color: #f2f2f2;
+  padding: 18px 158px 23px 159px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer > button {
+  width: 50%;
+  padding: 19px 40px 19px 40px;
+  font-size: 20px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.start-button {
+  background-color: #141c3a;
+}
+
+.start-button:hover,
+.start-button:focus {
+  background-color: #2c3f81;
+}
+
+.try-new-pair-button {
+  background-color: #6400e4;
+}
+
+.try-new-pair-button:hover,
+.try-new-pair-button:focus {
+  background-color: #7d1aff;
+}
