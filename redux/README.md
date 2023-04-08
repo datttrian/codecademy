@@ -4246,10 +4246,7 @@ keep working on this project, try implementing this bonus feature:
 - Add a search feature (like in the Recipes app) to filter the products
   shown in the inventory.
 
-### Solution
-
-``` jsx
-```
+### [Solution](codecademy-store)
 
 # Implementing the Redux Store from Scratch
 
@@ -5787,7 +5784,7 @@ npm install @reduxjs/toolkit
 ```
 
     ## 
-    ## up to date, audited 8 packages in 1s
+    ## up to date, audited 8 packages in 3s
     ## 
     ## 1 package is looking for funding
     ##   run `npm fund` for details
