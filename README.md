@@ -104,11 +104,11 @@
     * [Create a Playlist App With the Spotify API](https://datttrian-jammming-prj.netlify.app/) (Reference: [nyere](https://github.com/nyere/jammming))
     * [Passing Thoughts](https://datttrian-passing-thoughts.netlify.app/) (Reference: [peterekey](https://github.com/peterekey/codecademy_20230212_passing_thoughts))
     * [Copycat](https://datttrian-copycat.netlify.app) (Reference: [norman02](https://github.com/norman02/CopyCat))
-    * [Adopt a Pet!](https://datttrian-adopt-a-pet.netlify.app/) (Reference: [Codecademy](https://static-assets.codecademy.com/Courses/react-router/adopt-a-pet-solution.zip))
-    * [Challenge Project: Appointment Planner](https://datttrian-appointment-planner.netlify.app) (Reference: [Codecademy](https://static-assets.codecademy.com/skillpaths/react-redux/react_challenge_solution.zip))
+    * [Adopt a Pet!](https://datttrian-adopt-a-pet.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/adopt-a-pet-off-platform-practice-project/597981))
+    * [Challenge Project: Appointment Planner](https://datttrian-appointment-planner.netlify.app) (Reference: [Codecademy](https://discuss.codecademy.com/t/appointment-planner-challenge-project-react/576778))
 1. [Redux](redux)
-    * Redux Road
-    * Codecademy Store
+    * [Redux Road](redux/redux-road-core-concepts) (Reference: [ZoyaLatif](https://github.com/ZoyaLatif/Redux-Road))
+    * [Codecademy Store](https://datttrian-codecademy-store.netlify.app/) (Reference: [diaz-aaron](https://github.com/diaz-aaron/codecademy-store))
     * Matching Memory
     * Expense Tracker
     * Redux News Reader
