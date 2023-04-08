@@ -110,10 +110,9 @@
     * [Redux Road](redux/redux-road-core-concepts) (Reference: [ZoyaLatif](https://github.com/ZoyaLatif/Redux-Road))
     * [Codecademy Store](https://datttrian-codecademy-store.netlify.app/) (Reference: [diaz-aaron](https://github.com/diaz-aaron/codecademy-store))
     * [Matching Memory](https://datttrian-matching-memory.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/matching-memory))
-    * Expense Tracker
-    * Redux News Reader
-    * Challenge Project
-    * Flashcards
+    * [Expense Tracker](https://datttrian-expense-tracker.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/expense-tracker))
+    * [Redux News Reader](https://datttrian-news-reader.netlify.app/) (Reference: [prince-asamoah-amalitech](https://github.com/prince-asamoah-amalitech/redux-news-reader))
+    * [Challenge Project: Flashcards](https://datttrian-flashcards.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/flashcards-challenge-project-redux/576779))
 1. Git and GitHub, Part II
     * Birthday Party
     * Ruby Time Calculator
