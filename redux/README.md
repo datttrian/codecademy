@@ -5781,7 +5781,7 @@ npm install @reduxjs/toolkit
 ```
 
     ## 
-    ## up to date, audited 8 packages in 3s
+    ## up to date, audited 8 packages in 1s
     ## 
     ## 1 package is looking for funding
     ##   run `npm fund` for details
@@ -6838,10 +6838,7 @@ At this point, you should be able to add and delete transactions and see
 your changes reflected in the transactions list as well as in the “Funds
 Remaining” field for each budget.
 
-### Solution
-
-``` jsx
-```
+### [Solution](redux-expense-tracker)
 
 # Redux DevTools
 
@@ -8372,10 +8369,7 @@ In **CommentForm.js**:
     the browser and try to create the same comment twice by double
     clicking. You’ll see that it’s now impossible to do so.
 
-### Solution
-
-``` jsx
-```
+### [Solution](redux-news-reader)
 
 # Code Review: Redux
 
@@ -8854,10 +8848,7 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### Solution
-
-``` jsx
-```
+### [Solution](react-redux-flashcards)
 
 # Review: Redux
 
