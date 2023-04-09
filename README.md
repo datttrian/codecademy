@@ -1,4 +1,4 @@
-[<img src="https://github.com/Codecademy/learn-cpp/blob/master/logo.png" align="right" width=170;>](https://www.codecademy.com)
+[<img src="codecademy.png" align="right" width=170;>](https://www.codecademy.com)
 
 **Table of Contents**
 
@@ -126,7 +126,8 @@
 1. Introduction to Back-End
     * [Message Mixer](introduction-to-back-end/message-mixer-node)
     * [Challenge Project: Find Your Hat]((introduction-to-back-end/find-your-hat)) (Reference: [gilbmporto](https://github.com/gilbmporto/Challenge-Project-Find-Your-Hat))
-1. Build a Back-end with Express.js
+1. [Build a Back-end with Express.js](build-a-back-end-with-express-js)
+    * Quote API (Reference: [JoeR-Dev](https://github.com/JoeR-Dev/QuoteAPI))
 1. User Authentication &amp; Authorization
 1. Back-End and Feature Testing
 1. Database Basics
