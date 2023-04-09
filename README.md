@@ -124,8 +124,8 @@
 ## Back-End Development
 
 1. Introduction to Back-End
-    * Message Mixer
-    * Challenge Project: Find Your Hat
+    * [Message Mixer](introduction-to-back-end/message-mixer-node)
+    * [Challenge Project: Find Your Hat]((introduction-to-back-end/find-your-hat)) (Reference: [gilbmporto](https://github.com/gilbmporto/Challenge-Project-Find-Your-Hat))
 1. Build a Back-end with Express.js
 1. User Authentication &amp; Authorization
 1. Back-End and Feature Testing
