@@ -119,11 +119,13 @@
     * JavaScript Homework
     * Recipe Book
 1. Portfolio Project
-    * Reddit Client
+    * [Reddit Client](https://datttrian-reddit-client.netlify.app/) (Reference: [Codecademy](https://static-assets.codecademy.com/Paths/front-end-career-path/reddit-client/reddit-client-master.zip))
 
 ## Back-End Development
 
 1. Introduction to Back-End
+    * Message Mixer
+    * Challenge Project: Find Your Hat
 1. Build a Back-end with Express.js
 1. User Authentication &amp; Authorization
 1. Back-End and Feature Testing
