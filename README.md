@@ -132,6 +132,8 @@
     * Dognation: Password Authentication
  (Reference: [kimlesieur](https://github.com/kimlesieur/dognation))
 1. Back-End and Feature Testing
+    * Quote Keeper (Reference: [Lukas-Michalek](https://github.com/Lukas-Michalek/quote-keeper))
+    * Quote Keeper: Server Layer (Reference: [emmanuel-odotei](https://github.com/emmanuel-odotei/quote-keeper-server-layer))
 1. Database Basics
 1. Working with Databases
 1. Designing Relational Databases
