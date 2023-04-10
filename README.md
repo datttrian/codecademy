@@ -129,6 +129,8 @@
 1. [Build a Back-end with Express.js](build-a-back-end-with-express-js)
     * Quote API (Reference: [JoeR-Dev](https://github.com/JoeR-Dev/QuoteAPI))
 1. User Authentication &amp; Authorization
+    * Dognation: Password Authentication
+ (Reference: [kimlesieur](https://github.com/kimlesieur/dognation))
 1. Back-End and Feature Testing
 1. Database Basics
 1. Working with Databases
