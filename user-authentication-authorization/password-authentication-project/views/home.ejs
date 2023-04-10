@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/home.css" type="text/css" />
+    <title>Home</title>
+  </head>
+  <body>
+		<!-- Navbar -->
+	<div class="topnav">
+  	<a class="active" href="#home">Home</a>
+  	<div class="topnav-right">
+			<span class="navbar-text user-icon" style="color: white;">
+				<i class="bi bi-person-circle align-items-center" style="font-size: 22px;"></i>
+				<%= user.username ? user.username : "Guest" %>
+			</span>
+			<%- user.username ? '<a href="/users/logout">Logout</a>' : '' %>
+
+  	</div>
+	</div>
+
+
+		<main role="main">
+			<section class="jumbotron text-center">
+				<div class="container">
+					<h1 class="jumbotron-heading">Meet our dogs!</h1>
+					<p class="lead">Dognation is a collaborative site from and for dogwalkers to share their friends to the world!</p>
+					<p>
+						<%- user.username ?
+						'' :
+						'<a href="/users/login" class="btn btn-light my-2 mx-5">Login</a> <a href="users/register" class="btn btn-dark my-2 mx-5">Register</a>' %>
+
+					</p>
+				</div>
+			</section>
+<!-- Album -->
+
+
+<div class="album">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top dog-img" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://imgur.com/g0d9D7K.png" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is Nugget he's an Australian Shepherd. Nugget is a very friendly, easy going and handsome pup. He loves sleeping in his crate and socializing with both humans and other dogs!.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://imgur.com/DquA3D1.png" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is Nugget he's an Australian Shepherd. Nugget is a very friendly, easy going and handsome pup. He loves sleeping in his crate and socializing with both humans and other dogs!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://imgur.com/R4CxTSa.png" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is Nugget he's an Australian Shepherd. Nugget is a very friendly, easy going and handsome pup. He loves sleeping in his crate and socializing with both humans and other dogs!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://imgur.com/LMQ8egL.png" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is Nugget he's an Australian Shepherd. Nugget is a very friendly, easy going and handsome pup. He loves sleeping in his crate and socializing with both humans and other dogs!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://imgur.com/CWyc5s3.png" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is Nugget he's an Australian Shepherd. Nugget is a very friendly, easy going and handsome pup. He loves sleeping in his crate and socializing with both humans and other dogs!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://imgur.com/5eHudHk.png" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is Nugget he's an Australian Shepherd. Nugget is a very friendly, easy going and handsome pup. He loves sleeping in his crate and socializing with both humans and other dogs!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</main>
+
+
+  </body>
+</html>
