@@ -1,0 +1,34 @@
+{
+  "name": "calculator",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "bin/mocha-test && PORT=8001 bin/wdio-test"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "~4.15.2",
+    "express-handlebars": "^3.0.0",
+    "jsdom": "^9.12.0",
+    "morgan": "~1.8.1",
+    "supertest": "^3.0.0",
+    "wdio-phantomjs-service": "^0.2.2",
+    "wdio-spec-reporter": "^0.1.2"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint-config-google": "^0.9.1",
+    "mocha": "^3.0.0",
+    "wdio-mocha-framework": "^0.4.0",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.2.3"
+  },
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
