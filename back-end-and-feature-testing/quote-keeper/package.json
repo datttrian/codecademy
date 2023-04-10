@@ -1,0 +1,23 @@
+{
+    "name": "quote-keeper",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "node ./bin/www",
+      "test": "PORT=8001 bin/wdio-test"
+    },
+    "dependencies": {
+      "express": "~4.15.2",
+      "morgan": "~1.8.1",
+      "wdio-spec-reporter": "^0.1.2"
+    },
+    "devDependencies": {
+      "chai": "3.5.0",
+      "eslint-config-google": "^0.9.1",
+      "mocha": "^3.0.0",
+      "wdio-mocha-framework": "^0.4.0",
+      "wdio-selenium-standalone-service": "0.0.9",
+      "webdriverio": "^4.2.3"
+    }
+  }
+  
