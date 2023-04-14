@@ -1,29 +1,22 @@
 # Places Remember
 
-A web-app that will allow users to store their memories about certain places they have visited.
+A web-app that will allow users to authenticate via Facebook and store their text-based memories about certain places they have visited and share them with others.
 
 # Getting Started
 
-First clone the repository from Github and switch to the new directory:
+- Clone the repository from Github and switch to this directory
+- Activate a environment for the project
+- Install project dependencies
+- Apply the migrations
+- Run the development server
 
-    $ git clone https://github.com/datttrian/places-remember
-    $ cd places-remember/places_remember
-    
-Activate the virtualenv for your project.
-    
-Install project dependencies:
-
-    $ pip install -r requirements/local.txt
-    
-    
-Then simply apply the migrations:
-
-    $ python manage.py migrate
-    
-
-Run the development server:
-
-    $ python manage.py runserver
+```bash
+rm -rf codecademy && git clone https://github.com/datttrian/codecademy
+cd codecademy/django-capstone-project/places-remember
+pip install -r requirements.txt
+python manage.py makemigrations && python manage.py migrate
+python manage.py runserver
+```
 
 # Features
 

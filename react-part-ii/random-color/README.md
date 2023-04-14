@@ -179,4 +179,4 @@ your work!
 [REACT Project Random Color
 Picker](https://www.youtube.com/watch?v=tiH5WiA5I2E)
 
-### [Solution](https://datttrian-random-color.netlify.app)
+### [Solution](https://datttrian-random-color.netlify.app) (Reference: [trumanKnight](https://github.com/trumanKnight/react-random-color-picker))

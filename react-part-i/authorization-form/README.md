@@ -122,7 +122,7 @@ value equal to the `authorize` function.
 Try entering an incorrect password and hitting *Submit*. Nothing should
 happen. Now try entering `swordfish`. Your screen should change!
 
-### [Solution](https://datttrian-authorization-form.netlify.app/)
+### [Solution](https://datttrian-authorization-form.netlify.app/) (Reference: [Preia-Starle](https://github.com/Preia-Starle/Authorization_Form_React))
 
 [REACT Project Authorization
 Form](https://www.youtube.com/watch?v=NQJBKX73jQc)

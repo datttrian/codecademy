@@ -178,4 +178,4 @@ has changed (in other words, if
 Once that’s done, you should be able to navigate through pet profiles
 with ease! Be proud…your pet social network is going to be big.
 
-### [Solution](https://datttrian-social-network-for-pets.netlify.app/)
+### [Solution](https://datttrian-social-network-for-pets.netlify.app/) (Reference: [farulivan](https://github.com/farulivan/social-network-for-pets))

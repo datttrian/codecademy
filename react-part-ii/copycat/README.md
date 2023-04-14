@@ -173,4 +173,4 @@ If not, the name that will be displayed will default to “Tom”.
 
 Add a `propType` for `name` to `propTypes`.
 
-### [Solution](https://datttrian-copycat.netlify.app/)
+### [Solution](https://datttrian-copycat.netlify.app/) (Reference: [norman02](https://github.com/norman02/CopyCat))

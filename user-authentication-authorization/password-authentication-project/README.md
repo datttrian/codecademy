@@ -10,3 +10,5 @@ There was some mistakes and confusions in the project statement, so I decided to
 **If you want to learn some code basics, try one of the CodeAcadey path. It's a great way to start and go deeper in the code then !** 
 
 ## Feedback is welcome! =)
+
+(Reference: [kimlesieur](https://github.com/kimlesieur/dognation))

@@ -199,7 +199,7 @@ If you’d like to keep practicing, try implementing these features:
   cash
 - Add a `'theft'` case: Outlaws steal half of the player’s cash
 
-### [Solution](redux-road-core-concepts.js)
+### [Solution](redux-road-core-concepts.js) (Reference: [ZoyaLatif](https://github.com/ZoyaLatif/Redux-Road))
 
 ``` javascript
 const initialWagonState = {

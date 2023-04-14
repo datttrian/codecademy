@@ -2,150 +2,132 @@
 
 **Table of Contents**
 
-- [Full-Stack Engineer Career Path](#full-stack-engineer-career-path)
-    * [Web Development Foundations](#web-development-foundations)
-    * [Building Interactive Websites](#building-interactive-websites)
-    * [Front-End Development](#front-end-development)
-    * [Back-End Development](#back-end-development)
-    * [Full-Stack Development](#full-stack-development)
-    * [Interview Prep](#interview-prep)
-- [Skill Paths](#skill-path)
+- [Career Path](#career-path)
+    * [Front-End Engineer](#front-end-engineer)
+    * [Back-End Engineer](#building-interactive-websites)
+    * [Full-Stack Engineer](#front-end-development)
+- [Skill Path](#skill-path)
     * [Build Python Web Apps with Flask Skill Path](#build-python-web-apps-with-flask-skill-path)
     * [Build Python Web Apps with Django Skill Path](#build-python-web-apps-with-django-skill-path)
 
-# Full-Stack Engineer Career Path
+# Career Path
 
-## Web Development Foundations
+## Front-End Engineer
 
-1. [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
+1. Introduction to Front-End Engineer Career Path
 1. [Fundamentals of HTML](fundamentals-of-html)
-    * [Fashion Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/html-fashion-blog/index.html) 
-    * [Wine Festival Schedule](https://datttrian.github.io/codecademy/fundamentals-of-html/html-wine-festival-schedule/index.html) 
-    * [New York City Blog](https://datttrian.github.io/codecademy/fundamentals-of-html/semantic-html-nyc-blog/index.html)
 1. [Fundamentals of CSS](fundamentals-of-css)
-    * [Healthy Recipes](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html) 
-    * [Olivia Woodruff Portfolio](https://datttrian.github.io/codecademy/fundamentals-of-css/css-visual-rules-project/index.html) 
-    * [The Box Model: Davie's Burgers](https://datttrian.github.io/codecademy/fundamentals-of-css/box-model-on/index.html) 
-    * [Broadway](https://datttrian.github.io/codecademy/fundamentals-of-css/broadway-design/index.html)
 1. [Developing Websites Locally](developing-websites-locally)
-    * [Off-Platform Project: Dasmoto's Arts & Crafts](https://datttrian.github.io/codecademy/developing-websites-locally/dasmoto/index.html)
-1. [Deploying Websites](deploying-websites)
-    * [Bicycle World](deploying-websites/bicycle-world)
-    * [Daily Buzz](deploying-websites/daily-buzz)
+1. [Deploying Websites ](deploying-websites)
 1. [Improved Styling with CSS](improved-styling-with-css)
-    * [Paint Store](https://datttrian.github.io/codecademy/improved-styling-with-css/color-paint-store/index.html)
-    * [Typography](https://datttrian.github.io/codecademy/improved-styling-with-css/typography-ii/index.html)
-    * [Challenge Project: Build Your Own Cheat Sheet](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-html-documentation/index.html)
-    * [The Summit](https://datttrian.github.io/codecademy/improved-styling-with-css/links-buttons-prj/index.html)
-    * [FreshDeals: Blueberries](https://datttrian.github.io/codecademy/improved-styling-with-css/ui-breadcrumb-proj/index.html)
-    * [Challenge Project: Build a Website Design System](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-web-design-system/index.html)
+1. Fundamentals of Web Design
 1. [Making a Website Responsive](making-a-website-responsive)
-    * [Flexbox: To-Do App](https://datttrian.github.io/codecademy/making-a-website-responsive/flexbox-to---do-app/index.html)
-    * [Off-Platform Project: Tea Cozy](https://datttrian.github.io/codecademy/making-a-website-responsive/tea-cozy/index.html)
-    * [PupSpa](https://datttrian.github.io/codecademy/making-a-website-responsive/pupspa/index.html)
-    * [CSS Grid: Task Board](https://datttrian.github.io/codecademy/making-a-website-responsive/css-grid-task-board/index.html)
-    * [Tsunami Coffee](https://datttrian.github.io/codecademy/making-a-website-responsive/tsunami-coffee/index.html)
-    * [Off-Platform Project: Fotomatic](https://datttrian.github.io/codecademy/making-a-website-responsive/f1-2-c1p1-fotomatic/index.html)
-    * [Challenge Project: Company Home Page with Flexbox](https://datttrian.github.io/codecademy/making-a-website-responsive/company-page-with-flexbox/index.html)
-    * [Challenge Project: Responsive Club Website](https://datttrian.github.io/codecademy/making-a-website-responsive/responsive-club-website/index.html) 
-
-## Building Interactive Websites
-
-1. [JavaScript Syntax, Part I](javascript-syntax-part-i)
-    * [Kelvin Weather](javascript-syntax-part-i/kelvin-weather-javascript)
-    * [Dog Years](javascript-syntax-part-i/dog-years-javascript)
-    * [Magic Eight Ball](javascript-syntax-part-i/magic-eight-ball-1)
-    * [Race Day](javascript-syntax-part-i/race-day)
-    * [Rock, Paper, or Scissors](javascript-syntax-part-i/rock-paper-scissors-javascript)
-    * [Sleep Debt Calculator](javascript-syntax-part-i/sleep-debt-calculator)
-    * [Training Days](javascript-syntax-part-i/training-days)
-    * [Challenge Project: Number Guesser](https://datttrian.github.io/codecademy/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
-1. [JavaScript Syntax, Part II](javascript-syntax-part-ii)
-    * [Secret Message](javascript-syntax-part-ii/secret-message)
-    * [Whale Talk](javascript-syntax-part-ii/whale-talk)
-    * [Meal Maker](javascript-syntax-part-ii/meal-maker)
-    * [Team Stats](javascript-syntax-part-ii/team-stats)
-    * [Grammar Checker](javascript-syntax-part-ii/mini-linter)
-    * [Challenge Project: Credit Card Checker](javascript-syntax-part-ii/credit-card-checker)
-    * [Challenge Project: Mysterious Organism](javascript-syntax-part-ii/mysterious-organism)
-1. [Git and GitHub, Part I](git-and-github-part-i)
-    * [Manhattan Zoo](git-and-github-part-i/manhattan-zoo)
-    * [SnapFit Robots, Inc.](git-and-github-part-i/snapfit-robots)
-    * [Poem Fiasco](git-and-github-part-i/poem-fiasco)
-    * [ASCII Portfolio](git-and-github-part-i/ascii-portfolio)
-1. [Portfolio Project: JavaScript Syntax](portfolio-project-javascript-syntax)
-    * [Mixed Messages](portfolio-project-javascript-syntax/mixed-messages)
+1. CSS Transitions and Animation
+1. [JavaScript Syntax, Part I](javascript-syntax,-part-i)
+1. [JavaScript Syntax, Part II](javascript-syntax,-part-ii)
 1. [Building Interactive Websites](building-interactive-websites)
-    * [Piano Keys](https://datttrian.github.io/codecademy/building-interactive-websites/piano-keys/index.html)
-    * [Form a Story](https://datttrian.github.io/codecademy/building-interactive-websites/form-a-story/index.html)
 1. [Making A Website Accessible](making-a-website-accessible)
-1. [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
-    * [Portfolio Project](https://datttrian.github.io/codecademy/portfolio-project-personal-portfolio-website/portfolio-website/index.html) (Reference: [daniellabrador](https://github.com/daniellabrador/daniellabrador.github.io))
-
-## Front-End Development
-
-1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
-    * [Build a Library](javascript-syntax-part-iii/build-a-library)
-    * [School Catalogue](javascript-syntax-part-iii/school-catalog)
-    * [WorkAround Explorer](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)
+1. [Git and GitHub, Part I](git-and-github-part-i)
+1. [Portfolio Project: Personal Portfolio Website](portfolio-project:-personal-portfolio-website)
+1. [JavaScript Syntax, Part III](javascript-syntax,-part-iii)
 1. [JavaScript Testing](javascript-testing)
-    * [Rooster Regulation](javascript-testing/rooster-regulation)
-    * [Factorial Feature](javascript-testing/factorial)
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
-    * [Film Finder](https://datttrian-js-film-finder.netlify.app/) (Reference: [aweliego](https://github.com/aweliego/film-finder))
 1. [Web Apps](web-apps)
-1. [React, Part I](react-part-i)
-    * [Animal Fun Facts](https://datttrian-js-react-animal-fun-facts.netlify.app/) (Reference: [sarmadgulzar](https://github.com/sarmadgulzar/codecademy-learn-react))
-    * [Authorization Form](https://datttrian-authorization-form.netlify.app/) (Reference: [Preia-Starle](https://github.com/Preia-Starle/Authorization_Form_React))
-1. [React, Part II](react-part-ii)
-    * [Random Color Picker](https://datttrian-random-color.netlify.app/) (Reference: [trumanKnight](https://github.com/trumanKnight/react-random-color-picker))
-    * [Video Player](https://datttrian-video-player.netlify.app) (Reference: [ftanekha](https://github.com/ftanekha/ccReact-videoPlayer))
-    * [Social Network for Pets](https://datttrian-social-network-for-pets.netlify.app/) (Reference: [farulivan](https://github.com/farulivan/social-network-for-pets))
-    * [Create a Playlist App With the Spotify API](https://datttrian-jammming-prj.netlify.app/) (Reference: [nyere](https://github.com/nyere/jammming))
-    * [Passing Thoughts](https://datttrian-passing-thoughts.netlify.app/) (Reference: [peterekey](https://github.com/peterekey/codecademy_20230212_passing_thoughts))
-    * [Copycat](https://datttrian-copycat.netlify.app) (Reference: [norman02](https://github.com/norman02/CopyCat))
-    * [Adopt a Pet!](https://datttrian-adopt-a-pet.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/adopt-a-pet-off-platform-practice-project/597981))
-    * [Challenge Project: Appointment Planner](https://datttrian-appointment-planner.netlify.app) (Reference: [Codecademy](https://discuss.codecademy.com/t/appointment-planner-challenge-project-react/576778))
+1. [React, Part I](react,-part-i)
+1. [React, Part II](react,-part-ii)
 1. [Redux](redux)
-    * [Redux Road](redux/redux-road-core-concepts) (Reference: [ZoyaLatif](https://github.com/ZoyaLatif/Redux-Road))
-    * [Codecademy Store](https://datttrian-codecademy-store.netlify.app/) (Reference: [diaz-aaron](https://github.com/diaz-aaron/codecademy-store))
-    * [Matching Memory](https://datttrian-matching-memory.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/matching-memory))
-    * [Expense Tracker](https://datttrian-expense-tracker.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/expense-tracker))
-    * [Redux News Reader](https://datttrian-news-reader.netlify.app/) (Reference: [prince-asamoah-amalitech](https://github.com/prince-asamoah-amalitech/redux-news-reader))
-    * [Challenge Project: Flashcards](https://datttrian-flashcards.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/flashcards-challenge-project-redux/576779))
-1. Git and GitHub, Part II
-    * Birthday Party
-    * Ruby Time Calculator
-    * JavaScript Homework
-    * Recipe Book
-1. Portfolio Project
-    * [Reddit Client](https://datttrian-reddit-client.netlify.app/) (Reference: [Codecademy](https://static-assets.codecademy.com/Paths/front-end-career-path/reddit-client/reddit-client-master.zip))
+1. [Git and GitHub, Part II](git-and-github-part-ii)
+1. [Portfolio Project: Reddit Client](portfolio-project:-reddit-client)
+1. Advanced Web Development
+1. What To Expect in a Technical Interview
+1. Linear Data Structures
+1. Complex Data Structures
+1. Algorithms
+1. Search and Graph Search Algorithms
+1. Interview Skills
+1. Portfolio Project: Open-Ended Project
+1. Next Steps in Your Front-End Engineer Journey
 
-## Back-End Development
+## Back-End Engineer
 
-1. Introduction to Back-End
-    * [Message Mixer](introduction-to-back-end/message-mixer-node)
-    * [Challenge Project: Find Your Hat]((introduction-to-back-end/find-your-hat)) (Reference: [gilbmporto](https://github.com/gilbmporto/Challenge-Project-Find-Your-Hat))
-1. [Build a Back-end with Express.js](build-a-back-end-with-express-js)
-    * Quote API (Reference: [JoeR-Dev](https://github.com/JoeR-Dev/QuoteAPI))
-1. User Authentication &amp; Authorization
-    * Dognation: Password Authentication
- (Reference: [kimlesieur](https://github.com/kimlesieur/dognation))
-1. Back-End and Feature Testing
-    * Quote Keeper (Reference: [Lukas-Michalek](https://github.com/Lukas-Michalek/quote-keeper))
-    * Quote Keeper: Server Layer (Reference: [emmanuel-odotei](https://github.com/emmanuel-odotei/quote-keeper-server-layer))
+1. Welcome to the Back-End Engineer Path
+1. Setting Up a Dev Environment
+1. Web Development Fundamentals
+1. [JavaScript Syntax, Part I](javascript-syntax-part-i)
+1. [JavaScript Syntax, Part II](javascript-syntax-part-ii)
+1. Building Interactive Websites with JavaScript
+1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
+1. [Git and Github, Part I](git-and-github-part-i)
+1. [Portfolio Project: Mixed Messages](portfolio-project-mixed-messages)
+1. [Basics of Back-End Development](basics-of-back-end-development)
+1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
+1. [Build a Back-End with Express.js](build-a-back-end-with-express.js)
+1. [Git and Github, Part II](git-and-github-part-ii)
+1. Portfolio Project: Personal Budget I
 1. Database Basics
 1. Working with Databases
 1. Designing Relational Databases
-    * Build A Menu For Bytes Of China
-    * Database Triggers1. Advanced PostgreSQL
+1. Advanced PostgreSQL
+1. Connecting a Database to a Server
+1. Deploying a Server
+1. JavaScript Testing
+1. Software Design Principles
+1. API Development with Swagger and OpenAPI
+1. Portfolio Project: Personal Budget II
+1. Web Security Fundamentals
+1. User Authentication and Authorization
+1. Data Security
+1. Common Attacks on Web Applications
+1. Fundamentals of Operating Systems
+1. Caching and CDNs
+1. Scalability
+1. DevOps Fundamentals
+1. Portfolio Project: Photo Caption Contest
+1. Linear Data Structures
+1. Complex Data Structures
+1. Algorithms
+1. Search and Graph Search Algorithms
+1. What to Expect in a Technical Interview
+1. Interview Skills
+1. Portfolio Project: Open-Ended Project
+1. Next Steps in Your Back-End Journey
+
+## Full-Stack Engineer Career Path
+
+1. [Welcome to the Full-Stack Engineer Path](welcome-to-the-full-stack-engineer-path)
+1. [Fundamentals of HTML](fundamentals-of-html)
+1. [Fundamentals of CSS](fundamentals-of-css)
+1. [Developing Websites Locally](developing-websites-locally)
+1. [Deploying Websites ](deploying-websites)
+1. [Improved Styling with CSS](improved-styling-with-css)
+1. [Making a Website Responsive](making-a-website-responsive)
+1. [JavaScript Syntax, Part I](javascript-syntax-part-i)
+1. [JavaScript Syntax, Part II](javascript-syntax-part-ii)
+1. [Git and GitHub, Part I](git-and-github-part-i)
+1. [Portfolio Project: JavaScript Syntax ](portfolio-project-javascript-syntax)
+1. [Building Interactive Websites](building-interactive-websites)
+1. [Making A Website Accessible](making-a-website-accessible)
+1. [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
+1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
+1. [JavaScript Testing](javascript-testing)
+1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
+1. [Web Apps](web-apps)
+1. [React, Part I](react-part-i)
+1. [React, Part II](react-part-ii)
+1. [Redux](redux)
+1. [Git and GitHub, Part II](git-and-github-part-ii)
+1. [Portfolio Project: Reddit Client](portfolio-project-reddit-client)
+1. [Introduction to Back-End](introduction-to-back-end)
+1. [Build a Back-end with Express.js](build-a-back-end-with-express.js)
+1. [User Authentication &amp; Authorization](user-authentication-authorization)
+1. Back-End and Feature Testing
+1. Database Basics
+1. Working with Databases
+1. Designing Relational Databases
+1. Advanced PostgreSQL
 1. Adding a PostgreSQL Database
 1. API Development with Swagger and OpenAPI
-1. Portfolio Project
-    * E-Commerce App (REST API)
-
-## Full-Stack Development
-
+1. Portfolio Project: E-Commerce App (REST API)
 1. Connecting Front-End to Back-End
 1. Deploying Web Applications
 1. Web Security Fundamentals
@@ -153,63 +135,37 @@
 1. Common Attacks on Web Applications
 1. Fundamentals of Operating Systems
 1. DevOps Fundamentals
-1. Portfolio Project
-    * E-Commerce App (Client)
-
-## Interview Prep
-
+1. Portfolio Project: E-Commerce App (Client)
 1. What To Expect in a Technical Interview
 1. Linear Data Structures
 1. Complex Data Structures
 1. Algorithms
 1. Search &amp; Graph Search Algorithms
 1. Interview Skills
-1. Portfolio Project
-    * Open-Ended PERN App
+1. Portfolio Project: Open-Ended PERN App
 1. Next Steps in Your Full-Stack Engineer Journey
 
-# Skill Paths
+# Skill Path
 
-## Build Python Web Apps with Flask Skill Path
+## Build Python Web Apps with Flask
 
 1. [Introduction to Python](flask-introduction-to-python)
-    * [Receipts for Lovely Loveseats](flask-introduction-to-python/furniture-store.py)
-    * [Getting Ready for Physics Class](flask-introduction-to-python/physics-class.py)
-    * [Sal's Shipping](flask-introduction-to-python/shipping.py)
 1. [Introduction to Python Data Structures and Loops](flask-python-data-structures-loops)
-    * [Len's Slice](flask-python-data-structures-loops/lens-slice.py)
-    * [Carly's Clippers](flask-python-data-structures-loops/carlys-clippers.py)
-    * [Scrabble](flask-python-data-structures-loops/scrabble.py)
-    * [Basta Fazoolin'](flask-python-data-structures-loops/basta-fazoolin.py)
 1. [Introduction to the Web](flask-introduction-to-the-web)
 1. [Introduction to Flask](introduction-to-flask)
-    * [Adopt a Pet](introduction-to-flask/adopt-a-pet)
-    * Tourist Attractions
 1. [Introduction to SQL and Databases for Back-End Web Apps](flask-sql-databases)
-    * Create a Table
-    * New York Restaurants
-    * FlaskFM
 1. [Advanced Flask Functionality](flask-advanced-functionality)
-    * Travel Sites
 1. [Deploying an Application](flask-deploying)
 1. [Build Python Web Apps with Flask Capstone Project](flask-capstone-project)
 
-## Build Python Web Apps with Django Skill Path
+## Build Python Web Apps with Django
 
 1. [Introduction to the Web](django-introduction-to-the-web)
 1. [Introduction to Django](introduction-to-django)
-    * [Fortune Teller](introduction-to-django/fortuneteller)
 1. [Templates in Django](templates-in-django)
-    * [Tourist Attractions with Templates](templates-in-django/touristAttractions)
 1. [Data in Django](data-in-django)
-    * [Djaunty Rent-a-Bike](data-in-django/BikeRental)
 1. [Views in Django](views-in-django)
-    * [The Django Djitney](views-in-django/djangodjitney)
 1. [Forms in Django](forms-in-django)
-    * [Tourist Attractions with Forms](forms-in-django/touristAttractions)
 1. [Accounts and Authentication in Django](accounts-and-authentication-in-django)
-    * [Weekly Dessert](accounts-and-authentication-in-django/cafeteria)
 1. [Deploying a Django Project](deploying-a-django-project)
-    * [Vetoffice](deploying-a-django-project/djangovet)
 1. [Build Python Web Apps with Django Capstone Project](django-capstone-project)
-    * Places Remember

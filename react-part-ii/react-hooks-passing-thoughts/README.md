@@ -278,4 +278,4 @@ can get with `thought.id`.
 Once that’s done, try adding some thoughts and watch them disappear…it’s
 just like your brain, but you built it with React.
 
-### [Solution](https://datttrian-passing-thoughts.netlify.app/)
+### [Solution](https://datttrian-passing-thoughts.netlify.app/) (Reference: [peterekey](https://github.com/peterekey/codecademy_20230212_passing_thoughts))

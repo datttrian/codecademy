@@ -329,7 +329,7 @@ following:
   `movies` contains results from a random page instead of the first
   page.
 
-### [Solution](https://datttrian.github.io/codecademy/async-javascript-and-http-requests/js-film-finder/index.html)
+### [Solution](https://datttrian.github.io/codecademy/async-javascript-and-http-requests/js-film-finder/index.html)  (Reference: [aweliego](https://github.com/aweliego/film-finder))
 
 [Learn JavaScript Film
 Finder](https://www.youtube.com/watch?v=W6El1fjUaJI)

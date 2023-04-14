@@ -509,4 +509,4 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](https://datttrian-adopt-a-pet.netlify.app/)
+### [Solution](https://datttrian-adopt-a-pet.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/adopt-a-pet-off-platform-practice-project/597981))

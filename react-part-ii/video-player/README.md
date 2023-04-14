@@ -137,4 +137,4 @@ You’ve put together a responsive video player, and done it in a way that
 you will often find in the real world!
 
 
-### [Solution](https://datttrian-video-player.netlify.app/)
+### [Solution](https://datttrian-video-player.netlify.app/) (Reference: [ftanekha](https://github.com/ftanekha/ccReact-videoPlayer))

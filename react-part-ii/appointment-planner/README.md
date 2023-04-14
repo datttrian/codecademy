@@ -280,4 +280,4 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](https://datttrian-appointment-planner.netlify.app/)
+### [Solution](https://datttrian-appointment-planner.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/appointment-planner-challenge-project-react/576778))

@@ -1,0 +1,1 @@
+(Reference: [Lukas-Michalek](https://github.com/Lukas-Michalek/quote-keeper))

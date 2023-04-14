@@ -349,4 +349,4 @@ In **CommentForm.js**:
     the browser and try to create the same comment twice by double
     clicking. You’ll see that it’s now impossible to do so.
 
-### [Solution](https://datttrian-news-reader.netlify.app/)
+### [Solution](https://datttrian-news-reader.netlify.app/) (Reference: [prince-asamoah-amalitech](https://github.com/prince-asamoah-amalitech/redux-news-reader))

@@ -187,7 +187,7 @@ value of the first one whose boolean evaluates to `true`.
 Considering the boolean of an empty string is `false` can you think of a
 way to use `||` to replace the ternary operator in the heading?
 
-### [Solution](https://datttrian-js-react-animal-fun-facts.netlify.app/)
+### [Solution](https://datttrian-js-react-animal-fun-facts.netlify.app/) (Reference: [sarmadgulzar](https://github.com/sarmadgulzar/codecademy-learn-react))
 
 [Learn React JSX Animal Fun
 Facts](https://www.youtube.com/watch?v=81mybnZPHDg)
