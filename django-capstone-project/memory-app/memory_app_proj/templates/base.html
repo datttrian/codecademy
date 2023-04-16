@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock title %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{% static 'base.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="box d-flex">
+<div class="g-0">
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+  <div class="container-fluid">
+    <img class="me-2" src="{% static 'logo.svg' %}" width="30" alt="logo">
+    <a class="navbar-brand me-auto" href="#">Places Remember</a>
+    {% if user.is_authenticated %}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex ms-auto">
+            <img class="rounded-circle me-2 my-auto" src="{{ user.profile.avatar_url }}" width="30" height="30" alt="profile pic">
+            <p class="me-2 my-auto">{{ user.first_name }}</p>
+            <a class="btn btn-outline-danger" href="{% url 'account_logout' %}">Выйти</a>
+          </div>
+        </div>
+    {% endif %}
+  </div>
+</nav>
+</div>
+{% block content %}
+{% endblock content %}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

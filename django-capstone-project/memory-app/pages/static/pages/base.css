@@ -1,0 +1,9 @@
+.place {
+    align-items: center;
+    background-color: whitesmoke;
+    border: gray solid 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}

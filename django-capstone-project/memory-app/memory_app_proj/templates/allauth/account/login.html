@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}Places Remember{% endblock %}
+
+{% block content %}
+
+{% get_providers as socialaccount_providers %}
+
+<div class="socialaccount_ballot" style="padding: 1rem">
+  <p>Данное приложение позволяет пользователям сохранить впечатления о значимых для них местах отмечая их на карте.</p>
+  Для того, чтобы продолжить, необходимо войти с помощью
+  {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+</div>
+
+{% include "socialaccount/snippets/login_extra.html" %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Homepage{% endblock title %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'pages/base.css' %}">
+    {% if places %}
+        {% for place in places %}
+            {% include 'pages/place.html' with place=place %}
+        {% endfor%}
+    {% else %}
+        <div class="row content g-0">
+          У вас нет ни одного воспоминания
+        </div>
+    {% endif %}
+{% endblock content %}

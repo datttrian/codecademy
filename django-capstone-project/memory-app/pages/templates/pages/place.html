@@ -1,0 +1,10 @@
+<div class="place m-3 p-2">
+    <div class="location">
+        {{ place.location }}
+    </div>
+    {% if place.comment %}
+        <div class="comment mt-2">
+            {{ place.comment }}
+        </div>
+    {% endif %}
+</div>
