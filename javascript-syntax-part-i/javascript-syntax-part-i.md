@@ -245,11 +245,11 @@ developers. Make sure to take notes and pace yourself. This foundation
 will set you up for understanding the more complex concepts you’ll
 encounter later.
 
-### Instructions
+
 
 Move to the next exercise when you’re ready to begin.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-introduction-introduction-to-javascript/JS_graphic.svg" alt="JavaScript Logo" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -285,7 +285,7 @@ few instances when they are required.
 You’ll see later on that we can use `console.log()` to print different
 kinds of data.
 
-### Instructions
+
 
 **1.**
 
@@ -298,7 +298,7 @@ Run your code when you are ready to see the result.
 On the next line, write another `console.log` to print out a different
 number representing the number of weeks you’ve been programming.
 
-### Solution
+
 
 ``` javascript
 console.log(45);
@@ -360,7 +360,7 @@ There are two types of code comments in JavaScript:
     console.log(/*IGNORED!*/ 5);  // Still just prints 5 
     ```
 
-### Instructions
+
 
 **1.**
 
@@ -381,7 +381,7 @@ purpose.
 Use a multi-line comment so that the bottom 6 `console.log()` statements
 are all commented out.
 
-### Solution
+
 
 ``` javascript
 // Opening line
@@ -448,7 +448,7 @@ punctuation.
 
 Next, we printed the number 40, notice we did not use quotes.
 
-### Instructions
+
 
 **1.**
 
@@ -466,7 +466,7 @@ On line 3, print `'Woohoo! I love to code! #codecademy'` to the console.
 
 On line 4, print the number `20.49` to the console.
 
-### Solution
+
 
 ``` javascript
 console.log('JavaScript');
@@ -522,7 +522,7 @@ that remains after the right-hand number divides into the left-hand
 number as many times as it evenly can: `11 % 3` equals 2 because 3 fits
 into 11 three times, leaving 2 as the remainder.
 
-### Instructions
+
 
 **1.**
 
@@ -550,7 +550,7 @@ Create one last `console.log()`. Inside the parentheses, multiply
 That’s the percent of the sun that is made up of helium. Assuming we
 could stand on the sun, we’d all sound like chipmunks!
 
-### Solution
+
 
 ``` javascript
 console.log(10 + 3.5)
@@ -603,7 +603,7 @@ console.log('One' + ', ' + 'two' + ', ' + 'three!');
 // Prints 'One, two, three!'
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -620,7 +620,7 @@ statement in which you concatenate the strings `'Hello'` and `'World'`,
 but this time make sure to also include a space (`' '`) between the two
 words.
 
-### Solution
+
 
 ``` javascript
 console.log('Hello' + 'World');
@@ -653,7 +653,7 @@ In the example above, the value saved to the `length` property is
 retrieved from the instance of the string, `'Hello'`. The program prints
 `5` to the console, because `Hello` has five characters in it.
 
-### Instructions
+
 
 **1.**
 
@@ -662,7 +662,7 @@ following string to the console:
 
     'Teaching the world how to code'
 
-### Solution
+
 
 ``` javascript
 console.log('Teaching the world how to code'.length);
@@ -714,7 +714,7 @@ target="_blank" rel="noopener">JavaScript documentation</a>. Developers
 use documentation as a reference tool. It describes JavaScript’s
 keywords, methods, and syntax.
 
-### Instructions
+
 
 **1.**
 
@@ -737,7 +737,7 @@ goal. The one method that seems ideal for us is `.trim()`.
 Use the method to remove the whitespace at the beginning and end of the
 string in the second `console.log()` statement.
 
-### Solution
+
 
 ``` javascript
 // Use .toUpperCase() to log 'Codecademy' in all uppercase letters
@@ -814,7 +814,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_O
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">the documentation here</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -851,7 +851,7 @@ integer.
 Put the number `2017` in the parentheses of the method and use
 `console.log()` to print the result.
 
-### Solution
+
 
 ``` javascript
 console.log(Math.floor(Math.random() * 100));
@@ -928,11 +928,11 @@ represented by the content, and the name is represented with the label.
 In this lesson, we will cover how to use the `var`, `let`, and `const`
 keywords to create variables.
 
-### Instructions
+
 
 When you’re ready to start, go to the next exercise!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-variables/variable%20boxes.svg" alt="boxes holding values represent variables" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -990,7 +990,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statemen
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">MDN var documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -1010,7 +1010,7 @@ saved to `favoriteFood`.
 On the following line, use `console.log()` to print the value saved to
 `numOfSlices`.
 
-### Solution
+
 
 ``` javascript
 var favoriteFood = 'pizza';
@@ -1053,7 +1053,7 @@ Notice in the example above:
   keyword, it automatically has a value of `undefined`.
 - We can reassign the value of the variable.
 
-### Instructions
+
 
 **1.**
 
@@ -1068,7 +1068,7 @@ be the boolean `false`.
 To check if `changeMe` was reassigned, log the value saved to `changeMe`
 to the console.
 
-### Solution
+
 
 ``` javascript
 let changeMe = true;
@@ -1106,7 +1106,7 @@ If you’re trying to decide between which keyword to use, `let` or
 on. If you do need to reassign the variable use `let`, otherwise, use
 `const`.
 
-### Instructions
+
 
 **1.**
 
@@ -1138,7 +1138,7 @@ TypeError: Assignment to constant variable.
 After you clear this checkpoint, if you want to see about another quirk
 of `const` in action open the hint!
 
-### Solution
+
 
 ``` javascript
 const entree = 'Enchiladas';
@@ -1203,7 +1203,7 @@ console.log(z); // Output: 4
 
 Let’s practice using these mathematical assignment operators!
 
-### Instructions
+
 
 **1.**
 
@@ -1225,7 +1225,7 @@ stored in `multiplyMe` by `11`.
 Use the `/=` mathematical assignment operator to divide the value stored
 in `quarterMe` by `4`.
 
-### Solution
+
 
 ``` javascript
 let levelUp = 10;
@@ -1278,7 +1278,7 @@ Just like the previous mathematical assignment operators (`+=`, `-=`,
 `*=`, `/=`), the variable’s value is updated *and* assigned as the new
 value of that variable.
 
-### Instructions
+
 
 **1.**
 
@@ -1288,7 +1288,7 @@ Using the increment operator, increase the value of `gainedDollar`.
 
 Using the decrement operator, decrease the value of `lostDollar`.
 
-### Solution
+
 
 ``` javascript
 let gainedDollar = 3;
@@ -1319,7 +1319,7 @@ the result of this concatenation to the console as:
 
     I own a pet armadillo.
 
-### Instructions
+
 
 **1.**
 
@@ -1332,7 +1332,7 @@ Use `console.log()` to print `'My favorite animal: ANIMAL'` to the
 console. Use string concatenation so that `ANIMAL` is replaced with the
 value in your `favoriteAnimal` variable.
 
-### Solution
+
 
 ``` javascript
 let favoriteAnimal = "giraffe";
@@ -1370,7 +1370,7 @@ readability of the code. Using template literals, you can more easily
 tell what the new string will be. You also don’t have to worry about
 escaping double quotes or single quotes.
 
-### Instructions
+
 
 **1.**
 
@@ -1392,7 +1392,7 @@ console in the following format:
 Replace `NAME` and `CITY` in the string above by interpolating the
 values saved to `myName` and `myCity`.
 
-### Solution
+
 
 ``` javascript
 let myName = 'Natalia';
@@ -1426,7 +1426,7 @@ console.log(typeof unknown3); // Output: boolean
 Let’s break down the first example. Since the value `unknown1` is
 `'foo'`, a string, `typeof unknown1` will return `'string'`.
 
-### Instructions
+
 
 **1.**
 
@@ -1443,7 +1443,7 @@ Since you assigned this new value to `newVariable`, it has a new type!
 On the line below your reassignment, use `console.log()` to print
 `typeof newVariable` again.
 
-### Solution
+
 
 ``` javascript
 let newVariable = 'Playing around with typeof.';
@@ -1482,7 +1482,7 @@ Let’s review what we learned:
   interpolate values into a string.
 - The `typeof` keyword returns the data type (as a string) of a value.
 
-### Instructions
+
 
 To learn more about variables take on these challenges!
 
@@ -1530,7 +1530,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1629,7 +1629,7 @@ If you’d like extra practice, try this:
 - Use `console.log` and string interpolation to log the temperature in
   `newton` to the console
 
-### [Solution](kelvin-weather-javascript)
+## [Solution](kelvin-weather-javascript)
 
 ``` javascript
 //Temperature in Kelvin
@@ -1679,7 +1679,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1768,7 +1768,7 @@ Great work! You can convert any human age to dog years. Try changing
 If you’d like extra practice, try writing this project without the `*=`
 operator.
 
-### [Solution](dog-years-javascript)
+## [Solution](dog-years-javascript)
 
 ``` javascript
 //Setting my age for the human age
@@ -1834,12 +1834,12 @@ So *if* you’re ready to learn these concepts go to the next lesson—
 *else*, read over the concepts, observe the diagram, and prepare
 yourself for this lesson!
 
-### Instructions
+
 
 Check out the diagram to see how conditionals allow us to create
 decision-making technology.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-conditionals/control_flow_diagram_v5.svg" alt="If sleepy -> sleep in. Else -> start your day." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1873,7 +1873,7 @@ statement is composed of:
 
 Let’s make an `if` statement.
 
-### Instructions
+
 
 **1.**
 
@@ -1897,7 +1897,7 @@ Below the `sale` variable declaration, but before the `if` statement,
 reassign `sale` to `false`. Run your code and observe what happens,
 we’ll be changing this behavior in the next exercise.
 
-### Solution
+
 
 ``` javascript
 let sale = true;
@@ -1947,7 +1947,7 @@ In the example above, the `else` statement:
 `if...else` statements allow us to automate solutions to yes-or-no
 questions, also known as *binary decisions*.
 
-### Instructions
+
 
 **1.**
 
@@ -1955,7 +1955,7 @@ Add an `else` statement to the existing `if` statement. Inside the code
 block of the `else` statement, `console.log()` the string
 `'Time to wait for a sale.'`
 
-### Solution
+
 
 ``` javascript
 let sale = true;
@@ -2019,7 +2019,7 @@ made up of:
 
 Let’s practice using these comparison operators!
 
-### Instructions
+
 
 **1.**
 
@@ -2037,7 +2037,7 @@ After you press run, play around with the condition by tweaking the
 comparison of `hungerLevel` by using different operators such as
 `<=`,`>=`,`>`, and `<`.
 
-### Solution
+
 
 ``` javascript
 let hungerLevel = 7;
@@ -2116,7 +2116,7 @@ back `false`, or it will take a `false` value and pass back `true`.
 Logical operators are often used in conditional statements to add
 another layer of logic to our code.
 
-### Instructions
+
 
 **1.**
 
@@ -2133,7 +2133,7 @@ After you press “Run”, play around with the `||` operator and the `!`
 operator! What happens if you negate the value of the entire statement
 with `!` and switch to `||` instead of `&&`?
 
-### Solution
+
 
 ``` javascript
 let mood = 'sleepy';
@@ -2201,7 +2201,7 @@ The condition evaluates to `false` because the value of the
 `numberOfApples` is `0`. Since `0` is a falsy value, the code block in
 the `else` statement will run.
 
-### Instructions
+
 
 **1.**
 
@@ -2219,7 +2219,7 @@ falsy.
 After you make this change and run your code,
 `'This string is definitely empty.'` should log to the console.
 
-### Solution
+
 
 ``` javascript
 let wordCount = 1;
@@ -2283,7 +2283,7 @@ if it is truthy, and it will be assigned the value of `'Stranger'` if
 `username` is falsy. This concept is also referred to as *short-circuit
 evaluation*.
 
-### Instructions
+
 
 **1.**
 
@@ -2302,7 +2302,7 @@ console. Which means the value of `writingUtensil` is `'pen'`.
 What if we reassign the value of `tool` to `'marker'`. Let’s see what
 happens to the value of `writingUtensil`.
 
-### Solution
+
 
 ``` javascript
 let tool = '';
@@ -2350,7 +2350,7 @@ In the example above:
 Like `if...else` statements, ternary operators can be used for
 conditions which evaluate to `true` or `false`.
 
-### Instructions
+
 
 **1.**
 
@@ -2365,7 +2365,7 @@ Refactor the second `if...else` block to use a ternary operator.
 
 Refactor the third `if...else` block to use a ternary operator.
 
-### Solution
+
 
 ``` javascript
 let isLocked = false;
@@ -2425,7 +2425,7 @@ first `else if` statement is executed. The rest of the conditions are
 not evaluated. If none of the conditions evaluated to `true`, then the
 code in the `else` statement would have executed.
 
-### Instructions
+
 
 **1.**
 
@@ -2460,7 +2460,7 @@ Inside the code block of the `else if` statement you just created, add a
 `console.log()` that prints the string
 `'It\'s sunny and warm because it\'s summer!'`.
 
-### Solution
+
 
 ``` javascript
 let season = 'summer';
@@ -2553,7 +2553,7 @@ switch (groceryItem) {
   If none of the `case`s are true, then the code in the `default`
   statement will run.
 
-### Instructions
+
 
 **1.**
 
@@ -2590,7 +2590,7 @@ the string `'No medal awarded.'` is logged to the console.
 
 Remember to add the `break` keyword at the end of the `default` case.
 
-### Solution
+
 
 ``` javascript
 let athleteFinalPosition = 'first place';
@@ -2636,7 +2636,7 @@ Way to go! Here are some of the major concepts for conditionals:
   multiple `else if` statements. The `break` keyword stops the remaining
   `case`s from being checked and executed in a `switch` statement.
 
-### Instructions
+
 
 In **main.js**, practice the skills you learned in this lesson.
 
@@ -2658,7 +2658,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2755,7 +2755,7 @@ If you want extra practice:
 - If you started with `if`/`else if`/`else` statements, convert them to
   a `switch` statement.
 
-### [Solution](magic-eight-ball-1)
+## [Solution](magic-eight-ball-1)
 
 ``` javascript
 let userName = "datttrian";
@@ -2841,7 +2841,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2919,7 +2919,7 @@ Don’t forget about runners exactly 18 years old!
 Add an `else` statement that logs a statement to the console telling the
 runner to see the registration desk.
 
-### [Solution](race-day)
+## [Solution](race-day)
 
 ``` javascript
 let raceNumber = Math.floor(Math.random() * 1000);
@@ -3000,14 +3000,14 @@ groups together a sequence of statements to perform a specific task.
 In this lesson, you will learn how to create and use functions, and how
 they can be used to create clearer and more concise code.
 
-### Instructions
+
 
 Take a look at the provided GIF. It shows a function, named
 `addOneSide`, adding an additional side to different shape inputs.
 Notice how there is only one function, represented by the box, that is
 used to transform individual shapes (inputs) into new shapes (outputs).
 
-### Solution
+
 
 <img alt="Functions example GIF" src="https://content.codecademy.com/courses/learn-javascript-functions/functions_2.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -3060,7 +3060,7 @@ If you want to read more about hoisting, check out
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">MDN documentation on hoisting</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -3087,7 +3087,7 @@ Add code to the function body of `greetInSpanish()`:
 - In the function body `console.log()` the following Spanish phrase to
   the console: `'Buenas tardes.'`
 
-### Solution
+
 
 ``` javascript
 function getReminder() {
@@ -3129,7 +3129,7 @@ We can call the same function as many times as needed.
 
 Let’s practice calling functions in our code.
 
-### Instructions
+
 
 **1.**
 
@@ -3154,7 +3154,7 @@ Imagine that three customers placed an order and you wanted to send each
 of them a thank you message. Update your code to call `sayThanks()`
 three times.
 
-### Solution
+
 
 ``` javascript
 function sayThanks() {
@@ -3220,7 +3220,7 @@ By using parameters, `calculateArea()` can be reused to compute the area
 of any rectangle! Functions are a powerful tool in computer programming
 so let’s practice creating and calling functions with parameters.
 
-### Instructions
+
 
 **1.**
 
@@ -3250,7 +3250,7 @@ A customer named Cole just purchased something from your online store.
 Call `sayThanks()` and pass `'Cole'` as an argument to send Cole a
 personalized thank you message.
 
-### Solution
+
 
 ``` javascript
 function sayThanks(name) {
@@ -3298,7 +3298,7 @@ isn’t passed into a function that is expecting an argument.
 
 Let’s practice creating functions that use default parameters.
 
-### Instructions
+
 
 **1.**
 
@@ -3315,7 +3315,7 @@ Change the parameters of `makeShoppingList()` into default parameters :
 - Assign ‘bread’ as the default value of `item2`.
 - Assign ‘eggs’ as the default value of `item3`.
 
-### Solution
+
 
 ``` javascript
 function makeShoppingList(item1 = 'milk', item2 = 'bread', item3 = 'eggs'){
@@ -3379,7 +3379,7 @@ statement `width * height` will not run.
 The `return` keyword is powerful because it allows functions to produce
 an output. We can then save the output to a variable for later use.
 
-### Instructions
+
 
 **1.**
 
@@ -3412,7 +3412,7 @@ arguments `5` and `4`.
 To check that the function worked properly, log `numOfMonitors` to the
 console.
 
-### Solution
+
 
 ``` javascript
 function monitorCount(rows, columns) {
@@ -3468,7 +3468,7 @@ use them when we need to. Writing helper functions can help take large
 and difficult tasks and break them into smaller and more manageable
 tasks.
 
-### Instructions
+
 
 **1.**
 
@@ -3502,7 +3502,7 @@ arguments `5` and `4` respectively.
 To check that the function worked properly, log `totalCost` to the
 console.
 
-### Solution
+
 
 ``` javascript
 function monitorCount(rows, columns) {
@@ -3559,7 +3559,7 @@ they cannot be called before they are defined.
 
 Let’s define a new function using a function expression.
 
-### Instructions
+
 
 **1.**
 
@@ -3602,7 +3602,7 @@ Let’s check that `plantNeedsWater()` returned the expected value.
 Log `plantNeedsWater('Tuesday')` to the console. If it worked correctly,
 you should see `false` logged to the console.
 
-### Solution
+
 
 ``` javascript
 const plantNeedsWater = function(day) {
@@ -3644,13 +3644,13 @@ It’s important to be familiar with the multiple ways of writing
 functions because you will come across each of these when reading other
 JavaScript code.
 
-### Instructions
+
 
 **1.**
 
 Change `plantNeedsWater()` to use arrow function syntax.
 
-### Solution
+
 
 ``` javascript
 const plantNeedsWater = (day) => {
@@ -3714,7 +3714,7 @@ Notice the following changes:
 - The `return` keyword has been removed since the function consists of a
   single-line block.
 
-### Instructions
+
 
 **1.**
 
@@ -3722,7 +3722,7 @@ Let’s refactor `plantNeedsWater()` to be a concise body. Notice that
 we’ve already converted the `if`/`else` statement to a ternary operator
 to make the code fit on one line.
 
-### Solution
+
 
 ``` javascript
 const plantNeedsWater = day => day === 'Wednesday' ? true : false;
@@ -3817,7 +3817,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -3953,7 +3953,7 @@ of your program.
 Make this game better by adding a secret cheat code. If a user types
 `'bomb'` as their choice, then make sure they win, no matter what.
 
-### [Solution](rock-paper-scissors-javascript)
+## [Solution](rock-paper-scissors-javascript)
 
 ``` javascript
 console.log("hi");
@@ -4054,7 +4054,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4175,7 +4175,7 @@ For extra practice, try these:
 
 To see the solutions, open the hint.
 
-### [Solution](sleep-debt-calculator)
+## [Solution](sleep-debt-calculator)
 
 ``` javascript
 function getSleepHours(day) {
@@ -4267,11 +4267,11 @@ stars that are available globally.
 Over the next few exercises, we’ll explore how scope relates to
 variables and learn best practices for variable declaration.
 
-### Instructions
+
 
 Go to the next exercise to learn more about scope.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-scope/scope.svg" alt="a city skyline silhouetted against the night sky" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4307,7 +4307,7 @@ if (dusk) {
 In the next few exercises, we’ll see how blocks define the scope of
 variables.
 
-### Instructions
+
 
 **1.**
 
@@ -4343,7 +4343,7 @@ both variables without any problems. In the next exercise we’ll consider
 why would it be preferable to have one variable outside of a block and
 the other inside of a block.
 
-### Solution
+
 
 ``` javascript
 const city = 'New York City';
@@ -4389,7 +4389,7 @@ console.log(returnSkyColor()); // blue
 Let’s work with global variables to see how data can be accessible from
 any place within a program.
 
-### Instructions
+
 
 **1.**
 
@@ -4419,7 +4419,7 @@ You’ll notice that the function block for `callMyNightSky()` is able to
 access the global variables freely since the variables are available to
 all lines of code in the file.
 
-### Solution
+
 
 ``` javascript
 const satellite = 'The Moon';
@@ -4466,7 +4466,7 @@ You’ll notice:
 - If we try to log the same variable outside the function, it throws a
   `ReferenceError`.
 
-### Instructions
+
 
 **1.**
 
@@ -4495,7 +4495,7 @@ from outside the function.
 You’ll notice that it logs a `ReferenceError` since the variable is tied
 to the block scope of the function!
 
-### Solution
+
 
 ``` javascript
 const logVisibleLightWaves = () => {
@@ -4556,7 +4556,7 @@ You’ll notice:
 While it’s important to know what global scope is, it’s best practice to
 not define variables in the global scope.
 
-### Instructions
+
 
 **1.**
 
@@ -4581,7 +4581,7 @@ variable but it’s not easy to read what exactly happened. This is bad
 practice in code maintainability and could impact our program in ways we
 do not intend.
 
-### Solution
+
 
 ``` javascript
 const satellite = 'The Moon';
@@ -4652,7 +4652,7 @@ Block scope is a powerful tool in JavaScript, since it allows us to
 define variables with precision, and not pollute the global namespace.
 If a variable does not need to exist outside a block— it shouldn’t!
 
-### Instructions
+
 
 **1.**
 
@@ -4676,7 +4676,7 @@ Run your code and notice the output. Inside the `if` block
 console. Outside the `if` block, but still within the function, the same
 statement logs `Moonlight` to the console.
 
-### Solution
+
 
 ``` javascript
 const logVisibleLightWaves = () => {
@@ -4722,7 +4722,7 @@ As you continue your coding journey, remember to use best practices when
 declaring your variables! Scoping your variables tightly will ensure
 that your code has clean, organized, and modular logic.
 
-### Instructions
+
 
 Practice the concepts you’ve learned in the code editor!
 
@@ -4743,7 +4743,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4839,7 +4839,7 @@ Well done! Training Days is more maintainable and less error-prone
 thanks to your work. Run the program a few times to make sure the
 results are randomized.
 
-### [Solution](training-days)
+## [Solution](training-days)
 
 ``` javascript
 // The scope of `random` is too loose
@@ -4931,7 +4931,7 @@ as expected in every situation we’re testing behind the scenes. Take
 special note of strings—strings must be *identical* to that requested to
 pass!
 
-### Instructions
+
 
 **1.**
 
@@ -4948,7 +4948,7 @@ Helpful Notes:
   pass with the following strings: `'hello, world!'`, `'Hello, world!'`,
   `'Hello World!'`, `'Hello World'`, `'Hello, World.'`, etc.
 
-### Solution
+
 
 ``` javascript
 // Write your function here:
@@ -4969,7 +4969,7 @@ console.log(greetWorld());
 
 ## canIVote()
 
-### Instructions
+
 
 **1.**
 
@@ -4978,7 +4978,7 @@ that takes in a number, representing the person’s age, and returns the
 boolean `true` if they are 18 years old or older, and the boolean
 `false` if they are not.
 
-### Solution
+
 
 ``` javascript
 const canIVote = age => {
@@ -5011,7 +5011,7 @@ console.log(canIVote(19))
 
 ## agreeOrDisagree()
 
-### Instructions
+
 
 **1.**
 
@@ -5019,7 +5019,7 @@ Write a function, `agreeOrDisagree()`, that takes in two strings, and
 returns `'You agree!'` if the two strings are the same and
 `'You disagree!'` if the two strings are different.
 
-### Solution
+
 
 ``` javascript
 const agreeOrDisagree = (first, second) => {
@@ -5050,7 +5050,7 @@ console.log(agreeOrDisagree("yep", "yep"))
 
 ## lifePhase()
 
-### Instructions
+
 
 **1.**
 
@@ -5066,7 +5066,7 @@ Here are the classifications:
 If the number is less than 0 or greater than 140, the program should
 return `'This is not a valid age'`
 
-### Solution
+
 
 ``` javascript
 const lifePhase = age => {
@@ -5109,7 +5109,7 @@ console.log(lifePhase(5))
 
 ## finalGrade()
 
-### Instructions
+
 
 **1.**
 
@@ -5128,7 +5128,7 @@ Write a function, `finalGrade()`. It should:
 80-89 should return: `'B'`  
 90-100 should return: `'A'`
 
-### Solution
+
 
 ``` javascript
 const finalGrade = (midterm, final, homework) => {
@@ -5179,7 +5179,7 @@ function finalGrade(midterm, final, homework) {
 
 ## reportingForDuty()
 
-### Instructions
+
 
 **1.**
 
@@ -5192,7 +5192,7 @@ reportingForDuty('Private', 'Fido')
 // Should return 'Private Fido reporting for duty!'
 ```
 
-### Solution
+
 
 ``` javascript
 const reportingForDuty = (rank, lastName) => `${rank} ${lastName} reporting for duty!`
@@ -5210,7 +5210,7 @@ function reportingForDuty(rank, lastName) {
 
 ## Fix The Broken Code
 
-### Instructions
+
 
 **1.**
 
@@ -5218,7 +5218,7 @@ We wrote a function, `rollTheDice()`, which is supposed to simulate two
 dice being rolled and totalled. It’s close to doing what we want, but
 there’s something not quite right. Can you fix our code, please?
 
-### Solution
+
 
 ``` javascript
 const rollTheDice = () => {
@@ -5230,7 +5230,7 @@ const rollTheDice = () => {
 
 ## calculateWeight()
 
-### Instructions
+
 
 **1.**
 
@@ -5256,7 +5256,7 @@ Handle the following cases:
 For all other inputs, return
 `'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.'`
 
-### Solution
+
 
 ``` javascript
 const calculateWeight = (earthWeight, planet) => {
@@ -5301,7 +5301,7 @@ console.log(calculateWeight(100, 'Jupiter'))
 
 ## truthyOrFalsy()
 
-### Instructions
+
 
 **1.**
 
@@ -5313,7 +5313,7 @@ target="_blank" rel="noopener">what’s <strong>truthy</strong> or
 `truthyOrFalsy()`, that takes in any value and returns `true` if that
 value is **truthy** and `false` if that value is **falsy**.
 
-### Solution
+
 
 ``` javascript
 const truthyOrFalsy = value => {
@@ -5340,7 +5340,7 @@ const truthyOrFalsy = value => value ? true : false
 
 ## numImaginaryFriends()
 
-### Instructions
+
 
 **1.**
 
@@ -5360,7 +5360,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">the documentation here</a> to figure out
 how it works.
 
-### Solution
+
 
 ``` javascript
 const numImaginaryFriends = totalFriends => Math.ceil(totalFriends * .25)
@@ -5375,7 +5375,7 @@ function numImaginaryFriends(totalFriends) {
 
 ## sillySentence()
 
-### Instructions
+
 
 **1.**
 
@@ -5392,7 +5392,7 @@ sillySentence('excited', 'love', 'functions');
 // Should return 'I am so excited because I love coding! Time to write some more awesome functions!'
 ```
 
-### Solution
+
 
 ``` javascript
 const sillySentence = (adjective, verb, noun) => `I am so ${adjective} because I ${verb} coding! Time to write some more awesome ${noun}!`
@@ -5411,7 +5411,7 @@ function sillySentence(adjective, verb, noun) {
 
 ## howOld()
 
-### Instructions
+
 
 **1.**
 
@@ -5440,7 +5440,7 @@ will be) during that `year`. Handle three different cases:
   'You were [calculated age] in the year [year passed in]'
   ```
 
-### Solution
+
 
 ``` javascript
 /* 
@@ -5467,7 +5467,7 @@ const howOld = (age, year) => {
 
 ## Fix the broken code (round 2)!
 
-### Instructions
+
 
 **1.**
 
@@ -5508,7 +5508,7 @@ whatRelation(3)
 
 Can you fix our code, please?
 
-### Solution
+
 
 ``` javascript
 const whatRelation = percentSharedDNA => {
@@ -5543,7 +5543,7 @@ console.log(whatRelation(3))
 
 ## tipCalculator()
 
-### Instructions
+
 
 **1.**
 
@@ -5562,7 +5562,7 @@ all other inputs should default to 18%
 tipCalculator('good', 100) // Should return 20
 ```
 
-### Solution
+
 
 ``` javascript
 const tipCalculator = (quality, total) => {
@@ -5605,7 +5605,7 @@ console.log(tipCalculator('good', 100))
 
 ## toEmoticon()
 
-### Instructions
+
 
 **1.**
 
@@ -5620,7 +5620,7 @@ cases:
 `'heart'` should return `'<3'`  
 any other input should return `'|_(* ~ *)_|'`
 
-### Solution
+
 
 ``` javascript
 const toEmoticon = meaning => {
@@ -6376,7 +6376,7 @@ development</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -6466,7 +6466,7 @@ can share it with other learners! Your solution might look different
 from ours, and that’s okay! There are multiple ways to solve these
 projects, and you’ll learn more by seeing others’ code.
 
-### [Solution](number-guesser-independent-practice)
+## [Solution](number-guesser-independent-practice)
 
 # Review: JavaScript Syntax, Part I
 

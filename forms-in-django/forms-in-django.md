@@ -33,7 +33,7 @@ available in regards to building the form. In this lesson, we’ll go over
 some of these methods. Including one that allows Django to build the
 form for us, reducing the amount of HTML we have to write ourselves.
 
-### Solution
+
 
 <img alt="Image of a website called 'Goooble' that resembles Google search engine. There is a search form and the text inside says, &quot;Is this search bar a form?&quot;
 
@@ -92,7 +92,7 @@ of the fields are filled out.
 There’s a lot more that we can explore for HTML forms, but we’ll see
 later on how Django takes care of some of this work for us.
 
-### Instructions
+
 
 **1.**
 
@@ -134,7 +134,7 @@ that also has a `value` of `"Submit"`.
 
 
 
-### Solution
+
 
 ```html
 <form action="" method="POST">
@@ -193,7 +193,7 @@ if form.is_valid():
 
 Notice how Django makes it easy to secure our application!
 
-### Instructions
+
 
 **1.**
 
@@ -217,7 +217,7 @@ recognize, but don’t worry, we’ll be covering this code later!
 
 
 
-### Solution
+
 
 ```html
 <form action="" method="POST">
@@ -306,7 +306,7 @@ just render the form as normal.
 Aside from re-rendering the template, we could also redirect to a new
 template! We’ll discuss redirecting in more detail later.
 
-### Instructions
+
 
 **1.**
 
@@ -336,7 +336,7 @@ Access `"first_name"` from `POST` and assign it to
 
 
 
-### Solution
+
 
 ```python
 from django.shortcuts import render
@@ -417,7 +417,7 @@ If we wanted to include every field of a model, instead of writing it
 all out inside of the `fields` list, we could include one string that
 says `'__all__'` to indicate that we want every field to be used.
 
-### Instructions
+
 
 **1.**
 
@@ -458,7 +458,7 @@ few more exercises we’ll be able to view this form.
 
 
 
-### Solution
+
 
 ```python
 from django import forms
@@ -505,7 +505,7 @@ class that we created in **forms.py**. The `form_class` will also tell
 Django to use this form within the template when building the form for
 us.
 
-### Instructions
+
 
 **1.**
 
@@ -542,7 +542,7 @@ to rendering the form!
 
 
 
-### Solution
+
 
 ```python
 from django.shortcuts import render
@@ -616,7 +616,7 @@ class="code__2rdF32qjRVp7mMVBHuPwDS">form.as_p</code></a>. Conveniently,
 `form.as_p` tells the DTL to render all of the fields we included as
 form inputs neatly inside `<p>` elements.
 
-### Instructions
+
 
 **1.**
 
@@ -671,7 +671,7 @@ redirecting — we’ll fix that in the next exercise.
 
 
 
-### Solution
+
 
 ```python
 from django.urls import path
@@ -723,7 +723,7 @@ somewhere related to the model.
 By adding one method, Django lowers the chance of our users
 re-submitting a form, or wondering if their information got sent!
 
-### Instructions
+
 
 **1.**
 
@@ -736,7 +736,7 @@ After you’re done, try out the form!
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -786,7 +786,7 @@ large to handle. Even though larger application might have larger
 **forms.py** the overall length should not have an impact on application
 performance.
 
-### Instructions
+
 
 **1.**
 
@@ -814,7 +814,7 @@ Click on the “Add Patient” button to see your new form!
 
 
 
-### Solution
+
 
 ```python
 from django import forms
@@ -856,7 +856,7 @@ You can see how forms are really important to the overall experience of
 a Django app. Take this new knowledge and try applying it for your own
 ideas!
 
-### Instructions
+
 
 Great job working through forms! If you want to challenge yourself
 further, consider:
@@ -882,7 +882,7 @@ Using the skills learned for Django on creating forms, we’ll practice:
 
 Let’s get started!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1144,7 +1144,7 @@ field you could add would be to add the city to the `Attraction` model.
 You can also add in other forms for updating and deleting instances as
 well!
 
-### Solution
+
 
 [Django Project Tourist Attractions with Forms](https://www.youtube.com/watch?v=z96peq-ceG4)
 

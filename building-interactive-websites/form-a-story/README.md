@@ -20,7 +20,7 @@ Note: Save your code as you follow the steps to see your progress!
 If you get stuck during this project, check out the **project
 walkthrough video** which can be found in the help menu.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -303,4 +303,4 @@ If you want to challenge yourself:
 - Add some extra validations like `min`, `minlength`, or `pattern` to
   the elements that accept user input.
 
-### [Solution](https://datttrian.github.io/codecademy/building-interactive-websites/form-a-story/index.html)
+## [Solution](https://datttrian.github.io/codecademy/building-interactive-websites/form-a-story/index.html)

@@ -12,7 +12,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -84,4 +84,4 @@ If you want to continue coding, challenge yourself to make the
 `<footer>` element also fixed to the bottom of the page regardless of
 scrolling.
 
-### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/broadway-design/index.html)
+## [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/broadway-design/index.html)

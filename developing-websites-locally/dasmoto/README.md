@@ -44,7 +44,7 @@ receive as a freelance web developer:
 Use the website to the right and the resources above to guide you
 through the project.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -92,4 +92,4 @@ section.
 The hint provided in this step is the transcription of the fourth and
 final section.
 
-### [Solution](https://datttrian.github.io/codecademy/developing-websites-locally/dasmoto/index.html)
+## [Solution](https://datttrian.github.io/codecademy/developing-websites-locally/dasmoto/index.html)

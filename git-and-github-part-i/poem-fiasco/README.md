@@ -9,7 +9,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -128,7 +128,7 @@ href="https://www.codecademy.com/en/courses/learn-git/lessons/git-backtracking/e
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">hint</a>.
 
-### [Solution](poem-fiasco.txt)
+## [Solution](poem-fiasco.txt)
 
     road-not-taken.txt
     ==========================================================================

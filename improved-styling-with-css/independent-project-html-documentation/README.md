@@ -27,7 +27,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">article about setting up a text editor for HTML/CSS
 development</a>.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -115,4 +115,4 @@ as you continue to learn more HTML, CSS, and more. As you become more
 advanced with CSS, you’ll also be able to improve the styling and layout
 of the cheat sheet itself.
 
-### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-html-documentation/index.html)
+## [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-html-documentation/index.html)

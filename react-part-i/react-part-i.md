@@ -369,7 +369,7 @@ The Codecademy React courses are not a high-level overview. They are a
 deep dive. Take your time! By the end, you will be ready to program in
 React with a real understanding of what you’re doing.
 
-### Solution
+
 
 [Why
 React?](https://content.codecademy.com/courses/React/react_animations-intro.mp4)
@@ -395,7 +395,7 @@ JavaScript file.
 
 What’s going on?
 
-### Instructions
+
 
 **1.**
 
@@ -407,7 +407,7 @@ const h1 = <h1>Hello world</h1>;
 
 Click Run when you’re finished.
 
-### Solution
+
 
 ``` jsx
 const h1 = <h1>Hello world</h1>;
@@ -448,7 +448,7 @@ Codecademy’s servers already have a JSX compiler installed, so you don’t
 have to worry about that for now. Eventually we’ll walk through how to
 set up a JSX compiler on your personal computer.
 
-### Instructions
+
 
 Click Next to continue.
 
@@ -466,14 +466,14 @@ This JSX element looks exactly like HTML! The only noticeable difference
 is that you would find it in a JavaScript file, instead of in an HTML
 file.
 
-### Instructions
+
 
 **1.**
 
 In **app.js**, write a JSX `<p></p>` element containing the text,
 `Hello world`. Use the example code above as a guide.
 
-### Solution
+
 
 ``` jsx
 <p>Hello world</p>
@@ -505,14 +505,14 @@ const myTeam = {
 };
 ```
 
-### Instructions
+
 
 **1.**
 
 Create a JSX `<article></article>` element. Save it in a variable named
 `myArticle`.
 
-### Solution
+
 
 ``` jsx
 const myArticle = <article></article>;
@@ -544,7 +544,7 @@ A single JSX element can have many attributes, just like in HTML:
 const panda = <img src='images/panda.jpg' alt='panda' width='500px' height='500px' />;
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -566,7 +566,7 @@ Give the first `<p></p>` an `id` attribute of `'large'`.
 
 Give the second `<p></p>` an `id` attribute of `'small'`.
 
-### Solution
+
 
 ``` jsx
 const p1 = <p id="large">foo</p>;
@@ -624,7 +624,7 @@ etc., just like non-nested JSX expressions can! Here’s an example of a
  );
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -635,7 +635,7 @@ Wrap the `<div></div>` in parentheses, and use indentation and line
 breaks like in the examples. In between the `<div></div>` tags, *nest*
 an `<h1></h1>` containing the text `Hello world`.
 
-### Solution
+
 
 ``` jsx
 const myDiv = (
@@ -679,7 +679,7 @@ tough to diagnose.
 If you notice that a JSX expression has multiple outer elements, the
 solution is usually simple: wrap the JSX expression in a `<div></div>`.
 
-### Instructions
+
 
 **1.**
 
@@ -691,7 +691,7 @@ outer elements.
 Repair your friend’s broken code by wrapping their JSX in a
 `<div></div>`.
 
-### Solution
+
 
 ``` jsx
 const blog = (
@@ -715,7 +715,7 @@ You’ve learned how to write JSX elements! Now it’s time to learn how to
 
 To *render* a JSX expression means to make it appear onscreen.
 
-### Instructions
+
 
 **1.**
 
@@ -731,7 +731,7 @@ go over how it works in the next exercise.
 JavaScript is case-sensitive, so make sure to capitalize ReactDOM
 correctly!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -780,7 +780,7 @@ will be rendered to the screen.
 
 We’ll discuss the second argument in the next exercise!
 
-### Instructions
+
 
 **1.**
 
@@ -798,7 +798,7 @@ Pass in this expression as a second argument:
 document.getElementById('app')
 ```
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -836,7 +836,7 @@ screen:
 </main>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -862,7 +862,7 @@ You want `<h1>Render me!</h1>` to be appended to
 On line 5, make that happen by changing the string passed to
 `document.getElementById()`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -898,7 +898,7 @@ ReactDOM.render(
 );
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -920,7 +920,7 @@ an id of `app`.
 
 Feel free to use the example code as a guide.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1007,7 +1007,7 @@ reserved word in JavaScript.
 When JSX is *rendered*, JSX `className` attributes are automatically
 rendered as `class` attributes.
 
-### Instructions
+
 
 **1.**
 
@@ -1034,7 +1034,7 @@ For `ReactDOM.render()`’s second argument, pass in
 If your rendered `<div></div>` has a *class* of `"big"`, then it should
 look big in the browser!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1086,14 +1086,14 @@ NOT FINE AT ALL in JSX:
   <br>
 ```
 
-### Instructions
+
 
 **1.**
 
 In **app.js**, fix the broken JSX by adding slashes to all of the
 self-closing tags.
 
-### Solution
+
 
 ``` jsx
 const profile = (
@@ -1121,7 +1121,7 @@ written inside of a JSX expression, written inside of a JavaScript file.
 
 Whoaaaa…
 
-### Instructions
+
 
 **1.**
 
@@ -1135,7 +1135,7 @@ ReactDOM.render(
 );
 ```
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1165,7 +1165,7 @@ between JSX tags, treat me like ordinary JavaScript and not like JSX.”
 
 You can do this by wrapping your code in *curly braces*.
 
-### Instructions
+
 
 **1.**
 
@@ -1179,7 +1179,7 @@ JSX expression looks like this:
 Everything inside of the curly braces will be treated as regular
 JavaScript.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1213,7 +1213,7 @@ Study the expression and notice the following:
   injection into JSX, similar to the quotation marks that signal the
   boundaries of a string.
 
-### Instructions
+
 
 **1.**
 
@@ -1242,7 +1242,7 @@ As you probably expected, the equation was displayed as a string.
 Insert a pair of curly braces into the `<h1></h1>`, so that the browser
 displays `2 + 3 = 5`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1282,7 +1282,7 @@ const name = 'Gerdo';
 const greeting = <p>Hello, {name}!</p>;
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1291,7 +1291,7 @@ Replace `ReactDOM.render()`’s first argument with a JSX `<h1></h1>`.
 Using curly braces, set the `<h1></h1>`’s inner text equal to
 `theBestString`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1354,7 +1354,7 @@ const owlCat = (
 ); 
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1373,7 +1373,7 @@ Use `ReactDOM.render()` to render `gooseImg`.
 `ReactDOM.render()`’s second argument should be
 `document.getElementById('app')`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1422,7 +1422,7 @@ Note that in HTML, event listener *names* are written in all lowercase,
 such as `onclick` or `onmouseover`. In JSX, event listener names are
 written in camelCase, such as `onClick` or `onMouseOver`.
 
-### Instructions
+
 
 **1.**
 
@@ -1443,7 +1443,7 @@ to *inject* JavaScript in order to use `makeDoggy`.
 Click Run, and then click on the browser image to change the kitty into
 a doggy.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1518,7 +1518,7 @@ JavaScript injection is necessary.
 
 This is a common way to express conditionals in JSX.
 
-### Instructions
+
 
 **1.**
 
@@ -1547,7 +1547,7 @@ For `ReactDOM.render()`’s second argument, pass in
 
 Click Run. Refresh the browser several times. Does the picture change?
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1636,7 +1636,7 @@ In the above example, if `age` is greater than or equal to
 `drinkingAge`, then `headline` will equal `<h1>Buy Drink</h1>`.
 Otherwise, `headline` will equal `<h1>Do Teen Stuff</h1>`.
 
-### Instructions
+
 
 **1.**
 
@@ -1656,7 +1656,7 @@ coinToss() === 'heads'
 `'heads'` should return `'kitty'`, and `'tails'` should return
 `'doggy'`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1714,7 +1714,7 @@ JSX on the right of the `&&` will be rendered. If the first expression
 is false, however, then the JSX to the right of the `&&` will be ignored
 and not rendered.
 
-### Instructions
+
 
 **1.**
 
@@ -1736,7 +1736,7 @@ Once you click Run, then every time that you refresh the browser, there
 will be a 50% chance that `judgmental` will be `true`. Refresh until you
 see both versions of your list.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1807,7 +1807,7 @@ const liArray = [
 <ul>{liArray}</ul>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1828,7 +1828,7 @@ variable.
 For `ReactDOM.render()`’s second argument, use
 `document.getElementById('app')`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1880,7 +1880,7 @@ following are true:
 If neither of these conditions are true, then you don’t have to worry
 about `keys`. If you aren’t sure then it never hurts to use them!
 
-### Instructions
+
 
 **1.**
 
@@ -1908,7 +1908,7 @@ attribute to your `<li></li>`:
 key={'person_' + i}
 ```
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1960,7 +1960,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a> if you’d like to learn
 more!
 
-### Instructions
+
 
 **1.**
 
@@ -1973,7 +1973,7 @@ const greatestDivEver = <div>i am div</div>;
 In **app.js**, create the element above *without* using JSX. Use the
 example as a guide.
 
-### Solution
+
 
 ``` jsx
 const greatestDivEver = React.createElement(
@@ -2015,7 +2015,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click **“Get Unstuck”** to **see a project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2183,7 +2183,7 @@ value of the first one whose boolean evaluates to `true`.
 Considering the boolean of an empty string is `false` can you think of a
 way to use `||` to replace the ternary operator in the heading?
 
-### [Solution](js-react-animal-fun-facts)
+## [Solution](js-react-animal-fun-facts)
 
 [Learn React JSX Animal Fun
 Facts](https://www.youtube.com/watch?v=81mybnZPHDg)
@@ -2236,13 +2236,13 @@ of this lesson, you’ll understand how to build a React component!
 > recommended way of creating React components. From that point on, we
 > use function components throughout the remainder of our React content.
 
-### Instructions
+
 
 **1.**
 
 Carefully copy the example code into **app.js**.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2286,14 +2286,14 @@ For this reason, you *have to* import the React library, and save it in
 a variable named `React`, before you can use any JSX at all.
 `React.createElement()` must be available in order for JSX to work.
 
-### Instructions
+
 
 **1.**
 
 On line 1, use `import` to import the React library. Save the library in
 a variable named `React`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2325,14 +2325,14 @@ of React. After all, the DOM is also used in countless non-React
 applications. Methods imported from `'react'` are only for pure React
 purposes, such as creating components or writing JSX elements.
 
-### Instructions
+
 
 **1.**
 
 Import the `ReactDOM` library on line 2. Store the result in a variable
 named `ReactDOM`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2409,7 +2409,7 @@ a component class of your own. You also know that `React.Component` is a
 property on the object which was returned by `import React from 'react'`
 on line 1.
 
-### Instructions
+
 
 **1.**
 
@@ -2418,7 +2418,7 @@ Skip line 3. On line 4, declare a new *component class* by writing
 
 Don’t put anything between the curly braces just yet!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2458,13 +2458,13 @@ Java</a>.
 In addition, there is a React-specific reason why component class names
 must always be capitalized. We’ll get to that soon!
 
-### Instructions
+
 
 **1.**
 
 Edit your code so that your component class is named `MyComponentClass`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2521,7 +2521,7 @@ React component! Yet that’s exactly what it is.
 
 Click Next, and we’ll go into how these instructions work.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2589,7 +2589,7 @@ know so far is that its name is `render`, it needs a return statement
 for some reason, and you have to include it in the body of your
 component class declaration. We’ll get to the ‘why’ of it soon!
 
-### Instructions
+
 
 **1.**
 
@@ -2616,7 +2616,7 @@ Now let’s fill out that `render` method.
 Inside of the render method’s body, write a `return` statement that
 returns the JSX expression `<h1>Hello world</h1>`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2651,13 +2651,13 @@ React-specific reason why component class names must begin with capital
 letters. In a JSX element, that capitalized first letter says, “I will
 be a component instance and not an HTML tag.”
 
-### Instructions
+
 
 **1.**
 
 On line 11, create an *instance* of `MyComponentClass`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2733,7 +2733,7 @@ the JSX element `<h1>Hello world</h1>`. `ReactDOM.render()` will then
 take that resulting JSX element, and add it to the virtual DOM. This
 will make “Hello world” appear on the screen.
 
-### Instructions
+
 
 **1.**
 
@@ -2742,7 +2742,7 @@ argument, pass in `document.getElementById('app')`.
 
 Oh, hello!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2798,7 +2798,7 @@ However, a multi-line JSX expression should always be wrapped in
 parentheses! That is why `QuoteMaker`’s return statement has parentheses
 around it.
 
-### Instructions
+
 
 **1.**
 
@@ -2827,7 +2827,7 @@ your component at the bottom of the file.
 
 If you don’t like this quote, feel free to use a different one.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2880,7 +2880,7 @@ function! Lines 16, 17, and 18 all use JavaScript injections.
 You can, and often will, inject JavaScript into JSX inside of a render
 function.
 
-### Instructions
+
 
 **1.**
 
@@ -2925,7 +2925,7 @@ of `Owl`.
 `ReactDOM.render()`’s second argument should be
 `document.getElementById('app')`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2996,7 +2996,7 @@ In the above example, the line with the `const n` declaration will cause
 a syntax error, as it should not be part of the class declaration
 itself, but should occur in a method like `render()`.
 
-### Instructions
+
 
 **1.**
 
@@ -3051,7 +3051,7 @@ Give the `<img />` an attribute of `src={friend.src}`.
 At the bottom of the file, use `ReactDOM.render()` to render an instance
 of `Friend`. Use the example code as a guide.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3100,7 +3100,7 @@ function, but *before* the `return` statement. This is pretty much the
 only way that you will ever see an `if` statement used in a render
 function.
 
-### Instructions
+
 
 **1.**
 
@@ -3130,7 +3130,7 @@ There are many valid ways to solve this problem using a conditional.
 
 Render an instance of `TonightsPlan` and see what fate has in store.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3220,7 +3220,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">understanding <code
 class="code__2rdF32qjRVp7mMVBHuPwDS">this</code> in JavaScript</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -3241,7 +3241,7 @@ text `My name is _.`.
 In place of `_`, get `name` from `this` with `this.name`. Feel free to
 use the example code as a guide.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3302,7 +3302,7 @@ Notice that the component class has two methods: `.myFunc()` and
 `.myFunc()` will be called any time that a user hovers over the rendered
 `<div></div>`.
 
-### Instructions
+
 
 **1.**
 
@@ -3323,7 +3323,7 @@ At the bottom of the file, render a `<Button />` using
 Once your component renders, click on the button in the browser.
 Bone-chilling!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3380,7 +3380,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -3488,7 +3488,7 @@ value equal to the `authorize` function.
 Try entering an incorrect password and hitting *Submit*. Nothing should
 happen. Now try entering `swordfish`. Your screen should change!
 
-### [Solution](authorization-form)
+## [Solution](authorization-form)
 
 [REACT Project Authorization
 Form](https://www.youtube.com/watch?v=NQJBKX73jQc)

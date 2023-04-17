@@ -44,7 +44,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -329,7 +329,7 @@ following:
   `movies` contains results from a random page instead of the first
   page.
 
-### [Solution](https://datttrian.github.io/codecademy/async-javascript-and-http-requests/js-film-finder/index.html)  (Reference: [aweliego](https://github.com/aweliego/film-finder))
+## [Solution](https://datttrian.github.io/codecademy/async-javascript-and-http-requests/js-film-finder/index.html)  (**Reference**: [aweliego](https://github.com/aweliego/film-finder))
 
 [Learn JavaScript Film
 Finder](https://www.youtube.com/watch?v=W6El1fjUaJI)

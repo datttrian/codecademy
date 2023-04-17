@@ -15,7 +15,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -91,5 +91,5 @@ design approach.
 Now, create hover and active states. As before, make sure you are
 demonstrating good visual feedback to show the different states.
 
-### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/links-buttons-prj/index.html)
+## [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/links-buttons-prj/index.html)
 

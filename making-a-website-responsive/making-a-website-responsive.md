@@ -50,7 +50,7 @@ content.
 Let’s explore the different parts of a grid system and discuss how it
 can help enhance your designs with consistency, alignment, and spacing.
 
-### Instructions
+
 
 To the right is an example website that uses a grid system. Notice how
 the different pieces of content are laid out on the page and how the
@@ -58,7 +58,7 @@ design makes use of columns and rows.
 
 Move on to the next exercise when you’re ready!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/website%20grid%20example%20final.jpg" alt="The image is an example website that uses a grid system. There are different pieces of content laid out on the page and the design makes use of columns and rows. There is one large horizontal picture at the top and then two rows of four smaller perfectly spaced images below it. There is also a word between each row of images." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -77,14 +77,14 @@ dictate how elements are laid out with precision and elegance.
 
 Let’s continue to explore the anatomy of a grid and what it comprises.
 
-### Instructions
+
 
 Examine the diagram in the right view. Note how the columns span the web
 page evenly on the horizontal axis. By using a column-based layout, it
 allows designers to evenly space content horizontally while seeing how
 their layouts stack vertically.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/css_grid_diagram_2_v2.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -112,14 +112,14 @@ grid, browser window, or device. For larger displays, margins may be
 very noticeable while on smaller screens, they may have the same width
 as a gutter.
 
-### Instructions
+
 
 Examine the diagram to the right. Note the three major components we
 reviewed in this exercise. Notice how the columns have a gap of space
 between each column as well as how the grid doesn’t bump up against the
 side of the web page.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/css_grid_diagram_3.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -152,7 +152,7 @@ only display content on the right 4 columns of a page while using a 12
 column grid. To do this, you can easily offset the content by 8 columns
 so the content is pushed to those right 4 columns.
 
-### Instructions
+
 
 In the diagram to the right, notice how the content of the web page
 spans a specific set of columns but doesn’t overflow into the gutter?
@@ -160,7 +160,7 @@ This is what makes grids so great for design. They allow you to quickly
 create web designs that snap together in an efficient and systematic
 way.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/website%20grid%20example%20final.jpg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0" alt="Diagram of a website that has content that fits within columns as described in the Instructions section. ">
 
@@ -189,7 +189,7 @@ row element around our component that spans 7 columns we can force any
 new content to start beneath our component and leave the remaining 5
 columns empty.
 
-### Instructions
+
 
 Check out the diagram to the right. Notice how the row wraps around the
 different components like a box.
@@ -199,7 +199,7 @@ For instance, in the first row, the logo, the gutter, and the navigation
 bar span the entirety of the first row. Therefore, the next element must
 go in the second row.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/CSS_diagram_4_v1.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0" alt="A diagram of a web page split up into 12 columns and 3 rows. Each row contains up to 12 columns' worth of content. Once the maximum amount of content has been reached for a row (12 columns' worth) the content then starts anew on the row below it. ">
 
@@ -227,14 +227,14 @@ Remember, if the gutter space is too tight, it can be hard to visually
 tell where one element ends and another starts. On the other hand, if
 the gutter space is too large, the design can be hard to follow.
 
-### Instructions
+
 
 In the diagram to the right, notice the gutters between each column. The
 gutter size can vary from project to project but should provide enough
 space to keep the design feeling natural and allow the user to visually
 see the separation of content on the page.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/CSS_diagram_4_v1.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0" alt="A diagram of a web page split up into 12 columns and 3 rows. Each row contains up to 12 columns' worth of content. Once the maximum amount of content has been reached for a row (12 columns' worth) the content then starts anew on the row below it. ">
 
@@ -260,14 +260,14 @@ content on the screen, ensuring a more accessible experience for users.
 Additionally, your design elements will have sufficient space to breathe
 and content can naturally flow across the page.
 
-### Instructions
+
 
 Check out the diagrams to the right. Notice how we have adjusted the
 total number of columns based on the viewport size. By adjusting the
 columns as the viewport becomes smaller, we can rearrange content to
 better fit the viewing size.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-CSS/Responsive-Design/responsive_grid.png" alt="diagram breakdown of how a Desktop site might use a 12 column grid vs a Tablet site that uses a 6 column grid vs a Mobile site that uses a 3 column grid." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -297,12 +297,12 @@ seamlessly through the content.
 Whitespace is broken up into passive and active, which we’ll explore in
 the next two exercises!
 
-### Instructions
+
 
 Notice how the two web pages utilize whitespace, and which one does it
 more effectively.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/Css_objective8_final_image_v2.jpg" alt="Diagram of two web pages, one showing mainly white space and a search bar, the other web page shows multiple columns and blocks of text." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -330,14 +330,14 @@ hard to read.
 Finding a healthy balance between text that lacks sufficient spacing and
 text that has too much is an important task for designers.
 
-### Instructions
+
 
 In the diagram to the right, notice the difference in space between the
 two paragraphs. The text on the left has very little line-height or
 spacing between lines of text. However, the example on the right has a
 large amount of line-height.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/css%20diagram%206.svg" alt="notice the difference in space between the two paragraphs. The text on the left has very little line-height or spacing between lines of text. While the example on the right has a large amount of line-height." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -362,7 +362,7 @@ Additionally, this type of whitespace allows readers to quickly
 understand what they should be focusing on versus what is just
 supplementary details.
 
-### Instructions
+
 
 In the diagram to the left, notice how the example on the left is very
 tight. There is not a lot of space that separates the various sections
@@ -372,7 +372,7 @@ has plenty of active whitespace built in. This design allows users to
 find natural breakpoints in the page and identify what information
 belongs together and what does not.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/ui-design/css-grid-design/css%20diagram%207.jpg" alt="Image of two example websites. The one on the right does not have adequate whitespace between the elements, whereas the one on the left does. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -440,14 +440,14 @@ behave. In this lesson we will cover these properties:
 Flexbox is an elegant tool that makes it easy to address positioning
 issues that may have been difficult before. Let’s get started!
 
-### Instructions
+
 
 In the browser to the right, scroll down until you see the phrase “Our
 Expertise” in the div with the yellow background. Stretch and shrink the
 browser and observe how the elements change position to fit in the width
 of the page.
 
-### Solution
+
 
 ``` html
 <!doctype html>
@@ -666,14 +666,14 @@ elements will not begin on new lines. In the exercises that follow, we
 will cover how the flex `display` property impacts the positioning of
 child elements.
 
-### Instructions
+
 
 **1.**
 
 In the `<div>` with id `flex`, add a `display` property with a value of
 `flex`. Compare the two divs in the browser.
 
-### Solution
+
 
 ``` css
 body {
@@ -783,14 +783,14 @@ pixels) than the `container` div allows (200 pixels). The `.child` divs
 will shrink to accommodate the container’s size. In later exercises, we
 will explore several ways to handle this.
 
-### Instructions
+
 
 **1.**
 
 In the `.container` ruleset, set the `display` property to
 `inline-flex`.
 
-### Solution
+
 
 ``` css
 body {
@@ -862,7 +862,7 @@ borders will be respected, but no more space (than is specified in the
 style rule for the particular element) will be added between elements.
 The size of each individual flex item is not changed by this property.
 
-### Instructions
+
 
 **1.**
 
@@ -894,7 +894,7 @@ elements in each div behave.
 Assign the `<div>` element with the id `spacebetween` a
 `justify-content` property with a value of `space-between`.
 
-### Solution
+
 
 ``` css
 body {
@@ -990,7 +990,7 @@ how these become useful as you move throughout this lesson.
 
 Now you’re going to see each of the five values above in action!
 
-### Instructions
+
 
 **1.**
 
@@ -1019,7 +1019,7 @@ Take a look at the elements under “Stretch” at the bottom of the page.
 Now, in the `.left`, `.center`, `.right` ruleset, change the `height`
 property to `min-height` and observe what happens to these elements.
 
-### Solution
+
 
 ``` css
 body {
@@ -1125,7 +1125,7 @@ All of the previous properties we have learned are declared on flex
 containers, or the parent elements. This property — `flex-grow` — is the
 first we have learned that is declared on flex items.
 
-### Instructions
+
 
 **1.**
 
@@ -1143,7 +1143,7 @@ Assign `.bottom.side` a `flex-grow` value of `1` and `.bottom.center` a
 `flex-grow` value of `2`. Shrink and stretch the browser again. Compare
 the differences in behavior of all three sections.
 
-### Solution
+
 
 ``` css
 body {
@@ -1264,7 +1264,7 @@ Keep in mind, minimum and maximum widths will take precedence over
 only be employed if the parent container is too small or the browser is
 adjusted.
 
-### Instructions
+
 
 **1.**
 
@@ -1288,7 +1288,7 @@ Assign the `.bottom.center` div a `flex-shrink` value of `2`.
 Shrink and stretch the browser again. How do the `.bottom` divs resize
 differently than the `.top` and `.middle` divs?
 
-### Solution
+
 
 ``` css
 body {
@@ -1402,7 +1402,7 @@ absorb twice as much space as the `.side` divs.
 The same would hold true if we assigned `flex-shrink` values to the divs
 above as well.
 
-### Instructions
+
 
 **1.**
 
@@ -1437,7 +1437,7 @@ of `2`.
 In the same rule, add a `flex-basis` property with a value of `150px`.
 Now stretch and shrink the browser.
 
-### Solution
+
 
 ``` css
 body {
@@ -1573,7 +1573,7 @@ reaches 50 pixels wide it begins to shrink faster than the outer `div`s
 and when the bottom outer `div`s reach 75 pixels, they begin to shrink
 faster than the center `div`.
 
-### Instructions
+
 
 **1.**
 
@@ -1599,7 +1599,7 @@ In `#bottom .center`, all three values for `flex-grow`, `flex-shrink`,
 and `flex-basis` are assigned individually. Refactor them to be declared
 in one line.
 
-### Solution
+
 
 ``` css
 body {
@@ -1699,7 +1699,7 @@ other two items.
 
 **Note:** The `flex-wrap` property is declared on flex *containers*.
 
-### Instructions
+
 
 **1.**
 
@@ -1722,7 +1722,7 @@ Inside the `.container` ruleset, add a `justify-content` property with a
 value of `space-around`. Stretch and shrink the browser. What’s
 different this time?
 
-### Solution
+
 
 ``` css
 body {
@@ -1839,7 +1839,7 @@ Below, we will see each of the properties in action!
 
 **Note:** The `align-content` property is declared on flex containers.
 
-### Instructions
+
 
 **1.**
 
@@ -1877,7 +1877,7 @@ Inside the `.left, .center, .right` ruleset, change the `height`
 property to `min-height`. What happens to the flex items in the
 `#stretch` container?
 
-### Solution
+
 
 ``` css
 body {
@@ -2009,7 +2009,7 @@ Below, we’ll investigate how these work.
 
 **Note:** The `flex-direction` property is declared on flex containers.
 
-### Instructions
+
 
 **1.**
 
@@ -2052,7 +2052,7 @@ value of `space-around`.
 Inside the `.box` ruleset, add a `flex-grow` property with a value of
 `1`. In which direction do the elements grow?
 
-### Solution
+
 
 ``` css
 body {
@@ -2137,7 +2137,7 @@ values for `flex-direction` and `flex-wrap` are accepted.
 
 **Note:** The `flex-flow` property is declared on flex containers.
 
-### Instructions
+
 
 **1.**
 
@@ -2151,7 +2151,7 @@ In the `#column` ruleset, set the `flex-flow` property to give elements
 a direction of `column` and to `wrap` elements. You should be able to
 accomplish this in one line.
 
-### Solution
+
 
 ``` css
 body {
@@ -2263,7 +2263,7 @@ be positioned in them.
 We’ll use the same formatting above to layout the simple page to the
 right.
 
-### Instructions
+
 
 **1.**
 
@@ -2304,7 +2304,7 @@ value of `center`.
 
 Repeat steps 4, 6, and 7 for the `.child` ruleset.
 
-### Solution
+
 
 ``` css
 body {
@@ -2382,7 +2382,7 @@ everything necessary to begin using it in your own projects.
 Let’s apply a few of the properties you’ve learned to arrange one
 section of the web page in the browser to the right!
 
-### Instructions
+
 
 **1.**
 
@@ -2417,7 +2417,7 @@ of `column`.
 In the `.col` ruleset, set the `justify-content` property to have a
 value of `space-between`.
 
-### Solution
+
 
 ``` html
 <!doctype html>
@@ -2630,7 +2630,7 @@ displayed in the text editor to the right. Good luck!
 If you get stuck during this project, check out the **project
 walkthrough video** which can be found in the help menu.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2696,7 +2696,7 @@ property with the value that centers the items inside the container.
 You did it! Great work. Now resize the browser to see your flex
 properties in action!
 
-### [Solution](flexbox-to---do-app)
+## [Solution](flexbox-to---do-app)
 
 # Off-Platform Project: Tea Cozy
 
@@ -2757,7 +2757,7 @@ Design Spec:
 
 Good luck!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2768,7 +2768,7 @@ resources above will help you get to the final outcome. There’s no
 single, correct way to complete this project, so experiment and have
 fun!
 
-### [Solution](tea-cozy)
+## [Solution](tea-cozy)
 
 # Grid Essentials
 
@@ -2810,11 +2810,11 @@ properties to create grid layouts:
 That’s a lot to learn. But by the end, you’ll be a master at grid
 positioning. Let’s start learning!
 
-### Instructions
+
 
 When you’re ready to dive into CSS Grid, move on to the next exercise.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2878,7 +2878,7 @@ element’s `display` property to one of two values:
 Then, you can assign other properties to lay out the grid to suit your
 needs.
 
-### Instructions
+
 
 **1.**
 
@@ -2892,7 +2892,7 @@ Right now, we haven’t specified the number of rows or columns in our
 grid, so every item is sitting on a new row. We’ll learn how to
 structure grid rows and columns in the next couple of exercises.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -2964,7 +2964,7 @@ exceeds the width of the grid (100 pixels). This might make our grid
 cover other elements on the page! In a later exercise, we will discuss
 how to avoid overflow.
 
-### Instructions
+
 
 **1.**
 
@@ -2976,7 +2976,7 @@ third to be `200px` wide.
 Notice that this causes our grid items to go outside the boundaries of
 the grid. We’ll learn how to fix this soon!
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3023,7 +3023,7 @@ When using percentages in these two properties, remember that rows are
 defined as a percentage of the grid’s height, and columns are defined as
 a percentage of its width.
 
-### Instructions
+
 
 **1.**
 
@@ -3035,7 +3035,7 @@ to set the first row to be `40%` of the grid’s height. Set the second
 row to be `50%` of the grid’s height. And set the third row to be
 `50px`.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3079,7 +3079,7 @@ The same rules from before apply; when using percentages to set rows,
 each row will be a percentage of the grid’s total height. Columns are
 still a percentage of the total width.
 
-### Instructions
+
 
 **1.**
 
@@ -3088,7 +3088,7 @@ ruleset using the `grid-template` property. Keep the rows and columns
 looking the same without using the `grid-template-rows` and
 `grid-template-columns` properties!
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3157,7 +3157,7 @@ the first and third columns have 40 available to split between them.
 Since each gets one fraction of the total, they both end up being 20
 pixels wide.
 
-### Instructions
+
 
 **1.**
 
@@ -3170,7 +3170,7 @@ Change the grid so the middle column is still 50% of the grid, but the
 first column takes up three fourths of the remaining space and the last
 column takes up one fourth.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3224,13 +3224,13 @@ grid-template-columns: repeat(2, 20px 50px)
 This code will create four columns where the first and third columns
 will be 20 pixels wide and the second and fourth will be 50 pixels wide.
 
-### Instructions
+
 
 **1.**
 
 Refactor the sizing of the rows to use the `repeat()` function.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3273,7 +3273,7 @@ wide, no matter the size of the grid. The second column, however, will
 vary in size as the overall grid resizes. The second column will always
 be between 100 and 500 pixels wide.
 
-### Instructions
+
 
 **1.**
 
@@ -3291,7 +3291,7 @@ Using `minmax()`, change the second column to be between 50 pixels and
 Try resizing your browser window. What happens to the other columns when
 the second column reaches the 300 pixel limit?
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3356,7 +3356,7 @@ value.
 > **Note**: You might have seen `grid-row-gap`, `grid-column-gap`, and
 > `grid-gap` in other code, but these properties are now deprecated.
 
-### Instructions
+
 
 **1.**
 
@@ -3372,7 +3372,7 @@ grid.
 Comment out the `row-gap` and `column-gap` declarations. Refactor the
 two properties into a shorthand `gap` property.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3412,7 +3412,7 @@ create beautiful layouts with ease.
 
 Let’s start exploring grid items!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-css-grid/lesson-i/css_grid_diagram_2.svg" alt="Diagram of grid" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -3453,7 +3453,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a> to learn more about how
 to use these features.
 
-### Instructions
+
 
 **1.**
 
@@ -3468,7 +3468,7 @@ row.
 
 Set `grid-row-end` so the item occupies the fifth and sixth rows.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3523,7 +3523,7 @@ will also include the `gap` if any exists. For example, if an item spans
 two rows of `height` 100 pixels and there is a ten-pixel `gap`, then the
 item will have a total height of 210 pixels.
 
-### Instructions
+
 
 **1.**
 
@@ -3531,7 +3531,7 @@ Refactor your code from the last exercise. Replace `grid-row-start` and
 `grid-row-end` with `grid-row`. Make sure the item still takes up rows
 five and six.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3603,7 +3603,7 @@ produces the same result as the following code blocks:
 the ending grid line of an element. If you know where you want your grid
 item to start and how long it should be, use `span`!
 
-### Instructions
+
 
 **1.**
 
@@ -3629,7 +3629,7 @@ Now let’s go back to the box `a` ruleset. Refactor the
 `grid-column` declaration. The grid item should still start in the first
 column and span 2 columns using the `span` keyword.
 
-### Solution
+
 
 ``` css
 .grid {
@@ -3689,7 +3689,7 @@ means the item will include columns `3`, `4`, `5`, `6`, and `7`.
 Using `grid-area` is an easy way to place items exactly where you want
 them in a grid.
 
-### Instructions
+
 
 **1.**
 
@@ -3712,7 +3712,7 @@ sure the item still takes up the same amount of space.
 Lastly, refactor item `a`. Replace `grid-row` and `grid-column` with
 `grid-area`. Again, use `span` to set the end of the rows and columns.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3788,7 +3788,7 @@ You have seen how to set up and fill in a grid and you now have one more
 CSS positioning technique to add to your toolkit! Let’s do some practice
 to solidify these skills.
 
-### Instructions
+
 
 **1.**
 
@@ -3830,7 +3830,7 @@ created. When you’re ready, move on to the next lesson. In the next
 lesson, you will learn some advanced techniques to further style your
 CSS grids.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3901,7 +3901,7 @@ that you can use to harness the power of CSS Grid Layout:
 You will also learn about the *explicit* and *implicit* grids and *grid
 axes*.
 
-### Instructions
+
 
 Examine the code in the browser to the right. Expand the browser by
 clicking the diagonal arrow to the right of `localhost:8000`.
@@ -3909,7 +3909,7 @@ clicking the diagonal arrow to the right of `localhost:8000`.
 You’ll be updating this fictional recipe site as you move throughout
 this lesson! Continue to the next exercise when you’re ready.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4151,7 +4151,7 @@ above more clearly.
     element spans the bottom row and both columns.
 6.  That’s it! An entire page laid out in 40 lines of code.
 
-### Instructions
+
 
 **1.**
 
@@ -4192,7 +4192,7 @@ wide.
 In the `.container` ruleset, use the `grid-template-rows` property to
 make the rows 150 pixels, 200 pixels, 600 pixels, and 200 pixels tall.
 
-### Solution
+
 
 ``` css
 .container {
@@ -4294,7 +4294,7 @@ The image spans the 2nd, 3rd, and 4th rows and the 3rd and 4th columns.
 The z-index property tells the browser to render the image element on
 top of the `services` and `info` sections so that it is visible.
 
-### Instructions
+
 
 **1.**
 
@@ -4327,7 +4327,7 @@ Set the `z-index` of the `overlap` element to `5`.
 In **style.css**, inside the `footer` ruleset, add the `grid-area`
 property and set its value to `9 / 1 / 13 / 7`.
 
-### Solution
+
 
 ``` css
 .container {
@@ -4446,7 +4446,7 @@ of some elements on this web page.
 5.  If we specify a width for the `.card` elements, they will not
     stretch the width of their column.
 
-### Instructions
+
 
 **1.**
 
@@ -4467,7 +4467,7 @@ The elements won’t be completely centered just yet. Depending on your
 browser size, you may not notice much of a move at all. We’ll learn why
 in the following exercise!
 
-### Solution
+
 
 ``` css
 header, footer {
@@ -4613,7 +4613,7 @@ main {
     the grid, leaving 200 pixels on the right and 200 pixels on the left
     of the grid.
 
-### Instructions
+
 
 **1.**
 
@@ -4626,7 +4626,7 @@ property and set its value to `center`.
 Now, all of the elements should be perfectly centered on the page! Feel
 free to try some of the other values to see how they position the grid.
 
-### Solution
+
 
 ``` css
 header, footer {
@@ -4774,7 +4774,7 @@ some elements on this web page.
     stretch the height of their row even if `align-items: stretch;` is
     set.
 
-### Instructions
+
 
 **1.**
 
@@ -4788,7 +4788,7 @@ see what position the grid items take.
 The final declaration `align-items: stretch` is what we’ll be sticking
 with!
 
-### Solution
+
 
 ``` css
 header, footer {
@@ -4934,7 +4934,7 @@ main {
     grid, leaving 100 pixels at the top and 100 pixels at the bottom of
     the grid.
 
-### Instructions
+
 
 **1.**
 
@@ -4955,7 +4955,7 @@ the `main` ruleset and set its value to `center`.
 Feel free to play around with some other values to see how the grid
 container can positioned!
 
-### Solution
+
 
 ``` css
 header, footer {
@@ -5079,7 +5079,7 @@ target="_blank" rel="noopener">documentation</a>. It is important to
 note that the page with the definitions includes some values that are
 not accepted in CSS Grid layout.
 
-### Instructions
+
 
 **1.**
 
@@ -5098,7 +5098,7 @@ What changes?
 The web page is looking a little uneven. We’ll get rid of both
 declarations in the next exercise.
 
-### Solution
+
 
 ``` css
 header, footer {
@@ -5223,11 +5223,11 @@ rows first, adding new rows as necessary. New grid rows will only be
 tall enough to contain the content within them. In the next exercise,
 you’ll learn how to change this default behavior.
 
-### Instructions
+
 
 Move on to the next exercise when you’re ready!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -5445,7 +5445,7 @@ pixels tall.
 If we did not specify `grid-auto-rows`, the rows would be auto-adjusted
 to the height of the content of the grid items.
 
-### Instructions
+
 
 **1.**
 
@@ -5465,7 +5465,7 @@ To make additional cards the same height, in **style.css**, inside the
 `main` ruleset, add the `grid-auto-rows` property. Set the height of the
 implicitly defined rows to 500 pixels.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -5674,7 +5674,7 @@ or columns, and is declared on grid containers.
 You can pair `row` or `column` with `dense`, like this:
 `grid-auto-flow: row dense;`.
 
-### Instructions
+
 
 **1.**
 
@@ -5682,7 +5682,7 @@ In **style.css**, inside the `main` ruleset , add the `grid-auto-flow`
 property and set its value to create columns when more elements are
 added.
 
-### Solution
+
 
 ``` css
 header, footer {
@@ -5804,7 +5804,7 @@ This is a great time to experiment with the code in the code editor and
 try any of the properties you want to practice more! When you’re ready,
 move on!
 
-### Instructions
+
 
 **1.**
 
@@ -5812,7 +5812,7 @@ This is a great time to experiment with the code in the text editor to
 visualize any of the properties covered in this lesson! Move on when
 you’re ready.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -6028,7 +6028,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -6144,7 +6144,7 @@ properties in the below rulesets to turn them into grids:
 - `.testimonial`
 - `footer`
 
-### [Solution](pupspa)
+## [Solution](pupspa)
 
 # CSS Grid: Task Board
 
@@ -6172,7 +6172,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -6262,7 +6262,7 @@ Good job! Now, feel free to play around with the layout of this site,
 using the other CSS properties you’ve learned. Once you’re satisfied
 with your work, press the Next Button to move on.
 
-### [Solution](css-grid-task-board)
+## [Solution](css-grid-task-board)
 
 # Sizing Elements
 
@@ -6302,7 +6302,7 @@ measurements* instead. Relative measurements offer an advantage over
 hard coded measurements, as they allow for the proportions of a website
 to remain intact regardless of screen size or layout.
 
-### Instructions
+
 
 The website in the browser to the right uses many relative measurements.
 Resize the page by increasing and decreasing the browser’s width
@@ -6312,7 +6312,7 @@ responds to the changes in width?
 When you’re done resizing the browser component, proceed to the next
 exercise.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -6518,7 +6518,7 @@ will set the font size of all `h1` elements inside of `splash-section`
 relative to the base font of `splash-section` (18 pixels). The resulting
 font size of `h1` elements will be 27 pixels.
 
-### Instructions
+
 
 **1.**
 
@@ -6537,7 +6537,7 @@ Set the font size in `.post h3` to `1.25em`.
 
 Set the font size in the footer (“© Bana’s Travel Blog”) to `0.75em`.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -6680,7 +6680,7 @@ across an entire website, the rem measurement is the best unit for the
 job. If you’re interested in sizing elements in comparison to other
 elements nearby, then the em unit would be better suited for the job.
 
-### Instructions
+
 
 **1.**
 
@@ -6706,7 +6706,7 @@ Set the font size in `.post h3` to `1.125rem`.
 
 Set the font size of the footer to `1.125rem`.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -6857,7 +6857,7 @@ setting an element’s `width` to `100%` may cause content to overflow its
 parent container. While tempting, `100%` should only be used when
 content will not have padding, border, or margin.
 
-### Instructions
+
 
 **1.**
 
@@ -6898,7 +6898,7 @@ each image in `.images` equal width.
 Don’t worry if the images still look distorted at the moment. You’ll
 improve their appearance in a later exercise.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -7048,7 +7048,7 @@ size text and dimensions on the page related to text size (i.e. padding
 around text). This creates a consistent layout based on text size.
 Otherwise, percentages should be used.
 
-### Instructions
+
 
 **1.**
 
@@ -7073,7 +7073,7 @@ Set the bottom margin in `#blog .post` to `7.5%`.
 
 Set the bottom margin in `.images` to `20%`.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -7213,7 +7213,7 @@ and maximum widths.
 **Note**: The unit of pixels is used to ensure hard limits on the
 dimensions of the element(s).
 
-### Instructions
+
 
 **1.**
 
@@ -7227,7 +7227,7 @@ paragraphs to 200 pixels and run your code.
 Now, resize your browser (make it narrower) and notice that the text no
 longer compresses as much as it did before.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -7364,7 +7364,7 @@ property is set too low for that element? It’s possible that content
 will overflow outside of the element, resulting in content that is not
 legible.
 
-### Instructions
+
 
 **1.**
 
@@ -7378,7 +7378,7 @@ pixels.
 Resize your browser once more and notice that the text no longer spreads
 out as much as it did before.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -7540,7 +7540,7 @@ of the image with the height of the container instead. If the image is
 larger than the container, the horizontal portion of the image will
 overflow and not display.
 
-### Instructions
+
 
 **1.**
 
@@ -7581,7 +7581,7 @@ Finally, within the same CSS rule, set the `display` to `block`. This
 will instruct the images to behave as block-level elements and
 facilitate scaling (as opposed to their default inline behavior).
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -7725,14 +7725,14 @@ background of the element, all while keeping the image in proportion. If
 the dimensions of the image exceed the dimensions of the container then
 only a portion of the image will display.
 
-### Instructions
+
 
 **1.**
 
 In **style.css**, set the `background-size` property in `#banner` to
 `cover`.
 
-### Solution
+
 
 ``` css
 /* Universal Styles */
@@ -7886,13 +7886,13 @@ responsive design in a website. When combined with more advanced
 responsive techniques, you can create a seamless user experience
 regardless of a device’s screen size.
 
-### Instructions
+
 
 Take some time to experiment with your new knowledge of relative
 measurements in **style.css**. When you’re done, proceed to the next
 unit.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -8071,7 +8071,7 @@ Because websites can be displayed on thousands of different screen
 sizes, they must be able to respond to a change in screen size and adapt
 the content so that users can access it.
 
-### Instructions
+
 
 Let’s take a look at a website that does not respond to different screen
 sizes.
@@ -8144,14 +8144,14 @@ site’s contents to the users’ screen size. We’ll explore more on
 actually implementing this responsiveness in the later exercises, but
 for now, we need to first include the meta tag in our HTML file!
 
-### Instructions
+
 
 **1.**
 
 At the top of `index.html`, create a viewport meta tag. Be sure to
 include the `name`, `content` properties, and other appropriate values.
 
-### Solution
+
 
 ``` css
 <html>
@@ -8266,7 +8266,7 @@ Let’s break this example down into its parts:
     above, the text in the `body` element is set to a `font-size` of
     `12px` when the user’s screen is less than 480px.
 
-### Instructions
+
 
 **1.**
 
@@ -8284,7 +8284,7 @@ a `width` of `270px`.
 This will make the `.page-title` element appear more clearly on small
 screens. Test your code by resizing the browser.
 
-### Solution
+
 
 ``` css
 html,
@@ -8455,7 +8455,7 @@ in the first.
 Both examples above are valid, and it is likely that you will see both
 patterns used when reading another developer’s code.
 
-### Instructions
+
 
 **1.**
 
@@ -8473,7 +8473,7 @@ Inside the media query, select the thumbnails within the gallery with
 You should notice that the gallery images appear wider when the screen
 size is between 320 and 480 pixels wide.
 
-### Solution
+
 
 ``` css
 html,
@@ -8634,7 +8634,7 @@ making sure the screen resolution is at least 300 dots per inch. If the
 screen resolution query is met, then we can use CSS to display high
 resolution images and other media.
 
-### Instructions
+
 
 **1.**
 
@@ -8660,7 +8660,7 @@ than 150dpi, you will observe the spaceship change. If not, you can
 re-write the `min-resolution` media feature to a lower value to observe
 the change.
 
-### Solution
+
 
 ``` css
 html,
@@ -8823,7 +8823,7 @@ browser will require both media features to be true before it renders
 the CSS within the media query. The `and` operator can be used to chain
 as many media features as necessary.
 
-### Instructions
+
 
 **1.**
 
@@ -8838,7 +8838,7 @@ and the screen has a `max-width` of `480px`.
 Inside the media query, make the `font-size` of the `.page-description`
 element `20px`.
 
-### Solution
+
 
 ``` css
 html,
@@ -9011,7 +9011,7 @@ media feature detects if the page has more width than height. If a page
 is wider, it’s considered `landscape`, and if a page is taller, it’s
 considered `portrait`.
 
-### Instructions
+
 
 **1.**
 
@@ -9024,7 +9024,7 @@ this, add an `orientation` media feature after inserting a comma (`,`)
 to separate the rules. This new media feature should check if the
 screen’s `orientation` is `portrait`.
 
-### Solution
+
 
 ``` css
 html,
@@ -9212,7 +9212,7 @@ target="_blank" rel="noopener">this</a> list of breakpoints by device
 widths. Use it as a reference of screen widths to test your website to
 make certain it looks great across a variety of devices.
 
-### Instructions
+
 
 **1.**
 
@@ -9246,7 +9246,7 @@ This CSS will make the page title and description float to the left of
 the gallery images. Resize the browser to observe these changes at
 various screen widths.
 
-### Solution
+
 
 ``` css
 html,
@@ -9433,11 +9433,11 @@ look great on any device, from a small phone to a huge television. By
 making your websites responsive, you’ll make it possible for any of your
 users to have a great experience.
 
-### Instructions
+
 
 Click ‘Up Next’ to continue.
 
-### Solution
+
 
 ``` html
 <html>
@@ -9716,7 +9716,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -9836,7 +9836,7 @@ Then, resize the screen from small to large and watch your website
 change its appearance to best fit the screen size. You just built a
 responsive website!
 
-### [Solution](tsunami-coffee)
+## [Solution](tsunami-coffee)
 
 # Documentation and Research
 
@@ -9861,13 +9861,13 @@ target="_blank" rel="noopener">the final product</a>. We suggest you
 keep this mock open in a separate tab for reference throughout the
 lesson.
 
-### Instructions
+
 
 Take some time to read the code in the code editor (some of which may be
 unfamiliar). Notice the differences between our current site and the
 final mock.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -9982,7 +9982,7 @@ possible values for `font-weight`. There are some values you already
 know, such as `normal` and `bold`, but there are also new values, such
 as `lighter` and `bolder`.
 
-### Instructions
+
 
 **1.**
 
@@ -10008,7 +10008,7 @@ what values it can accept.
 Update the `ul` rule to push the `ul` to the right side of the
 navigation bar.
 
-### Solution
+
 
 ``` css
 nav {
@@ -10086,7 +10086,7 @@ could google “how to change text size using CSS.” After doing this, you
 will receive multiple links to information about the `font-size`
 property.
 
-### Instructions
+
 
 **1.**
 
@@ -10100,7 +10100,7 @@ found the property, set its value to `2px 2px 0 #bbbbbb` in the `a` rule
 (try to figure out what this value will do by reading the documentation
 for the property).
 
-### Solution
+
 
 ``` css
 nav {
@@ -10182,7 +10182,7 @@ To search for a question on Stack Overflow, type your question and
 programming language into the search bar and find the question threads
 that seem relevant.
 
-### Instructions
+
 
 **1.**
 
@@ -10196,7 +10196,7 @@ target="_blank" rel="noopener">Stack Overflow</a> to search how to make
 buttons round using CSS. Once you’ve found the property, set its value
 in the `li` rule to `5px`.
 
-### Solution
+
 
 ``` css
 nav {
@@ -10289,12 +10289,12 @@ the sky’s the limit on what you can do. Feel free to browse MDN and
 Stack Overflow to find new features and try incorporating them into your
 header to make it look even better. Great job!
 
-### Instructions
+
 
 Use MDN, Google, and Stack Overflow to explore new HTML and CSS
 features, experimenting with this header to see how they work.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -10400,7 +10400,7 @@ the Chrome DevTools article to help you decipher and update the site’s
 CSS. Chrome DevTools are essential for debugging – they allow you to
 view current style values, toggle rules, and test different rule values.
 
-### [Solution](f1-2-c1p1-fotomatic)
+## [Solution](f1-2-c1p1-fotomatic)
 
 # Fotomatic Project Solution
 
@@ -10440,7 +10440,7 @@ you can download what you’ll need by clicking the “Download” button
 below. If you need help setting up your computer, read our article about
 setting up a text editor for HTML/CSS development.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -10544,7 +10544,7 @@ different! We’re providing our solution for you get a sense of one way
 to flexbox to help with page layout. There are multiple ways to solve
 these projects, and you’ll learn more by seeing others’ code.
 
-### [Solution](company-page-with-flexbox)
+## [Solution](company-page-with-flexbox)
 
 # Challenge Project: Responsive Club Website
 
@@ -10570,7 +10570,7 @@ you can download what you’ll need by clicking the “Download” button
 below. If you need help setting up your computer, read our article about
 setting up a text editor for HTML/CSS development.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -10642,7 +10642,7 @@ to use responsive units and media queries to affect page layout. There
 are multiple ways to solve these projects, and you’ll learn more by
 seeing others’ code.-
 
-### [Solution](responsive-club-website)
+## [Solution](responsive-club-website)
 
 # Review: Making a Website Responsive
 

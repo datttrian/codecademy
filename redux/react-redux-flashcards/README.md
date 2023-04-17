@@ -39,7 +39,7 @@ target="_blank" rel="noopener">http://localhost:3000/</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -376,4 +376,4 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](https://datttrian-redux-flashcards.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/flashcards-challenge-project-redux/576779))
+## [Solution](https://datttrian-redux-flashcards.netlify.app/) (**Reference**: [Codecademy](https://discuss.codecademy.com/t/flashcards-challenge-project-redux/576779))

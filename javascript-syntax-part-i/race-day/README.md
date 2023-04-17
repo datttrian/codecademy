@@ -32,7 +32,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -110,7 +110,7 @@ Don’t forget about runners exactly 18 years old!
 Add an `else` statement that logs a statement to the console telling the
 runner to see the registration desk.
 
-### [Solution](race-day.js)
+## [Solution](race-day.js)
 
 ``` javascript
 let raceNumber = Math.floor(Math.random() * 1000);

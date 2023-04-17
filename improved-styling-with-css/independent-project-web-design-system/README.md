@@ -27,7 +27,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">article about setting up a text editor for HTML/CSS
 development</a>.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -173,4 +173,4 @@ If you’d like to extend your site, consider:
 - Adding navigation and splitting up your site so that each section has
   its own HTML page.
 
-### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-web-design-system/index.html)
+## [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/independent-project-web-design-system/index.html)

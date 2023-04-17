@@ -46,7 +46,7 @@ target="_blank">(RDBMS)</a>. You can also access a glossary of all the
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">SQL commands</a> taught in this course.
 
-### Instructions
+
 
 **1.**
 
@@ -63,7 +63,7 @@ button at the bottom of the code editor.
 
 Press Run.
 
-### Solution
+
 
 ``` sql
 SELECT * FROM celebs;
@@ -114,7 +114,7 @@ target="_blank">data type</a>. Some of the most common data types are:
 - `DATE`, the date formatted as YYYY-MM-DD
 - `REAL`, a decimal value
 
-### Instructions
+
 
 Now that you have an understanding of what relational databases are,
 let’s take a closer look at SQL syntax.
@@ -160,7 +160,7 @@ matter. A statement can be written all on one line, or split up across
 multiple lines if it makes it easier to read. In this course, you will
 become familiar with the structure of common statements.
 
-### Instructions
+
 
 **1.**
 
@@ -213,7 +213,7 @@ target="_blank">data type</a>:
 - `age` is the third column in the table. It stores values of data type
   `INTEGER`
 
-### Instructions
+
 
 **1.**
 
@@ -246,7 +246,7 @@ CREATE TABLE celebs (
 We will learn how to view this table in a later exercise after we have
 added some data to it.
 
-### Solution
+
 
 ``` sql
 SELECT * FROM celebs;
@@ -287,7 +287,7 @@ VALUES (1, 'Justin Bieber', 22);
   - `'Justin Bieber'`: text that will be added to `name` column
   - `22`: an integer that will be added to `age` column
 
-### Instructions
+
 
 **1.**
 
@@ -319,7 +319,7 @@ VALUES (4, 'Taylor Swift', 26);
 Look at the Database Schema. How many rows are in the `celebs` table
 now?
 
-### Solution
+
 
 ``` sql
 INSERT INTO celebs (id, name, age) 
@@ -369,7 +369,7 @@ table.
 
 `SELECT` statements always return a new table called the *result set*.
 
-### Instructions
+
 
 **1.**
 
@@ -391,7 +391,7 @@ statement in the code editor using the `*` wildcard character:
 SELECT * FROM celebs;
 ```
 
-### Solution
+
 
 ``` sql
 SELECT name FROM celebs; 
@@ -428,7 +428,7 @@ that lets you make the specified changes.
 data. Here, the rows that existed before the column was added have
 `NULL` (∅) values for `twitter_handle`.
 
-### Instructions
+
 
 **1.**
 
@@ -441,7 +441,7 @@ ADD COLUMN twitter_handle TEXT;
 SELECT * FROM celebs; 
 ```
 
-### Solution
+
 
 ``` sql
 ALTER TABLE celebs 
@@ -480,7 +480,7 @@ edits a row in the table.
 new column value. Here the row with a `4` in the `id` column is the row
 that will have the `twitter_handle` updated to `@taylorswift13`.
 
-### Instructions
+
 
 **1.**
 
@@ -498,7 +498,7 @@ WHERE id = 4;
 SELECT * FROM celebs;
 ```
 
-### Solution
+
 
 ``` sql
 UPDATE celebs 
@@ -533,7 +533,7 @@ WHERE twitter_handle IS NULL;
 4.  `IS NULL` is a condition in SQL that returns true when the value is
     `NULL` and false otherwise.
 
-### Instructions
+
 
 **1.**
 
@@ -549,7 +549,7 @@ SELECT * FROM celebs;
 
 How many rows exist in the `celebs` table now?
 
-### Solution
+
 
 ``` sql
 DELETE FROM celebs 
@@ -595,7 +595,7 @@ violation and the new row will not be inserted.
 assumed value for an inserted row if the new row does not specify a
 value for that column.
 
-### Instructions
+
 
 **1.**
 
@@ -612,7 +612,7 @@ CREATE TABLE awards (
 
 How many tables do you see in the database schema on the right?
 
-### Solution
+
 
 ``` sql
 CREATE TABLE awards (
@@ -683,7 +683,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank"><em>Constraints</em></a> add information about how a
 column can be used.
 
-### Instructions
+
 
 In this lesson, we have learned SQL statements that create, edit, and
 delete data. In the upcoming lessons, we will learn how to use SQL to
@@ -705,7 +705,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click **Get Unstuck** to see a walkthrough
 video.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -777,7 +777,7 @@ SELECT *
 FROM friends;
 ```
 
-### Solution
+
 
 ``` sql
 CREATE TABLE friends(
@@ -837,7 +837,7 @@ Let’s get started!
 Fun fact: IBM started out SQL as SEQUEL (**S**tructured **E**nglish
 **QUE**ry **L**anguage) in the 1970’s to query databases.
 
-### Instructions
+
 
 **1.**
 
@@ -851,7 +851,7 @@ SELECT * FROM movies;
 
 What are the column names?
 
-### Solution
+
 
 ``` sql
 SELECT * FROM movies;
@@ -879,7 +879,7 @@ To make it easier to read, we moved `FROM` to another line.
 Line breaks don’t mean anything specific in SQL. We could write this
 entire query in one line, and it would run just fine.
 
-### Instructions
+
 
 **1.**
 
@@ -899,7 +899,7 @@ Now we want to include a third column.
 Edit your query so that it returns the `name`, `genre`, *and* `year`
 columns of the table.
 
-### Solution
+
 
 ``` sql
 SELECT name, genre, year
@@ -937,7 +937,7 @@ Some important things to note:
 - When using `AS`, the columns are not being renamed in the table. The
   aliases only appear in the result.
 
-### Instructions
+
 
 **1.**
 
@@ -958,7 +958,7 @@ Note in the result, that the name of the column is now your alias.
 Edit the query so that instead of selecting and renaming the `name`
 column, select the `imdb_rating` column and rename it as `IMDb`.
 
-### Solution
+
 
 ``` sql
 SELECT imdb_rating AS 'IMDb' 
@@ -1012,7 +1012,7 @@ Filtering the results of a query is an important skill in SQL. It is
 easier to see the different possible `genre`s in the `movie` table after
 the data has been filtered than to scan every row in the table.
 
-### Instructions
+
 
 **1.**
 
@@ -1030,7 +1030,7 @@ What are the unique genres?
 Now, change the code so we return the unique values of the `year` column
 instead.
 
-### Solution
+
 
 ``` sql
 SELECT DISTINCT year 
@@ -1078,7 +1078,7 @@ Comparison operators used with the `WHERE` clause are:
 There are also some special operators that we will learn more about in
 the upcoming exercises.
 
-### Instructions
+
 
 **1.**
 
@@ -1102,7 +1102,7 @@ specifically those that were released after 2014.
 
 Select all the columns using `*`.
 
-### Solution
+
 
 ``` sql
 SELECT *
@@ -1143,7 +1143,7 @@ The `_` means you can substitute any individual character here without
 breaking the pattern. The names `Seven` and `Se7en` both match this
 pattern.
 
-### Instructions
+
 
 **1.**
 
@@ -1157,7 +1157,7 @@ FROM movies
 WHERE name LIKE 'Se_en';
 ```
 
-### Solution
+
 
 ``` sql
 SELECT * 
@@ -1203,7 +1203,7 @@ returned in the result.
 `LIKE` is not case sensitive. ‘Batman’ and ‘Man of Steel’ will both
 appear in the result of the query above.
 
-### Instructions
+
 
 **1.**
 
@@ -1226,7 +1226,7 @@ titles that *begin* with the word ‘The’.
 
 You might need a space in there!
 
-### Solution
+
 
 ``` sql
 SELECT * 
@@ -1266,7 +1266,7 @@ FROM movies
 WHERE imdb_rating IS NOT NULL;
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1276,7 +1276,7 @@ Write a query to find all the movies *without* an IMDb rating.
 
 Select only the `name` column!
 
-### Solution
+
 
 ``` sql
 SELECT name
@@ -1325,7 +1325,7 @@ However, if a movie has a name of simply ‘J’, it would actually match.
 This is because `BETWEEN` goes *up to* the second value — up to ‘J’. So
 the movie named ‘J’ would be included in the result set but not ‘Jaws’.
 
-### Instructions
+
 
 **1.**
 
@@ -1339,7 +1339,7 @@ Remove the previous query.
 Using the `BETWEEN` operator, write a new query that selects all
 information about movies that were released in the 1970’s.
 
-### Solution
+
 
 ``` sql
 -- Step 1 Solution
@@ -1389,7 +1389,7 @@ class="img__1JGFO2nlisObc3KeOSGPRp" alt="AND Venn Diagram" />
 With `AND`, *both* conditions must be true for the row to be included in
 the result.
 
-### Instructions
+
 
 **1.**
 
@@ -1417,7 +1417,7 @@ Suppose we have a picky friend who only wants to watch old horror films.
 Using `AND`, write a new query that selects all movies made prior to
 1985 that are also in the `horror` genre.
 
-### Solution
+
 
 ``` sql
 SELECT *
@@ -1470,7 +1470,7 @@ class="img__1JGFO2nlisObc3KeOSGPRp" alt="OR Venn Diagram" />
 With `OR`, if *any* of the conditions are true, then the row is added to
 the result.
 
-### Instructions
+
 
 **1.**
 
@@ -1490,7 +1490,7 @@ Suppose we are in the mood for a good laugh or a good cry.
 Using `OR`, write a query that returns all movies that are either a
 romance or a comedy.
 
-### Solution
+
 
 ``` sql
 SELECT *
@@ -1555,7 +1555,7 @@ that we’re displaying.
 
 Note: `ORDER BY` always goes after `WHERE` (if `WHERE` is present).
 
-### Instructions
+
 
 **1.**
 
@@ -1577,7 +1577,7 @@ Your turn! Remove the previous query.
 Write a new query that retrieves the `name`, `year`, and `imdb_rating`
 columns of all the movies, ordered highest to lowest by their ratings.
 
-### Solution
+
 
 ``` sql
 SELECT name, year, imdb_rating
@@ -1614,7 +1614,7 @@ Here, we specify that the result set can’t have more than 10 rows.
 `LIMIT` always goes at the very end of the query. Also, it is not
 supported in all SQL databases.
 
-### Instructions
+
 
 **1.**
 
@@ -1623,7 +1623,7 @@ returns the top 3 highest rated movies.
 
 Select all the columns.
 
-### Solution
+
 
 ``` sql
 SELECT *
@@ -1680,7 +1680,7 @@ SELECT name,
 FROM movies;
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1697,7 +1697,7 @@ Optional: Rename the whole `CASE` statement to ‘Mood’ using `AS`.
 
 Give it your best shot! Check hint for the answer.
 
-### Solution
+
 
 ``` sql
 SELECT name,
@@ -1781,7 +1781,7 @@ Let’s summarize:
   class="code__2rdF32qjRVp7mMVBHuPwDS">CASE</code></a> creates different
   outputs.
 
-### Instructions
+
 
 Feel free to experiment a bit more with the `movies` table before moving
 on!
@@ -2202,7 +2202,7 @@ your friends made while reading the suggested books.
 The schema for this problem is shown on the right. Inspect the schema by
 following the instructions below.
 
-### Instructions
+
 
 **Entities** in our database are Reader, Book, Review and Annotation.
 Those represent tables in the schema.
@@ -2230,7 +2230,7 @@ Note: often when modeling application databases, nouns represent
 entities (readers and books) and verbs represent relationships (to
 review).
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/flask/databases/books-schema.jpg" alt="books schema" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2277,7 +2277,7 @@ Finally, we create an SQLAlchemy object and bind it to our app:
 db = SQLAlchemy(app)
 ```
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -2338,7 +2338,7 @@ As you can see in the code editor, the `Book` model has 5 attributes of
 - `index`: when`True`, the column is searchable by its values
 - `primary_key`: when `True`, the column serves as the primary key
 
-### Instructions
+
 
 **1.**
 
@@ -2347,7 +2347,7 @@ Add another column to the `Book` model called `author_name` of type
 Run this program and check if there is a database file
 \*\*\*\*myDB.db\*\*\*\* in your application folder.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -2395,7 +2395,7 @@ class="img__1JGFO2nlisObc3KeOSGPRp" alt="title" />
 We have already provided the `Reader` class declaration and the
 representation method.
 
-### Instructions
+
 
 **1.**
 
@@ -2412,7 +2412,7 @@ at most 80 characters. It is indexable and not unique.
 Add to the model a column called `email` that is of type `String` with
 at most 120 characters. It is indexable and unique.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -2503,7 +2503,7 @@ class="img__1JGFO2nlisObc3KeOSGPRp" alt="schema" />
 In the next exercise, we will add the `Review` model and its
 relationship with the `Book` model (the blue arrow).
 
-### Instructions
+
 
 **1.**
 
@@ -2511,7 +2511,7 @@ To the `Reader` model add a relationship field called `reviews`. It
 should link to `Review` with back reference called `reviewer`, and
 should use the dynamic loading process.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -2596,14 +2596,14 @@ The `book_id` field is a foreign key that refers to the primary key `id`
 of the `Book` table. Similar to the primary key, a foreign key is just
 another column in our model with unique entries.
 
-### Instructions
+
 
 **1.**
 
 Add a new field to `Review` called `reviewer_id` that serves as a
 foreign key to the `Reader` class.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -2705,7 +2705,7 @@ representing our declared models. After running the command, you should
 see your database file in the path and with the name you set in the
 `SQLALCHEMY_DATABASE_URI` configuration field.
 
-### Instructions
+
 
 **1.**
 
@@ -2724,7 +2724,7 @@ After the database `db` instance is imported, type and run
 corner of the code editor) and verify that a new file called
 \*\*\*\*myDB.db\*\*\*\* is created.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -2823,7 +2823,7 @@ using `.` (dot) notation:
 print("My first reader:", r1.name) # prints My first reader: Ann
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2847,7 +2847,7 @@ Print the author surname for book instance `b2`.
 
 Print the length of the e-mail for Reader `r2`.
 
-### Solution
+
 
 ``` python
 #This is a separate Python script in which we practice creating database objects
@@ -2904,7 +2904,7 @@ for the values. When adding entries to a database, a primary key value
 will be automatically generated, unless specified. In the next lesson,
 we will see how to add entries to our database.
 
-### Instructions
+
 
 **1.**
 
@@ -2918,7 +2918,7 @@ for the book ‘The Stranger’ by Albert Camus (object assigned to variable
 Print the number of words in the review object assigned to variable
 `rev2`.
 
-### Solution
+
 
 ``` python
 #This is a separate Python script in which we practice creating database objects
@@ -2968,7 +2968,7 @@ templates and database queries to list all the books we already put in
 the database for you. In the next lesson, you will learn how to
 accomplish this yourself! Excited? Let’s go.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -3086,7 +3086,7 @@ entries, and remove some, on the way.
 
 Can’t wait? Let’s go.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/flask/databases/books-schema.jpg" alt="schema" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -3134,7 +3134,7 @@ for reader in readers:
 In the image on the right, you can see some entries we already inserted
 for you in the database, so you can query it.
 
-### Instructions
+
 
 **1.**
 
@@ -3152,7 +3152,7 @@ In the **playground.py** file, use the `get()` function to get a book
 with `id=12` from the `Book` table, and assign the result to a variable
 called `book_1`.
 
-### Solution
+
 
 ``` python
 from app import db, Book, Reader, Review, Annotation
@@ -3240,7 +3240,7 @@ Notice the subtle difference between the examples above. The first needs
 example, we do not use `.all()` since each review is associated with
 only one reader. That is our one-to-many relationship.
 
-### Instructions
+
 
 **1.**
 
@@ -3257,7 +3257,7 @@ the variable called `book_19_an`.
 Fetch the reader who owns the annotation with `id = 331` and assign the
 annotation to the variable called `author_331`.
 
-### Solution
+
 
 ``` python
 from app import db, Book, Reader, Review, Annotation
@@ -3327,7 +3327,7 @@ than 3 stars for the book with `id = 1`.
 Note: there is also the `.filter_by()` method that uses only a simple
 attribute-value test for filtering.
 
-### Instructions
+
 
 **1.**
 
@@ -3341,7 +3341,7 @@ Use the `filter` method to fetch all the books from the year 2019 or
 earlier, but then assign only the **first** result to the variable
 called `book_pre2019`.
 
-### Solution
+
 
 ``` python
 from app import Book, Reader, Review, Annotation
@@ -3404,7 +3404,7 @@ ordered_books = Book.query.order_by(Book.year).all()
 We suggest checking the SQLAlchemy Core + ORM documentation to see other
 querying options.
 
-### Instructions
+
 
 **1.**
 
@@ -3424,7 +3424,7 @@ Using `order_by`, write a query that orders the reviews by the number of
 stars they have in ascending order, and assign the result to a variable
 called `ordered_reviews`.
 
-### Solution
+
 
 ``` python
 from app import db, Book, Reader, Review
@@ -3505,7 +3505,7 @@ file). As a consequence, we want to undo the most recent addition to the
 transaction by using `db.session.rollback()` and continue with other
 additions without interruption.
 
-### Instructions
+
 
 **1.**
 
@@ -3529,7 +3529,7 @@ In the “playground.py” file, commit the `new_reader` object to the
 database. Enclose it using `try-except`. If `except` happens, perform
 the rollback.
 
-### Solution
+
 
 ``` python
 from app import db, Reader #notice we import db here as well
@@ -3616,7 +3616,7 @@ db.session.rollback()
 
 instead of committing.
 
-### Instructions
+
 
 **1.**
 
@@ -3631,7 +3631,7 @@ Change the `month` attribute of `book_19` to `June`.
 
 Commit the change.
 
-### Solution
+
 
 ``` python
 from app import db, Book, Reader #notice we import db here as well
@@ -3704,7 +3704,7 @@ that when the reader with `id = 753` is deleted, all their reviews are
 deleted as well. Refer to the image on the right to see the initial
 entries of some database tables.
 
-### Instructions
+
 
 **1.**
 
@@ -3712,7 +3712,7 @@ Use the `delete()` command in combination with `get()` to delete a
 reader entry with `id = 123` from the database in the image on the
 right.
 
-### Solution
+
 
 ``` python
 from app import db, Book, Reader, Review #notice we import db here as well
@@ -3791,7 +3791,7 @@ Take some time to observe the complete code provided on the right paying
 attention to \*\*\*\*routes.py\*\*\*\*, and explore the templates in the
 `template` folder.
 
-### Instructions
+
 
 **1.**
 
@@ -3806,7 +3806,7 @@ parameter in the route.
 Extend your query from Checkpoint1 to provide a custom `404 error` by
 using the `first_or_404()` and providing any description you would like.
 
-### Solution
+
 
 ``` python
 from app import app
@@ -3888,7 +3888,7 @@ class="img__1JGFO2nlisObc3KeOSGPRp" alt="schema" />
 Feel free to further explore all the files included in the final
 demonstration. You did a great job!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -4004,7 +4004,7 @@ web app can recommend new music to the users based on their listening
 preferences. We will start with the basics, but the sky is the limit.
 Let’s go!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4270,7 +4270,7 @@ Write a query that will use `.order_by()` to order songs in the `Song`
 table in the increasing order (from least time added to most time
 added).
 
-### Solution
+
 
 # Flask Database Setup
 

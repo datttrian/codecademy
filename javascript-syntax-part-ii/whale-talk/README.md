@@ -19,7 +19,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -126,7 +126,7 @@ whale!
 Note: To confirm, if you change the value of `input` to ‘turpentine and
 turtles’, the whale version would read: `'UUEEIEEAUUEE'`.
 
-### [Solution](whale-talk.js)
+## [Solution](whale-talk.js)
 
 ``` javascript
 const input = "turpentine and turtles";

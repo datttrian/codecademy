@@ -42,7 +42,7 @@ target="_blank" rel="noopener">http://localhost:3000/</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -280,4 +280,4 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](https://datttrian-appointment-planner.netlify.app/) (Reference: [Codecademy](https://discuss.codecademy.com/t/appointment-planner-challenge-project-react/576778))
+## [Solution](https://datttrian-appointment-planner.netlify.app/) (**Reference**: [Codecademy](https://discuss.codecademy.com/t/appointment-planner-challenge-project-react/576778))

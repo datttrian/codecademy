@@ -23,7 +23,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -111,7 +111,7 @@ In another `it` block, test that `.timeAtDawn`
 Your test suite is *fast*, *complete*, *isolated*, *maintainable*, and
 *expressive*! Run it and review the output in the terminal.
 
-### [Solution](../rooster-regulation.sh)
+## [Solution](../rooster-regulation.sh)
 
 [Good Tests with Mocha Project: Rooster
 Regulation](https://www.youtube.com/watch?v=GYLz0QJe9VI)

@@ -13,7 +13,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -57,7 +57,7 @@ Use an array method to remove the strings `get`, `right`, `the`,
 On one line, use `console.log()` and `.join()` to print the secret
 message as a sentence.
 
-### [Solution](secret-message.js)
+## [Solution](secret-message.js)
 
 ``` javascript
 let secretMessage = [

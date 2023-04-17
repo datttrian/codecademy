@@ -7,7 +7,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -198,7 +198,7 @@ developers.
 Feel free to continue using iterator methods to make further edits, or
 click *Next* to continue your learning journey.
 
-### [Solution](mini-linter.js)
+## [Solution](mini-linter.js)
 
 ``` javascript
 let story =

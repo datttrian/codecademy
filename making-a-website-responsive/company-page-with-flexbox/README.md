@@ -23,7 +23,7 @@ you can download what you’ll need by clicking the “Download” button
 below. If you need help setting up your computer, read our article about
 setting up a text editor for HTML/CSS development.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -127,4 +127,4 @@ different! We’re providing our solution for you get a sense of one way
 to flexbox to help with page layout. There are multiple ways to solve
 these projects, and you’ll learn more by seeing others’ code.
 
-### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/company-page-with-flexbox/index.html)
+## [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/company-page-with-flexbox/index.html)

@@ -33,7 +33,7 @@ on the comments slice will resemble these files.
 > class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 > target="_blank" rel="noopener">enable third-party cookies</a>.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -349,4 +349,4 @@ In **CommentForm.js**:
     the browser and try to create the same comment twice by double
     clicking. You’ll see that it’s now impossible to do so.
 
-### [Solution](https://datttrian-news-reader.netlify.app/) (Reference: [prince-asamoah-amalitech](https://github.com/prince-asamoah-amalitech/redux-news-reader))
+## [Solution](https://datttrian-news-reader.netlify.app/) (**Reference**: [prince-asamoah-amalitech](https://github.com/prince-asamoah-amalitech/redux-news-reader))

@@ -200,4 +200,4 @@ the program.
 You’re welcome to expand your program beyond these project tasks and get
 creative!
 
-### [Solution](mixed-messages)
+## [Solution](mixed-messages)

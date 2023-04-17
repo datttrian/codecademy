@@ -229,7 +229,7 @@ with a more judicious use of contrast.
 
 Press next when you are ready to continue.
 
-### Instructions
+
 
 Move on to the next exercise when you are ready!
 
@@ -261,11 +261,11 @@ impact search results more than having the same keyword in a `p` tag,
 because it is assumed that words used in your main heading are very
 important to the topic of your entire website.
 
-### Instructions
+
 
 Press next when you are ready to continue!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -604,7 +604,7 @@ providing a clear content outline.
 Let’s apply what you’ve learned about headings to improve the “Creamy
 Chocolate Cupcakes” site.
 
-### Instructions
+
 
 **1.**
 
@@ -612,7 +612,7 @@ It’s best practice not to skip any headings. The code currently skips
 from`h1` to `h5`! Change any `h5` tags to `h2`, and any `h6` tags to
 `h3`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -742,7 +742,7 @@ allows users to scan your website and consume information without
 straining their eyes. While smaller type sizes can be used, they should
 be reserved for nonessential content or design aesthetic only.
 
-### Instructions
+
 
 **1.**
 
@@ -764,7 +764,7 @@ it.
 
 Press next when you are ready to continue.
 
-### Solution
+
 
 ``` css
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -1006,7 +1006,7 @@ content on the screen.
 Let’s explore how users perceive colors, and how we can effectively make
 decisions on what colors to use to reduce issues with legibility.
 
-### Instructions
+
 
 **1.**
 
@@ -1030,7 +1030,7 @@ Now, let’s change the background for the `.ingredients` div.
 In **styles.css**, change the `background-color` property to
 `midnightblue`.
 
-### Solution
+
 
 ``` css
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -1299,7 +1299,7 @@ blindness.
 Let’s take a look at some best practices of applying accessibility
 features to core components in design.
 
-### Instructions
+
 
 **1.**
 
@@ -1320,7 +1320,7 @@ bullet points of the list line up with the text above.
 
 Try giving the `.steps li` selector a `margin-left` property of 20px.
 
-### Solution
+
 
 ``` css
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -1590,7 +1590,7 @@ Taking into consideration color choices, contrast, and font legibility
 will help you evaluate new design trends, and reduce the chance of new
 designs introducing accessibility barriers.
 
-### Instructions
+
 
 **1.**
 
@@ -1633,7 +1633,7 @@ good for contrast.
 Change the `z-index` of our title (hint: look for the `h1` CSS selector)
 to equal 2.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1953,7 +1953,7 @@ Following these guidelines can increase the usability of our websites.
 In the next lesson, you will learn semantic HTML tags, which improve the
 accessibility of sites for people using a screen reader.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2296,7 +2296,7 @@ In this lesson, we will cover these practices:
 3.  ARIA Properties
 4.  `alt` Attributes
 
-### Instructions
+
 
 Think about the following questions while you explore **index.html**:
 
@@ -2306,7 +2306,7 @@ Think about the following questions while you explore **index.html**:
 4.  If you read this document from top to bottom, how much sense would
     it make to you?
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2484,7 +2484,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Here</a> is a list of all the semantic
 HTML elements that exist.
 
-### Instructions
+
 
 **1.**
 
@@ -2524,7 +2524,7 @@ Let’s update the CSS stylesheet one more time.
 
 In `style.css`, change both `#footer` selectors to `footer`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2793,7 +2793,7 @@ target="_blank" rel="noopener">This</a> link has a list of acceptable
 ARIA roles, where you can read more about the `complementary` role and
 other roles as well.
 
-### Instructions
+
 
 **1.**
 
@@ -2804,7 +2804,7 @@ target="_blank" rel="noopener">documentation</a> of descendants of ARIA
 roles. Add `role="note"` to the `<span>` with the text
 `Ada Lovelace is the favorite programmer of the author of this web page!`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2983,7 +2983,7 @@ To read more about the presentation role, click
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">here</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -2995,7 +2995,7 @@ Add `role="presentation"` to the `<ul>` elements in the `<nav>` and
 Add `role="presentation"` to all `<div>`s with a class of `"timeline"`.
 We will add this attribute to all other presentation elements for you.
 
-### Solution
+
 
 ## ARIA Properties
 
@@ -3034,7 +3034,7 @@ For a complete list of ARIA properties, visit the following resource:
   class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
   target="_blank" rel="noopener">ARIA Techniques</a>
 
-### Instructions
+
 
 **1.**
 
@@ -3047,7 +3047,7 @@ In the `<p>` tag containing `1850`, add an `aria-label` attribute that
 says `Date of Babbage photo`. We will add the appropriate `aria-label`
 to the rest of the squares containing the dates of the images for you.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3218,7 +3218,7 @@ When using the `alt` attribute, you should adhere to these conventions:
 5.  The value of an `alt` attribute should be no more than 150
     characters.
 
-### Instructions
+
 
 **1.**
 
@@ -3235,7 +3235,7 @@ Give the image of Ada Lovelace an `alt` attribute with the value
 Give the image of Charles Babbage an `alt` attribute with the value
 `Charles Babbage`. We will add the rest of the `alt` tags for you.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3388,7 +3388,7 @@ visually-impaired Internet users.
     other elements that support it) instead of `aria-label`. When used,
     its value should be a useful description of the image.
 
-### Instructions
+
 
 Note that the changes we’ve made in this lesson do not alter the
 appearance of your web page. However, they have vastly improved the
@@ -3396,7 +3396,7 @@ experience for anyone who might access your web page using a screen
 reader. Feel free to explore the code more and move on when you’re
 ready!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>

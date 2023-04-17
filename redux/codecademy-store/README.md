@@ -61,7 +61,7 @@ walkthrough video**.
 > syntax errors and can be used when debugging your code. Feel free to
 > minimize it when not in use.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -332,4 +332,4 @@ keep working on this project, try implementing this bonus feature:
 - Add a search feature (like in the Recipes app) to filter the products
   shown in the inventory.
 
-### [Solution](https://datttrian-codecademy-store.netlify.app/) (Reference: [diaz-aaron](https://github.com/diaz-aaron/codecademy-store))
+## [Solution](https://datttrian-codecademy-store.netlify.app/) (**Reference**: [diaz-aaron](https://github.com/diaz-aaron/codecademy-store))

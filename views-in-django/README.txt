@@ -40,7 +40,7 @@ logic and interact with the model to carry data and delegate the
 information to the template which determines **how** information is
 displayed.
 
-### Solution
+
 
 <img alt="GIF showcasing how information from the template gets passed into the views (class or function) and then gets puts into the template for users to see. " src="https://static-assets.codecademy.com/skillpaths/django/view/views_nobg_v2.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -101,7 +101,7 @@ As we saw prior, `render()` is a shortcut function that takes in an
 `HttpRequest` object and a template in order to display it back to the
 client.
 
-### Instructions
+
 
 **1.**
 
@@ -113,7 +113,7 @@ function in **vetoffice/views**.
 
 
 
-### Solution
+
 
 ```python
 from django.urls import path
@@ -223,7 +223,7 @@ with the `model` attribute. In this case, we specified the `model` as
 
 Let’s now implement the `ListView` for both `Owner` and `Patient`!
 
-### Instructions
+
 
 **1.**
 
@@ -262,7 +262,7 @@ implement a `ListView` for `Patient`!
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -446,7 +446,7 @@ Both the `UpdateView` and `DeleteView` resemble `CreateView` very
 closely — so let’s learn how to implement both by writing them
 ourselves!
 
-### Instructions
+
 
 **1.**
 
@@ -532,7 +532,7 @@ instance.
 
 
 
-### Solution
+
 
 ```python
 from django.shortcuts import render
@@ -628,7 +628,7 @@ Let’s add some paths to list out instances and also write a new path
 that will help create instances! In the next exercise, we’ll make our
 list route fully functionally by adding the rest of CRUD.
 
-### Instructions
+
 
 **1.**
 
@@ -686,7 +686,7 @@ page. This will happen in the next exercise!
 
 
 
-### Solution
+
 
 ```python
 from django.urls import path
@@ -783,7 +783,7 @@ students’ information. We’ve also given a `name` value so we can
 reference it in the future. This way, we’ll be able to access any
 student and render their information dynamically!
 
-### Instructions
+
 
 **1.**
 
@@ -839,7 +839,7 @@ on to the next exercise.
 
 
 
-### Solution
+
 
 ```python
 from django.shortcuts import render
@@ -1105,7 +1105,7 @@ is looking for.
 Generally, Django handles a lot of 404 errors for us, but it’s good to
 know how to implement logic when the need arises!
 
-### Instructions
+
 
 **1.**
 
@@ -1165,7 +1165,7 @@ default 404 page for Django.
 
 
 
-### Solution
+
 
 ```python
 from django.shortcuts import render
@@ -1281,7 +1281,7 @@ attribute. In this case, we’re adding the value used for the `name`
 attribute in our URLConf: `bookupdate`. Moreover, we’re able to specify
 which book we want to update by accessing its `id` attribute.
 
-### Instructions
+
 
 **1.**
 
@@ -1316,7 +1316,7 @@ dynamic links in your URLs!
 
 
 
-### Solution
+
 
 ```html
 {% extends "./base.html" %}
@@ -1398,7 +1398,7 @@ what can be done with Django feel free to look at the main
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a>.
 
-### Instructions
+
 
 We provided you with a sandbox in order to experiment with different
 toolsets that Django can provide. Explore what other <a

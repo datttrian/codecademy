@@ -12,7 +12,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -132,4 +132,4 @@ Then, resize the screen from small to large and watch your website
 change its appearance to best fit the screen size. You just built a
 responsive website!
 
-### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/tsunami-coffee/index.html)
+## [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/tsunami-coffee/index.html)

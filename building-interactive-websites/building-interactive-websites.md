@@ -62,13 +62,13 @@ element as the door to JavaScript for HTML. This lesson will dig deeper
 into what the `<script>` element can do for your websites and best
 practices on how and where to insert JavaScript in your HTML files.
 
-### Instructions
+
 
 In the diagram to the right, we display HTML as the architecture of a
 web page, or the house structure. The script tag serves as the door
 opener connecting JavaScript to the HTML file.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/script/ScriptHTMLJS.png" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -95,7 +95,7 @@ inside of the `<script>` element. Just like the `<style>` tag used to
 *embed* CSS code, you use the `<script>` tag to *embed* valid JavaScript
 code.
 
-### Instructions
+
 
 **1.**
 
@@ -116,7 +116,7 @@ function blooming() {
 Then, click **Run** when you are finished and click on the Codecademy
 logo.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -182,7 +182,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">CDN</a>, you can also link to that file
 location.
 
-### Instructions
+
 
 **1.**
 
@@ -198,7 +198,7 @@ of this magical JavaScript with little code.
 Once you have clicked the Codecademy logo several times, click **Run**
 to move on to the next exercise.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -291,7 +291,7 @@ src="https://content.codecademy.com/courses/script/ScriptNoAttribute.gif"
 class="img__1JGFO2nlisObc3KeOSGPRp" width="400"
 alt="Image showing a flower bloom" />
 
-### Instructions
+
 
 **1.**
 
@@ -300,7 +300,7 @@ Oops! In the code editor **script2.js** depends on a variable in
 instead of pink). Switch the order of the scripts so that they load
 appropriately.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html> 
@@ -372,7 +372,7 @@ When a script contains functionality that requires interaction with the
 DOM, the `defer` attribute is the way to go. This way, it ensures that
 the entire HTML file has been parsed before the script is executed.
 
-### Instructions
+
 
 **1.**
 
@@ -382,7 +382,7 @@ making the font color `'yellow'`. Add a `defer` attribute to the
 **turnBlue.js** script to make it the last script that is downloaded and
 executed.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html> 
@@ -452,7 +452,7 @@ order to function accordingly. Thus, if it does not matter exactly at
 which point the script file is executed, asynchronous loading is the
 most suitable option as it optimizes web page load time.
 
-### Instructions
+
 
 **1.**
 
@@ -463,7 +463,7 @@ Add `async` attribute to the **turnBlue.js** script to optimize load
 speed. Notice that once the **turnBlue.js** script is loaded, the text
 turns blue!
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html> 
@@ -511,11 +511,11 @@ prevent the script from blocking the rest of the HTML content. Now, the
 convention is to put the script tag in the `<head>` element and to use
 the `defer` and `async` attributes.
 
-### Instructions
+
 
 Congratulations on completing this lesson!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html> 
@@ -581,12 +581,12 @@ way.
 For this reason, we like to think of the DOM as the link between an HTML
 web page and scripting languages.
 
-### Instructions
+
 
 The diagram to the right illustrates how an HTML document is modeled as
 a tree-like structure accessed by scripting languages like Javascript.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/dom/dom_revision_1.svg" alt="Diagram that uses arrows to depict the flow of information between the DOM, its HTML document, and the JavaScript file that accesses it." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -609,7 +609,7 @@ represents the HTML document. The descendants of the root node are the
 HTML tags in the document, starting with the `<html>` tag followed by
 the `<head>` and `<body>` tags and so on.
 
-### Instructions
+
 
 The diagram to the right models the HTML document and labels the root
 element, which is the document.
@@ -617,7 +617,7 @@ element, which is the document.
 Observe the difference in the rectangular boxes and the curved boxes.
 These denote a difference in the types of nodes in the DOM structure.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/DOM/domTreeEx2.svg" alt="A diagram showing the one to one relationship of elements in the HTML file and elements hierarchy visualized as a tree." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -637,7 +637,7 @@ when referring to the nesting structure of HTML code. Programmers refer
 to elements nested inside other elements as the children elements and
 parent elements respectively.
 
-### Instructions
+
 
 **1.**
 
@@ -653,7 +653,7 @@ relationships.
 Add the `<div>` element to **index.html** so that it reflects the DOM
 diagram to the right.
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -692,13 +692,13 @@ represent the text inside the HTML paragraph elements.
 When trying to modify a web page, the script will mostly interact with
 the DOM element nodes and occasionally text nodes.
 
-### Instructions
+
 
 In the diagram to the right, the DOM element nodes are highlighted red.
 These correspond to elements in the HTML document. Move on to the next
 exercise when you’re ready!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/DOM/domTreeEx4.svg" alt="A DOM tree that reflects the HTML document presented in the code editor. In the DOM tree, element nodes are highlighted in red." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -715,12 +715,12 @@ element node in our script, the DOM would allow us to tweak each of
 those attributes, or simply access them to check their value in the
 code.
 
-### Instructions
+
 
 After studying the diagram on the right, feel free to click on to the
 next exercise.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/DOM/domTreeEx5.svg" alt="A diagram showing the one to one relationship of elements in the HTML file and element hierarchy visualized as a tree. In the HTML file, a paragraph element with `id` and `style` attributes is highlighted. The DOM tree highlights these attributes on the corresponding paragraph node, with the caption, “DOM allows scripts to access the many attributes of HTML elements.” " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -744,11 +744,11 @@ Let’s review what you’ve learned so far:
 With this understanding, you can begin to leverage the power of
 scripting languages to create, update, and maintain web pages!
 
-### Instructions
+
 
 Click next when you are ready to move on to the last exercise!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/dom/dom_revision_1.svg" alt="Diagram that uses arrows to depict the flow of information between the DOM, its HTML document, and the JavaScript file that accesses it." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -784,14 +784,14 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">comprehensive list</a> of all `document`
 properties.
 
-### Instructions
+
 
 The diagram to the right illustrates that the `document` keyword points
 to the root node of the Document Object Model (DOM). The `document.body`
 and `document.head` properties act as though you were directly accessing
 the `html` DOM element. Click “Next” when you’re ready!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/DOM/domTreeEx2.svg" alt="Diagram that presents a sample HTML file and its corresponding layout using the DOM Interface" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -822,7 +822,7 @@ assigning an `<h2>` element as a child inside the `<body>` element:
 document.body.innerHTML = '<h2>This is a heading</h2>'; 
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -833,7 +833,7 @@ element to display an `<h1>` heading with the text
 Notice how the previous content inside of the `<body>` element has been
 replaced!
 
-### Solution
+
 
 ``` javascript
 document.body.innerHTML = '<h1>This is now the heading of the body element</h1>';
@@ -890,7 +890,7 @@ document.getElementsByTagName('li')[1].innerHTML = 'Cedric Diggory`;
 In the above example code, the first element with the `'student'` class
 and the second `<li>` element have had their inner HTML changed.
 
-### Instructions
+
 
 **1.**
 
@@ -915,7 +915,7 @@ Use the `.getElementsByTagName()` method to access the first element
 with the `<li>` tag. Access that element’s `.innerHTML` to replace the
 content to read `'Dobby'`.
 
-### Solution
+
 
 ``` javascript
 document.querySelector('h1').innerHTML = 'Most popular Harry Potter characters';
@@ -957,7 +957,7 @@ The following *chaining* syntax would also work:
 document.querySelector('.blue').style.fontFamily = 'Roboto';
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -969,7 +969,7 @@ Style the `backgroundColor` of the `<body>` element in the blog post to
 Next, change the font family of the element with the `heading` class to
 `'Roboto'`.
 
-### Solution
+
 
 ``` javascript
 document.body.style.backgroundColor = '#201F2E';
@@ -1022,7 +1022,7 @@ element with the ID of `groceries`. The `childElements` variable is set
 to the children of the `<ul>` element with the ID of `groceries`, which
 will be an array of four `<li>` elements.
 
-### Instructions
+
 
 **1.**
 
@@ -1040,7 +1040,7 @@ variable `first` and modify its `.style.backgroundColor` to `'beige'`.
 
 Take a moment to notice the change in the web page.
 
-### Solution
+
 
 ``` html
 <ul id='groceries'>
@@ -1100,7 +1100,7 @@ The `.appendChild()` method does not replace the content inside of the
 parent, in this case, `body`. Rather, it appends the new element as the
 last child of that parent.
 
-### Instructions
+
 
 **1.**
 
@@ -1122,7 +1122,7 @@ its inner HTML.
 Lastly, append the `newAttraction` element to the list of top
 attractions with the ID of `italy-attractions`.
 
-### Solution
+
 
 ``` javascript
 let newAttraction = document.createElement('li');
@@ -1165,7 +1165,7 @@ document.getElementById('sign').hidden = true;
 The code above did not remove the element with ID of `'sign'` from the
 DOM but rather, hid it.
 
-### Instructions
+
 
 **1.**
 
@@ -1179,7 +1179,7 @@ with the ID of `italy-attractions`.
 
 Remove the `elementToRemove` element from its parent.
 
-### Solution
+
 
 ``` javascript
 let elementToRemove = document.getElementById('vespa');
@@ -1226,7 +1226,7 @@ element.onclick = turnBlue;
 In the above example code, when the `<button>` element detects a click
 event, the `backgroundColor` will change to `'blue'`.
 
-### Instructions
+
 
 **1.**
 
@@ -1242,7 +1242,7 @@ stored in the `element` variable as follows:
 Below our `turnButtonRed()` function definition, trigger the
 `turnButtonRed()` function when the `element` detects a click event.
 
-### Solution
+
 
 ``` javascript
 let element = document.querySelector('button');
@@ -1283,12 +1283,12 @@ Let’s review what we learned:
   the `.parentNode` property returns the element’s closest connected
   node in the direction towards the root.
 
-### Instructions
+
 
 Feel free to practice what we’ve learned in this lesson. When you are
 ready, click “Next” to continue!
 
-### Solution
+
 
 ``` javascript
 let first = document.body.children[0];
@@ -1323,7 +1323,7 @@ be *fired* or be *triggered*. As in, “a click event fired when the
 button was clicked”. Being able to respond to these events makes your
 website interactive and therefore *dynamic*.
 
-### Instructions
+
 
 Check out the recipe webpage — interact with the page and see how it
 responds. What events do you think are firing?
@@ -1367,12 +1367,12 @@ are undetected because there is no event handler associated with the
 event to execute an action. Event handlers are crucial for creating
 interactive websites with JavaScript.
 
-### Instructions
+
 
 Check out the diagram to see the event firing process of a dog trained
 to eat when they hear the sound of a bell.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/javascript-dom-events/pavlovs_dog.svg" alt="The dog responds to the detected event by coming over to eat their food! This response is like an event handler function that executes code which could change a DOM element's color, text, and much more!" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1428,7 +1428,7 @@ The named function `eventHandlerFunction` is passed as the second
 argument of the `.addEventListener()` method instead of defining an
 anonymous function within the method!
 
-### Instructions
+
 
 **1.**
 
@@ -1454,7 +1454,7 @@ as the event handler function.
 
 Run your code and fire your event once you’re done.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1565,7 +1565,7 @@ can add multiple event handler functions. In the later exercises, we’ll
 be using the `.addEventListener()` syntax, but we wanted to also
 introduce the `.onevent` syntax because both are widely used.
 
-### Instructions
+
 
 **1.**
 
@@ -1596,7 +1596,7 @@ fired on the `view` variable and run your code.
 Assign `textReturn` as an event handler function to a `click` event
 fired on the `close` variable. Then run your code and fire the events!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1720,7 +1720,7 @@ type name and the name of the event handler you want to remove. If
 `.addEventListener()` was provided an anonymous function, then that
 event listener cannot be removed.
 
-### Instructions
+
 
 **1.**
 
@@ -1734,7 +1734,7 @@ Inside the `showFortune()` function, add a `.removeEventListener()` to
 prevent a new fortune from being displayed when a user tries to click
 the `button` element.
 
-### Solution
+
 
 ``` javascript
 let fortunes = ['A beautiful, smart, and loving person will be coming into your life.',
@@ -1813,7 +1813,7 @@ example:
   access the number of milliseconds that passed since the document
   loaded and the event was triggered.
 
-### Instructions
+
 
 **1.**
 
@@ -1839,7 +1839,7 @@ Now, to create functionality for the event object, assign the
 
 Run your code!
 
-### Solution
+
 
 ``` javascript
 let social = document.getElementById('social-media');
@@ -1889,7 +1889,7 @@ check out the
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">MDN Events Reference</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -1933,7 +1933,7 @@ to the event handler property.
 
 Then run your code and fire the event.
 
-### Solution
+
 
 ``` javascript
 // This variable stores the "Pick a Color" button
@@ -1991,7 +1991,7 @@ The `mouseout` event is fired when the mouse leaves an element.
 src="https://content.codecademy.com/courses/javascript-dom-events/mouseout.gif"
 class="img__1JGFO2nlisObc3KeOSGPRp" alt="Mouse Out Event Image" />
 
-### Instructions
+
 
 **1.**
 
@@ -2039,7 +2039,7 @@ Finally, let’s create a function called `showItem()` that makes the
 Now, create an event handler for `itemFour` that triggers the
 `showItem()` function when the mouse is pressed down on the element.
 
-### Solution
+
 
 ``` javascript
 // These variables store the boxes on the side
@@ -2110,7 +2110,7 @@ like the `.key` property that stores the values of the key pressed by
 the user. You can program the event handler function to react to a
 specific key, or react to any interaction with the keyboard.
 
-### Instructions
+
 
 **1.**
 
@@ -2142,7 +2142,7 @@ Run your code and play around with the keyboard events to make the ball
 bounce on the platform. You can try keys like the space bar, letter
 keys, or number keys!
 
-### Solution
+
 
 ``` javascript
 let ball = document.getElementById('float-circle');
@@ -2183,7 +2183,7 @@ Let’s review what you’ve learned:
 - The `removeEventListener()` method stops specific event handlers from
   “listening” for specific events firing.
 
-### Solution
+
 
 <video class="video__3x64OqfSCxHWGr18MXnQON" autoplay="" loop="">
 <source src="https://content.codecademy.com/courses/javascript-dom-events/output_CjjWGG.mp4">
@@ -2203,7 +2203,7 @@ If you get stuck during this project, check out the **project
 walkthrough video**, which can be found by selecting “Get Unstuck” in
 the upper right-hand corner of this window.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2425,7 +2425,7 @@ changes the `display` property of `lastLyric` back to `'none'`.
 Congrats, you’ve completed the Piano Player! Play around with the piano
 and the song box to fire all the events.
 
-### [Solution](piano-keys)
+## [Solution](piano-keys)
 
 # Introduction to Form Validation
 
@@ -2452,7 +2452,7 @@ The process of checking that the information submitted through a form
 adheres to expectations is called *form validation*. In this lesson,
 we’ll explore the different techniques for validating form inputs.
 
-### Instructions
+
 
 Take a look at the form provided. It’s a bare-bones HTML page with no
 validation. You can play around with it and get to know the different
@@ -2461,7 +2461,7 @@ types of inputs on an HTML form.
 Think about any of the forms you’ve submitted today—did you log into any
 sites? Use a search bar? Buy something online?
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2531,7 +2531,7 @@ injected into our servers. This can potentially leave our users’
 sensitive information exposed. The malicious actor could even gain
 control of our site or corrupt our existing data!
 
-### Solution
+
 
 [Cat Burglar](https://www.youtube.com/watch?v=69lYj1C6PtE)
 
@@ -2565,7 +2565,7 @@ use that pattern to match a string, match parts of a string, confirm
 that data is formatted acceptably, or even replace parts of strings with
 different characters.
 
-### Instructions
+
 
 Try entering some patterns in the applet provided. If you enter `ello`,
 you’ll notice how many of the examples include those characters. We
@@ -2574,7 +2574,7 @@ match the first four expressions, we could use a pattern like
 `[hH]ello[^]*`. The pattern `[^]*\d{3}[^]*\d{3}-\d{4}` will match the
 two example phone numbers.
 
-### [Solution](https://content.codecademy.com/courses/PHP_FORMS/build/index.html)
+## [Solution](https://content.codecademy.com/courses/PHP_FORMS/build/index.html)
 
 ## Client-side Validation: HTML
 
@@ -2602,7 +2602,7 @@ will also benefit the user—the client provides the user immediate
 feedback, without having to wait for time-consuming communication with
 the back-end.
 
-### Instructions
+
 
 The provided HTML form has three input fields that are `required`. Try
 submitting the form without any one of them. Notice now a message
@@ -2619,7 +2619,7 @@ Each input has additional requirements.
 
 Try out the form with correct and incorrect inputs for each field.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2673,7 +2673,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">formik library</a> is a lightweight
 library that simplifies validating forms in a React app.
 
-### Instructions
+
 
 Play around with the website we’ve provided. It’s a password validator
 with some specific requirements. This validation is done completely on
@@ -2682,7 +2682,7 @@ the client-side using JavaScript. Specifically, it uses a library called
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Parsley.js</a>.
 
-### [Solution](https://content.codecademy.com/courses/PHP_FORMS/password_validator/html.html)
+## [Solution](https://content.codecademy.com/courses/PHP_FORMS/password_validator/html.html)
 
 ## Back-end Validation
 
@@ -2722,11 +2722,11 @@ formatted consistently. This means that while we may want to be flexible
 about the formatting we require from a user, we likely want to transform
 inputs into a strict format before entering them in the database.
 
-### Instructions
+
 
 This video illustrates the process of validating forms on the back-end.
 
-### Solution
+
 
 [BackEnd Validation](https://www.youtube.com/watch?v=E1oUSAhG-Vo)
 
@@ -2750,14 +2750,14 @@ review what we covered:
 - A final back-end validation of all data is required to ensure an
   application’s security and sanitize all data.
 
-### Instructions
+
 
 Whew! You learned a lot. Now take a rest and enjoy this comic by
 cartoonist Randall Munroe (<a href="https://xkcd.com/"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">XKCD</a>). You deserve a laugh.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/PHP_FORMS/exploits_of_a_mom_XKCD.png" alt="XKCD comic - a mother on the phone with a school admin explaining that her son is named &quot;Robert Drop Tables Students&quot;" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2781,12 +2781,12 @@ of a `<form>`!
 In this lesson, we’ll go over the structure and syntax of a `<form>` and
 the many elements that populate it.
 
-### Instructions
+
 
 Look over the image, can you think of any other forms you’ve interacted
 with? Go to the next exercise when you’re ready.
 
-### Solution
+
 
 <img alt="Image of a website called 'Goooble' that resembles Google search engine. There is a search form and the text inside says, &quot;Is this search bar a form?&quot;" src="https://content.codecademy.com/courses/learn-html-forms/search%20bar.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2844,7 +2844,7 @@ The example above doesn’t collect any user input, but we’ll do that in
 the next exercise. For now, let’s practice making the foundation of an
 HTML `<form>`!
 
-### Instructions
+
 
 **1.**
 
@@ -2867,7 +2867,7 @@ between the opening and closing `<h1>` tags.
 Add some details to the form by inserting a `<p>` element below the
 `<h1>` element. Write a relevant description within the `<p>` element.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2965,7 +2965,7 @@ alt="pre-filled text box due to assigned `value` attribute" />
 
 Time to put this knowledge into practice!
 
-### Instructions
+
 
 **1.**
 
@@ -2985,7 +2985,7 @@ habits by giving the `<input>` a `name` attribute with a value of
 Let’s see what happens if we add a `value` attribute with a value of
 `"Davie"`
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3045,7 +3045,7 @@ corresponding `<input>` is highlighted/selected.
 
 Let’s see the `<label>` element in action!
 
-### Instructions
+
 
 **1.**
 
@@ -3057,7 +3057,7 @@ Then add text `Username` within the `<label>` element.
 After clearing this checkpoint, click on the `Username` label in the web
 browser to see the corresponding `<input>` field selected.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3113,7 +3113,7 @@ the form is submitted, the value of the text is sent. In other words, if
 “hunter2” is typed into the password field, “user-password=hunter2” is
 sent along with the other information on the form.
 
-### Instructions
+
 
 **1.**
 
@@ -3126,7 +3126,7 @@ Add an `<input>` element under the second `<label>` element.
   `"password"`.
 - Set the `name` attribute to `"user-pw"`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3185,7 +3185,7 @@ alt="rendered number input field with arrows to the right hand side of the field
 
 Now it’s time to apply this knowledge.
 
-### Instructions
+
 
 **1.**
 
@@ -3209,7 +3209,7 @@ href="https://www.codecademy.com/courses/learn-html/lessons/semantic-html/exerci
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">Semantic HTML lesson</a>.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3274,7 +3274,7 @@ alt="rendered slider for volume control" />
 In the example above, every time the slider moves by one, the value of
 the `<input>`’s `value` attribute changes.
 
-### Instructions
+
 
 **1.**
 
@@ -3296,7 +3296,7 @@ For the newly created `<input>` set the:
 - `max` attribute to `"5"`.
 - `step` attribute to `"0.5"`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3379,7 +3379,7 @@ Notice in the example provided:
 
 Alright, time to use checkboxes in our code!
 
-### Instructions
+
 
 **1.**
 
@@ -3415,7 +3415,7 @@ Add another `<input type="checkbox">` and `<label>` pair. Assign the
 `value` and `id` but make sure that your new `<label>` and `<input>` are
 associated.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3505,7 +3505,7 @@ selected.
 
 Let’s see this in action by creating our own radio buttons.
 
-### Instructions
+
 
 **1.**
 
@@ -3533,7 +3533,7 @@ The created `<input>` should have:
 - a `name` attribute with a value of `"cheese"`.
 - a `value` of `"no"`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3646,7 +3646,7 @@ and the `value` of the chosen `<option>`. For instance, if a user
 selected Pizza from the dropdown list, the information would be sent as
 `"lunch=pizza"`.
 
-### Instructions
+
 
 **1.**
 
@@ -3668,7 +3668,7 @@ Inside the `<select>` element, add 3 `<option>`s.
 - The third `<option>` can be a value that you choose and display text
   relevant to the value (make sure it’s not empty!)
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3792,7 +3792,7 @@ pair.
 
 Now it’s time to make a `<datalist>` of our own!
 
-### Instructions
+
 
 **1.**
 
@@ -3812,7 +3812,7 @@ Inside the `<datalist>` element, add 3 `<option>`s.
 - The third `<option>` can be a value that you choose and display text
   relevant to the value (make sure it’s not empty!)
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3939,7 +3939,7 @@ This code will render a `<textarea>` that contains pre-filled text:
 
 But don’t just take our word for it, let’s test it out!
 
-### Instructions
+
 
 **1.**
 
@@ -3959,7 +3959,7 @@ attributes:
 Now add some default text to the created `<textarea>`. You may add any
 text you want, but it cannot be blank!
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -4078,7 +4078,7 @@ attribute, the default text, `Submit` shows up on the button.
 
 Let’s now add this element to make our `<form>`s complete!
 
-### Instructions
+
 
 **1.**
 
@@ -4088,7 +4088,7 @@ element.
 
 The text inside the submit button should read: `Submit`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4225,7 +4225,7 @@ above allows us to create sites that take into consideration the wants
 and needs of our users. Take the opportunity to take what you’ve
 learned, and apply it!
 
-### Instructions
+
 
 If you want to challenge yourself:
 
@@ -4235,7 +4235,7 @@ If you want to challenge yourself:
   placeholder shows ups when the field has no `value`, it disappears
   after the user types or selects something in the field.
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -4444,11 +4444,11 @@ was rejected.
 In this lesson, we’ll learn how to add some validation checks to our
 `<form>`s!
 
-### Instructions
+
 
 Press **Next** to get started on validations.
 
-### Solution
+
 
 <img alt="Login Page" src="https://content.codecademy.com/courses/learn-html-forms/form%20validation.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4484,7 +4484,7 @@ show these messages as they appear in Chrome in later exercises.
 
 Let’s see how it shows up in your browser!
 
-### Instructions
+
 
 **1.**
 
@@ -4497,7 +4497,7 @@ Let’s change that by adding a `required` attribute to the existing
 After you clear this checkpoint, try submitting the `<form>` without
 filling out the fields.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4627,7 +4627,7 @@ alt="prompt on a number field for user to input a value greater than or equal to
 A similar message will appear if a user tries to input a number greater
 than 4. Let’s now see this action.
 
-### Instructions
+
 
 **1.**
 
@@ -4638,7 +4638,7 @@ In the opening `<input>` tag, set:
 - The `min` attribute to `"1"`
 - The `max` attribute to `"10"`
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -4702,7 +4702,7 @@ characters, they don’t get a warning message, but they can’t type it in!
 
 Let’s add this validation to our `<form>`.
 
-### Instructions
+
 
 **1.**
 
@@ -4725,7 +4725,7 @@ So, in the opening `<input>` tag that has an `id` of `"pw"`, add:
 - a `minlength` of `"8"`
 - a `maxlength` of `"15"`
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -4798,7 +4798,7 @@ target="_blank">Docs RegEx</a> entry.
 
 To see it in practice, let’s use the `pattern` attribute in our HTML!
 
-### Instructions
+
 
 **1.**
 
@@ -4808,7 +4808,7 @@ not special characters like ! or @).
 To add this validation, add a `pattern` attribute and set it to:
 `"[a-zA-Z0-9]+"` in the first `<input>` element.
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -4868,7 +4868,7 @@ our servers. It also helps give users immediate feedback on what they
 need to fix instead of having to wait for a server to send back that
 information.
 
-### Solution
+
 
 ``` javascript
 <!DOCTYPE html>
@@ -5026,7 +5026,7 @@ Note: Save your code as you follow the steps to see your progress!
 If you get stuck during this project, check out the **project
 walkthrough video** which can be found in the help menu.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5309,7 +5309,7 @@ If you want to challenge yourself:
 - Add some extra validations like `min`, `minlength`, or `pattern` to
   the elements that accept user input.
 
-### [Solution](form-a-story)
+## [Solution](form-a-story)
 
 # Review: Building Interactive Websites
 

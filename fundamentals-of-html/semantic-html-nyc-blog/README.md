@@ -12,7 +12,7 @@ elements are automatically assigned colors, borders, and positioned
 properly. This is because of the CSS file. Don’t worry about CSS right
 now, it’s only there so that the webpage looks nice.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -247,4 +247,4 @@ Think about ways you could improve this project or create your very own
 project using semantic elements. Need some suggestions? Check the hint
 for some ideas to get you started!
 
-### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-html/semantic-html-nyc-blog/index.html)
+## [Solution](https://datttrian.github.io/codecademy/fundamentals-of-html/semantic-html-nyc-blog/index.html)

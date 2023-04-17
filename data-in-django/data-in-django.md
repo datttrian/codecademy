@@ -162,11 +162,11 @@ In this lesson, we’ll go through:
 
 With that information out of the way, let’s Djan**go**!
 
-### Instructions
+
 
 Review the GIF and see how everyday objects get translated into models.
 
-### Solution
+
 
 <img alt="A GIF showing how real-life objects, like humans and dogs, can be converted into models used in a database by abstracting core characteristics and retaining that information in said database. " src="https://static-assets.codecademy.com/skillpaths/django/models-and-db/django_models_and_fields.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -212,12 +212,12 @@ connecting different tables together.
 For this lesson, we’ll simplify the process and focus on the two models
 `Owner` and `Patient` (`Appointment` will be created in a later lesson).
 
-### Instructions
+
 
 Look over the provided image to see the shape of our schema used in the
 Vet Office project.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/skillpaths/django/models-and-db/schema_table_transparent.svg" alt="Layout of the tables used in the Vetoffice app. There are three tables, Owner, Patient, and Appointment.
 The Owner table has an ID, FirstName, LastName, Phone.
@@ -257,7 +257,7 @@ any errors since Python doesn’t allow for empty classes.
 
 Let’s now create our first models!
 
-### Instructions
+
 
 **1.**
 
@@ -279,7 +279,7 @@ Add another model called `Patient` along with the `pass` keyword.
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -350,7 +350,7 @@ href="https://docs.djangoproject.com/en/3.1/ref/models/fields/#model-field-types
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -394,7 +394,7 @@ Great, you can turn your attention to the `Patient` model now. Add in:
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -494,7 +494,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">types of relationships</a>, but let’s
 implement a one-to-many relationship with our own models!
 
-### Instructions
+
 
 **1.**
 
@@ -512,7 +512,7 @@ argument of `on_delete=models.CASCADE`.
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -598,7 +598,7 @@ href="https://docs.djangoproject.com/en/3.1/topics/db/models/#field-options"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">field options</a> to explore!
 
-### Instructions
+
 
 **1.**
 
@@ -656,7 +656,7 @@ Your tuple’s good to go, so you can create the actual field named
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -735,7 +735,7 @@ Without setting this metadata, our model’s name would be
 `"tropical flower"`. While our change was subtle, we could provide even
 more detail to inform other developers about our model.
 
-### Instructions
+
 
 **1.**
 
@@ -748,7 +748,7 @@ In the `Patient` class, under the other properties, add the nested class
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -830,7 +830,7 @@ name:
 <QuerySet [<Gardener: Linnaeus>,<Gardener: Mendel>, <Gardener: Carver >....]
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -882,7 +882,7 @@ Mustached Dragon, Reptile
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -962,7 +962,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Django documentation</a> for more
 insight!
 
-### Instructions
+
 
 **1.**
 
@@ -986,7 +986,7 @@ lesson.
 
 
 
-### Solution
+
 
 ```python
 from django.db import models
@@ -1092,7 +1092,7 @@ target="_blank" rel="noopener"><code
 class="code__2rdF32qjRVp7mMVBHuPwDS">makemigrations</code> step</a> now
 and then follow up with the next step in the next exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -1111,7 +1111,7 @@ folder to see that it now has a file called: **0001_initial.py**!
 
 
 
-### Solution
+
 
 ```bash
 python3 manage.py makemigrations
@@ -1175,7 +1175,7 @@ href="https://docs.djangoproject.com/en/3.1/topics/migrations/#reversing-migrati
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a> for more information.
 
-### Instructions
+
 
 **1.**
 
@@ -1189,7 +1189,7 @@ Run the `migrate` command in the terminal to finish the migration!
 
 
 
-### Solution
+
 
 ```bash
 python3 manage.py migrate
@@ -1224,7 +1224,7 @@ In this lesson, we covered:
 Our models and database are now all set up and ready to accept and store
 information — time to Djump for Djoy!
 
-### Instructions
+
 
 Feel free to play around with the code provided!
 
@@ -1271,7 +1271,7 @@ As we progress throughout this lesson, we will learn how to:
 -   Learn useful querying methods
 -   Query two tables at the same time
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/skillpaths/django/models-and-db/CRUD-noBG.svg" alt="CRUD is an acronym for Create, Read, Update, and Delete.   " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1323,7 +1323,7 @@ of the Python shell by typing out the command `exit()`. In Windows we
 can press <span class="kbd">ctrl</span> + <span class="kbd">Z</span>. On
 Mac or Linux <span class="kbd">ctrl</span> + <span class="kbd">D</span>.
 
-### Instructions
+
 
 **1.**
 
@@ -1382,7 +1382,7 @@ Save the instance of the model by calling `.save()` on `owner_instance`.
 
 
 
-### Solution
+
 
 ```sh
 python3 manage.py shell
@@ -1453,7 +1453,7 @@ The `.first()` and `.all()` method (or any other method) can be combined
 with other methods to make more complicated queries but we will get
 deeper into this as we progress throughout the lesson.
 
-### Instructions
+
 
 **1.**
 
@@ -1504,7 +1504,7 @@ variable called `first_owner`.
 
 
 
-### Solution
+
 
 ```sh
 python3 manage.py shell
@@ -1561,7 +1561,7 @@ like so:
 >>> first_instance.save()
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1627,7 +1627,7 @@ again to see the changes.
 
 
 
-### Solution
+
 
 ```sh
 python3 manage.py shell
@@ -1678,7 +1678,7 @@ We have our foreign key but we also included `on_delete=models.CASCADE`
 as an argument. If a user gets deleted from the `User` model, all `Post`
 instances related to that user will also get deleted.
 
-### Instructions
+
 
 **1.**
 
@@ -1726,7 +1726,7 @@ instance.
 
 
 
-### Solution
+
 
 ```sh
 python3 manage.py shell
@@ -1797,7 +1797,7 @@ if the object was not just created). In this case, there was no model
 that has a `title="example"` and `content="jango"`. Hence we get back
 `(<ModelName: ModelName object (15)>, True)`.
 
-### Instructions
+
 
 **1.**
 
@@ -1851,7 +1851,7 @@ arguments of:
 
 
 
-### Solution
+
 
 ```python
 python3 manage.py shell
@@ -1913,7 +1913,7 @@ There are many more useful query methods that we can look up in Django’s
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -1963,7 +1963,7 @@ Type out the `not_included` variable and press
 
 
 
-### Solution
+
 
 ```python
 python3 manage.py shell
@@ -2023,7 +2023,7 @@ to filter by ID, like so:
 The above code will return every `Answer` instance related to the
 `Question` instance whose ID is `3`.
 
-### Instructions
+
 
 **1.**
 
@@ -2063,7 +2063,7 @@ the `Owner` instance stored in the `first_owner` variable.
 
 
 
-### Solution
+
 
 ```python
 python3 manage.py shell
@@ -2100,7 +2100,7 @@ By convention, the `_set` property is preceded by the lowercase name of
 the model. Notice that we use `.all()` at the end to access every
 `Answer` instance related to `question_instance`.
 
-### Instructions
+
 
 **1.**
 
@@ -2142,7 +2142,7 @@ Apply the `_set` property to the `first_owner` variable. Then apply the
 
 
 
-### Solution
+
 
 ```python
 python3 manage.py shell
@@ -2184,7 +2184,7 @@ we’ve learned so far.
 Congrats! You’ve made it through and learned so much. Now you can use
 your knowledge to dig deeper into how to interact with the database!
 
-### Instructions
+
 
 If you want to challenge yourself further, consider these challenges:
 
@@ -2194,7 +2194,7 @@ If you want to challenge yourself further, consider these challenges:
 
 There are so many things you can try out, see what else you can do!
 
-### Solution
+
 
 ```python
 

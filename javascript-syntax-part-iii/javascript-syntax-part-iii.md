@@ -71,7 +71,7 @@ After we lay the foundation for classes in the first few exercises, we
 will introduce inheritance and static methods — two features that will
 make your code more efficient and meaningful.
 
-### Instructions
+
 
 **1.**
 
@@ -98,7 +98,7 @@ console.log(halley.behavior); // Print behavior value to console
 
 What do you expect to see when you run this code?
 
-### Solution
+
 
 ``` javascript
 class Dog {
@@ -166,7 +166,7 @@ class Dog {
 
 In the next exercise, you will learn how to create `Dog` instances.
 
-### Instructions
+
 
 **1.**
 
@@ -182,7 +182,7 @@ two parameters: `name` and `department`.
 Inside the `Surgeon` `constructor()`, create `name` and `department`
 properties and set them equal to your input parameters.
 
-### Solution
+
 
 ``` javascript
 class Surgeon {
@@ -228,7 +228,7 @@ our `Dog` class. Let’s consider the line of code step-by-step.
 Now you know how to create instances. In the next exercise, you will
 learn how to add getters, setters, and methods.
 
-### Instructions
+
 
 **1.**
 
@@ -244,7 +244,7 @@ Create an instance of the `Surgeon` class — set the `name` to
 
 Save the instance to a constant variable called `surgeonJackson`.
 
-### Solution
+
 
 ``` javascript
 class Surgeon {
@@ -296,7 +296,7 @@ directly. Under the getters, we add a method named
 instance, it adds `1` to the `_behavior` property. Between each of our
 methods, we did *not* include commas.
 
-### Instructions
+
 
 **1.**
 
@@ -332,7 +332,7 @@ Under the `remainingVacationDays` getter, create a method called
 Inside of the method, subtract `daysOff` from the number saved to
 `_remainingVacationDays`. Set `_remainingVacationDays` to the result.
 
-### Solution
+
 
 ``` javascript
 class Surgeon {
@@ -415,7 +415,7 @@ In the example above, we create two new `Dog` instances, `nikko` and
 but not `bradford`, accessing `nikko.behavior` returns `1` and accessing
 `bradford.behavior` returns `0`.
 
-### Instructions
+
 
 **1.**
 
@@ -432,7 +432,7 @@ After the call to `.takeVacationDays()`, use `console.log()` to print
 the value saved to the `remainingVacationDays` property of the
 `surgeonRomero` instance.
 
-### Solution
+
 
 ``` javascript
 class Surgeon {
@@ -554,7 +554,7 @@ methods that the `Cat` and `Dog` classes share (`name`, `behavior`,
 The diagram to the right shows the relationships we want to create
 between the Animal, Cat, and Dog classes.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-classes/diagrams/inheritance_diagram.svg" alt="diagram: child classes Dog and Cat inherit from parent class Animal" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -619,7 +619,7 @@ class Cat {
 To the right, in **main.js**, you will put what you learned to practice
 by creating a parent class named `HospitalEmployee`.
 
-### Instructions
+
 
 **1.**
 
@@ -664,7 +664,7 @@ This method should accept one argument, called `daysOff`.
 Inside the method, subtract `daysOff` from `_remainingVacationDays`.
 Save the result to `_remainingVacationDays`.
 
-### Solution
+
 
 ``` javascript
 class HospitalEmployee {
@@ -764,7 +764,7 @@ In the example above, we abandoned best practices by calling our `_name`
 property directly. In the next exercise, we’ll address this by calling
 an inherited getter method for our `name` property.
 
-### Instructions
+
 
 **1.**
 
@@ -807,7 +807,7 @@ for each property:
 - `name`: `'Olynyk'`
 - `certifications`: `['Trauma', 'Pediatrics']`
 
-### Solution
+
 
 ``` javascript
 class HospitalEmployee {
@@ -916,7 +916,7 @@ The correct answer is `1`. But why?
 - The second line of code calls the `behavior` getter and logs the value
   saved to `_behavior` (`1`).
 
-### Instructions
+
 
 **1.**
 
@@ -928,7 +928,7 @@ instance.
 Under the method call, log the value saved to the
 `remainingVacationDays` property in `nurseOlynyk`.
 
-### Solution
+
 
 ``` javascript
 class HospitalEmployee {
@@ -1046,7 +1046,7 @@ Now that we’ve abstracted animal daycare features, it’s easy to see how
 you can extend `Animal` to support other classes, like `Rabbit`, `Bird`
 or even `Snake`.
 
-### Instructions
+
 
 **1.**
 
@@ -1083,7 +1083,7 @@ At the bottom of **main.js** call the `.addCertification()` method on
 
 Log the value saved to the `certifications` property of `nurseOlynyk`.
 
-### Solution
+
 
 ``` javascript
 class HospitalEmployee {
@@ -1181,7 +1181,7 @@ tyson.generateName(); // TypeError
 The example above will result in an error, because you cannot call
 static methods (`.generateName()`) on an instance (`tyson`).
 
-### Instructions
+
 
 **1.**
 
@@ -1189,7 +1189,7 @@ Inside of your `HospitalEmployee` class, create a static method called
 `generatePassword`. When it’s called, this method should return a random
 integer between zero and 10,000.
 
-### Solution
+
 
 ``` javascript
 class HospitalEmployee {
@@ -1258,7 +1258,7 @@ In completing this lesson, you’ve taken one step closer to writing
 efficient, production-level JavaScript. Good luck as you continue to
 develop your skills and move into intermediate-level concepts.
 
-### Instructions
+
 
 If you want extra practice with inheritance, take some time to create a
 `Doctor` class that inherits from `HospitalEmployee`. The properties and
@@ -1318,7 +1318,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1517,7 +1517,7 @@ some avenues to build on your existing progress.
 - Create class called `Catalog` that holds all of the `Media` items in
   our library.
 
-### [Solution](build-a-library)
+## [Solution](build-a-library)
 
 ``` javascript
 class Media {
@@ -1703,7 +1703,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1874,7 +1874,7 @@ some avenues to build on your progress.
   schools. Create an instance of `SchoolCatalog` for primary, middle,
   and high schools.
 
-### [Solution](school-catalog)
+## [Solution](school-catalog)
 
 ``` javascript
 class School {
@@ -2641,7 +2641,7 @@ developers, however, the core data and functionality are either missing
 or need to be connected together using modules. Your task is to help
 your team members out by using your `import` and `export` expertise!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2816,7 +2816,7 @@ As an extra challenge:
 - Import this function into **main.js** and use it to format the four
   data values rendered to the screen.
 
-### [Solution](es6-modules-workaround)
+## [Solution](es6-modules-workaround)
 
 # Learn JavaScript: Error Handling
 
@@ -2852,7 +2852,7 @@ In this lesson we’ll learn more about errors and how to create a backup
 plan to allow our program to continue running. When you’re ready, let’s
 *try* to get a *handle* on these JavaScript errors!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-error-handling/falling%20soup.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2889,7 +2889,7 @@ statement will not be evaluated.
 
 Let’s see for ourselves what happens when a runtime error is thrown.
 
-### Instructions
+
 
 **1.**
 
@@ -2900,7 +2900,7 @@ the top of the file and one at the bottom.
 Call throwError() below the comment that indicates to call it. Observe
 what code runs and what code doesn’t.
 
-### Solution
+
 
 ``` javascript
 console.log('This message will be printed to the console.');
@@ -2948,7 +2948,7 @@ Keep in mind that creating an error is not the same as throwing an
 error. A thrown error will cause the program to stop running. We cover
 how to throw our created errors in the next exercise!
 
-### Instructions
+
 
 **1.**
 
@@ -2958,7 +2958,7 @@ with the message `'User missing name'`.
 After running the code, take note of the `console.log()` at the bottom
 of **main.js** and if that line of code still runs.
 
-### Solution
+
 
 ``` javascript
 // Write your code below:
@@ -3008,7 +3008,7 @@ like when a built-in JavaScript error was thrown!).
 In the next lesson we will cover how to handle an error so that the rest
 of our code can run!
 
-### Instructions
+
 
 **1.**
 
@@ -3019,7 +3019,7 @@ After you clear this checkpoint, try adding some code after your throw
 statement. Also, try to throw a new error and other data types to see
 what happens!
 
-### Solution
+
 
 ``` javascript
 throw Error('Username or password does not match');
@@ -3074,7 +3074,7 @@ is being thrown. Let’s first practice writing our own `try...catch`
 statement and afterwards we will go over a more practical usage of
 `try...catch`.
 
-### Instructions
+
 
 **1.**
 
@@ -3091,7 +3091,7 @@ into `Error()` a string containing a message of your choice!
 
 Inside the `catch` block, log the error to the console.
 
-### Solution
+
 
 ``` javascript
 try {
@@ -3147,7 +3147,7 @@ for us which allows our program to continue running and we receive a
 message knowing what went wrong! Let’s see how we can implement this in
 our code.
 
-### Instructions
+
 
 **1.**
 
@@ -3165,7 +3165,7 @@ Let’s handle that error:
 - Add a `catch` statement after the `try` block and inside the `catch`
   block log the error to the console.
 
-### Solution
+
 
 ``` javascript
 function capAllElements(arr){
@@ -3212,7 +3212,7 @@ In this lesson we went over:
 Now you have the ability to create code that doesn’t break when an error
 is thrown!
 
-### Instructions
+
 
 If you want to challenge yourself:
 

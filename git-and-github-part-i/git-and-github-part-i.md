@@ -57,7 +57,7 @@ needed.
 We’ll learn Git by using it to help us write a screenplay called *Harry
 Programmer and the Sorcerer’s Code*.
 
-### Instructions
+
 
 **1.**
 
@@ -70,7 +70,7 @@ In **scene-1.txt**, add this text:
 Then press `enter` to create a new empty line. Once you’ve created the
 new line, click Run.
 
-### Solution
+
 
     Harry Programmer and the Sorcerer’s Code: Scene 1
     Dumblediff: I should've known you would be here, Professor McGonagit.
@@ -88,7 +88,7 @@ git init
 The word `init` means *initialize*. The command sets up all the tools
 Git needs to begin tracking changes made to the project.
 
-### Instructions
+
 
 **1.**
 
@@ -100,7 +100,7 @@ Notice the output:
 
 The Git project was created. Click Next to continue.
 
-### Solution
+
 
 ``` git
 git init
@@ -125,13 +125,13 @@ adding files to the staging area, and saving changes to a Git
 repository. In Git, we save changes with a *commit*, which we will learn
 more about in this lesson.
 
-### Instructions
+
 
 Take a look at the diagram. Before we move on, it will help to be
 familiar with the three parts of the Git workflow. Click Next to
 continue.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-git/revised-git-diagram/git%20workflow_fullwidth.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -144,7 +144,7 @@ working directory. You can check the status of those changes with:
 git status
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -153,7 +153,7 @@ From the terminal, check the status of the **sorcerers-code** project.
 In the output, notice the file in red under `untracked files`. Untracked
 means that Git sees the file but has not started tracking changes yet.
 
-### Solution
+
 
 ``` git
 git status
@@ -191,7 +191,7 @@ git add filename
 The word `filename` here refers to the name of the file you are editing,
 such as **scene-1.txt**.
 
-### Instructions
+
 
 **1.**
 
@@ -206,7 +206,7 @@ In the output, notice that Git indicates the changes to be committed
 with “new file: scene-1.txt” in green text. Here Git tells us the file
 was added to the staging area.
 
-### Solution
+
 
 ``` git
 git add scene-1.txt
@@ -247,7 +247,7 @@ was **changes.txt** the command would be
 git diff changes.txt
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -273,7 +273,7 @@ Notice the output:
 Add the changes to the staging area in Git. Recall that you will need to
 identify the file by its name.
 
-### Solution
+
 
     Harry Programmer and the Sorcerer’s Code: Scene 1
     Dumblediff: I should've known you would be here, Professor McGonagit.
@@ -309,7 +309,7 @@ Standard Conventions for Commit Messages:
 - Written in the present tense
 - Should be brief (50 characters or less) when using `-m`
 
-### Instructions
+
 
 **1.**
 
@@ -319,7 +319,7 @@ commit message. The message should describe the point of the commit.
 If you’re having trouble thinking of a good commit message, reflect on
 how the project has changed since it began.
 
-### Solution
+
 
 ``` git
 git commit -m "Add Dumblediff first Dumblediff dialogue to scene-1.txt"
@@ -335,7 +335,7 @@ viewed with:
 git log
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -351,7 +351,7 @@ In the output, notice:
 
 Click “Next” to continue.
 
-### Solution
+
 
 ``` git
 git log
@@ -385,7 +385,7 @@ learned a lot! Let’s take a moment to generalize:
     in the repository
   - `git log` shows a list of all previous commits
 
-### Instructions
+
 
 Click Next to complete the lesson!
 
@@ -400,7 +400,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -473,7 +473,7 @@ Times: 6:30 am, 12:00 pm, 7:00 pm
 Directions: feed Gorillas in the morning as group, spread forage items during noon meal, and divide quantities for individual feeding in evening
 ```
 
-### [Solution](manhattan-zoo)
+## [Solution](manhattan-zoo)
 
     meal-regimens.txt
     ========================================================================
@@ -589,7 +589,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -651,7 +651,7 @@ View your Git commit log again to identify your commit.
 Revise each file in whatever ways you’d like. Then add your changes to
 the staging area and make another commit.
 
-### [Solution](snapfit-robots)
+## [Solution](snapfit-robots)
 
     disclaimer.txt
     ==========================================================================
@@ -752,7 +752,7 @@ these features.
 
 To start out, let’s review the basic Git workflow.
 
-### Instructions
+
 
 **1.**
 
@@ -783,7 +783,7 @@ href="https://www.codecademy.com/en/courses/learn-git/lessons/git-workflow/exerc
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">Here’s a hint</a> on how to do it.
 
-### Solution
+
 
     Hamlet: Act 1, Scene 5
 
@@ -833,7 +833,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">git log command</a> displays for the `HEAD` commit, plus
 all the file changes that were committed.
 
-### Instructions
+
 
 **1.**
 
@@ -842,7 +842,7 @@ Enter the command to show the `HEAD` commit.
 Notice the output. The ghost’s most recently added line is in green
 text.
 
-### Solution
+
 
 ``` git
 $ git show HEAD
@@ -919,7 +919,7 @@ named **changes.txt**, the command would be
 git checkout HEAD changes.txt
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -946,7 +946,7 @@ look as it did when you last made a commit.
 Close the **scene-5.txt** file and then re-open it to see that the
 changes you had previously made to the ghost’s line have been discarded.
 
-### Solution
+
 
 ``` git
 git diff
@@ -1017,7 +1017,7 @@ git add filename_1 filename_2
 Note the word `filename` above refers to the name of the file you are
 adding to the staging area, such as **scene-3.txt**.
 
-### Instructions
+
 
 **1.**
 
@@ -1033,7 +1033,7 @@ Now change all instances of “LARRY” to “LAERTES” in **scene-7.txt**.
 
 Add the files to the staging area together using a single git command.
 
-### Solution
+
 
     Hamlet: Act 1, Scene 3
 
@@ -1129,7 +1129,7 @@ This command *resets* the file in the staging area to be the same as the
 `HEAD` commit. It does not discard file changes from the working
 directory, it just removes them from the staging area.
 
-### Instructions
+
 
 **1.**
 
@@ -1167,7 +1167,7 @@ Now that changes made to **scene-2.txt** have been booted out of the
 staging area, you’re ready to commit. From the terminal, make a commit
 to save the Larry/Laertes name swap in **hamlet**.
 
-### Solution
+
 
     Hamlet: Act 1, Scene 2
 
@@ -1271,7 +1271,7 @@ git reset 5d69206
 
 `HEAD` is now set to that previous commit.
 
-### Instructions
+
 
 **1.**
 
@@ -1292,7 +1292,7 @@ Notice anything interesting? The commits that came after the one you
 reset to are gone. The `HEAD` commit has been reassigned. You just
 changed history.
 
-### Solution
+
 
 ``` git
 git log
@@ -1369,7 +1369,7 @@ right. Each circle represents a commit.
 - The gray commits are no longer part of your project
 - You have in essence rewound the project’s history
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-git/git-diagram-3.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1393,7 +1393,7 @@ area with a single command:
 git add filename_1 filename_2
 ```
 
-### Instructions
+
 
 Click Next to finish the lesson!
 
@@ -1408,7 +1408,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1527,7 +1527,7 @@ href="https://www.codecademy.com/en/courses/learn-git/lessons/git-backtracking/e
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">hint</a>.
 
-### [Solution](poem-fiasco)
+## [Solution](poem-fiasco)
 
     road-not-taken.txt
     ==========================================================================
@@ -1623,7 +1623,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1711,7 +1711,7 @@ the commit you’re staging. Reset the staging area to remove
 
 Now make a commit.
 
-### [Solution](ascii-portfolio)
+## [Solution](ascii-portfolio)
 
     1.The ASCII face in portrait.txt had a goatee in the last commit, but it was deleted in the working directory. Taking a second look, you want the goatee back.
     Discard changes in the working directory for portrait.txt.
@@ -2332,7 +2332,7 @@ again!
 
 Now, let’s connect our local Git repository to GitHub.
 
-### Instructions
+
 
 1\. In your Command Line Interface, make sure your current working
 directory is your new Git repository. Navigate there if not.
@@ -2456,7 +2456,7 @@ By sticking to that workflow, team members are able to isolate their
 work and avoid any conflicting code from being merged. In the following
 lesson, we’ll take a deeper look at each of these steps.
 
-### Solution
+
 
 <img class="interactive-img" src="assets/github-flow-0.svg">
 
@@ -2493,7 +2493,7 @@ figuring out naming conventions. For example, the branch name
 type, and short branch description. Other teams may pick branch names to
 correspond to ticket numbers from their project management tool.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/learn-git-github/github-flow/github-flow-branch.svg" alt="branch flow" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2515,7 +2515,7 @@ were created.
 You can commit along with a message describing your work, and lastly,
 push the commit to the remote Github repository.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/learn-git-github/github-flow/github-flow-commit-changes.svg" alt="commit changes" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2540,7 +2540,7 @@ Lastly, you don’t want to submit a pull request with 50 files containing
 a plethora of changes, instead, stick to smaller-sized pull requests
 since they’re easier and faster to review.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/learn-git-github/github-flow/github-flow-open-pull-request.svg" alt="open pull request" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2570,7 +2570,7 @@ Once all the feedback is added, collaborators can click on “Submit
 Review” and wait for a response. If all goes well, the pull request will
 eventually be merged into `main`!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/learn-git-github/github-flow/github-flow-review-pull-request.svg" alt="review pull request" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2598,7 +2598,7 @@ workflow using Github.
 Github provides us with a number of useful tools that expand on Git
 functionality, especially if we’re collaborating with teammates!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/learn-git-github/github-flow/github-flow-merge-delete-branch.svg" alt="merge delete branch" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 

@@ -355,12 +355,12 @@ By the end of this lesson, you will have the knowledge that you need to
 collaborate more effectively with engineers and jump into your own
 career in web development.
 
-### Instructions
+
 
 Check out the graph on the right that shows the number of websites on
 the internet since 2000. When you’re ready, move to the next exercise.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/overview-of-the-internet/total_number_of_websites.svg" alt="Bar graph depicting how many total websites are on the internet from 2000 to 2022. The last 5 years show: 
 2018: 1,630,322,579
@@ -389,12 +389,12 @@ the early 1980s. As different networks adopted TCP/IP, the
 interconnected global network of networks that is today known as the
 internet was formed.
 
-### Instructions
+
 
 Check out the map of early ARPANET supercomputers. When you’re ready,
 move to the next exercise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/Early_ARPANET_institutions_Updated_1-01.svg" alt="Diagram of the early ARPANET locations." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -420,13 +420,13 @@ The invention of the world wide web led to the use of the internet in
 wider society through the 1990s and the creation of a variety of
 websites that are still in use today.
 
-### Instructions
+
 
 The diagram to the right demonstrates how different pages on the World
 Wide Web are linked to one another. Move to the next exercise when you
 are ready to continue.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/hypertext_diagram.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -447,12 +447,12 @@ a rented server at a data center, or cloud server. At Codecademy, we
 have servers that store lesson data and our servers are sending this
 lesson data to your client device.
 
-### Instructions
+
 
 Watch the video to learn about the importance of browsers and servers,
 then move to the next exercise when you are ready to proceed.
 
-### Solution
+
 
 [What is a server?](https://www.youtube.com/watch?v=oJ8NzLGMrSA&t=1s)
 
@@ -475,7 +475,7 @@ src="https://content.codecademy.com/programs/code-foundations-path/web-dev-surve
 class="img__1JGFO2nlisObc3KeOSGPRp"
 alt="a table showing the most common HTTP status codes" />
 
-### Instructions
+
 
 1.  The browser is currently displaying a website that Alex has created
     to show photos and descriptions of her pets. If you click on the
@@ -496,7 +496,7 @@ alt="a table showing the most common HTTP status codes" />
     turtles! Click on the link for `Turtles` to see the browser display
     the 404 status code.
 
-### Solution
+
 
 ``` html
 <body>
@@ -562,13 +562,13 @@ depending on the speed of the user’s connection, the size of the
 website, and even the physical distance between the browser and the
 server.
 
-### Instructions
+
 
 The animation to the right shows the different languages that work
 together to display a webpage. When you’re ready, move on to the next
 exercise.
 
-### Solution
+
 
 <img alt="Animation illustrating the effects of plain HTML, HTML with CSS, and HTML with CSS and JavaScript " src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/html_css_js.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -609,7 +609,7 @@ advances in the user interface of the internet. For example:
   Django, and Ruby-on-Rails, enabled user-generated content to
   effectively be created, stored, and displayed.
 
-### Instructions
+
 
 What are the differences between Web 1.0 and Web 2.0 pages? The answers
 are in these screenshots.
@@ -626,7 +626,7 @@ On the right, the Web 2.0 page is:
 
 Move to the next exercise when you’re ready to continue.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/Web1vsWeb2_v2.png" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -662,7 +662,7 @@ great place to start! While the majority of mobile applications are
 built in programming languages, like Swift for iOS, it is increasingly
 common to see developers using JavaScript frameworks to build new apps.
 
-### Instructions
+
 
 Check out the basic responsive website shown here. Try resizing the
 screen—you’ll notice the font size adjusting as the screen width
@@ -670,7 +670,7 @@ changes.
 
 Move to the next exercise when you’re ready to proceed.
 
-### Solution
+
 
 ``` html
 ```
@@ -692,7 +692,7 @@ websites and web applications at a more technical level. Or if you’re
 interested in becoming a web developer yourself, you now have the
 important context to start building your own website or web application!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/NetworkConnections_Updated_1.svg" alt="Illustration of the interconnection between phones, computers, and other internet-enabled devices." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -726,11 +726,11 @@ The four main languages that Alejandra needs to learn include:
 We’ll follow along with Alejandra as she picks up each of these
 languages, starting with HTML.
 
-### Instructions
+
 
 Continue to the next exercise when you are ready to dive into HTML!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/web%20dev.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -750,14 +750,14 @@ HTML stands for **h**ypertext **m**arkup **l**anguage. In the next few
 exercises, we will look at the HTML acronym word-by-word to unpack what
 HTML really means.
 
-### Instructions
+
 
 Take a peek at the HTML code to the right. Some parts of the language
 are pretty intuitive, see if you can figure out how anything works.
 
 If not, don’t worry! We’ll explain it soon.
 
-### Solution
+
 
 ``` html
 <h1>Why learn HTML?</h1>
@@ -789,12 +789,12 @@ to distinguish from the student’s own work. HTML separates content and
 annotation by using HTML tags, which are denoted by angle brackets (also
 known as less-than and greater-than signs).
 
-### Instructions
+
 
 Compare the markup for the essay to the markup in the HTML diagram. How
 do they compare?
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/html%20annotation.svg" alt="An example of HTML code for a website side by side with an imagined autobiography page, demonstrating the similarities in structure." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -821,12 +821,12 @@ Let’s quickly review each part of the element pictured:
   tags have a forward slash (/) inside of them, directly after the left
   angle bracket.
 
-### Instructions
+
 
 Study the diagram to the right to learn about the anatomy of HTML
 syntax. When you’re done, continue to the next exercise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-html/elements-and-structure/html%20lesson%20image.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -847,7 +847,7 @@ Here are a few common tags that you can start getting familiar with:
 <button>This is a button.</button>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -864,7 +864,7 @@ with `With over 25 years...`.
 Put an opening and closing `button` tag around the text that says
 `Click here!`.
 
-### Solution
+
 
 ``` html
 <h1>Jetsetter Travel Agency</h1>
@@ -893,12 +893,12 @@ next. But despite all of the advances that have taken place with the
 growth of the web, at its core the web is still just a collection of
 hyperlinked documents.
 
-### Instructions
+
 
 Review the structure of links shown in the diagram, then continue to the
 next exercise when you are ready.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/hypertext_diagram.svg" alt="A series of webpage like images showing links from one to another." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -936,7 +936,7 @@ target="_blank" rel="noopener">www.codecademy.com</a>.
 <a href="www.codecademy.com">Learn to code!</a>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -969,7 +969,7 @@ resume!
 Click **Run** one more time when you are ready to move on to the next
 lesson.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1041,12 +1041,12 @@ content, she can expect them to be styled the same way as her existing
 content. This will save Alejandra time in the long run, especially as
 her website gets more and more complex.
 
-### Instructions
+
 
 After you’ve reviewed the diagram to compare the uses of HTML and CSS,
 continue to the next exercise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/House-Blue-Print-Diagram.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1069,7 +1069,7 @@ existing website. This is done with an HTML link tag. An HTML link tag
 is often used to create a connection between an HTML file and the CSS
 file and tells the browser to apply the CSS styles to the HTML.
 
-### Instructions
+
 
 **1.**
 
@@ -1109,7 +1109,7 @@ is no longer readable in-front of the image.
 
 Let’s change the color property within the `h1` selector back to white.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1312,7 +1312,7 @@ a wide variety of user interactions, including:
 - the user re-sizing their window
 - the user hovering over text on the webpage
 
-### Instructions
+
 
 **1.**
 
@@ -1345,7 +1345,7 @@ any input text without us needing to rewrite the logic of the function.
 Confused? Don’t worry, we’ll cover functions more thoroughly in the next
 exercise.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1387,7 +1387,7 @@ interactive experiences. When an event is fired, a function is executed.
 This pattern is used again and again in web development to create
 interactive websites.
 
-### Instructions
+
 
 **1.**
 
@@ -1451,7 +1451,7 @@ be reset at random!
 
 When you’re ready, click **Run** again and move on to the next exercise.
 
-### Solution
+
 
 ``` html
 <html>
@@ -1514,7 +1514,7 @@ engineering*, which is a specialized subset of software engineers who
 ensure that the applications they are working with accurately and
 efficiently record all of the required data.
 
-### Instructions
+
 
 **1.**
 
@@ -1525,7 +1525,7 @@ Press run and take a look at the data that is returned. What kinds of
 data is Alejandra’s app able to store and retrieve? Why is it important
 for her to store this particular set of information?
 
-### Solution
+
 
 ``` sql
 SELECT * FROM users;
@@ -1562,7 +1562,7 @@ href="https://www.codecademy.com/learn/choosing-a-programming-language-track"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">Choosing Your First Language</a>!
 
-### Instructions
+
 
 Congratulations! You can now understand and talk about the main
 languages of web development and you’ve gotten your feet wet with
@@ -1571,7 +1571,7 @@ reading and editing code.
 If you’re intrigued by Web Development, you should now have a sense of
 what skills or languages you want to learn next.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/programs/code-foundations-path/web-dev-survey/web%20dev.svg" alt="Image of Alejandra surrounded by JavaScript, HTML, and CSS icons" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 

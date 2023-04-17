@@ -46,7 +46,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -245,7 +245,7 @@ some avenues to build on your existing progress.
 - Create class called `Catalog` that holds all of the `Media` items in
   our library.
 
-### [Solution](build-a-library.js)
+## [Solution](build-a-library.js)
 
 ``` javascript
 class Media {

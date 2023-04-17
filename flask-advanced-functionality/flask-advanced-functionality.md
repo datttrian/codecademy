@@ -37,7 +37,7 @@ login and RSVP for the fun evening. We’ll call it \**drumroll\*\\* :
 DinnerParty! The sooner we start, the sooner us and our friends will be
 enjoying dessert!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -94,7 +94,7 @@ print(hash_match) # will print True
 While we are hardcoding our passwords here, in later exercises we will
 see how to collect this information using a Form.
 
-### Instructions
+
 
 **1.**
 
@@ -133,7 +133,7 @@ Check the hash `hashed_password` against `password_attempt_two` with the
 Save the result to a variable `hash_match_two`, and print it to the
 terminal. Did the user get the password right this time?
 
-### Solution
+
 
 ``` python
 # import generate_password_hash and check_password_hash here:
@@ -213,7 +213,7 @@ class User(UserMixin, db.Model)
 -   these functions will be helpful later on for understanding the state
     of our users
 
-### Instructions
+
 
 **1.**
 
@@ -244,7 +244,7 @@ providing it the methods of the `UserMixin` class.
 
 Update `User` to inherit from `UserMixin`.
 
-### Solution
+
 
 ``` python
 from datetime import datetime
@@ -327,7 +327,7 @@ def register():
 Lastly, we need to make sure to update our template file to make sure
 the form is displayed properly to our users.
 
-### Instructions
+
 
 **1.**
 
@@ -359,7 +359,7 @@ Set the password of `user` with its `set_password()` method.
 Once completed, try using the registration form and visiting the index
 route to see the users currently registered for the dinner party!
 
-### Solution
+
 
 ``` python
 from datetime import datetime
@@ -501,7 +501,7 @@ def login():
 -   if no user is found or the password does not match, we redirect to
     the login route
 
-### Instructions
+
 
 **1.**
 
@@ -530,7 +530,7 @@ correct password, log them in!
 
 Use the `login_user` function to log `user` into the site.
 
-### Solution
+
 
 ``` python
 from datetime import datetime
@@ -721,7 +721,7 @@ def rsvp(username):
 -   update the attendee list with the logged-in user’s `username` and
     commit the change
 
-### Instructions
+
 
 **1.**
 
@@ -782,7 +782,7 @@ attribute as follows:
 dinner_party.attendees += f", {username}"
 ```
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -1023,7 +1023,7 @@ can go wrong. When you identify these points, you can utilize `flash()`
 to provide feedback to the user on what exactly happened and how they
 can proceed.
 
-### Instructions
+
 
 **1.**
 
@@ -1057,7 +1057,7 @@ the file to display all flashed messages near the top of the page.
 Replace the empty list with the Flask function that returns all flashed
 messages from the last session.
 
-### Solution
+
 
 ``` python
 from app import app, db, login_manager
@@ -1207,7 +1207,7 @@ recipe.
 
 Click Next to get started!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -1267,7 +1267,7 @@ login_manager.init_app(app)
     `init_app()` method with `app`, an initialized Flask app, as an
     argument
 
-### Instructions
+
 
 **1.**
 
@@ -1281,7 +1281,7 @@ Create an instance of `LoginManager` named `app_login_manager`.
 
 Initialize your `login_manager` with the app provided in **app.py**.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -1342,7 +1342,7 @@ def home():
 The `@login_required` decorator will force the user to login before
 being able to view the page
 
-### Instructions
+
 
 **1.**
 
@@ -1353,7 +1353,7 @@ Import the `login_required` function from `flask_login`.
 Add the `@login_required` decorator to the home endpoint so that it is
 only accessible when logged in.
 
-### Solution
+
 
 ``` python
 import flask
@@ -1428,14 +1428,14 @@ def unauthorized():
     non-authenticated users. We can replace this with a template that
     users who fail to login see.
 
-### Instructions
+
 
 **1.**
 
 Use the `@login_manager.unauthorized_handler` decorator to handle access
 errors.
 
-### Solution
+
 
 ``` python
 import flask
@@ -1548,7 +1548,7 @@ instance with the properties specified above and save the object to
 `render_template("logged_in.html", current_user=user)`. If the password
 isn’t correct, we return `login_manager.unauthorized()`.
 
-### Instructions
+
 
 **1.**
 
@@ -1562,7 +1562,7 @@ Inside the conditional that checks if the password matches
 2.  Return the result of calling `render_template()` with the page
     `"logged_in.html"`, and setting `current_user` as `user`.
 
-### Solution
+
 
 ``` python
 import flask
@@ -1657,7 +1657,7 @@ access that variable in our HTML.
 
 This will enable our users to see their data when they log in!
 
-### Instructions
+
 
 **1.**
 
@@ -1672,7 +1672,7 @@ display the logged-in user’s username.
 Nice work, now log in with the provided credentials to view the
 displayed username.
 
-### Solution
+
 
 ``` python
 import flask
@@ -1791,7 +1791,7 @@ we just created.
 
 Congrats on learning authentication with Flask!
 
-### Instructions
+
 
 **1.**
 
@@ -1807,7 +1807,7 @@ Inside the HTML page, add an `<a>` element that contains the text
 `Logout` and an `href` attribute with the value
 `{{ url_for('logout') }}`.
 
-### Solution
+
 
 ``` python
 import flask
@@ -1923,7 +1923,7 @@ We will use these modules to create our application featuring the
 ability for users to create accounts and authenticate in order to post
 travel destinations.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2268,4 +2268,4 @@ body {
 </html>
 ```
 
-### Solution
+

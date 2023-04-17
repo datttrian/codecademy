@@ -12,7 +12,7 @@ If you get stuck during this project, check out the **project
 walkthrough video**, which can be found by selecting “Get Unstuck” in
 the upper right-hand corner of this window.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -234,4 +234,4 @@ changes the `display` property of `lastLyric` back to `'none'`.
 Congrats, you’ve completed the Piano Player! Play around with the piano
 and the song box to fire all the events.
 
-### [Solution](https://datttrian.github.io/codecademy/building-interactive-websites/piano-keys/index.html)
+## [Solution](https://datttrian.github.io/codecademy/building-interactive-websites/piano-keys/index.html)

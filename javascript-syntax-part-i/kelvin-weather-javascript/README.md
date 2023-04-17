@@ -23,7 +23,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -122,7 +122,7 @@ If you’d like extra practice, try this:
 - Use `console.log` and string interpolation to log the temperature in
   `newton` to the console
 
-### [Solution](kelvin-weather-javascript.js)
+## [Solution](kelvin-weather-javascript.js)
 
 ``` javascript
 //Temperature in Kelvin

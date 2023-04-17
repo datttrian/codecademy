@@ -6,7 +6,7 @@ a short thought, it’ll disappear after just 15 seconds.
 
 Let’s get started!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -278,4 +278,4 @@ can get with `thought.id`.
 Once that’s done, try adding some thoughts and watch them disappear…it’s
 just like your brain, but you built it with React.
 
-### [Solution](https://datttrian-passing-thoughts.netlify.app/) (Reference: [peterekey](https://github.com/peterekey/codecademy_20230212_passing_thoughts))
+## [Solution](https://datttrian-passing-thoughts.netlify.app/) (**Reference**: [peterekey](https://github.com/peterekey/codecademy_20230212_passing_thoughts))

@@ -58,14 +58,14 @@ for now, we’re going to focus on how to add and modify basic content on
 a page, like text, images, and videos. Don’t worry if the websites look
 ugly — we’re just getting started.
 
-### Instructions
+
 
 **1.**
 
 In the code editor to the right, type your name in between `<h1>` and
 `</h1>`, then press **Run**.
 
-### Solution
+
 
 ``` html
 <h1>Your Name</h1>
@@ -108,12 +108,12 @@ Let’s quickly review each part of the element pictured:
   tags have a forward slash (`/`) inside of them, directly after the
   left angle bracket.
 
-### Instructions
+
 
 Study the diagram to the right to learn about the anatomy of HTML
 syntax. When you’re done, continue to the next exercise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-html/elements-and-structure/html%20lesson%20image.svg" alt="HTML Element Diagram" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -139,7 +139,7 @@ text, images, and buttons – can be added to the body.
 </body>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -159,7 +159,7 @@ browsers do this! The best way to ensure that all your HTML renders the
 same way in all browsers is to ensure that your elements remain within
 the opening and closing body tags.
 
-### Solution
+
 
 ``` html
 <body>
@@ -213,7 +213,7 @@ Understanding HTML hierarchy is important because child elements can
 inherit behavior and styling from their parent element. You’ll learn
 more about webpage hierarchy when you start digging into CSS.
 
-### Instructions
+
 
 **1.**
 
@@ -223,7 +223,7 @@ Add the paragraph below as a child of the `div` element.
 <p>This paragraph is a child of the div element and a grandchild of the body element</p>
 ```
 
-### Solution
+
 
 ``` html
 <body>
@@ -268,7 +268,7 @@ heading element:
 <h1>BREAKING NEWS</h1>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -294,7 +294,7 @@ On the next line, add one more `<h3>` heading that says
 
 Finally, on the next line add an `<h2>` heading that says `Media`.
 
-### Solution
+
 
 ``` html
 <body>
@@ -341,7 +341,7 @@ target="_blank">Learn CSS</a> course.
 images, or videos. Remember to always add two spaces of indentation when
 you nest elements inside of `<div>`s for better readability.
 
-### Instructions
+
 
 **1.**
 
@@ -368,7 +368,7 @@ Above the `<h2>` element that says `Media`, add an opening `<div>` tag.
 
 Place the closing `</div>` tag right above the closing `</body>` tag.
 
-### Solution
+
 
 ``` html
 <body>
@@ -417,7 +417,7 @@ When we add an `id` to a `<div>`, we place it in the opening tag:
 </div>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -434,7 +434,7 @@ tag that has the `Habitat` `<h2>` heading as a child.
 Add an `id` attribute with the value `"media"` to the opening `<div>`
 tag that has the `Media` `<h2>` heading as a child.
 
-### Solution
+
 
 ``` html
 <body>
@@ -495,7 +495,7 @@ piece of content that is *inline*, or on the same line as other text. If
 you want to divide your content into *blocks*, it’s better to use a
 `<div>`.
 
-### Instructions
+
 
 **1.**
 
@@ -532,7 +532,7 @@ Add a paragraph with the following text:
 > Belarus, Bulgaria, China, Finland, France, Greece, India, Japan,
 > Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.
 
-### Solution
+
 
 ``` html
 <body>
@@ -583,7 +583,7 @@ the text to produce the following:
 
 As we can see, “The Nile River” is bolded and “longest” is in italics.
 
-### Instructions
+
 
 **1.**
 
@@ -595,7 +595,7 @@ In the first paragraph that starts “The brown bear…”, emphasize
 In the paragraph under `About Brown Bears`, make the words
 `Least Concern` strong using the `<strong>` tag.
 
-### Solution
+
 
 ``` html
 <body>
@@ -641,14 +641,14 @@ in the world, measuring over 6,850
 kilometers long (approximately 4,260  
 miles).
 
-### Instructions
+
 
 **1.**
 
 Add two line breaks (`<br>`) after the sentence that ends with
 `Least Concern`.
 
-### Solution
+
 
 ``` html
 <body>
@@ -708,7 +708,7 @@ The output will look like this:
 - Tortillas
 - Chicken
 
-### Instructions
+
 
 **1.**
 
@@ -725,7 +725,7 @@ Add the following list items to the unordered list:
 - Horribilis
 - Nelsoni (extinct)
 
-### Solution
+
 
 ``` html
 <body>
@@ -785,7 +785,7 @@ The output will look like this:
 3.  Cream the butter, sugar in separate bowl.
 4.  Add eggs and vanilla extract to bowl.
 
-### Instructions
+
 
 **1.**
 
@@ -802,7 +802,7 @@ Add the following list items to the ordered list:
 - United States
 - Canada
 
-### Solution
+
 
 ``` html
 <body>
@@ -863,7 +863,7 @@ image. In this case, the value of `src` must be the *uniform resource
 locator* (URL) of the image. A URL is the web address or local address
 where a file is stored.
 
-### Instructions
+
 
 **1.**
 
@@ -874,7 +874,7 @@ the source (`src`) for the image:
 https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg
 ```
 
-### Solution
+
 
 ``` html
 <body>
@@ -945,14 +945,14 @@ If the image on the web page is not one that conveys any meaningful
 information to a user (visually impaired or otherwise), the `alt`
 attribute should be left empty.
 
-### Instructions
+
 
 **1.**
 
 Add the `alt` attribute to the image and include a description. Make
 sure the description accurately describes the image.
 
-### Solution
+
 
 ``` html
 <body>
@@ -1016,7 +1016,7 @@ pausing and playing.
 The text, `Video not supported`, between the opening and closing video
 tags will only be displayed if the browser is unable to load the video.
 
-### Instructions
+
 
 **1.**
 
@@ -1038,7 +1038,7 @@ In between the opening and closing `<video>` tags, add the phrase
 `Video not supported`, which will be displayed if the browser is unable
 to load your video.
 
-### Solution
+
 
 ``` html
 <body>
@@ -1115,7 +1115,7 @@ In the next lesson, we’ll take the content that you’ve added to this
 website and transform it into an HTML document that’s ready to go on the
 web.
 
-### Instructions
+
 
 We’ve left you with your final code. Feel free to play around and modify
 it using the new elements you’ve learned!
@@ -1126,7 +1126,7 @@ with one of our experts:
 
 [HTML Structure](https://www.youtube.com/watch?v=uxmB8MlO3m8)
 
-### Solution
+
 
 ``` html
 <body>
@@ -1192,14 +1192,14 @@ your document is forever interpreted correctly, always include
 
 Lastly, HTML code is always saved in a file with an **.html** extension.
 
-### Instructions
+
 
 **1.**
 
 Add the `<!DOCTYPE html>` declaration as the very first line of code at
 the top of the **index.html** file.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1225,14 +1225,14 @@ Anything between the opening `<html>` and closing `</html>` tags will be
 interpreted as HTML code. Without these tags, it’s possible that
 browsers could incorrectly interpret your HTML code.
 
-### Instructions
+
 
 **1.**
 
 Add the opening and closing `<html>` tags below the `<!DOCTYPE html>`
 tag.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1274,13 +1274,13 @@ after your first HTML tag:
 </head>
 ```
 
-### Instructions
+
 
 **1.**
 
 Place the `<head>` element below the opening `<html>` tag.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1351,7 +1351,7 @@ If we were to open a file containing the HTML code in the example above,
 the browser would display the words `My Coding Journal` in the title bar
 (or in the tab’s title).
 
-### Instructions
+
 
 **1.**
 
@@ -1362,7 +1362,7 @@ Unfortunately, you won’t be able to see the title of your page in the
 smaller browser to the right. We’ll show you what it would look like in
 the next exercise.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1425,7 +1425,7 @@ So far, we have learned about:
 Next, you will learn about new types of elements that go inside the
 body.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/htmlcss1-diagram__sitetitle_Updated_1.svg" alt="Illustration of a browser panel with a title bar" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1467,7 +1467,7 @@ When reading technical documentation, you may come across the term
 *hyperlink*. Not to worry, this is simply the technical term for link.
 These terms are often used interchangeably.
 
-### Instructions
+
 
 **1.**
 
@@ -1480,7 +1480,7 @@ Add the following URL to the link:
 
     https://en.wikipedia.org/wiki/Brown_bear
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1557,14 +1557,14 @@ with tabs, additional browser windows had to be opened to view more
 websites. The `target="_blank"` attribute, when used in modern browsers,
 will open new websites in a new tab.
 
-### Instructions
+
 
 **1.**
 
 In the link that reads `Learn More`, add the `target` attribute and set
 it equal to `_blank`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1678,7 +1678,7 @@ path (a full URL, like `https://www.codecademy.com/learn/learn-html`
 which is stored in a different folder). The `./` in `./index.html` tells
 the browser to look for the file in the current folder.
 
-### Instructions
+
 
 **1.**
 
@@ -1693,7 +1693,7 @@ Under the link to **index.html**, add an anchor tag that links to
 Notice that there is also another file in the code editor,
 **aboutme.html**. Click the link to make sure it works!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1805,7 +1805,7 @@ In the example above, an image of a prickly pear has been turned into a
 link by wrapping the outside of the `<img>` element with an `<a>`
 element.
 
-### Instructions
+
 
 **1.**
 
@@ -1819,7 +1819,7 @@ Use the same URL as before:
 
     https://en.wikipedia.org/wiki/Brown_bear
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1906,7 +1906,7 @@ are embedded in an ordered list. These links appear in the browser as a
 numbered list of links. An `id` is especially helpful for organizing
 content belonging to a `div`!
 
-### Instructions
+
 
 **1.**
 
@@ -1924,7 +1924,7 @@ element. Each anchor tag should link to the corresponding `<div>` on the
 page (The `<a>` element that contains the text “Introduction” links to
 `#introduction`).
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2028,14 +2028,14 @@ A browser renders both examples the same way:
 In the next exercise you will learn how to use indentation to help
 visualize nested elements.
 
-### Instructions
+
 
 **1.**
 
 Use whitespace to make the code more readable by putting each element on
 its own line.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2080,13 +2080,13 @@ inside of the `<body>` tag, so they are indented two spaces. The
 `Paragraph 2` element is nested inside of the `<div>` tag, so it is
 indented an additional two spaces.
 
-### Instructions
+
 
 **1.**
 
 Indent the code in **index.html** to match the W3C standards.
 
-### Solution
+
 
 ``` html
 <body>
@@ -2134,13 +2134,13 @@ In the example above, a valid HTML element (a paragraph element) has
 been “commented out.” This practice is useful when there is code you
 want to experiment with, or return to, in the future.
 
-### Instructions
+
 
 **1.**
 
 Add a comment to **index.html** file.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2198,7 +2198,7 @@ Let’s review what you’ve learned this lesson:
 Take some time to edit the workspace you created and observe how it
 changes!
 
-### Instructions
+
 
 Congratulations on completing this lesson!
 
@@ -2207,7 +2207,7 @@ below and follow along with one of our experts:
 
 [HTML Doc Standards](https://www.youtube.com/watch?v=B4tCt6elrU0)
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2611,7 +2611,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2769,7 +2769,7 @@ closing `<a>` tags. In the `<a>` tag, set `href="#contact"`.
 Congrats! You’ve got the beginnings of a solid fashion blog. Feel free
 to make modifications and practice your HTML by adding more content.
 
-### [Solution](html-fashion-blog)
+## [Solution](html-fashion-blog)
 
 # HTML Tables
 
@@ -2785,7 +2785,7 @@ element to present information in a two-dimensional table to the users.
 
 Let’s get started!
 
-### Instructions
+
 
 Take a look at the code in the body of **index.html**. What new code do
 you see?
@@ -2793,7 +2793,7 @@ you see?
 Explore with the code in this file and try modifying something at
 random. What happened?
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2874,13 +2874,13 @@ the data by using the `<table>` element.
 The `<table>` element will contain all of the tabular data we plan on
 displaying.
 
-### Instructions
+
 
 **1.**
 
 In **index.html**, create a table just above the closing `body` tag.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2933,13 +2933,13 @@ The first step in entering data into the table is to add rows using the
 
 In the example above, two rows have been added to the table.
 
-### Instructions
+
 
 **1.**
 
 Add two rows to the table in **index.html**.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2991,7 +2991,7 @@ of data.
 If the table were displayed in the browser, it would show a table with
 one row and two columns.
 
-### Instructions
+
 
 **1.**
 
@@ -3002,7 +3002,7 @@ following data, in order:
 - 14
 - Package Items
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3088,7 +3088,7 @@ values:
 HTML code for tables may look a little strange at first, but analyzing
 it piece by piece helps make the code more understandable.
 
-### Instructions
+
 
 **1.**
 
@@ -3105,7 +3105,7 @@ These headings will add meaning to the rest of the data in the table.
 
 Now add a `scope` attribute to each of these new headings.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3188,7 +3188,7 @@ table, td {
 The code in the example above uses CSS instead of HTML to show table
 borders.
 
-### Instructions
+
 
 **1.**
 
@@ -3223,7 +3223,7 @@ to the table. Make sure to place it after the second table row.
 </tr>
 ```
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3321,13 +3321,13 @@ In the example above, the data `Out of Town` spans the `Monday` and
 `Tuesday` table headings using the value `2` (two columns). The data
 `Back in Town` appear only under the `Wednesday` heading.
 
-### Instructions
+
 
 **1.**
 
 In **index.html**, span a `<td>` element across two columns.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3436,13 +3436,13 @@ If you’d like to see how the browser interprets the code above, feel
 free to copy and paste it into the code editor to understand it a little
 better.
 
-### Instructions
+
 
 **1.**
 
 In **index.html**, span a `<td>` element across two rows.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3546,13 +3546,13 @@ In the example above, all of the table data is contained within a table
 body element. Note, however, that the headings were also kept in the
 table’s body — we’ll change this in the next exercise.
 
-### Instructions
+
 
 **1.**
 
 Enclose rows 2, 3, 4, 5, 6, and 7 of the table in a `<tbody>` element.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3660,13 +3660,13 @@ element. We can use the `scope` attribute on `<th>` elements to indicate
 whether a `<th>` element is being used as a `"row"` heading or a `"col"`
 heading.
 
-### Instructions
+
 
 **1.**
 
 Enclose the first row of the table in a `<thead>` element.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3774,7 +3774,7 @@ In the example above, the footer contains the totals of the data in the
 table. Footers are often used to contain sums, differences, and other
 data results.
 
-### Instructions
+
 
 **1.**
 
@@ -3787,7 +3787,7 @@ element. Inside of the footer, add the following data:
  
 ```
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3883,7 +3883,7 @@ table, th, td {
 The code in the example above demonstrates just some of the various
 table aspects you can style using CSS properties.
 
-### Instructions
+
 
 **1.**
 
@@ -3893,7 +3893,7 @@ HTML content in the **index.html** file.
 In **style.css**, set the `font-size` of all table headings (`th`) and
 table data (`td`) to 18 pixels (`18px`).
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3990,12 +3990,12 @@ Let’s review what we’ve learned so far:
 
 Congratulations on completing HTML Tables!
 
-### Instructions
+
 
 Take some time to experiment with your new knowledge of tables in
 **index.html**. When you’re done, proceed to the next unit.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4084,7 +4084,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4170,7 +4170,7 @@ name of events:
 
 You have created the events table. Cheers!
 
-### [Solution](html-wine-festival-schedule)
+## [Solution](html-wine-festival-schedule)
 
 # Semantic HTML
 
@@ -4213,12 +4213,12 @@ aren’t labeled, you don’t know what products are in those aisles.
 However, stores that do have signs for each aisle make it a lot easier
 to find the items you need, just like Semantic HTML.
 
-### Instructions
+
 
 Analyze the diagram and take note of key differences between
 non-semantic and semantic code.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/SemanticVSNonSemantic_Diagram_Updated_1.svg" alt="Image shows non-semantic code full of random <div> elements. The semantic code is clean and easy to understand since everything is labeled. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4288,7 +4288,7 @@ read the code.
 Now that we’ve learned about the `<header>` and `<nav>` elements let’s
 add them into our code!
 
-### Instructions
+
 
 **1.**
 
@@ -4303,7 +4303,7 @@ in your code to indicate the error.
 
 Now, find the `<div id="nav">` tag and change it to `<nav>`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4392,7 +4392,7 @@ In the example above, the footer is used to contain contact information.
 The `<footer>` tag is separate from the `<main>` element and typically
 located at the bottom of the content.
 
-### Instructions
+
 
 **1.**
 
@@ -4403,7 +4403,7 @@ In the code editor, find the `<div id="main">` tag and change it to
 
 Now, find the `<div id="footer">` tag and change it to `<footer>`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4486,7 +4486,7 @@ cricket was placed inside of the `<section>` element. It is important to
 note that a `<section>` element could also be placed in an `<article>`
 element depending on the context.
 
-### Instructions
+
 
 **1.**
 
@@ -4500,7 +4500,7 @@ attached to it!
 
 Now encapsulate the `<h2>` and `<p>` tag with `<article>`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4575,14 +4575,14 @@ content. Meanwhile the information within the `<aside>` enhances the
 information in `<article>` but is not required in order to understand
 it.
 
-### Instructions
+
 
 **1.**
 
 Remove the `<div id="aside">` tag and replace it with `<aside>` tag.
 Don’t forget about the closing tag!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4676,7 +4676,7 @@ While the content in `<figure>` is related to the main flow of the
 document, its position is independent. This means that you can remove it
 or move it somewhere else without affecting the flow of the document.
 
-### Instructions
+
 
 **1.**
 
@@ -4696,7 +4696,7 @@ https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg
 
 Create a `<figcaption>` under `<img>` and describe the image.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4798,7 +4798,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Attributes
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Useful attributes</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -4819,7 +4819,7 @@ Use the following URL as the source for the audio:
 https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3
 ```
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -4916,7 +4916,7 @@ In the example above, `<embed>` is being used to add in a gif from a
 local file known as `download.gif`. Embed can be used to add local files
 as well as media content straight from some other websites.
 
-### Instructions
+
 
 **1.**
 
@@ -4940,7 +4940,7 @@ Add the following gif into your code using the `<embed>` tag and the
 https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif
 ```
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -5023,12 +5023,12 @@ Let’s review some of the topics we covered throughout the lesson:
 
 Now, apply this knowledge to become a better Web Developer.
 
-### Instructions
+
 
 Now it’s time to use what you’ve learned to build a more accessible
 website.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -5096,7 +5096,7 @@ elements are automatically assigned colors, borders, and positioned
 properly. This is because of the CSS file. Don’t worry about CSS right
 now, it’s only there so that the webpage looks nice.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5331,7 +5331,7 @@ Think about ways you could improve this project or create your very own
 project using semantic elements. Need some suggestions? Check the hint
 for some ideas to get you started!
 
-### [Solution](semantic-html-nyc-blog)
+## [Solution](semantic-html-nyc-blog)
 
 # Review: Fundamentals of HTML
 

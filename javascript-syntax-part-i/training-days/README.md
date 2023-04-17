@@ -15,7 +15,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -111,7 +111,7 @@ Well done! Training Days is more maintainable and less error-prone
 thanks to your work. Run the program a few times to make sure the
 results are randomized.
 
-### [Solution](training-days.js)
+## [Solution](training-days.js)
 
 ``` javascript
 // The scope of `random` is too loose

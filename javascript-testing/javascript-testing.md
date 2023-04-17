@@ -68,7 +68,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener"><em>Software Errors Cost U.S. Economy
 \$59.5 Billion Annually</em>, 2002</a>.
 
-### Instructions
+
 
 In this exercise you have access to a terminal and browser. You can
 start, stop, and test a web application from here.
@@ -84,7 +84,7 @@ As a user of the Cake Bar site you suspect there are some errors.
 - Try to pick a cake type and order. Does this feature work as expected?
 - Continue interacting with the website. Can you find any other errors?
 
-### Solution
+
 
 # Why Test?
 
@@ -108,7 +108,7 @@ makes a system behave in unexpected ways. As you read in the last
 exercise, these unexpected behaviors can cause harm to users. Ideally
 testing catches bugs before they are sent to users.
 
-### Instructions
+
 
 The same application is provided. As a manual test engineer for this
 app, you have been provided some features to test. Manually test the web
@@ -126,7 +126,7 @@ app by following the list provided:
 - **Behavior 6**: Choose a stack size. Expect “Pancake Count:” to
   display the number equivalent to the stack size, e.g. “Double” is “2”.
 
-### Solution
+
 
 ## Automated Testing
 
@@ -160,7 +160,7 @@ workflow might look like this:
 4.  If it does not behave as intended, at least one test should fail.
     Fix code and return to step 2.
 
-### Instructions
+
 
 **1.**
 
@@ -172,7 +172,7 @@ Wait for the test output to appear.
 The tests align with the expected behaviors in the previous exercise.
 Which method caught more bugs? Which was faster?
 
-### Solution
+
 
 ## The Test Suite
 
@@ -192,7 +192,7 @@ they are stored in the same place.
 For example, if implementation code is written in `index.js` then the
 corresponding test code may be written in `index-test.js`.
 
-### Instructions
+
 
 **1.**
 
@@ -237,7 +237,7 @@ outcome of tests in **features/user-visits-index-test.js**! When you
 make the order NOT empty, the `starts with an empty order` test fails.
 (You can scroll up the terminal to see more information.)
 
-### Solution
+
 
 ``` javascript
 const {assert} = require('chai');
@@ -369,7 +369,7 @@ You can read the description in plain English terms:
 `it accepts the customer name`. You can run the test to confirm the
 functionality works as described.
 
-### Instructions
+
 
 **1.**
 
@@ -423,7 +423,7 @@ suite you’ve confirmed that the application does not behave as expected!
 Test this manually. Run `npm start` in the terminal, reload the page,
 and see that the clear order button doesn’t exist yet!
 
-### Solution
+
 
 ``` javascript
 const {assert} = require('chai');
@@ -555,7 +555,7 @@ Running an automated test suite is fast and repeatable, which means you
 can run tests after every change to confirm that old features still
 work. If they have regressed, the test output should notify you.
 
-### Instructions
+
 
 **1.**
 
@@ -624,7 +624,7 @@ the right line in each file!
 
 When you’re done, check work.
 
-### Solution
+
 
 ``` javascript
 const express = require('express');
@@ -806,7 +806,7 @@ You also learned
   *automated testing*, *test suite*, *bug*, *documentation*, and
   *regression*
 
-### Instructions
+
 
 **1.**
 
@@ -1095,7 +1095,7 @@ In this lesson you will:
   class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
   target="_blank">characteristics of a good test</a>
 
-### Instructions
+
 
 **1.**
 
@@ -1106,7 +1106,7 @@ Enter.
 Can you match the test output in your terminal to strings in
 **index_test.js**?
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -1204,7 +1204,7 @@ contains the following:
 The `...` in the file structure represents other packages that are a
 dependency for Mocha.
 
-### Instructions
+
 
 **1.**
 
@@ -1261,7 +1261,7 @@ $ npm test
 Instead of manually running each test in the **test** directory, you can
 use this command to run the full test suite automatically.
 
-### Instructions
+
 
 **1.**
 
@@ -1316,7 +1316,7 @@ blocks to resemble the structure of your implementation code and write
 individual tests in `it` blocks. This makes your test suite *isolated*,
 *maintainable*, and *expressive*.
 
-### Instructions
+
 
 **1.**
 
@@ -1337,7 +1337,7 @@ Within the block, create an `it` block using
 `'returns the argument with the lowest value'` as the descriptive
 string.
 
-### Solution
+
 
 ``` javascript
 describe('Math', () => {
@@ -1397,7 +1397,7 @@ If an argument passed to `assert.ok()` evaluates to false, an
 `AssertionError` is thrown. The error communicates to Mocha that a test
 has failed, and Mocha logs the error message to the console.
 
-### Instructions
+
 
 **1.**
 
@@ -1427,7 +1427,7 @@ Make the expression evaluate to true by replacing `8` with `7`.
 
 Run the suite again. Your test should pass now!
 
-### Solution
+
 
 ``` javascript
 // import assert here
@@ -1460,7 +1460,7 @@ The phases are defined as follows:
 Clear separation of each phase makes a test easier to read, change, and
 validate.
 
-### Instructions
+
 
 **1.**
 
@@ -1488,7 +1488,7 @@ Following the examples below, fix both tests using the correct call to
 Which test approach was easier to read and edit? Answer this for
 yourself then move on to the next exercise.
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -1542,7 +1542,7 @@ environment before the next test runs. This provides two key benefits:
 > *teardown* phase isn’t needed because there are no conditions to
 > reset.
 
-### Instructions
+
 
 **1.**
 
@@ -1623,7 +1623,7 @@ fs.unlinkSync(path);
 Verify that you fixed the issue: run the test suite twice and compare
 the outputs. It should pass both times!
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -1726,7 +1726,7 @@ these hooks. Occasionally, you may find that you need to perform some
 unique setup or teardown for a single test that you don’t want to
 include in other tests.
 
-### Instructions
+
 
 **1.**
 
@@ -1769,7 +1769,7 @@ delete it from the `it()` blocks.
 
 Confirm everything works by running the test suite!
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -1833,7 +1833,7 @@ target="_blank">the characteristics of a good test</a>: fast, complete,
 reliable, isolated, maintainable, and expressive. If you are meeting
 these six criteria, you are creating high quality test frameworks!
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -1887,7 +1887,7 @@ write less code and use human-readable language. It can be used within
 the Mocha testing framework, and you will be using both throughout this
 lesson.
 
-### Instructions
+
 
 **1.**
 
@@ -1897,7 +1897,7 @@ hitting Enter.
 
 Review the output and move on to the next exercise.
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -1938,7 +1938,7 @@ If an argument passed to `assert.ok()` evaluates to `false`, an
 `AssertionError` is thrown. The error communicates to Mocha that a test
 has failed, and Mocha logs the error message to the console.
 
-### Instructions
+
 
 **1.**
 
@@ -1968,7 +1968,7 @@ Make the expression evaluate to true by replacing `91` with `expected`.
 
 Run the suite again. Your test should pass now!
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2008,7 +2008,7 @@ The second line is more *expressive:* instead of parsing the entire
 statement, a reader only needs to read the first two words to know the
 test is verifying equality!
 
-### Instructions
+
 
 **1.**
 
@@ -2023,7 +2023,7 @@ and `expected`, it is common practice to pass `result` first and
 
 Run the test suite.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2071,7 +2071,7 @@ assert.strictEqual(a, b);
 > recommends always using `assert.strictEqual()` instead of
 > `assert.equal()`.
 
-### Instructions
+
 
 **1.**
 
@@ -2095,7 +2095,7 @@ an error.
 
 Run the test suite.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2133,7 +2133,7 @@ a.relation == b.relation;
 a.age == b.age;
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2147,7 +2147,7 @@ Replace `assert.equal()` with `assert.deepEqual()`.
 
 Run the test suite again.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2175,7 +2175,7 @@ href="https://nodejs.org/api/assert.html#assert_assert_deepequal_actual_expected
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">here</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -2189,7 +2189,7 @@ Replace `assert.equal()` with `assert.deepEqual()`.
 
 Run the test suite again.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2209,14 +2209,14 @@ be used for many types of tests, more descriptive functions like
 be more *expressive:* the expected functionality of the implementation
 code is clear to anyone reading your tests.
 
-### Instructions
+
 
 **1.**
 
 Using the link above, go to the `assert` documentation and find a more
 *expressive* way to implement `assert.ok(1 !== 2)`.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2241,7 +2241,7 @@ target="_blank">the characteristics of a good test</a>: fast, complete,
 reliable, isolated, maintainable, and expressive. If you are meeting
 these six criteria, you are creating high quality test frameworks!
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2282,7 +2282,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2370,7 +2370,7 @@ In another `it` block, test that `.timeAtDawn`
 Your test suite is *fast*, *complete*, *isolated*, *maintainable*, and
 *expressive*! Run it and review the output in the terminal.
 
-### [Solution](rooster-regulation)
+## [Solution](rooster-regulation)
 
 [Good Tests with Mocha Project: Rooster
 Regulation](https://www.youtube.com/watch?v=GYLz0QJe9VI)
@@ -2420,7 +2420,7 @@ help you as you read the steps below:
 In this lesson, you will use a test-driven development approach to
 program a method that calculates the sum of an array of numbers.
 
-### Instructions
+
 
 **1.**
 
@@ -2434,7 +2434,7 @@ Use `npm test` in the terminal to run the test suite.
 Based on the feedback in your terminal, fix the code, then run your test
 again. Check your work once it passes.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -2501,7 +2501,7 @@ error is thrown because we don’t have a `Phrase` object. In the next
 exercise, we’ll show you the minimum possible code required to get this
 test to pass.
 
-### Instructions
+
 
 **1.**
 
@@ -2512,7 +2512,7 @@ an `assert.strictEqual()`statement to verify that
 When using `npm test` in the terminal, the test should fail since
 `Calculate.sum` hasn’t been defined yet.
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -2609,7 +2609,7 @@ our method would return ‘NM’, not ‘JW’. We will address this issue when
 it is time, but following TDD, now that we have progressed from the
 *red* to the *green*, we will move into the *refactor* phase.
 
-### Instructions
+
 
 **1.**
 
@@ -2642,7 +2642,7 @@ Run the test suite. Your test should pass!
 
 Check your work.
 
-### Solution
+
 
 ## Refactor I
 
@@ -2716,7 +2716,7 @@ at all! Regardless, you should consider how you can improve your code
 and — although it is optional — it can set you up for success moving
 forward.
 
-### Instructions
+
 
 **1.**
 
@@ -2737,7 +2737,7 @@ makes your implementation code more *expressive*.
 
 *Required*: Run the test suite to make sure you are still in the green.
 
-### Solution
+
 
 ## Getting into the Red II
 
@@ -2805,7 +2805,7 @@ The idea of TDD is to continue building tests and going through the
 *red-green-refactor* process until you feel confident that your
 implementation code performs as expected.
 
-### Instructions
+
 
 **1.**
 
@@ -2823,7 +2823,7 @@ You should see the following error message when you run your test suite.
 src="https://content.codecademy.com/courses/learn-tdd-testing-models/red-to-green-II-2.png"
 class="img__1JGFO2nlisObc3KeOSGPRp" alt="AssertionError: 6 == 22" />
 
-### Solution
+
 
 ``` javascript
 const assert = require('assert');
@@ -2895,7 +2895,7 @@ This implementation will successfully pass the tests we have written.
 Each additional test pushes us to build a complete implementation of the
 `.initials` method.
 
-### Instructions
+
 
 **1.**
 
@@ -2911,7 +2911,7 @@ Run your test suite again to make sure you are in the green.
 
 Check your work.
 
-### Solution
+
 
 ``` javascript
 const Calculate = {
@@ -2942,7 +2942,7 @@ critically about the code you have and decide whether there is anything
 unnecessary, redundant, or that could be done more clearly or
 efficiently.
 
-### Instructions
+
 
 **1.**
 
@@ -2959,7 +2959,7 @@ documentation</a>.
 
 Run your test to make sure you are still in the green.
 
-### Solution
+
 
 ``` javascript
  const Calculate = {
@@ -3034,7 +3034,7 @@ const Phrase = {
 
 This is an example of creating a test for edge cases.
 
-### Instructions
+
 
 **1.**
 
@@ -3067,7 +3067,7 @@ that returns `0` if your `inputArray` is empty.
 - Check if the length of your `inputArray` is equal to `0`.
 - Inside the `if` block, return `0` .
 
-### Solution
+
 
 ``` javascript
 ```
@@ -3124,7 +3124,7 @@ as it can quickly become difficult to maintain if not handled with care.
 You should feel confident enough in the tests you’ve written that you
 can make your changes without breaking anything.
 
-### Instructions
+
 
 Take a look at our final workspace here. We have both implementation
 code that we are confident in, and a test suite that can catch
@@ -3133,7 +3133,7 @@ regressions.
 Here we can see the benefits of using Mocha with Test-Driven
 Development.
 
-### Solution
+
 
 ``` javascript
 ```
@@ -3195,7 +3195,7 @@ If you get stuck during this project, check out the **project
 walkthrough video** which can be found at the bottom of the page after
 the final step of the project.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -3306,7 +3306,7 @@ your work!
 [TDD With Mocha Project: Factorial
 Feature](https://www.youtube.com/watch?v=NwSyopaJsUY)
 
-### [Solution](factorial)
+## [Solution](factorial)
 
 # Code Coverage
 

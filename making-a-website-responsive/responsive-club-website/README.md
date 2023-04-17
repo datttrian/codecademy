@@ -22,7 +22,7 @@ you can download what you’ll need by clicking the “Download” button
 below. If you need help setting up your computer, read our article about
 setting up a text editor for HTML/CSS development.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -94,4 +94,4 @@ to use responsive units and media queries to affect page layout. There
 are multiple ways to solve these projects, and you’ll learn more by
 seeing others’ code.-
 
-### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/responsive-club-website/index.html)
+## [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/responsive-club-website/index.html)

@@ -50,7 +50,7 @@ Notice that:
 
 Let’s write our own list!
 
-### Instructions
+
 
 **1.**
 
@@ -73,7 +73,7 @@ SyntaxError: invalid syntax
 
 Add commas (`,`) to `broken_heights` so that it runs without errors.
 
-### Solution
+
 
 ``` python
 heights = [61, 70, 67, 64, 65]
@@ -121,7 +121,7 @@ mixed_list_common = ["Mia", 27, False, 0.5]
 
 Let’s experiment with different data types in our own lists!
 
-### Instructions
+
 
 **1.**
 
@@ -138,7 +138,7 @@ Create a new list called `sam_height_and_testscore` that contains:
 
 Make sure to write the elements in exact order.
 
-### Solution
+
 
 ``` python
 ints_and_strings = [1, 2, 3, "four", "five", "Six"]
@@ -163,14 +163,14 @@ next exercise.
 
 Let’s practice writing an empty list!
 
-### Instructions
+
 
 **1.**
 
 Create an empty list and call it `my_empty_list`. Don’t put anything in
 the list just yet.
 
-### Solution
+
 
 ``` python
 my_empty_list = []
@@ -209,13 +209,13 @@ Will output:
 ['This', 'is', 'an', 'example', 'list']
 ```
 
-### Instructions
+
 
 We will be exploring `.append()` and many other methods in the upcoming
 exercises but for now take a second to examine and play around with the
 code for two common list methods.
 
-### Solution
+
 
 ``` python
 example_list = [1, 2, 3, 4]
@@ -276,7 +276,7 @@ Will output:
 
 Let’s use the `.append()` method to manipulate a list.
 
-### Instructions
+
 
 **1.**
 
@@ -298,7 +298,7 @@ Another order has come in! Use `append` to add `"roses"` to `orders`.
 
 Use `print` to inspect the `orders` Jiho has received today.
 
-### Solution
+
 
 ``` python
 orders = ["daisies", "periwinkle"]
@@ -374,7 +374,7 @@ my_list + [4]
 
 Let’s use `+` to practice combining two lists!
 
-### Instructions
+
 
 **1.**
 
@@ -400,7 +400,7 @@ TypeError: can only concatenate list (not "int") to list
 Fix the command by inserting brackets (`[` and `]`) so that it will run
 without errors.
 
-### Solution
+
 
 ``` python
 orders = ["daisy", "buttercup", "snapdragon", "gardenia", "lily"]
@@ -467,7 +467,7 @@ off the decimal point. For example, `int(5.9)` and `int(5.0)` will both
 become `5`. Therefore, `calls[int(4/2)]` will result in the same value
 as `calls[2]`, whereas `calls[4/2]` will result in an error.
 
-### Instructions
+
 
 **1.**
 
@@ -493,7 +493,7 @@ so that you don’t get an `IndexError`.
 
 Run your code again!
 
-### Solution
+
 
 ``` python
 employees = ["Michael", "Dwight", "Jim", "Pam", "Ryan", "Andy", "Robert"]
@@ -552,7 +552,7 @@ Here are the negative index numbers for our list:
 | `"sugar"`  | `-2`  |
 | `"love"`   | `-1`  |
 
-### Instructions
+
 
 **1.**
 
@@ -572,7 +572,7 @@ Use `print` to display both `index5_element` and `last_element`.
 
 Note that they are equal to `"cereal"`!
 
-### Solution
+
 
 ``` python
 shopping_list = ["eggs", "butter", "milk", "cucumbers", "juice", "cereal"]
@@ -634,7 +634,7 @@ Will output:
 ["Tomatoes", "Green Beans", "Strawberries", "Raspberries"]
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -669,7 +669,7 @@ Replace `Alisha` with `Alex` ***using a negative index***.
 
 Print `garden_waitlist` again to see the change!
 
-### Solution
+
 
 ``` python
 # Your code below:
@@ -740,7 +740,7 @@ Will output:
 Let’s practice using the `.remove()` method to remove elements from a
 list.
 
-### Instructions
+
 
 **1.**
 
@@ -803,7 +803,7 @@ exist.
 Call the `.remove()` method with the value of `"Onions"` on our
 `new_store_order_list` list.
 
-### Solution
+
 
 ``` python
 #Your code below: 
@@ -879,7 +879,7 @@ tic_tac_toe = [
 
 Let’s practice creating our own 2D list!
 
-### Instructions
+
 
 **1.**
 
@@ -895,7 +895,7 @@ a student’s name and their age. Use the following data:
 -   `"Aaron"` is `15`
 -   `"Dhruti"` is `16`
 
-### Solution
+
 
 ``` python
 heights = [["Jenny", 61], ["Alexus", 70], ["Sam", 67], ["Grace", 64], ["Vik", 68]]
@@ -942,7 +942,7 @@ Here are the index numbers to access data for the list `heights`:
 
 Let’s practice accessing data in a two-dimensional list.
 
-### Instructions
+
 
 **1.**
 
@@ -980,7 +980,7 @@ Save it to the variable `ellies_score`.
 
 Print the variable `ellies_score` to see the result.
 
-### Solution
+
 
 ``` python
 #Your code below: 
@@ -1049,7 +1049,7 @@ Would output:
 [["Jenny", "Meditation"], ["Alexus", "Photography"], ["Grace", "Football"]]
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1086,7 +1086,7 @@ negative indices***.
 
 Print `incoming_class` to see our change.
 
-### Solution
+
 
 ``` python
 #Checkpoint 1
@@ -1119,7 +1119,7 @@ So far, we have learned:
 
 Let’s practice these skills.
 
-### Instructions
+
 
 **1.**
 
@@ -1217,7 +1217,7 @@ the end of `customer_data`.
 
 Print `customer_data_final` to see our final result.
 
-### Solution
+
 
 ``` python
 # Your code below: 
@@ -1423,14 +1423,14 @@ list.method(input)
 builtinfuncion(input)
 ```
 
-### Instructions
+
 
 Take a second to preview some of the things we will be learning by
 examining the graphic of common list methods and built-in functions.
 
 When you’re ready, continue to the next exercise.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/CS101-Intro-to-Programming/ListsLessonDiagrams_v2-0622.svg" alt=".count() is a list method to count the number of occurrences of an element in a list.
 .insert() is a list method to insert an element into a specific index of a list.
@@ -1497,7 +1497,7 @@ Some important things to note:
 
 Let’s practice using `.insert()`!
 
-### Instructions
+
 
 **1.**
 
@@ -1525,7 +1525,7 @@ Print the resulting list to see the change.
 
 ***Note***: For this list, the front will be the element at index `0`
 
-### Solution
+
 
 ``` python
 front_display_list = ["Mango", "Filet Mignon", "Chocolate Milk"]
@@ -1619,7 +1619,7 @@ on an empty list will both result in an `IndexError`.
 
 Let’s apply what we learned about the `.pop()` method.
 
-### Instructions
+
 
 **1.**
 
@@ -1649,7 +1649,7 @@ use `.pop()` to remove it as well.
 
 Print `data_science_topics` to see the changes.
 
-### Solution
+
 
 ``` python
 data_science_topics = ["Machine Learning", "SQL", "Pandas", "Algorithms", "Statistics", "Python 3"]
@@ -1740,7 +1740,7 @@ Would output:
 
 Let’s try out using `range()`!
 
-### Instructions
+
 
 **1.**
 
@@ -1753,7 +1753,7 @@ Create a range called `zero_to_seven` with the numbers 0 through 7.
 
 Print the result in list form.
 
-### Solution
+
 
 ``` python
 # Checkpoint 1
@@ -1826,7 +1826,7 @@ Our list stops at `91` because the next number in the sequence would be
 
 Let’s experiment with our additional `range()` inputs!
 
-### Instructions
+
 
 **1.**
 
@@ -1845,7 +1845,7 @@ Create a range called `range_diff_five` that:
 -   Has a difference of `5` between each item
 -   Ends **before** `40`
 
-### Solution
+
 
 ``` python
 #Checkpoint 1
@@ -1883,7 +1883,7 @@ Would output:
 
 Let’s find the length of various lists!
 
-### Instructions
+
 
 **1.**
 
@@ -1916,7 +1916,7 @@ skips `100` instead of `10` steps between items.
 
 How does this change `big_range_length`?
 
-### Solution
+
 
 ``` python
 long_list = [1, 5, 6, 7, -23, 69.5, True, "very", "long", "list", "that", "keeps", "going.", "Let's", "practice", "getting", "the", "length"]
@@ -1977,7 +1977,7 @@ Would output:
 Notice that the element at index `6` (which is `"g"`) is *not* included
 in our selection.
 
-### Instructions
+
 
 **1.**
 
@@ -1998,7 +1998,7 @@ Create a new list called `middle` that contains the middle two items (
 
 Print `middle` to see the slice!
 
-### Solution
+
 
 ``` python
 suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
@@ -2102,7 +2102,7 @@ Would output:
 
 Let’s practice some of these extra slicing techniques!
 
-### Instructions
+
 
 **1.**
 
@@ -2118,7 +2118,7 @@ last three elements.
 
 Print `slice_off_last_three` to see your result.
 
-### Solution
+
 
 ``` python
 suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
@@ -2195,7 +2195,7 @@ Would output:
 
 Let’s count some list items using the `.count()` method!
 
-### Instructions
+
 
 **1.**
 
@@ -2209,7 +2209,7 @@ save the value to a variable called `jake_votes`.
 
 Use `print()` to examine `jake_votes`.
 
-### Solution
+
 
 ``` python
 votes = ["Jake", "Jake", "Laurie", "Laurie", "Laurie", "Jake", "Jake", "Jake", "Laurie", "Cassie", "Cassie", "Jake", "Jake", "Cassie", "Laurie", "Cassie", "Jake", "Jake", "Cassie", "Laurie"]
@@ -2280,7 +2280,7 @@ value of `None` to the variable.
 
 Let’s experiment sorting various lists!
 
-### Instructions
+
 
 **1.**
 
@@ -2307,7 +2307,7 @@ reverse order (descending).
 
 Print `cities` to see the result.
 
-### Solution
+
 
 ``` python
 # Checkpoint 1 & 2
@@ -2382,7 +2382,7 @@ Would output:
 ['Xander', 'Buffy', 'Angel', 'Willow', 'Giles']
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2393,7 +2393,7 @@ Use `sorted()` to order `games` and create a new list called
 
 Print both `games` and `games_sorted`. How are they different?
 
-### Solution
+
 
 ``` python
 games = ["Portal", "Minecraft", "Pacman", "Tetris", "The Sims", "Pokemon"]
@@ -2428,7 +2428,7 @@ In this lesson, we learned how to:
 As you go through the exercises, feel free to use `print()` to see
 changes when not explicitly asked to do so.
 
-### Instructions
+
 
 **1.**
 
@@ -2493,7 +2493,7 @@ creates a new list with the elements properly sorted. If you use
 
 Print `inventory` to see the result.
 
-### Solution
+
 
 ``` python
 inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", "twin bed", "sheets", "sheets", "pillow", "pillow"]
@@ -2874,12 +2874,12 @@ amounts of data.
 In this lesson, we’ll learn how to use Python to implement both definite
 and indefinite iteration in our own programs.
 
-### Instructions
+
 
 Look over (and over) the provided diagram. Then, go to the next exercise
 to get looped in!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-swift/loops/ChalkboardLoop.svg" alt="Chalkboard filled with from top to bottom with the sentence &quot;I will not write smelly code&quot; with a visibly annoyed person standing next to it." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2925,14 +2925,14 @@ Don’t dwell too long on this tedious scenario — we’ll learn how loops
 can help us out in the next exercise. For now, let’s gain an
 appreciation for loops.
 
-### Instructions
+
 
 **1.**
 
 Using 10 `print()` statements, print out:
 `"This can be so much easier with loops!"`.
 
-### Solution
+
 
 ``` python
 # Write 10 print() statements below! 
@@ -3091,7 +3091,7 @@ Some things to note about `for` loops:
 
 Let’s practice writing our own `for` loop!
 
-### Instructions
+
 
 **1.**
 
@@ -3111,7 +3111,7 @@ Run the code again!
 
 Write a `for` loop that prints each sport in the list `sport_games`.
 
-### Solution
+
 
 ``` python
 board_games = ["Settlers of Catan", "Carcassone", "Power Grid", "Agricola", "Scrabble"]
@@ -3212,14 +3212,14 @@ Loop is on iteration number 6
 
 Let’s try out using a range in a `for` loop!
 
-### Instructions
+
 
 **1.**
 
 Use the `range()` function in a `for` loop to `print()` out the provided
 `promise` variable five times.
 
-### Solution
+
 
 ``` python
 promise = "I will finish the python loops module!"
@@ -3323,7 +3323,7 @@ Note the following about `while` loops before we write our own:
 
 Let’s practice writing a `while` loop!
 
-### Instructions
+
 
 **1.**
 
@@ -3383,7 +3383,7 @@ then fix the code for your loop.
 Now that we have built our loop, let’s commemorate our success by
 printing `"We have liftoff!"` after the `while` loop.
 
-### Solution
+
 
 ``` python
 # While Loop Walkthrough
@@ -3553,7 +3553,7 @@ chocolate
 
 Let’s use a `while` loop to iterate through some lists!
 
-### Instructions
+
 
 **1.**
 
@@ -3602,7 +3602,7 @@ create an infinite loop which stops our program from running anything
 else. To exit out of an infinite loop in an exercise, refresh the page —
 then fix the code for your loop.
 
-### Solution
+
 
 ``` python
 python_topics = ["variables", "control flow", "loops", "modules", "classes"]
@@ -3656,7 +3656,7 @@ you’ll need to **refresh the page** to get out of an infinite loop.
 
 Let’s fix an infinite loop to see it in action.
 
-### Instructions
+
 
 Suppose we have two lists of students, `students_period_A` and
 `students_period_B`. We want to combine all students into
@@ -3681,7 +3681,7 @@ Delete the line causing the infinite loop and fix it to accomplish the
 original goal of combining all students from `students_period_A` into
 `students_period_B`.
 
-### Solution
+
 
 ``` python
 students_period_A = ["Alex", "Briana", "Cheri", "Daniele"]
@@ -3770,7 +3770,7 @@ immediately ended the loop. We didn’t need to check the elements of
 
 Now let’s `break` some loops!
 
-### Instructions
+
 
 **1.**
 
@@ -3796,7 +3796,7 @@ Add a `break` statement when your loop has found `dog_breed_I_want` so
 that the rest of the list does not need to be checked once we have found
 our breed.
 
-### Solution
+
 
 ``` python
 dog_breeds_available_for_adoption = ["french_bulldog", "dalmatian", "shihtzu", "poodle", "collie"]
@@ -3863,7 +3863,7 @@ Notice a few things:
 
 Let’s `continue` learning about control statements with some exercises!
 
-### Instructions
+
 
 **1.**
 
@@ -3873,7 +3873,7 @@ age is 21.
 Loop through the `ages` list. If an entry is less than `21`, skip it and
 move to the next entry. Otherwise, `print()` the age.
 
-### Solution
+
 
 ``` python
 ages = [12, 38, 34, 26, 21, 19, 67, 41, 17]
@@ -3944,7 +3944,7 @@ Gabriel
 
 Let’s practice writing a nested loop!
 
-### Instructions
+
 
 **1.**
 
@@ -3975,7 +3975,7 @@ nested list.
 
 Print out the value of `scoops_sold` outside of the nested loop.
 
-### Solution
+
 
 ``` python
 sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
@@ -4057,7 +4057,7 @@ Our result would be the same:
 [4, -2, 158, 66, -90]
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -4072,7 +4072,7 @@ all the grades in the list.
 
 Print `scaled_grades`.
 
-### Solution
+
 
 ``` python
 grades = [90, 88, 62, 76, 74, 89, 48, 57]
@@ -4177,7 +4177,7 @@ if_else = [num * 2 if num < 0 else num * 3 for num in numbers]
 
 Now, let’s write our own list comprehensions with conditionals!
 
-### Instructions
+
 
 **1.**
 
@@ -4192,7 +4192,7 @@ that has every element from `heights` that is greater than `161`.
 
 Print `can_ride_coaster`.
 
-### Solution
+
 
 ``` python
 heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
@@ -4217,7 +4217,7 @@ Good job! In this lesson, you learned
 
 Let’s get some more practice with these concepts!
 
-### Instructions
+
 
 **1.**
 
@@ -4256,7 +4256,7 @@ Print `cubes`.
 
 Good job!
 
-### Solution
+
 
 ``` python
 single_digits = range(10)
@@ -4495,7 +4495,7 @@ Notice that:
 It’s considered good practice to insert a space () after each comma, but
 our code will still run without the space.
 
-### Instructions
+
 
 **1.**
 
@@ -4519,7 +4519,7 @@ SyntaxError: invalid syntax
 
 Try to find and fix the syntax error to make this code run.
 
-### Solution
+
 
 ``` python
 sensors =  {"living room": 21, "kitchen": 23, "bedroom": 20, "pantry": 22}
@@ -4564,7 +4564,7 @@ We can also mix and match key and value types. For example:
 person = {"name": "Shuri", "age": 18, "family": ["T'Chaka", "Ramonda"]}
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -4578,7 +4578,7 @@ in English to their definitions in Sindarin (the language of the elves):
 | friend   | mellon   |
 | horse    | roch     |
 
-### Solution
+
 
 ``` python
 translations = {"mountain": "orod", "bread": "bass", "friend": "mellon", "horse": "roch"}
@@ -4610,7 +4610,7 @@ specific identifier for the key. If the key can change, that hash value
 would not be reliable. So the keys must always be unchangeable, hashable
 data types, like numbers or strings.
 
-### Instructions
+
 
 **1.**
 
@@ -4623,7 +4623,7 @@ TypeError: unhashable type
 Make the code run without errors by flipping the items in the dictionary
 so that the strings are the keys and the lists are the values
 
-### Solution
+
 
 ``` python
 children = {"von Trapp":["Johannes", "Rosmarie", "Eleonore"] , "Corleone":["Sonny", "Fredo", "Michael"]}
@@ -4643,13 +4643,13 @@ empty_dict = {}
 
 We will explore ways to fill a dictionary in the next exercise.
 
-### Instructions
+
 
 **1.**
 
 Create an empty dictionary called `my_empty_dictionary`.
 
-### Solution
+
 
 ``` python
 my_empty_dictionary = {}
@@ -4683,7 +4683,7 @@ Now, `menu` looks like:
 {"oatmeal": 3, "avocado toast": 6, "carrot juice": 5, "blueberry muffin": 2, "cheesecake": 8}
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -4709,7 +4709,7 @@ of `0`.
 
 Print `animals_in_zoo`.
 
-### Solution
+
 
 ``` python
 animals_in_zoo = {}
@@ -4750,7 +4750,7 @@ Now, `sensors` looks like:
 {"living room": 21, "kitchen": 23, "bedroom": 20, "pantry": 22, "guest room": 25, "patio": 34}
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -4763,7 +4763,7 @@ In one line of code, add two new users to the `user_ids` dictionary:
 
 Print `user_ids`.
 
-### Solution
+
 
 ``` python
 user_ids = {"teraCoder": 9018293, "proProgrammer": 119238}
@@ -4802,7 +4802,7 @@ This would yield:
 
 Notice the value of `"oatmeal"` has now changed to `5`.
 
-### Instructions
+
 
 **1.**
 
@@ -4814,7 +4814,7 @@ Without changing the definition of the dictionary `oscar_winners`,
 change the value associated with the key `"Best Picture"` to
 `"Moonlight"`.
 
-### Solution
+
 
 ``` python
 oscar_winners = {"Best Picture": "La La Land", "Best Actor": "Casey Affleck", "Best Actress": "Emma Stone", "Animated Feature": "Zootopia"}
@@ -4856,7 +4856,7 @@ dict comprehension:
 3.  Creates a `key` : `value` item in the `students` dictionary
 4.  Repeats steps 1-3 for the entire iterator of pairs
 
-### Instructions
+
 
 **1.**
 
@@ -4871,7 +4871,7 @@ Create a dictionary called `drinks_to_caffeine` by using a dict
 comprehension that goes through the `zipped_drinks` iterator and turns
 each tuple pair into a key:value item.
 
-### Solution
+
 
 ``` python
 drinks = ["espresso", "chai", "decaf", "drip"]
@@ -4892,7 +4892,7 @@ So far we have learned:
 
 Let’s practice these skills!
 
-### Instructions
+
 
 **1.**
 
@@ -4931,7 +4931,7 @@ Create a dictionary called `library` that has two key: value pairs:
 
 Print `library`.
 
-### Solution
+
 
 ``` python
 songs = ["Like a Rolling Stone", "Satisfaction", "Imagine", "What's Going On", "Respect", "Good Vibrations"]
@@ -4981,7 +4981,7 @@ Then we can access the data in it like this:
 599
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -4993,7 +4993,7 @@ zodiac signs. Print out the list of zodiac signs associated with the
 
 Print out the list of the `"fire"` signs.
 
-### Solution
+
 
 ``` python
 zodiac_elements = {"water": ["Cancer", "Scorpio", "Pisces"], "fire": ["Aries", "Leo", "Sagittarius"], "earth": ["Taurus", "Virgo", "Capricorn"], "air":["Gemini", "Libra", "Aquarius"]}
@@ -5042,7 +5042,7 @@ if key_to_check in building_heights:
 This will not throw an error, because `key_to_check in building_heights`
 will return `False`, and so we never try to access the key.
 
-### Instructions
+
 
 **1.**
 
@@ -5067,7 +5067,7 @@ Add the key `"energy"` to the `zodiac_elements`. It should map to a
 value of `"Not a Zodiac element"`. Run the code. Since `"energy"` is now
 a key, its value prints to the terminal!
 
-### Solution
+
 
 ``` python
 zodiac_elements = {"water": ["Cancer", "Scorpio", "Pisces"], "fire": ["Aries", "Leo", "Sagittarius"], "earth": ["Taurus", "Virgo", "Capricorn"], "air":["Gemini", "Libra", "Aquarius"]}
@@ -5114,7 +5114,7 @@ building is not in the dictionary:
 'No Value'
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -5128,7 +5128,7 @@ Use `.get()` to get the value of `"superStackSmash"`’s user ID, with
 `100000` as a default value if the user doesn’t exist. Store it in a
 variable called `stack_id`. Print `stack_id` to the console.
 
-### Solution
+
 
 ``` python
 user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
@@ -5177,7 +5177,7 @@ default value to return if the key does not exist in the dictionary:
 `.pop()` works to delete items from a dictionary, when you know the key
 value.
 
-### Instructions
+
 
 **1.**
 
@@ -5204,7 +5204,7 @@ remove the item from the dictionary. If the key does not exist, add 0 to
 
 Print `available_items` and `health_points`.
 
-### Solution
+
 
 ``` python
 available_items = {"health potion": 10, "cake of the cure": 5, "green elixir": 20, "strength sandwich": 25, "stamina grains": 15, "power stew": 30}
@@ -5264,7 +5264,7 @@ Martin
 Dina
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -5284,7 +5284,7 @@ Print `users` to the console.
 
 Print `lessons` to the console.
 
-### Solution
+
 
 ``` python
 user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
@@ -5336,7 +5336,7 @@ list(test_scores.values())
 However, for most purposes, the `dict_values` object will act the way
 you want a list to act.
 
-### Instructions
+
 
 **1.**
 
@@ -5351,7 +5351,7 @@ value to the `total_exercises` variable.
 
 Print the `total_exercises` variable to the console.
 
-### Solution
+
 
 ``` python
 num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
@@ -5395,7 +5395,7 @@ Coca-Cola has a value of 69.7 billion dollars.
 Amazon has a value of 64.8 billion dollars.
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -5407,7 +5407,7 @@ that looks like:
 Women make up [value] percent of [key]s.
 ```
 
-### Solution
+
 
 ``` python
 pct_women_in_occupation = {"CEO": 28, "Engineering Manager": 9, "Pharmacist": 58, "Physician": 40, "Lawyer": 37, "Aerospace Engineer": 9}
@@ -5433,7 +5433,7 @@ keys and values in different ways. Specifically, you have seen how to:
 -   Remove a key: value pair from a dictionary
 -   Iterate through keys and values in dictionaries
 
-### Instructions
+
 
 **1.**
 
@@ -5475,7 +5475,7 @@ Congratulations! You have learned about how to modify and use
 dictionaries.  
 Hit the `Run` button one more time when you are ready to continue.
 
-### Solution
+
 
 ``` python
 tarot = { 1:    "The Magician", 2:  "The High Priestess", 3:    "The Empress", 4:   "The Emperor", 5:   "The Hierophant", 6:    "The Lovers", 7:    "The Chariot", 8:   "Strength", 9:  "The Hermit", 10:   "Wheel of Fortune", 11: "Justice", 12:  "The Hanged Man", 13:   "Death", 14:    "Temperance", 15:   "The Devil", 16:    "The Tower", 17:    "The Star", 18: "The Moon", 19: "The Sun", 20:  "Judgement", 21:    "The World", 22: "The Fool"}
@@ -5762,7 +5762,7 @@ you can use it. You can’t `.get()` something from an integer, just as
 you can’t add two dictionaries together using `+`. This is because those
 operations are defined at the `type` level.
 
-### Instructions
+
 
 **1.**
 
@@ -5784,7 +5784,7 @@ Define a list called `my_list`.
 
 Print out the `type()` of `my_list`.
 
-### Solution
+
 
 ``` python
 print(type(5))
@@ -5831,13 +5831,13 @@ was intentionally left blank so we don’t cause an `IndentationError`.
 We’ll learn about all the things we can put in the body of a class in
 the next few exercises.
 
-### Instructions
+
 
 **1.**
 
 Define an empty class called `Facade`. We’ll chip away at it soon!
 
-### Solution
+
 
 ``` python
 class Facade:
@@ -5862,14 +5862,14 @@ class. We then assigned that new instance to the variable
 `cool_instance` for safe-keeping so we can access our instance of
 `CoolClass` at a later time.
 
-### Instructions
+
 
 **1.**
 
 In **script.py** we see our `Facade` class from last exercise. Make a
 `Facade` instance and save it to the variable `facade_1`.
 
-### Solution
+
 
 ``` python
 class Facade:
@@ -5903,7 +5903,7 @@ In Python `__main__` means “this current file that we’re running” and so
 one could read the output from `type()` to mean “the class `CoolClass`
 that was defined here, in the script you’re currently running.”
 
-### Instructions
+
 
 **1.**
 
@@ -5914,7 +5914,7 @@ In **script.py** we see `facade_1` from last exercise. Try calling
 
 Print out `facade_1_type`.
 
-### Solution
+
 
 ``` python
 class Facade:
@@ -5955,7 +5955,7 @@ attribute, which is a class variable that we defined as the string
 If we defined another musician, like `guitarist = Musician()` they would
 have the same `.title` attribute.
 
-### Instructions
+
 
 **1.**
 
@@ -5966,7 +5966,7 @@ minimum passing grade.
 Create a `Grade` class with a class attribute `minimum_passing` equal to
 `65`.
 
-### Solution
+
 
 ``` python
 class Grade:
@@ -6005,7 +6005,7 @@ Notice we didn’t pass any arguments when we called
 body. When you call a method it automatically passes the object calling
 the method as the first argument.
 
-### Instructions
+
 
 **1.**
 
@@ -6033,7 +6033,7 @@ Give `Rules` a method `washing_brushes` that returns the string
 Since we’ve now given this class a method, we can remove the `pass` that
 we added in the previous step.
 
-### Solution
+
 
 ``` python
 class Rules:
@@ -6063,7 +6063,7 @@ it to convert 5 miles into kilometers. Notice again that even though
 `miles`, because `self` is implicitly passed (and refers to the object
 `converter`).
 
-### Instructions
+
 
 **1.**
 
@@ -6104,7 +6104,7 @@ Remember that the `radius` of a circle is half the diameter. We gave
 three diameters here, so halve them before you calculate the given
 circle’s area.
 
-### Solution
+
 
 ``` python
 class Circle:
@@ -6183,7 +6183,7 @@ Above we’ve updated our `Shouter` class to take the additional parameter
 the constructor. The constructor takes the argument `phrase` and, if
 it’s a string, prints out the all-caps version of `phrase`.
 
-### Instructions
+
 
 **1.**
 
@@ -6202,7 +6202,7 @@ Now have the constructor print out the message
 
 Create a circle `teaching_table` with diameter 36.
 
-### Solution
+
 
 ``` python
 class Circle:
@@ -6253,7 +6253,7 @@ print(working_string)
 # prints "This works! This too!"
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -6266,7 +6266,7 @@ Give them both instance attributes called `store_name`. Set
 `alternative_rocks`’s `store_name` to `"Alternative Rocks"`. Set
 `isabelles_ices`’s `store_name` to `"Isabelle's Ices"`.
 
-### Solution
+
 
 ``` python
 class Store:
@@ -6342,7 +6342,7 @@ Since `other_fake_attribute` isn’t a real attribute on `attributeless`,
 our call to `getattr()` returned the supplied default value `800`,
 instead of throwing an `AttributeError`.
 
-### Instructions
+
 
 **1.**
 
@@ -6392,7 +6392,7 @@ is.
 
 Click run to move onto the next exercise!
 
-### Solution
+
 
 ``` python
 can_we_count_it = [{'s': False}, "sassafrass", 18, ["a", "c", "s", "d", "s"]]
@@ -6467,7 +6467,7 @@ This is the strength of writing object-oriented programs. We can write
 our classes to structure the data that we need and write methods that
 will interact with that data in a meaningful way.
 
-### Instructions
+
 
 **1.**
 
@@ -6503,7 +6503,7 @@ Define three `Circle`s with three different diameters.
 Print out the circumferences of `medium_pizza`, `teaching_table`, and
 `round_room`.
 
-### Solution
+
 
 ``` python
 class Circle:
@@ -6585,7 +6585,7 @@ instantiation of class `list`. We use `dir()` to explore its attributes,
 and it gives us a large number of internal Python dunder attributes,
 but, afterward, we get the usual list methods.
 
-### Instructions
+
 
 **1.**
 
@@ -6602,7 +6602,7 @@ Print out the result of calling `dir()` on `this_function_is_an_object`.
 
 Functions are objects too!
 
-### Solution
+
 
 ``` python
 print(dir(5))
@@ -6665,7 +6665,7 @@ We implemented the `__repr__()` method and had it return the `.name`
 attribute of the object. When we printed the object out it simply
 printed the `.name` of the object! Cool!
 
-### Instructions
+
 
 **1.**
 
@@ -6679,7 +6679,7 @@ Circle with radius {radius}
 
 Print out `medium_pizza`, `teaching_table`, and `round_room`.
 
-### Solution
+
 
 ``` python
 class Circle:
@@ -6735,7 +6735,7 @@ instances.
 Take a moment to congratulate yourself, object-oriented programming is a
 complicated concept.
 
-### Instructions
+
 
 **1.**
 
@@ -6801,7 +6801,7 @@ This is object-oriented programming! From here you could:
     indicate whether the student attended school that day.
 -   Write your own classes to do whatever logic you want!
 
-### Solution
+
 
 ``` python
 class Student:

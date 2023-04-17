@@ -150,4 +150,4 @@ the program.
 You’re welcome to expand your program beyond these project tasks and get
 creative!
 
-### [Solution](mixed-messages.js)
+## [Solution](mixed-messages.js)

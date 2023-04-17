@@ -10,7 +10,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -98,7 +98,7 @@ the commit you’re staging. Reset the staging area to remove
 
 Now make a commit.
 
-### [Solution](ascii-portfolio.txt)
+## [Solution](ascii-portfolio.txt)
 
     1.The ASCII face in portrait.txt had a goatee in the last commit, but it was deleted in the working directory. Taking a second look, you want the goatee back.
     Discard changes in the working directory for portrait.txt.

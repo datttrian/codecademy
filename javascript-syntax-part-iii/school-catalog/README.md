@@ -43,7 +43,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -214,7 +214,7 @@ some avenues to build on your progress.
   schools. Create an instance of `SchoolCatalog` for primary, middle,
   and high schools.
 
-### [Solution](school-catalog.js)
+## [Solution](school-catalog.js)
 
 ``` javascript
 class School {

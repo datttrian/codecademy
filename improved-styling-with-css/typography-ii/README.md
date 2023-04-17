@@ -10,7 +10,7 @@ make the page easier to read.
 Using your understanding of typography, help Aoife Conleavy improve the
 readability of her site for her readers.
 
-### Instructions
+
 
 ## Morocco
 
@@ -119,4 +119,4 @@ Now that you have a `@font-face` rule, set the `font-family` property of
 the footer to `"Croissant One"` with `"Merriweather"` and `serif` as the
 fallback fonts.
 
-### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/typography-ii/index.html)
+## [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/typography-ii/index.html)

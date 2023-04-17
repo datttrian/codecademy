@@ -6,4 +6,4 @@ The app currently has a feature level test which submits a quote, source, and wh
 
 Since the existing tests were solely at the feature level, it was unable to pass. We are diving into the server level.
 
-(Reference: [emmanuel-odotei](https://github.com/emmanuel-odotei/quote-keeper-server-layer))
+(**Reference**: [emmanuel-odotei](https://github.com/emmanuel-odotei/quote-keeper-server-layer))

@@ -30,4 +30,4 @@ http://localhost:4001/
 
 To stop the server, press Ctrl+C in the command line interface.
 
-(Reference: [JoeR-Dev](https://github.com/JoeR-Dev/QuoteAPI))
+(**Reference**: [JoeR-Dev](https://github.com/JoeR-Dev/QuoteAPI))

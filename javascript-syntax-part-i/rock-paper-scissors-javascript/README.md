@@ -22,7 +22,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -158,7 +158,7 @@ of your program.
 Make this game better by adding a secret cheat code. If a user types
 `'bomb'` as their choice, then make sure they win, no matter what.
 
-### [Solution](rock-paper-scissors-javascript.js)
+## [Solution](rock-paper-scissors-javascript.js)
 
 ``` javascript
 console.log("hi");

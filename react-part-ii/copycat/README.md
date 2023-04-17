@@ -16,7 +16,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click **“Get Unstuck”** to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -173,4 +173,4 @@ If not, the name that will be displayed will default to “Tom”.
 
 Add a `propType` for `name` to `propTypes`.
 
-### [Solution](https://datttrian-copycat.netlify.app/) (Reference: [norman02](https://github.com/norman02/CopyCat))
+## [Solution](https://datttrian-copycat.netlify.app/) (**Reference**: [norman02](https://github.com/norman02/CopyCat))

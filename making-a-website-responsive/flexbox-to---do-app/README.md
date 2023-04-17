@@ -15,7 +15,7 @@ displayed in the text editor to the right. Good luck!
 If you get stuck during this project, check out the **project
 walkthrough video** which can be found in the help menu.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -81,4 +81,4 @@ property with the value that centers the items inside the container.
 You did it! Great work. Now resize the browser to see your flex
 properties in action!
 
-### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/flexbox-to---do-app/index.html)
+## [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/flexbox-to---do-app/index.html)

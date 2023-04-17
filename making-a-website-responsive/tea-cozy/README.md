@@ -57,7 +57,7 @@ Design Spec:
 
 Good luck!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -68,4 +68,4 @@ resources above will help you get to the final outcome. There’s no
 single, correct way to complete this project, so experiment and have
 fun!
 
-### [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/tea-cozy/index.html)
+## [Solution](https://datttrian.github.io/codecademy/making-a-website-responsive/tea-cozy/index.html)

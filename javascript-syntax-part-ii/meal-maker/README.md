@@ -10,7 +10,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click **“Get Unstuck”** to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -112,7 +112,7 @@ logged to the console.
 If you want to extend your learning on this project, try adding an array
 of meals and prices to randomly set and get Today’s Special!
 
-### [Solution](meal-maker.js)
+## [Solution](meal-maker.js)
 
 ``` javascript
 let menu = {

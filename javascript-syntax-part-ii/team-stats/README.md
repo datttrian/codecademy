@@ -14,7 +14,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -101,7 +101,7 @@ scored 100 points and the opponent scored 98 points.
 Log the `team`’s `_games` property to check that our new game record was
 properly added.
 
-### [Solution](team-stats.js)
+## [Solution](team-stats.js)
 
 ``` javascript
 const team = {

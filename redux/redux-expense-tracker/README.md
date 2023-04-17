@@ -57,7 +57,7 @@ the food budget again to see how much you have left to spend. As you
 progress through the project, take note of the ways that Redux Toolkit
 simplifies your code.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -255,4 +255,4 @@ At this point, you should be able to add and delete transactions and see
 your changes reflected in the transactions list as well as in the “Funds
 Remaining” field for each budget.
 
-### [Solution](https://datttrian-expense-tracker.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/expense-tracker))
+## [Solution](https://datttrian-expense-tracker.netlify.app/) (**Reference**: [prince-t-asamoah](https://github.com/prince-t-asamoah/expense-tracker))

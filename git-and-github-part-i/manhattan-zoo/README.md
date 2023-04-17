@@ -9,7 +9,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -82,7 +82,7 @@ Times: 6:30 am, 12:00 pm, 7:00 pm
 Directions: feed Gorillas in the morning as group, spread forage items during noon meal, and divide quantities for individual feeding in evening
 ```
 
-### [Solution](manhattan-zoo.txt)
+## [Solution](manhattan-zoo.txt)
 
     meal-regimens.txt
     ========================================================================

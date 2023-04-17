@@ -44,7 +44,7 @@ target="_blank">article on installing Node</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -180,7 +180,7 @@ following:
 - Use the `.compareDNA()` to find the two most related instances of
   `pAequor`.
 
-### [Solution](mysterious-organism.js)
+## [Solution](mysterious-organism.js)
 
 ``` javascript
 // Returns a random DNA base

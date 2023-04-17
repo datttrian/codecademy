@@ -50,11 +50,11 @@ While the front-end is the part of the website that makes it to the
 browser, the back-end consists of all the behind-the-scenes processes
 and data that make a website function and send resources to clients.
 
-### Instructions
+
 
 Watch the video to get a better understanding of the front-end.
 
-### Solution
+
 
 [Front and
 Back](https://content.codecademy.com/courses/server-side-web-dev/FrontEndCut_v1.mp4)
@@ -101,7 +101,7 @@ might order drinks, different courses, make substitutions, or ask
 questions of the waiter. To accomplish this level of complexity, an
 equally complex back-end is required.
 
-### Solution
+
 
 <img alt="Gif of a front-end making requests and a back-end responding to them." src="https://content.codecademy.com/courses/updated_images/NodeBackEndFrontEnd_Update_1.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -132,7 +132,7 @@ application server can be responsible for anything from sending an email
 confirmation after a purchase to running the complicated algorithms a
 search engine uses to give us meaningful results.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/Node_3_v2_text_Updated_1.svg" alt="people using computers." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -175,7 +175,7 @@ target="_blank" rel="noopener">Redis</a>.
 In addition to the database itself, the back-end needs a way to
 programmatically access, change, and analyze the data stored there.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/Node_4_v4_Updated_1.svg" alt="Illustration of a relational database (represented by a table) compared with an illustration of NoSQL databases (represented by Key-Value pairs and a tree)" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -215,7 +215,7 @@ stores. Others are only used by the web application internally—
 Codecademy, for example, has a web API that employees use to accomplish
 internal tasks.
 
-### Solution
+
 
 <img alt="Node diagram." src="https://content.codecademy.com/courses/updated_images/Node_5v2__Updated_1.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -243,7 +243,7 @@ and authorization (Who is allowed to do and see what?) into our
 server-side logic to make sure we’re creating secure, personalized, and
 dynamic content.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/server-side-web-dev/NodeAnimation_6.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -296,7 +296,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">LAMP Stack</a>, sometimes considered the
 archetypal stack, uses **L**inux, **A**pache, **M**ySQL, and **P**HP.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/Coders-2_Updated_1.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0" alt="Art of coders coding.">
 
@@ -332,7 +332,7 @@ Now that you have a sense for server-side web development and what the
 back-end is, you’re ready to dive in and learn about the different parts
 in more depth!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/server-side-web-dev/Node_8.svg" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -554,7 +554,7 @@ exercises.
 
 Let’s get started!
 
-### Instructions
+
 
 Click `Run` to start the app. Feel free to take a look at the code in
 **app.py** and move on when you’re ready!
@@ -565,7 +565,7 @@ target="_blank" rel="noopener">http://localhost:5000/</a>** on the
 embedded browser. For now, this app is just running locally and can only
 be accessed there.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -612,7 +612,7 @@ As we’ll see in the next exercise, this distinction can be useful when
 we have code that we want to be run only if the script is executed a
 particular way.
 
-### Instructions
+
 
 **1.**
 
@@ -631,7 +631,7 @@ At the bottom of the script, try printing `__name__`. Then, run
 
 What is the value of `__name__`?
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -687,7 +687,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">http://localhost:5000/home</a> will
 display `Hello, World!`.
 
-### Instructions
+
 
 **1.**
 
@@ -722,7 +722,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">http://localhost:5000/reporter</a> in the
 browser.
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -765,7 +765,7 @@ def home():
     '''
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -798,7 +798,7 @@ path `"/"` as the `href` attribute.
 
 Run the app and try clicking on the link you created!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -852,7 +852,7 @@ converter types are:
 | path   | like string but also accepts slashes       |
 | uuid   | accepts UUID strings                       |
 
-### Instructions
+
 
 **1.**
 
@@ -879,7 +879,7 @@ target="_blank" rel="noopener">https://localhost/reporter/1</a> or
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">https://localhost/reporter/1000</a>!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -932,7 +932,7 @@ You’ve learned to:
 
 Time to put what you’ve learned to the test!
 
-### Instructions
+
 
 **1.**
 
@@ -974,7 +974,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank"
 rel="noopener">http://localhost:5000/article/my-first-flask-app</a>!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -1240,7 +1240,7 @@ Currently our app consists of 2 routes that return HTML strings for the
 browser to display. Explore the application to begin your path to
 learning templates!
 
-### Instructions
+
 
 **1.**
 
@@ -1296,7 +1296,7 @@ representations of the variables.
 
 Proceed to the next exercise to begin working with templates!
 
-### Solution
+
 
 ``` python
 from flask import Flask
@@ -1370,7 +1370,7 @@ kept inside this directory. To view the application file structure in
 this exercise click the folder icon in the top left corner of the code
 editor.
 
-### Instructions
+
 
 **1.**
 
@@ -1402,7 +1402,7 @@ coded in the file for this exercise.
 Move on to the next exercise to see how we can start using variables to
 bring our data dynamically to our files.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1546,7 +1546,7 @@ OUTPUT
 Element at index 1: B
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1586,7 +1586,7 @@ Once you run the code you may start to see that even though there’s
 currently one recipe, **recipe.html** can be used to display multiple
 recipes.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1682,7 +1682,7 @@ target="_blank" rel="noopener">Jinja2 documentation</a>
   variable
 - `dictsort`: Sorts a dictionary by its keys
 
-### Instructions
+
 
 **1.**
 
@@ -1727,7 +1727,7 @@ In the instructions section the dictionary has unsorted keys.
 
 Use a filter to make sure the dictionary is output in sorted order.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1827,7 +1827,7 @@ OUTPUT
 
 As expected the `{% else %}` branch is the one that is followed.
 
-### Instructions
+
 
 **1.**
 
@@ -1879,7 +1879,7 @@ have an ingredients list greater than 3? What if there’s only one
 ingredient? Run the code and move to the next exercise to find the
 answer.
 
-### Solution
+
 
 ``` python
 <!DOCTYPE html>
@@ -1966,7 +1966,7 @@ The following are a few more applications of a for loop.
 Using the filter `dictsort` in a loop outputs the key/value pairs just
 like `items()`
 
-### Instructions
+
 
 **1.**
 
@@ -2009,7 +2009,7 @@ Once the code is run you can now add recipes to the application data and
 automatically get a link on the index page that connects to a custom
 recipe page.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2121,7 +2121,7 @@ will have this content.
 </html>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2156,7 +2156,7 @@ Remember you start the block with `{%block content%}` and close it with
 Do the same in **recipe.html**. Be sure to extend **base.html** and
 replace the duplicate text with the inheritance blocks.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2222,7 +2222,7 @@ lesson we:
 To show the power of what we have learned let’s add a simple navigation
 bar to the app.
 
-### Instructions
+
 
 **1.**
 
@@ -2249,7 +2249,7 @@ has a simple navigation bar including the new ‘About’ page.
 
 Great work!
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template
@@ -2358,7 +2358,7 @@ involved in sending the data to the web server. In the following
 exercises we are going to look at how Flask can help gather data from
 regular web forms as well as create forms in an entirely new way.
 
-### Instructions
+
 
 To help us learn about forms we will be using a cookbook app that lists
 recipes on a main page and links to individual recipe pages.
@@ -2378,7 +2378,7 @@ recipes on a main page and links to individual recipe pages.
 Review the site structure and head to the next exercise when you’re
 ready.
 
-### Solution
+
 
 ``` python
 recipes = {1: "fried egg", 2: "buttered toast"}
@@ -2535,7 +2535,7 @@ data as the values. For example, if a text input had the name
 text_in_field = request.form["my_text"]
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2580,7 +2580,7 @@ set up to add the contents of the variables `new_ingredients` and
 Put the form data named `"ingredients"` and `"instructions"` into the
 appropriate variables so the data is added to the app.
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request
@@ -2667,7 +2667,7 @@ def my_page(my_id):
     ...
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2693,7 +2693,7 @@ to go to the `recipe` route and pass the `id` variable.
 Insert `url_for()` into the blank `href` attribute passing the correct
 route function name as well as the id variable.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2819,7 +2819,7 @@ Lastly, in order to use this form in our template, we must create an
 instance of it and pass it to the template using `render_template()`. We
 will look at applying the form in the template in the next exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -2868,7 +2868,7 @@ the argument `template_form=comment_form`. Just above
 `render_template()` create the variable `comment_form` and assign it an
 instance of `CommentForm`.
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request
@@ -2959,7 +2959,7 @@ The HTML created from this form implementation is as follows:
 </form>
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2978,7 +2978,7 @@ Now add the `comment` input field in the following line.
 
 Finally, add the submit button to complete the form.
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request
@@ -3069,7 +3069,7 @@ Remember that when a route handles a form it is necessary to add the
 methods=["GET", "POST"]
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3086,7 +3086,7 @@ appending `new_comment` to `comments[id]`.
 When you’re done, give the form a try by adding some comments to the
 recipe page. Head on to the next exercise when ready.
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request
@@ -3166,7 +3166,7 @@ this point, the data can be gathered and processed. When the function
 returns `False` the route function can move on to other tasks such as
 rendering the template.
 
-### Instructions
+
 
 **1.**
 
@@ -3196,7 +3196,7 @@ that requires data.
 Run the code, refresh the page and try to submit an empty field. Note
 that the changes have taken effect
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request
@@ -3277,7 +3277,7 @@ Since the RadioField() instance generally contains multiple buttons it
 is necessary to iterate through it to access the components of the
 subfields.
 
-### Instructions
+
 
 **1.**
 
@@ -3313,7 +3313,7 @@ from the form to `types[new_id]`.
 
 When you’re done give the recipe form a try with the new radio buttons.
 
-### Solution
+
 
 ``` python
 from flask_wtf import FlaskForm
@@ -3448,7 +3448,7 @@ Similarly, regular keyword arguments can be added if necessary.
 redirect(url_for("new_route", new_var=this_var, _external=True, _scheme='https'))
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3476,7 +3476,7 @@ statement and use the set `url_for()` as the argument.
 When complete, the form submission should change the page to the recipe
 that was just added. Good work!
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request, redirect, url_for
@@ -3534,11 +3534,11 @@ WTForms can be easily achieved.
 Navigate through the site and review the files to look at what you
 accomplished in this lesson.
 
-### Instructions
+
 
 Great Work! Explore the app and move on when ready.
 
-### Solution
+
 
 ``` python
 from flask import Flask, render_template, request

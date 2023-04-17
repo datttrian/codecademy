@@ -53,7 +53,7 @@ development</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -143,4 +143,4 @@ can share it with other learners! Your solution might look different
 from ours, and that’s okay! There are multiple ways to solve these
 projects, and you’ll learn more by seeing others’ code.
 
-### [Solution](https://datttrian.github.io/codecademy/javascript-syntax-part-i/number-guesser-independent-practice/index.html)
+## [Solution](https://datttrian.github.io/codecademy/javascript-syntax-part-i/number-guesser-independent-practice/index.html)

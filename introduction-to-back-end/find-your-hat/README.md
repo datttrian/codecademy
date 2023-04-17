@@ -1,1 +1,1 @@
-(Reference: [gilbmporto](https://github.com/gilbmporto/Challenge-Project-Find-Your-Hat))
+(**Reference**: [gilbmporto](https://github.com/gilbmporto/Challenge-Project-Find-Your-Hat))

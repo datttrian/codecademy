@@ -204,7 +204,7 @@ available
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">here</a>.
 
-### Instructions
+
 
 When using the command line, we refer to folders as *directories*. Files
 and directories on your computer are organized into a *filesystem*.
@@ -234,7 +234,7 @@ href="https://content.codecademy.com/courses/learn-command-line/img/LCL-fileTree
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">here</a>.
 
-### Instructions
+
 
 Move on to the next exercise to start learning about the different
 commands!
@@ -266,7 +266,7 @@ directories:
 The directories **2014/**, **2015/**, and the file **hardware.txt** are
 the contents of the current directory.
 
-### Instructions
+
 
 **1.**
 
@@ -288,7 +288,7 @@ You should see the three items print out below the command.
 
 Click <span class="kbd">Check Work</span> to see how you did.
 
-### Solution
+
 
 ``` bash
 ls
@@ -307,7 +307,7 @@ directory.
 Together with `ls`, the `pwd` command is useful to show where you are in
 the filesystem.
 
-### Instructions
+
 
 **1.**
 
@@ -323,7 +323,7 @@ List all files and directories in the working directory.
 
 Click the “Check Work” button when you are done.
 
-### Solution
+
 
 ``` bash
 pwd
@@ -370,7 +370,7 @@ $ pwd
 The above example uses the command `cd ..` to navigate up to the
 **/home/ccuser/workspace/blog/** directory.
 
-### Instructions
+
 
 **1.**
 
@@ -402,7 +402,7 @@ target="_blank" rel="noopener">here</a>.)
 Move down the filesystem into the **memory/** directory and print the
 working directory again to see the new location.
 
-### Solution
+
 
 ``` bash
 cd 2015
@@ -468,7 +468,7 @@ $ pwd
 The relative path is the directory above **2015/** (which is **blog/**)
 and then the **2014/**.
 
-### Instructions
+
 
 **1.**
 
@@ -504,7 +504,7 @@ command and then use `pwd` to confirm your working directory.
 
 Click the <span class="kbd">Check Work</span> button when you are done.
 
-### Solution
+
 
 ``` bash
 cd /home/ccuser/workspace/blog/2015/
@@ -533,7 +533,7 @@ working directory.
 Here we used `mkdir` to create a new directory named **media/** inside
 our working directory.
 
-### Instructions
+
 
 **1.**
 
@@ -566,7 +566,7 @@ the above approaches.
 
 Click the <span class="kbd">Check Work</span> button when you are done.
 
-### Solution
+
 
 ``` bash
 cd /home/ccuser/workspace/blog/2014/dec/
@@ -594,7 +594,7 @@ that name in the current working directory.
 
 Here we used `touch` to create a new file named **keyboard.txt**.
 
-### Instructions
+
 
 **1.**
 
@@ -609,7 +609,7 @@ you’ve completed each checkpoint.
 Create a new file named **keyboard.txt** inside the working directory.
 If you list its contents again, you should now see your file listed.
 
-### Solution
+
 
 ``` bash
 cd /home/ccuser/workspace/blog/
@@ -639,7 +639,7 @@ previous commands, it just clears them from view. As mentioned above,
 you can use the up and down arrow keys to review your command history
 anytime.
 
-### Instructions
+
 
 Experiment with the helper commands! Some things you could try are:
 
@@ -678,7 +678,7 @@ the filesystem from the command line. What can we generalize so far?
   - <span class="kbd">↑</span> and <span class="kbd">↓</span> allow you
     to cycle through previous commands
 
-### Instructions
+
 
 Move on when you’re ready!
 
@@ -941,7 +941,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 1\.
 
@@ -1015,7 +1015,7 @@ the **bmx/** directory called **tricks.txt**.
 
 List all files and directories in the current directory.
 
-### [Solution](bicycle-world)
+## [Solution](bicycle-world)
 
 ``` bash
 $ pwd
@@ -1057,7 +1057,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 1\.
 
@@ -1131,7 +1131,7 @@ the **bmx/** directory called **tricks.txt**.
 
 List all files and directories in the current directory.
 
-### [Solutions](daily-buzz)
+## [Solutions](daily-buzz)
 
 ``` bash
 $ pwd

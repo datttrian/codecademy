@@ -53,7 +53,7 @@ seamlessly by using numerous built-in functions. We also have the option
 of accessing the Admin interface by visiting the route: `/admin` in
 order to manage all the records in our database.
 
-### Solution
+
 
 ## Admin Account
 
@@ -85,7 +85,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener"><code
 class="code__2rdF32qjRVp7mMVBHuPwDS">User</code> object</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -120,7 +120,7 @@ your created credentials.
 
 
 
-### Solution
+
 
 ## Registering Tables in Admin
 
@@ -167,7 +167,7 @@ update, read, or delete any record using the admin interface!
 something to be shared with any user. We wouldn’t want all of our users
 to have access to the interface and manipulate records as they wish!
 
-### Instructions
+
 
 **1.**
 
@@ -202,7 +202,7 @@ any CRUD functionality!
 
 
 
-### Solution
+
 
 ## User Objects
 
@@ -253,7 +253,7 @@ time you can type
 <span class="kbd">Ctrl</span>+<span class="kbd">D</span> on Mac or type
 and run `exit()`.
 
-### Instructions
+
 
 **1.**
 
@@ -285,7 +285,7 @@ save the user variable in the database.
 
 
 
-### Solution
+
 
 ## Authenticating Users
 
@@ -370,7 +370,7 @@ Otherwise, the `else` code block is executed and sends an
 With just a few lines of code, Django allows us to authenticate users
 seamlessly!
 
-### Instructions
+
 
 **1.**
 
@@ -400,7 +400,7 @@ the previous lesson:
 
 
 
-### Solution
+
 
 ## Log In
 
@@ -461,7 +461,7 @@ The main difference is that in our `if` statement, we’re now able to
 create a session by calling `login()` using `request` and our created
 `user` object.
 
-### Instructions
+
 
 **1.**
 
@@ -490,7 +490,7 @@ view function to see what change was needed to make this display happen.
 
 
 
-### Solution
+
 
 ## Login Mixin and Decorator
 
@@ -549,7 +549,7 @@ Both the login mixin and decorator do roughly the same thing. The main
 difference lies in the syntax and implementation — mixins are used for
 classes, while decorators are used for functions.
 
-### Instructions
+
 
 **1.**
 
@@ -609,7 +609,7 @@ Log in with the credentials to view the pages again:
 
 
 
-### Solution
+
 
 ## Logging Out
 
@@ -647,7 +647,7 @@ urlpatterns = [
 Once a user is directed to that route, they will be logged out and their
 session will be destroyed.
 
-### Instructions
+
 
 **1.**
 
@@ -696,7 +696,7 @@ Here are the credentials:
 
 
 
-### Solution
+
 
 ## Login Template
 
@@ -746,7 +746,7 @@ href="https://docs.djangoproject.com/en/3.1/topics/forms/#working-with-form-temp
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -771,7 +771,7 @@ on the page.
 
 
 
-### Solution
+
 
 ## Sign Up Template and View
 
@@ -834,7 +834,7 @@ href="https://docs.djangoproject.com/en/3.1/topics/auth/default/#all-authenticat
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -881,7 +881,7 @@ Attempt to sign up a new user and then log in with the new credentials.
 
 
 
-### Solution
+
 
 ## Review
 
@@ -925,7 +925,7 @@ functions are available, refer to
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Django’s documentation</a>!
 
-### Solution
+
 
 # Weekly Dessert
 
@@ -945,7 +945,7 @@ options, and only one admin can manage the app’s data.
 We’ll end up working with the admin interface as well as implementing
 the whole authentication flow and adding a security layer to our paths.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1252,7 +1252,7 @@ yourself.
 -   Add a few more fields, such as `age` or `year`, within your `SignUp`
     view in order for a new user to sign up.
 
-### Solution
+
 
 [Django Project Weekly Dessert](https://www.youtube.com/watch?v=4Abe5jCjgh0)
 

@@ -88,12 +88,12 @@ check out the corresponding units in
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">our Learn JavaScript course</a>.
 
-### Instructions
+
 
 This diagram shows an imaginary calendar application and all of the
 data, or state, informing its display.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-Redux/lesson-assets/redux-calendar-app_v2-transparent-bg.png" alt="Calendar application with home, travel, and work filters. The two calendar events are Pizza Night and Ask for a raise. Code snippet shows a JavaScript object representing the underlying information." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -125,13 +125,13 @@ action. Any components of the view that would be affected by these
 changes are informed by this single source. By imposing this structure,
 Redux makes our code more readable, reliable, and maintainable.
 
-### Instructions
+
 
 This diagram represents the one-way data flow in Redux: from state to
 view to action to state and so on. With Redux, data ALWAYS flows in this
 direction.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-Redux/lesson-assets/One-way-data-flow-v2-transparent-bg.png" alt="Circular diagram with three nodes: Actions points to State. State points to View. View points to Actions." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -157,7 +157,7 @@ const state = [ 'Print trail map', 'Pack snacks', 'Summit the mountain' ];
 Each piece of information in this state—an array in this case—would
 inform some part of the user interface.
 
-### Instructions
+
 
 **1.**
 
@@ -168,7 +168,7 @@ represent this playlist:
 2.  Claire de Lune
 3.  Respect
 
-### Solution
+
 
 ``` jsx
 const state = [ 'Take Five', 'Claire de Lune', 'Respect' ];
@@ -222,7 +222,7 @@ const action = {
 }
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -253,7 +253,7 @@ It should have the following information:
 
 - A `type` of `'songs/removeAll'`
 
-### Solution
+
 
 ``` jsx
 const state = [ 'Take Five', 'Claire de Lune', 'Respect' ];
@@ -326,7 +326,7 @@ There are two intermediate JavaScript syntaxes used here:
     current state and any changed values into a new object, not the
     existing `state` argument. We’ll explain why in the next exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -375,7 +375,7 @@ You can expect an action like this:
 }
 ```
 
-### Solution
+
 
 ``` jsx
 // Define reducer here
@@ -436,7 +436,7 @@ random numbers.
 These rules make Redux code predictable and easy to debug: tests run
 reliably and other developers know what to expect from your code.
 
-### Instructions
+
 
 **1.**
 
@@ -469,7 +469,7 @@ Fix this by assuming that the random value will be provided as the
 > Note that this reducer is called with `undefined`. In this case, the
 > default parameter will be used to set `state`.
 
-### Solution
+
 
 ``` jsx
 // Reducer violates rule 1: 
@@ -602,7 +602,7 @@ const addItemToList = (list, item) => {
 };
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -631,7 +631,7 @@ depends on an external file. Re-write it so that it is pure.
 You will need to read the file outside of the function and pass in the
 resulting data.
 
-### Solution
+
 
 ``` jsx
 const removeItemAtIndex = (list, index) => {
@@ -668,13 +668,13 @@ We can rephrase our data flow using the new term:
 We won’t be writing any code for the store during this lesson, but it’s
 important that you understand this term for future Redux lessons.
 
-### Instructions
+
 
 Follow the diagram’s one-way data flow. Notice how the store contains
 the reducer and state. It receives actions and calls the reducer with
 the action and current state.
 
-### Solution
+
 
 [Store](https://static-assets.codecademy.com/Courses/Learn-Redux/lesson-assets/interactive-image-basic-data-flow/index.html)
 
@@ -721,13 +721,13 @@ reducer along the way. Here’s what else you learned:
   actions, and it calls the reducer when actions are dispatched.
   Typically there is only one store in a Redux application.
 
-### Instructions
+
 
 Take another look at the diagram depicting data flow in a Redux
 application. Make sure you can explain every part of this diagram before
 moving on.
 
-### Solution
+
 
 <img alt="User interface receives click event. Event is handled by event handler. Event handler dispatches an action. Action and current state are received by reducer. Reducer produces new state. User interface updates to show new state." src="https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -744,7 +744,7 @@ wagon carrying their supplies.
 
 Let’s get started!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -932,7 +932,7 @@ If you’d like to keep practicing, try implementing these features:
   cash
 - Add a `'theft'` case: Outlaws steal half of the player’s cash
 
-### [Solution](redux-road-core-concepts)
+## [Solution](redux-road-core-concepts)
 
 ``` javascript
 const initialWagonState = {
@@ -1045,7 +1045,7 @@ This lesson will focus on creating a basic Redux application with the
 *Note: The store method `store.replaceReducer(nextReducer)` is an
 advanced method and will not be covered in this course.*
 
-### Instructions
+
 
 Before continuing on to the rest of the lesson, review the contents of
 the <a href="https://redux.js.org/introduction/core-concepts"
@@ -1056,7 +1056,7 @@ documentation</a> in the connected browser.
 To get the most out of the docs, expand the browser window to full
 screen.
 
-### Solution
+
 
 [What is the Redux
 API?](https://redux.js.org/introduction/core-concepts)
@@ -1079,7 +1079,7 @@ Let’s start by installing the `redux` package and importing its
 `createStore()` method. In the next exercise you’ll learn how to use
 this method.
 
-### Instructions
+
 
 **1.**
 
@@ -1102,7 +1102,7 @@ target="_blank" rel="noopener">ES6 import</a> syntax and import the
 import { createStore } from 'redux';
 ```
 
-### Solution
+
 
 ``` jsx
 import { createStore } from 'redux';
@@ -1178,7 +1178,7 @@ In the code editor, you will find the `initialState` value as well as
 `countReducer`, which describes how the state can be updated in response
 to an `'increment'` action.
 
-### Instructions
+
 
 **1.**
 
@@ -1192,7 +1192,7 @@ Now, below the `countReducer` function, declare a variable called
 Then, call `createStore()` with `countReducer` as the argument. Assign
 the returned value to `store`.
 
-### Solution
+
 
 ``` jsx
 // Import createStore here
@@ -1279,7 +1279,7 @@ store.dispatch({ type: 'toggle'});
 lightSwitchReducer(store.getState(), { type: 'toggle' });
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1315,7 +1315,7 @@ At the bottom of **store.js** , dispatch 3 actions with a type of
 Finally, print to the console the final value of `store.getState()`. The
 final state should be `-1`.
 
-### Solution
+
 
 ``` jsx
 import { createStore } from 'redux';
@@ -1389,7 +1389,7 @@ Often, before the reducer of an application is even written, Redux
 programmers will write action creators as a way of planning out which
 actions will be available to dispatch to the store.
 
-### Instructions
+
 
 **1.**
 
@@ -1419,7 +1419,7 @@ store.dispatch({ type: 'decrement' });
 For each existing call to `store.dispatch()`, replace the typed-out
 action objects with function calls to the appropriate action creator.
 
-### Solution
+
 
 ``` jsx
 import { createStore } from 'redux';
@@ -1547,7 +1547,7 @@ console.log(`The count is ${store.getState()}`);
 change listener to print out the current state in response to state
 changes automatically.
 
-### Instructions
+
 
 **1.**
 
@@ -1576,7 +1576,7 @@ The count is 0
 The count is 1
 ```
 
-### Solution
+
 
 ``` jsx
 import { createStore } from 'redux';
@@ -1669,7 +1669,7 @@ have been added:
 These new functions and elements will allow us to plug the Redux `store`
 into the UI. Let’s begin.
 
-### Instructions
+
 
 **1.**
 
@@ -1725,7 +1725,7 @@ counter increase in the UI! All that’s left to do is get the
 Within `decrementerClicked()`, dispatch a `decrement()` action to the
 `store`.
 
-### Solution
+
 
 ``` jsx
 /* Note to learners: 
@@ -1823,7 +1823,7 @@ completed light switch application following this pattern.
 > customized as the programmer sees fit. For example,
 > `lightSwitchState={store.getState()}` would also be valid.*
 
-### Instructions
+
 
 In the next exercise, you will implement the Counter app using a React
 UI. For now, take a moment and familiarize yourself with how the state
@@ -1840,7 +1840,7 @@ to a UI are followed:
   - Update the UI with the data
 - Respond to UI events by dispatching Redux actions
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1944,7 +1944,7 @@ functions and values have been defined for you:
 The React component `CounterApp` and the `render()` function are
 entirely disconnected from the Redux store. Let’s change that!
 
-### Instructions
+
 
 **1.**
 
@@ -2008,7 +2008,7 @@ component every time the state changes.
 At the bottom of **store.js**, subscribe the `render` function to the
 `store`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2110,7 +2110,7 @@ lot of data where having a centralized store to keep it all organized is
 advantageous. In the next lesson, you will learn how to build and
 organize Redux applications with complex state.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2233,7 +2233,7 @@ terms and concepts relating to React and Redux:
 > materials. You can do so by clicking-and-dragging the dividing line
 > that separates the “Learn” section from the code editor.
 
-### Instructions
+
 
 Spend a few moments getting familiar with the features of this
 application. While you’re at it, consider the following:
@@ -2248,7 +2248,7 @@ state structure, creating action creators to describe state changes,
 writing a reducer to execute state changes, and connecting the Redux
 store to the existing React components. Let’s begin!
 
-### Solution
+
 
 ``` jsx
 ```
@@ -2340,7 +2340,7 @@ Notice that each recipe is represented as an object with an `id`,
 Now that you know what the state structure looks like, the first step is
 to create an `initialState` object.
 
-### Instructions
+
 
 **1.**
 
@@ -2371,7 +2371,7 @@ an initial value of an empty string.
 
 The user will change this value by using a search input field.
 
-### Solution
+
 
 ``` jsx
 const initialState = {
@@ -2469,7 +2469,7 @@ Take a look at **store.js** where you will find that action creators for
 the two actions above have been defined for you. Your job is to create
 the remaining three: `loadData()`, `addRecipe()`, and `removeRecipe()`
 
-### Instructions
+
 
 **1.**
 
@@ -2533,7 +2533,7 @@ action object with the following properties:
   action name is `'removeRecipe'`
 - `payload`: The `recipe` object parameter.
 
-### Solution
+
 
 ``` jsx
 import allRecipesData from './data.js';
@@ -2688,7 +2688,7 @@ actions to the `store`. Your task is to complete it such that it can
 handle each of the five action creator types that you had created in the
 last exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -2741,7 +2741,7 @@ class="code__2rdF32qjRVp7mMVBHuPwDS">.filter()</code></a> array method
 and filter out the element whose `'id'` matches the recipe from
 `action.payload`.
 
-### Solution
+
 
 ``` jsx
 import { createStore } from 'redux';
@@ -2934,7 +2934,7 @@ composition pattern:
 All that’s left is to complete the `favoriteRecipesReducer()` and
 include it in the `rootReducer()`!
 
-### Instructions
+
 
 **1.**
 
@@ -2977,7 +2977,7 @@ Then, call `favoriteRecipesReducer()`, passing its slice of `state` and
 the `action` as arguments, and store the result as the value for
 `nextState.favoriteRecipes`.
 
-### Solution
+
 
 ``` jsx
 import { createStore } from 'redux';
@@ -3145,7 +3145,7 @@ you created in the last exercise. Now, however, the `rootReducer()` is
 missing. Rather than creating this function by hand, you will use
 `combineReducers()`.
 
-### Instructions
+
 
 **1.**
 
@@ -3173,7 +3173,7 @@ the returned value to `rootReducer`.
 Finally, pass the `rootReducer` to the `createStore()` function and save
 the returned value in a new variable called `store`.
 
-### Solution
+
 
 ``` jsx
 // Import combineReducers from redux here.
@@ -3324,7 +3324,7 @@ creators, so that they could be imported back into **store.js**.
 
 And that’s where you come in!
 
-### Instructions
+
 
 **1.**
 
@@ -3374,7 +3374,7 @@ application.
 
 Export the `store` value from **src/app/store.js**.
 
-### Solution
+
 
 ``` jsx
 import { createStore, combineReducers } from 'redux';
@@ -3544,7 +3544,7 @@ see some standard React code for rendering the top-level `<App />`
 component. You’ll notice that the `store` is missing and the `<App />`
 component isn’t receiving any props!
 
-### Instructions
+
 
 **1.**
 
@@ -3583,7 +3583,7 @@ At the bottom of **index.js**, use `store.subscribe()` to subscribe the
 `render` function to the `store` such that each time the `store`’s state
 changes, the entire `<App />` will be re-rendered.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3684,7 +3684,7 @@ application in the past. Now, however, you must consider that the slices
 of the `store`’s state and the `dispatch` method must be passed through
 props.
 
-### Instructions
+
 
 **1.**
 
@@ -3770,7 +3770,7 @@ argument.
 Within `onRemoveRecipeHandler()`, which receives a `recipe` parameter,
 dispatch a `removeRecipe()` action with `recipe` as an argument.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3907,7 +3907,7 @@ lesson, you’ll learn how you can use the `react-redux` library to avoid
 “prop threading” and more tricks for building robust React+Redux
 applications!
 
-### Solution
+
 
 ``` jsx
 ```
@@ -3975,7 +3975,7 @@ walkthrough video**.
 > syntax errors and can be used when debugging your code. Feel free to
 > minimize it when not in use.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4246,7 +4246,7 @@ keep working on this project, try implementing this bonus feature:
 - Add a search feature (like in the Recipes app) to filter the products
   shown in the inventory.
 
-### [Solution](codecademy-store)
+## [Solution](codecademy-store)
 
 # Implementing the Redux Store from Scratch
 
@@ -4508,7 +4508,7 @@ Most importantly you should be familiar with Redux’s one-way data flow:
 React Redux provides tools that will help you implement each stage of
 the data flow with a React UI.
 
-### Instructions
+
 
 Before continuing you should note the application’s current
 functionality that will be replaced in the following exercises:
@@ -4524,7 +4524,7 @@ functionality that will be replaced in the following exercises:
 Move to the next exercise to learn about each of these elements of the
 current application and how React Redux can help improve on them.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -4581,11 +4581,11 @@ With React Redux you will learn how to solve these issues by:
   application state for optimized rendering.
 - Easily dispatching actions within components.
 
-### Instructions
+
 
 Move to the next exercise to install the React Redux package.
 
-### Solution
+
 
 ``` jsx
 ```
@@ -4611,7 +4611,7 @@ npm install react-redux
 After installation, your application will have access to the tools
 provided by the React Redux package.
 
-### Instructions
+
 
 **1.**
 
@@ -4620,7 +4620,7 @@ Start your journey with React Redux.
 In the terminal, enter the command to install the `react-redux` package
 using `npm`.
 
-### Solution
+
 
 ``` bash
 npm install react-redux
@@ -4668,7 +4668,7 @@ something you will address in the next few exercises. Like many
 improvements in the world, you sometimes have to break the process to
 make it better.
 
-### Instructions
+
 
 **1.**
 
@@ -4694,7 +4694,7 @@ pass the imported Redux `store` through the `<Provider>` component
 This begins the process of accessing data throughout the application
 components but you must do a couple more things to see any progress.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -4784,7 +4784,7 @@ selector function has been implemented and exported for you. In
 imported and it will be up to you to use it to help implement the
 selectors for the `allRecipes` slice.
 
-### Instructions
+
 
 **1.**
 
@@ -4845,7 +4845,7 @@ filtered recipe names printed in the output console.
 Selectors can be simple or complex. All are an important step to
 accessing the Redux store data within components.
 
-### Solution
+
 
 ``` jsx
 import allRecipesData from '../../../data.js'
@@ -4971,7 +4971,7 @@ Redux store using `react-redux`.
     for executing selector instructions to retrieve data and subscribe
     to re-rendering.
 
-### Instructions
+
 
 **1.**
 
@@ -5002,7 +5002,7 @@ Inside the `AllRecipes()` component function:
 In this exercise, the data was initialized with recipes so when you run
 the code you should see the recipe data rendered in the browser.
 
-### Solution
+
 
 ``` jsx
 
@@ -5114,7 +5114,7 @@ earlier version of the app when `dispatch` was made available through
 props. You will now provide a new reference to the Redux store’s
 `dispatch` function.
 
-### Instructions
+
 
 **1.**
 
@@ -5141,7 +5141,7 @@ your favorite list. The `SearchTerm` component action dispatching has
 also been implemented so you can now filter both recipe lists using the
 text box.
 
-### Solution
+
 
 ``` jsx
 
@@ -5251,7 +5251,7 @@ Let’s review what you’ve learned:
 - `useDispatch()` returns a reference to Redux store `dispatch()`
   function
 
-### Instructions
+
 
 With all of this new knowledge to work with, explore the finished
 application to observe how `react-redux` helped you implement the Redux
@@ -5259,7 +5259,7 @@ one-way data flow.
 
 Have fun!
 
-### Solution
+
 
 # Matching Memory
 
@@ -5320,7 +5320,7 @@ With all of this ahead of you, explore the starting code of the
 application and then move on to the first task to begin implementing the
 matching game.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5651,7 +5651,7 @@ a couple of challenges to try on your own.
     matching. The challenge here is to apply the style to the text of
     cards that are flipped over and not matched.
 
-### [Solution](matching-memory-react-redux)
+## [Solution](matching-memory-react-redux)
 
 # The Redux Toolkit
 
@@ -5689,13 +5689,13 @@ methods that Redux Toolkit has to offer, head over to the
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Redux Toolkit docs</a>!
 
-### Instructions
+
 
 In the code editor, take a moment to look at the contents of
 **favoriteRecipesSlice.js** and **store.js** and familiarize yourself
 with the reducer, action creators, selectors, and the `store` object.
 
-### Solution
+
 
 ``` jsx
 import { selectSearchTerm } from '../searchTerm/searchTermSlice.js';
@@ -5767,14 +5767,14 @@ npm install @reduxjs/toolkit
 Installing this package will enable you to import the methods you’ll be
 learning throughout this lesson.
 
-### Instructions
+
 
 **1.**
 
 In the terminal, use the proper command to install the
 `@reduxjs/toolkit` package.
 
-### Solution
+
 
 ``` bash
 npm install @reduxjs/toolkit
@@ -5871,14 +5871,14 @@ In the next exercise, we’ll take a closer look at how we can take
 advantage of Redux Toolkit’s `createSlice()` function to further
 simplify the logic for us. First, let’s import it.
 
-### Instructions
+
 
 **1.**
 
 At the top of **favoriteRecipesSlice.js** in the code editor, import
 `createSlice()` from the `'@reduxjs/toolkit'` library.
 
-### Solution
+
 
 ``` jsx
 import { createSlice } from '@reduxjs/toolkit';
@@ -5963,7 +5963,7 @@ With `createSlice()`…
 For now, let’s practice calling `createSlice()`. In the next exercise,
 we’ll take a look at the object that is returned by `createSlice()`.
 
-### Instructions
+
 
 **1.**
 
@@ -6014,7 +6014,7 @@ Below the `options` object,
   the result to `favoriteRecipesSlice`
 - Export `favoriteRecipesSlice`
 
-### Solution
+
 
 ``` jsx
 import { createSlice } from '@reduxjs/toolkit';
@@ -6183,7 +6183,7 @@ common <a href="https://immerjs.github.io/immer/docs/update-patterns"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">update patterns used with Immer</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -6191,7 +6191,7 @@ Inside of the `options` object, rewrite the logic for the `addRecipe`
 case reducer so that it uses `.push()` instead of the spread operator to
 add a new recipe.
 
-### Solution
+
 
 ``` jsx
 import { createSlice } from '@reduxjs/toolkit';
@@ -6294,7 +6294,7 @@ from the reducer.
 export const { addTodo, toggleTodo } = todosSlice.actions
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -6313,7 +6313,7 @@ the `actions` object.
 
 Export the actions. Remember to use named exports for these.
 
-### Solution
+
 
 ``` jsx
 ```
@@ -6361,7 +6361,7 @@ export const { addTodo, toggleTodo } = todosSlice.actions;
 export default todosSlice.reducer
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -6373,7 +6373,7 @@ Note how each action type corresponds to the name of a case reducer.
 At the bottom of **favoriteRecipesSlice.js**, export the reducer as the
 default export.
 
-### Solution
+
 
 ``` jsx
 import { createSlice } from '@reduxjs/toolkit';
@@ -6505,7 +6505,7 @@ the application’s existing feature code will work just fine!
 
 Let’s confirm this in the instructions below.
 
-### Instructions
+
 
 **1.**
 
@@ -6524,7 +6524,7 @@ Rewrite the default export so that it uses `configureStore()` instead of
 When you’re done, save the file and click around the application in the
 browser to confirm that everything still works!
 
-### Solution
+
 
 ``` jsx
 import { configureStore } from "@reduxjs/toolkit";
@@ -6572,14 +6572,14 @@ logic.
   `createStore()` function and the `combineReducers()` function, and
   handles most of the store setup for us automatically.
 
-### Instructions
+
 
 Head over to the <a href="https://redux-toolkit.js.org/"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Redux Toolkit documentation</a> if you
 want to learn more!
 
-### Solution
+
 
 # Expense Tracker
 
@@ -6640,7 +6640,7 @@ the food budget again to see how much you have left to spend. As you
 progress through the project, take note of the ways that Redux Toolkit
 simplifies your code.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -6838,7 +6838,7 @@ At this point, you should be able to add and delete transactions and see
 your changes reflected in the transactions list as well as in the “Funds
 Remaining” field for each budget.
 
-### [Solution](redux-expense-tracker)
+## [Solution](redux-expense-tracker)
 
 # Redux DevTools
 
@@ -6876,7 +6876,7 @@ logic that interacts with your Redux store.
 > class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 > target="_blank" rel="noopener">enable third-party cookies</a>.
 
-### Instructions
+
 
 You’ll notice our familiar recipe app has undergone some exciting
 changes. The structure of the app remains the same, but the app now
@@ -6884,7 +6884,7 @@ contains more and richer data. In addition to titles, the recipes now
 have images attached. Refresh the browser, and note that this version
 also displays a loading state before the recipes are displayed.
 
-### Solution
+
 
 [Middleware in
 Redux](https://static-assets.codecademy.com/Courses/Learn-Redux/lesson-assets/interactive-image-async-data-flow/index.html)
@@ -6930,7 +6930,7 @@ subsequent exercises, we will walk through how `redux-thunk` makes
 asynchronous requests possible; for now, you should just understand
 where it sits in Redux’s data flow.
 
-### Instructions
+
 
 Before moving on, make sure you understand how middleware fits into
 Redux’s data flow, depicted here for you in an animated diagram. In a
@@ -6943,7 +6943,7 @@ Here are some focusing questions to think about during this lesson: What
 step in Redux’s data flow happens right before middleware runs? What
 step in the Redux data flow happens right after middleware runs?
 
-### Solution
+
 
 ``` jsx
 ```
@@ -7013,7 +7013,7 @@ the action to the store).
 Now let’s write a custom middleware that logs the contents of our store
 to the console.
 
-### Instructions
+
 
 **1.**
 
@@ -7063,7 +7063,7 @@ Dispatch the following action to your store:
 Note that the store’s new state was logged to the console. Congrats –
 you just wrote your first middleware!
 
-### Solution
+
 
 ``` jsx
 import { createStore, applyMiddleware } from 'redux';
@@ -7122,7 +7122,7 @@ Note that calling `add()` does not cause the addition to happen – it
 merely returns a function that will perform the addition when called. To
 perform the addition, we must call `delayedAddition()`.
 
-### Instructions
+
 
 **1.**
 
@@ -7151,7 +7151,7 @@ What do you think will happen when you call `reminder()`? Test your
 hunch by calling `reminder()` in your code editor and logging the result
 to the console.
 
-### Solution
+
 
 ``` jsx
 
@@ -7240,13 +7240,13 @@ use Redux Toolkit. This is because Redux Toolkit’s `configureStore`
 function, which you learned about in a previous lesson, will apply
 `redux-thunk` to the store by default.
 
-### Instructions
+
 
 **1.**
 
 Import the `configureStore` method from the `@reduxjs/toolkit` module.
 
-### Solution
+
 
 ``` jsx
 import { configureStore } from '@reduxjs/toolkit'
@@ -7300,7 +7300,7 @@ asynchronous function that will first fetch the user’s data and then
 dispatch a synchronous action once the user’s information has been
 retrieved.
 
-### Instructions
+
 
 **1.**
 
@@ -7311,7 +7311,7 @@ that asynchronously fetches the recipes and dispatches a synchronous
 action with `type = allRecipes/addRecipes` and `payload` equal to the
 payload you get when the asynchronous request completes.
 
-### Solution
+
 
 ``` jsx
 import { fetchRecipes } from '../../app/api'
@@ -7390,7 +7390,7 @@ synchronous action. Since the action is a plain object,
 `redux-thunk` middleware therefore skips to line 7, and invokes the next
 middleware in the pipeline, passing the action along.
 
-### Instructions
+
 
 Make sure you understand how `redux-thunk` works by reviewing the code
 editor’s provided `redux-thunk` source code. The key step happens where
@@ -7408,7 +7408,7 @@ the action is not a function (as happens when we dispatch plain
 objects), `redux-thunk` passes it through to the next step in the
 middleware pipeline.
 
-### Solution
+
 
 ``` jsx
 function createThunkMiddleware(extraArgument) {
@@ -7480,13 +7480,13 @@ target="_blank" rel="noopener">visit the Redux Toolkit site to see how
 includes <code class="code__2rdF32qjRVp7mMVBHuPwDS">redux-thunk</code>
 by default</a>.
 
-### Instructions
+
 
 Adding `redux-thunk` to our projects enables us to write asynchronous
 actions. In the case of our recipe app, `redux-thunk` has allowed us to
 fetch all the recipes you see displayed here.
 
-### Solution
+
 
 ``` jsx
 ```
@@ -7513,12 +7513,12 @@ asynchronous operations and reflecting their results in state.
 > class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 > target="_blank" rel="noopener">enable third-party cookies</a>.
 
-### Instructions
+
 
 Review the diagram shown. In Redux, middleware intercepts actions after
 dispatching and before passing them along to the reducer.
 
-### Solution
+
 
 [Introduction](https://static-assets.codecademy.com/Courses/Learn-Redux/lesson-assets/interactive-image-async-data-flow/index.html)
 
@@ -7575,12 +7575,12 @@ abstraction, `createAsyncThunk`, for including promise lifecycle actions
 in your Redux apps. We’ll explore that method in the following
 exercises.
 
-### Instructions
+
 
 The diagram shown depicts the lifecycle of a promise: it begins in a
 pending state and becomes either fulfilled or rejected.
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-Redux/lesson-assets/Promises_transparent.png" alt="A promise begins in the pending state. If success, it moves to the fulfilled state and returns data. If failure, it moves to the rejected state and returns an error." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -7631,7 +7631,7 @@ more concise. All you have to write is an asynchronous thunk function;
 `createAsyncThunk` takes care of the rest, returning an action creator
 that will dispatch pending/fulfilled/rejected actions as appropriate.
 
-### Instructions
+
 
 **1.**
 
@@ -7652,7 +7652,7 @@ can access by calling `.json()` on the response to your call to
 `fetchRecipes`. Note: `.json()` is asynchronous, so you’ll want to
 `await` the result of that call.
 
-### Solution
+
 
 ``` jsx
 import { fetchRecipes } from '../../app/api'
@@ -7744,7 +7744,7 @@ available in the <code
 class="code__2rdF32qjRVp7mMVBHuPwDS">thunkAPI</code> object, you can
 read the documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -7752,7 +7752,7 @@ In the code editor, we’ve defined a thunk action creator
 `searchRecipesByName`. Rename `arg` to the semantically appropriate
 variable name `recipeName`.
 
-### Solution
+
 
 ``` jsx
 import { createAsyncThunk } from "@reduxjs/toolkit" 
@@ -7816,7 +7816,7 @@ You will have to handle these action types in your reducers if you want
 to reflect these promise lifecycle states in your app. In the next
 exercise, we will show you how to do that.
 
-### Instructions
+
 
 **1.**
 
@@ -7825,7 +7825,7 @@ action creator, `loadRecipes`. What three action type strings are
 generated by the call to createAsyncThunk? Write out the three strings
 in your code editor in the comments below the call to `loadRecipes`.
 
-### Solution
+
 
 ``` jsx
 import { fetchRecipes } from '../../app/api'
@@ -7914,7 +7914,7 @@ when the promise is either `pending` or `rejected`. When the promise is
 `fulfilled` these are set to `false` and the user data is added to the
 state.
 
-### Instructions
+
 
 **1.**
 
@@ -7941,7 +7941,7 @@ store to update in response to each of the pending/fulfilled/rejected
 actions dispatched by `loadRecipes`. These changes are reflected in the
 app’s UI.
 
-### Solution
+
 
 ``` jsx
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
@@ -8004,7 +8004,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
   lifecycle actions by supplying the extraReducers property to
   `createSlice`.
 
-### Instructions
+
 
 For comparison we’ve included the “old” way of doing things–manually
 handling the promise lifecycle actions–in **oldAllRecipesSlice.js** and
@@ -8013,7 +8013,7 @@ the “new” way of doing things–with `createAsyncThunk()` and the
 Take a moment to review these two files and cement your understanding of
 the difference between them.
 
-### Solution
+
 
 ``` jsx
 ```
@@ -8053,7 +8053,7 @@ on the comments slice will resemble these files.
 > class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 > target="_blank" rel="noopener">enable third-party cookies</a>.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -8369,7 +8369,7 @@ In **CommentForm.js**:
     the browser and try to create the same comment twice by double
     clicking. You’ll see that it’s now impossible to do so.
 
-### [Solution](redux-news-reader)
+## [Solution](redux-news-reader)
 
 # Code Review: Redux
 
@@ -8511,7 +8511,7 @@ target="_blank" rel="noopener">http://localhost:3000/</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -8848,7 +8848,7 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](react-redux-flashcards)
+## [Solution](react-redux-flashcards)
 
 # Review: Redux
 

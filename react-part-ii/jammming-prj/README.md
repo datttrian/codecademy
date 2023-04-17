@@ -37,7 +37,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">this page</a>. You’ll need to adjust
 steps 74-95 accordingly.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1077,4 +1077,4 @@ Follow the steps on the screen. Change the domain value to your new URI.
 
 Congrats! You’ve just deployed a React App that queries the Spotify API!
 
-### [Solution](https://datttrian-jammming-prj.netlify.app/) (Reference: [nyere](https://github.com/nyere/jammming))
+## [Solution](https://datttrian-jammming-prj.netlify.app/) (**Reference**: [nyere](https://github.com/nyere/jammming))

@@ -247,4 +247,4 @@ Congratulations on building your own portfolio! You’re welcome to expand
 your portfolio beyond these two pages. For example, you can include a
 page for each project that you’ve built.
 
-### [Solution](portfolio-website)
+## [Solution](portfolio-website)

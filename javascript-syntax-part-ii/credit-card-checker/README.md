@@ -42,7 +42,7 @@ target="_blank">article on installing Node</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -169,7 +169,7 @@ following:
 - Create a function that will convert invalid numbers into valid
   numbers.
 
-### [Solution](credit-card-checker.js)
+## [Solution](credit-card-checker.js)
 
 ``` javascript
 // All valid credit card numbers

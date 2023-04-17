@@ -47,7 +47,7 @@ the ways in which components *interact*.
 
 This unit is an introduction to *components interacting*.
 
-### Solution
+
 
 [Components
 Interact](https://content.codecademy.com/courses/React/react_animations-components-render-components.mp4)
@@ -100,7 +100,7 @@ component. Instead, you’ve seen a component rendered by
 When a component renders another component, what happens is very similar
 to what happens when `ReactDOM.render()` renders a component.
 
-### Instructions
+
 
 **1.**
 
@@ -115,7 +115,7 @@ method return a `<NavBar />` instance.
 
 In **ProfilePage.js**, place a `<NavBar />` on line 9.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -211,7 +211,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">React’s specific module system comes from
 ES6</a>. More on all of that later.
 
-### Instructions
+
 
 **1.**
 
@@ -222,7 +222,7 @@ In **ProfilePage.js**, on line 3, import `NavBar` from **NavBar.js**.
 **ProfilePage.js** and **NavBar.js** are located in the same parent
 directory.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -316,7 +316,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">JavaScript’s ES6 module system</a> goes
 beyond named exports and has several advanced syntax features.
 
-### Instructions
+
 
 **1.**
 
@@ -329,7 +329,7 @@ Now, when **ProfilePage.js** uses `import` to grab the variable `NavBar`
 from **NavBar.js**, it will get back exactly what it wants: the `NavBar`
 component class.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -356,7 +356,7 @@ Now you’re ready for `<ProfilePage />` to render `<NavBar />`!
 
 All that’s left to do is render `<ProfilePage />`.
 
-### Instructions
+
 
 **1.**
 
@@ -382,7 +382,7 @@ relationship of React.js.
 
 When you’re ready, press **Run** to continue.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -420,13 +420,13 @@ Information that gets passed from one component to another is known as
 
 Click Next to enter props-land!
 
-### Instructions
+
 
 In this video, you can see the Post component passing a prop to the
 Content component. The prop contains a string `'../images/atom.png'`,
 which is used to display an image.
 
-### Solution
+
 
 [this.props](https://content.codecademy.com/courses/React/react_animations-this-props.mp4)
 
@@ -456,7 +456,7 @@ render() {
 Most of the information in `this.props` is pretty useless! But some of
 it is extremely important, as you’ll see.
 
-### Instructions
+
 
 **1.**
 
@@ -489,7 +489,7 @@ you right now.
 
 But it’s there!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -550,7 +550,7 @@ braces:
 <Greeting name="Frarthur" town="Flundon" age={2} haunted={false} />
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -558,7 +558,7 @@ Inside of the `ReactDOM.render()` call, pass the string `"Hello"` to
 `<PropsDisplayer />`. Give that string a *name* of `myProp`. Feel free
 to use the example code as a guide.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -595,7 +595,7 @@ information.
 2 - Include `this.props.name-of-information` in that component class’s
 *render* method’s `return` statement.
 
-### Instructions
+
 
 **1.**
 
@@ -624,7 +624,7 @@ different string.
 Click Run. Once the browser refreshes, a new name should appear on the
 screen.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -695,7 +695,7 @@ of passed-in information is called a prop. This means that `props` could
 refer to two pieces of passed-in information, or it could refer to the
 object that stores those pieces of information :(
 
-### Instructions
+
 
 **1.**
 
@@ -747,7 +747,7 @@ attribute’s *value* can be whatever you’d like.
 When you click Run, `<App />` will render `<Greeting />`, and pass it a
 prop!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -813,7 +813,7 @@ to *decide* what will be displayed. This is a common technique.
 Select **Home.js** and look at the `Home` component class. What will
 `<Welcome />` render to the screen?
 
-### Instructions
+
 
 **1.**
 
@@ -840,7 +840,7 @@ How rude! I mean, honestly.
 In **App.js**, change the value of `signedIn` to make `<Greeting />`
 display a friendly greeting again.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -888,7 +888,7 @@ method is defined, with similar syntax as the render method. On line 12,
 that event handler method is attached to an *event* (a click event, in
 this case).
 
-### Instructions
+
 
 **1.**
 
@@ -908,7 +908,7 @@ separate `talk` and `render` with a comma.
 Once you’re done, delete the original `talk` function before clicking
 Run.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -957,7 +957,7 @@ you’re ready to *pass* that function to another component.
 You can pass a method in the exact same way that you pass any other
 information. Behold, the mighty JavaScript.
 
-### Instructions
+
 
 **1.**
 
@@ -1003,7 +1003,7 @@ this case, you want to pass the method named `talk`.
 
 Inside of the render method, change your attribute’s *value* to `talk`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1048,7 +1048,7 @@ JSX element: you give that JSX element a special *attribute*. The
 attribute’s *name* should be something like `onClick` or `onHover`. The
 attribute’s *value* should be the event handler that you want to attach.
 
-### Instructions
+
 
 **1.**
 
@@ -1062,7 +1062,7 @@ can access this prop via `this.props.talk`.
 Click Run. Once the browser refreshes, click on the button. Ew, how
 annoying!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1143,7 +1143,7 @@ class MyClass extends React.Component {
 }
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -1206,7 +1206,7 @@ HTML-like JSX elements. Otherwise, they’re just ordinary prop names.
 
 Click “Run” again to complete this step.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1275,7 +1275,7 @@ If a component has more than one child between its JSX tags, then
 if a component has only one child, then `this.props.children` will
 return the single child, *not* wrapped in an array.
 
-### Instructions
+
 
 **1.**
 
@@ -1325,7 +1325,7 @@ pluralize.
 See if you can figure out how the instances of the `List` component
 class are automatically pluralizing their titles!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1405,7 +1405,7 @@ If an `<Example />` doesn’t get passed any text, then it will display
 If an `<Example />` *does* get passed some text, then it will display
 that passed-in text.
 
-### Instructions
+
 
 **1.**
 
@@ -1435,7 +1435,7 @@ text=""
 Your new `prop` should override the default, making the
 `<button></button>` sad again :(
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1507,12 +1507,12 @@ an ecosystem of interacting React components.
 
 Click Next to get started!
 
-### Instructions
+
 
 In this video, the Searchbar component’s state includes a `term` value,
 which changes as a user inputs text in the search bar.
 
-### Solution
+
 
 [State](https://content.codecademy.com/courses/React/react_animations-this-state.mp4)
 
@@ -1574,7 +1574,7 @@ Look at the bottom of the highest code example in this column.
 `<Example />` has a `state`, and its `state` is equal to
 `{ mood: 'decent' }`.
 
-### Instructions
+
 
 **1.**
 
@@ -1597,7 +1597,7 @@ Make sure *not* to separate `constructor` and `render` with a comma!
 Methods should never be comma-separated, if inside of a class body. This
 is to emphasize the fact that classes and object literals are different.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1648,7 +1648,7 @@ its `render` function.
 Just like `this.props`, you can use `this.state` from any property
 defined inside of a component class’s body.
 
-### Instructions
+
 
 **1.**
 
@@ -1664,7 +1664,7 @@ At the bottom of the file, render `<App />` using `ReactDOM.render()`.
 See your component’s `state` on display. Truly, you have the best of
 apps.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1732,7 +1732,7 @@ component’s current state. If there are properties in the current state
 that aren’t part of that object, then those properties remain how they
 were.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -1839,7 +1839,7 @@ this works.
 One final note: you *can’t* call `this.setState()` from inside of the
 render function! We’ll explain why in the next exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -1920,7 +1920,7 @@ Give the `<button></button>` an `onClick` attribute with a value of
 Hit Run and let the browser refresh. Does clicking on the button change
 the color?
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2030,7 +2030,7 @@ Think of `this.setState()` as actually being two things:
 If `.render()` calls `this.setState()`, then an infinite loop is
 created.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2105,7 +2105,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -2268,7 +2268,7 @@ your work!
 [REACT Project Random Color
 Picker](https://www.youtube.com/watch?v=tiH5WiA5I2E)
 
-### [Solution](random-color)
+## [Solution](random-color)
 
 # React Developer Tools
 
@@ -2478,7 +2478,7 @@ In our pattern, a *stateful* component passes its `state` down to a
 
 Click “Next” to go to the next exercise and walk through an example!
 
-### Instructions
+
 
 In this video, in the “Before” scene, the user interface is defined by a
 single, complex component.
@@ -2487,7 +2487,7 @@ In the “After” scene, the user interface is defined by a clear hierarchy
 of components in which the stateful component, Post, passes state
 information to stateless components, like User info, Content, and Stats.
 
-### Solution
+
 
 [Stateless Components Inherit From Stateful
 Components](https://content.codecademy.com/courses/React/react_animations-stateless-vs-stateful.mp4)
@@ -2500,7 +2500,7 @@ component.
 To make that happen, you need two component classes: a *stateful* class,
 and a *stateless* class.
 
-### Instructions
+
 
 **1.**
 
@@ -2538,7 +2538,7 @@ Inside of `constructor()`’s body, call `super(props)`. On the next line,
 still inside of `constructor()`’s body, declare a property named
 `this.state` set equal to `{ name: 'Frarthur' }`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2563,7 +2563,7 @@ Great! You just made a *stateful* component class named `Parent`.
 
 Now, let’s make our *stateless* component class.
 
-### Instructions
+
 
 **1.**
 
@@ -2622,7 +2622,7 @@ line begins: `export class Child`.
 
 That’s it! `Child` is ready to inherit a `prop` and display it.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2641,7 +2641,7 @@ A `<Parent />` is supposed to pass its `state` to a `<Child />`.
 Before a `<Parent />` can pass anything to a `<Child />`, you need to
 `import` `Child` into **Parent.js**.
 
-### Instructions
+
 
 **1.**
 
@@ -2685,7 +2685,7 @@ Rendering `<Parent />` will render *both* components, because `Parent`’s
 render function returns a `<Child />`. Click Run, and see the rendered
 information that you passed down from `Parent`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2733,7 +2733,7 @@ component itself can change.**
 If that’s a bit confusing, don’t worry! The next two lessons will be
 examples.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2786,13 +2786,13 @@ Look in **Step3.js**. When a user clicks on the `<button></button>`, a
 click event will fire. This will make the passed-down function get
 called, which will *update* the parent’s state.
 
-### Instructions
+
 
 Click through the three files in order, and try to follow their
 chronology. Whenever you’re ready, click Next and we’ll build an
 example!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2877,7 +2877,7 @@ To make a child component update its parent’s `state`, the first step is
 something that you’ve seen before: you must define a state-changing
 method on the parent.
 
-### Instructions
+
 
 **1.**
 
@@ -2925,7 +2925,7 @@ render() {
 }
 ```
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -2993,7 +2993,7 @@ In the last exercise, you defined a function in `Parent` that can change
 `Parent` must pass this function down to `Child`, so that `Child` can
 use it in an event listener on the dropdown menu.
 
-### Instructions
+
 
 **1.**
 
@@ -3012,7 +3012,7 @@ In **Parent.js**, inside of `Parent`’s render function, add a second
 attribute to `<Child />`. Give this attribute a *name* of `onChange`,
 and a *value* of the `changeName` method.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3050,7 +3050,7 @@ ReactDOM.render(
 You just passed a function down to `Child` that can change `Parent`’s
 state!
 
-### Instructions
+
 
 **1.**
 
@@ -3139,7 +3139,7 @@ In `Child`’s render function, change the *event handler* from
 Click Run, and try selecting some different names from the dropdown
 menu. It should work!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3189,7 +3189,7 @@ will help you understand how React apps are organized.
 
 Click Next to move on to the final version of our programming pattern!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3285,7 +3285,7 @@ An understanding of this final pattern will be very helpful in the wild,
 not to mention in the next React course. Click Next and we’ll build an
 example!
 
-### Instructions
+
 
 In this video, the Like and Stats components are siblings under the
 Reactions parent component.
@@ -3296,7 +3296,7 @@ Reactions parent component.
     Reactions component to send a new prop to Stats.
 3.  The Stats component updates with the new information.
 
-### Solution
+
 
 [Child Components Update Sibling
 Components](https://content.codecademy.com/courses/React/react_animations-child-updates-siblings.mp4)
@@ -3338,7 +3338,7 @@ That brings us to the essential new concept for this lesson: you will
 have one stateless component *display* information, and a different
 stateless component offer the ability to *change* that information.
 
-### Instructions
+
 
 **1.**
 
@@ -3347,7 +3347,7 @@ Click Run.
 Select **Parent.js**, and look at the rendered `<Parent />` in the
 browser. Try selecting a name from the dropdown menu. Does it work?
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3449,7 +3449,7 @@ Three things have changed in this file since the last Lesson:
 3.  `<Sibling />` and `<Child />` have been wrapped in a `<div></div>`,
     since JSX expressions must have only one outer element.
 
-### Instructions
+
 
 **1.**
 
@@ -3481,7 +3481,7 @@ One of those is now unnecessary!
 Remove an attribute from `<Child />`, so that it receives a way to
 *change* the chosen name and nothing more.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3527,7 +3527,7 @@ You’re on the last step!
 You’ve passed the name down to `<Sibling />` as a `prop`. Now
 `<Sibling />` has to *display* that `prop`.
 
-### Instructions
+
 
 **1.**
 
@@ -3551,7 +3551,7 @@ chosen name is*.
 Replace each `Frarthur` with `{name}`. Click Run. Try selecting a new
 name from the dropdown menu.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3612,7 +3612,7 @@ understanding how React apps fit together! You’ll get more practice
 using it throughout this course, as well as in the course after this
 one.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -3711,7 +3711,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -3838,7 +3838,7 @@ display the chosen video.
 You’ve put together a responsive video player, and done it in a way that
 you will often find in the real world!
 
-### [Solution](video-player)
+## [Solution](video-player)
 
 # Component Lifecycle Methods
 
@@ -3879,7 +3879,7 @@ instances, each with its own lifecycle. However, once a component
 instance is unmounted, that’s it—it will never be re-mounted, or updated
 again, or unmounted.
 
-### Instructions
+
 
 Take a look at this helpful reference diagram. Don’t worry—you don’t
 have to understand all of it right now—but give it a look.
@@ -3892,7 +3892,7 @@ What causes an update to occur?
 Again, it’s okay if you don’t know the answers to these yet. We’ll learn
 all about that soon!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/React/react_diagram-lifecycle-flow.png" alt="A diagram of the React lifecycle. We'll learn more about this soon." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -3916,7 +3916,7 @@ updating phase.
 
 With this new understanding, let’s build a simple clock component.
 
-### Instructions
+
 
 **1.**
 
@@ -3953,7 +3953,7 @@ Notice that this is static—it doesn’t update, even as time goes by.
 it happened in a different order, `render()` wouldn’t have access to
 `this.state`, and it wouldn’t work.)
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -4057,7 +4057,7 @@ is called between the constructor and `render()`, but it is very rarely
 used and usually isn’t the best way to achieve your goals. We won’t be
 talking about it in this lesson.)
 
-### Instructions
+
 
 **1.**
 
@@ -4072,7 +4072,7 @@ setInterval(() => {
 
 See your clock update every second! It’s a real clock now.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -4159,7 +4159,7 @@ any of your component’s mess.
 
 In our case, we’ll use it to clean up the clock’s interval.
 
-### Instructions
+
 
 **1.**
 
@@ -4182,7 +4182,7 @@ with `clearInterval(this.intervalID)`.
 Notice that you can hide and show the component and everything works
 fine!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -4240,7 +4240,7 @@ The second, which we haven’t seen yet, is `componentDidUpdate()`. Just
 like `componentDidMount()` is a good place for mount-phase setup,
 `componentDidUpdate()` is a good place for update-phase work.
 
-### Instructions
+
 
 **1.**
 
@@ -4349,7 +4349,7 @@ methods use the same code path.
 
 See that everything works as before, but with the bug fixed!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -4441,7 +4441,7 @@ dog, and one for a Komodo dragon.
 
 Let’s get started!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4609,7 +4609,7 @@ has changed (in other words, if
 Once that’s done, you should be able to navigate through pet profiles
 with ease! Be proud…your pet social network is going to be big.
 
-### [Solution](react-lifecycle-methods-social-network-for-pets)
+## [Solution](react-lifecycle-methods-social-network-for-pets)
 
 # Create a Playlist App With the Spotify API (Part One)
 
@@ -4650,7 +4650,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">this page</a>. You’ll need to adjust
 steps 74-95 accordingly.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5690,7 +5690,7 @@ Follow the steps on the screen. Change the domain value to your new URI.
 
 Congrats! You’ve just deployed a React App that queries the Spotify API!
 
-### [Solution](jammming-prj)
+## [Solution](jammming-prj)
 
 # Create a Playlist App With the Spotify API (Part Two)
 
@@ -5749,7 +5749,7 @@ something descriptive, and you’ll be ready to work on your project.
 - Ensure playlist information doesn’t get cleared if a user has to
   refresh their access token
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5759,7 +5759,7 @@ Mark the tasks as complete by checking them off
 
 Use the information above to complete this project.
 
-### [Solution](jammming-prj)
+## [Solution](jammming-prj)
 
 # Getting Started with Netlify
 
@@ -6456,7 +6456,7 @@ render() { // Delete this
 To put it in other words: the function component should return the same
 JSX that was originally returned by the `render()` method.
 
-### Instructions
+
 
 **1.**
 
@@ -6467,7 +6467,7 @@ Rewrite the `Friend` component class as a function component.
 Use **Example.js** as a guide. Make sure to delete the original `Friend`
 class component when you’re done.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -6532,7 +6532,7 @@ ReactDOM.render(
 In the above example, we pass a value of “Have you eaten an apple
 today?” as the `prompt` prop when rendering `YesNoQuestion`.
 
-### Instructions
+
 
 **1.**
 
@@ -6544,7 +6544,7 @@ Make sure to delete the original `NewFriend` class when you’re done.
 
 Click Run and make sure that your new friend is still there!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -6580,12 +6580,12 @@ documentation and example apps. Some developers prefer them over class
 components for their simplicity and straightforward features, like
 Hooks, which you’ll learn later in your coding journey.
 
-### Instructions
+
 
 Take a look at the example in the code editor. Make sure the code makes
 sense before moving on!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -6670,7 +6670,7 @@ target="_blank" rel="noopener">the full list in the docs</a>. In this
 lesson, we’ll learn different ways to manage state in a function
 component.
 
-### Instructions
+
 
 **1.**
 
@@ -6698,7 +6698,7 @@ Open the **index.js** file and change where this module imports the App
 component from, so that we can render the `AppFunction` instead of the
 `AppClass` component. Press run to see how the code behaves!
 
-### Solution
+
 
 ``` jsx
 import React from "react";
@@ -6833,7 +6833,7 @@ re-render, so the whole function defining the component is called again.
 The magic of `useState()` is that it allows React to keep track of the
 current value of state from one render to the next!
 
-### Instructions
+
 
 **1.**
 
@@ -6857,7 +6857,7 @@ of these buttons.
 Update the `divStyle` object so that the `backgroundColor` property is
 set to our current state value instead of always showing purple.
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from 'react';
@@ -6951,7 +6951,7 @@ state. If we don’t have the value needed during the first render, we can
 explicitly pass `null` instead of just passively leaving the value as
 `undefined`.
 
-### Instructions
+
 
 **1.**
 
@@ -6963,7 +6963,7 @@ with a color of “Tomato” when it first shows up on the screen.
 Modify our current `ColorPicker()` component to initialize state so that
 “Tomato” is the selected `color` for our component’s first render.
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from 'react';
@@ -7065,7 +7065,7 @@ All three of these code snippets behave the same way, so there really
 isn’t a right and wrong between these different ways of doing this.
 We’ll use the last, most concise version moving forward.
 
-### Instructions
+
 
 **1.**
 
@@ -7090,7 +7090,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">this great lesson</a> to learn about regular
 expressions!
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from "react";
@@ -7168,7 +7168,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">this section of the docs</a> is a great
 place to start.
 
-### Instructions
+
 
 **1.**
 
@@ -7194,7 +7194,7 @@ Add an `onFirstQuestion` variable with a boolean value then use that
 value to toggle the `disabled` attribute of the “Go Back” button on and
 off.
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from 'react';
@@ -7323,7 +7323,7 @@ target="_blank">strengthen our JavaScript skills</a>, will always help
 us do more faster (and have a lot more fun doing it) as React
 developers.
 
-### Instructions
+
 
 **1.**
 
@@ -7364,7 +7364,7 @@ that we have two of the same item in an array. Using the value to remove
 the item would remove all items with that value, so we use the index as
 a unique identifier.
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from "react";
@@ -7474,7 +7474,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Computed Property Name</a> allows us to
 use the string value stored by the `name` variable as a property key!
 
-### Instructions
+
 
 **1.**
 
@@ -7517,7 +7517,7 @@ setter callback function.
 Add an event listener to call our `handleSubmit()` function when the
 user submits the form.
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from "react";
@@ -7647,7 +7647,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">multiple State Hooks for managing
 separate data</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -7663,7 +7663,7 @@ but you may have noticed a pattern:
 - `isLoading` & `setIsLoading()`
 - `email` & `setEmail()`
 
-### Solution
+
 
 ``` jsx
 import React, { useState } from "react";
@@ -7745,7 +7745,7 @@ Let’s review what we learned and practiced in this lesson:
 - Split state into multiple, simpler variables instead of throwing it
   all into one state object
 
-### Instructions
+
 
 **1.**
 
@@ -7768,7 +7768,7 @@ of this lesson!
 
 Good luck, we believe in you!
 
-### Solution
+
 
 ``` jsx
 import React from "react";
@@ -7918,7 +7918,7 @@ There are three key moments when the Effect Hook can be utilized:
 Later on in this lesson, we’ll learn how to further fine-tune exactly
 when this code executes.
 
-### Instructions
+
 
 In the editor, we’ve defined a component as both a class and a function,
 each with the same “side effects”.
@@ -7946,7 +7946,7 @@ maintaining the function component will be easier.
 Ready to start using the Effect Hook? Great! We’ll dive into the details
 of how to use this Hook throughout this lesson!
 
-### Solution
+
 
 ``` jsx
 import React, {Component} from 'react';
@@ -8061,7 +8061,7 @@ renders our component, it will update the DOM as usual, and then run our
 effect after the DOM has been updated. This happens for every render,
 including the first and last one.
 
-### Instructions
+
 
 **1.**
 
@@ -8088,7 +8088,7 @@ target="_blank" rel="noopener">template literal</a> so that the message
 in our alert dialog reads: “Count: 0”, then “Count: 1”, then “Count: 2”,
 etc.
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8156,7 +8156,7 @@ before the component re-renders or unmounts. Since this cleanup function
 is optional, it is our responsibility to return a cleanup function from
 our effect when our effect code could create memory leaks.
 
-### Instructions
+
 
 **1.**
 
@@ -8188,7 +8188,7 @@ ourselves!
 Update our effect so that it returns a cleanup function that will remove
 our last event listener from the DOM.
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8252,7 +8252,7 @@ are meant to be displayed. Simply, passing `[]` to the `useEffect()`
 function is enough to configure when the effect and cleanup functions
 are called!
 
-### Instructions
+
 
 **1.**
 
@@ -8325,7 +8325,7 @@ interval. We want that interval to start ticking away after our first
 render and we want it to be cleaned up after the final render. To
 accomplish this, use an empty dependency array!
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8406,7 +8406,7 @@ useEffect(() => {
 }, [count]); // Only re-run the effect if the value stored by count changes
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -8477,7 +8477,7 @@ depends on it! Add this variable to our dependency array so that the
 effect is called again, updating `data` appropriately, after re-renders
 where the user has selected a different forecast type.
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8600,7 +8600,7 @@ function components. For more on this topic, head to the
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">React Docs</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -8647,7 +8647,7 @@ it so that we follow the rules of Hooks. To optimize performance, only
 call the backend for data when we don’t yet have it stored in the
 component’s state like this code was trying to do.
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8751,7 +8751,7 @@ target="_blank" rel="noopener">whether to bundle data together or
 separate it</a>, but with practice, we get better at organizing our code
 so that it is easier to understand, add to, reuse, and test!
 
-### Instructions
+
 
 **1.**
 
@@ -8797,7 +8797,7 @@ For each of these three data collections, group the related State Hook
 and the Effect Hook next to one. This will help to make it clear which
 Hooks are working together to manage each separate data model.
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8914,13 +8914,13 @@ Hooks gives us the flexibility to organize our code in different ways,
 grouping related data as well as separating concerns to keep code
 simple, error-free, reusable, and testable!
 
-### Instructions
+
 
 Congratulations on finishing this lesson! With the new skills and
 information in this lesson, there’s so much functionality that you can
 now add to the function components in your own React apps!
 
-### Solution
+
 
 ``` jsx
 import React, { useState, useEffect } from 'react';
@@ -8985,7 +8985,7 @@ a short thought, it’ll disappear after just 15 seconds.
 
 Let’s get started!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -9257,7 +9257,7 @@ can get with `thought.id`.
 Once that’s done, try adding some thoughts and watch them disappear…it’s
 just like your brain, but you built it with React.
 
-### [Solution](react-hooks-passing-thoughts)
+## [Solution](react-hooks-passing-thoughts)
 
 # Style
 
@@ -9274,13 +9274,13 @@ components into *presentational components* and *container components*.
 
 Click Next to begin!
 
-### Instructions
+
 
 In this video, an object is passed from the Post component to the User
 info component. The object contains CSS-like values which affect the
 styling applied to User info.
 
-### Solution
+
 
 [Advanced React
 Techniques](https://content.codecademy.com/courses/React/react_animations-style.mp4)
@@ -9313,7 +9313,7 @@ If you inject an object literal into JSX, and your entire injection is
 braces. There’s nothing unusual about how they work, but they look funny
 and can be confusing.
 
-### Instructions
+
 
 **1.**
 
@@ -9331,7 +9331,7 @@ attribute’s *value* should evaluate to this object:
 { background: 'lightblue', color: 'darkred' }
 ```
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -9377,7 +9377,7 @@ what you choose to expose via `module.exports`. You could have 100
 different files, all with global variables named `style`, and there
 could be no conflicts.
 
-### Instructions
+
 
 **1.**
 
@@ -9402,7 +9402,7 @@ Change the *value* of your `<h1></h1>`’s `style` attribute. Make
 Since you aren’t injecting an object *literal* anymore, you will no
 longer need to use double curly braces.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -9463,14 +9463,14 @@ const styles = {
 This has zero effect on style property *values*, only on style property
 *names*.
 
-### Instructions
+
 
 **1.**
 
 Give your `styles` object two more properties: a `marginTop` of `100px`,
 and a `fontSize` of `50px`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -9527,14 +9527,14 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Here is a list of styles that don’t
 assume “px”.</a>
 
-### Instructions
+
 
 **1.**
 
 In your `styles` object, change any property values that end in “px”
 from strings into numbers.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -9566,7 +9566,7 @@ component that wants them.
 In the code editor, move back and forth between **facebookStyles.js**
 and **FacebookColorThief.js** to see a styles file in action.
 
-### Instructions
+
 
 **1.**
 
@@ -9669,7 +9669,7 @@ Click Run and expand the browser.
 The client falls to pieces over your minimalist, elegant design! Raises
 for everyone!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -9794,7 +9794,7 @@ to answer that question. It shows you when it might be a good time to
 divide a component into smaller components. It also shows you how to
 perform that division.
 
-### Instructions
+
 
 **1.**
 
@@ -9805,7 +9805,7 @@ does this perfectly well! And yet, it has a problem: it does too much
 stuff. How might we divide this into a container component and a
 presentational component?
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -9877,7 +9877,7 @@ to render HTML-like JSX.
 The functional part of a component (state, calculations, etc.) can be
 separated into a *container component*.
 
-### Instructions
+
 
 **1.**
 
@@ -9920,7 +9920,7 @@ Click inside the empty file, and paste.
 **containers/GuineaPigsContainer.js** and **components/GuineaPigs.js**
 should be identical.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10000,7 +10000,7 @@ export class Presentational extends Component {
 import { Presentational } from 'Presentational.js';
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -10034,7 +10034,7 @@ when you opened the file navigator, **GuineaPigs.js** and
 pass to import will have to navigate up one level, and then down into
 the components folder.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10092,7 +10092,7 @@ component (**components/GuineaPigs.js**) for rendering JSX!
 The container component should now render the presentational component
 instead of rendering JSX.
 
-### Instructions
+
 
 **1.**
 
@@ -10127,7 +10127,7 @@ guinea pig to the presentational component.
 In `GuineaPigsContainer`’s render function, pass the chosen guinea pig
 by giving `<GuineaPigs />` a prop of `src = {src}`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10188,7 +10188,7 @@ presentational component is to remove redundant logic in the
 presentational component. The presentational component should be left
 with the render function that contains JSX statements.
 
-### Instructions
+
 
 **1.**
 
@@ -10213,7 +10213,7 @@ let src = this.props.src;
 
 Lastly, delete the `GUINEAPATHS` array.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10270,7 +10270,7 @@ to start with:
   target="_blank" rel="noopener">Presentational and Container
   Components</a>
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10360,7 +10360,7 @@ you will, this can be a huge benefit.
 
 Click Next to learn how to use `propTypes`!
 
-### Instructions
+
 
 In this video, the Stats component has a `propTypes` object that
 requires its `comments` prop to be a number.
@@ -10369,7 +10369,7 @@ When a string is passed to Stats, an error is raised. When a number is
 passed to Stats, the prop is accepted and the component updates with the
 new value.
 
-### Solution
+
 
 [propTypes](https://content.codecademy.com/courses/React/react_animations-prop-types.mp4)
 
@@ -10407,7 +10407,7 @@ property on your `propTypes` object.
 `MessageDisplayer` only expects one `prop`: `message`. Therefore, its
 `propTypes` object only has one property.
 
-### Instructions
+
 
 **1.**
 
@@ -10420,7 +10420,7 @@ Import the `'prop-types'` library as `PropTypes` on line 2.
 Give the `BestSeller` component class a `propTypes` property. For now,
 set `propTypes` equal to an empty object literal.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10505,7 +10505,7 @@ warning if that `prop` *isn’t* sent.
 Try to find all six `prop`s from the `propTypes` object in `Runner`’s
 render function: `this.props.message`, `this.props.style`, etc.
 
-### Instructions
+
 
 **1.**
 
@@ -10529,7 +10529,7 @@ In the code editor, open the last file, **BookList.js**.
 At the bottom of the file, render `<BookList />` using
 `ReactDOM.render`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10687,7 +10687,7 @@ Example.propTypes = {
 };
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -10709,7 +10709,7 @@ Give `GuineaPigs` one `propType`, matching its expected `prop`. Make the
 If you aren’t sure what prop `GuineaPigs` is expecting, check the render
 function in **GuineaPigsContainer.js**.
 
-### Solution
+
 
 ``` jsx
 // Normal way to display a prop:
@@ -10845,7 +10845,7 @@ A traditional form doesn’t update the server until a user hits “submit.”
 But you want to update the server *any time a user enters or deletes any
 character.*
 
-### Instructions
+
 
 **1.**
 
@@ -10892,7 +10892,7 @@ Give `<input />` an `onChange` attribute. Set `onChange`’s *value* equal
 to `{this.handleUserInput}`. Don’t worry about the fact that there is no
 `handleUserInput` function yet - you’ll make one!
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -10924,7 +10924,7 @@ This function will be an *event handler*. It will listen for `change`
 events. You can see an example of an event handler listening for change
 events in **Example.js**.
 
-### Instructions
+
 
 **1.**
 
@@ -10942,7 +10942,7 @@ Inside of this function’s body, call `this.setState`. Set the state’s
 setting `this.state.userInput` equal to whatever text is currently in
 `<input />`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -11013,7 +11013,7 @@ visits the page?
 The initial text should be blank! Otherwise it would look like someone
 had already typed something.
 
-### Instructions
+
 
 **1.**
 
@@ -11033,7 +11033,7 @@ Feel free to use the example code as a guide.
 Next, at the end of the constructor, bind `.handleUserInput()` to the
 current value of `this`.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -11083,7 +11083,7 @@ you want, but `<input />` won’t care. You need to somehow make the
 Easy enough! You can control an `<input />`’s text by setting its
 `value` attribute.
 
-### Instructions
+
 
 **1.**
 
@@ -11118,7 +11118,7 @@ Replace it with:
 
 Click Run. Try typing into the `<input />` in the browser.
 
-### Solution
+
 
 ``` jsx
 import React from 'react';
@@ -11197,11 +11197,11 @@ components in the <a href="https://reactjs.org/docs/forms.html"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">React Forms documentation</a>.
 
-### Instructions
+
 
 Move to the next exercise when ready.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -11413,7 +11413,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click **“Get Unstuck”** to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -11570,7 +11570,7 @@ If not, the name that will be displayed will default to “Tom”.
 
 Add a `propType` for `name` to `propTypes`.
 
-### [Solution](copycat)
+## [Solution](copycat)
 
 # React Router
 
@@ -11639,7 +11639,7 @@ routing solution designed specifically for React applications.
 > class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 > target="_blank" rel="noopener">upgrading from v5 to v6</a>.
 
-### Instructions
+
 
 Each exercise in this lesson will feature a video that will guide you
 through the process of implementing routing in a React application with
@@ -11664,7 +11664,7 @@ target="_blank" rel="noopener">unzipping a <code
 class="code__2rdF32qjRVp7mMVBHuPwDS">.zip</code> file</a> if you need
 some help!
 
-### Solution
+
 
 [Learn React Router Exercise
 1](https://www.youtube.com/watch?v=tuxt25oaous)
@@ -11708,7 +11708,7 @@ For the sake of simplicity and readability, it is common to alias
 import { BrowserRouter as Router } from ‘react-router-dom’
 ```
 
-### Instructions
+
 
 #### Task 1
 
@@ -11769,7 +11769,7 @@ The syntax for importing a component and renaming it looks like this:
 import { ComponentName as AliasName } from `name-of-package`;
 ```
 
-### Solution
+
 
 [Learn React Router Exercise
 2](https://www.youtube.com/watch?v=vi_MzFyosSA)
@@ -11806,7 +11806,7 @@ In the next exercises, you will see how the children of the `Router` can
 make use of this information but for now, let’s add a `Router` to our
 application.
 
-### Instructions
+
 
 #### Task 1
 
@@ -11828,7 +11828,7 @@ At this point, the \`App\` component should return the following:
 </Router>
 ```
 
-### Solution
+
 
 [Learn React Router Exercise
 3](https://www.youtube.com/watch?v=pzxHs_2b62Y)
@@ -11901,7 +11901,7 @@ configuring our routes statically, it’s also more flexible. As you’ll
 see throughout this lesson, our application’s route structure can evolve
 based on user interactions and changing state.
 
-### Instructions
+
 
 #### Task 1
 
@@ -11959,7 +11959,7 @@ You should see each component render only when the URL matches the
 appropriate path. You should see the `Header` and `Footer` rendered
 regardless of the URL.
 
-### Solution
+
 
 [Learn React Router Exercise
 4](https://www.youtube.com/watch?v=vBq-olSb7hc)
@@ -12029,7 +12029,7 @@ applied when the URL path matches their `to` prop.
 > covered in this lesson but you may find it interesting to read about
 > them if you need to programmatically generate the `to` location.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12096,7 +12096,7 @@ matches the `to` prop of a `NavLink`. If you open up the
 **public/index.css** file, you’ll see that we’ve defined a style for the
 selector `.header a.active`.
 
-### Solution
+
 
 [Learn React Router Exercise
 5](https://www.youtube.com/watch?v=UQxK1Np5-kI)
@@ -12150,7 +12150,7 @@ the URL parameter’s name (eg. `'/articles/:title?'`). In this case, the
 child component of the `Route` will render when the URL matches either
 `/articles/what-is-react` or just `/articles`.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12197,7 +12197,7 @@ target="_blank" rel="noopener">http://localhost:3000/authors/Lily</a>.
 You should see the header “Articles by REPLACE ME” rather than the
 articles by the author Lily. In the exercise, we’ll fix this.
 
-### Solution
+
 
 [Learn React Router Exercise
 6](https://www.youtube.com/watch?v=h7ZTdTFcv-w)
@@ -12250,7 +12250,7 @@ Let’s break down the example above.
 - Finally, this `title` value is used to display the name of the article
   in the `<h1>` element.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12311,7 +12311,7 @@ Hint
 
 Watch the video to see how to complete this step!
 
-### Solution
+
 
 [Learn React Router Exercise
 7](https://www.youtube.com/watch?v=3p1LfoCwcmE)
@@ -12459,7 +12459,7 @@ class="code__2rdF32qjRVp7mMVBHuPwDS">sensitive</code></a>—on the `Route`
 component for fine-tuning when a particular route should match, however,
 these are used far less frequently than the `exact` prop.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12489,7 +12489,7 @@ Make sure to organize your components from most specific to least
 specific. In this case, the `Route` with the path `'/articles/:title'`
 should be above the `Route` with the path `'/articles'`.
 
-### Solution
+
 
 [Learn React Router Exercise
 8](https://www.youtube.com/watch?v=6ryX7rVK3Dk)
@@ -12618,7 +12618,7 @@ Splitting routes up this way also makes an application more efficient
 since `Route`s are not always rendered. Instead, `Route`s are only
 rendered when the UI logic requires them to be.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12657,7 +12657,7 @@ of these components at the same time for this particular URL.
 If `EditProfileForm` were rendered in the `App` component’s `Switch`
 component, then only one would be rendered at a time.
 
-### Solution
+
 
 [Learn React Router Exercise
 9](https://www.youtube.com/watch?v=Sv4Vhp-LfCw)
@@ -12785,7 +12785,7 @@ Using the relative `url` and `path` values to generate the `Link` and
 correct URL regardless of the route that caused the `Categories`
 component to render.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12851,7 +12851,7 @@ or like this (using template literals):
 
 Note: The `url` and `path` values are mixed up in the video!
 
-### Solution
+
 
 [Learn React Router Exercise
 10](https://www.youtube.com/watch?v=k05c1m6ozrc)
@@ -12895,7 +12895,7 @@ In this example, when the `UserProfile` component renders, if the
 returned and then rendered, sending the user to the `/` page. Otherwise,
 the component will render normally.
 
-### Instructions
+
 
 #### Task 1
 
@@ -12928,7 +12928,7 @@ Test that your code works by first making sure that you are signed out.
 Then by revisiting `/profile`. You should be redirected to the
 `/sign-up` page.
 
-### Solution
+
 
 [Learn React Router Exercise
 11](https://www.youtube.com/watch?v=haQ-5XBKOcY)
@@ -13028,7 +13028,7 @@ export const BackButton = () => {
 }
 ```
 
-### Instructions
+
 
 #### Task 1
 
@@ -13101,7 +13101,7 @@ Import the `useHistory` hook from `react-router-dom`, call it to get a
 `history` object, and use the `history` object’s `push` function to
 redirect the user to `'/profile'`.
 
-### Solution
+
 
 [Learn React Router Exercise
 12](https://www.youtube.com/watch?v=ozhqPr9Od6A)
@@ -13206,7 +13206,7 @@ list in ascending order. Finally, since query parameters are optional,
 if we were to visit `/list`, the `SortedList` component would render in
 its natural order.
 
-### Instructions
+
 
 #### Task 1
 
@@ -13277,7 +13277,7 @@ should look like this:
 const title = queryParams.get('title');
 ```
 
-### Solution
+
 
 [Learn React Router Exercise
 13](https://www.youtube.com/watch?v=p7LeZWUh8BA)
@@ -13309,7 +13309,7 @@ target="_blank" rel="noopener">React Router</a>! To recap, you can now:
 - Access the value of query parameters using React Router’s
   `useLocation` hook
 
-### Instructions
+
 
 If you’d like to compare your solution to ours, you can download our
 solution <a
@@ -13317,7 +13317,7 @@ href="https://static-assets.codecademy.com/Courses/react-router/react-router-les
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">here</a>.
 
-### Solution
+
 
 [Learn React Router Exercise 14
 Review](https://www.youtube.com/watch?v=P1YK6iqlS00)
@@ -13431,7 +13431,7 @@ project.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -13850,7 +13850,7 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](adopt-a-pet)
+## [Solution](adopt-a-pet)
 
 # Getting Started with Jest for JavaScript Testing
 
@@ -14175,7 +14175,7 @@ target="_blank" rel="noopener">http://localhost:3000/</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -14413,7 +14413,7 @@ solution might look different from ours, and that’s okay! There are
 multiple ways to solve these projects, and you’ll learn more by seeing
 others’ code.
 
-### [Solution](appointment-planner)
+## [Solution](appointment-planner)
 
 # Review: React, Part II
 

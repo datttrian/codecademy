@@ -602,7 +602,7 @@ awaiting their completion.
 This lesson will teach you how modern JavaScript handles asynchronicity
 using the `Promise` object, introduced with ES6. Let’s get started!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-promises/Art-354_Promise.svg" alt="a person cleaning their kitchen with a cute dog underfoot" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -638,12 +638,12 @@ with soap or washing the dishes by hand.
 All promises eventually settle, enabling us to write logic for what to
 do if the promise fulfills or if it rejects.
 
-### Instructions
+
 
 Observe the diagram on the right. Here, we illustrate the different
 possible states of a dishwashing promise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-promises/Art-346-01.svg" alt="diagram of a running dishwasher and its possible outcomes " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -708,7 +708,7 @@ with the data from a query or reject with an error thrown. In this
 exercise, we’ll construct promises which resolve synchronously to more
 easily understand how they work.
 
-### Instructions
+
 
 **1.**
 
@@ -765,7 +765,7 @@ If you’d like, you can see an alternate output by changing the
 
 When you’re ready to move on, press the “Check Work” button.
 
-### Solution
+
 
 ``` javascript
 const inventory = {
@@ -848,7 +848,7 @@ initially have a status of pending.
 
 Let’s explore `setTimeout()` a bit more.
 
-### Instructions
+
 
 **1.**
 
@@ -880,7 +880,7 @@ expected.
 Be sure to click “Check Work” after running the command to pass this
 checkpoint and move on to the next exercise.
 
-### Solution
+
 
 ``` javascript
 console.log("This is the first line of code in app.js.");
@@ -934,7 +934,7 @@ promise it was called on. One important feature of `.then()` is that it
 always returns a promise. We’ll return to this in more detail in a later
 exercise and explore why it’s so important.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/Art-347_v1_Updated_1-01.svg" alt="diagram of a dishwashers promise." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1006,7 +1006,7 @@ Let’s break down what’s happening in the example code:
 
 Let’s write some success and failure callbacks!
 
-### Instructions
+
 
 **1.**
 
@@ -1053,7 +1053,7 @@ handlers you wrote as callback functions.
 Type `node app.js` in the terminal and hit
 <span class="kbd">enter</span>.
 
-### Solution
+
 
 ``` javascript
 const {checkInventory} = require('./library.js');
@@ -1134,7 +1134,7 @@ Let’s break down what’s happening in the example code:
 
 Let’s practice writing `.catch()` functions.
 
-### Instructions
+
 
 **1.**
 
@@ -1159,7 +1159,7 @@ We set our inventory of sunglasses to `0`, so the order shouldn’t go
 through. Let’s make sure our code has the expected results. Type
 `node app.js` in the terminal and hit <span class="kbd">enter</span>.
 
-### Solution
+
 
 ``` javascript
 const {checkInventory} = require('./library.js');
@@ -1227,7 +1227,7 @@ initial.
 
 Let’s write some promise chains!
 
-### Instructions
+
 
 **1.**
 
@@ -1280,7 +1280,7 @@ The success handler should return a `shipOrder()` promise.
 Type `node app.js` in the terminal and hit
 <span class="kbd">enter</span>.
 
-### Solution
+
 
 ``` javascript
 const {checkInventory, processPayment, shipOrder} = require('./library.js');
@@ -1367,7 +1367,7 @@ Let’s break down what’s happening in the example:
 Since forgetting to return our promise won’t throw an error, this can be
 a really tricky thing to debug!
 
-### Instructions
+
 
 **1.**
 
@@ -1392,7 +1392,7 @@ working as expected.
 
 When you are ready to move on, press the “Check Work” button.
 
-### Solution
+
 
 ``` javascript
 const {checkInventory, processPayment, shipOrder} = require('./library.js');
@@ -1469,7 +1469,7 @@ Let’s break down what’s happening:
 - We invoke `.catch()` with a failure handler which will print the first
   rejection message if any promise rejects.
 
-### Instructions
+
 
 **1.**
 
@@ -1530,7 +1530,7 @@ Type `node app.js` in the terminal and hit
 
 Be sure to click “Check Work” after the terminal is finished loading.
 
-### Solution
+
 
 ``` javascript
 const {checkAvailability} = require('./library.js');
@@ -1625,7 +1625,7 @@ already built in to the language. Despite this, `async...await`
 powerfully improves the readability and scalability of our code. Let’s
 learn how to use it!
 
-### Instructions
+
 
 **1.**
 
@@ -1647,7 +1647,7 @@ you’ll learn in this lesson! If you haven’t already, type `node app.js`
 into the terminal and press <span class="kbd">enter</span>. Then, press
 “Check Work”.
 
-### Solution
+
 
 ``` javascript
 const fs = require('fs');
@@ -1740,7 +1740,7 @@ promise with a resolved value of `5`.
 
 Let’s write an `async` function!
 
-### Instructions
+
 
 **1.**
 
@@ -1768,7 +1768,7 @@ Now test your code! Uncomment the test code we wrote at the bottom of
 **app.js**. In the terminal, type `node app.js` and press
 <span class="kbd">enter</span> to execute the code.
 
-### Solution
+
 
 ``` javascript
 function withConstructor(num){
@@ -1835,7 +1835,7 @@ resolved value to the variable `resolvedValue`. Then we log
 `resolvedValue` to the console. We’re able to handle the logic for a
 promise in a way that reads like synchronous code.
 
-### Instructions
+
 
 **1.**
 
@@ -1874,7 +1874,7 @@ the `announceDinner()` function.
 In the terminal type `node app.js` and press
 <span class="kbd">enter</span> to execute your code.
 
-### Solution
+
 
 ``` javascript
 const brainstormDinner = require('./library.js');
@@ -1948,7 +1948,7 @@ promise. When used properly in `yesAwait()`, the variable `value` was
 assigned the resolved value of the `myPromise()` promise, whereas in
 `noAwait()`, `value` was assigned the promise object itself.
 
-### Instructions
+
 
 **1.**
 
@@ -1985,7 +1985,7 @@ you’re ready to move on to the next step.
 To test that the code is now functioning properly, execute **app.js** in
 the terminal again.
 
-### Solution
+
 
 ``` javascript
 const shopForBeans = require('./library.js');
@@ -2066,7 +2066,7 @@ values from promises further back in our chain which is a much more
 difficult task with native promise syntax. Let’s create some `async`
 functions with multiple `await` statements!
 
-### Instructions
+
 
 **1.**
 
@@ -2130,7 +2130,7 @@ Let’s see your `async` function in action! In the terminal, type
 `node app.js` and press <span class="kbd">enter</span> to execute the
 code. (Press “Check Work” when complete to continue)
 
-### Solution
+
 
 ``` javascript
 const {shopForBeans, soakTheBeans, cookTheBeans} = require('./library.js');
@@ -2188,7 +2188,7 @@ console.log(rejectValue);
 This is sometimes used in the global scope to catch final errors in
 complex code.
 
-### Instructions
+
 
 **1.**
 
@@ -2234,7 +2234,7 @@ and press <span class="kbd">enter</span> to run the code. If you keep
 executing **app.js** you’ll see the results of the promise resolving or
 rejecting.
 
-### Solution
+
 
 ``` javascript
 const cookBeanSouffle = require('./library.js');
@@ -2295,7 +2295,7 @@ Note: if we have multiple truly independent promises that we would like
 to execute fully in parallel, we must use individual `.then()` functions
 and avoid halting our execution with `await`.
 
-### Instructions
+
 
 **1.**
 
@@ -2345,7 +2345,7 @@ declaration, invoke `serveDinner()`.
 In the terminal type `node app.js` and press
 <span class="kbd">enter</span> to run the code.
 
-### Solution
+
 
 ``` javascript
 let {cookBeans, steamBroccoli, cookRice, bakeChicken} = require('./library.js')
@@ -2401,7 +2401,7 @@ working with native promises, `Promise.all()` is a good choice if
 multiple asynchronous tasks are all required, but none must wait for any
 other before executing.
 
-### Instructions
+
 
 **1.**
 
@@ -2450,7 +2450,7 @@ In the terminal type `node app.js` and press
 
 Make sure to click “Check Work” to complete this step.
 
-### Solution
+
 
 ``` javascript
 let {cookBeans, steamBroccoli, cookRice, bakeChicken} = require('./library.js')
@@ -3539,7 +3539,7 @@ In this lesson, we will explain how to use `fetch()` and promises to
 handle requests. Then, we will simplify requests using `async` and
 `await`.
 
-### Instructions
+
 
 Click the button on the web page to see what the code in **main.js**
 does. Notice the usage of `fetch()`, `async`, and `await`.
@@ -3549,7 +3549,7 @@ on the web page!
 
 Go to the next exercise to learn more about requests.
 
-### Solution
+
 
 ``` javascript
 // Element selectors
@@ -3660,13 +3660,13 @@ contains the returned `response.json()` object from the previous
 `.then()` method, as its parameter and can now be handled, however we
 may choose.
 
-### Instructions
+
 
 In the next exercise, we will apply what we have learned to making a GET
 request using `fetch()` and `.then()`. Move on to the next exercise when
 you’re ready!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/intermediate-javascript-requests/diagrams/fetch%20GET%20transparent.svg" alt="Diagram containing boilerplate syntax needed to make a GET request using the `fetch` API. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -3690,7 +3690,7 @@ We may get some errors as we complete each step. This is because
 sometimes we’ve split a single step into one or more steps to make it
 easier to follow. By the end, we should be getting no errors.
 
-### Instructions
+
 
 **1.**
 
@@ -3762,7 +3762,7 @@ Note that we will continue to add to this code in the next exercise to
 manipulate the webpage to see the word suggestions from Datamuse. The
 submit button will not return anything yet.
 
-### Solution
+
 
 ``` javascript
 // Information to reach API
@@ -3815,7 +3815,7 @@ allow us to take the information that was returned with the promise and
 manipulate the webpage! Note that if there is an error returned in the
 first `.then()` method, the second `.then()` method will not execute.
 
-### Instructions
+
 
 **1.**
 
@@ -3852,7 +3852,7 @@ Run your code.
 
 Try the webpage again with another word!
 
-### Solution
+
 
 ``` javascript
 // Information to reach API
@@ -3973,11 +3973,11 @@ method is chained to the `fetch()` function to check and return the
 encountered. A second `.then()` method is added on so that we can use
 the response however we may choose.
 
-### Instructions
+
 
 Move on to the next exercise when you’re ready!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/intermediate-javascript-requests/diagrams/fetch%20POST%20transparent.svg" alt="Diagram depicting the boilerplate needed to make POST requests using the `fetch` API. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4000,7 +4000,7 @@ should **not** share your key with anyone (not even to ask a question in
 the forums)! Also, if you reset the exercise at any point, you will have
 to paste in your API key again at the top.
 
-### Instructions
+
 
 **1.**
 
@@ -4066,7 +4066,7 @@ another property. The key is named `body` and the value will be `data`.
 We’ve now created an object containing all the information we need for
 our POST request!
 
-### Solution
+
 
 ``` javascript
 // Information to reach API
@@ -4121,7 +4121,7 @@ Let’s implement this knowledge into our code!
 Remember that if you reset the exercise at any point, you will have to
 paste in your API key again at the top!
 
-### Instructions
+
 
 **1.**
 
@@ -4177,7 +4177,7 @@ Put in any URL in the text field, and then click the shorten button on
 the webpage. Make sure you include the entire link, including
 `'http://'` or `'https://'`.
 
-### Solution
+
 
 ``` javascript
 // Information to reach API
@@ -4263,11 +4263,11 @@ Here are some key points to keep in mind as we walk through the code:
 Study the `async` `getData()` function to the right to see how the
 request can be written using `async` and `await`.
 
-### Instructions
+
 
 Move on to the next exercise when you’re ready!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/requests/async-get-request.svg" alt="Diagram containing the boilerplate needed to create an `async` function. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4282,7 +4282,7 @@ describe the inputted word using the
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Datamuse API</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -4340,7 +4340,7 @@ Great, now we have an organized list of words from the GET request!
 The declaration of the `renderResponse()` function can be found at
 **public/helperFunctions.js**.
 
-### Solution
+
 
 ``` javascript
 // Information to reach API
@@ -4447,11 +4447,11 @@ The `method` property value is set to `'POST'` to specify the type of
 request we are making. Then we have to include a `body` property with
 the value of `JSON.stringify({id: 200})`.
 
-### Instructions
+
 
 Move on to the next exercise when you’re ready!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-JavaScript/requests/async-post-request-fixed.svg" alt="Diagram containing the boilerplate needed to make an async function for a POST request. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4471,7 +4471,7 @@ We will then pass in the endpoint and the request object into the
 If you reset the exercise at any point, you will have to paste in your
 API key again at the top!
 
-### Instructions
+
 
 **1.**
 
@@ -4502,7 +4502,7 @@ Run the code. Then paste in the URL again and click the shorten button.
 
 Great job using Rebrandly to shorten your URL!
 
-### Solution
+
 
 ``` javascript
 // information to reach API
@@ -4575,7 +4575,7 @@ Congratulations on learning all about asynchronous requests using
 `fetch()`, `async`, and `await`! These concepts are fundamental to
 helping you develop more robust web apps!
 
-### Instructions
+
 
 Play around with the browser and code to make GET and POST requests. To
 make POST requests to the Rebrandly API, make sure you assign `apiKey`
@@ -4588,7 +4588,7 @@ If you want to challenge yourself:
   **public/helperFunctions.js**) with your own code.
 - Use different APIs to make GET/POST requests using `async`/`await`.
 
-### Solution
+
 
 ``` javascript
 // NOTE: wordSmith functions from lines 4 - 41
@@ -4803,7 +4803,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5088,7 +5088,7 @@ following:
   `movies` contains results from a random page instead of the first
   page.
 
-### [Solution](js-film-finder)
+## [Solution](js-film-finder)
 
 [Learn JavaScript Film
 Finder](https://www.youtube.com/watch?v=W6El1fjUaJI)

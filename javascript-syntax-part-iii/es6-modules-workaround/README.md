@@ -26,7 +26,7 @@ developers, however, the core data and functionality are either missing
 or need to be connected together using modules. Your task is to help
 your team members out by using your `import` and `export` expertise!
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -201,4 +201,4 @@ As an extra challenge:
 - Import this function into **main.js** and use it to format the four
   data values rendered to the screen.
 
-### [Solution](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)
+## [Solution](https://datttrian.github.io/codecademy/javascript-syntax-part-iii/es6-modules-workaround/index.html)

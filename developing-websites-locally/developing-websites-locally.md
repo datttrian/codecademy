@@ -871,7 +871,7 @@ receive as a freelance web developer:
 Use the website to the right and the resources above to guide you
 through the project.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -921,7 +921,7 @@ final section.
 
 
 
-### [Solution](dasmoto)
+## [Solution](dasmoto)
 
 # Dasmoto Project Solution
 

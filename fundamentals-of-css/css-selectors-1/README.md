@@ -6,7 +6,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -103,4 +103,4 @@ To change their font, include this line of code inside the curly braces:
 font-family: Helvetica;
 ```
 
-### [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html)
+## [Solution](https://datttrian.github.io/codecademy/fundamentals-of-css/css-selectors-1/index.html)

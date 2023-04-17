@@ -55,7 +55,7 @@ If you get stuck during this project, check out the **project
 walkthrough video** which can be found at the bottom of the page after
 the final step of the project.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -166,7 +166,7 @@ your work!
 [TDD With Mocha Project: Factorial
 Feature](https://www.youtube.com/watch?v=NwSyopaJsUY)
 
-### [Solution](../factorial.sh)
+## [Solution](../factorial.sh)
 
 ```bash
 #!/bin/bash

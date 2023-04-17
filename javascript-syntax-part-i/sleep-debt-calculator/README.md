@@ -18,7 +18,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -139,7 +139,7 @@ For extra practice, try these:
 
 To see the solutions, open the hint.
 
-### [Solution](sleep-debt-calculator.js)
+## [Solution](sleep-debt-calculator.js)
 
 ``` javascript
 function getSleepHours(day) {

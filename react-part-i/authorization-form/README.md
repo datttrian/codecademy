@@ -14,7 +14,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -122,7 +122,7 @@ value equal to the `authorize` function.
 Try entering an incorrect password and hitting *Submit*. Nothing should
 happen. Now try entering `swordfish`. Your screen should change!
 
-### [Solution](https://datttrian-authorization-form.netlify.app/) (Reference: [Preia-Starle](https://github.com/Preia-Starle/Authorization_Form_React))
+## [Solution](https://datttrian-authorization-form.netlify.app/) (**Reference**: [Preia-Starle](https://github.com/Preia-Starle/Authorization_Form_React))
 
 [REACT Project Authorization
 Form](https://www.youtube.com/watch?v=NQJBKX73jQc)

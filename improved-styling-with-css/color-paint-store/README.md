@@ -20,7 +20,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 1\.
 
@@ -101,4 +101,4 @@ cell for each row.
 In **style.css**, there is a comment above each empty cell’s rule that
 describes the pattern.
 
-### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/color-paint-store/index.html)
+## [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/color-paint-store/index.html)

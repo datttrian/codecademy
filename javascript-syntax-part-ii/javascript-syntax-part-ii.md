@@ -63,11 +63,11 @@ let concepts = ['creating arrays', 'array structures', 'array manipulation'];
 By the end of this lesson you’ll have another tool under your belt that
 helps you manage chunks of data!
 
-### Instructions
+
 
 Run the code to see what is logged to the console.
 
-### Solution
+
 
 ``` javascript
 let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
@@ -107,7 +107,7 @@ let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to 
 
 Let’s practice by making an array of our own.
 
-### Instructions
+
 
 **1.**
 
@@ -118,7 +118,7 @@ array with three strings inside of it.
 
 Use `console.log()` to print `hobbies` to the console.
 
-### Solution
+
 
 ``` javascript
 const hobbies = ['kayaking', 'snowboarding', 'napping'];
@@ -165,7 +165,7 @@ console.log(hello[6]);
 The console will display `W` since it is the character that is at index
 `6`.
 
-### Instructions
+
 
 **1.**
 
@@ -193,7 +193,7 @@ element?
 Try to log the item at index `[3]` of `famousSayings` to the console.
 What is logged to the console?
 
-### Solution
+
 
 ``` javascript
 const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
@@ -232,13 +232,13 @@ The line, `seasons[3] = 'Autumn';` tells our program to change the item
 at index 3 of the `seasons` array to be `'Autumn'` instead of what is
 already there.
 
-### Instructions
+
 
 **1.**
 
 Change the second element of the array `groceryList` to `'avocados'`.
 
-### Solution
+
 
 ``` javascript
 let groceryList = ['bread', 'tomatoes', 'milk'];
@@ -263,7 +263,7 @@ The instructions below will illustrate this concept more clearly. Pay
 close attention to the similarities and differences between the
 `condiments` array and the `utensils` array as you complete the steps.
 
-### Instructions
+
 
 **1.**
 
@@ -289,7 +289,7 @@ array to `'Spoon'`.
 
 Log the updated array to the console.
 
-### Solution
+
 
 ``` javascript
 let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
@@ -343,13 +343,13 @@ using the following steps:
 When we want to know how many elements are in an array, we can access
 the `.length` property.
 
-### Instructions
+
 
 **1.**
 
 Find the `length` of the `objectives` array and log it to the console.
 
-### Solution
+
 
 ``` javascript
 const objectives = ['Learn a new language', 'Read 52 books', 'Run a marathon'];
@@ -399,7 +399,7 @@ So, how does `.push()` work?
 If you’re looking for a method that will mutate an array by adding
 elements to it, then `.push()` is the method for you!
 
-### Instructions
+
 
 **1.**
 
@@ -410,7 +410,7 @@ Add two elements to the `chores` array using `.push()`.
 Use `console.log` to print your `chores` array to make sure your items
 were added.
 
-### Solution
+
 
 ``` javascript
 const chores = ['wash dishes', 'do laundry', 'take out trash'];
@@ -459,7 +459,7 @@ console.log(removed);
 When you need to mutate an array by removing the last element, use
 `.pop()`.
 
-### Instructions
+
 
 **1.**
 
@@ -470,7 +470,7 @@ Use the `.pop()` method to remove the last element from `chores`.
 In a line after you called `chores.pop()`, log `chores` to the console
 to make sure it worked.
 
-### Solution
+
 
 ``` javascript
 const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
@@ -507,7 +507,7 @@ steps, you can consult the
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">Codecademy Docs</a> to learn what each method does!
 
-### Instructions
+
 
 **1.**
 
@@ -584,7 +584,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank"><code
 class="code__2rdF32qjRVp7mMVBHuPwDS">.indexOf()</code> in Docs</a>.
 
-### Solution
+
 
 ``` javascript
 const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
@@ -675,7 +675,7 @@ as well. You might also see this concept explained as
 a reference to where the variable memory is stored and changing the
 memory.
 
-### Instructions
+
 
 **1.**
 
@@ -708,7 +708,7 @@ logging it to console.
 Notice that in both cases, the change to the array was maintained
 outside of the function!
 
-### Solution
+
 
 ``` javascript
 const concept = ['arrays', 'can', 'be', 'mutated'];
@@ -769,7 +769,7 @@ chained to `nestedArr`. We know that `nestedArr[1]` is the array
 `[2, 3]`. Then to grab the first element from that array, we use
 `nestedArr[1][0]` and we get the value of `2`.
 
-### Instructions
+
 
 **1.**
 
@@ -789,7 +789,7 @@ Awesome, you made a nested array! Now declare a variable named `target`
 using the `const` keyword and assign to access the element `6` inside
 `numberClusters`.
 
-### Solution
+
 
 ``` javascript
 const numberClusters = [[1, 2], [3, 4], [5, 6]];
@@ -833,7 +833,7 @@ Nice work! In this lesson, we learned these concepts regarding arrays:
 Learning how to work with and manipulate arrays will help you work with
 chunks of data!
 
-### Instructions
+
 
 Looking for more ways to practice? Consider trying these:
 
@@ -863,7 +863,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -907,7 +907,7 @@ Use an array method to remove the strings `get`, `right`, `the`,
 On one line, use `console.log()` and `.join()` to print the secret
 message as a sentence.
 
-### [Solution](secret-message)
+## [Solution](secret-message)
 
 ``` javascript
 let secretMessage = [
@@ -967,11 +967,11 @@ As illustrated in the diagram, loops iterate or repeat an action until a
 specific condition is met. When the condition is met, the loop stops and
 the computer moves on to the next part of the program.
 
-### Instructions
+
 
 Check out the diagram to see how loops work in programming.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-loops/loops_abatraction_v5.svg" alt="diagram representing the decision to eat based on whether or not you are hungry—conceptually similar to a conditional" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -982,7 +982,7 @@ appreciation for loops. The best way to do that is by showing you how
 cumbersome it would be if a repeated task required you to type out the
 same code every single time.
 
-### Instructions
+
 
 **1.**
 
@@ -1002,7 +1002,7 @@ logging each array element to the console by hand would be a tedious
 task! In the next exercise, we will learn how to make things more
 efficient with `for` loops.
 
-### Solution
+
 
 ``` javascript
 // Write your code below
@@ -1078,14 +1078,14 @@ Let’s break down the example:
 This `for` loop makes it possible to write `0`, `1`, `2`, and `3`
 programmatically.
 
-### Instructions
+
 
 **1.**
 
 Now, make your own! Create a program that loops from 5 to 10 and logs
 each number to the console.
 
-### Solution
+
 
 ``` javascript
 // Write your code below
@@ -1126,7 +1126,7 @@ essentially stops our programming from running anything else! To exit
 out of an infinite loop in an exercise, refresh the page - then fix the
 code for your loop.
 
-### Instructions
+
 
 **1.**
 
@@ -1134,7 +1134,7 @@ Make a `for` loop that loops backwards printing `3` to `0` to the
 console. Use the `>=` comparison operator in your stopping condition and
 the `--` operator in your iteration statement.
 
-### Solution
+
 
 ``` javascript
 // The loop below loops from 0 to 3. Edit it to loop backwards from 3 to 0
@@ -1190,7 +1190,7 @@ that array minus 1. If we tried to access an element at the index of
 
 With `for` loops, it’s easier for us to work with elements in arrays.
 
-### Instructions
+
 
 **1.**
 
@@ -1202,7 +1202,7 @@ element in the `vacationSpots` array after the string
 `'I would love to visit '`. For example, the first round of the loop
 should print `'I would love to visit Bali'` to the console.
 
-### Solution
+
 
 ``` javascript
 const vacationSpots = ['Bali', 'Paris', 'Tulum'];
@@ -1249,7 +1249,7 @@ Now it’s your turn to write a nested loop!
 **Note:** To exit out of an infinite loop in an exercise, **refresh the
 page** - then fix the code for your loop(s).
 
-### Instructions
+
 
 **1.**
 
@@ -1280,7 +1280,7 @@ If the current element from the outer loop is the same as the current
 element from the inner loop, push that element into the
 `mutualFollowers` array.
 
-### Solution
+
 
 ``` javascript
 // Write your code below
@@ -1347,7 +1347,7 @@ full. Rather you’ll eat `while` you’re hungry. In situations when we
 want a loop to execute an undetermined number of times, `while` loops
 are the best choice.
 
-### Instructions
+
 
 **1.**
 
@@ -1379,7 +1379,7 @@ block. Inside the block, after you assign `currentCard` a new value, log
 For fun you can run your code a few times and see how the output
 changes!
 
-### Solution
+
 
 ``` javascript
 const cards = ['diamond', 'spade', 'heart', 'club'];
@@ -1452,7 +1452,7 @@ while (true === false){
 **Note:** To exit out of an infinite loop in an exercise, **refresh the
 page** - then fix the code for your loop(s).
 
-### Instructions
+
 
 **1.**
 
@@ -1476,7 +1476,7 @@ In order to help us visualize the output on each iteration of the loop,
 add a `console.log` within the `do...while` block and log the value of
 `cupsAdded`.
 
-### Solution
+
 
 ``` javascript
 // Write your code below
@@ -1534,7 +1534,7 @@ This is the output for the above code:
 large data structures! With breaks, we can add test conditions besides
 the stopping condition, and exit the loop when they’re met.
 
-### Instructions
+
 
 **1.**
 
@@ -1554,7 +1554,7 @@ Add a `break` inside your loop’s block that breaks out of the loop if
 the element at the current index in the `rapperArray` is
 `'Notorious B.I.G.'`. Log the element before breaking out of the loop.
 
-### Solution
+
 
 ``` javascript
 const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
@@ -1593,7 +1593,7 @@ loops. You now know:
 - The `break` keyword allows programs to leave a loop during the
   execution of its block
 
-### Solution
+
 
 ``` javascript
 let groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
@@ -1620,7 +1620,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -1727,7 +1727,7 @@ whale!
 Note: To confirm, if you change the value of `input` to ‘turpentine and
 turtles’, the whale version would read: `'UUEEIEEAUUEE'`.
 
-### [Solution](whale-talk)
+## [Solution](whale-talk)
 
 ``` javascript
 const input = "turpentine and turtles";
@@ -2040,7 +2040,7 @@ powerful in practice. You’ve been using the power of objects all along,
 but now it’s time to understand the mechanics of objects and start
 making your own!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-javascript-objects/javascript_illo.svg" alt="Apple, baby, table, and worm visualized as JavaScript Objects" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2087,7 +2087,7 @@ The `spaceship` object has two properties `Fuel Type` and `color`.
 
 Let’s make some objects!
 
-### Instructions
+
 
 **1.**
 
@@ -2096,7 +2096,7 @@ very fast at hyperspace travel due to having an inferior fuel source.
 Make a new spaceship object named `fasterShip` with the same `color` as
 `spaceship` but with a `Fuel Type` equal to `'Turbo Fuel'`.
 
-### Solution
+
 
 ``` javascript
 // Write your fasterShip object literal below
@@ -2144,7 +2144,7 @@ spaceship.favoriteIcecream; // Returns undefined
 
 Let’s get some more practice using dot notation on an object!
 
-### Instructions
+
 
 **1.**
 
@@ -2157,7 +2157,7 @@ assign the `spaceship`’s `numCrew` property to it.
 Again using the dot operator, create a variable `planetArray` and assign
 the `spaceship`’s `flightPath` property to it.
 
-### Solution
+
 
 ``` javascript
 let spaceship = {
@@ -2227,7 +2227,7 @@ parameter.
 
 Let’s get some practice using bracket notation to access properties!
 
-### Instructions
+
 
 **1.**
 
@@ -2241,7 +2241,7 @@ it.
 Using bracket notation and the `propName` variable provided,
 `console.log()` the value of the `'Active Mission'` property.
 
-### Solution
+
 
 ``` javascript
 let spaceship = {
@@ -2307,7 +2307,7 @@ const spaceship = {
 delete spaceship.mission;  // Removes the mission property
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2324,7 +2324,7 @@ value between 1 and 10 to the `spaceship` object.
 Use the `delete` operator to remove the `'Secret Mission'` property from
 the `spaceship` object.
 
-### Solution
+
 
 ``` javascript
 let spaceship = {
@@ -2386,7 +2386,7 @@ operator followed by the method name and parentheses:
 alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -2403,7 +2403,7 @@ should `console.log()` the string `'Spim... Borp... Glix... Blastoff!'`.
 
 Invoke your two methods: first `.retreat()` then `.takeOff()`.
 
-### Solution
+
 
 ``` javascript
 let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
@@ -2489,7 +2489,7 @@ In the preceding code:
 - The `back-up` object has a `battery` property, accessed with
   `.battery` which returned the value stored there: `'Lithium'`
 
-### Instructions
+
 
 **1.**
 
@@ -2514,7 +2514,7 @@ you just made). Make sure to use bracket and dot notation to get the
 passenger object through nested access (don’t just copy the object into
 the variable!)
 
-### Solution
+
 
 ``` javascript
 let spaceship = {
@@ -2621,7 +2621,7 @@ Let’s look at what happened in the code example:
   `{'identified' : false, 'transport type' : 'flying'}`, while the
   `spaceship` variable was completely unchanged from its earlier value.
 
-### Instructions
+
 
 **1.**
 
@@ -2639,7 +2639,7 @@ Call your two functions with the `spaceship` object in the code editor,
 then `console.log()` the `spaceship` object to confirm those properties
 were changed/added.
 
-### Solution
+
 
 ``` javascript
 let spaceship = {
@@ -2717,7 +2717,7 @@ object. In each iteration, the variable `crewMember` is set to one of
 `spaceship.crew`‘s keys, enabling us to log a list of crew members’ role
 and `name`.
 
-### Instructions
+
 
 **1.**
 
@@ -2733,7 +2733,7 @@ code editor and `console.log()` a list of crew names and degrees in the
 following format: `'[crew member's name]: [crew member's degree]'`,
 i.e.,`'Lily: Computer Engineering'`.
 
-### Solution
+
 
 ``` javascript
 let spaceship = {
@@ -2825,13 +2825,13 @@ In this lesson we will cover these topics:
 - creating factory functions.
 - using destructuring techniques.
 
-### Instructions
+
 
 Look over the code in **main.js** to see examples of the object related
 concept covered in the lesson. Then click next to get started on
 learning these concepts!
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -2949,7 +2949,7 @@ notation.
 
 Let’s get comfortable using the `this` keyword in a method.
 
-### Instructions
+
 
 **1.**
 
@@ -2977,7 +2977,7 @@ Now to check `.provideInfo()` has access to the internal properties of
 `robot`. Log the result of calling `.provideInfo()` method on `robot` to
 the console.
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3041,7 +3041,7 @@ target="_blank" rel="noopener">arrow functions</a>.
 The key takeaway from the example above is to *avoid* using arrow
 functions when using `this` in a method!
 
-### Instructions
+
 
 **1.**
 
@@ -3054,7 +3054,7 @@ write the function using either longhand or shorthand format.
 After refactoring the method, notice that `.checkEnergy()` has access to
 the other internal properties of the `robot` object.
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3106,7 +3106,7 @@ properties and setters can safely reassign property values. For now,
 let’s see what happens if we can change properties that don’t have
 setters or getters.
 
-### Instructions
+
 
 **1.**
 
@@ -3127,7 +3127,7 @@ side-effect of type-coercion. No need to worry about what this means for
 now, but it’s important to understand that you can cause unwanted
 side-effects when mutating objects and their properties.
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3198,7 +3198,7 @@ the property name like we did in the example above.
 
 Great, let’s go getter!
 
-### Instructions
+
 
 **1.**
 
@@ -3231,7 +3231,7 @@ the console.
 Notice that the method will return a formatted response rather than just
 accessing a property!
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3303,7 +3303,7 @@ person._age = 'forty-five'
 console.log(person._age); // Prints forty-five
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3337,7 +3337,7 @@ Use the `numOfSensors` setter method on `robot` to assign
 To check that the setter method worked, `console.log()`
 `robot.numOfSensors`.
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3413,7 +3413,7 @@ to create an object literal every time we need a new monster. Instead,
 we can invoke the `monsterFactory` function with the necessary arguments
 to ~~take over the world~~ make a monster for us!
 
-### Instructions
+
 
 **1.**
 
@@ -3443,7 +3443,7 @@ You should see `'Beep Boop'` printed to the console which means the
 factory function produced a robot object! Play around with `tinCan` to
 check the other properties!
 
-### Solution
+
 
 ``` javascript
 const robotFactory = (model, mobile) => {
@@ -3498,14 +3498,14 @@ const monsterFactory = (name, age) => {
 
 Notice that we don’t have to repeat ourselves for property assignments!
 
-### Instructions
+
 
 **1.**
 
 Use the property value shorthand and refactor the factory function in
 **main.js**
 
-### Solution
+
 
 ``` javascript
 const robotFactory = (model, mobile) => {
@@ -3577,7 +3577,7 @@ const { day } = vampire.preferences;
 console.log(day); // Prints 'stay inside'
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3596,7 +3596,7 @@ the methods available to `robot.functionality` simply through
 Take advantage of this shortcut and call the `.beep()` method on
 `functionality`.
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3644,7 +3644,7 @@ Let’s get acquainted with some of these methods and their documentation.
 Note: You will see errors as you work through this exercise, but by the
 end the errors will be fixed!
 
-### Instructions
+
 
 **1.**
 
@@ -3688,7 +3688,7 @@ object that has all the properties of `robot` and the properties in the
 following object: `{laserBlaster: true, voiceRecognition: true}`. Make
 sure that you are **not** changing the `robot` object!
 
-### Solution
+
 
 ``` javascript
 const robot = {
@@ -3765,7 +3765,7 @@ Let’s review the concepts covered in this lesson:
 You’re ready to start leveraging more elegant code for creating and
 accessing objects in your code!
 
-### Instructions
+
 
 If you want to challenge yourself:
 
@@ -3790,7 +3790,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click **“Get Unstuck”** to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -3892,7 +3892,7 @@ logged to the console.
 If you want to extend your learning on this project, try adding an array
 of meals and prices to randomly set and get Today’s Special!
 
-### [Solution](meal-maker)
+## [Solution](meal-maker)
 
 ``` javascript
 let menu = {
@@ -3943,7 +3943,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4030,7 +4030,7 @@ scored 100 points and the opponent scored 98 points.
 Log the `team`’s `_games` property to check that our new game record was
 properly added.
 
-### [Solution](team-stats)
+## [Solution](team-stats)
 
 ``` javascript
 const team = {
@@ -4141,12 +4141,12 @@ return functions as output. This enables us to build abstractions on
 other abstractions, just like “We hosted a birthday party” is an
 abstraction that may build on the abstraction “We made a cake.”
 
-### Instructions
+
 
 Using abstraction allows us to write more modular code, which is easier
 to read and debug. Click *Next* to continue learning this new concept!
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/higher-order-functions/birthday.svg" alt="a birthday cake at a birthday party" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4204,7 +4204,7 @@ target="_blank" rel="noopener">in the documentation</a>.
 Functions are special because we can invoke them, but we can still treat
 them like any other type of data. Let’s get some practice doing that!
 
-### Instructions
+
 
 **1.**
 
@@ -4229,7 +4229,7 @@ could figure it out?
 Use `isTwoPlusTwo` to `console.log()` the `name` property of the
 function we assigned to `isTwoPlusTwo`.
 
-### Solution
+
 
 ``` javascript
 const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
@@ -4310,7 +4310,7 @@ counts to 10. Anonymous functions can be arguments too!
 
 Let’s get some practice writing higher-order functions.
 
-### Instructions
+
 
 **1.**
 
@@ -4339,7 +4339,7 @@ Finally, using `console.log()`, log the invocation of
 `checkConsistentOutput()` with two arguments: the `addTwo()` function
 and any number.
 
-### Solution
+
 
 ``` javascript
 const addTwo = num => {
@@ -4380,7 +4380,7 @@ Let’s review what we learned in this lesson:
 - A higher-order function is a function that either accepts functions as
   parameters, returns a function, or both.
 
-### Instructions
+
 
 Feel free to play around with the code in the workspace.
 
@@ -4411,7 +4411,7 @@ In this lesson, you will learn the syntax for these methods, their
 return values, how to use the documentation to understand them, and how
 to choose the right iterator method for a given task.
 
-### Instructions
+
 
 Inspect the code in **main.js**. Notice the different methods being
 called on the arrays:
@@ -4422,7 +4422,7 @@ called on the arrays:
 
 Run the code to see the output!
 
-### Solution
+
 
 ``` javascript
 const artists = ['Picasso', 'Kahlo', 'Matisse', 'Utamaro'];
@@ -4510,7 +4510,7 @@ because developers have different stylistic preferences. Nonetheless,
 due to the strong adoption of ES6, we will be using arrow function
 syntax in the later exercises.
 
-### Instructions
+
 
 **1.**
 
@@ -4519,7 +4519,7 @@ of each fruit to the console. For example, `I want to eat a mango`.
 
 You may use any form of callback you prefer.
 
-### Solution
+
 
 ``` javascript
 const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
@@ -4575,7 +4575,7 @@ console.log(bigNumbers); // Output: [10, 20, 30, 40, 50]
 Notice that the elements in `numbers` were not altered and `bigNumbers`
 is a new array.
 
-### Instructions
+
 
 **1.**
 
@@ -4592,7 +4592,7 @@ Use `.map()` to divide all the numbers in `bigNumbers` by `100`. Save
 the returned values to a variable declared with `const` called
 `smallNumbers`.
 
-### Solution
+
 
 ``` javascript
 const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
@@ -4655,7 +4655,7 @@ console.log(shortWords); // Output: ['chair', 'music', 'brick', 'pen', 'door']
 Observe how `words` was not mutated, i.e. changed, and `shortWords` is a
 new array.
 
-### Instructions
+
 
 **1.**
 
@@ -4670,7 +4670,7 @@ Now let’s work with an array of strings. Invoke `.filter()` on the
 characters. Save the returned array to a `const` variable named
 `longFavoriteWords`.
 
-### Solution
+
 
 ``` javascript
 const randomNumbers = [375, 200, 3.14, 7, 13, 852];
@@ -4745,7 +4745,7 @@ const greaterThan1000 = jumbledNums.findIndex(num => {
 console.log(greaterThan1000); // Output: -1
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -4762,7 +4762,7 @@ Call `.findIndex()` on the `animals` array and return the index of the
 first element that starts with `'s'`. Assign the returned value to a
 `const` variable named `startsWithS`.
 
-### Solution
+
 
 ``` javascript
 const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
@@ -4845,7 +4845,7 @@ Here’s an updated chart that accounts for the second argument of `100`:
 | Third        | 103           | 4              | 107          |
 | Fourth       | 107           | 10             | 117          |
 
-### Instructions
+
 
 **1.**
 
@@ -4891,7 +4891,7 @@ value for the `accumulator`.
 
 Add a second argument of `10` to `.reduce()`.
 
-### Solution
+
 
 ``` javascript
 const newNumbers = [1, 3, 5, 7];
@@ -4937,7 +4937,7 @@ In the instructions below, there are some errors in the code. Use the
 documentation for a given method to determine the error or fill in a
 blank to make the code run correctly.
 
-### Instructions
+
 
 **1.**
 
@@ -4987,7 +4987,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">MDN’s documentation on <code
 class="code__2rdF32qjRVp7mMVBHuPwDS">.every()</code></a> .
 
-### Solution
+
 
 ``` javascript
 const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
@@ -5021,7 +5021,7 @@ that!
 You’ll see errors pop up in the terminal as you work through this
 exercise, but by the end the errors will be gone!
 
-### Instructions
+
 
 **1.**
 
@@ -5050,7 +5050,7 @@ will return a new array of numbers returned from the function.
 In the fifth method call, replace the word `method` with a method that
 will return a boolean value.
 
-### Solution
+
 
 ``` javascript
 const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', 'Eskisehir', 'Medellin', 'Yokohama'];
@@ -5116,7 +5116,7 @@ understand additional methods. Let’s review!
   target="_blank" rel="noopener">Mozilla Developer Network</a> to learn
   more about iterator methods (and all other parts of JavaScript!).
 
-### Instructions
+
 
 If you want to challenge yourself:
 
@@ -5140,7 +5140,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -5331,7 +5331,7 @@ developers.
 Feel free to continue using iterator methods to make further edits, or
 click *Next* to continue your learning journey.
 
-### [Solution](mini-linter)
+## [Solution](mini-linter)
 
 ``` javascript
 let story =
@@ -5947,7 +5947,7 @@ now.
 Alright, are you ready to begin your transition from frustrated coder to
 bug squasher extraordinaire? Let’s get started!
 
-### Instructions
+
 
 Click ‘Next’ to develop your JavaScript debugging skills.
 
@@ -5975,13 +5975,13 @@ sense of dread and self-doubt. However, you’ll soon realize, errors are
 the best kind of bug you can hope for, since they tell you exactly what
 went wrong and where.
 
-### Instructions
+
 
 Take a look at the diagram to the right. When you’re ready, move on to
 the next exercise to read a real error stack trace using this
 information.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/JavaScript%2BError%2BDiagram_Updated_1.svg" alt="Diagram of a JavaScript error." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -6020,7 +6020,7 @@ information are useful and which ones aren’t. For now, you will succeed
 by focusing on just the first and fifth lines of your error stack
 traces.
 
-### Instructions
+
 
 **1.**
 
@@ -6046,7 +6046,7 @@ in the example stack trace.
 On line 20 of the text file, fill in the description of the error being
 thrown in the example stack trace.
 
-### Solution
+
 
     Based on the following error stack trace, fill in the answers to the questions below:
 
@@ -6096,7 +6096,7 @@ target="_blank" rel="noopener">MDN JavaScript Error documentation</a>.
 Whenever you are confronted with an error you can’t comprehend,
 consulting this documentation is a great place to start.
 
-### Instructions
+
 
 **1.**
 
@@ -6110,7 +6110,7 @@ Fill in the answer to the question on line 6.
 
 Fill in the answer to the question on line 9.
 
-### Solution
+
 
     myVariable++;
     // 1 - What type of error will be thrown on the line above: ReferenceError
@@ -6139,7 +6139,7 @@ While these steps may seem simple, it can be easy to get overwhelmed by
 errors in practice. Using these steps, you can tackle your errors one at
 a time and soon will have your code running error-free.
 
-### Instructions
+
 
 **1.**
 
@@ -6156,7 +6156,7 @@ new line based on your screen size. As a result, what you think is the
 end of a line might only be partway through it. Read through all of the
 error stack trace to ensure you find the information you’re looking for.
 
-### Solution
+
 
 ``` javascript
 function isSumBigger(number1, number2, total) {
@@ -6197,7 +6197,7 @@ have gone wrong.
 
 Let’s try using `console.log()` to do some debugging.
 
-### Instructions
+
 
 **1.**
 
@@ -6252,7 +6252,7 @@ condition to fix the bug, then re-run our code.
 Our function now appears to be working as expected, so there is no need
 to continue stepping through the rest of the function.
 
-### Solution
+
 
 ``` javascript
 function capitalizeASingleWord(word) {
@@ -6305,7 +6305,7 @@ routine of it, it will be far faster than trying to stare at your code
 until you find your bugs. Let’s try this debugging process again in
 practice.
 
-### Instructions
+
 
 **1.**
 
@@ -6324,7 +6324,7 @@ the code, locate the three bugs we have included for you, and fix them.
 This is a big task, so feel free to consult the hint for suggestions on
 where to place your `console.log()` statements and how to fix the code.
 
-### Solution
+
 
 ``` javascript
 // Returns the string whose first letter is later in the alphabet. If both first letters are equal, returns null.
@@ -6379,7 +6379,7 @@ and then scroll down to the “Methods” section of the documentation.
 There are many ways to get to the documentation you are looking for.
 Find the one that works best for your workflow.
 
-### Instructions
+
 
 **1.**
 
@@ -6406,7 +6406,7 @@ documentation</a>. Can you see why our string isn’t getting repeated?
 
 Using this information, fix the `.repeat()` call in our code.
 
-### Solution
+
 
 ``` javascript
 // Link to String.repeat() documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
@@ -6452,7 +6452,7 @@ If you are ever programming and a problem is becoming so insurmountable
 that you want to quit, Stack Overflow is a great place to go to get
 unstuck.
 
-### Instructions
+
 
 **1.**
 
@@ -6470,7 +6470,7 @@ the functionality of this function.
 If you’re stuck on how to translate the answer from this forum into
 working code, check out the hint.
 
-### Solution
+
 
 ``` javascript
 // Returns whether or not the provided string contains a substring of "cake" in it.
@@ -6514,7 +6514,7 @@ Congratulations again on learning all of these new techniques. Let’s
 give them one more round of practice so you can see how much progress
 you’ve made!
 
-### Instructions
+
 
 **1.**
 
@@ -6540,7 +6540,7 @@ is a good thing! We believe you have all the skills now to debug this
 code. Don’t give up and show us what you’ve learned! We know you can do
 it.
 
-### Solution
+
 
 ``` javascript
 function isStringPerfectLength(string, minLength, maxLength) {
@@ -6596,17 +6596,17 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">MDN documentation</a>, check out the
 hints and solution code if you get stuck, and, most of all, have fun!
 
-### Instructions
+
 
 Continue on to the first problem!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/assets/presskit/logo_black.svg" alt="Codecademy logo in black and white. " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
 ## reverseArray()
 
-### Instructions
+
 
 **1.**
 
@@ -6627,7 +6627,7 @@ reverseArray(sentence);
 // Should return ['This', 'will', 'all', 'make', 'sense.'];
 ```
 
-### Solution
+
 
 ``` javascript
 const reverseArray = arr => {
@@ -6668,7 +6668,7 @@ console.log(reverseArray(sentence));
 
 ## greetAliens()
 
-### Instructions
+
 
 **1.**
 
@@ -6698,7 +6698,7 @@ class="code__2rdF32qjRVp7mMVBHuPwDS">.forEach()</code></a>, but you’re
 not allowed to use it here. Don’t worry you’ll have plenty of
 opportunities to use built-in methods later on!
 
-### Solution
+
 
 ``` javascript
 const greetAliens = arr => {
@@ -6737,7 +6737,7 @@ greetAliens(aliens)
 
 ## convertToBaby()
 
-### Instructions
+
 
 **1.**
 
@@ -6760,7 +6760,7 @@ class="code__2rdF32qjRVp7mMVBHuPwDS">map</code></a>, but you’re not
 allowed to use it here. Don’t worry you’ll have plenty of opportunities
 to use built-in methods later on!
 
-### Solution
+
 
 ``` javascript
 const convertToBaby = arr => {
@@ -6798,7 +6798,7 @@ console.log(convertToBaby(animals))
 
 ## Fix The Broken Code!
 
-### Instructions
+
 
 **1.**
 
@@ -6811,7 +6811,7 @@ which is greater than or equal to the current element before using
 
 It’s not doing what we want. Can you fix our code, please?
 
-### Solution
+
 
 ``` javascript
 const numbers = [5, 3, 9, 30];
@@ -6840,7 +6840,7 @@ console.log(smallestPowerOfTwo(numbers))
 
 ## declineEverything() and acceptEverything()
 
-### Instructions
+
 
 **1.**
 
@@ -6866,7 +6866,7 @@ You can use any technique you want to accomplish this task. You can test
 your function when you’re ready by passing in the `veggies` array or by
 making your own array!
 
-### Solution
+
 
 ``` javascript
 const veggies = ['broccoli', 'spinach', 'cauliflower', 'broccoflower'];
@@ -6916,7 +6916,7 @@ const acceptEverything = arr => {
 
 ## squareNums()
 
-### Instructions
+
 
 **1.**
 
@@ -6927,7 +6927,7 @@ of that array.
 You can test your function when you’re ready by passing in the `numbers`
 array or by making your own array!
 
-### Solution
+
 
 ``` javascript
 const numbers = [2, 7, 9, 171, 52, 33, 14];
@@ -6949,7 +6949,7 @@ function squareNums(arr) {
 
 ## shoutGreetings()
 
-### Instructions
+
 
 **1.**
 
@@ -6963,7 +6963,7 @@ You can use any technique you want to accomplish this task.
 You can test your function when you’re ready by passing in the
 `greetings` array or by making your own array!
 
-### Solution
+
 
 ``` javascript
 const shoutGreetings = arr => arr.map(word => word.toUpperCase() + '!');
@@ -6987,7 +6987,7 @@ console.log(shoutGreetings(greetings))
 
 ## sortYears()
 
-### Instructions
+
 
 **1.**
 
@@ -7002,7 +7002,7 @@ that array with the years sorted in descending order.
 You can test your function when you’re ready by passing in the `years`
 array or by making your own array of years!
 
-### Solution
+
 
 ``` javascript
 const sortYears = arr => arr.sort((x, y) => y - x);
@@ -7028,7 +7028,7 @@ console.log(sortYears(years))
 
 ## justCoolStuff()
 
-### Instructions
+
 
 **1.**
 
@@ -7050,7 +7050,7 @@ justCoolStuff(arr1, arr2); // Should return ['this']
 You can test your function when you’re ready by passing in the `myStuff`
 and `coolStuff` arrays or by making arrays of your own!
 
-### Solution
+
 
 ``` javascript
 const justCoolStuff = (firstArray, secondArray) => firstArray.filter(item => secondArray.includes(item))
@@ -7081,7 +7081,7 @@ console.log(justCoolStuff(myStuff, coolStuff))
 
 ## isTheDinnerVegan()
 
-### Instructions
+
 
 **1.**
 
@@ -7104,7 +7104,7 @@ isTheDinnerVegan(meal); // Should return true
 You can test your function when you’re ready by passing in the `dinner`
 array or by making your own!
 
-### Solution
+
 
 ``` javascript
 const isTheDinnerVegan = arr => arr.every(food => food.source === 'plant');
@@ -7137,7 +7137,7 @@ console.log(isTheDinnerVegan(dinner))
 
 ## sortSpeciesByTeeth()
 
-### Instructions
+
 
 **1.**
 
@@ -7158,7 +7158,7 @@ for your argument to `.sort()`.
 You can test your function when you’re ready by passing in the
 `speciesArray` array or by making your own!
 
-### Solution
+
 
 ``` javascript
 const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
@@ -7185,7 +7185,7 @@ console.log(sortSpeciesByTeeth(speciesArray))
 
 ## findMyKeys()
 
-### Instructions
+
 
 **1.**
 
@@ -7209,7 +7209,7 @@ method that will make pretty quick work of it.
 You can test your function when you’re ready by passing in the
 `randomStuff` array or by making your own array!
 
-### Solution
+
 
 ``` javascript
 const findMyKeys = arr => arr.findIndex(item => item === 'keys')
@@ -7237,7 +7237,7 @@ console.log(findMyKeys(randomStuff))
 
 ## dogFactory()
 
-### Instructions
+
 
 **1.**
 
@@ -7266,7 +7266,7 @@ Add two methods to your object: `.bark()` which returns ‘ruff! ruff!’
 and `.eatTooManyTreats()` which should increment the `weight` property
 by 1.
 
-### Solution
+
 
 ``` javascript
 // Final solution:
@@ -7386,7 +7386,7 @@ target="_blank">article on installing Node</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -7513,7 +7513,7 @@ following:
 - Create a function that will convert invalid numbers into valid
   numbers.
 
-### [Solution](credit-card-checker)
+## [Solution](credit-card-checker)
 
 ``` javascript
 // All valid credit card numbers
@@ -7756,7 +7756,7 @@ target="_blank">article on installing Node</a>.
 
 Download
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -7892,7 +7892,7 @@ following:
 - Use the `.compareDNA()` to find the two most related instances of
   `pAequor`.
 
-### [Solution](mysterious-organism)
+## [Solution](mysterious-organism)
 
 ``` javascript
 // Returns a random DNA base

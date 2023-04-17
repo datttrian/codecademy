@@ -11,4 +11,4 @@ There was some mistakes and confusions in the project statement, so I decided to
 
 ## Feedback is welcome! =)
 
-(Reference: [kimlesieur](https://github.com/kimlesieur/dognation))
+(**Reference**: [kimlesieur](https://github.com/kimlesieur/dognation))

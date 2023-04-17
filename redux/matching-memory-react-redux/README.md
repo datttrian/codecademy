@@ -57,7 +57,7 @@ With all of this ahead of you, explore the starting code of the
 application and then move on to the first task to begin implementing the
 matching game.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -388,4 +388,4 @@ a couple of challenges to try on your own.
     matching. The challenge here is to apply the style to the text of
     cards that are flipped over and not matched.
 
-### [Solution](https://datttrian-matching-memory.netlify.app/) (Reference: [prince-t-asamoah](https://github.com/prince-t-asamoah/matching-memory))
+## [Solution](https://datttrian-matching-memory.netlify.app/) (**Reference**: [prince-t-asamoah](https://github.com/prince-t-asamoah/matching-memory))

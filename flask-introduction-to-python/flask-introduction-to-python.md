@@ -44,7 +44,7 @@ using a programming language. These files are called *programs*. Running
 a program means telling a computer to read the text file, translate it
 to the set of operations that it understands, and perform those actions.
 
-### Instructions
+
 
 Change `Codecademy` to your name in the script to the right. Run the
 code to see what it does!
@@ -52,7 +52,7 @@ code to see what it does!
 As soon as you’re ready, move on to the next exercise to begin learning
 to write your own Python programs!
 
-### Solution
+
 
 ``` python
 my_name = "Codecademy"
@@ -94,14 +94,14 @@ Comments can:
   useful_value = new_clean_code()
   ```
 
-### Instructions
+
 
 **1.**
 
 Documentation is an important step in programming. Write a comment
 describing the first program you want to write!
 
-### Solution
+
 
 ``` python
 # A web application that teaches the world to upgrade their careers with new skills
@@ -131,13 +131,13 @@ example program would be:
 
     There is something at work in my soul, which I do not understand.
 
-### Instructions
+
 
 **1.**
 
 Print the distinguished greeting “Hello world!”
 
-### Solution
+
 
 ``` python
 print("Hello world!")
@@ -155,7 +155,7 @@ target="_blank">strings</a>. In our last exercise, we created the string
 (`"Hello world"`) or single quotes (`'Hello world'`). It doesn’t matter
 which kind you use, just be consistent.
 
-### Instructions
+
 
 **1.**
 
@@ -170,7 +170,7 @@ double-quotes `"`.
 Try running your code again after switching the type of quote-marks. Is
 anything different about the output?
 
-### Solution
+
 
 ``` python
 print("Codecademy")
@@ -225,14 +225,14 @@ message, and print the greeting. After we greet the user, we want to
 wish them goodbye. We then update `message_string` to a departure
 message and print that out.
 
-### Instructions
+
 
 **1.**
 
 Update the variable `meal` to reflect each meal of the day before we
 print it.
 
-### Solution
+
 
 ``` python
 # We've defined the variable "meal" here to the name of the food we ate for breakfast!
@@ -296,7 +296,7 @@ Two common errors that we encounter while writing Python are
   not recognize. Code that contains something that looks like a variable
   but was never defined will throw a `NameError`.
 
-### Instructions
+
 
 **1.**
 
@@ -311,7 +311,7 @@ Add quotes to either side of the string to squash this bug.
 
 Update the malformed strings in the workspace to all be strings.
 
-### Solution
+
 
 ``` python
 print("This message has mismatched quote marks!")
@@ -368,7 +368,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">Python’s documentation on floating-point
 limitations</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -385,7 +385,7 @@ Create the following variables and assign integer numbers to them:
 Now, create the variable `rating_out_of_10` and assign it a float number
 between one and ten.
 
-### Solution
+
 
 ``` python
 # Define the release and runtime integer variables below:
@@ -432,13 +432,13 @@ href="https://www.codecademy.com/resources/docs/python/operators?page_ref=catalo
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">order of operations</a>.
 
-### Instructions
+
 
 **1.**
 
 Print out the result of this equation: `25 * 68 + 13 / 28`
 
-### Solution
+
 
 ``` python
 print(25 * 68 + 13 / 28)
@@ -482,7 +482,7 @@ perform a calculation on them. This doesn’t update the variables! When
 we update the `coffee_price` variable and perform the calculations
 again, they use the updated values for the variable!
 
-### Instructions
+
 
 **1.**
 
@@ -501,7 +501,7 @@ It turns out that quilt required a little more material than you have on
 hand! Let’s only make the quilt 8 squares long. How many squares will
 you need for this quilt instead?
 
-### Solution
+
 
 ``` python
 # First we create the variables
@@ -550,7 +550,7 @@ print(4 ** 0.5)
 Here, we compute some simple exponents. We calculate 2 to the 10th
 power, 8 to the 2nd power, 9 to the 3rd power, and 4 to the 0.5th power.
 
-### Instructions
+
 
 **1.**
 
@@ -566,7 +566,7 @@ Your 6x6 quilts have taken off so well, 6 people have each requested 6
 quilts. Print out how many tiles you would need to make 6 quilts for
 each of the 6 people.
 
-### Solution
+
 
 ``` python
 print(6 ** 2)
@@ -614,7 +614,7 @@ The modulo operator is useful in programming when we want to perform an
 action every nth-time the code is run. Can the result of a modulo
 operation be larger than the divisor? Why or why not?
 
-### Instructions
+
 
 **1.**
 
@@ -645,7 +645,7 @@ Food for thought: what number team are the two people next to you (26
 and 28) on? What are the numbers for all 4 teams? (Optional Challenge
 Question)
 
-### Solution
+
 
 ``` python
 my_team = (27 % 4)
@@ -729,7 +729,7 @@ Using `str()` we can convert variables that are not strings to strings
 and then concatenate them. But we don’t need to convert a number to a
 string for it to be an argument to a print statement.
 
-### Instructions
+
 
 **1.**
 
@@ -739,7 +739,7 @@ Concatenate the strings and save the message they form in the variable
 Now uncomment the print statement and run your code to see the result in
 the terminal!
 
-### Solution
+
 
 ``` python
 string1 = "The wind, "
@@ -797,7 +797,7 @@ We create the social media caption for the photograph of nature we took
 on our hike, but then update the caption to include important social
 media tags we almost forgot.
 
-### Instructions
+
 
 **1.**
 
@@ -814,7 +814,7 @@ The prices (also included in the workspace) are:
 - `nice_sweater = 39.00`
 - `fun_books = 20.00`
 
-### Solution
+
 
 ``` python
 total_price = 0
@@ -864,7 +864,7 @@ Even though the quote contains multiple linebreaks, the code works!
 If a multi-line string isn’t assigned a variable or used in an
 expression it is treated as a comment.
 
-### Instructions
+
 
 **1.**
 
@@ -876,7 +876,7 @@ Assign the string
 
 to the variable `to_you`.
 
-### Solution
+
 
 ``` python
 to_you = """Stranger, if you passing meet me and desire to speak to me, why
@@ -914,7 +914,7 @@ Here are a few more resources to add to your toolkit:
 
 Make sure to bookmark these links so you have them at your disposal.
 
-### Instructions
+
 
 **1.**
 
@@ -929,7 +929,7 @@ Create variables:
 Assign values to each using your knowledge of division and
 concatenation!
 
-### Solution
+
 
 ``` python
 my_age = 34
@@ -1190,7 +1190,7 @@ At the end of this lesson, you’ll know how to:
 
 And much more!
 
-### Instructions
+
 
 Review the visual for the function `navigation_steps()`.
 
@@ -1200,7 +1200,7 @@ as they plan their trips to different locations.
 
 Click **Next** when you are ready to learn more about functions.
 
-### Solution
+
 
 <img alt="//" src="https://static-assets.codecademy.com/Courses/CS101-Intro-to-Programming/PythonIntroAnimation_2.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -1240,7 +1240,7 @@ to customize a trip. We will address this in the upcoming sections!
 
 For now, let’s gain an appreciation for functions.
 
-### Instructions
+
 
 **1.**
 
@@ -1264,7 +1264,7 @@ functions to reuse code.
 
 Click ***Run*** your code again and then click ***Next*** to continue.
 
-### Solution
+
 
 ``` python
 # First user wants to travel between these two points!
@@ -1361,7 +1361,7 @@ the function will not execute since our function hasn’t been used. We
 will explore this further in the next exercise; for now, let’s practice
 defining a function.
 
-### Instructions
+
 
 **1.**
 
@@ -1396,7 +1396,7 @@ Remember, if you run your code, you shouldn’t see any output in the
 terminal at this point. Check out the hint if you want to see how to see
 the output (we will be doing it in the next section as well!)
 
-### Solution
+
 
 ``` python
 # Your code below:
@@ -1445,7 +1445,7 @@ your code.
 
 Now it’s your turn to call a function!
 
-### Instructions
+
 
 **1.**
 
@@ -1462,7 +1462,7 @@ Have the statement print `"Take lots of pictures!"`
 
 **Run** your code again and see how your output changes.
 
-### Solution
+
 
 ``` python
 def directions_to_timesSq():
@@ -1539,7 +1539,7 @@ statement, we didn’t call our function until after.
 
 Let’s play around with indentation and the flow of execution!
 
-### Instructions
+
 
 **1.**
 
@@ -1581,7 +1581,7 @@ Run the program again.
 
 What is different?
 
-### Solution
+
 
 ``` python
 # Write your code below!
@@ -1687,7 +1687,7 @@ alt="Calling a function with a specific value like trip_welcome(&quot;Empire Sta
 Let’s write a function with parameters and call the function with an
 argument to see it all in action!
 
-### Instructions
+
 
 **1.**
 
@@ -1735,7 +1735,7 @@ function again.
 
 What changed in the output?
 
-### Solution
+
 
 ``` python
 # Your code below:
@@ -1811,7 +1811,7 @@ The output would be:
 
 Let’s practice writing and calling a multiple parameter function!
 
-### Instructions
+
 
 **1.**
 
@@ -1874,7 +1874,7 @@ listed:
 - hotel_rate : 100
 - trip_time: 5
 
-### Solution
+
 
 ``` python
 # Write your code below: 
@@ -1960,7 +1960,7 @@ calculate_taxi_price(10, 0.5, 20)
 
 Let’s practice using these different types of arguments!
 
-### Instructions
+
 
 **1.**
 
@@ -2045,7 +2045,7 @@ positional arguments to see the default argument in action:
 
 2.  second_destination: `"Queens"`
 
-### Solution
+
 
 ``` python
 # Write your code below:
@@ -2156,7 +2156,7 @@ target="_blank" rel="noopener">official Python docs</a>.
 Let’s practice using a few of them. You will need to rely on the
 provided Python documentation links to find your answers!
 
-### Instructions
+
 
 **1.**
 
@@ -2198,7 +2198,7 @@ price of the variable `tshirt_price` by one decimal place.
 
 Save the result to a variable called `rounded_price` and print it.
 
-### Solution
+
 
 ``` python
 tshirt_price = 9.75
@@ -2295,7 +2295,7 @@ lesson but for now, let’s play around!
 first. Don’t hesitate to use hints or even look at the solution code if
 you get stuck.
 
-### Instructions
+
 
 **1.**
 
@@ -2325,7 +2325,7 @@ that both our functions can access it.
        print("Your favorite locations are: " + favorite_locations)
     NameError: name 'favorite_locations' is not defined
 
-### Solution
+
 
 ``` python
 favorite_locations = "Paris, Norway, Iceland"
@@ -2382,7 +2382,7 @@ Let’s try to `return` some data in the exercises!
 first. Don’t hesitate to use hints or even look at the solution code if
 you get stuck.
 
-### Instructions
+
 
 **1.**
 
@@ -2440,7 +2440,7 @@ Great Job! This is the biggest program with functions we have built so
 far! Take a second to review your code and click **Run** one last time
 when you are ready to move on.
 
-### Solution
+
 
 ``` python
 current_budget = 3500.75
@@ -2503,7 +2503,7 @@ This will print:
 Let’s practice using multiple returns by `return`ing to our previous
 code example.
 
-### Instructions
+
 
 **1.**
 
@@ -2540,7 +2540,7 @@ and `most_popular3` in that exact order.
 Use three `print()` statements to output the value of `most_popular1`,
 `most_popular2`, and `most_popular3`.
 
-### Solution
+
 
 ``` python
 def top_tourist_locations_italy():
@@ -2583,7 +2583,7 @@ code into reusable blocks. To recap, we explored:
 
 Let’s practice putting all these concepts together!
 
-### Instructions
+
 
 **1.**
 
@@ -2680,7 +2680,7 @@ We have successfully finished our first version of the trip builder
 application. Go ahead and try passing different values into your
 functions!
 
-### Solution
+
 
 ``` python
 # Write your code below:
@@ -2917,11 +2917,11 @@ Over the course of this lesson, you will learn how to build conditional
 statements using boolean expressions, and manage the control flow in
 your code.
 
-### Instructions
+
 
 Click **Next** to proceed to the next exercise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/learn-python-control-flow/control-flow.svg" alt="Control Flow" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -2961,7 +2961,7 @@ Yes! This expression can only be `True` or `False`, which makes it a
 boolean expression. Even though the statement itself is false (Sunday
 starts with the letter ‘C’), it is still a boolean expression.
 
-### Instructions
+
 
 **1.**
 
@@ -2993,7 +2993,7 @@ Statement four:
 
     Cats are female dogs.
 
-### Solution
+
 
 ``` python
 example_statement = "No"
@@ -3047,7 +3047,7 @@ string, which is different from the integer value `7`, so they are not
 equal. When using relational operators it is important to always be
 mindful of type.
 
-### Instructions
+
 
 **1.**
 
@@ -3073,7 +3073,7 @@ Statement three:
 3 * (2 - 1) == 4 - 1
 ```
 
-### Solution
+
 
 ``` python
 statement_one = True
@@ -3126,7 +3126,7 @@ print(bool_two)    # False
 print(bool_three)  # True
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3156,7 +3156,7 @@ created a boolean variable.
 
 You’ll have to print it to get the results to display in the terminal.
 
-### Solution
+
 
 ``` python
 my_baby_bool = "true"
@@ -3230,7 +3230,7 @@ Yes, because the condition of the `if` statement, `2 == 4 - 2` is
 
 Let’s work through a couple more together.
 
-### Instructions
+
 
 **1.**
 
@@ -3264,7 +3264,7 @@ Angela’s user name as well and prints
 
 in response. That’ll teach him!
 
-### Solution
+
 
 ``` python
 # Enter a user name here, make sure to make it a string
@@ -3308,7 +3308,7 @@ If `age` is less than or equal to 13, it will print out a message.
 
 Let’s try some more!
 
-### Instructions
+
 
 **1.**
 
@@ -3334,7 +3334,7 @@ graduate. If they do, print the string:
 Can a student with 120 `credits` graduate from *Calvin Coolidge’s Cool
 College*?
 
-### Solution
+
 
 ``` python
 x = 20
@@ -3402,7 +3402,7 @@ expression is `True`, the entire expression as a whole is `False`
 because the other statement is False. The fourth statement is also
 `False` because both components are `False`.
 
-### Instructions
+
 
 **1.**
 
@@ -3436,7 +3436,7 @@ If they do, print the string:
 "You meet the requirements to graduate!"
 ```
 
-### Solution
+
 
 ``` python
 statement_one = False
@@ -3484,7 +3484,7 @@ Notice that each `or` statement that has at least one `True` component
 is `True`, but the final statement has two `False` components, so it is
 `False`.
 
-### Instructions
+
 
 **1.**
 
@@ -3517,7 +3517,7 @@ credits *or* a GPA 2.0 or higher, and if so prints:
 "You have met at least one of the requirements."
 ```
 
-### Solution
+
 
 ``` python
 statement_one = True
@@ -3561,7 +3561,7 @@ not 1 + 1 == 2  # False
 not 7 < 0       # True
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3611,7 +3611,7 @@ checks using `and` and `not` statements:
 Make sure your return value matches those strings exactly.
 Capitalization, punctuation, and spaces matter!
 
-### Solution
+
 
 ``` python
 statement_one = False
@@ -3670,7 +3670,7 @@ else:
  print("Sorry, you must be 13 or older to watch this movie.")
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3685,7 +3685,7 @@ want it to print:
 
 Add an `else` statement to the existing `if` statement.
 
-### Solution
+
 
 ``` python
 credits = 120
@@ -3746,7 +3746,7 @@ and no more messages get printed.
 
 Try your hand at some other `elif` statements.
 
-### Instructions
+
 
 **1.**
 
@@ -3761,7 +3761,7 @@ Write an `if`/`elif`/`else` statement that:
 - Else if `grade` is 60 or higher, print `"D"`
 - Else, print `"F"`
 
-### Solution
+
 
 ``` python
 grade = 86
@@ -3805,7 +3805,7 @@ Let’s review what we’ve learned this lesson:
 
 Let’s put these skills to the test!
 
-### Instructions
+
 
 **Optional:** Little Codey is an interplanetary space boxer, who is
 trying to win championship belts for various weight categories on other
@@ -3857,7 +3857,7 @@ href="https://github.com/Codecademy/learn-python/blob/main/2-control-flow/space.
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">here</a>.
 
-### Solution
+
 
 ``` python
 print("I have information for the following planets:\n")
@@ -4126,7 +4126,7 @@ To ensure that the fabric of reality is safe, we can create an
 - If the question is an empty string, print out a message to the user.
 - Else, print the name and question, with the Magic 8-Ball’s answer.
 
-### Solution
+
 
 15\.
 
@@ -4303,7 +4303,7 @@ $$1.5 lb \times \$4.50+\$0.00=\$6.75$$
 
 Test that your drone shipping function gets the same value.
 
-### Solution:
+:
 
 8\.
 
@@ -4420,11 +4420,11 @@ are some common ones:
 In this mini-lesson, we will be looking at these different error
 messages, and you’ll get some practice by debugging them one by one!
 
-### Instructions
+
 
 Click **Next** to continue.
 
-### Solution
+
 
 <img alt="&quot;First actual case of bug being found.&quot;" src="https://content.codecademy.com/courses/learn-cpp/loops/bug.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4457,7 +4457,7 @@ Some common syntax errors are:
 - Missing closing parenthesis `)`, square bracket `]`, or curly brace
   `}`.
 
-### Instructions
+
 
 **1.**
 
@@ -4473,7 +4473,7 @@ Oh no, there are three `SyntaxError` errors inside **script.py**!
 
 Can you find them all?
 
-### Solution
+
 
 ``` python
 # Fortune Cookie Program 🥠 
@@ -4521,7 +4521,7 @@ Some common name errors are:
 - Misspelling a variable name.
 - Forgetting to define a variable.
 
-### Instructions
+
 
 **1.**
 
@@ -4540,7 +4540,7 @@ Oh no, there are two `NameError` errors!
 
 Can you find them both?
 
-### Solution
+
 
 ``` python
 # Who Wants To Be A Millionaire 💰
@@ -4610,7 +4610,7 @@ Some common type errors are:
 - Accidentally adding or subtracting a string value.
 - Call a function on something of the incorrect type.
 
-### Instructions
+
 
 **1.**
 
@@ -4627,7 +4627,7 @@ Oh no, there’s one `TypeError` error!
 
 Can you find it?
 
-### Solution
+
 
 ``` python
 # Area Calculator 📏
@@ -4693,7 +4693,7 @@ target="_blank" rel="noopener">blog post</a>.
 
 We wish you the best of luck in your bug-squashing journey! 🔎
 
-### Instructions
+
 
 An empty **review.py** file is provided in the code editor. Try
 experimenting and see what new errors you can find!

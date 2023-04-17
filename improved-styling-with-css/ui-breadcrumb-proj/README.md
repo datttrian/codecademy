@@ -25,7 +25,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -100,5 +100,5 @@ Consult some of your favorite sites to get inspiration.
 
 When you are ready, move on to the end of the project.
 
-### [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/ui-breadcrumb-proj/index.html)
+## [Solution](https://datttrian.github.io/codecademy/improved-styling-with-css/ui-breadcrumb-proj/index.html)
 

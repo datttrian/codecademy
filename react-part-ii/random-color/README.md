@@ -16,7 +16,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -179,4 +179,4 @@ your work!
 [REACT Project Random Color
 Picker](https://www.youtube.com/watch?v=tiH5WiA5I2E)
 
-### [Solution](https://datttrian-random-color.netlify.app) (Reference: [trumanKnight](https://github.com/trumanKnight/react-random-color-picker))
+## [Solution](https://datttrian-random-color.netlify.app) (**Reference**: [trumanKnight](https://github.com/trumanKnight/react-random-color-picker))

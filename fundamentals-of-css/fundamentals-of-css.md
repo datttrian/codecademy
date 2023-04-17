@@ -42,7 +42,7 @@ job!
 In this lesson, you’ll learn how to set up your CSS file structure and
 select which HTML elements you wish to style.
 
-### Instructions
+
 
 **1.**
 
@@ -61,7 +61,7 @@ What happens when you press the Run button?
 Take some time to explore and experiment with the code in the
 `style.css` file.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -334,14 +334,14 @@ Don’t worry about memorizing all of these—you will get acquainted with
 them more and more as the course progresses! Feel free to come back and
 use this exercise as a reference later on.
 
-### Instructions
+
 
 Study the diagrams to become familiar with the CSS syntax and the new
 terms that will be used throughout the course.
 
 Click the “Next” button when you are ready to write some code!
 
-### Solution
+
 
 <img src="https://static-assets.codecademy.com/Courses/Learn-CSS/Setup-and-Syntax/CSS_Anatomy-v2-nobgfill.svg" alt="table labeling different components of CSS syntaxes" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -377,14 +377,14 @@ you may encounter circumstances where inline styling is necessary, so
 understanding how it works, and recognizing it in HTML code is good
 knowledge to have. Soon you’ll learn the proper way to add CSS code!
 
-### Instructions
+
 
 **1.**
 
 In `index.html`, use inline styling to set the `color` of the first
 paragraph (the first `<p>` element) to `green`.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -512,7 +512,7 @@ the syntax of the CSS code matches (for the most part) the syntax you
 used for inline styling. The main difference is that you can specify
 which elements to apply the styling.
 
-### Instructions
+
 
 **1.**
 
@@ -539,7 +539,7 @@ Finally, delete the inline style from the `<p>` element.
 Notice how the styling works the same in the stylesheet as it did in the
 inline style!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -622,7 +622,7 @@ With an external stylesheet, you can write all the CSS code needed to
 style a page without sacrificing the readability and maintainability of
 your HTML file.
 
-### Instructions
+
 
 **1.**
 
@@ -636,7 +636,7 @@ press the Run button.
 Hmm, the font changes didn’t take effect? Click the Next button to find
 out why.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -754,7 +754,7 @@ target="_blank">relative path</a> instead of a URL, like so:
 
 Using a relative path is very common way of linking a stylesheet.
 
-### Instructions
+
 
 **1.**
 
@@ -776,7 +776,7 @@ Finally, add the `rel` attribute and set it to the correct value. Keep
 an eye on the first paragraph’s font—it should appear different from the
 destinations’ descriptions when your stylesheet is linked correctly.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -882,7 +882,7 @@ Here are a few more resources to add to your toolkit:
 
 Make sure to bookmark these links so you have them at your disposal.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -994,7 +994,7 @@ Some important notes on the type selector:
   the type selector is sometimes referred to as the *tag name* or
   *element* selector.
 
-### Instructions
+
 
 **1.**
 
@@ -1013,7 +1013,7 @@ color: maroon;
 Note that the content of the web page will update because we’ve already
 linked `style.css` to `index.html`.
 
-### Solution
+
 
 ``` css
 p {
@@ -1050,7 +1050,7 @@ you specified the type selector in a ruleset, like so:
 In the code above, every text element on the page will have its font
 changed to `Verdana`.
 
-### Instructions
+
 
 **1.**
 
@@ -1069,7 +1069,7 @@ Since the universal selector targets all elements, every element on the
 page now has a red border. Not a visually pleasing look, but you can see
 how all of the elements have been modified.
 
-### Solution
+
 
 ``` css
 * {
@@ -1118,7 +1118,7 @@ To select an HTML element by its class using CSS, a period (`.`) must be
 prepended to the class’s name. In the example above, the class is
 `brand`, so the CSS selector for it is `.brand`.
 
-### Instructions
+
 
 **1.**
 
@@ -1142,7 +1142,7 @@ teal.
 We’ll see in a later exercise why using `.title` overrides the `h1`
 selector.
 
-### Solution
+
 
 ``` css
 * {
@@ -1197,7 +1197,7 @@ separating them with a space. This enables us to mix and match CSS
 classes to create many unique styles without writing a custom class for
 every style combination needed.
 
-### Instructions
+
 
 **1.**
 
@@ -1214,7 +1214,7 @@ the curly braces.
 text-transform: uppercase;
 ```
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1329,7 +1329,7 @@ in the example above, it would look like this:
 The `id` name is `large-title`, therefore the CSS selector for it is
 `#large-title`.
 
-### Instructions
+
 
 **1.**
 
@@ -1349,7 +1349,7 @@ font-family: cursive;
 You’ll see the title change to a cursive font bringing some beauty and
 elegance to the page! Okay, maybe not so much. But the font does change.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -1513,7 +1513,7 @@ Notice how no new HTML markup (like a class or id) needed to be added,
 and we were still able to modify the styles of each image independently.
 This is one advantage to using the attribute selector!
 
-### Instructions
+
 
 **1.**
 
@@ -1541,7 +1541,7 @@ declaration of `color: lightblue;` to make the link appear light blue.
 Finally, use the attribute selector change the `<a>` element that has an
 `href` attribute value containing `'seoul'` to `lightpink`.
 
-### Solution
+
 
 ``` css
 * {
@@ -1612,7 +1612,7 @@ p:hover {
 In the above code, whenever the mouse hovers over a paragraph element,
 that paragraph will have a lime-colored background.
 
-### Instructions
+
 
 **1.**
 
@@ -1635,7 +1635,7 @@ color: darkorange;
 Now when you hover the mouse over the “Learn More” text, the font color
 changes to dark orange! Neato.
 
-### Solution
+
 
 ``` css
 * {
@@ -1700,7 +1700,7 @@ styles of types and classes. Since IDs override these styles, they
 should be used sparingly and only on elements that need to always appear
 the same.
 
-### Instructions
+
 
 **1.**
 
@@ -1745,7 +1745,7 @@ color: gray;
 Since ID’s are single-use, this element now has a unique ID that can’t
 be used again in this document!
 
-### Solution
+
 
 ``` css
 * {
@@ -1835,7 +1835,7 @@ To make styles easy to edit, it’s best to style with a type selector, if
 possible. If not, add a class selector. If that is not specific enough,
 then consider using an ID selector.
 
-### Instructions
+
 
 **1.**
 
@@ -1874,7 +1874,7 @@ cornflower blue. You may have noticed the other `<h5>` elements changed
 to yellow. This is because the most specific (and only) selector they
 have is their type.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2021,7 +2021,7 @@ The code above would select only the `<h1>` elements with a class of
 `special`. If a `<p>` element also had a class of `special`, the rule in
 the example would not style the paragraph.
 
-### Instructions
+
 
 **1.**
 
@@ -2040,7 +2040,7 @@ This will change the font of the `h2` elements that also have the class
 `destination`. The last `<h2>` element (“More Destinations”) will remain
 unchanged.
 
-### Solution
+
 
 ``` css
 * {
@@ -2139,7 +2139,7 @@ results in `.main-list li` as the final selector.
 Selecting elements in this way can make our selectors even more specific
 by making sure they appear in the context we expect.
 
-### Instructions
+
 
 **1.**
 
@@ -2160,7 +2160,7 @@ Inside the curly braces of the selector, add a declaration of:
 color: blueviolet;
 ```
 
-### Solution
+
 
 ``` css
 * {
@@ -2258,7 +2258,7 @@ Since `.main p` has a class and a `p` type as its selector, only the
 despite there being another more general rule that states `<p>` elements
 should be `blue`.
 
-### Instructions
+
 
 **1.**
 
@@ -2293,7 +2293,7 @@ The elements stay gold because there is a more specific selector for
 CSS selector (`li h4`), the more general selector of `h4` will not take
 hold.
 
-### Solution
+
 
 ``` css
 * {
@@ -2406,7 +2406,7 @@ By separating the CSS selectors with a comma, both the `<h1>` elements
 and the elements with the `menu` class will receive the
 `font-family: Georgia` styling.
 
-### Instructions
+
 
 **1.**
 
@@ -2421,7 +2421,7 @@ font-family: monospace;
 Notice that both the `<h5>` and `<li>` element’s fonts will change,
 without writing the same CSS declaration twice.
 
-### Solution
+
 
 ``` css
 * {
@@ -2528,12 +2528,12 @@ and apply styles to them. Let’s review what you learned:
 Great work this lesson. With this knowledge, you’ll be able to use CSS
 to change the look and feel of websites to make them look great!
 
-### Instructions
+
 
 Take some time to take in the beauty of the site you just created, and
 feel free to continue when you’re ready!
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2692,12 +2692,12 @@ to the size, style, and color of the element. In this lesson, you’ll
 learn some fundamental CSS visual rules that you can use to start
 styling web page elements!
 
-### Instructions
+
 
 Explore the code to the right. Think about how it relates to the web
 page on the right side of the browser.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -2850,7 +2850,7 @@ h1 {
 
 You’ll take a deeper look into typography in a later lesson!
 
-### Instructions
+
 
 **1.**
 
@@ -2866,7 +2866,7 @@ change!
 Next, add a style rule that sets the font family of the paragraph (`p`)
 to `Helvetica`.
 
-### Solution
+
 
 ``` css
 body {
@@ -2965,14 +2965,14 @@ p {
 In the example above, the `font-size` of all paragraphs was set to
 `18px`. `px` means pixels, which is one way to measure font size.
 
-### Instructions
+
 
 **1.**
 
 In **style.css**, set the `font-size` of paragraph (`p`) elements to 18
 pixels.
 
-### Solution
+
 
 ``` css
 body {
@@ -3080,14 +3080,14 @@ section of text was required to appear normal, however, we could set the
 font weight of that particular element to `normal`, essentially shutting
 off bold for that element.
 
-### Instructions
+
 
 **1.**
 
 In **style.css**, set the font weight of paragraph (`p`) elements to
 `bold`.
 
-### Solution
+
 
 ``` css
 body {
@@ -3199,14 +3199,14 @@ used values:
 - `justify`— spaces out text in order to align with the right and left
   side of the parent element.
 
-### Instructions
+
 
 **1.**
 
 In **style.css**, set the `text-align` property of the main heading
 (`h1`) so that it appears in the center.
 
-### Solution
+
 
 ``` css
 body {
@@ -3323,7 +3323,7 @@ h1 {
 In the example above, the text of the heading will appear in red, and
 the background of the heading will appear blue.
 
-### Instructions
+
 
 **1.**
 
@@ -3336,7 +3336,7 @@ Take a look at the caption on the image at the bottom of the page. In
 Then, in the same ruleset, set the color of the text to `black`. That
 should make the text a bit easier to read!
 
-### Solution
+
 
 ``` css
 body {
@@ -3443,14 +3443,14 @@ effect. To adjust the opacity of an element, the syntax looks like this:
 In the example above, the `.overlay` element would be 50% visible,
 letting whatever is positioned behind it show through.
 
-### Instructions
+
 
 **1.**
 
 Let’s give the caption on the image some transparency! In **style.css**,
 set `.caption` to have `0.75` opacity.
 
-### Solution
+
 
 ``` css
 body {
@@ -3570,7 +3570,7 @@ the CSS property `background-image`. Its syntax looks like this:
 }
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -3578,7 +3578,7 @@ In **style.css**, change the background image of the element with
 the`.image` class. The image is stored in the following URL:
 `https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg`
 
-### Solution
+
 
 ``` css
 body {
@@ -3698,7 +3698,7 @@ target="_blank" rel="noopener">Bootstrap</a> CSS framework and want to
 override the styles for one specific HTML element, we can use the
 `!important` property.
 
-### Instructions
+
 
 **1.**
 
@@ -3708,7 +3708,7 @@ But, you don’t like how it is turning the color of `<h1>` yellow.
 In `style.css`, add an `!important` rule to the color style of inside
 the `h1` ruleset to change the color back to `#FFF` (white).
 
-### Solution
+
 
 ``` css
 h1{
@@ -3824,7 +3824,7 @@ Throughout this lesson, you learned concepts including:
 - The `!important` flag will override any style, however it should
   almost never be used, as it is extremely difficult to override.
 
-### Instructions
+
 
 Feel free to experiment with the code and see what other changes you can
 make!
@@ -3834,7 +3834,7 @@ watch the video below and follow along with one of our experts:
 
 [Learn CSS Visual Rules](https://www.youtube.com/watch?v=InA5Ff7mxrc)
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -3982,7 +3982,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4079,7 +4079,7 @@ To change their font, include this line of code inside the curly braces:
 font-family: Helvetica;
 ```
 
-### [Solution](css-selectors-1)
+## [Solution](css-selectors-1)
 
 # Olivia Woodruff Portfolio
 
@@ -4090,7 +4090,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -4163,7 +4163,7 @@ https://content.codecademy.com/courses/learn-css-selectors-visual-rules/hypnotiz
 Great work! Feel free to keep coding and edit the visual rules to
 personalize the site’s appearance!
 
-### [Solution](css-visual-rules-project)
+## [Solution](css-visual-rules-project)
 
 # The Box Model
 
@@ -4198,7 +4198,7 @@ model:
 
 Let’s begin!
 
-### Instructions
+
 
 Take some time to explore the code to the right. See if you can figure
 out how these following CSS properties impact how an element is
@@ -4211,7 +4211,7 @@ displayed:
 - `margin`
 - `overflow`
 
-### Solution
+
 
 ``` css
 body {
@@ -4349,7 +4349,7 @@ area’s size (*width* and *height*) and the element’s *padding*,
 4.  `margin`: The amount of space between the border and the outside
     edge of the element.
 
-### Instructions
+
 
 Take a look at the image on the right—a visual representation of the box
 model.
@@ -4360,7 +4360,7 @@ class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">the box model image</a> in a new tab to
 reference it as you move through the lesson.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/diagram-boxmodel_Updated_1-01.svg" alt="Image of the box model and its 4 components: content, padding, border, and margin" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -4389,7 +4389,7 @@ height). When the width and height of an element are set in pixels, it
 will be the same size on all devices — an element that fills a laptop
 screen will overflow a mobile screen.
 
-### Instructions
+
 
 **1.**
 
@@ -4403,7 +4403,7 @@ Set `.pull-quote` width to 350 pixels.
 
 Set the `#banner .content h1` width to 400 pixels.
 
-### Solution
+
 
 ``` css
 body {
@@ -4558,7 +4558,7 @@ p.content-header {
 In this example, the border style is set to `solid` and the color is set
 to `coral`. The width is not set, so it defaults to `medium`.
 
-### Instructions
+
 
 **1.**
 
@@ -4569,7 +4569,7 @@ Add a dotted red border with 1-pixel thickness to all `h2` headings.
 Add a solid, white border, with a 3 pixel width, to the
 `#banner .content h1` rule.
 
-### Solution
+
 
 ``` css
 body {
@@ -4716,7 +4716,7 @@ div.container {
 The code in the example above creates a `<div>` that is a perfect
 circle.
 
-### Instructions
+
 
 **1.**
 
@@ -4726,7 +4726,7 @@ pixels.
 Additionally, try experimenting with other border-radius values and
 running your code to see the result!
 
-### Solution
+
 
 ``` css
 body {
@@ -4880,7 +4880,7 @@ p.content-header {
 In the example above, only the bottom side of the paragraph’s content
 will have a `padding` of 10 pixels.
 
-### Instructions
+
 
 **1.**
 
@@ -4902,7 +4902,7 @@ Observe how the red boxes at the bottom of the page changed.
 Set the top and bottom padding of `h2` elements to 20 pixels and set the
 left and right padding of `h2` elements to 30 pixels.
 
-### Solution
+
 
 ``` css
 body {
@@ -5077,7 +5077,7 @@ right sides can be equal, you can specify 2 values. The first value sets
 the padding-top and padding-bottom values (`5px`), and the second value
 sets the padding-left and padding-right values (`10px`).
 
-### Instructions
+
 
 **1.**
 
@@ -5092,7 +5092,7 @@ Using two values for the `padding` property, set the padding of the `p`
 element to 10 pixels on the top and bottom and 20 pixels on the left and
 right.
 
-### Solution
+
 
 ``` css
 body {
@@ -5250,7 +5250,7 @@ In the example above, only the right side of the paragraph’s box will
 have a margin of 15 pixels. It’s common to see margin values used for a
 specific side of an element.
 
-### Instructions
+
 
 **1.**
 
@@ -5262,7 +5262,7 @@ Look at the three red boxes at the bottom of the web page. These
 elements are anchor elements of class `.share`. Set these `.share a`
 elements to have a margin of 10 pixels.
 
-### Solution
+
 
 ``` css
 body {
@@ -5439,14 +5439,14 @@ right sides can be equal, you can specify 2 values. The first value sets
 the margin-top and margin-bottom values (`20px`), and the second value
 sets the margin-left and margin-right values (`10px`).
 
-### Instructions
+
 
 **1.**
 
 Using two values, set the `h2` top and bottom margins to 30 pixels and
 the left and right margins to 20 pixels.
 
-### Solution
+
 
 ``` css
 body {
@@ -5592,7 +5592,7 @@ In the example above, the width of the `div` is set to 400 pixels, which
 is less than the width of most screens. This will cause the div to
 center within a containing element that is greater than 400 pixels wide.
 
-### Instructions
+
 
 **1.**
 
@@ -5609,7 +5609,7 @@ to `auto`.
 Set the vertical margins of the `#main` element to `0`, and the
 horizontal margins to `auto`.
 
-### Solution
+
 
 ``` css
 body {
@@ -5780,13 +5780,13 @@ person trying to push a taller person. The tall person has longer arms
 and can easily push the short person, while the person with short arms
 cannot reach the person with long arms.
 
-### Instructions
+
 
 Study the graphic display to the right. Elements A and B have 20 pixels
 of horizontal margin, the sum of each element’s margin. Elements A and C
 have 30 pixels of vertical margin — the top margin of element C.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/diagram-verticalmargins_Updated_1-01.svg" alt="Diagram of box model vertical margins." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -5836,7 +5836,7 @@ property is set too low? It’s possible for the content to spill outside
 of the box, resulting in content that is not legible. You’ll learn how
 to work around this issue in the next exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -5871,7 +5871,7 @@ the height of paragraph’s box will no longer expand beyond 300 pixels.
 You should see your text overflowing. In the next exercise, we will fix
 that!
 
-### Solution
+
 
 ``` css
 
@@ -6054,7 +6054,7 @@ vertical values, head over to the MDN
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">documentation</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -6069,7 +6069,7 @@ When you scroll down, a second scroll bar should appear over the
 paragraph section. You may have to expand the browser component in order
 to see this behavior clearly.
 
-### Solution
+
 
 ``` css
 body {
@@ -6224,14 +6224,14 @@ external stylesheet.
 Note that both properties are set to `0`. When these properties are set
 to `0`, they do not require a unit of measurement.
 
-### Instructions
+
 
 **1.**
 
 In **style.css**, reset the default margin and padding values for the
 body. What happens to the web page in the browser?
 
-### Solution
+
 
 ``` css
 body {
@@ -6395,7 +6395,7 @@ removed from the web page. An element with `visibility: hidden`,
 however, will not be visible on the web page, but the space reserved for
 it will.
 
-### Instructions
+
 
 **1.**
 
@@ -6407,7 +6407,7 @@ In **style.css**:
 1.  Add a class selector ruleset for `donate`.
 2.  Set the visibility to `hidden`.
 
-### Solution
+
 
 ``` css
 body {
@@ -6565,7 +6565,7 @@ Let’s take a minute to review what you learned:
   content area.
 - The `visibility` property can hide or show elements.
 
-### Instructions
+
 
 Make some adjustments to the code in the code editor. See if you can
 improve the appearance of the page by changing the following properties:
@@ -6577,7 +6577,7 @@ improve the appearance of the page by changing the following properties:
 - `margin`
 - `overflow`
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -6802,12 +6802,12 @@ difficult to position and manage.
 In this brief lesson, you’ll learn how to use a different technique that
 avoids this problem altogether.
 
-### Instructions
+
 
 We’ll be using the app provided to demonstrate how to work with the box
 model. Click “Next” to continue.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -7005,13 +7005,13 @@ should use when interpreting a web page.
 The default value of this property is `content-box`. This is the same
 box model that is affected by border thickness and padding.
 
-### Instructions
+
 
 Study the diagram to the right. It illustrates the default box model
 used by the browser, `content-box`. When you’re done, continue to the
 next exercise.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/updated_images/htmlcssdiagram_contentbox_Updated_1.svg" alt="Content box diagram." class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -7055,13 +7055,13 @@ In the example above, the height of the box would remain at 200 pixels
 and the width would remain at 300 pixels. The border thickness and
 padding would remain entirely *inside* of the box.
 
-### Instructions
+
 
 Study the diagram to the right. It illustrates the new box model,
 `border-box`. Pay attention to how the total width (`200px`) and the
 padding affect the inner width of the element.
 
-### Solution
+
 
 <img src="https://content.codecademy.com/courses/web-101/htmlcss1-diagram__borderbox.svg" alt="diagraming showing an element in the shape of a box used to demonstrate the box model that has a width of 200px, left and right paddings of 20px each, and an inner width of `auto`.  " class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -7080,7 +7080,7 @@ It’s that simple! In the example above, the universal selector (`*`)
 targets all elements on the web page and sets their box model to the
 `border-box` model.
 
-### Instructions
+
 
 **1.**
 
@@ -7091,7 +7091,7 @@ You probably didn’t see a difference in the web page to the right -
 that’s ok! The new box model simply makes sure that the dimensions of
 elements remains the same regardless of border width and padding.
 
-### Solution
+
 
 ``` css
 * {
@@ -7196,12 +7196,12 @@ Let’s review what you learned:
 5.  The `border-box` model is not affected by border thickness or
     padding.
 
-### Instructions
+
 
 Take some time to experiment with your new knowledge of the box model in
 **style.css**. When you’re done, proceed to the next unit.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -7533,7 +7533,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -7610,7 +7610,7 @@ Good job—this menu item is looking great, and the layout and spacing is
 much more readable. If you’d like, you can continue refining the design
 or add your own spin!
 
-### [Solution](box-model-on)
+## [Solution](box-model-on)
 
 # Display and Positioning
 
@@ -7639,7 +7639,7 @@ Each of these properties will allow us to position and view elements on
 a web page. They can be used in conjunction with any other styling
 properties you may know.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -7888,7 +7888,7 @@ above. For now, it’s important to understand that if you favor the
 default position of an HTML element, you don’t need to set its
 `position` property.
 
-### Instructions
+
 
 **1.**
 
@@ -7898,7 +7898,7 @@ the position to static.
 Notice that setting `position` to `static` does nothing. That’s because
 `static` simply refers to the default behavior.
 
-### Solution
+
 
 ``` css
 body {
@@ -8053,7 +8053,7 @@ alt="Diagram of an element with relative position" />
 Offsetting the relative element will not affect the positioning of other
 elements.
 
-### Instructions
+
 
 **1.**
 
@@ -8064,7 +8064,7 @@ property to `relative`.
 
 Next, in **style.css**, offset `.question` 40 pixels from the top.
 
-### Solution
+
 
 ``` css
 body {
@@ -8189,7 +8189,7 @@ container. It has offset property declarations of `top: 300px;` and
 `right: 0px;`, positioning it 300 pixels down, and 0 pixels from the
 right side of the page.
 
-### Instructions
+
 
 **1.**
 
@@ -8205,7 +8205,7 @@ When you changed the position to absolute, you may have noticed that the
 header shrunk horizontally. We’ll learn why in a later exercise. For
 now, set the `width` property of the header to `100%`.
 
-### Solution
+
 
 ``` css
 body {
@@ -8339,7 +8339,7 @@ class="img__1JGFO2nlisObc3KeOSGPRp" alt="Diagram of position fixed" />
 
 This technique is often used for navigation bars on a web page.
 
-### Instructions
+
 
 **1.**
 
@@ -8359,7 +8359,7 @@ Offset the “Welcome” section by 200 pixels from the top. Everything
 might not be displaying correctly just yet; we’ll fix it in a later
 exercise.
 
-### Solution
+
 
 ``` css
 body {
@@ -8499,14 +8499,14 @@ src="https://static-assets.codecademy.com/Courses/Learn-CSS/Display-Position/Sti
 class="img__1JGFO2nlisObc3KeOSGPRp"
 alt="Diagram of an element with sticky position" />
 
-### Instructions
+
 
 **1.**
 
 Inside **style.css**, change the position of the elements with the class
 `question` to `sticky`.
 
-### Solution
+
 
 ``` css
 body {
@@ -8673,14 +8673,14 @@ image below:
 src="https://static-assets.codecademy.com/Courses/Learn-CSS/Display-Position/Z-index.png"
 class="img__1JGFO2nlisObc3KeOSGPRp" alt="Diagram of z-index" />
 
-### Instructions
+
 
 **1.**
 
 In **style.css**, set the `z-index` of the `header` to `10`. Notice how
 the header is no longer covered by other elements when you scroll!
 
-### Solution
+
 
 ``` css
 body {
@@ -8836,7 +8836,7 @@ elements to `inline`. The browser will render `<h1>` elements on the
 same line as other inline elements immediately before or after them (if
 there are any).
 
-### Instructions
+
 
 **1.**
 
@@ -8845,7 +8845,7 @@ around the word “Welcome”. Notice that the element does not move. That’s
 because `<strong>` elements are inline, so they can share lines with
 other elements.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -8987,7 +8987,7 @@ In the example above, all `<strong>` elements will be displayed on their
 own line, with no content directly on either side of them even though
 their contents may not fill the width of most computer screens.
 
-### Instructions
+
 
 **1.**
 
@@ -9005,7 +9005,7 @@ survey!”
 To improve the appearance of the web page, set the height of the footer
 to 100 pixels in **style.css**.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -9274,7 +9274,7 @@ enough space from left to right) with a width of 200 pixels and height
 of 300 pixels, even though the text inside of them may not require 200
 pixels by 300 pixels of space.
 
-### Instructions
+
 
 **1.**
 
@@ -9296,7 +9296,7 @@ pixels.
 
 Set the `display` property of `.answer` elements to `inline-block`.
 
-### Solution
+
 
 ``` css
 body {
@@ -9452,14 +9452,14 @@ Otherwise, the element will assume the full width of its containing
 element, and changing the float value will not yield any visible
 results.
 
-### Instructions
+
 
 **1.**
 
 Add a declaration to the `.answer` ruleset that sets the `float`
 property to `left`.
 
-### Solution
+
 
 ``` css
 body {
@@ -9608,7 +9608,7 @@ left because a taller `<div>` blocked its positioning. By setting its
 `clear` property to `left`, the `special` `<div>` will be moved all the
 way to the left side of the page.
 
-### Instructions
+
 
 **1.**
 
@@ -9624,7 +9624,7 @@ how the questions moved.
 On second thought, this layout is not looking so good. Remove the
 `float` property from `.answer` selector ruleset.
 
-### Solution
+
 
 ``` css
 body {
@@ -9777,14 +9777,14 @@ create visually appealing web pages. So far, we’ve focused on adding
 content in the form of text to a web page. In the next unit, you’ll
 learn how to add and manipulate images to a web page.
 
-### Instructions
+
 
 Take some time to experiment with your new knowledge of positioning in
 **style.css**.
 
 When you’re done, proceed to the next unit.
 
-### Solution
+
 
 ``` html
 <!DOCTYPE html>
@@ -10028,7 +10028,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -10100,4 +10100,4 @@ If you want to continue coding, challenge yourself to make the
 `<footer>` element also fixed to the bottom of the page regardless of
 scrolling.
 
-### [Solution](broadway-design)
+## [Solution](broadway-design)

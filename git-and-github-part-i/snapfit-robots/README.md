@@ -10,7 +10,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -72,7 +72,7 @@ View your Git commit log again to identify your commit.
 Revise each file in whatever ways you’d like. Then add your changes to
 the staging area and make another commit.
 
-### [Solution](snapfit-robots.txt)
+## [Solution](snapfit-robots.txt)
 
     disclaimer.txt
     ==========================================================================

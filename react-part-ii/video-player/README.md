@@ -9,7 +9,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -137,4 +137,4 @@ You’ve put together a responsive video player, and done it in a way that
 you will often find in the real world!
 
 
-### [Solution](https://datttrian-video-player.netlify.app/) (Reference: [ftanekha](https://github.com/ftanekha/ccReact-videoPlayer))
+## [Solution](https://datttrian-video-player.netlify.app/) (**Reference**: [ftanekha](https://github.com/ftanekha/ccReact-videoPlayer))

@@ -51,7 +51,7 @@ In this lesson we’ll go over creating templates and getting the full use
 of the DTL inside of those templates to make it easier to design the
 front end of any Django application.
 
-### Solution
+
 
 <img alt="A GIF showing how DTL could work, where there is an HTML file with blanks and these blanks can get filled in using model information. The GIF showcases two &quot;user&quot; models that have their own information plugged into the same HTML structure. " src="https://static-assets.codecademy.com/skillpaths/django/templates/django_templates_nobg.gif" class="gamut-1h2re45-imageStyles-imageStyles e1xtjyf0">
 
@@ -97,7 +97,7 @@ These modifications to **views.py** will be covered in more detail in a
 later lesson. In this lesson, the code for **views.py** will be provided
 so that we can focus primarily on templates and not the views.
 
-### Instructions
+
 
 **1.**
 
@@ -113,7 +113,7 @@ For now, add a heading (`<h1>`) that says `Welcome to Vet Office!` and a
 paragraph (`<p>`) that says `Welcome!`. Don’t worry, everything else
 will be added back later.
 
-### Solution
+
 
 ```html
 <!--This is home.html-->
@@ -174,7 +174,7 @@ template and then used in other templates. Blocks can be put anywhere
 within the base template. This is because not everything page-specific
 will necessarily go in the body.
 
-### Instructions
+
 
 **1.**
 
@@ -192,7 +192,7 @@ elements:
 After the heading (`<h1>`) element, add a set of `{% block content %}`
 and `{% endblock %}` tags to the body of the **base.html** document.
 
-### Solution
+
 
 ```html
 <!DOCTYPE html>
@@ -251,7 +251,7 @@ inside of **base.html**, and any page-specific content can go inside of
 organized, but also help make the code cleaner as we’ll only be seeing
 page-specific content in the templates from now on.
 
-### Instructions
+
 
 **1.**
 
@@ -269,7 +269,7 @@ Add the blocks to the code that will let us add the current page content
 to the base template. This should be one tag before the paragraph
 element and one tag after the paragraph element.
 
-### Solution
+
 
 ```html
 {% extends "vetoffice/base.html" %} {% block content %}
@@ -335,7 +335,7 @@ code below.
 {% endblock %}
 ```
 
-### Instructions
+
 
 **1.**
 
@@ -375,7 +375,7 @@ extends it (like **home.html**). So, let’s now set up **home.html**:
 3.  Inside your new `head` block, add a `<link>` with an `href` set to
     **style.css** using a tag (`{% %}`).
 
-### Solution
+
 
 ```html
 <!DOCTYPE html>
@@ -435,7 +435,7 @@ of `user`. In an actual app, there should be more properties we can
 access. We’ll cover how to access each individual property later when we
 discuss DTL loops but now it’s time to practice using variable tags.
 
-### Instructions
+
 
 **1.**
 
@@ -443,7 +443,7 @@ Inside of **home.html**, edit the `<p>` inside of the content block that
 says `Welcome, ~value of name~!`. Replace `~value of name~` with a
 variable tag that uses the `name` variable.
 
-### Solution
+
 
 ```html
 {% extends 'vetoffice/base.html' %} {% load static %} {% block head %}
@@ -511,7 +511,7 @@ href="https://www.codecademy.com/courses/learn-python-3/lessons/python-control-f
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank">refresher on conditionals</a>.
 
-### Instructions
+
 
 **1.**
 
@@ -534,7 +534,7 @@ says `The animal is not a dog or cat`.
 
 After the `else`, end the `if` statement by adding an `endif` tag.
 
-### Solution
+
 
 ## Loops in Templates
 
@@ -575,7 +575,7 @@ syntax. If our list contains dictionaries, we could even access the
 Using loops, we can greatly reduce the amount of HTML we need to write
 to display a lot of information!
 
-### Instructions
+
 
 **1.**
 
@@ -596,7 +596,7 @@ Inside of the loop, add a `<p>` element that displays the pet’s name and
 the type of animal, separated by a colon. For example, we would want it
 to look like this: “Oreo: dog”.
 
-### Solution
+
 
 ```html
 {% extends "vetoffice/base.html" %} {% load static %} {% block head %}
@@ -649,7 +649,7 @@ they can be optional in other places. The URL is a good instance of
 where arguments are optional, but not necessary unless the path has an
 argument. We’ll discuss arguments more in the next exercise.
 
-### Instructions
+
 
 **1.**
 
@@ -663,7 +663,7 @@ Now, navigate to **base.html**. Inside the `<body>` element:
   and a tag)
 - The `<a>`‘s text should display `Vet Office`
 
-### Solution
+
 
 ```html
 <!DOCTYPE html>
@@ -729,7 +729,7 @@ It is recommended to check out the documentation for a filter before
 using it to make sure you are using the proper data types and adding any
 necessary arguments.
 
-### Instructions
+
 
 **1.**
 
@@ -754,7 +754,7 @@ Apply a filter to `pets` variable inside the `for` loop:
   class="code__2rdF32qjRVp7mMVBHuPwDS">dictsort</code></a>
 - Provide the `dictsort` filter with an argument of `"petname"`
 
-### Solution
+
 
 ```html
 {% extends 'vetoffice/base.html' %}
@@ -810,7 +810,7 @@ us in a number of ways including:
 Great job on completing templates! Next time you write HTML in Django,
 remember to take advantage of DTL to save yourself some time!
 
-### Instructions
+
 
 If you want to challenge yourself:
 

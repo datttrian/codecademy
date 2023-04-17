@@ -16,7 +16,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -113,7 +113,7 @@ If you want extra practice:
 - If you started with `if`/`else if`/`else` statements, convert them to
   a `switch` statement.
 
-### [Solution](magic-eight-ball-1.js)
+## [Solution](magic-eight-ball-1.js)
 
 ``` javascript
 let userName = "datttrian";

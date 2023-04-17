@@ -28,7 +28,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 1\.
 
@@ -102,7 +102,7 @@ the **bmx/** directory called **tricks.txt**.
 
 List all files and directories in the current directory.
 
-### [Solution](bicycle-world.sh)
+## [Solution](bicycle-world.sh)
 
 ``` bash
 $ pwd

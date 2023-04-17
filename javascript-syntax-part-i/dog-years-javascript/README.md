@@ -19,7 +19,7 @@ If you get stuck during this project or would like to see an experienced
 developer work through it, click “**Get Unstuck**“ to see a **project
 walkthrough video**.
 
-### Instructions
+
 
 Mark the tasks as complete by checking them off
 
@@ -108,7 +108,7 @@ Great work! You can convert any human age to dog years. Try changing
 If you’d like extra practice, try writing this project without the `*=`
 operator.
 
-### [Solution](dog-years-javascript.js)
+## [Solution](dog-years-javascript.js)
 
 ``` javascript
 //Setting my age for the human age
