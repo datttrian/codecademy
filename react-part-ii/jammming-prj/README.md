@@ -25,7 +25,7 @@ help” to see a walkthrough video.
 
 Good luck!
 
-$$Update December 2020: We’ve noticed that some learners outside of the
+Update December 2020: We’ve noticed that some learners outside of the
 United States are unable to create a Spotify account. While we work on
 this issue, you may try other music APIs that support GET and POST
 request or skip the project for now.
@@ -35,7 +35,7 @@ target="_blank" rel="noopener">Other APIs can be found on this page</a>
 or <a href="https://rapidapi.com/collection/music-apis"
 class="e14vpv2g1 gamut-xro1w8-ResetElement-Anchor-AnchorBase e1bhhzie0"
 target="_blank" rel="noopener">this page</a>. You’ll need to adjust
-steps 74-95 accordingly.$$
+steps 74-95 accordingly.
 
 ### Instructions
 

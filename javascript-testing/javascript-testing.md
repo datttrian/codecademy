@@ -2248,13 +2248,7 @@ these six criteria, you are creating high quality test frameworks!
 
 # Documentation: Mocha
 
-<a href="https://mochajs.org/#getting-started"
-class="noUnderline__1DujYZeohdnOrK9vnT5gfM" target="_blank"
-tabindex="0"></a>
-
-## Mocha<img
-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iZ2FtdXQtcTF4ZDV3LVN2ZyBlb2wyenZtMCI+PHRpdGxlPk9wZW4gSWNvbjwvdGl0bGU+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0yMy4yNTEgNy40OThWLjc0OGgtNi43NW02Ljc1IDBsLTE1IDE1bTMtMTAuNWgtOWExLjUgMS41IDAgMDAtMS41IDEuNXYxNWExLjUgMS41IDAgMDAxLjUgMS41aDE1YTEuNSAxLjUgMCAwMDEuNS0xLjV2LTkiPjwvcGF0aD48L3N2Zz4="
-class="gamut-q1xd5w-Svg eol2zvm0" />
+## [Mocha](https://mochajs.org/#getting-started)
 
 In this resource, you are presented with the documentation for the Mocha
 testing framework. This is helpful if you want a comprehensive resource
