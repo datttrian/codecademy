@@ -1077,4 +1077,4 @@ Follow the steps on the screen. Change the domain value to your new URI.
 
 Congrats! You’ve just deployed a React App that queries the Spotify API!
 
-## [Solution](https://datttrian-jammming-prj.netlify.app/) (**Reference**: [nyere](https://github.com/nyere/jammming))
+## [Solution](https://datttrian-jammming-prj.netlify.app/) (**Reference**: [Codecademy](https://static-assets.codecademy.com/Courses/react/projects/jammming-project-solution-v18.zip))
