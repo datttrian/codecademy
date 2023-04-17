@@ -28,7 +28,7 @@
 1. [Building Interactive Websites](building-interactive-websites)
 1. [Making A Website Accessible](making-a-website-accessible)
 1. [Git and GitHub, Part I](git-and-github-part-i)
-1. [Portfolio Project: Personal Portfolio Website](portfolio-project:-personal-portfolio-website)
+1. [Portfolio Project: Personal Portfolio Website](portfolio-project-personal-portfolio-website)
 1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
 1. [JavaScript Testing](javascript-testing)
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
@@ -36,8 +36,8 @@
 1. [React, Part I](react-part-i)
 1. [React, Part II](react-part-ii)
 1. [Redux](redux)
-1. [Git and GitHub, Part II](git-and-github-part-ii)
-1. [Portfolio Project: Reddit Client](portfolio-project:-reddit-client)
+1. Git and GitHub, Part II
+1. [Portfolio Project: Reddit Client](portfolio-project-reddit-client)
 1. Advanced Web Development
 1. What To Expect in a Technical Interview
 1. Linear Data Structures
@@ -58,11 +58,11 @@
 1. Building Interactive Websites with JavaScript
 1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
 1. [Git and Github, Part I](git-and-github-part-i)
-1. [Portfolio Project: Mixed Messages](portfolio-project-mixed-messages)
-1. [Basics of Back-End Development](basics-of-back-end-development)
+1. Portfolio Project: Mixed Messages
+1. Basics of Back-End Development
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
 1. [Build a Back-End with Express.js](build-a-back-end-with-express.js)
-1. [Git and Github, Part II](git-and-github-part-ii)
+1. Git and GitHub, Part II
 1. Portfolio Project: Personal Budget I
 1. Database Basics
 1. Working with Databases
@@ -115,7 +115,7 @@
 1. [React, Part I](react-part-i)
 1. [React, Part II](react-part-ii)
 1. [Redux](redux)
-1. [Git and GitHub, Part II](git-and-github-part-ii)
+1. Git and GitHub, Part II
 1. [Portfolio Project: Reddit Client](portfolio-project-reddit-client)
 1. [Introduction to Back-End](introduction-to-back-end)
 1. [Build a Back-end with Express.js](build-a-back-end-with-express.js)
