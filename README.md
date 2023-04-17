@@ -7,8 +7,8 @@
     * [Back-End Engineer](#building-interactive-websites)
     * [Full-Stack Engineer](#front-end-development)
 - [Skill Path](#skill-path)
-    * [Build Python Web Apps with Flask Skill Path](#build-python-web-apps-with-flask-skill-path)
-    * [Build Python Web Apps with Django Skill Path](#build-python-web-apps-with-django-skill-path)
+    * [Build Python Web Apps with Flask](#build-python-web-apps-with-flask)
+    * [Build Python Web Apps with Django](#build-python-web-apps-with-django)
 
 # Career Path
 
@@ -23,18 +23,18 @@
 1. Fundamentals of Web Design
 1. [Making a Website Responsive](making-a-website-responsive)
 1. CSS Transitions and Animation
-1. [JavaScript Syntax, Part I](javascript-syntax,-part-i)
-1. [JavaScript Syntax, Part II](javascript-syntax,-part-ii)
+1. [JavaScript Syntax, Part I](javascript-syntax-part-i)
+1. [JavaScript Syntax, Part II](javascript-syntax-part-ii)
 1. [Building Interactive Websites](building-interactive-websites)
 1. [Making A Website Accessible](making-a-website-accessible)
 1. [Git and GitHub, Part I](git-and-github-part-i)
 1. [Portfolio Project: Personal Portfolio Website](portfolio-project:-personal-portfolio-website)
-1. [JavaScript Syntax, Part III](javascript-syntax,-part-iii)
+1. [JavaScript Syntax, Part III](javascript-syntax-part-iii)
 1. [JavaScript Testing](javascript-testing)
 1. [Async JavaScript and HTTP Requests](async-javascript-and-http-requests)
 1. [Web Apps](web-apps)
-1. [React, Part I](react,-part-i)
-1. [React, Part II](react,-part-ii)
+1. [React, Part I](react-part-i)
+1. [React, Part II](react-part-ii)
 1. [Redux](redux)
 1. [Git and GitHub, Part II](git-and-github-part-ii)
 1. [Portfolio Project: Reddit Client](portfolio-project:-reddit-client)
