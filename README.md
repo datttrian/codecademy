@@ -1,5 +1,9 @@
 [<img src="codecademy.png" align="right" width=170;>](https://www.codecademy.com)
 
+[![NodeJS with Gulp](https://github.com/datttrian/codecademy/actions/workflows/npm-gulp.yml/badge.svg)](https://github.com/datttrian/codecademy/actions/workflows/npm-gulp.yml)
+
+The default branch has been archived. Please [switch to the develop branch](../../tree/develop) for the latest updates and changes.
+
 **Table of Contents**
 
 - [Career Path](#career-path)
